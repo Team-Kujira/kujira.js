@@ -1,5 +1,6 @@
 /* eslint-disable */
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 import { Any } from "../../../../google/protobuf/any";
 import { Event } from "../../../../tendermint/abci/types";

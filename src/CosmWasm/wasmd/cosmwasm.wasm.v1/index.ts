@@ -1,5 +1,3 @@
-
-
 import { EncodeObject } from "@cosmjs/proto-signing";
 import { MsgExecuteContract } from "./types/cosmwasm/wasm/v1/tx";
 import { MsgStoreCode } from "./types/cosmwasm/wasm/v1/tx";
@@ -20,6 +18,8 @@ import {
   UnpinCodesProposal,
 } from "./types/cosmwasm/wasm/v1/proposal";
 import { Api } from "./rest";
+import { util, configure } from "protobufjs/minimal";
+import Long from "long";
 
 const types = [
   ["/cosmwasm.wasm.v1.MsgExecuteContract", MsgExecuteContract],
@@ -29,23 +29,14 @@ const types = [
   ["/cosmwasm.wasm.v1.MsgIBCSend", MsgIBCSend],
   ["/cosmwasm.wasm.v1.MsgUpdateAdmin", MsgUpdateAdmin],
   ["/cosmwasm.wasm.v1.MsgMigrateContract", MsgMigrateContract],
-  [
-    "/cosmwasm.wasm.v1.MsgInstantiateContract",
-    MsgInstantiateContract,
-  ],
+  ["/cosmwasm.wasm.v1.MsgInstantiateContract", MsgInstantiateContract],
   ["/cosmwasm.wasm.v1.StoreCodeProposal", StoreCodeProposal],
   [
     "/cosmwasm.wasm.v1.InstantiateContractProposal",
     InstantiateContractProposal,
   ],
-  [
-    "/cosmwasm.wasm.v1.ExecuteContractProposal",
-    ExecuteContractProposal,
-  ],
-  [
-    "/cosmwasm.wasm.v1.MigrateContractProposal",
-    MigrateContractProposal,
-  ],
+  ["/cosmwasm.wasm.v1.ExecuteContractProposal", ExecuteContractProposal],
+  ["/cosmwasm.wasm.v1.MigrateContractProposal", MigrateContractProposal],
   ["/cosmwasm.wasm.v1.UpdateAdminProposal", UpdateAdminProposal],
   ["/cosmwasm.wasm.v1.ClearAdminProposal", ClearAdminProposal],
   ["/cosmwasm.wasm.v1.PinCodesProposal", PinCodesProposal],
@@ -83,12 +74,19 @@ const txClient = {
     typeUrl: "/cosmwasm.wasm.v1.MsgMigrateContract",
     value: MsgMigrateContract.fromPartial(data),
   }),
-  msgInstantiateContract: (
-    data: MsgInstantiateContract
-  ): EncodeObject => ({
+  msgInstantiateContract: (data: MsgInstantiateContract): EncodeObject => ({
     typeUrl: "/cosmwasm.wasm.v1.MsgInstantiateContract",
     value: MsgInstantiateContract.fromPartial(data),
   }),
 };
+
+console.log({ util, Long });
+
+if (util.Long !== Long) {
+  util.Long = Long as any;
+  configure();
+}
+
+console.log({ util, Long });
 
 export { txClient, types, Api };

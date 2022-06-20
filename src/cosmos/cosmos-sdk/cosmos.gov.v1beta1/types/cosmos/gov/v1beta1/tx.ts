@@ -6,7 +6,8 @@ import {
   voteOptionToJSON,
 } from "../../../cosmos/gov/v1beta1/gov";
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
-import * as Long from "long";
+import Long from "long";
+
 import { Any } from "../../../google/protobuf/any";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 

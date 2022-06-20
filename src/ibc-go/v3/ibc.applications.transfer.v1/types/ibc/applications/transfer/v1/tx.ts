@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
-import * as Long from "long";
+import Long from "long";
+
 import { Coin } from "../../../../cosmos/base/v1beta1/coin";
 import { Height } from "../../../../ibc/core/client/v1/client";
 

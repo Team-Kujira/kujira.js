@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
-import * as Long from "long";
+import Long from "long";
+
 import { AccessConfig } from "../../../cosmwasm/wasm/v1/types";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 

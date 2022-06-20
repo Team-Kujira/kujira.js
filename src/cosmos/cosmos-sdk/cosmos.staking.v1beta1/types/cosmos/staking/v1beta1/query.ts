@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
-import * as Long from "long";
+import Long from "long";
+
 import {
   PageRequest,
   PageResponse,
@@ -2751,9 +2752,8 @@ export class QueryClientImpl implements Query {
   ValidatorUnbondingDelegations(
     request: QueryValidatorUnbondingDelegationsRequest
   ): Promise<QueryValidatorUnbondingDelegationsResponse> {
-    const data = QueryValidatorUnbondingDelegationsRequest.encode(
-      request
-    ).finish();
+    const data =
+      QueryValidatorUnbondingDelegationsRequest.encode(request).finish();
     const promise = this.rpc.request(
       "cosmos.staking.v1beta1.Query",
       "ValidatorUnbondingDelegations",
@@ -2809,9 +2809,8 @@ export class QueryClientImpl implements Query {
   DelegatorUnbondingDelegations(
     request: QueryDelegatorUnbondingDelegationsRequest
   ): Promise<QueryDelegatorUnbondingDelegationsResponse> {
-    const data = QueryDelegatorUnbondingDelegationsRequest.encode(
-      request
-    ).finish();
+    const data =
+      QueryDelegatorUnbondingDelegationsRequest.encode(request).finish();
     const promise = this.rpc.request(
       "cosmos.staking.v1beta1.Query",
       "DelegatorUnbondingDelegations",

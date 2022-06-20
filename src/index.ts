@@ -13,6 +13,8 @@ import {
 } from "@cosmjs/stargate";
 import { toUtf8 } from "@cosmjs/encoding";
 import { createWasmAminoConverters } from "@cosmjs/cosmwasm-stargate";
+import Long from "long";
+import { util, configure } from "protobufjs/minimal";
 
 import * as auth from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1";
 import * as authz from "./cosmos/cosmos-sdk/cosmos.authz.v1beta1";
@@ -144,3 +146,8 @@ export const query = ({ rest }: { rest: string }) => {
     wasm: new wasm.Api({ baseUrl: rest }),
   };
 };
+
+if (util.Long !== Long) {
+  util.Long = Long as any;
+  configure();
+}

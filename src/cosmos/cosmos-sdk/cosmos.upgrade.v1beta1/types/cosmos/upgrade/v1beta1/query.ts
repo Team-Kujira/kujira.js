@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
-import * as Long from "long";
+import Long from "long";
+
 import { Plan, ModuleVersion } from "../../../cosmos/upgrade/v1beta1/upgrade";
 
 export const protobufPackage = "cosmos.upgrade.v1beta1";

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Timestamp } from "../../google/protobuf/timestamp";
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 import { Vote, LightBlock } from "../../tendermint/types/types";
 import { Validator } from "../../tendermint/types/validator";
@@ -67,10 +68,8 @@ export const Evidence = {
           );
           break;
         case 2:
-          message.light_client_attack_evidence = LightClientAttackEvidence.decode(
-            reader,
-            reader.uint32()
-          );
+          message.light_client_attack_evidence =
+            LightClientAttackEvidence.decode(reader, reader.uint32());
           break;
         default:
           reader.skipType(tag & 7);
@@ -134,9 +133,10 @@ export const Evidence = {
       object.light_client_attack_evidence !== undefined &&
       object.light_client_attack_evidence !== null
     ) {
-      message.light_client_attack_evidence = LightClientAttackEvidence.fromPartial(
-        object.light_client_attack_evidence
-      );
+      message.light_client_attack_evidence =
+        LightClientAttackEvidence.fromPartial(
+          object.light_client_attack_evidence
+        );
     } else {
       message.light_client_attack_evidence = undefined;
     }

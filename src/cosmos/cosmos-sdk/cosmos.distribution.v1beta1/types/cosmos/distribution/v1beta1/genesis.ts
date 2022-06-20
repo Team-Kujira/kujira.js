@@ -1,5 +1,6 @@
 /* eslint-disable */
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 import { DecCoin } from "../../../cosmos/base/v1beta1/coin";
 import {
@@ -1171,16 +1172,18 @@ export const GenesisState = {
       obj.outstanding_rewards = [];
     }
     if (message.validator_accumulated_commissions) {
-      obj.validator_accumulated_commissions = message.validator_accumulated_commissions.map(
-        (e) => (e ? ValidatorAccumulatedCommissionRecord.toJSON(e) : undefined)
-      );
+      obj.validator_accumulated_commissions =
+        message.validator_accumulated_commissions.map((e) =>
+          e ? ValidatorAccumulatedCommissionRecord.toJSON(e) : undefined
+        );
     } else {
       obj.validator_accumulated_commissions = [];
     }
     if (message.validator_historical_rewards) {
-      obj.validator_historical_rewards = message.validator_historical_rewards.map(
-        (e) => (e ? ValidatorHistoricalRewardsRecord.toJSON(e) : undefined)
-      );
+      obj.validator_historical_rewards =
+        message.validator_historical_rewards.map((e) =>
+          e ? ValidatorHistoricalRewardsRecord.toJSON(e) : undefined
+        );
     } else {
       obj.validator_historical_rewards = [];
     }

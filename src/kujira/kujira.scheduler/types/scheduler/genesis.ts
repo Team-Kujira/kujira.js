@@ -1,5 +1,6 @@
 /* eslint-disable */
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 import { Params } from "../scheduler/params";
 import { Hook } from "../scheduler/hook";

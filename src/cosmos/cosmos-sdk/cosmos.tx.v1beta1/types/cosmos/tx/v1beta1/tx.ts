@@ -4,7 +4,8 @@ import {
   signModeFromJSON,
   signModeToJSON,
 } from "../../../cosmos/tx/signing/v1beta1/signing";
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 import { Any } from "../../../google/protobuf/any";
 import { CompactBitArray } from "../../../cosmos/crypto/multisig/v1beta1/multisig";
@@ -658,9 +659,10 @@ export const TxBody = {
       obj.extension_options = [];
     }
     if (message.non_critical_extension_options) {
-      obj.non_critical_extension_options = message.non_critical_extension_options.map(
-        (e) => (e ? Any.toJSON(e) : undefined)
-      );
+      obj.non_critical_extension_options =
+        message.non_critical_extension_options.map((e) =>
+          e ? Any.toJSON(e) : undefined
+        );
     } else {
       obj.non_critical_extension_options = [];
     }

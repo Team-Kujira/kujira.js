@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Timestamp } from "../../../google/protobuf/timestamp";
-import * as Long from "long";
+import Long from "long";
+
 import { util, configure, Writer, Reader } from "protobufjs/minimal";
 
 export const protobufPackage = "cosmos.evidence.v1beta1";
