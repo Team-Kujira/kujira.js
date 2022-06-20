@@ -4,6 +4,12 @@ JS interface for the Kujira Blockchain
 
 ## Quickstart
 
+Install required packages via your preferred package manager
+
+- `kujira.js` (via GitHub)
+- `@cosmjs/stargage`
+- `@cosmjs/proto-signing`
+
 Import tx client `tx` and type registry `registry` from `kujira.js`
 
 ```js
