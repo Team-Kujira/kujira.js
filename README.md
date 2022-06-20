@@ -1,0 +1,50 @@
+# kujira.js
+
+JS interface for the Kujira Blockchain
+
+## Quickstart
+
+Import tx client `tx` and type registry `registry` from `kujira.js`
+
+```js
+import { tx, registry } from "kujira.js";
+```
+
+Create a signing client with Stargate
+
+```js
+import { GasPrice, SigningStargateClient } from "@cosmjs/stargage";
+import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
+
+const RPC_ENDPOINT = "https://rpc-harpoon.kujira.app";
+const MNEMONIC = "...";
+
+const signer = DirectSecp256k1HdWallet.fromMnemonic(MNEMONIC);
+
+const client = await SigningStargateClient.connectWithSigner(
+  RPC_ENDPOINT,
+  signer,
+  {
+    registry,
+    gasPrice: GasPrice.fromString("0.00125ukuji"),
+  }
+);
+```
+
+Finally construct and send txs
+
+```js
+const FIN_KUJI_DEMO =
+  "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh";
+
+const account = signer.getAccounts()[0];
+
+const msg = tx.wasm.msgExecuteContract({
+  sender: account.address,
+  contract: FIN_KUJI_DEMO,
+  msg: Buffer.from(JSON.stringify({ submit_order: { price: "210.5" } })),
+  funds: coins(1000000, "ukuji"),
+});
+
+await client.signAndBroadcast(account.address, [msg], "auto");
+```
