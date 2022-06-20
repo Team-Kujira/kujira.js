@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "exports": {
-    "*": "./*"
+    "./distribution": "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1/rest"
   },
   "dependencies": {
     "@cosmjs/cosmwasm-stargate": "^0.28.7",
