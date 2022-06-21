@@ -1,6 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgTransfer } from "./types/ibc/applications/transfer/v1/tx";
+import { MsgTransfer } from "./types/applications/transfer/tx";
 declare const types: (string | {
     encode(message: MsgTransfer, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgTransfer;
@@ -22,7 +22,6 @@ declare const types: (string | {
         timeout_timestamp?: number | undefined;
     }): MsgTransfer;
 })[][];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgTransfer: (data: MsgTransfer) => EncodeObject;

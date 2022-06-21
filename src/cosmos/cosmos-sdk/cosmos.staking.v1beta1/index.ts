@@ -1,12 +1,12 @@
-
-
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgCreateValidator } from "./types/cosmos/staking/v1beta1/tx";
-import { MsgDelegate } from "./types/cosmos/staking/v1beta1/tx";
-import { MsgBeginRedelegate } from "./types/cosmos/staking/v1beta1/tx";
-import { MsgEditValidator } from "./types/cosmos/staking/v1beta1/tx";
-import { MsgUndelegate } from "./types/cosmos/staking/v1beta1/tx";
+import {
+  MsgBeginRedelegate,
+  MsgCreateValidator,
+  MsgDelegate,
+  MsgEditValidator,
+  MsgUndelegate,
+} from "./types/tx";
 
 export const types = [
   ["/cosmos.staking.v1beta1.MsgCreateValidator", MsgCreateValidator],
@@ -15,7 +15,6 @@ export const types = [
   ["/cosmos.staking.v1beta1.MsgEditValidator", MsgEditValidator],
   ["/cosmos.staking.v1beta1.MsgUndelegate", MsgUndelegate],
 ];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

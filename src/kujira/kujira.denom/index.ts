@@ -1,9 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgBurn } from "./types/denom/tx";
-import { MsgChangeAdmin } from "./types/denom/tx";
-import { MsgCreateDenom } from "./types/denom/tx";
-import { MsgMint } from "./types/denom/tx";
+import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
 
 const types = [
   ["/kujira.denom.MsgBurn", MsgBurn],
@@ -11,7 +8,6 @@ const types = [
   ["/kujira.denom.MsgCreateDenom", MsgCreateDenom],
   ["/kujira.denom.MsgMint", MsgMint],
 ];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

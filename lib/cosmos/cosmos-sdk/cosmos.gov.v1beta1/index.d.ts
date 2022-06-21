@@ -1,9 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSubmitProposal } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgVote } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgVoteWeighted } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgDeposit } from "./types/cosmos/gov/v1beta1/tx";
+import { MsgSubmitProposal, MsgVote, MsgVoteWeighted, MsgDeposit } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgSubmitProposal, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgSubmitProposal;
@@ -28,7 +25,7 @@ declare const types: ((string | {
     fromPartial(object: {
         proposal_id?: number | undefined;
         voter?: string | undefined;
-        option?: import("./types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
+        option?: import("./types/gov").VoteOption | undefined;
     }): MsgVote;
 })[] | (string | {
     encode(message: MsgVoteWeighted, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
@@ -39,7 +36,7 @@ declare const types: ((string | {
         proposal_id?: number | undefined;
         voter?: string | undefined;
         options?: {
-            option?: import("./types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
+            option?: import("./types/gov").VoteOption | undefined;
             weight?: string | undefined;
         }[] | undefined;
     }): MsgVoteWeighted;
@@ -57,7 +54,6 @@ declare const types: ((string | {
         }[] | undefined;
     }): MsgDeposit;
 })[])[];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgSubmitProposal: (data: MsgSubmitProposal) => EncodeObject;

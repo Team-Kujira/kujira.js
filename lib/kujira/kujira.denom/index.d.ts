@@ -1,9 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgBurn } from "./types/denom/tx";
-import { MsgChangeAdmin } from "./types/denom/tx";
-import { MsgCreateDenom } from "./types/denom/tx";
-import { MsgMint } from "./types/denom/tx";
+import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgBurn, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgBurn;
@@ -36,7 +33,6 @@ declare const types: ((string | {
         nonce?: string | undefined;
     }): MsgCreateDenom;
 })[])[];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgBurn: (data: MsgBurn) => EncodeObject;

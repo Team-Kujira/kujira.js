@@ -1,0 +1,50 @@
+import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "../../../../types";
+import { Any } from "../../../../types/google/protobuf/any";
+export declare const protobufPackage = "cosmos.auth.v1beta1";
+/**
+ * BaseAccount defines a base account type. It contains all the necessary fields
+ * for basic account functionality. Any custom account type should extend this
+ * type for additional functionality (e.g. vesting).
+ */
+export interface BaseAccount {
+    address: string;
+    pub_key: Any | undefined;
+    account_number: number;
+    sequence: number;
+}
+/** ModuleAccount defines an account for modules that holds coins on a pool. */
+export interface ModuleAccount {
+    base_account: BaseAccount | undefined;
+    name: string;
+    permissions: string[];
+}
+/** Params defines the parameters for the auth module. */
+export interface Params {
+    max_memo_characters: number;
+    tx_sig_limit: number;
+    tx_size_cost_per_byte: number;
+    sig_verify_cost_ed25519: number;
+    sig_verify_cost_secp256k1: number;
+}
+export declare const BaseAccount: {
+    encode(message: BaseAccount, writer?: Writer): Writer;
+    decode(input: Reader | Uint8Array, length?: number | undefined): BaseAccount;
+    fromJSON(object: any): BaseAccount;
+    toJSON(message: BaseAccount): unknown;
+    fromPartial(object: DeepPartial<BaseAccount>): BaseAccount;
+};
+export declare const ModuleAccount: {
+    encode(message: ModuleAccount, writer?: Writer): Writer;
+    decode(input: Reader | Uint8Array, length?: number | undefined): ModuleAccount;
+    fromJSON(object: any): ModuleAccount;
+    toJSON(message: ModuleAccount): unknown;
+    fromPartial(object: DeepPartial<ModuleAccount>): ModuleAccount;
+};
+export declare const Params: {
+    encode(message: Params, writer?: Writer): Writer;
+    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    fromJSON(object: any): Params;
+    toJSON(message: Params): unknown;
+    fromPartial(object: DeepPartial<Params>): Params;
+};

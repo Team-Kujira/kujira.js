@@ -1,12 +1,16 @@
 import { EncodeObject } from "@cosmjs/proto-signing";
-import { MsgExecuteContract } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgStoreCode } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgClearAdmin } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgIBCCloseChannel } from "./types/cosmwasm/wasm/v1/ibc";
-import { MsgIBCSend } from "./types/cosmwasm/wasm/v1/ibc";
-import { MsgUpdateAdmin } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgMigrateContract } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgInstantiateContract } from "./types/cosmwasm/wasm/v1/tx";
+
+import { Api } from "./rest";
+
+import { MsgIBCCloseChannel, MsgIBCSend } from "./types/ibc";
+import {
+  MsgExecuteContract,
+  MsgStoreCode,
+  MsgClearAdmin,
+  MsgUpdateAdmin,
+  MsgMigrateContract,
+  MsgInstantiateContract,
+} from "./types/tx";
 import {
   StoreCodeProposal,
   InstantiateContractProposal,
@@ -16,10 +20,7 @@ import {
   ClearAdminProposal,
   PinCodesProposal,
   UnpinCodesProposal,
-} from "./types/cosmwasm/wasm/v1/proposal";
-import { Api } from "./rest";
-import { util, configure } from "protobufjs/minimal";
-import Long from "long";
+} from "./types/proposal";
 
 const types = [
   ["/cosmwasm.wasm.v1.MsgExecuteContract", MsgExecuteContract],
@@ -79,14 +80,5 @@ const txClient = {
     value: MsgInstantiateContract.fromPartial(data),
   }),
 };
-
-console.log({ util, Long });
-
-if (util.Long !== Long) {
-  util.Long = Long as any;
-  configure();
-}
-
-console.log({ util, Long });
 
 export { txClient, types, Api };

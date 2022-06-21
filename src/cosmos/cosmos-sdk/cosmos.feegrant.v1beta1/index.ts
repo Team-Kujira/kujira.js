@@ -1,13 +1,11 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgGrantAllowance } from "./types/cosmos/feegrant/v1beta1/tx";
-import { MsgRevokeAllowance } from "./types/cosmos/feegrant/v1beta1/tx";
+import { MsgGrantAllowance, MsgRevokeAllowance } from "./types/tx";
 
 const types = [
   ["/cosmos.feegrant.v1beta1.MsgGrantAllowance", MsgGrantAllowance],
   ["/cosmos.feegrant.v1beta1.MsgRevokeAllowance", MsgRevokeAllowance],
 ];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

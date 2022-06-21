@@ -1,4 +1,5 @@
 import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "../../../../types";
 export declare const protobufPackage = "ics23";
 export declare enum HashOp {
     /** NO_HASH - NO_HASH is the default if no data passed. Note this is an illegal argument some places. */
@@ -307,8 +308,3 @@ export declare const CompressedNonExistenceProof: {
     toJSON(message: CompressedNonExistenceProof): unknown;
     fromPartial(object: DeepPartial<CompressedNonExistenceProof>): CompressedNonExistenceProof;
 };
-declare type Builtin = Date | Function | Uint8Array | string | number | undefined;
-export declare type DeepPartial<T> = T extends Builtin ? T : T extends Array<infer U> ? Array<DeepPartial<U>> : T extends ReadonlyArray<infer U> ? ReadonlyArray<DeepPartial<U>> : T extends {} ? {
-    [K in keyof T]?: DeepPartial<T[K]>;
-} : Partial<T>;
-export {};

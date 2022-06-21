@@ -1,14 +1,8 @@
 import { EncodeObject } from "@cosmjs/proto-signing";
-import { MsgExecuteContract } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgStoreCode } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgClearAdmin } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgIBCCloseChannel } from "./types/cosmwasm/wasm/v1/ibc";
-import { MsgIBCSend } from "./types/cosmwasm/wasm/v1/ibc";
-import { MsgUpdateAdmin } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgMigrateContract } from "./types/cosmwasm/wasm/v1/tx";
-import { MsgInstantiateContract } from "./types/cosmwasm/wasm/v1/tx";
-import { StoreCodeProposal, InstantiateContractProposal, ClearAdminProposal, PinCodesProposal } from "./types/cosmwasm/wasm/v1/proposal";
 import { Api } from "./rest";
+import { MsgIBCCloseChannel, MsgIBCSend } from "./types/ibc";
+import { MsgExecuteContract, MsgStoreCode, MsgClearAdmin, MsgUpdateAdmin, MsgMigrateContract, MsgInstantiateContract } from "./types/tx";
+import { StoreCodeProposal, InstantiateContractProposal, ClearAdminProposal, PinCodesProposal } from "./types/proposal";
 declare const types: ((string | {
     encode(message: MsgStoreCode, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgStoreCode;
@@ -18,7 +12,7 @@ declare const types: ((string | {
         sender?: string | undefined;
         wasm_byte_code?: Uint8Array | undefined;
         instantiate_permission?: {
-            permission?: import("./types/cosmwasm/wasm/v1/types").AccessType | undefined;
+            permission?: import("./types/types").AccessType | undefined;
             address?: string | undefined;
         } | undefined;
     }): MsgStoreCode;
@@ -66,7 +60,7 @@ declare const types: ((string | {
         run_as?: string | undefined;
         wasm_byte_code?: Uint8Array | undefined;
         instantiate_permission?: {
-            permission?: import("./types/cosmwasm/wasm/v1/types").AccessType | undefined;
+            permission?: import("./types/types").AccessType | undefined;
             address?: string | undefined;
         } | undefined;
     }): StoreCodeProposal;

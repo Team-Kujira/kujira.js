@@ -1,11 +1,8 @@
-
-
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgUnjail } from "./types/cosmos/slashing/v1beta1/tx";
+import { MsgUnjail } from "./types/tx";
 
 const types = [["/cosmos.slashing.v1beta1.MsgUnjail", MsgUnjail]];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

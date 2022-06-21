@@ -1,8 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgExec } from "./types/cosmos/authz/v1beta1/tx";
-import { MsgRevoke } from "./types/cosmos/authz/v1beta1/tx";
-import { MsgGrant } from "./types/cosmos/authz/v1beta1/tx";
+import { MsgExec, MsgRevoke, MsgGrant } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgExec, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgExec;
@@ -42,7 +40,6 @@ declare const types: ((string | {
         } | undefined;
     }): MsgGrant;
 })[])[];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgExec: (data: MsgExec) => EncodeObject;

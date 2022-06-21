@@ -1,6 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSubmitEvidence } from "./types/cosmos/evidence/v1beta1/tx";
+import { MsgSubmitEvidence } from "./types/tx";
 declare const types: (string | {
     encode(message: MsgSubmitEvidence, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgSubmitEvidence;
@@ -14,7 +14,6 @@ declare const types: (string | {
         } | undefined;
     }): MsgSubmitEvidence;
 })[][];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgSubmitEvidence: (data: MsgSubmitEvidence) => EncodeObject;

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "../../../../types";
 
 export const protobufPackage = "ics23";
 
@@ -1818,14 +1819,3 @@ function base64FromBytes(arr: Uint8Array): string {
   }
   return btoa(bin.join(""));
 }
-
-type Builtin = Date | Function | Uint8Array | string | number | undefined;
-export type DeepPartial<T> = T extends Builtin
-  ? T
-  : T extends Array<infer U>
-  ? Array<DeepPartial<U>>
-  : T extends ReadonlyArray<infer U>
-  ? ReadonlyArray<DeepPartial<U>>
-  : T extends {}
-  ? { [K in keyof T]?: DeepPartial<T[K]> }
-  : Partial<T>;

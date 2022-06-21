@@ -1,11 +1,11 @@
-
-
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSubmitProposal } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgVote } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgVoteWeighted } from "./types/cosmos/gov/v1beta1/tx";
-import { MsgDeposit } from "./types/cosmos/gov/v1beta1/tx";
+import {
+  MsgSubmitProposal,
+  MsgVote,
+  MsgVoteWeighted,
+  MsgDeposit,
+} from "./types/tx";
 
 const types = [
   ["/cosmos.gov.v1beta1.MsgSubmitProposal", MsgSubmitProposal],
@@ -13,7 +13,6 @@ const types = [
   ["/cosmos.gov.v1beta1.MsgVoteWeighted", MsgVoteWeighted],
   ["/cosmos.gov.v1beta1.MsgDeposit", MsgDeposit],
 ];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

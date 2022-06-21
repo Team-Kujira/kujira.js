@@ -1,11 +1,10 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSubmitEvidence } from "./types/cosmos/evidence/v1beta1/tx";
+import { MsgSubmitEvidence } from "./types/tx";
 
 const types = [
   ["/cosmos.evidence.v1beta1.MsgSubmitEvidence", MsgSubmitEvidence],
 ];
-export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 

@@ -1,7 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSend } from "./types/cosmos/bank/v1beta1/tx";
-import { MsgMultiSend } from "./types/cosmos/bank/v1beta1/tx";
+import { MsgMultiSend, MsgSend } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgSend, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgSend;
@@ -37,7 +36,6 @@ declare const types: ((string | {
         }[] | undefined;
     }): MsgMultiSend;
 })[])[];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgSend: (data: MsgSend) => EncodeObject;

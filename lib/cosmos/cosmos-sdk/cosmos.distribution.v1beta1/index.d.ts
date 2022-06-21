@@ -1,9 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
-import { MsgSetWithdrawAddress } from "./types/cosmos/distribution/v1beta1/tx";
-import { MsgWithdrawDelegatorReward } from "./types/cosmos/distribution/v1beta1/tx";
-import { MsgWithdrawValidatorCommission } from "./types/cosmos/distribution/v1beta1/tx";
-import { MsgFundCommunityPool } from "./types/cosmos/distribution/v1beta1/tx";
+import { MsgFundCommunityPool, MsgSetWithdrawAddress, MsgWithdrawDelegatorReward, MsgWithdrawValidatorCommission } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgSetWithdrawAddress, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgSetWithdrawAddress;
@@ -34,7 +31,6 @@ declare const types: ((string | {
         depositor?: string | undefined;
     }): MsgFundCommunityPool;
 })[])[];
-export declare const MissingWalletError: Error;
 export declare const registry: Registry;
 declare const txClient: {
     msgSetWithdrawAddress: (data: MsgSetWithdrawAddress) => EncodeObject;
