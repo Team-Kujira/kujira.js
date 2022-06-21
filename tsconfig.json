@@ -4,7 +4,7 @@
     "lib": ["ES2021", "DOM"],
     "module": "ES2020",
     "declaration": true,
-    "outDir": "./lib",
+    "outDir": "./lib/esm",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
