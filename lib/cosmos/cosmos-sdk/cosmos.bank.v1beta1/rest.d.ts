@@ -1,7 +1,4 @@
 import { RpcStatus } from "../../../types";
-export interface ProtobufAny {
-    "@type"?: string;
-}
 /**
 * Coin defines a token with a denomination and an amount.
 

@@ -55,10 +55,6 @@ export interface DenomQueryParamsResponse {
   params?: DenomParams;
 }
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 /**
 * Coin defines a token with a denomination and an amount.
 

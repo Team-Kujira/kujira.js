@@ -11,10 +11,6 @@
 
 import { RpcStatus } from "../../../types";
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 /**
  * Params holds parameters for the mint module.
  */

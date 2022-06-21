@@ -1,7 +1,4 @@
 import { RpcStatus } from "../../../types";
-export interface ProtobufAny {
-    "@type"?: string;
-}
 export declare type V1Beta1MsgUnjailResponse = object;
 /**
 * message SomeRequest {

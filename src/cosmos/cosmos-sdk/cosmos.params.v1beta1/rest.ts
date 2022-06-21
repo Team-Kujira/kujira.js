@@ -11,10 +11,6 @@
 
 import { RpcStatus } from "../../../types";
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 /**
 * ParamChange defines an individual parameter change, for use in
 ParameterChangeProposal.

@@ -11,10 +11,6 @@
 
 import { RpcStatus } from "../../../types";
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 /**
 * Params defines the set of on-chain interchain accounts parameters.
 The following parameters may be used to disable the controller submodule.

@@ -11,10 +11,6 @@
 
 import { RpcStatus } from "../../types";
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 export interface SchedulerHook {
   /** @format uint64 */
   id?: string;

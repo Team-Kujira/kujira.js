@@ -9,10 +9,6 @@
  * ---------------------------------------------------------------
  */
 
-export interface ProtobufAny {
-  "@type"?: string;
-}
-
 /**
  * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
  */
