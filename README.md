@@ -19,13 +19,13 @@ import { tx, registry } from "kujira.js";
 Create a signing client with Stargate
 
 ```js
-import { GasPrice, SigningStargateClient } from "@cosmjs/stargage";
+import { GasPrice, SigningStargateClient } from "@cosmjs/stargate";
 import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 
 const RPC_ENDPOINT = "https://rpc-harpoon.kujira.app";
 const MNEMONIC = "...";
 
-const signer = DirectSecp256k1HdWallet.fromMnemonic(MNEMONIC);
+const signer = await DirectSecp256k1HdWallet.fromMnemonic(MNEMONIC);
 
 const client = await SigningStargateClient.connectWithSigner(
   RPC_ENDPOINT,
@@ -43,7 +43,7 @@ Finally construct and send txs
 const FIN_KUJI_DEMO =
   "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh";
 
-const account = signer.getAccounts()[0];
+const [account] = await signer.getAccounts();
 
 const msg = tx.wasm.msgExecuteContract({
   sender: account.address,
