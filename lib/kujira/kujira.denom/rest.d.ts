@@ -1,3 +1,4 @@
+import { RpcStatus } from "../../types";
 /**
 * DenomAuthorityMetadata specifies metadata for addresses that have specific
 capabilities over a token factory denom. Right now there is only one Admin
@@ -35,12 +36,6 @@ export interface DenomQueryParamsResponse {
 }
 export interface ProtobufAny {
     "@type"?: string;
-}
-export interface RpcStatus {
-    /** @format int32 */
-    code?: number;
-    message?: string;
-    details?: ProtobufAny[];
 }
 /**
 * Coin defines a token with a denomination and an amount.

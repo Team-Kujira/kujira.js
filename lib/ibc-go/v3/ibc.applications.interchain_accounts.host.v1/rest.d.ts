@@ -1,11 +1,6 @@
+import { RpcStatus } from "../../../types";
 export interface ProtobufAny {
     "@type"?: string;
-}
-export interface RpcStatus {
-    /** @format int32 */
-    code?: number;
-    message?: string;
-    details?: ProtobufAny[];
 }
 /**
 * Params defines the set of on-chain interchain accounts parameters.

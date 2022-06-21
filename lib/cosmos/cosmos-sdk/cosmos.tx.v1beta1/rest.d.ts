@@ -1,3 +1,4 @@
+import { RpcStatus } from "../../../types";
 /**
 * Event allows application developers to attach additional information to
 ResponseBeginBlock, ResponseEndBlock, ResponseCheckTx and ResponseDeliverTx.
@@ -156,12 +157,6 @@ export interface ProtobufAny {
      * used with implementation specific semantics.
      */
     "@type"?: string;
-}
-export interface RpcStatus {
-    /** @format int32 */
-    code?: number;
-    message?: string;
-    details?: ProtobufAny[];
 }
 export interface TenderminttypesData {
     /**

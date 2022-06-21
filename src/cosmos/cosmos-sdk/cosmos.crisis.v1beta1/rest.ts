@@ -13,13 +13,6 @@ export interface ProtobufAny {
   "@type"?: string;
 }
 
-export interface RpcStatus {
-  /** @format int32 */
-  code?: number;
-  message?: string;
-  details?: ProtobufAny[];
-}
-
 /**
  * MsgVerifyInvariantResponse defines the Msg/VerifyInvariant response type.
  */

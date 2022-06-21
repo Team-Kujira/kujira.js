@@ -1,3 +1,4 @@
+import { RpcStatus } from "../../../types";
 /**
 * `Any` contains an arbitrary serialized protocol buffer message along with a
 URL that describes the type of the serialized message.
@@ -113,12 +114,6 @@ export interface ProtobufAny {
      * used with implementation specific semantics.
      */
     "@type"?: string;
-}
-export interface RpcStatus {
-    /** @format int32 */
-    code?: number;
-    message?: string;
-    details?: ProtobufAny[];
 }
 /**
 * Channel defines pipeline for exactly-once packet delivery between specific

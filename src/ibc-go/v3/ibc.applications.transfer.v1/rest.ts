@@ -9,6 +9,8 @@
  * ---------------------------------------------------------------
  */
 
+import { RpcStatus } from "../../../types";
+
 /**
 * Params defines the set of IBC transfer parameters.
 NOTE: To prevent a single token from being transferred, set the
@@ -144,13 +146,6 @@ export interface ProtobufAny {
    * used with implementation specific semantics.
    */
   "@type"?: string;
-}
-
-export interface RpcStatus {
-  /** @format int32 */
-  code?: number;
-  message?: string;
-  details?: ProtobufAny[];
 }
 
 /**

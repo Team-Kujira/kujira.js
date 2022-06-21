@@ -9,15 +9,10 @@
  * ---------------------------------------------------------------
  */
 
+import { RpcStatus } from "../../types";
+
 export interface ProtobufAny {
   "@type"?: string;
-}
-
-export interface RpcStatus {
-  /** @format int32 */
-  code?: number;
-  message?: string;
-  details?: ProtobufAny[];
 }
 
 export interface SchedulerHook {

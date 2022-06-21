@@ -114,12 +114,6 @@ export interface ProtobufAny {
      */
     "@type"?: string;
 }
-export interface RpcStatus {
-    /** @format int32 */
-    code?: number;
-    message?: string;
-    details?: ProtobufAny[];
-}
 /**
 * Coin defines a token with a denomination and an amount.
 

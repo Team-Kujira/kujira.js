@@ -9,6 +9,8 @@
  * ---------------------------------------------------------------
  */
 
+import { RpcStatus } from "../../../types";
+
 export interface CryptoPublicKey {
   /** @format byte */
   ed25519?: string;
@@ -161,13 +163,6 @@ export interface ProtobufAny {
    * used with implementation specific semantics.
    */
   "@type"?: string;
-}
-
-export interface RpcStatus {
-  /** @format int32 */
-  code?: number;
-  message?: string;
-  details?: ProtobufAny[];
 }
 
 export interface TenderminttypesValidator {
