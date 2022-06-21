@@ -13,5 +13,8 @@
     "@cosmjs/proto-signing": "^0.28.7",
     "@cosmjs/stargate": "^0.28.7",
     "long": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }
