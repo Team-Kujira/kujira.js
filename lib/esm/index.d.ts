@@ -18,7 +18,8 @@ export { V1Beta1ValidatorOutstandingRewards, V1Beta1ValidatorAccumulatedCommissi
 export { voteOptionFromJSON } from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1/types/gov";
 export { ValidatorSigningInfo } from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1/types/slashing";
 export { V1Beta1UnbondingDelegation, Stakingv1Beta1Validator, V1Beta1BondStatus, V1Beta1DelegationResponse, V1Beta1Params, V1Beta1Pool, V1Beta1RedelegationResponse, V1Beta1UnbondingDelegationEntry, } from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1/rest";
-export { V1Beta1Tx, V1Beta1TxResponse, } from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1/rest";
+export { TypesBlock, V1Beta1Tx, V1Beta1TxResponse, } from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1/rest";
+export { Tx } from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1/types/tx";
 export { ContinuousVestingAccount } from "./cosmos/cosmos-sdk/cosmos.vesting.v1beta1/types/vesting";
 export { V1Beta1Proposal, V1Beta1ProposalStatus, V1Beta1TallyParams, V1Beta1TallyResult, V1Beta1Vote, V1Beta1VoteOption, V1Beta1VotingParams, } from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1/rest";
 export { V1ContractCodeHistoryEntry, V1ContractCodeHistoryOperationType, V1ContractInfo, } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/rest";
