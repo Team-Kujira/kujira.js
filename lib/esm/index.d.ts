@@ -4,6 +4,7 @@ import * as auth from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1";
 import * as bank from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1";
 import * as distribution from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1";
 import * as gov from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1";
+import * as ibcTransfer from "./ibc-go/v3/ibc.applications.transfer.v1";
 import * as slashing from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1";
 import * as staking from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1";
 import * as tendermint from "./cosmos/cosmos-sdk/cosmos.base.tendermint.v1beta1";
@@ -30,6 +31,7 @@ export declare type TxClient = {
     bank: typeof bank.txClient;
     distribution: typeof distribution.txClient;
     gov: typeof gov.txClient;
+    ibcTransfer: typeof ibcTransfer.txClient;
     slashing: typeof slashing.txClient;
     staking: typeof staking.txClient;
     wasm: typeof wasm.txClient;
@@ -40,6 +42,7 @@ export declare type QueryClient = {
     bank: bank.Api<unknown>;
     distribution: distribution.Api<unknown>;
     gov: gov.Api<unknown>;
+    ibcTransfer: ibcTransfer.Api<unknown>;
     slashing: slashing.Api<unknown>;
     staking: staking.Api<unknown>;
     tendermint: tendermint.Api<unknown>;
@@ -53,6 +56,7 @@ export declare const query: ({ rest }: {
     bank: bank.Api<unknown>;
     distribution: distribution.Api<unknown>;
     gov: gov.Api<unknown>;
+    ibcTransfer: ibcTransfer.Api<unknown>;
     slashing: slashing.Api<unknown>;
     staking: staking.Api<unknown>;
     tx: tx_.Api<unknown>;

@@ -161,6 +161,7 @@ export type TxClient = {
   bank: typeof bank.txClient;
   distribution: typeof distribution.txClient;
   gov: typeof gov.txClient;
+  ibcTransfer: typeof ibcTransfer.txClient;
   slashing: typeof slashing.txClient;
   staking: typeof staking.txClient;
   wasm: typeof wasm.txClient;
@@ -170,6 +171,7 @@ export const tx: TxClient = {
   bank: bank.txClient,
   distribution: distribution.txClient,
   gov: gov.txClient,
+  ibcTransfer: ibcTransfer.txClient,
   slashing: slashing.txClient,
   staking: staking.txClient,
   wasm: wasm.txClient,
@@ -180,6 +182,7 @@ export type QueryClient = {
   bank: bank.Api<unknown>;
   distribution: distribution.Api<unknown>;
   gov: gov.Api<unknown>;
+  ibcTransfer: ibcTransfer.Api<unknown>;
   slashing: slashing.Api<unknown>;
   staking: staking.Api<unknown>;
   tendermint: tendermint.Api<unknown>;
@@ -193,6 +196,7 @@ export const query = ({ rest }: { rest: string }) => {
     bank: new bank.Api({ baseUrl: rest }),
     distribution: new distribution.Api({ baseUrl: rest }),
     gov: new gov.Api({ baseUrl: rest }),
+    ibcTransfer: new ibcTransfer.Api({ baseUrl: rest }),
     slashing: new slashing.Api({ baseUrl: rest }),
     staking: new staking.Api({ baseUrl: rest }),
     tx: new tx_.Api({ baseUrl: rest }),
