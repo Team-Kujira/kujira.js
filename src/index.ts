@@ -67,9 +67,11 @@ export {
   V1Beta1UnbondingDelegationEntry,
 } from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1/rest";
 export {
+  TypesBlock,
   V1Beta1Tx,
   V1Beta1TxResponse,
 } from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1/rest";
+export { Tx } from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1/types/tx";
 export { ContinuousVestingAccount } from "./cosmos/cosmos-sdk/cosmos.vesting.v1beta1/types/vesting";
 export {
   V1Beta1Proposal,
