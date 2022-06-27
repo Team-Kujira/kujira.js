@@ -25,7 +25,7 @@ import { DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 const RPC_ENDPOINT = "https://rpc-harpoon.kujira.app";
 const MNEMONIC = "...";
 
-const signer = await DirectSecp256k1HdWallet.fromMnemonic(MNEMONIC);
+const signer = await DirectSecp256k1HdWallet.fromMnemonic(MNEMONIC, { prefix: 'kujira' });
 
 const client = await SigningStargateClient.connectWithSigner(
   RPC_ENDPOINT,
