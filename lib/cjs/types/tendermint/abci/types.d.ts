@@ -346,308 +346,308 @@ export interface Snapshot {
 }
 export declare const Request: {
     encode(message: Request, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Request;
+    decode(input: Reader | Uint8Array, length?: number): Request;
     fromJSON(object: any): Request;
     toJSON(message: Request): unknown;
     fromPartial(object: DeepPartial<Request>): Request;
 };
 export declare const RequestEcho: {
     encode(message: RequestEcho, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestEcho;
+    decode(input: Reader | Uint8Array, length?: number): RequestEcho;
     fromJSON(object: any): RequestEcho;
     toJSON(message: RequestEcho): unknown;
     fromPartial(object: DeepPartial<RequestEcho>): RequestEcho;
 };
 export declare const RequestFlush: {
     encode(_: RequestFlush, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestFlush;
+    decode(input: Reader | Uint8Array, length?: number): RequestFlush;
     fromJSON(_: any): RequestFlush;
     toJSON(_: RequestFlush): unknown;
     fromPartial(_: DeepPartial<RequestFlush>): RequestFlush;
 };
 export declare const RequestInfo: {
     encode(message: RequestInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestInfo;
+    decode(input: Reader | Uint8Array, length?: number): RequestInfo;
     fromJSON(object: any): RequestInfo;
     toJSON(message: RequestInfo): unknown;
     fromPartial(object: DeepPartial<RequestInfo>): RequestInfo;
 };
 export declare const RequestSetOption: {
     encode(message: RequestSetOption, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestSetOption;
+    decode(input: Reader | Uint8Array, length?: number): RequestSetOption;
     fromJSON(object: any): RequestSetOption;
     toJSON(message: RequestSetOption): unknown;
     fromPartial(object: DeepPartial<RequestSetOption>): RequestSetOption;
 };
 export declare const RequestInitChain: {
     encode(message: RequestInitChain, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestInitChain;
+    decode(input: Reader | Uint8Array, length?: number): RequestInitChain;
     fromJSON(object: any): RequestInitChain;
     toJSON(message: RequestInitChain): unknown;
     fromPartial(object: DeepPartial<RequestInitChain>): RequestInitChain;
 };
 export declare const RequestQuery: {
     encode(message: RequestQuery, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestQuery;
+    decode(input: Reader | Uint8Array, length?: number): RequestQuery;
     fromJSON(object: any): RequestQuery;
     toJSON(message: RequestQuery): unknown;
     fromPartial(object: DeepPartial<RequestQuery>): RequestQuery;
 };
 export declare const RequestBeginBlock: {
     encode(message: RequestBeginBlock, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestBeginBlock;
+    decode(input: Reader | Uint8Array, length?: number): RequestBeginBlock;
     fromJSON(object: any): RequestBeginBlock;
     toJSON(message: RequestBeginBlock): unknown;
     fromPartial(object: DeepPartial<RequestBeginBlock>): RequestBeginBlock;
 };
 export declare const RequestCheckTx: {
     encode(message: RequestCheckTx, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestCheckTx;
+    decode(input: Reader | Uint8Array, length?: number): RequestCheckTx;
     fromJSON(object: any): RequestCheckTx;
     toJSON(message: RequestCheckTx): unknown;
     fromPartial(object: DeepPartial<RequestCheckTx>): RequestCheckTx;
 };
 export declare const RequestDeliverTx: {
     encode(message: RequestDeliverTx, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestDeliverTx;
+    decode(input: Reader | Uint8Array, length?: number): RequestDeliverTx;
     fromJSON(object: any): RequestDeliverTx;
     toJSON(message: RequestDeliverTx): unknown;
     fromPartial(object: DeepPartial<RequestDeliverTx>): RequestDeliverTx;
 };
 export declare const RequestEndBlock: {
     encode(message: RequestEndBlock, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestEndBlock;
+    decode(input: Reader | Uint8Array, length?: number): RequestEndBlock;
     fromJSON(object: any): RequestEndBlock;
     toJSON(message: RequestEndBlock): unknown;
     fromPartial(object: DeepPartial<RequestEndBlock>): RequestEndBlock;
 };
 export declare const RequestCommit: {
     encode(_: RequestCommit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestCommit;
+    decode(input: Reader | Uint8Array, length?: number): RequestCommit;
     fromJSON(_: any): RequestCommit;
     toJSON(_: RequestCommit): unknown;
     fromPartial(_: DeepPartial<RequestCommit>): RequestCommit;
 };
 export declare const RequestListSnapshots: {
     encode(_: RequestListSnapshots, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestListSnapshots;
+    decode(input: Reader | Uint8Array, length?: number): RequestListSnapshots;
     fromJSON(_: any): RequestListSnapshots;
     toJSON(_: RequestListSnapshots): unknown;
     fromPartial(_: DeepPartial<RequestListSnapshots>): RequestListSnapshots;
 };
 export declare const RequestOfferSnapshot: {
     encode(message: RequestOfferSnapshot, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestOfferSnapshot;
+    decode(input: Reader | Uint8Array, length?: number): RequestOfferSnapshot;
     fromJSON(object: any): RequestOfferSnapshot;
     toJSON(message: RequestOfferSnapshot): unknown;
     fromPartial(object: DeepPartial<RequestOfferSnapshot>): RequestOfferSnapshot;
 };
 export declare const RequestLoadSnapshotChunk: {
     encode(message: RequestLoadSnapshotChunk, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestLoadSnapshotChunk;
+    decode(input: Reader | Uint8Array, length?: number): RequestLoadSnapshotChunk;
     fromJSON(object: any): RequestLoadSnapshotChunk;
     toJSON(message: RequestLoadSnapshotChunk): unknown;
     fromPartial(object: DeepPartial<RequestLoadSnapshotChunk>): RequestLoadSnapshotChunk;
 };
 export declare const RequestApplySnapshotChunk: {
     encode(message: RequestApplySnapshotChunk, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): RequestApplySnapshotChunk;
+    decode(input: Reader | Uint8Array, length?: number): RequestApplySnapshotChunk;
     fromJSON(object: any): RequestApplySnapshotChunk;
     toJSON(message: RequestApplySnapshotChunk): unknown;
     fromPartial(object: DeepPartial<RequestApplySnapshotChunk>): RequestApplySnapshotChunk;
 };
 export declare const Response: {
     encode(message: Response, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Response;
+    decode(input: Reader | Uint8Array, length?: number): Response;
     fromJSON(object: any): Response;
     toJSON(message: Response): unknown;
     fromPartial(object: DeepPartial<Response>): Response;
 };
 export declare const ResponseException: {
     encode(message: ResponseException, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseException;
+    decode(input: Reader | Uint8Array, length?: number): ResponseException;
     fromJSON(object: any): ResponseException;
     toJSON(message: ResponseException): unknown;
     fromPartial(object: DeepPartial<ResponseException>): ResponseException;
 };
 export declare const ResponseEcho: {
     encode(message: ResponseEcho, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseEcho;
+    decode(input: Reader | Uint8Array, length?: number): ResponseEcho;
     fromJSON(object: any): ResponseEcho;
     toJSON(message: ResponseEcho): unknown;
     fromPartial(object: DeepPartial<ResponseEcho>): ResponseEcho;
 };
 export declare const ResponseFlush: {
     encode(_: ResponseFlush, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseFlush;
+    decode(input: Reader | Uint8Array, length?: number): ResponseFlush;
     fromJSON(_: any): ResponseFlush;
     toJSON(_: ResponseFlush): unknown;
     fromPartial(_: DeepPartial<ResponseFlush>): ResponseFlush;
 };
 export declare const ResponseInfo: {
     encode(message: ResponseInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseInfo;
+    decode(input: Reader | Uint8Array, length?: number): ResponseInfo;
     fromJSON(object: any): ResponseInfo;
     toJSON(message: ResponseInfo): unknown;
     fromPartial(object: DeepPartial<ResponseInfo>): ResponseInfo;
 };
 export declare const ResponseSetOption: {
     encode(message: ResponseSetOption, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseSetOption;
+    decode(input: Reader | Uint8Array, length?: number): ResponseSetOption;
     fromJSON(object: any): ResponseSetOption;
     toJSON(message: ResponseSetOption): unknown;
     fromPartial(object: DeepPartial<ResponseSetOption>): ResponseSetOption;
 };
 export declare const ResponseInitChain: {
     encode(message: ResponseInitChain, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseInitChain;
+    decode(input: Reader | Uint8Array, length?: number): ResponseInitChain;
     fromJSON(object: any): ResponseInitChain;
     toJSON(message: ResponseInitChain): unknown;
     fromPartial(object: DeepPartial<ResponseInitChain>): ResponseInitChain;
 };
 export declare const ResponseQuery: {
     encode(message: ResponseQuery, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseQuery;
+    decode(input: Reader | Uint8Array, length?: number): ResponseQuery;
     fromJSON(object: any): ResponseQuery;
     toJSON(message: ResponseQuery): unknown;
     fromPartial(object: DeepPartial<ResponseQuery>): ResponseQuery;
 };
 export declare const ResponseBeginBlock: {
     encode(message: ResponseBeginBlock, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseBeginBlock;
+    decode(input: Reader | Uint8Array, length?: number): ResponseBeginBlock;
     fromJSON(object: any): ResponseBeginBlock;
     toJSON(message: ResponseBeginBlock): unknown;
     fromPartial(object: DeepPartial<ResponseBeginBlock>): ResponseBeginBlock;
 };
 export declare const ResponseCheckTx: {
     encode(message: ResponseCheckTx, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseCheckTx;
+    decode(input: Reader | Uint8Array, length?: number): ResponseCheckTx;
     fromJSON(object: any): ResponseCheckTx;
     toJSON(message: ResponseCheckTx): unknown;
     fromPartial(object: DeepPartial<ResponseCheckTx>): ResponseCheckTx;
 };
 export declare const ResponseDeliverTx: {
     encode(message: ResponseDeliverTx, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseDeliverTx;
+    decode(input: Reader | Uint8Array, length?: number): ResponseDeliverTx;
     fromJSON(object: any): ResponseDeliverTx;
     toJSON(message: ResponseDeliverTx): unknown;
     fromPartial(object: DeepPartial<ResponseDeliverTx>): ResponseDeliverTx;
 };
 export declare const ResponseEndBlock: {
     encode(message: ResponseEndBlock, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseEndBlock;
+    decode(input: Reader | Uint8Array, length?: number): ResponseEndBlock;
     fromJSON(object: any): ResponseEndBlock;
     toJSON(message: ResponseEndBlock): unknown;
     fromPartial(object: DeepPartial<ResponseEndBlock>): ResponseEndBlock;
 };
 export declare const ResponseCommit: {
     encode(message: ResponseCommit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseCommit;
+    decode(input: Reader | Uint8Array, length?: number): ResponseCommit;
     fromJSON(object: any): ResponseCommit;
     toJSON(message: ResponseCommit): unknown;
     fromPartial(object: DeepPartial<ResponseCommit>): ResponseCommit;
 };
 export declare const ResponseListSnapshots: {
     encode(message: ResponseListSnapshots, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseListSnapshots;
+    decode(input: Reader | Uint8Array, length?: number): ResponseListSnapshots;
     fromJSON(object: any): ResponseListSnapshots;
     toJSON(message: ResponseListSnapshots): unknown;
     fromPartial(object: DeepPartial<ResponseListSnapshots>): ResponseListSnapshots;
 };
 export declare const ResponseOfferSnapshot: {
     encode(message: ResponseOfferSnapshot, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseOfferSnapshot;
+    decode(input: Reader | Uint8Array, length?: number): ResponseOfferSnapshot;
     fromJSON(object: any): ResponseOfferSnapshot;
     toJSON(message: ResponseOfferSnapshot): unknown;
     fromPartial(object: DeepPartial<ResponseOfferSnapshot>): ResponseOfferSnapshot;
 };
 export declare const ResponseLoadSnapshotChunk: {
     encode(message: ResponseLoadSnapshotChunk, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseLoadSnapshotChunk;
+    decode(input: Reader | Uint8Array, length?: number): ResponseLoadSnapshotChunk;
     fromJSON(object: any): ResponseLoadSnapshotChunk;
     toJSON(message: ResponseLoadSnapshotChunk): unknown;
     fromPartial(object: DeepPartial<ResponseLoadSnapshotChunk>): ResponseLoadSnapshotChunk;
 };
 export declare const ResponseApplySnapshotChunk: {
     encode(message: ResponseApplySnapshotChunk, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ResponseApplySnapshotChunk;
+    decode(input: Reader | Uint8Array, length?: number): ResponseApplySnapshotChunk;
     fromJSON(object: any): ResponseApplySnapshotChunk;
     toJSON(message: ResponseApplySnapshotChunk): unknown;
     fromPartial(object: DeepPartial<ResponseApplySnapshotChunk>): ResponseApplySnapshotChunk;
 };
 export declare const ConsensusParams: {
     encode(message: ConsensusParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ConsensusParams;
+    decode(input: Reader | Uint8Array, length?: number): ConsensusParams;
     fromJSON(object: any): ConsensusParams;
     toJSON(message: ConsensusParams): unknown;
     fromPartial(object: DeepPartial<ConsensusParams>): ConsensusParams;
 };
 export declare const BlockParams: {
     encode(message: BlockParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): BlockParams;
+    decode(input: Reader | Uint8Array, length?: number): BlockParams;
     fromJSON(object: any): BlockParams;
     toJSON(message: BlockParams): unknown;
     fromPartial(object: DeepPartial<BlockParams>): BlockParams;
 };
 export declare const LastCommitInfo: {
     encode(message: LastCommitInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): LastCommitInfo;
+    decode(input: Reader | Uint8Array, length?: number): LastCommitInfo;
     fromJSON(object: any): LastCommitInfo;
     toJSON(message: LastCommitInfo): unknown;
     fromPartial(object: DeepPartial<LastCommitInfo>): LastCommitInfo;
 };
 export declare const Event: {
     encode(message: Event, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Event;
+    decode(input: Reader | Uint8Array, length?: number): Event;
     fromJSON(object: any): Event;
     toJSON(message: Event): unknown;
     fromPartial(object: DeepPartial<Event>): Event;
 };
 export declare const EventAttribute: {
     encode(message: EventAttribute, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): EventAttribute;
+    decode(input: Reader | Uint8Array, length?: number): EventAttribute;
     fromJSON(object: any): EventAttribute;
     toJSON(message: EventAttribute): unknown;
     fromPartial(object: DeepPartial<EventAttribute>): EventAttribute;
 };
 export declare const TxResult: {
     encode(message: TxResult, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): TxResult;
+    decode(input: Reader | Uint8Array, length?: number): TxResult;
     fromJSON(object: any): TxResult;
     toJSON(message: TxResult): unknown;
     fromPartial(object: DeepPartial<TxResult>): TxResult;
 };
 export declare const Validator: {
     encode(message: Validator, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Validator;
+    decode(input: Reader | Uint8Array, length?: number): Validator;
     fromJSON(object: any): Validator;
     toJSON(message: Validator): unknown;
     fromPartial(object: DeepPartial<Validator>): Validator;
 };
 export declare const ValidatorUpdate: {
     encode(message: ValidatorUpdate, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorUpdate;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorUpdate;
     fromJSON(object: any): ValidatorUpdate;
     toJSON(message: ValidatorUpdate): unknown;
     fromPartial(object: DeepPartial<ValidatorUpdate>): ValidatorUpdate;
 };
 export declare const VoteInfo: {
     encode(message: VoteInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): VoteInfo;
+    decode(input: Reader | Uint8Array, length?: number): VoteInfo;
     fromJSON(object: any): VoteInfo;
     toJSON(message: VoteInfo): unknown;
     fromPartial(object: DeepPartial<VoteInfo>): VoteInfo;
 };
 export declare const Evidence: {
     encode(message: Evidence, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Evidence;
+    decode(input: Reader | Uint8Array, length?: number): Evidence;
     fromJSON(object: any): Evidence;
     toJSON(message: Evidence): unknown;
     fromPartial(object: DeepPartial<Evidence>): Evidence;
 };
 export declare const Snapshot: {
     encode(message: Snapshot, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Snapshot;
+    decode(input: Reader | Uint8Array, length?: number): Snapshot;
     fromJSON(object: any): Snapshot;
     toJSON(message: Snapshot): unknown;
     fromPartial(object: DeepPartial<Snapshot>): Snapshot;

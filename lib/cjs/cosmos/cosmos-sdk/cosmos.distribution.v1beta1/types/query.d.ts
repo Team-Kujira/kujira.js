@@ -151,126 +151,126 @@ export interface QueryCommunityPoolResponse {
 }
 export declare const QueryParamsRequest: {
     encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryValidatorOutstandingRewardsRequest: {
     encode(message: QueryValidatorOutstandingRewardsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorOutstandingRewardsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorOutstandingRewardsRequest;
     fromJSON(object: any): QueryValidatorOutstandingRewardsRequest;
     toJSON(message: QueryValidatorOutstandingRewardsRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorOutstandingRewardsRequest>): QueryValidatorOutstandingRewardsRequest;
 };
 export declare const QueryValidatorOutstandingRewardsResponse: {
     encode(message: QueryValidatorOutstandingRewardsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorOutstandingRewardsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorOutstandingRewardsResponse;
     fromJSON(object: any): QueryValidatorOutstandingRewardsResponse;
     toJSON(message: QueryValidatorOutstandingRewardsResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorOutstandingRewardsResponse>): QueryValidatorOutstandingRewardsResponse;
 };
 export declare const QueryValidatorCommissionRequest: {
     encode(message: QueryValidatorCommissionRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorCommissionRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorCommissionRequest;
     fromJSON(object: any): QueryValidatorCommissionRequest;
     toJSON(message: QueryValidatorCommissionRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorCommissionRequest>): QueryValidatorCommissionRequest;
 };
 export declare const QueryValidatorCommissionResponse: {
     encode(message: QueryValidatorCommissionResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorCommissionResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorCommissionResponse;
     fromJSON(object: any): QueryValidatorCommissionResponse;
     toJSON(message: QueryValidatorCommissionResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorCommissionResponse>): QueryValidatorCommissionResponse;
 };
 export declare const QueryValidatorSlashesRequest: {
     encode(message: QueryValidatorSlashesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorSlashesRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorSlashesRequest;
     fromJSON(object: any): QueryValidatorSlashesRequest;
     toJSON(message: QueryValidatorSlashesRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorSlashesRequest>): QueryValidatorSlashesRequest;
 };
 export declare const QueryValidatorSlashesResponse: {
     encode(message: QueryValidatorSlashesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryValidatorSlashesResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryValidatorSlashesResponse;
     fromJSON(object: any): QueryValidatorSlashesResponse;
     toJSON(message: QueryValidatorSlashesResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorSlashesResponse>): QueryValidatorSlashesResponse;
 };
 export declare const QueryDelegationRewardsRequest: {
     encode(message: QueryDelegationRewardsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegationRewardsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegationRewardsRequest;
     fromJSON(object: any): QueryDelegationRewardsRequest;
     toJSON(message: QueryDelegationRewardsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegationRewardsRequest>): QueryDelegationRewardsRequest;
 };
 export declare const QueryDelegationRewardsResponse: {
     encode(message: QueryDelegationRewardsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegationRewardsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegationRewardsResponse;
     fromJSON(object: any): QueryDelegationRewardsResponse;
     toJSON(message: QueryDelegationRewardsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegationRewardsResponse>): QueryDelegationRewardsResponse;
 };
 export declare const QueryDelegationTotalRewardsRequest: {
     encode(message: QueryDelegationTotalRewardsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegationTotalRewardsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegationTotalRewardsRequest;
     fromJSON(object: any): QueryDelegationTotalRewardsRequest;
     toJSON(message: QueryDelegationTotalRewardsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegationTotalRewardsRequest>): QueryDelegationTotalRewardsRequest;
 };
 export declare const QueryDelegationTotalRewardsResponse: {
     encode(message: QueryDelegationTotalRewardsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegationTotalRewardsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegationTotalRewardsResponse;
     fromJSON(object: any): QueryDelegationTotalRewardsResponse;
     toJSON(message: QueryDelegationTotalRewardsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegationTotalRewardsResponse>): QueryDelegationTotalRewardsResponse;
 };
 export declare const QueryDelegatorValidatorsRequest: {
     encode(message: QueryDelegatorValidatorsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegatorValidatorsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegatorValidatorsRequest;
     fromJSON(object: any): QueryDelegatorValidatorsRequest;
     toJSON(message: QueryDelegatorValidatorsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorsRequest>): QueryDelegatorValidatorsRequest;
 };
 export declare const QueryDelegatorValidatorsResponse: {
     encode(message: QueryDelegatorValidatorsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegatorValidatorsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegatorValidatorsResponse;
     fromJSON(object: any): QueryDelegatorValidatorsResponse;
     toJSON(message: QueryDelegatorValidatorsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorsResponse>): QueryDelegatorValidatorsResponse;
 };
 export declare const QueryDelegatorWithdrawAddressRequest: {
     encode(message: QueryDelegatorWithdrawAddressRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegatorWithdrawAddressRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegatorWithdrawAddressRequest;
     fromJSON(object: any): QueryDelegatorWithdrawAddressRequest;
     toJSON(message: QueryDelegatorWithdrawAddressRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorWithdrawAddressRequest>): QueryDelegatorWithdrawAddressRequest;
 };
 export declare const QueryDelegatorWithdrawAddressResponse: {
     encode(message: QueryDelegatorWithdrawAddressResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDelegatorWithdrawAddressResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDelegatorWithdrawAddressResponse;
     fromJSON(object: any): QueryDelegatorWithdrawAddressResponse;
     toJSON(message: QueryDelegatorWithdrawAddressResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorWithdrawAddressResponse>): QueryDelegatorWithdrawAddressResponse;
 };
 export declare const QueryCommunityPoolRequest: {
     encode(_: QueryCommunityPoolRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryCommunityPoolRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryCommunityPoolRequest;
     fromJSON(_: any): QueryCommunityPoolRequest;
     toJSON(_: QueryCommunityPoolRequest): unknown;
     fromPartial(_: DeepPartial<QueryCommunityPoolRequest>): QueryCommunityPoolRequest;
 };
 export declare const QueryCommunityPoolResponse: {
     encode(message: QueryCommunityPoolResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryCommunityPoolResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryCommunityPoolResponse;
     fromJSON(object: any): QueryCommunityPoolResponse;
     toJSON(message: QueryCommunityPoolResponse): unknown;
     fromPartial(object: DeepPartial<QueryCommunityPoolResponse>): QueryCommunityPoolResponse;

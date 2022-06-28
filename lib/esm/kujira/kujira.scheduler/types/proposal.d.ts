@@ -36,21 +36,21 @@ export interface DeleteHookProposal {
 }
 export declare const CreateHookProposal: {
     encode(message: CreateHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CreateHookProposal;
+    decode(input: Reader | Uint8Array, length?: number): CreateHookProposal;
     fromJSON(object: any): CreateHookProposal;
     toJSON(message: CreateHookProposal): unknown;
     fromPartial(object: DeepPartial<CreateHookProposal>): CreateHookProposal;
 };
 export declare const UpdateHookProposal: {
     encode(message: UpdateHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): UpdateHookProposal;
+    decode(input: Reader | Uint8Array, length?: number): UpdateHookProposal;
     fromJSON(object: any): UpdateHookProposal;
     toJSON(message: UpdateHookProposal): unknown;
     fromPartial(object: DeepPartial<UpdateHookProposal>): UpdateHookProposal;
 };
 export declare const DeleteHookProposal: {
     encode(message: DeleteHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DeleteHookProposal;
+    decode(input: Reader | Uint8Array, length?: number): DeleteHookProposal;
     fromJSON(object: any): DeleteHookProposal;
     toJSON(message: DeleteHookProposal): unknown;
     fromPartial(object: DeepPartial<DeleteHookProposal>): DeleteHookProposal;

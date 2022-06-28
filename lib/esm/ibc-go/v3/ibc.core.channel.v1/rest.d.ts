@@ -885,11 +885,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/ibc/core/channel/v1/channels
      */
     queryChannels: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryChannelsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryChannelsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -938,12 +938,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_acknowledgements
    */
     queryPacketAcknowledgements: (channel_id: string, port_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        packet_commitment_sequences?: string[] | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryPacketAcknowledgementsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        packet_commitment_sequences?: string[];
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryPacketAcknowledgementsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -963,11 +963,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/ibc/core/channel/v1/channels/{channel_id}/ports/{port_id}/packet_commitments
    */
     queryPacketCommitments: (channel_id: string, port_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryPacketCommitmentsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryPacketCommitmentsResponse, RpcStatus>>;
     /**
    * No description
    *
@@ -1017,10 +1017,10 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/ibc/core/channel/v1/connections/{connection}/channels
    */
     queryConnectionChannels: (connection: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryConnectionChannelsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryConnectionChannelsResponse, RpcStatus>>;
 }
 export {};

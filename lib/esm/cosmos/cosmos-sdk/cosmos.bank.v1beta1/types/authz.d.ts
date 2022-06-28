@@ -13,7 +13,7 @@ export interface SendAuthorization {
 }
 export declare const SendAuthorization: {
     encode(message: SendAuthorization, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SendAuthorization;
+    decode(input: Reader | Uint8Array, length?: number): SendAuthorization;
     fromJSON(object: any): SendAuthorization;
     toJSON(message: SendAuthorization): unknown;
     fromPartial(object: DeepPartial<SendAuthorization>): SendAuthorization;

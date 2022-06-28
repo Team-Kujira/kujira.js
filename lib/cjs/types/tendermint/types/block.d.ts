@@ -11,7 +11,7 @@ export interface Block {
 }
 export declare const Block: {
     encode(message: Block, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Block;
+    decode(input: Reader | Uint8Array, length?: number): Block;
     fromJSON(object: any): Block;
     toJSON(message: Block): unknown;
     fromPartial(object: DeepPartial<Block>): Block;

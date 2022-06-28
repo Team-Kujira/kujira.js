@@ -12,14 +12,14 @@ export interface QueryParamsResponse {
 }
 export declare const QueryParamsRequest: {
     encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;

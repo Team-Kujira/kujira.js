@@ -47,14 +47,14 @@ export interface StakeAuthorization_Validators {
 }
 export declare const StakeAuthorization: {
     encode(message: StakeAuthorization, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): StakeAuthorization;
+    decode(input: Reader | Uint8Array, length?: number): StakeAuthorization;
     fromJSON(object: any): StakeAuthorization;
     toJSON(message: StakeAuthorization): unknown;
     fromPartial(object: DeepPartial<StakeAuthorization>): StakeAuthorization;
 };
 export declare const StakeAuthorization_Validators: {
     encode(message: StakeAuthorization_Validators, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): StakeAuthorization_Validators;
+    decode(input: Reader | Uint8Array, length?: number): StakeAuthorization_Validators;
     fromJSON(object: any): StakeAuthorization_Validators;
     toJSON(message: StakeAuthorization_Validators): unknown;
     fromPartial(object: DeepPartial<StakeAuthorization_Validators>): StakeAuthorization_Validators;

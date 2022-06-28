@@ -51,56 +51,56 @@ export interface MsgChangeAdminResponse {
 }
 export declare const MsgCreateDenom: {
     encode(message: MsgCreateDenom, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgCreateDenom;
+    decode(input: Reader | Uint8Array, length?: number): MsgCreateDenom;
     fromJSON(object: any): MsgCreateDenom;
     toJSON(message: MsgCreateDenom): unknown;
     fromPartial(object: DeepPartial<MsgCreateDenom>): MsgCreateDenom;
 };
 export declare const MsgCreateDenomResponse: {
     encode(message: MsgCreateDenomResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgCreateDenomResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgCreateDenomResponse;
     fromJSON(object: any): MsgCreateDenomResponse;
     toJSON(message: MsgCreateDenomResponse): unknown;
     fromPartial(object: DeepPartial<MsgCreateDenomResponse>): MsgCreateDenomResponse;
 };
 export declare const MsgMint: {
     encode(message: MsgMint, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMint;
+    decode(input: Reader | Uint8Array, length?: number): MsgMint;
     fromJSON(object: any): MsgMint;
     toJSON(message: MsgMint): unknown;
     fromPartial(object: DeepPartial<MsgMint>): MsgMint;
 };
 export declare const MsgMintResponse: {
     encode(_: MsgMintResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMintResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgMintResponse;
     fromJSON(_: any): MsgMintResponse;
     toJSON(_: MsgMintResponse): unknown;
     fromPartial(_: DeepPartial<MsgMintResponse>): MsgMintResponse;
 };
 export declare const MsgBurn: {
     encode(message: MsgBurn, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgBurn;
+    decode(input: Reader | Uint8Array, length?: number): MsgBurn;
     fromJSON(object: any): MsgBurn;
     toJSON(message: MsgBurn): unknown;
     fromPartial(object: DeepPartial<MsgBurn>): MsgBurn;
 };
 export declare const MsgBurnResponse: {
     encode(_: MsgBurnResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgBurnResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgBurnResponse;
     fromJSON(_: any): MsgBurnResponse;
     toJSON(_: MsgBurnResponse): unknown;
     fromPartial(_: DeepPartial<MsgBurnResponse>): MsgBurnResponse;
 };
 export declare const MsgChangeAdmin: {
     encode(message: MsgChangeAdmin, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgChangeAdmin;
+    decode(input: Reader | Uint8Array, length?: number): MsgChangeAdmin;
     fromJSON(object: any): MsgChangeAdmin;
     toJSON(message: MsgChangeAdmin): unknown;
     fromPartial(object: DeepPartial<MsgChangeAdmin>): MsgChangeAdmin;
 };
 export declare const MsgChangeAdminResponse: {
     encode(_: MsgChangeAdminResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgChangeAdminResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgChangeAdminResponse;
     fromJSON(_: any): MsgChangeAdminResponse;
     toJSON(_: MsgChangeAdminResponse): unknown;
     fromPartial(_: DeepPartial<MsgChangeAdminResponse>): MsgChangeAdminResponse;

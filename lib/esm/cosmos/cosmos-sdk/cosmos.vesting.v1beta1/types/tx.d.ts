@@ -18,14 +18,14 @@ export interface MsgCreateVestingAccountResponse {
 }
 export declare const MsgCreateVestingAccount: {
     encode(message: MsgCreateVestingAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgCreateVestingAccount;
+    decode(input: Reader | Uint8Array, length?: number): MsgCreateVestingAccount;
     fromJSON(object: any): MsgCreateVestingAccount;
     toJSON(message: MsgCreateVestingAccount): unknown;
     fromPartial(object: DeepPartial<MsgCreateVestingAccount>): MsgCreateVestingAccount;
 };
 export declare const MsgCreateVestingAccountResponse: {
     encode(_: MsgCreateVestingAccountResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgCreateVestingAccountResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgCreateVestingAccountResponse;
     fromJSON(_: any): MsgCreateVestingAccountResponse;
     toJSON(_: MsgCreateVestingAccountResponse): unknown;
     fromPartial(_: DeepPartial<MsgCreateVestingAccountResponse>): MsgCreateVestingAccountResponse;

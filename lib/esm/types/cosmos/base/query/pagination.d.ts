@@ -65,14 +65,14 @@ export interface PageResponse {
 }
 export declare const PageRequest: {
     encode(message: PageRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PageRequest;
+    decode(input: Reader | Uint8Array, length?: number): PageRequest;
     fromJSON(object: any): PageRequest;
     toJSON(message: PageRequest): unknown;
     fromPartial(object: DeepPartial<PageRequest>): PageRequest;
 };
 export declare const PageResponse: {
     encode(message: PageResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PageResponse;
+    decode(input: Reader | Uint8Array, length?: number): PageResponse;
     fromJSON(object: any): PageResponse;
     toJSON(message: PageResponse): unknown;
     fromPartial(object: DeepPartial<PageResponse>): PageResponse;

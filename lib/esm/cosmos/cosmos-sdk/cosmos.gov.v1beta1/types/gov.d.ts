@@ -148,63 +148,63 @@ export interface TallyParams {
 }
 export declare const WeightedVoteOption: {
     encode(message: WeightedVoteOption, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): WeightedVoteOption;
+    decode(input: Reader | Uint8Array, length?: number): WeightedVoteOption;
     fromJSON(object: any): WeightedVoteOption;
     toJSON(message: WeightedVoteOption): unknown;
     fromPartial(object: DeepPartial<WeightedVoteOption>): WeightedVoteOption;
 };
 export declare const TextProposal: {
     encode(message: TextProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): TextProposal;
+    decode(input: Reader | Uint8Array, length?: number): TextProposal;
     fromJSON(object: any): TextProposal;
     toJSON(message: TextProposal): unknown;
     fromPartial(object: DeepPartial<TextProposal>): TextProposal;
 };
 export declare const Deposit: {
     encode(message: Deposit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Deposit;
+    decode(input: Reader | Uint8Array, length?: number): Deposit;
     fromJSON(object: any): Deposit;
     toJSON(message: Deposit): unknown;
     fromPartial(object: DeepPartial<Deposit>): Deposit;
 };
 export declare const Proposal: {
     encode(message: Proposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Proposal;
+    decode(input: Reader | Uint8Array, length?: number): Proposal;
     fromJSON(object: any): Proposal;
     toJSON(message: Proposal): unknown;
     fromPartial(object: DeepPartial<Proposal>): Proposal;
 };
 export declare const TallyResult: {
     encode(message: TallyResult, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): TallyResult;
+    decode(input: Reader | Uint8Array, length?: number): TallyResult;
     fromJSON(object: any): TallyResult;
     toJSON(message: TallyResult): unknown;
     fromPartial(object: DeepPartial<TallyResult>): TallyResult;
 };
 export declare const Vote: {
     encode(message: Vote, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Vote;
+    decode(input: Reader | Uint8Array, length?: number): Vote;
     fromJSON(object: any): Vote;
     toJSON(message: Vote): unknown;
     fromPartial(object: DeepPartial<Vote>): Vote;
 };
 export declare const DepositParams: {
     encode(message: DepositParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DepositParams;
+    decode(input: Reader | Uint8Array, length?: number): DepositParams;
     fromJSON(object: any): DepositParams;
     toJSON(message: DepositParams): unknown;
     fromPartial(object: DeepPartial<DepositParams>): DepositParams;
 };
 export declare const VotingParams: {
     encode(message: VotingParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): VotingParams;
+    decode(input: Reader | Uint8Array, length?: number): VotingParams;
     fromJSON(object: any): VotingParams;
     toJSON(message: VotingParams): unknown;
     fromPartial(object: DeepPartial<VotingParams>): VotingParams;
 };
 export declare const TallyParams: {
     encode(message: TallyParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): TallyParams;
+    decode(input: Reader | Uint8Array, length?: number): TallyParams;
     fromJSON(object: any): TallyParams;
     toJSON(message: TallyParams): unknown;
     fromPartial(object: DeepPartial<TallyParams>): TallyParams;

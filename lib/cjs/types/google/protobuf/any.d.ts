@@ -121,7 +121,7 @@ export interface Any {
 }
 export declare const Any: {
     encode(message: Any, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Any;
+    decode(input: Reader | Uint8Array, length?: number): Any;
     fromJSON(object: any): Any;
     toJSON(message: Any): unknown;
     fromPartial(object: DeepPartial<Any>): Any;

@@ -111,7 +111,7 @@ export interface Timestamp {
 }
 export declare const Timestamp: {
     encode(message: Timestamp, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Timestamp;
+    decode(input: Reader | Uint8Array, length?: number): Timestamp;
     fromJSON(object: any): Timestamp;
     toJSON(message: Timestamp): unknown;
     fromPartial(object: DeepPartial<Timestamp>): Timestamp;

@@ -29,21 +29,21 @@ export interface Params {
 }
 export declare const BaseAccount: {
     encode(message: BaseAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): BaseAccount;
+    decode(input: Reader | Uint8Array, length?: number): BaseAccount;
     fromJSON(object: any): BaseAccount;
     toJSON(message: BaseAccount): unknown;
     fromPartial(object: DeepPartial<BaseAccount>): BaseAccount;
 };
 export declare const ModuleAccount: {
     encode(message: ModuleAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ModuleAccount;
+    decode(input: Reader | Uint8Array, length?: number): ModuleAccount;
     fromJSON(object: any): ModuleAccount;
     toJSON(message: ModuleAccount): unknown;
     fromPartial(object: DeepPartial<ModuleAccount>): ModuleAccount;
 };
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;

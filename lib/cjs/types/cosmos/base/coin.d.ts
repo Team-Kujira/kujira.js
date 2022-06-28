@@ -31,28 +31,28 @@ export interface DecProto {
 }
 export declare const Coin: {
     encode(message: Coin, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Coin;
+    decode(input: Reader | Uint8Array, length?: number): Coin;
     fromJSON(object: any): Coin;
     toJSON(message: Coin): unknown;
     fromPartial(object: DeepPartial<Coin>): Coin;
 };
 export declare const DecCoin: {
     encode(message: DecCoin, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DecCoin;
+    decode(input: Reader | Uint8Array, length?: number): DecCoin;
     fromJSON(object: any): DecCoin;
     toJSON(message: DecCoin): unknown;
     fromPartial(object: DeepPartial<DecCoin>): DecCoin;
 };
 export declare const IntProto: {
     encode(message: IntProto, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): IntProto;
+    decode(input: Reader | Uint8Array, length?: number): IntProto;
     fromJSON(object: any): IntProto;
     toJSON(message: IntProto): unknown;
     fromPartial(object: DeepPartial<IntProto>): IntProto;
 };
 export declare const DecProto: {
     encode(message: DecProto, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DecProto;
+    decode(input: Reader | Uint8Array, length?: number): DecProto;
     fromJSON(object: any): DecProto;
     toJSON(message: DecProto): unknown;
     fromPartial(object: DeepPartial<DecProto>): DecProto;

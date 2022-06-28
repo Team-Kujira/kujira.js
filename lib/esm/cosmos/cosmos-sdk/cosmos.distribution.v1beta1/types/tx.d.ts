@@ -47,56 +47,56 @@ export interface MsgFundCommunityPoolResponse {
 }
 export declare const MsgSetWithdrawAddress: {
     encode(message: MsgSetWithdrawAddress, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSetWithdrawAddress;
+    decode(input: Reader | Uint8Array, length?: number): MsgSetWithdrawAddress;
     fromJSON(object: any): MsgSetWithdrawAddress;
     toJSON(message: MsgSetWithdrawAddress): unknown;
     fromPartial(object: DeepPartial<MsgSetWithdrawAddress>): MsgSetWithdrawAddress;
 };
 export declare const MsgSetWithdrawAddressResponse: {
     encode(_: MsgSetWithdrawAddressResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSetWithdrawAddressResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgSetWithdrawAddressResponse;
     fromJSON(_: any): MsgSetWithdrawAddressResponse;
     toJSON(_: MsgSetWithdrawAddressResponse): unknown;
     fromPartial(_: DeepPartial<MsgSetWithdrawAddressResponse>): MsgSetWithdrawAddressResponse;
 };
 export declare const MsgWithdrawDelegatorReward: {
     encode(message: MsgWithdrawDelegatorReward, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgWithdrawDelegatorReward;
+    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawDelegatorReward;
     fromJSON(object: any): MsgWithdrawDelegatorReward;
     toJSON(message: MsgWithdrawDelegatorReward): unknown;
     fromPartial(object: DeepPartial<MsgWithdrawDelegatorReward>): MsgWithdrawDelegatorReward;
 };
 export declare const MsgWithdrawDelegatorRewardResponse: {
     encode(_: MsgWithdrawDelegatorRewardResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgWithdrawDelegatorRewardResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawDelegatorRewardResponse;
     fromJSON(_: any): MsgWithdrawDelegatorRewardResponse;
     toJSON(_: MsgWithdrawDelegatorRewardResponse): unknown;
     fromPartial(_: DeepPartial<MsgWithdrawDelegatorRewardResponse>): MsgWithdrawDelegatorRewardResponse;
 };
 export declare const MsgWithdrawValidatorCommission: {
     encode(message: MsgWithdrawValidatorCommission, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgWithdrawValidatorCommission;
+    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawValidatorCommission;
     fromJSON(object: any): MsgWithdrawValidatorCommission;
     toJSON(message: MsgWithdrawValidatorCommission): unknown;
     fromPartial(object: DeepPartial<MsgWithdrawValidatorCommission>): MsgWithdrawValidatorCommission;
 };
 export declare const MsgWithdrawValidatorCommissionResponse: {
     encode(_: MsgWithdrawValidatorCommissionResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgWithdrawValidatorCommissionResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawValidatorCommissionResponse;
     fromJSON(_: any): MsgWithdrawValidatorCommissionResponse;
     toJSON(_: MsgWithdrawValidatorCommissionResponse): unknown;
     fromPartial(_: DeepPartial<MsgWithdrawValidatorCommissionResponse>): MsgWithdrawValidatorCommissionResponse;
 };
 export declare const MsgFundCommunityPool: {
     encode(message: MsgFundCommunityPool, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgFundCommunityPool;
+    decode(input: Reader | Uint8Array, length?: number): MsgFundCommunityPool;
     fromJSON(object: any): MsgFundCommunityPool;
     toJSON(message: MsgFundCommunityPool): unknown;
     fromPartial(object: DeepPartial<MsgFundCommunityPool>): MsgFundCommunityPool;
 };
 export declare const MsgFundCommunityPoolResponse: {
     encode(_: MsgFundCommunityPoolResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgFundCommunityPoolResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgFundCommunityPoolResponse;
     fromJSON(_: any): MsgFundCommunityPoolResponse;
     toJSON(_: MsgFundCommunityPoolResponse): unknown;
     fromPartial(_: DeepPartial<MsgFundCommunityPoolResponse>): MsgFundCommunityPoolResponse;

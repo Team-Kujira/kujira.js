@@ -48,42 +48,42 @@ export interface QueryGranteeGrantsResponse {
 }
 export declare const QueryGrantsRequest: {
     encode(message: QueryGrantsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGrantsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryGrantsRequest;
     fromJSON(object: any): QueryGrantsRequest;
     toJSON(message: QueryGrantsRequest): unknown;
     fromPartial(object: DeepPartial<QueryGrantsRequest>): QueryGrantsRequest;
 };
 export declare const QueryGrantsResponse: {
     encode(message: QueryGrantsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGrantsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryGrantsResponse;
     fromJSON(object: any): QueryGrantsResponse;
     toJSON(message: QueryGrantsResponse): unknown;
     fromPartial(object: DeepPartial<QueryGrantsResponse>): QueryGrantsResponse;
 };
 export declare const QueryGranterGrantsRequest: {
     encode(message: QueryGranterGrantsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGranterGrantsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryGranterGrantsRequest;
     fromJSON(object: any): QueryGranterGrantsRequest;
     toJSON(message: QueryGranterGrantsRequest): unknown;
     fromPartial(object: DeepPartial<QueryGranterGrantsRequest>): QueryGranterGrantsRequest;
 };
 export declare const QueryGranterGrantsResponse: {
     encode(message: QueryGranterGrantsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGranterGrantsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryGranterGrantsResponse;
     fromJSON(object: any): QueryGranterGrantsResponse;
     toJSON(message: QueryGranterGrantsResponse): unknown;
     fromPartial(object: DeepPartial<QueryGranterGrantsResponse>): QueryGranterGrantsResponse;
 };
 export declare const QueryGranteeGrantsRequest: {
     encode(message: QueryGranteeGrantsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGranteeGrantsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryGranteeGrantsRequest;
     fromJSON(object: any): QueryGranteeGrantsRequest;
     toJSON(message: QueryGranteeGrantsRequest): unknown;
     fromPartial(object: DeepPartial<QueryGranteeGrantsRequest>): QueryGranteeGrantsRequest;
 };
 export declare const QueryGranteeGrantsResponse: {
     encode(message: QueryGranteeGrantsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGranteeGrantsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryGranteeGrantsResponse;
     fromJSON(object: any): QueryGranteeGrantsResponse;
     toJSON(message: QueryGranteeGrantsResponse): unknown;
     fromPartial(object: DeepPartial<QueryGranteeGrantsResponse>): QueryGranteeGrantsResponse;

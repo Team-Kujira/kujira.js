@@ -113,84 +113,84 @@ export interface CommunityPoolSpendProposalWithDeposit {
 }
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;
 };
 export declare const ValidatorHistoricalRewards: {
     encode(message: ValidatorHistoricalRewards, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorHistoricalRewards;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorHistoricalRewards;
     fromJSON(object: any): ValidatorHistoricalRewards;
     toJSON(message: ValidatorHistoricalRewards): unknown;
     fromPartial(object: DeepPartial<ValidatorHistoricalRewards>): ValidatorHistoricalRewards;
 };
 export declare const ValidatorCurrentRewards: {
     encode(message: ValidatorCurrentRewards, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorCurrentRewards;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorCurrentRewards;
     fromJSON(object: any): ValidatorCurrentRewards;
     toJSON(message: ValidatorCurrentRewards): unknown;
     fromPartial(object: DeepPartial<ValidatorCurrentRewards>): ValidatorCurrentRewards;
 };
 export declare const ValidatorAccumulatedCommission: {
     encode(message: ValidatorAccumulatedCommission, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorAccumulatedCommission;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorAccumulatedCommission;
     fromJSON(object: any): ValidatorAccumulatedCommission;
     toJSON(message: ValidatorAccumulatedCommission): unknown;
     fromPartial(object: DeepPartial<ValidatorAccumulatedCommission>): ValidatorAccumulatedCommission;
 };
 export declare const ValidatorOutstandingRewards: {
     encode(message: ValidatorOutstandingRewards, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorOutstandingRewards;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorOutstandingRewards;
     fromJSON(object: any): ValidatorOutstandingRewards;
     toJSON(message: ValidatorOutstandingRewards): unknown;
     fromPartial(object: DeepPartial<ValidatorOutstandingRewards>): ValidatorOutstandingRewards;
 };
 export declare const ValidatorSlashEvent: {
     encode(message: ValidatorSlashEvent, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorSlashEvent;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorSlashEvent;
     fromJSON(object: any): ValidatorSlashEvent;
     toJSON(message: ValidatorSlashEvent): unknown;
     fromPartial(object: DeepPartial<ValidatorSlashEvent>): ValidatorSlashEvent;
 };
 export declare const ValidatorSlashEvents: {
     encode(message: ValidatorSlashEvents, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorSlashEvents;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorSlashEvents;
     fromJSON(object: any): ValidatorSlashEvents;
     toJSON(message: ValidatorSlashEvents): unknown;
     fromPartial(object: DeepPartial<ValidatorSlashEvents>): ValidatorSlashEvents;
 };
 export declare const FeePool: {
     encode(message: FeePool, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): FeePool;
+    decode(input: Reader | Uint8Array, length?: number): FeePool;
     fromJSON(object: any): FeePool;
     toJSON(message: FeePool): unknown;
     fromPartial(object: DeepPartial<FeePool>): FeePool;
 };
 export declare const CommunityPoolSpendProposal: {
     encode(message: CommunityPoolSpendProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CommunityPoolSpendProposal;
+    decode(input: Reader | Uint8Array, length?: number): CommunityPoolSpendProposal;
     fromJSON(object: any): CommunityPoolSpendProposal;
     toJSON(message: CommunityPoolSpendProposal): unknown;
     fromPartial(object: DeepPartial<CommunityPoolSpendProposal>): CommunityPoolSpendProposal;
 };
 export declare const DelegatorStartingInfo: {
     encode(message: DelegatorStartingInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DelegatorStartingInfo;
+    decode(input: Reader | Uint8Array, length?: number): DelegatorStartingInfo;
     fromJSON(object: any): DelegatorStartingInfo;
     toJSON(message: DelegatorStartingInfo): unknown;
     fromPartial(object: DeepPartial<DelegatorStartingInfo>): DelegatorStartingInfo;
 };
 export declare const DelegationDelegatorReward: {
     encode(message: DelegationDelegatorReward, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DelegationDelegatorReward;
+    decode(input: Reader | Uint8Array, length?: number): DelegationDelegatorReward;
     fromJSON(object: any): DelegationDelegatorReward;
     toJSON(message: DelegationDelegatorReward): unknown;
     fromPartial(object: DeepPartial<DelegationDelegatorReward>): DelegationDelegatorReward;
 };
 export declare const CommunityPoolSpendProposalWithDeposit: {
     encode(message: CommunityPoolSpendProposalWithDeposit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CommunityPoolSpendProposalWithDeposit;
+    decode(input: Reader | Uint8Array, length?: number): CommunityPoolSpendProposalWithDeposit;
     fromJSON(object: any): CommunityPoolSpendProposalWithDeposit;
     toJSON(message: CommunityPoolSpendProposalWithDeposit): unknown;
     fromPartial(object: DeepPartial<CommunityPoolSpendProposalWithDeposit>): CommunityPoolSpendProposalWithDeposit;

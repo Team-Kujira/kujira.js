@@ -95,56 +95,56 @@ export interface GenesisState {
 }
 export declare const DelegatorWithdrawInfo: {
     encode(message: DelegatorWithdrawInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DelegatorWithdrawInfo;
+    decode(input: Reader | Uint8Array, length?: number): DelegatorWithdrawInfo;
     fromJSON(object: any): DelegatorWithdrawInfo;
     toJSON(message: DelegatorWithdrawInfo): unknown;
     fromPartial(object: DeepPartial<DelegatorWithdrawInfo>): DelegatorWithdrawInfo;
 };
 export declare const ValidatorOutstandingRewardsRecord: {
     encode(message: ValidatorOutstandingRewardsRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorOutstandingRewardsRecord;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorOutstandingRewardsRecord;
     fromJSON(object: any): ValidatorOutstandingRewardsRecord;
     toJSON(message: ValidatorOutstandingRewardsRecord): unknown;
     fromPartial(object: DeepPartial<ValidatorOutstandingRewardsRecord>): ValidatorOutstandingRewardsRecord;
 };
 export declare const ValidatorAccumulatedCommissionRecord: {
     encode(message: ValidatorAccumulatedCommissionRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorAccumulatedCommissionRecord;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorAccumulatedCommissionRecord;
     fromJSON(object: any): ValidatorAccumulatedCommissionRecord;
     toJSON(message: ValidatorAccumulatedCommissionRecord): unknown;
     fromPartial(object: DeepPartial<ValidatorAccumulatedCommissionRecord>): ValidatorAccumulatedCommissionRecord;
 };
 export declare const ValidatorHistoricalRewardsRecord: {
     encode(message: ValidatorHistoricalRewardsRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorHistoricalRewardsRecord;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorHistoricalRewardsRecord;
     fromJSON(object: any): ValidatorHistoricalRewardsRecord;
     toJSON(message: ValidatorHistoricalRewardsRecord): unknown;
     fromPartial(object: DeepPartial<ValidatorHistoricalRewardsRecord>): ValidatorHistoricalRewardsRecord;
 };
 export declare const ValidatorCurrentRewardsRecord: {
     encode(message: ValidatorCurrentRewardsRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorCurrentRewardsRecord;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorCurrentRewardsRecord;
     fromJSON(object: any): ValidatorCurrentRewardsRecord;
     toJSON(message: ValidatorCurrentRewardsRecord): unknown;
     fromPartial(object: DeepPartial<ValidatorCurrentRewardsRecord>): ValidatorCurrentRewardsRecord;
 };
 export declare const DelegatorStartingInfoRecord: {
     encode(message: DelegatorStartingInfoRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DelegatorStartingInfoRecord;
+    decode(input: Reader | Uint8Array, length?: number): DelegatorStartingInfoRecord;
     fromJSON(object: any): DelegatorStartingInfoRecord;
     toJSON(message: DelegatorStartingInfoRecord): unknown;
     fromPartial(object: DeepPartial<DelegatorStartingInfoRecord>): DelegatorStartingInfoRecord;
 };
 export declare const ValidatorSlashEventRecord: {
     encode(message: ValidatorSlashEventRecord, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorSlashEventRecord;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorSlashEventRecord;
     fromJSON(object: any): ValidatorSlashEventRecord;
     toJSON(message: ValidatorSlashEventRecord): unknown;
     fromPartial(object: DeepPartial<ValidatorSlashEventRecord>): ValidatorSlashEventRecord;
 };
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;

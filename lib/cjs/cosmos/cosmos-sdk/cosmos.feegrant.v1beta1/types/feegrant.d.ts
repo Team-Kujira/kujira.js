@@ -63,28 +63,28 @@ export interface Grant {
 }
 export declare const BasicAllowance: {
     encode(message: BasicAllowance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): BasicAllowance;
+    decode(input: Reader | Uint8Array, length?: number): BasicAllowance;
     fromJSON(object: any): BasicAllowance;
     toJSON(message: BasicAllowance): unknown;
     fromPartial(object: DeepPartial<BasicAllowance>): BasicAllowance;
 };
 export declare const PeriodicAllowance: {
     encode(message: PeriodicAllowance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PeriodicAllowance;
+    decode(input: Reader | Uint8Array, length?: number): PeriodicAllowance;
     fromJSON(object: any): PeriodicAllowance;
     toJSON(message: PeriodicAllowance): unknown;
     fromPartial(object: DeepPartial<PeriodicAllowance>): PeriodicAllowance;
 };
 export declare const AllowedMsgAllowance: {
     encode(message: AllowedMsgAllowance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): AllowedMsgAllowance;
+    decode(input: Reader | Uint8Array, length?: number): AllowedMsgAllowance;
     fromJSON(object: any): AllowedMsgAllowance;
     toJSON(message: AllowedMsgAllowance): unknown;
     fromPartial(object: DeepPartial<AllowedMsgAllowance>): AllowedMsgAllowance;
 };
 export declare const Grant: {
     encode(message: Grant, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Grant;
+    decode(input: Reader | Uint8Array, length?: number): Grant;
     fromJSON(object: any): Grant;
     toJSON(message: Grant): unknown;
     fromPartial(object: DeepPartial<Grant>): Grant;

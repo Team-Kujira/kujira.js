@@ -333,11 +333,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/ibc/apps/transfer/v1/denom_traces
      */
     queryDenomTraces: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryDenomTracesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryDenomTracesResponse, RpcStatus>>;
     /**
      * No description
      *

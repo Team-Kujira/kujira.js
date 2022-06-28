@@ -25,14 +25,14 @@ export interface Params {
 }
 export declare const Minter: {
     encode(message: Minter, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Minter;
+    decode(input: Reader | Uint8Array, length?: number): Minter;
     fromJSON(object: any): Minter;
     toJSON(message: Minter): unknown;
     fromPartial(object: DeepPartial<Minter>): Minter;
 };
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;

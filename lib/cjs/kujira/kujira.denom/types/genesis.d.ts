@@ -15,14 +15,14 @@ export interface GenesisDenom {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const GenesisDenom: {
     encode(message: GenesisDenom, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisDenom;
+    decode(input: Reader | Uint8Array, length?: number): GenesisDenom;
     fromJSON(object: any): GenesisDenom;
     toJSON(message: GenesisDenom): unknown;
     fromPartial(object: DeepPartial<GenesisDenom>): GenesisDenom;

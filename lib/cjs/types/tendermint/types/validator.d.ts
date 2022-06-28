@@ -19,21 +19,21 @@ export interface SimpleValidator {
 }
 export declare const ValidatorSet: {
     encode(message: ValidatorSet, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorSet;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorSet;
     fromJSON(object: any): ValidatorSet;
     toJSON(message: ValidatorSet): unknown;
     fromPartial(object: DeepPartial<ValidatorSet>): ValidatorSet;
 };
 export declare const Validator: {
     encode(message: Validator, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Validator;
+    decode(input: Reader | Uint8Array, length?: number): Validator;
     fromJSON(object: any): Validator;
     toJSON(message: Validator): unknown;
     fromPartial(object: DeepPartial<Validator>): Validator;
 };
 export declare const SimpleValidator: {
     encode(message: SimpleValidator, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SimpleValidator;
+    decode(input: Reader | Uint8Array, length?: number): SimpleValidator;
     fromJSON(object: any): SimpleValidator;
     toJSON(message: SimpleValidator): unknown;
     fromPartial(object: DeepPartial<SimpleValidator>): SimpleValidator;

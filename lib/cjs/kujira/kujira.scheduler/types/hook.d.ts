@@ -12,7 +12,7 @@ export interface Hook {
 }
 export declare const Hook: {
     encode(message: Hook, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Hook;
+    decode(input: Reader | Uint8Array, length?: number): Hook;
     fromJSON(object: any): Hook;
     toJSON(message: Hook): unknown;
     fromPartial(object: DeepPartial<Hook>): Hook;

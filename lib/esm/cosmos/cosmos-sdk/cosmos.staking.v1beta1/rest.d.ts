@@ -693,12 +693,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/staking/v1beta1/delegations/{delegator_addr}
      */
     queryDelegatorDelegations: (delegator_addr: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorDelegationsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorDelegationsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -708,14 +708,14 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/staking/v1beta1/delegators/{delegator_addr}/redelegations
      */
     queryRedelegations: (delegator_addr: string, query?: {
-        src_validator_addr?: string | undefined;
-        dst_validator_addr?: string | undefined;
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryRedelegationsResponse, RpcStatus>>;
+        src_validator_addr?: string;
+        dst_validator_addr?: string;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryRedelegationsResponse, RpcStatus>>;
     /**
    * No description
    *
@@ -726,12 +726,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/cosmos/staking/v1beta1/delegators/{delegator_addr}/unbonding_delegations
    */
     queryDelegatorUnbondingDelegations: (delegator_addr: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorUnbondingDelegationsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorUnbondingDelegationsResponse, RpcStatus>>;
     /**
    * No description
    *
@@ -742,12 +742,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/cosmos/staking/v1beta1/delegators/{delegator_addr}/validators
    */
     queryDelegatorValidators: (delegator_addr: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorValidatorsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDelegatorValidatorsResponse, RpcStatus>>;
     /**
    * No description
    *
@@ -794,13 +794,13 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/staking/v1beta1/validators
      */
     queryValidators: (query?: {
-        status?: string | undefined;
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorsResponse, RpcStatus>>;
+        status?: string;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -819,12 +819,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/staking/v1beta1/validators/{validator_addr}/delegations
      */
     queryValidatorDelegations: (validator_addr: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorDelegationsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorDelegationsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -853,11 +853,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/staking/v1beta1/validators/{validator_addr}/unbonding_delegations
      */
     queryValidatorUnbondingDelegations: (validator_addr: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorUnbondingDelegationsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorUnbondingDelegationsResponse, RpcStatus>>;
 }
 export {};

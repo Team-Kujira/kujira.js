@@ -295,21 +295,21 @@ export interface CustomHttpPattern {
 }
 export declare const Http: {
     encode(message: Http, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Http;
+    decode(input: Reader | Uint8Array, length?: number): Http;
     fromJSON(object: any): Http;
     toJSON(message: Http): unknown;
     fromPartial(object: DeepPartial<Http>): Http;
 };
 export declare const HttpRule: {
     encode(message: HttpRule, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): HttpRule;
+    decode(input: Reader | Uint8Array, length?: number): HttpRule;
     fromJSON(object: any): HttpRule;
     toJSON(message: HttpRule): unknown;
     fromPartial(object: DeepPartial<HttpRule>): HttpRule;
 };
 export declare const CustomHttpPattern: {
     encode(message: CustomHttpPattern, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CustomHttpPattern;
+    decode(input: Reader | Uint8Array, length?: number): CustomHttpPattern;
     fromJSON(object: any): CustomHttpPattern;
     toJSON(message: CustomHttpPattern): unknown;
     fromPartial(object: DeepPartial<CustomHttpPattern>): CustomHttpPattern;

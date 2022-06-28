@@ -30,28 +30,28 @@ export interface MsgRevokeAllowanceResponse {
 }
 export declare const MsgGrantAllowance: {
     encode(message: MsgGrantAllowance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgGrantAllowance;
+    decode(input: Reader | Uint8Array, length?: number): MsgGrantAllowance;
     fromJSON(object: any): MsgGrantAllowance;
     toJSON(message: MsgGrantAllowance): unknown;
     fromPartial(object: DeepPartial<MsgGrantAllowance>): MsgGrantAllowance;
 };
 export declare const MsgGrantAllowanceResponse: {
     encode(_: MsgGrantAllowanceResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgGrantAllowanceResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgGrantAllowanceResponse;
     fromJSON(_: any): MsgGrantAllowanceResponse;
     toJSON(_: MsgGrantAllowanceResponse): unknown;
     fromPartial(_: DeepPartial<MsgGrantAllowanceResponse>): MsgGrantAllowanceResponse;
 };
 export declare const MsgRevokeAllowance: {
     encode(message: MsgRevokeAllowance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgRevokeAllowance;
+    decode(input: Reader | Uint8Array, length?: number): MsgRevokeAllowance;
     fromJSON(object: any): MsgRevokeAllowance;
     toJSON(message: MsgRevokeAllowance): unknown;
     fromPartial(object: DeepPartial<MsgRevokeAllowance>): MsgRevokeAllowance;
 };
 export declare const MsgRevokeAllowanceResponse: {
     encode(_: MsgRevokeAllowanceResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgRevokeAllowanceResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgRevokeAllowanceResponse;
     fromJSON(_: any): MsgRevokeAllowanceResponse;
     toJSON(_: MsgRevokeAllowanceResponse): unknown;
     fromPartial(_: DeepPartial<MsgRevokeAllowanceResponse>): MsgRevokeAllowanceResponse;

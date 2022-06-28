@@ -27,6 +27,7 @@ export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
 export declare const registry: Registry;
+export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => AminoTypes;
 export declare type TxClient = {
     bank: typeof bank.txClient;

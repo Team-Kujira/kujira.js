@@ -126,112 +126,112 @@ export interface QueryDenomMetadataResponse {
 }
 export declare const QueryBalanceRequest: {
     encode(message: QueryBalanceRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryBalanceRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryBalanceRequest;
     fromJSON(object: any): QueryBalanceRequest;
     toJSON(message: QueryBalanceRequest): unknown;
     fromPartial(object: DeepPartial<QueryBalanceRequest>): QueryBalanceRequest;
 };
 export declare const QueryBalanceResponse: {
     encode(message: QueryBalanceResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryBalanceResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryBalanceResponse;
     fromJSON(object: any): QueryBalanceResponse;
     toJSON(message: QueryBalanceResponse): unknown;
     fromPartial(object: DeepPartial<QueryBalanceResponse>): QueryBalanceResponse;
 };
 export declare const QueryAllBalancesRequest: {
     encode(message: QueryAllBalancesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllBalancesRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllBalancesRequest;
     fromJSON(object: any): QueryAllBalancesRequest;
     toJSON(message: QueryAllBalancesRequest): unknown;
     fromPartial(object: DeepPartial<QueryAllBalancesRequest>): QueryAllBalancesRequest;
 };
 export declare const QueryAllBalancesResponse: {
     encode(message: QueryAllBalancesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllBalancesResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllBalancesResponse;
     fromJSON(object: any): QueryAllBalancesResponse;
     toJSON(message: QueryAllBalancesResponse): unknown;
     fromPartial(object: DeepPartial<QueryAllBalancesResponse>): QueryAllBalancesResponse;
 };
 export declare const QuerySpendableBalancesRequest: {
     encode(message: QuerySpendableBalancesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QuerySpendableBalancesRequest;
+    decode(input: Reader | Uint8Array, length?: number): QuerySpendableBalancesRequest;
     fromJSON(object: any): QuerySpendableBalancesRequest;
     toJSON(message: QuerySpendableBalancesRequest): unknown;
     fromPartial(object: DeepPartial<QuerySpendableBalancesRequest>): QuerySpendableBalancesRequest;
 };
 export declare const QuerySpendableBalancesResponse: {
     encode(message: QuerySpendableBalancesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QuerySpendableBalancesResponse;
+    decode(input: Reader | Uint8Array, length?: number): QuerySpendableBalancesResponse;
     fromJSON(object: any): QuerySpendableBalancesResponse;
     toJSON(message: QuerySpendableBalancesResponse): unknown;
     fromPartial(object: DeepPartial<QuerySpendableBalancesResponse>): QuerySpendableBalancesResponse;
 };
 export declare const QueryTotalSupplyRequest: {
     encode(message: QueryTotalSupplyRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryTotalSupplyRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryTotalSupplyRequest;
     fromJSON(object: any): QueryTotalSupplyRequest;
     toJSON(message: QueryTotalSupplyRequest): unknown;
     fromPartial(object: DeepPartial<QueryTotalSupplyRequest>): QueryTotalSupplyRequest;
 };
 export declare const QueryTotalSupplyResponse: {
     encode(message: QueryTotalSupplyResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryTotalSupplyResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryTotalSupplyResponse;
     fromJSON(object: any): QueryTotalSupplyResponse;
     toJSON(message: QueryTotalSupplyResponse): unknown;
     fromPartial(object: DeepPartial<QueryTotalSupplyResponse>): QueryTotalSupplyResponse;
 };
 export declare const QuerySupplyOfRequest: {
     encode(message: QuerySupplyOfRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QuerySupplyOfRequest;
+    decode(input: Reader | Uint8Array, length?: number): QuerySupplyOfRequest;
     fromJSON(object: any): QuerySupplyOfRequest;
     toJSON(message: QuerySupplyOfRequest): unknown;
     fromPartial(object: DeepPartial<QuerySupplyOfRequest>): QuerySupplyOfRequest;
 };
 export declare const QuerySupplyOfResponse: {
     encode(message: QuerySupplyOfResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QuerySupplyOfResponse;
+    decode(input: Reader | Uint8Array, length?: number): QuerySupplyOfResponse;
     fromJSON(object: any): QuerySupplyOfResponse;
     toJSON(message: QuerySupplyOfResponse): unknown;
     fromPartial(object: DeepPartial<QuerySupplyOfResponse>): QuerySupplyOfResponse;
 };
 export declare const QueryParamsRequest: {
     encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryDenomsMetadataRequest: {
     encode(message: QueryDenomsMetadataRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDenomsMetadataRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDenomsMetadataRequest;
     fromJSON(object: any): QueryDenomsMetadataRequest;
     toJSON(message: QueryDenomsMetadataRequest): unknown;
     fromPartial(object: DeepPartial<QueryDenomsMetadataRequest>): QueryDenomsMetadataRequest;
 };
 export declare const QueryDenomsMetadataResponse: {
     encode(message: QueryDenomsMetadataResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDenomsMetadataResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDenomsMetadataResponse;
     fromJSON(object: any): QueryDenomsMetadataResponse;
     toJSON(message: QueryDenomsMetadataResponse): unknown;
     fromPartial(object: DeepPartial<QueryDenomsMetadataResponse>): QueryDenomsMetadataResponse;
 };
 export declare const QueryDenomMetadataRequest: {
     encode(message: QueryDenomMetadataRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDenomMetadataRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryDenomMetadataRequest;
     fromJSON(object: any): QueryDenomMetadataRequest;
     toJSON(message: QueryDenomMetadataRequest): unknown;
     fromPartial(object: DeepPartial<QueryDenomMetadataRequest>): QueryDenomMetadataRequest;
 };
 export declare const QueryDenomMetadataResponse: {
     encode(message: QueryDenomMetadataResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryDenomMetadataResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryDenomMetadataResponse;
     fromJSON(object: any): QueryDenomMetadataResponse;
     toJSON(message: QueryDenomMetadataResponse): unknown;
     fromPartial(object: DeepPartial<QueryDenomMetadataResponse>): QueryDenomMetadataResponse;

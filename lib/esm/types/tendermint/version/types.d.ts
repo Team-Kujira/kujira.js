@@ -21,14 +21,14 @@ export interface Consensus {
 }
 export declare const App: {
     encode(message: App, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): App;
+    decode(input: Reader | Uint8Array, length?: number): App;
     fromJSON(object: any): App;
     toJSON(message: App): unknown;
     fromPartial(object: DeepPartial<App>): App;
 };
 export declare const Consensus: {
     encode(message: Consensus, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Consensus;
+    decode(input: Reader | Uint8Array, length?: number): Consensus;
     fromJSON(object: any): Consensus;
     toJSON(message: Consensus): unknown;
     fromPartial(object: DeepPartial<Consensus>): Consensus;

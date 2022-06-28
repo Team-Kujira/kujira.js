@@ -35,14 +35,14 @@ export interface MsgTransferResponse {
 }
 export declare const MsgTransfer: {
     encode(message: MsgTransfer, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgTransfer;
+    decode(input: Reader | Uint8Array, length?: number): MsgTransfer;
     fromJSON(object: any): MsgTransfer;
     toJSON(message: MsgTransfer): unknown;
     fromPartial(object: DeepPartial<MsgTransfer>): MsgTransfer;
 };
 export declare const MsgTransferResponse: {
     encode(_: MsgTransferResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgTransferResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgTransferResponse;
     fromJSON(_: any): MsgTransferResponse;
     toJSON(_: MsgTransferResponse): unknown;
     fromPartial(_: DeepPartial<MsgTransferResponse>): MsgTransferResponse;

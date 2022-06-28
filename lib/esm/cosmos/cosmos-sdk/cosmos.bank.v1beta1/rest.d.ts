@@ -279,12 +279,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/bank/v1beta1/balances/{address}
      */
     queryAllBalances: (address: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryAllBalancesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryAllBalancesResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -294,8 +294,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/bank/v1beta1/balances/{address}/by_denom
      */
     queryBalance: (address: string, query?: {
-        denom?: string | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryBalanceResponse, RpcStatus>>;
+        denom?: string;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryBalanceResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -305,12 +305,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/bank/v1beta1/denoms_metadata
      */
     queryDenomsMetadata: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDenomsMetadataResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDenomsMetadataResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -339,12 +339,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/cosmos/bank/v1beta1/spendable_balances/{address}
    */
     querySpendableBalances: (address: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QuerySpendableBalancesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QuerySpendableBalancesResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -354,12 +354,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/bank/v1beta1/supply
      */
     queryTotalSupply: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryTotalSupplyResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryTotalSupplyResponse, RpcStatus>>;
     /**
      * No description
      *

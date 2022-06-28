@@ -34,35 +34,35 @@ export interface ProofOps {
 }
 export declare const Proof: {
     encode(message: Proof, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Proof;
+    decode(input: Reader | Uint8Array, length?: number): Proof;
     fromJSON(object: any): Proof;
     toJSON(message: Proof): unknown;
     fromPartial(object: DeepPartial<Proof>): Proof;
 };
 export declare const ValueOp: {
     encode(message: ValueOp, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValueOp;
+    decode(input: Reader | Uint8Array, length?: number): ValueOp;
     fromJSON(object: any): ValueOp;
     toJSON(message: ValueOp): unknown;
     fromPartial(object: DeepPartial<ValueOp>): ValueOp;
 };
 export declare const DominoOp: {
     encode(message: DominoOp, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DominoOp;
+    decode(input: Reader | Uint8Array, length?: number): DominoOp;
     fromJSON(object: any): DominoOp;
     toJSON(message: DominoOp): unknown;
     fromPartial(object: DeepPartial<DominoOp>): DominoOp;
 };
 export declare const ProofOp: {
     encode(message: ProofOp, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ProofOp;
+    decode(input: Reader | Uint8Array, length?: number): ProofOp;
     fromJSON(object: any): ProofOp;
     toJSON(message: ProofOp): unknown;
     fromPartial(object: DeepPartial<ProofOp>): ProofOp;
 };
 export declare const ProofOps: {
     encode(message: ProofOps, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ProofOps;
+    decode(input: Reader | Uint8Array, length?: number): ProofOps;
     fromJSON(object: any): ProofOps;
     toJSON(message: ProofOps): unknown;
     fromPartial(object: DeepPartial<ProofOps>): ProofOps;

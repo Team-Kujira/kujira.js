@@ -56,42 +56,42 @@ export interface PermanentLockedAccount {
 }
 export declare const BaseVestingAccount: {
     encode(message: BaseVestingAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): BaseVestingAccount;
+    decode(input: Reader | Uint8Array, length?: number): BaseVestingAccount;
     fromJSON(object: any): BaseVestingAccount;
     toJSON(message: BaseVestingAccount): unknown;
     fromPartial(object: DeepPartial<BaseVestingAccount>): BaseVestingAccount;
 };
 export declare const ContinuousVestingAccount: {
     encode(message: ContinuousVestingAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ContinuousVestingAccount;
+    decode(input: Reader | Uint8Array, length?: number): ContinuousVestingAccount;
     fromJSON(object: any): ContinuousVestingAccount;
     toJSON(message: ContinuousVestingAccount): unknown;
     fromPartial(object: DeepPartial<ContinuousVestingAccount>): ContinuousVestingAccount;
 };
 export declare const DelayedVestingAccount: {
     encode(message: DelayedVestingAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DelayedVestingAccount;
+    decode(input: Reader | Uint8Array, length?: number): DelayedVestingAccount;
     fromJSON(object: any): DelayedVestingAccount;
     toJSON(message: DelayedVestingAccount): unknown;
     fromPartial(object: DeepPartial<DelayedVestingAccount>): DelayedVestingAccount;
 };
 export declare const Period: {
     encode(message: Period, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Period;
+    decode(input: Reader | Uint8Array, length?: number): Period;
     fromJSON(object: any): Period;
     toJSON(message: Period): unknown;
     fromPartial(object: DeepPartial<Period>): Period;
 };
 export declare const PeriodicVestingAccount: {
     encode(message: PeriodicVestingAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PeriodicVestingAccount;
+    decode(input: Reader | Uint8Array, length?: number): PeriodicVestingAccount;
     fromJSON(object: any): PeriodicVestingAccount;
     toJSON(message: PeriodicVestingAccount): unknown;
     fromPartial(object: DeepPartial<PeriodicVestingAccount>): PeriodicVestingAccount;
 };
 export declare const PermanentLockedAccount: {
     encode(message: PermanentLockedAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PermanentLockedAccount;
+    decode(input: Reader | Uint8Array, length?: number): PermanentLockedAccount;
     fromJSON(object: any): PermanentLockedAccount;
     toJSON(message: PermanentLockedAccount): unknown;
     fromPartial(object: DeepPartial<PermanentLockedAccount>): PermanentLockedAccount;

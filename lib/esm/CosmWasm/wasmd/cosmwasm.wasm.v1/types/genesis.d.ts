@@ -41,35 +41,35 @@ export interface Sequence {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const GenesisState_GenMsgs: {
     encode(message: GenesisState_GenMsgs, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState_GenMsgs;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState_GenMsgs;
     fromJSON(object: any): GenesisState_GenMsgs;
     toJSON(message: GenesisState_GenMsgs): unknown;
     fromPartial(object: DeepPartial<GenesisState_GenMsgs>): GenesisState_GenMsgs;
 };
 export declare const Code: {
     encode(message: Code, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Code;
+    decode(input: Reader | Uint8Array, length?: number): Code;
     fromJSON(object: any): Code;
     toJSON(message: Code): unknown;
     fromPartial(object: DeepPartial<Code>): Code;
 };
 export declare const Contract: {
     encode(message: Contract, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Contract;
+    decode(input: Reader | Uint8Array, length?: number): Contract;
     fromJSON(object: any): Contract;
     toJSON(message: Contract): unknown;
     fromPartial(object: DeepPartial<Contract>): Contract;
 };
 export declare const Sequence: {
     encode(message: Sequence, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Sequence;
+    decode(input: Reader | Uint8Array, length?: number): Sequence;
     fromJSON(object: any): Sequence;
     toJSON(message: Sequence): unknown;
     fromPartial(object: DeepPartial<Sequence>): Sequence;

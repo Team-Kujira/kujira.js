@@ -21,28 +21,28 @@ export interface MsgSubmitTxResponse {
 }
 export declare const MsgRegisterAccount: {
     encode(message: MsgRegisterAccount, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgRegisterAccount;
+    decode(input: Reader | Uint8Array, length?: number): MsgRegisterAccount;
     fromJSON(object: any): MsgRegisterAccount;
     toJSON(message: MsgRegisterAccount): unknown;
     fromPartial(object: DeepPartial<MsgRegisterAccount>): MsgRegisterAccount;
 };
 export declare const MsgRegisterAccountResponse: {
     encode(_: MsgRegisterAccountResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgRegisterAccountResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgRegisterAccountResponse;
     fromJSON(_: any): MsgRegisterAccountResponse;
     toJSON(_: MsgRegisterAccountResponse): unknown;
     fromPartial(_: DeepPartial<MsgRegisterAccountResponse>): MsgRegisterAccountResponse;
 };
 export declare const MsgSubmitTx: {
     encode(message: MsgSubmitTx, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSubmitTx;
+    decode(input: Reader | Uint8Array, length?: number): MsgSubmitTx;
     fromJSON(object: any): MsgSubmitTx;
     toJSON(message: MsgSubmitTx): unknown;
     fromPartial(object: DeepPartial<MsgSubmitTx>): MsgSubmitTx;
 };
 export declare const MsgSubmitTxResponse: {
     encode(_: MsgSubmitTxResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSubmitTxResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgSubmitTxResponse;
     fromJSON(_: any): MsgSubmitTxResponse;
     toJSON(_: MsgSubmitTxResponse): unknown;
     fromPartial(_: DeepPartial<MsgSubmitTxResponse>): MsgSubmitTxResponse;

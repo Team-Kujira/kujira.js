@@ -595,15 +595,15 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/gov/v1beta1/proposals
      */
     queryProposals: (query?: {
-        proposal_status?: "PROPOSAL_STATUS_UNSPECIFIED" | "PROPOSAL_STATUS_DEPOSIT_PERIOD" | "PROPOSAL_STATUS_VOTING_PERIOD" | "PROPOSAL_STATUS_PASSED" | "PROPOSAL_STATUS_REJECTED" | "PROPOSAL_STATUS_FAILED" | undefined;
-        voter?: string | undefined;
-        depositor?: string | undefined;
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryProposalsResponse, RpcStatus>>;
+        proposal_status?: "PROPOSAL_STATUS_UNSPECIFIED" | "PROPOSAL_STATUS_DEPOSIT_PERIOD" | "PROPOSAL_STATUS_VOTING_PERIOD" | "PROPOSAL_STATUS_PASSED" | "PROPOSAL_STATUS_REJECTED" | "PROPOSAL_STATUS_FAILED";
+        voter?: string;
+        depositor?: string;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryProposalsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -622,12 +622,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/gov/v1beta1/proposals/{proposal_id}/deposits
      */
     queryDeposits: (proposal_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDepositsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryDepositsResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -655,12 +655,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/gov/v1beta1/proposals/{proposal_id}/votes
      */
     queryVotes: (proposal_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryVotesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryVotesResponse, RpcStatus>>;
     /**
      * No description
      *

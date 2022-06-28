@@ -1,7 +1,7 @@
 {
   "name": "kujira.js",
   "description": "JS Interface for the Kujira Blockchain",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -12,10 +12,10 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.28.7",
+    "@cosmjs/cosmwasm-stargate": "^0.28.9",
     "@cosmjs/launchpad": "^0.27.1",
     "@cosmjs/proto-signing": "^0.28.7",
-    "@cosmjs/stargate": "^0.28.7",
+    "@cosmjs/stargate": "^0.28.9",
     "long": "^5.2.0"
   },
   "devDependencies": {

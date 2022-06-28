@@ -34,14 +34,14 @@ export interface Params {
 }
 export declare const DenomTrace: {
     encode(message: DenomTrace, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DenomTrace;
+    decode(input: Reader | Uint8Array, length?: number): DenomTrace;
     fromJSON(object: any): DenomTrace;
     toJSON(message: DenomTrace): unknown;
     fromPartial(object: DeepPartial<DenomTrace>): DenomTrace;
 };
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;

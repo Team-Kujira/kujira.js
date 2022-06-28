@@ -4,6 +4,8 @@ JS interface for the Kujira Blockchain
 
 ## Quickstart
 
+See a demo trading bot at https://github.com/TeamKujira/fin-bot-demo
+
 Install required packages via your preferred package manager
 
 - `kujira.js` (via GitHub)

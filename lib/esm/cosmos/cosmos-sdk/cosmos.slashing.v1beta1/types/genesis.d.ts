@@ -43,28 +43,28 @@ export interface MissedBlock {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const SigningInfo: {
     encode(message: SigningInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SigningInfo;
+    decode(input: Reader | Uint8Array, length?: number): SigningInfo;
     fromJSON(object: any): SigningInfo;
     toJSON(message: SigningInfo): unknown;
     fromPartial(object: DeepPartial<SigningInfo>): SigningInfo;
 };
 export declare const ValidatorMissedBlocks: {
     encode(message: ValidatorMissedBlocks, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorMissedBlocks;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorMissedBlocks;
     fromJSON(object: any): ValidatorMissedBlocks;
     toJSON(message: ValidatorMissedBlocks): unknown;
     fromPartial(object: DeepPartial<ValidatorMissedBlocks>): ValidatorMissedBlocks;
 };
 export declare const MissedBlock: {
     encode(message: MissedBlock, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MissedBlock;
+    decode(input: Reader | Uint8Array, length?: number): MissedBlock;
     fromJSON(object: any): MissedBlock;
     toJSON(message: MissedBlock): unknown;
     fromPartial(object: DeepPartial<MissedBlock>): MissedBlock;

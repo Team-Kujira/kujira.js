@@ -672,12 +672,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/base/tendermint/v1beta1/validatorsets/latest
      */
     serviceGetLatestValidatorSet: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetLatestValidatorSetResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetLatestValidatorSetResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -687,11 +687,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/base/tendermint/v1beta1/validatorsets/{height}
      */
     serviceGetValidatorSetByHeight: (height: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetValidatorSetByHeightResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetValidatorSetByHeightResponse, RpcStatus>>;
 }
 export {};

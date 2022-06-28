@@ -8,7 +8,7 @@ export interface PublicKey {
 }
 export declare const PublicKey: {
     encode(message: PublicKey, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PublicKey;
+    decode(input: Reader | Uint8Array, length?: number): PublicKey;
     fromJSON(object: any): PublicKey;
     toJSON(message: PublicKey): unknown;
     fromPartial(object: DeepPartial<PublicKey>): PublicKey;

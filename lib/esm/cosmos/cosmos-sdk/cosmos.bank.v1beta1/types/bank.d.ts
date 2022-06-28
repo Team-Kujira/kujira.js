@@ -84,49 +84,49 @@ export interface Metadata {
 }
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;
 };
 export declare const SendEnabled: {
     encode(message: SendEnabled, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SendEnabled;
+    decode(input: Reader | Uint8Array, length?: number): SendEnabled;
     fromJSON(object: any): SendEnabled;
     toJSON(message: SendEnabled): unknown;
     fromPartial(object: DeepPartial<SendEnabled>): SendEnabled;
 };
 export declare const Input: {
     encode(message: Input, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Input;
+    decode(input: Reader | Uint8Array, length?: number): Input;
     fromJSON(object: any): Input;
     toJSON(message: Input): unknown;
     fromPartial(object: DeepPartial<Input>): Input;
 };
 export declare const Output: {
     encode(message: Output, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Output;
+    decode(input: Reader | Uint8Array, length?: number): Output;
     fromJSON(object: any): Output;
     toJSON(message: Output): unknown;
     fromPartial(object: DeepPartial<Output>): Output;
 };
 export declare const Supply: {
     encode(message: Supply, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Supply;
+    decode(input: Reader | Uint8Array, length?: number): Supply;
     fromJSON(object: any): Supply;
     toJSON(message: Supply): unknown;
     fromPartial(object: DeepPartial<Supply>): Supply;
 };
 export declare const DenomUnit: {
     encode(message: DenomUnit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DenomUnit;
+    decode(input: Reader | Uint8Array, length?: number): DenomUnit;
     fromJSON(object: any): DenomUnit;
     toJSON(message: DenomUnit): unknown;
     fromPartial(object: DeepPartial<DenomUnit>): DenomUnit;
 };
 export declare const Metadata: {
     encode(message: Metadata, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Metadata;
+    decode(input: Reader | Uint8Array, length?: number): Metadata;
     fromJSON(object: any): Metadata;
     toJSON(message: Metadata): unknown;
     fromPartial(object: DeepPartial<Metadata>): Metadata;

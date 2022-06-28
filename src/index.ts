@@ -111,6 +111,8 @@ const types = [
 
 export const registry = new Registry(<any>types);
 
+export { FinClient, FinQueryClient } from "./fin";
+
 function createDefaultTypes(prefix: string): AminoConverters {
   return {
     ...createAuthzAminoConverters(),

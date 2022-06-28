@@ -282,8 +282,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/upgrade/v1beta1/module_versions
      */
     queryModuleVersions: (query?: {
-        module_name?: string | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryModuleVersionsResponse, RpcStatus>>;
+        module_name?: string;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryModuleVersionsResponse, RpcStatus>>;
     /**
    * No description
    *

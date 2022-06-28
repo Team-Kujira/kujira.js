@@ -83,8 +83,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/cosmos/params/v1beta1/params
    */
     queryParams: (query?: {
-        subspace?: string | undefined;
-        key?: string | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryParamsResponse, RpcStatus>>;
+        subspace?: string;
+        key?: string;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryParamsResponse, RpcStatus>>;
 }
 export {};

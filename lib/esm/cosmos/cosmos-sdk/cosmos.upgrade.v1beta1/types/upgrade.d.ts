@@ -71,28 +71,28 @@ export interface ModuleVersion {
 }
 export declare const Plan: {
     encode(message: Plan, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Plan;
+    decode(input: Reader | Uint8Array, length?: number): Plan;
     fromJSON(object: any): Plan;
     toJSON(message: Plan): unknown;
     fromPartial(object: DeepPartial<Plan>): Plan;
 };
 export declare const SoftwareUpgradeProposal: {
     encode(message: SoftwareUpgradeProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SoftwareUpgradeProposal;
+    decode(input: Reader | Uint8Array, length?: number): SoftwareUpgradeProposal;
     fromJSON(object: any): SoftwareUpgradeProposal;
     toJSON(message: SoftwareUpgradeProposal): unknown;
     fromPartial(object: DeepPartial<SoftwareUpgradeProposal>): SoftwareUpgradeProposal;
 };
 export declare const CancelSoftwareUpgradeProposal: {
     encode(message: CancelSoftwareUpgradeProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CancelSoftwareUpgradeProposal;
+    decode(input: Reader | Uint8Array, length?: number): CancelSoftwareUpgradeProposal;
     fromJSON(object: any): CancelSoftwareUpgradeProposal;
     toJSON(message: CancelSoftwareUpgradeProposal): unknown;
     fromPartial(object: DeepPartial<CancelSoftwareUpgradeProposal>): CancelSoftwareUpgradeProposal;
 };
 export declare const ModuleVersion: {
     encode(message: ModuleVersion, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ModuleVersion;
+    decode(input: Reader | Uint8Array, length?: number): ModuleVersion;
     fromJSON(object: any): ModuleVersion;
     toJSON(message: ModuleVersion): unknown;
     fromPartial(object: DeepPartial<ModuleVersion>): ModuleVersion;

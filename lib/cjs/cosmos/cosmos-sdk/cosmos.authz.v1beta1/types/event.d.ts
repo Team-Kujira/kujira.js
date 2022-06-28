@@ -22,14 +22,14 @@ export interface EventRevoke {
 }
 export declare const EventGrant: {
     encode(message: EventGrant, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): EventGrant;
+    decode(input: Reader | Uint8Array, length?: number): EventGrant;
     fromJSON(object: any): EventGrant;
     toJSON(message: EventGrant): unknown;
     fromPartial(object: DeepPartial<EventGrant>): EventGrant;
 };
 export declare const EventRevoke: {
     encode(message: EventRevoke, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): EventRevoke;
+    decode(input: Reader | Uint8Array, length?: number): EventRevoke;
     fromJSON(object: any): EventRevoke;
     toJSON(message: EventRevoke): unknown;
     fromPartial(object: DeepPartial<EventRevoke>): EventRevoke;

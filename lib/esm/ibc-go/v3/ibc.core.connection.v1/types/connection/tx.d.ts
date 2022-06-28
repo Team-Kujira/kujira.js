@@ -96,56 +96,56 @@ export interface MsgConnectionOpenConfirmResponse {
 }
 export declare const MsgConnectionOpenInit: {
     encode(message: MsgConnectionOpenInit, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenInit;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenInit;
     fromJSON(object: any): MsgConnectionOpenInit;
     toJSON(message: MsgConnectionOpenInit): unknown;
     fromPartial(object: DeepPartial<MsgConnectionOpenInit>): MsgConnectionOpenInit;
 };
 export declare const MsgConnectionOpenInitResponse: {
     encode(_: MsgConnectionOpenInitResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenInitResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenInitResponse;
     fromJSON(_: any): MsgConnectionOpenInitResponse;
     toJSON(_: MsgConnectionOpenInitResponse): unknown;
     fromPartial(_: DeepPartial<MsgConnectionOpenInitResponse>): MsgConnectionOpenInitResponse;
 };
 export declare const MsgConnectionOpenTry: {
     encode(message: MsgConnectionOpenTry, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenTry;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenTry;
     fromJSON(object: any): MsgConnectionOpenTry;
     toJSON(message: MsgConnectionOpenTry): unknown;
     fromPartial(object: DeepPartial<MsgConnectionOpenTry>): MsgConnectionOpenTry;
 };
 export declare const MsgConnectionOpenTryResponse: {
     encode(_: MsgConnectionOpenTryResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenTryResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenTryResponse;
     fromJSON(_: any): MsgConnectionOpenTryResponse;
     toJSON(_: MsgConnectionOpenTryResponse): unknown;
     fromPartial(_: DeepPartial<MsgConnectionOpenTryResponse>): MsgConnectionOpenTryResponse;
 };
 export declare const MsgConnectionOpenAck: {
     encode(message: MsgConnectionOpenAck, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenAck;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenAck;
     fromJSON(object: any): MsgConnectionOpenAck;
     toJSON(message: MsgConnectionOpenAck): unknown;
     fromPartial(object: DeepPartial<MsgConnectionOpenAck>): MsgConnectionOpenAck;
 };
 export declare const MsgConnectionOpenAckResponse: {
     encode(_: MsgConnectionOpenAckResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenAckResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenAckResponse;
     fromJSON(_: any): MsgConnectionOpenAckResponse;
     toJSON(_: MsgConnectionOpenAckResponse): unknown;
     fromPartial(_: DeepPartial<MsgConnectionOpenAckResponse>): MsgConnectionOpenAckResponse;
 };
 export declare const MsgConnectionOpenConfirm: {
     encode(message: MsgConnectionOpenConfirm, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenConfirm;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenConfirm;
     fromJSON(object: any): MsgConnectionOpenConfirm;
     toJSON(message: MsgConnectionOpenConfirm): unknown;
     fromPartial(object: DeepPartial<MsgConnectionOpenConfirm>): MsgConnectionOpenConfirm;
 };
 export declare const MsgConnectionOpenConfirmResponse: {
     encode(_: MsgConnectionOpenConfirmResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgConnectionOpenConfirmResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgConnectionOpenConfirmResponse;
     fromJSON(_: any): MsgConnectionOpenConfirmResponse;
     toJSON(_: MsgConnectionOpenConfirmResponse): unknown;
     fromPartial(_: DeepPartial<MsgConnectionOpenConfirmResponse>): MsgConnectionOpenConfirmResponse;

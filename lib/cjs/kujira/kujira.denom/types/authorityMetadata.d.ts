@@ -12,7 +12,7 @@ export interface DenomAuthorityMetadata {
 }
 export declare const DenomAuthorityMetadata: {
     encode(message: DenomAuthorityMetadata, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DenomAuthorityMetadata;
+    decode(input: Reader | Uint8Array, length?: number): DenomAuthorityMetadata;
     fromJSON(object: any): DenomAuthorityMetadata;
     toJSON(message: DenomAuthorityMetadata): unknown;
     fromPartial(object: DeepPartial<DenomAuthorityMetadata>): DenomAuthorityMetadata;

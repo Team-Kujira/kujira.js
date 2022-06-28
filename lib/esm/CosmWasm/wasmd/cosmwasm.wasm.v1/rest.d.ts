@@ -418,12 +418,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmwasm/wasm/v1/code
      */
     queryCodes: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryCodesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryCodesResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -442,12 +442,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmwasm/wasm/v1/code/{code_id}/contracts
      */
     queryContractsByCode: (code_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryContractsByCodeResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryContractsByCodeResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -457,12 +457,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmwasm/wasm/v1/codes/pinned
      */
     queryPinnedCodes: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryPinnedCodesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryPinnedCodesResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -481,12 +481,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmwasm/wasm/v1/contract/{address}/history
      */
     queryContractHistory: (address: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryContractHistoryResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryContractHistoryResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -514,11 +514,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmwasm/wasm/v1/contract/{address}/state
      */
     queryAllContractState: (address: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryAllContractStateResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryAllContractStateResponse, RpcStatus>>;
 }
 export {};

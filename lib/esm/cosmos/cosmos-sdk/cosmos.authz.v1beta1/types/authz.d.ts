@@ -33,21 +33,21 @@ export interface GrantAuthorization {
 }
 export declare const GenericAuthorization: {
     encode(message: GenericAuthorization, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenericAuthorization;
+    decode(input: Reader | Uint8Array, length?: number): GenericAuthorization;
     fromJSON(object: any): GenericAuthorization;
     toJSON(message: GenericAuthorization): unknown;
     fromPartial(object: DeepPartial<GenericAuthorization>): GenericAuthorization;
 };
 export declare const Grant: {
     encode(message: Grant, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Grant;
+    decode(input: Reader | Uint8Array, length?: number): Grant;
     fromJSON(object: any): Grant;
     toJSON(message: Grant): unknown;
     fromPartial(object: DeepPartial<Grant>): Grant;
 };
 export declare const GrantAuthorization: {
     encode(message: GrantAuthorization, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GrantAuthorization;
+    decode(input: Reader | Uint8Array, length?: number): GrantAuthorization;
     fromJSON(object: any): GrantAuthorization;
     toJSON(message: GrantAuthorization): unknown;
     fromPartial(object: DeepPartial<GrantAuthorization>): GrantAuthorization;

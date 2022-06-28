@@ -29,14 +29,14 @@ export interface Balance {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const Balance: {
     encode(message: Balance, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Balance;
+    decode(input: Reader | Uint8Array, length?: number): Balance;
     fromJSON(object: any): Balance;
     toJSON(message: Balance): unknown;
     fromPartial(object: DeepPartial<Balance>): Balance;

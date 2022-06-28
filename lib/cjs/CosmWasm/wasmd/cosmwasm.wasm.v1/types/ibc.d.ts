@@ -27,14 +27,14 @@ export interface MsgIBCCloseChannel {
 }
 export declare const MsgIBCSend: {
     encode(message: MsgIBCSend, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgIBCSend;
+    decode(input: Reader | Uint8Array, length?: number): MsgIBCSend;
     fromJSON(object: any): MsgIBCSend;
     toJSON(message: MsgIBCSend): unknown;
     fromPartial(object: DeepPartial<MsgIBCSend>): MsgIBCSend;
 };
 export declare const MsgIBCCloseChannel: {
     encode(message: MsgIBCCloseChannel, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgIBCCloseChannel;
+    decode(input: Reader | Uint8Array, length?: number): MsgIBCCloseChannel;
     fromJSON(object: any): MsgIBCCloseChannel;
     toJSON(message: MsgIBCCloseChannel): unknown;
     fromPartial(object: DeepPartial<MsgIBCCloseChannel>): MsgIBCCloseChannel;

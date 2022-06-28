@@ -18,14 +18,14 @@ export interface ParamChange {
 }
 export declare const ParameterChangeProposal: {
     encode(message: ParameterChangeProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ParameterChangeProposal;
+    decode(input: Reader | Uint8Array, length?: number): ParameterChangeProposal;
     fromJSON(object: any): ParameterChangeProposal;
     toJSON(message: ParameterChangeProposal): unknown;
     fromPartial(object: DeepPartial<ParameterChangeProposal>): ParameterChangeProposal;
 };
 export declare const ParamChange: {
     encode(message: ParamChange, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ParamChange;
+    decode(input: Reader | Uint8Array, length?: number): ParamChange;
     fromJSON(object: any): ParamChange;
     toJSON(message: ParamChange): unknown;
     fromPartial(object: DeepPartial<ParamChange>): ParamChange;

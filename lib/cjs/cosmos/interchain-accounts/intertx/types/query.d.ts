@@ -12,14 +12,14 @@ export interface QueryInterchainAccountFromAddressResponse {
 }
 export declare const QueryInterchainAccountFromAddressRequest: {
     encode(message: QueryInterchainAccountFromAddressRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryInterchainAccountFromAddressRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressRequest;
     fromJSON(object: any): QueryInterchainAccountFromAddressRequest;
     toJSON(message: QueryInterchainAccountFromAddressRequest): unknown;
     fromPartial(object: DeepPartial<QueryInterchainAccountFromAddressRequest>): QueryInterchainAccountFromAddressRequest;
 };
 export declare const QueryInterchainAccountFromAddressResponse: {
     encode(message: QueryInterchainAccountFromAddressResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryInterchainAccountFromAddressResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryInterchainAccountFromAddressResponse;
     fromJSON(object: any): QueryInterchainAccountFromAddressResponse;
     toJSON(message: QueryInterchainAccountFromAddressResponse): unknown;
     fromPartial(object: DeepPartial<QueryInterchainAccountFromAddressResponse>): QueryInterchainAccountFromAddressResponse;

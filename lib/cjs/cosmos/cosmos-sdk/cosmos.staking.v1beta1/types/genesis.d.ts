@@ -35,14 +35,14 @@ export interface LastValidatorPower {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const LastValidatorPower: {
     encode(message: LastValidatorPower, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): LastValidatorPower;
+    decode(input: Reader | Uint8Array, length?: number): LastValidatorPower;
     fromJSON(object: any): LastValidatorPower;
     toJSON(message: LastValidatorPower): unknown;
     fromPartial(object: DeepPartial<LastValidatorPower>): LastValidatorPower;

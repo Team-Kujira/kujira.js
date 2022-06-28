@@ -154,77 +154,77 @@ export interface UpdateInstantiateConfigProposal {
 }
 export declare const StoreCodeProposal: {
     encode(message: StoreCodeProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): StoreCodeProposal;
+    decode(input: Reader | Uint8Array, length?: number): StoreCodeProposal;
     fromJSON(object: any): StoreCodeProposal;
     toJSON(message: StoreCodeProposal): unknown;
     fromPartial(object: DeepPartial<StoreCodeProposal>): StoreCodeProposal;
 };
 export declare const InstantiateContractProposal: {
     encode(message: InstantiateContractProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): InstantiateContractProposal;
+    decode(input: Reader | Uint8Array, length?: number): InstantiateContractProposal;
     fromJSON(object: any): InstantiateContractProposal;
     toJSON(message: InstantiateContractProposal): unknown;
     fromPartial(object: DeepPartial<InstantiateContractProposal>): InstantiateContractProposal;
 };
 export declare const MigrateContractProposal: {
     encode(message: MigrateContractProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MigrateContractProposal;
+    decode(input: Reader | Uint8Array, length?: number): MigrateContractProposal;
     fromJSON(object: any): MigrateContractProposal;
     toJSON(message: MigrateContractProposal): unknown;
     fromPartial(object: DeepPartial<MigrateContractProposal>): MigrateContractProposal;
 };
 export declare const SudoContractProposal: {
     encode(message: SudoContractProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): SudoContractProposal;
+    decode(input: Reader | Uint8Array, length?: number): SudoContractProposal;
     fromJSON(object: any): SudoContractProposal;
     toJSON(message: SudoContractProposal): unknown;
     fromPartial(object: DeepPartial<SudoContractProposal>): SudoContractProposal;
 };
 export declare const ExecuteContractProposal: {
     encode(message: ExecuteContractProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ExecuteContractProposal;
+    decode(input: Reader | Uint8Array, length?: number): ExecuteContractProposal;
     fromJSON(object: any): ExecuteContractProposal;
     toJSON(message: ExecuteContractProposal): unknown;
     fromPartial(object: DeepPartial<ExecuteContractProposal>): ExecuteContractProposal;
 };
 export declare const UpdateAdminProposal: {
     encode(message: UpdateAdminProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): UpdateAdminProposal;
+    decode(input: Reader | Uint8Array, length?: number): UpdateAdminProposal;
     fromJSON(object: any): UpdateAdminProposal;
     toJSON(message: UpdateAdminProposal): unknown;
     fromPartial(object: DeepPartial<UpdateAdminProposal>): UpdateAdminProposal;
 };
 export declare const ClearAdminProposal: {
     encode(message: ClearAdminProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ClearAdminProposal;
+    decode(input: Reader | Uint8Array, length?: number): ClearAdminProposal;
     fromJSON(object: any): ClearAdminProposal;
     toJSON(message: ClearAdminProposal): unknown;
     fromPartial(object: DeepPartial<ClearAdminProposal>): ClearAdminProposal;
 };
 export declare const PinCodesProposal: {
     encode(message: PinCodesProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): PinCodesProposal;
+    decode(input: Reader | Uint8Array, length?: number): PinCodesProposal;
     fromJSON(object: any): PinCodesProposal;
     toJSON(message: PinCodesProposal): unknown;
     fromPartial(object: DeepPartial<PinCodesProposal>): PinCodesProposal;
 };
 export declare const UnpinCodesProposal: {
     encode(message: UnpinCodesProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): UnpinCodesProposal;
+    decode(input: Reader | Uint8Array, length?: number): UnpinCodesProposal;
     fromJSON(object: any): UnpinCodesProposal;
     toJSON(message: UnpinCodesProposal): unknown;
     fromPartial(object: DeepPartial<UnpinCodesProposal>): UnpinCodesProposal;
 };
 export declare const AccessConfigUpdate: {
     encode(message: AccessConfigUpdate, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): AccessConfigUpdate;
+    decode(input: Reader | Uint8Array, length?: number): AccessConfigUpdate;
     fromJSON(object: any): AccessConfigUpdate;
     toJSON(message: AccessConfigUpdate): unknown;
     fromPartial(object: DeepPartial<AccessConfigUpdate>): AccessConfigUpdate;
 };
 export declare const UpdateInstantiateConfigProposal: {
     encode(message: UpdateInstantiateConfigProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): UpdateInstantiateConfigProposal;
+    decode(input: Reader | Uint8Array, length?: number): UpdateInstantiateConfigProposal;
     fromJSON(object: any): UpdateInstantiateConfigProposal;
     toJSON(message: UpdateInstantiateConfigProposal): unknown;
     fromPartial(object: DeepPartial<UpdateInstantiateConfigProposal>): UpdateInstantiateConfigProposal;

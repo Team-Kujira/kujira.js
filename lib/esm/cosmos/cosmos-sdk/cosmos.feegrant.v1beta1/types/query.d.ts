@@ -31,28 +31,28 @@ export interface QueryAllowancesResponse {
 }
 export declare const QueryAllowanceRequest: {
     encode(message: QueryAllowanceRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllowanceRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllowanceRequest;
     fromJSON(object: any): QueryAllowanceRequest;
     toJSON(message: QueryAllowanceRequest): unknown;
     fromPartial(object: DeepPartial<QueryAllowanceRequest>): QueryAllowanceRequest;
 };
 export declare const QueryAllowanceResponse: {
     encode(message: QueryAllowanceResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllowanceResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllowanceResponse;
     fromJSON(object: any): QueryAllowanceResponse;
     toJSON(message: QueryAllowanceResponse): unknown;
     fromPartial(object: DeepPartial<QueryAllowanceResponse>): QueryAllowanceResponse;
 };
 export declare const QueryAllowancesRequest: {
     encode(message: QueryAllowancesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllowancesRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllowancesRequest;
     fromJSON(object: any): QueryAllowancesRequest;
     toJSON(message: QueryAllowancesRequest): unknown;
     fromPartial(object: DeepPartial<QueryAllowancesRequest>): QueryAllowancesRequest;
 };
 export declare const QueryAllowancesResponse: {
     encode(message: QueryAllowancesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllowancesResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllowancesResponse;
     fromJSON(object: any): QueryAllowancesResponse;
     toJSON(message: QueryAllowancesResponse): unknown;
     fromPartial(object: DeepPartial<QueryAllowancesResponse>): QueryAllowancesResponse;

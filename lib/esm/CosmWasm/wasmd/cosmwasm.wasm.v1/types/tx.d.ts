@@ -104,84 +104,84 @@ export interface MsgClearAdminResponse {
 }
 export declare const MsgStoreCode: {
     encode(message: MsgStoreCode, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgStoreCode;
+    decode(input: Reader | Uint8Array, length?: number): MsgStoreCode;
     fromJSON(object: any): MsgStoreCode;
     toJSON(message: MsgStoreCode): unknown;
     fromPartial(object: DeepPartial<MsgStoreCode>): MsgStoreCode;
 };
 export declare const MsgStoreCodeResponse: {
     encode(message: MsgStoreCodeResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgStoreCodeResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgStoreCodeResponse;
     fromJSON(object: any): MsgStoreCodeResponse;
     toJSON(message: MsgStoreCodeResponse): unknown;
     fromPartial(object: DeepPartial<MsgStoreCodeResponse>): MsgStoreCodeResponse;
 };
 export declare const MsgInstantiateContract: {
     encode(message: MsgInstantiateContract, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgInstantiateContract;
+    decode(input: Reader | Uint8Array, length?: number): MsgInstantiateContract;
     fromJSON(object: any): MsgInstantiateContract;
     toJSON(message: MsgInstantiateContract): unknown;
     fromPartial(object: DeepPartial<MsgInstantiateContract>): MsgInstantiateContract;
 };
 export declare const MsgInstantiateContractResponse: {
     encode(message: MsgInstantiateContractResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgInstantiateContractResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgInstantiateContractResponse;
     fromJSON(object: any): MsgInstantiateContractResponse;
     toJSON(message: MsgInstantiateContractResponse): unknown;
     fromPartial(object: DeepPartial<MsgInstantiateContractResponse>): MsgInstantiateContractResponse;
 };
 export declare const MsgExecuteContract: {
     encode(message: MsgExecuteContract, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgExecuteContract;
+    decode(input: Reader | Uint8Array, length?: number): MsgExecuteContract;
     fromJSON(object: any): MsgExecuteContract;
     toJSON(message: MsgExecuteContract): unknown;
     fromPartial(object: DeepPartial<MsgExecuteContract>): MsgExecuteContract;
 };
 export declare const MsgExecuteContractResponse: {
     encode(message: MsgExecuteContractResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgExecuteContractResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgExecuteContractResponse;
     fromJSON(object: any): MsgExecuteContractResponse;
     toJSON(message: MsgExecuteContractResponse): unknown;
     fromPartial(object: DeepPartial<MsgExecuteContractResponse>): MsgExecuteContractResponse;
 };
 export declare const MsgMigrateContract: {
     encode(message: MsgMigrateContract, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMigrateContract;
+    decode(input: Reader | Uint8Array, length?: number): MsgMigrateContract;
     fromJSON(object: any): MsgMigrateContract;
     toJSON(message: MsgMigrateContract): unknown;
     fromPartial(object: DeepPartial<MsgMigrateContract>): MsgMigrateContract;
 };
 export declare const MsgMigrateContractResponse: {
     encode(message: MsgMigrateContractResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMigrateContractResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgMigrateContractResponse;
     fromJSON(object: any): MsgMigrateContractResponse;
     toJSON(message: MsgMigrateContractResponse): unknown;
     fromPartial(object: DeepPartial<MsgMigrateContractResponse>): MsgMigrateContractResponse;
 };
 export declare const MsgUpdateAdmin: {
     encode(message: MsgUpdateAdmin, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgUpdateAdmin;
+    decode(input: Reader | Uint8Array, length?: number): MsgUpdateAdmin;
     fromJSON(object: any): MsgUpdateAdmin;
     toJSON(message: MsgUpdateAdmin): unknown;
     fromPartial(object: DeepPartial<MsgUpdateAdmin>): MsgUpdateAdmin;
 };
 export declare const MsgUpdateAdminResponse: {
     encode(_: MsgUpdateAdminResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgUpdateAdminResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgUpdateAdminResponse;
     fromJSON(_: any): MsgUpdateAdminResponse;
     toJSON(_: MsgUpdateAdminResponse): unknown;
     fromPartial(_: DeepPartial<MsgUpdateAdminResponse>): MsgUpdateAdminResponse;
 };
 export declare const MsgClearAdmin: {
     encode(message: MsgClearAdmin, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgClearAdmin;
+    decode(input: Reader | Uint8Array, length?: number): MsgClearAdmin;
     fromJSON(object: any): MsgClearAdmin;
     toJSON(message: MsgClearAdmin): unknown;
     fromPartial(object: DeepPartial<MsgClearAdmin>): MsgClearAdmin;
 };
 export declare const MsgClearAdminResponse: {
     encode(_: MsgClearAdminResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgClearAdminResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgClearAdminResponse;
     fromJSON(_: any): MsgClearAdminResponse;
     toJSON(_: MsgClearAdminResponse): unknown;
     fromPartial(_: DeepPartial<MsgClearAdminResponse>): MsgClearAdminResponse;

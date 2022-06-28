@@ -78,42 +78,42 @@ export interface HashedParams {
 }
 export declare const ConsensusParams: {
     encode(message: ConsensusParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ConsensusParams;
+    decode(input: Reader | Uint8Array, length?: number): ConsensusParams;
     fromJSON(object: any): ConsensusParams;
     toJSON(message: ConsensusParams): unknown;
     fromPartial(object: DeepPartial<ConsensusParams>): ConsensusParams;
 };
 export declare const BlockParams: {
     encode(message: BlockParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): BlockParams;
+    decode(input: Reader | Uint8Array, length?: number): BlockParams;
     fromJSON(object: any): BlockParams;
     toJSON(message: BlockParams): unknown;
     fromPartial(object: DeepPartial<BlockParams>): BlockParams;
 };
 export declare const EvidenceParams: {
     encode(message: EvidenceParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): EvidenceParams;
+    decode(input: Reader | Uint8Array, length?: number): EvidenceParams;
     fromJSON(object: any): EvidenceParams;
     toJSON(message: EvidenceParams): unknown;
     fromPartial(object: DeepPartial<EvidenceParams>): EvidenceParams;
 };
 export declare const ValidatorParams: {
     encode(message: ValidatorParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorParams;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorParams;
     fromJSON(object: any): ValidatorParams;
     toJSON(message: ValidatorParams): unknown;
     fromPartial(object: DeepPartial<ValidatorParams>): ValidatorParams;
 };
 export declare const VersionParams: {
     encode(message: VersionParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): VersionParams;
+    decode(input: Reader | Uint8Array, length?: number): VersionParams;
     fromJSON(object: any): VersionParams;
     toJSON(message: VersionParams): unknown;
     fromPartial(object: DeepPartial<VersionParams>): VersionParams;
 };
 export declare const HashedParams: {
     encode(message: HashedParams, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): HashedParams;
+    decode(input: Reader | Uint8Array, length?: number): HashedParams;
     fromJSON(object: any): HashedParams;
     toJSON(message: HashedParams): unknown;
     fromPartial(object: DeepPartial<HashedParams>): HashedParams;

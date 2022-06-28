@@ -28,28 +28,28 @@ export interface EvidenceList {
 }
 export declare const Evidence: {
     encode(message: Evidence, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Evidence;
+    decode(input: Reader | Uint8Array, length?: number): Evidence;
     fromJSON(object: any): Evidence;
     toJSON(message: Evidence): unknown;
     fromPartial(object: DeepPartial<Evidence>): Evidence;
 };
 export declare const DuplicateVoteEvidence: {
     encode(message: DuplicateVoteEvidence, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): DuplicateVoteEvidence;
+    decode(input: Reader | Uint8Array, length?: number): DuplicateVoteEvidence;
     fromJSON(object: any): DuplicateVoteEvidence;
     toJSON(message: DuplicateVoteEvidence): unknown;
     fromPartial(object: DeepPartial<DuplicateVoteEvidence>): DuplicateVoteEvidence;
 };
 export declare const LightClientAttackEvidence: {
     encode(message: LightClientAttackEvidence, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): LightClientAttackEvidence;
+    decode(input: Reader | Uint8Array, length?: number): LightClientAttackEvidence;
     fromJSON(object: any): LightClientAttackEvidence;
     toJSON(message: LightClientAttackEvidence): unknown;
     fromPartial(object: DeepPartial<LightClientAttackEvidence>): LightClientAttackEvidence;
 };
 export declare const EvidenceList: {
     encode(message: EvidenceList, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): EvidenceList;
+    decode(input: Reader | Uint8Array, length?: number): EvidenceList;
     fromJSON(object: any): EvidenceList;
     toJSON(message: EvidenceList): unknown;
     fromPartial(object: DeepPartial<EvidenceList>): EvidenceList;

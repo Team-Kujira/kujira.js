@@ -37,42 +37,42 @@ export interface QueryAnnualProvisionsResponse {
 }
 export declare const QueryParamsRequest: {
     encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryInflationRequest: {
     encode(_: QueryInflationRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryInflationRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryInflationRequest;
     fromJSON(_: any): QueryInflationRequest;
     toJSON(_: QueryInflationRequest): unknown;
     fromPartial(_: DeepPartial<QueryInflationRequest>): QueryInflationRequest;
 };
 export declare const QueryInflationResponse: {
     encode(message: QueryInflationResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryInflationResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryInflationResponse;
     fromJSON(object: any): QueryInflationResponse;
     toJSON(message: QueryInflationResponse): unknown;
     fromPartial(object: DeepPartial<QueryInflationResponse>): QueryInflationResponse;
 };
 export declare const QueryAnnualProvisionsRequest: {
     encode(_: QueryAnnualProvisionsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAnnualProvisionsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryAnnualProvisionsRequest;
     fromJSON(_: any): QueryAnnualProvisionsRequest;
     toJSON(_: QueryAnnualProvisionsRequest): unknown;
     fromPartial(_: DeepPartial<QueryAnnualProvisionsRequest>): QueryAnnualProvisionsRequest;
 };
 export declare const QueryAnnualProvisionsResponse: {
     encode(message: QueryAnnualProvisionsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAnnualProvisionsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryAnnualProvisionsResponse;
     fromJSON(object: any): QueryAnnualProvisionsResponse;
     toJSON(message: QueryAnnualProvisionsResponse): unknown;
     fromPartial(object: DeepPartial<QueryAnnualProvisionsResponse>): QueryAnnualProvisionsResponse;

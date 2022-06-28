@@ -21,14 +21,14 @@ export interface CompactBitArray {
 }
 export declare const MultiSignature: {
     encode(message: MultiSignature, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MultiSignature;
+    decode(input: Reader | Uint8Array, length?: number): MultiSignature;
     fromJSON(object: any): MultiSignature;
     toJSON(message: MultiSignature): unknown;
     fromPartial(object: DeepPartial<MultiSignature>): MultiSignature;
 };
 export declare const CompactBitArray: {
     encode(message: CompactBitArray, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): CompactBitArray;
+    decode(input: Reader | Uint8Array, length?: number): CompactBitArray;
     fromJSON(object: any): CompactBitArray;
     toJSON(message: CompactBitArray): unknown;
     fromPartial(object: DeepPartial<CompactBitArray>): CompactBitArray;

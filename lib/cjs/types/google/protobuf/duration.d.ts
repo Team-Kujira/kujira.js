@@ -80,7 +80,7 @@ export interface Duration {
 }
 export declare const Duration: {
     encode(message: Duration, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Duration;
+    decode(input: Reader | Uint8Array, length?: number): Duration;
     fromJSON(object: any): Duration;
     toJSON(message: Duration): unknown;
     fromPartial(object: DeepPartial<Duration>): Duration;

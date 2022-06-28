@@ -22,28 +22,28 @@ export interface MsgMultiSendResponse {
 }
 export declare const MsgSend: {
     encode(message: MsgSend, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSend;
+    decode(input: Reader | Uint8Array, length?: number): MsgSend;
     fromJSON(object: any): MsgSend;
     toJSON(message: MsgSend): unknown;
     fromPartial(object: DeepPartial<MsgSend>): MsgSend;
 };
 export declare const MsgSendResponse: {
     encode(_: MsgSendResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgSendResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgSendResponse;
     fromJSON(_: any): MsgSendResponse;
     toJSON(_: MsgSendResponse): unknown;
     fromPartial(_: DeepPartial<MsgSendResponse>): MsgSendResponse;
 };
 export declare const MsgMultiSend: {
     encode(message: MsgMultiSend, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMultiSend;
+    decode(input: Reader | Uint8Array, length?: number): MsgMultiSend;
     fromJSON(object: any): MsgMultiSend;
     toJSON(message: MsgMultiSend): unknown;
     fromPartial(object: DeepPartial<MsgMultiSend>): MsgMultiSend;
 };
 export declare const MsgMultiSendResponse: {
     encode(_: MsgMultiSendResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgMultiSendResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgMultiSendResponse;
     fromJSON(_: any): MsgMultiSendResponse;
     toJSON(_: MsgMultiSendResponse): unknown;
     fromPartial(_: DeepPartial<MsgMultiSendResponse>): MsgMultiSendResponse;

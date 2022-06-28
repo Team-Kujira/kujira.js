@@ -912,14 +912,14 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/tx/v1beta1/txs
      */
     serviceGetTxsEvent: (query?: {
-        events?: string[] | undefined;
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-        order_by?: "ORDER_BY_UNSPECIFIED" | "ORDER_BY_ASC" | "ORDER_BY_DESC" | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetTxsEventResponse, RpcStatus>>;
+        events?: string[];
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+        order_by?: "ORDER_BY_UNSPECIFIED" | "ORDER_BY_ASC" | "ORDER_BY_DESC";
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetTxsEventResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -938,12 +938,12 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/tx/v1beta1/txs/block/{height}
      */
     serviceGetBlockWithTxs: (height: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetBlockWithTxsResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1GetBlockWithTxsResponse, RpcStatus>>;
     /**
      * No description
      *

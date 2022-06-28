@@ -12,14 +12,14 @@ export interface MsgVerifyInvariantResponse {
 }
 export declare const MsgVerifyInvariant: {
     encode(message: MsgVerifyInvariant, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgVerifyInvariant;
+    decode(input: Reader | Uint8Array, length?: number): MsgVerifyInvariant;
     fromJSON(object: any): MsgVerifyInvariant;
     toJSON(message: MsgVerifyInvariant): unknown;
     fromPartial(object: DeepPartial<MsgVerifyInvariant>): MsgVerifyInvariant;
 };
 export declare const MsgVerifyInvariantResponse: {
     encode(_: MsgVerifyInvariantResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgVerifyInvariantResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgVerifyInvariantResponse;
     fromJSON(_: any): MsgVerifyInvariantResponse;
     toJSON(_: MsgVerifyInvariantResponse): unknown;
     fromPartial(_: DeepPartial<MsgVerifyInvariantResponse>): MsgVerifyInvariantResponse;

@@ -347,13 +347,13 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/cosmos/distribution/v1beta1/validators/{validator_address}/slashes
      */
     queryValidatorSlashes: (validator_address: string, query?: {
-        starting_height?: string | undefined;
-        ending_height?: string | undefined;
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-        "pagination.reverse"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorSlashesResponse, RpcStatus>>;
+        starting_height?: string;
+        ending_height?: string;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+        "pagination.reverse"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1Beta1QueryValidatorSlashesResponse, RpcStatus>>;
 }
 export {};

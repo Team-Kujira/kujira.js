@@ -95,49 +95,49 @@ export interface Params {
 }
 export declare const IdentifiedClientState: {
     encode(message: IdentifiedClientState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): IdentifiedClientState;
+    decode(input: Reader | Uint8Array, length?: number): IdentifiedClientState;
     fromJSON(object: any): IdentifiedClientState;
     toJSON(message: IdentifiedClientState): unknown;
     fromPartial(object: DeepPartial<IdentifiedClientState>): IdentifiedClientState;
 };
 export declare const ConsensusStateWithHeight: {
     encode(message: ConsensusStateWithHeight, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ConsensusStateWithHeight;
+    decode(input: Reader | Uint8Array, length?: number): ConsensusStateWithHeight;
     fromJSON(object: any): ConsensusStateWithHeight;
     toJSON(message: ConsensusStateWithHeight): unknown;
     fromPartial(object: DeepPartial<ConsensusStateWithHeight>): ConsensusStateWithHeight;
 };
 export declare const ClientConsensusStates: {
     encode(message: ClientConsensusStates, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ClientConsensusStates;
+    decode(input: Reader | Uint8Array, length?: number): ClientConsensusStates;
     fromJSON(object: any): ClientConsensusStates;
     toJSON(message: ClientConsensusStates): unknown;
     fromPartial(object: DeepPartial<ClientConsensusStates>): ClientConsensusStates;
 };
 export declare const ClientUpdateProposal: {
     encode(message: ClientUpdateProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ClientUpdateProposal;
+    decode(input: Reader | Uint8Array, length?: number): ClientUpdateProposal;
     fromJSON(object: any): ClientUpdateProposal;
     toJSON(message: ClientUpdateProposal): unknown;
     fromPartial(object: DeepPartial<ClientUpdateProposal>): ClientUpdateProposal;
 };
 export declare const UpgradeProposal: {
     encode(message: UpgradeProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): UpgradeProposal;
+    decode(input: Reader | Uint8Array, length?: number): UpgradeProposal;
     fromJSON(object: any): UpgradeProposal;
     toJSON(message: UpgradeProposal): unknown;
     fromPartial(object: DeepPartial<UpgradeProposal>): UpgradeProposal;
 };
 export declare const Height: {
     encode(message: Height, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Height;
+    decode(input: Reader | Uint8Array, length?: number): Height;
     fromJSON(object: any): Height;
     toJSON(message: Height): unknown;
     fromPartial(object: DeepPartial<Height>): Height;
 };
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;

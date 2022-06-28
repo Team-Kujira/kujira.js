@@ -39,14 +39,14 @@ export interface Params {
 }
 export declare const ValidatorSigningInfo: {
     encode(message: ValidatorSigningInfo, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): ValidatorSigningInfo;
+    decode(input: Reader | Uint8Array, length?: number): ValidatorSigningInfo;
     fromJSON(object: any): ValidatorSigningInfo;
     toJSON(message: ValidatorSigningInfo): unknown;
     fromPartial(object: DeepPartial<ValidatorSigningInfo>): ValidatorSigningInfo;
 };
 export declare const Params: {
     encode(message: Params, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): Params;
+    decode(input: Reader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;

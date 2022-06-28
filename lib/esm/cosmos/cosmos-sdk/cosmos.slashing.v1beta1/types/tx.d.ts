@@ -10,14 +10,14 @@ export interface MsgUnjailResponse {
 }
 export declare const MsgUnjail: {
     encode(message: MsgUnjail, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgUnjail;
+    decode(input: Reader | Uint8Array, length?: number): MsgUnjail;
     fromJSON(object: any): MsgUnjail;
     toJSON(message: MsgUnjail): unknown;
     fromPartial(object: DeepPartial<MsgUnjail>): MsgUnjail;
 };
 export declare const MsgUnjailResponse: {
     encode(_: MsgUnjailResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): MsgUnjailResponse;
+    decode(input: Reader | Uint8Array, length?: number): MsgUnjailResponse;
     fromJSON(_: any): MsgUnjailResponse;
     toJSON(_: MsgUnjailResponse): unknown;
     fromPartial(_: DeepPartial<MsgUnjailResponse>): MsgUnjailResponse;

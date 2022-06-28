@@ -36,21 +36,21 @@ export interface IdentifiedGenesisMetadata {
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisState;
+    decode(input: Reader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const GenesisMetadata: {
     encode(message: GenesisMetadata, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): GenesisMetadata;
+    decode(input: Reader | Uint8Array, length?: number): GenesisMetadata;
     fromJSON(object: any): GenesisMetadata;
     toJSON(message: GenesisMetadata): unknown;
     fromPartial(object: DeepPartial<GenesisMetadata>): GenesisMetadata;
 };
 export declare const IdentifiedGenesisMetadata: {
     encode(message: IdentifiedGenesisMetadata, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): IdentifiedGenesisMetadata;
+    decode(input: Reader | Uint8Array, length?: number): IdentifiedGenesisMetadata;
     fromJSON(object: any): IdentifiedGenesisMetadata;
     toJSON(message: IdentifiedGenesisMetadata): unknown;
     fromPartial(object: DeepPartial<IdentifiedGenesisMetadata>): IdentifiedGenesisMetadata;

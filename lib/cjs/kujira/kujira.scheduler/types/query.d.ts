@@ -27,42 +27,42 @@ export interface QueryAllHookResponse {
 }
 export declare const QueryParamsRequest: {
     encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
     encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryParamsResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;
 };
 export declare const QueryGetHookRequest: {
     encode(message: QueryGetHookRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGetHookRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryGetHookRequest;
     fromJSON(object: any): QueryGetHookRequest;
     toJSON(message: QueryGetHookRequest): unknown;
     fromPartial(object: DeepPartial<QueryGetHookRequest>): QueryGetHookRequest;
 };
 export declare const QueryGetHookResponse: {
     encode(message: QueryGetHookResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryGetHookResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryGetHookResponse;
     fromJSON(object: any): QueryGetHookResponse;
     toJSON(message: QueryGetHookResponse): unknown;
     fromPartial(object: DeepPartial<QueryGetHookResponse>): QueryGetHookResponse;
 };
 export declare const QueryAllHookRequest: {
     encode(message: QueryAllHookRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllHookRequest;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllHookRequest;
     fromJSON(object: any): QueryAllHookRequest;
     toJSON(message: QueryAllHookRequest): unknown;
     fromPartial(object: DeepPartial<QueryAllHookRequest>): QueryAllHookRequest;
 };
 export declare const QueryAllHookResponse: {
     encode(message: QueryAllHookResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number | undefined): QueryAllHookResponse;
+    decode(input: Reader | Uint8Array, length?: number): QueryAllHookResponse;
     fromJSON(object: any): QueryAllHookResponse;
     toJSON(message: QueryAllHookResponse): unknown;
     fromPartial(object: DeepPartial<QueryAllHookResponse>): QueryAllHookResponse;

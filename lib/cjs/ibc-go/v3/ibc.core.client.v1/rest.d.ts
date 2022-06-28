@@ -900,11 +900,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @request GET:/ibc/core/client/v1/client_states
      */
     queryClientStates: (query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryClientStatesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryClientStatesResponse, RpcStatus>>;
     /**
      * No description
      *
@@ -933,11 +933,11 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/ibc/core/client/v1/consensus_states/{client_id}
    */
     queryConsensusStates: (client_id: string, query?: {
-        "pagination.key"?: string | undefined;
-        "pagination.offset"?: string | undefined;
-        "pagination.limit"?: string | undefined;
-        "pagination.count_total"?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryConsensusStatesResponse, RpcStatus>>;
+        "pagination.key"?: string;
+        "pagination.offset"?: string;
+        "pagination.limit"?: string;
+        "pagination.count_total"?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryConsensusStatesResponse, RpcStatus>>;
     /**
    * No description
    *
@@ -948,8 +948,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
    * @request GET:/ibc/core/client/v1/consensus_states/{client_id}/revision/{revision_number}/height/{revision_height}
    */
     queryConsensusState: (client_id: string, revision_number: string, revision_height: string, query?: {
-        latest_height?: boolean | undefined;
-    } | undefined, params?: RequestParams) => Promise<HttpResponse<V1QueryConsensusStateResponse, RpcStatus>>;
+        latest_height?: boolean;
+    }, params?: RequestParams) => Promise<HttpResponse<V1QueryConsensusStateResponse, RpcStatus>>;
     /**
      * No description
      *
