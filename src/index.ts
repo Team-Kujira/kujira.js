@@ -164,6 +164,7 @@ export const aminoTypes = (prefix: string): AminoTypes =>
 export type TxClient = {
   bank: typeof bank.txClient;
   distribution: typeof distribution.txClient;
+  feegrant: typeof feegrant.txClient;
   gov: typeof gov.txClient;
   ibcTransfer: typeof ibcTransfer.txClient;
   slashing: typeof slashing.txClient;
@@ -174,6 +175,7 @@ export type TxClient = {
 export const tx: TxClient = {
   bank: bank.txClient,
   distribution: distribution.txClient,
+  feegrant: feegrant.txClient,
   gov: gov.txClient,
   ibcTransfer: ibcTransfer.txClient,
   slashing: slashing.txClient,

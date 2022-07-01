@@ -3,6 +3,7 @@ import { AminoTypes } from "@cosmjs/stargate";
 import * as auth from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1";
 import * as bank from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1";
 import * as distribution from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1";
+import * as feegrant from "./cosmos/cosmos-sdk/cosmos.feegrant.v1beta1";
 import * as gov from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1";
 import * as ibcTransfer from "./ibc-go/v3/ibc.applications.transfer.v1";
 import * as slashing from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1";
@@ -32,6 +33,7 @@ export declare const aminoTypes: (prefix: string) => AminoTypes;
 export declare type TxClient = {
     bank: typeof bank.txClient;
     distribution: typeof distribution.txClient;
+    feegrant: typeof feegrant.txClient;
     gov: typeof gov.txClient;
     ibcTransfer: typeof ibcTransfer.txClient;
     slashing: typeof slashing.txClient;
