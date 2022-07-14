@@ -1,11 +1,12 @@
 import { Writer, Reader } from "protobufjs/minimal";
+import { BaseAccount } from "../../../../cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
 import { DeepPartial, longToNumber } from "../../../../types";
 
-export const protobufPackage = "ethermint.types.v1";
+export const protobufPackage = "cosmos.auth.v1beta1";
 
 /** EthAccount defines an account for modules that holds coins on a pool. */
 export interface EthAccount {
-  base_account: EthAccount | undefined;
+  base_account: BaseAccount | undefined;
   code_hash: string;
 }
 
@@ -23,7 +24,7 @@ const baseEthAccount: object = { code_hash: "" };
 export const EthAccount = {
   encode(message: EthAccount, writer: Writer = Writer.create()): Writer {
     if (message.base_account !== undefined) {
-      EthAccount.encode(
+      BaseAccount.encode(
         message.base_account,
         writer.uint32(10).fork()
       ).ldelim();
@@ -43,7 +44,7 @@ export const EthAccount = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.base_account = EthAccount.decode(reader, reader.uint32());
+          message.base_account = BaseAccount.decode(reader, reader.uint32());
           break;
         case 2:
           message.code_hash = reader.string();
@@ -59,7 +60,7 @@ export const EthAccount = {
   fromJSON(object: any): EthAccount {
     const message = { ...baseEthAccount } as EthAccount;
     if (object.base_account !== undefined && object.base_account !== null) {
-      message.base_account = EthAccount.fromJSON(object.base_account);
+      message.base_account = BaseAccount.fromJSON(object.base_account);
     } else {
       message.base_account = undefined;
     }
@@ -76,7 +77,7 @@ export const EthAccount = {
     const obj: any = {};
     message.base_account !== undefined &&
       (obj.base_account = message.base_account
-        ? EthAccount.toJSON(message.base_account)
+        ? BaseAccount.toJSON(message.base_account)
         : undefined);
     message.code_hash !== undefined && (obj.code_hash = message.code_hash);
 
@@ -86,7 +87,7 @@ export const EthAccount = {
   fromPartial(object: DeepPartial<EthAccount>): EthAccount {
     const message = { ...baseEthAccount } as EthAccount;
     if (object.base_account !== undefined && object.base_account !== null) {
-      message.base_account = EthAccount.fromPartial(object.base_account);
+      message.base_account = BaseAccount.fromPartial(object.base_account);
     } else {
       message.base_account = undefined;
     }

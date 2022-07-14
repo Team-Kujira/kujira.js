@@ -1,9 +1,10 @@
 import { Writer, Reader } from "protobufjs/minimal";
+import { BaseAccount } from "../../../../cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
 import { DeepPartial } from "../../../../types";
-export declare const protobufPackage = "ethermint.types.v1";
+export declare const protobufPackage = "cosmos.auth.v1beta1";
 /** EthAccount defines an account for modules that holds coins on a pool. */
 export interface EthAccount {
-    base_account: EthAccount | undefined;
+    base_account: BaseAccount | undefined;
     code_hash: string;
 }
 /** Params defines the parameters for the auth module. */
