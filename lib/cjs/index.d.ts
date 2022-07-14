@@ -11,6 +11,8 @@ import * as staking from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1";
 import * as tendermint from "./cosmos/cosmos-sdk/cosmos.base.tendermint.v1beta1";
 import * as tx_ from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1";
 import * as wasm from "./CosmWasm/wasmd/cosmwasm.wasm.v1";
+import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
+import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
 export { ProtobufAny } from "./types";
 export { BaseAccount, ModuleAccount, } from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
 export { V1Beta1Coin, V1Beta1DenomUnit, V1Beta1Input, V1Beta1Output, V1Beta1Metadata, } from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1/rest";
@@ -33,6 +35,8 @@ export declare const aminoTypes: (prefix: string) => AminoTypes;
 export declare type TxClient = {
     bank: typeof bank.txClient;
     distribution: typeof distribution.txClient;
+    ethermintEvm: typeof ethermintEvm.txClient;
+    ethermintFeemarket: typeof ethermintFeemarket.txClient;
     feegrant: typeof feegrant.txClient;
     gov: typeof gov.txClient;
     ibcTransfer: typeof ibcTransfer.txClient;
@@ -45,6 +49,8 @@ export declare type QueryClient = {
     auth: auth.Api<unknown>;
     bank: bank.Api<unknown>;
     distribution: distribution.Api<unknown>;
+    ethermintEvm: ethermintEvm.Api<unknown>;
+    ethermintFeemarket: ethermintFeemarket.Api<unknown>;
     gov: gov.Api<unknown>;
     ibcTransfer: ibcTransfer.Api<unknown>;
     slashing: slashing.Api<unknown>;
@@ -59,6 +65,8 @@ export declare const query: ({ rest }: {
     auth: auth.Api<unknown>;
     bank: bank.Api<unknown>;
     distribution: distribution.Api<unknown>;
+    ethermintEvm: ethermintEvm.Api<unknown>;
+    ethermintFeemarket: ethermintFeemarket.Api<unknown>;
     gov: gov.Api<unknown>;
     ibcTransfer: ibcTransfer.Api<unknown>;
     slashing: slashing.Api<unknown>;

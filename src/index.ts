@@ -34,6 +34,8 @@ import * as tendermint from "./cosmos/cosmos-sdk/cosmos.base.tendermint.v1beta1"
 import * as tx_ from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1";
 import * as vesting from "./cosmos/cosmos-sdk/cosmos.vesting.v1beta1";
 import * as wasm from "./CosmWasm/wasmd/cosmwasm.wasm.v1";
+import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
+import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
 
 export { ProtobufAny } from "./types";
 
@@ -97,6 +99,8 @@ const types = [
   ...crisis.types,
   ...denom.types,
   ...distribution.types,
+  ...ethermintEvm.types,
+  ...ethermintFeemarket.types,
   ...evidence.types,
   ...feegrant.types,
   ...gov.types,
@@ -164,6 +168,8 @@ export const aminoTypes = (prefix: string): AminoTypes =>
 export type TxClient = {
   bank: typeof bank.txClient;
   distribution: typeof distribution.txClient;
+  ethermintEvm: typeof ethermintEvm.txClient;
+  ethermintFeemarket: typeof ethermintFeemarket.txClient;
   feegrant: typeof feegrant.txClient;
   gov: typeof gov.txClient;
   ibcTransfer: typeof ibcTransfer.txClient;
@@ -175,6 +181,8 @@ export type TxClient = {
 export const tx: TxClient = {
   bank: bank.txClient,
   distribution: distribution.txClient,
+  ethermintEvm: ethermintEvm.txClient,
+  ethermintFeemarket: ethermintFeemarket.txClient,
   feegrant: feegrant.txClient,
   gov: gov.txClient,
   ibcTransfer: ibcTransfer.txClient,
@@ -187,6 +195,8 @@ export type QueryClient = {
   auth: auth.Api<unknown>;
   bank: bank.Api<unknown>;
   distribution: distribution.Api<unknown>;
+  ethermintEvm: ethermintEvm.Api<unknown>;
+  ethermintFeemarket: ethermintFeemarket.Api<unknown>;
   gov: gov.Api<unknown>;
   ibcTransfer: ibcTransfer.Api<unknown>;
   slashing: slashing.Api<unknown>;
@@ -201,6 +211,8 @@ export const query = ({ rest }: { rest: string }) => {
     auth: new auth.Api({ baseUrl: rest }),
     bank: new bank.Api({ baseUrl: rest }),
     distribution: new distribution.Api({ baseUrl: rest }),
+    ethermintEvm: new ethermintEvm.Api({ baseUrl: rest }),
+    ethermintFeemarket: new ethermintFeemarket.Api({ baseUrl: rest }),
     gov: new gov.Api({ baseUrl: rest }),
     ibcTransfer: new ibcTransfer.Api({ baseUrl: rest }),
     slashing: new slashing.Api({ baseUrl: rest }),
