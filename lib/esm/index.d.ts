@@ -30,6 +30,7 @@ export { V1ContractCodeHistoryEntry, V1ContractCodeHistoryOperationType, V1Contr
 export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
+export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => AminoTypes;

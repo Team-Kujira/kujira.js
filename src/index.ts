@@ -92,6 +92,7 @@ export {
 export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
+export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
 
 const types = [
   ...authz.types,
