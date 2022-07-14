@@ -10,6 +10,7 @@ import * as slashing from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1";
 import * as staking from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1";
 import * as tendermint from "./cosmos/cosmos-sdk/cosmos.base.tendermint.v1beta1";
 import * as tx_ from "./cosmos/cosmos-sdk/cosmos.tx.v1beta1";
+import * as vesting from "./cosmos/cosmos-sdk/cosmos.vesting.v1beta1";
 import * as wasm from "./CosmWasm/wasmd/cosmwasm.wasm.v1";
 import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
 import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
@@ -42,6 +43,7 @@ export declare type TxClient = {
     ibcTransfer: typeof ibcTransfer.txClient;
     slashing: typeof slashing.txClient;
     staking: typeof staking.txClient;
+    vesting: typeof vesting.txClient;
     wasm: typeof wasm.txClient;
 };
 export declare const tx: TxClient;

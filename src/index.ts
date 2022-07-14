@@ -175,6 +175,7 @@ export type TxClient = {
   ibcTransfer: typeof ibcTransfer.txClient;
   slashing: typeof slashing.txClient;
   staking: typeof staking.txClient;
+  vesting: typeof vesting.txClient;
   wasm: typeof wasm.txClient;
 };
 
@@ -188,6 +189,7 @@ export const tx: TxClient = {
   ibcTransfer: ibcTransfer.txClient,
   slashing: slashing.txClient,
   staking: staking.txClient,
+  vesting: vesting.txClient,
   wasm: wasm.txClient,
 };
 
