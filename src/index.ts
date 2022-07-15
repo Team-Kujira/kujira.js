@@ -164,7 +164,10 @@ const convert = (converters: AminoConverters): AminoConverters =>
   );
 
 export const aminoTypes = (prefix: string): AminoTypes =>
-  new AminoTypes(convert(createDefaultTypes(prefix)));
+  new AminoTypes({
+    ...convert(createDefaultTypes(prefix)),
+    ...vesting.aminoConverter,
+  });
 
 export type TxClient = {
   bank: typeof bank.txClient;

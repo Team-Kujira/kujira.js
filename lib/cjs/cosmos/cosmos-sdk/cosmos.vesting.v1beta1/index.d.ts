@@ -1,6 +1,7 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
 import { MsgCreateVestingAccount } from "./types/tx";
+export { aminoConverter } from "./types/amino";
 declare const types: (string | {
     encode(message: MsgCreateVestingAccount, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgCreateVestingAccount;

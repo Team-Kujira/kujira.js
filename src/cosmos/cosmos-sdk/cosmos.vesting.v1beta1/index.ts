@@ -1,6 +1,7 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
 import { MsgCreateVestingAccount } from "./types/tx";
+export { aminoConverter } from "./types/amino";
 
 const types = [
   ["/cosmos.vesting.v1beta1.MsgCreateVestingAccount", MsgCreateVestingAccount],
