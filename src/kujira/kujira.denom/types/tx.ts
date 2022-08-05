@@ -1,7 +1,8 @@
 /* eslint-disable */
-import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
+
 import { Coin } from "../../../types/cosmos/base/coin";
+import { util, configure, Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial, Rpc } from "../../../types";
 
 export const protobufPackage = "kujira.denom";
 
@@ -25,11 +26,12 @@ export interface MsgCreateDenomResponse {
 
 /**
  * MsgMint is the sdk.Msg type for allowing an admin account to mint
- * more of a token.  For now, we only support minting to the sender account
+ * more of a token.
  */
 export interface MsgMint {
   sender: string;
   amount: Coin | undefined;
+  recipient: string;
 }
 
 export interface MsgMintResponse {}
@@ -196,7 +198,7 @@ export const MsgCreateDenomResponse = {
   },
 };
 
-const baseMsgMint: object = { sender: "" };
+const baseMsgMint: object = { sender: "", recipient: "" };
 
 export const MsgMint = {
   encode(message: MsgMint, writer: Writer = Writer.create()): Writer {
@@ -205,6 +207,9 @@ export const MsgMint = {
     }
     if (message.amount !== undefined) {
       Coin.encode(message.amount, writer.uint32(18).fork()).ldelim();
+    }
+    if (message.recipient !== "") {
+      writer.uint32(26).string(message.recipient);
     }
     return writer;
   },
@@ -221,6 +226,9 @@ export const MsgMint = {
           break;
         case 2:
           message.amount = Coin.decode(reader, reader.uint32());
+          break;
+        case 3:
+          message.recipient = reader.string();
           break;
         default:
           reader.skipType(tag & 7);
@@ -242,6 +250,11 @@ export const MsgMint = {
     } else {
       message.amount = undefined;
     }
+    if (object.recipient !== undefined && object.recipient !== null) {
+      message.recipient = String(object.recipient);
+    } else {
+      message.recipient = "";
+    }
     return message;
   },
 
@@ -250,6 +263,7 @@ export const MsgMint = {
     message.sender !== undefined && (obj.sender = message.sender);
     message.amount !== undefined &&
       (obj.amount = message.amount ? Coin.toJSON(message.amount) : undefined);
+    message.recipient !== undefined && (obj.recipient = message.recipient);
     return obj;
   },
 
@@ -264,6 +278,11 @@ export const MsgMint = {
       message.amount = Coin.fromPartial(object.amount);
     } else {
       message.amount = undefined;
+    }
+    if (object.recipient !== undefined && object.recipient !== null) {
+      message.recipient = object.recipient;
+    } else {
+      message.recipient = "";
     }
     return message;
   },
@@ -590,12 +609,4 @@ export class MsgClientImpl implements Msg {
       MsgChangeAdminResponse.decode(new Reader(data))
     );
   }
-}
-
-interface Rpc {
-  request(
-    service: string,
-    method: string,
-    data: Uint8Array
-  ): Promise<Uint8Array>;
 }

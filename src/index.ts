@@ -26,6 +26,7 @@ import * as evidence from "./cosmos/cosmos-sdk/cosmos.evidence.v1beta1";
 import * as feegrant from "./cosmos/cosmos-sdk/cosmos.feegrant.v1beta1";
 import * as gov from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1";
 import * as ibcTransfer from "./ibc-go/v3/ibc.applications.transfer.v1";
+import * as oracle from "./kujira/kujira.oracle";
 import * as params from "./cosmos/cosmos-sdk/cosmos.params.v1beta1";
 import * as scheduler from "./kujira/kujira.scheduler";
 import * as slashing from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1";
@@ -93,6 +94,7 @@ export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
 export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
+export { OracleQueryExchangeRateResponse } from "./kujira/kujira.oracle/rest";
 
 const types = [
   ...authz.types,
@@ -106,6 +108,7 @@ const types = [
   ...feegrant.types,
   ...gov.types,
   ...ibcTransfer.types,
+  ...oracle.types,
   ...params.types,
   ...scheduler.types,
   ...slashing.types,
@@ -205,6 +208,7 @@ export type QueryClient = {
   ethermintFeemarket: ethermintFeemarket.Api<unknown>;
   gov: gov.Api<unknown>;
   ibcTransfer: ibcTransfer.Api<unknown>;
+  oracle: oracle.Api<unknown>;
   slashing: slashing.Api<unknown>;
   staking: staking.Api<unknown>;
   tendermint: tendermint.Api<unknown>;
@@ -212,7 +216,7 @@ export type QueryClient = {
   wasm: wasm.Api<unknown>;
 };
 
-export const query = ({ rest }: { rest: string }) => {
+export const query = ({ rest }: { rest: string }): QueryClient => {
   return {
     auth: new auth.Api({ baseUrl: rest }),
     bank: new bank.Api({ baseUrl: rest }),
@@ -221,6 +225,7 @@ export const query = ({ rest }: { rest: string }) => {
     ethermintFeemarket: new ethermintFeemarket.Api({ baseUrl: rest }),
     gov: new gov.Api({ baseUrl: rest }),
     ibcTransfer: new ibcTransfer.Api({ baseUrl: rest }),
+    oracle: new oracle.Api({ baseUrl: rest }),
     slashing: new slashing.Api({ baseUrl: rest }),
     staking: new staking.Api({ baseUrl: rest }),
     tx: new tx_.Api({ baseUrl: rest }),

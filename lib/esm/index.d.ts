@@ -6,6 +6,7 @@ import * as distribution from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1";
 import * as feegrant from "./cosmos/cosmos-sdk/cosmos.feegrant.v1beta1";
 import * as gov from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1";
 import * as ibcTransfer from "./ibc-go/v3/ibc.applications.transfer.v1";
+import * as oracle from "./kujira/kujira.oracle";
 import * as slashing from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1";
 import * as staking from "./cosmos/cosmos-sdk/cosmos.staking.v1beta1";
 import * as tendermint from "./cosmos/cosmos-sdk/cosmos.base.tendermint.v1beta1";
@@ -31,6 +32,7 @@ export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
 export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
+export { OracleQueryExchangeRateResponse } from "./kujira/kujira.oracle/rest";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => AminoTypes;
@@ -56,6 +58,7 @@ export declare type QueryClient = {
     ethermintFeemarket: ethermintFeemarket.Api<unknown>;
     gov: gov.Api<unknown>;
     ibcTransfer: ibcTransfer.Api<unknown>;
+    oracle: oracle.Api<unknown>;
     slashing: slashing.Api<unknown>;
     staking: staking.Api<unknown>;
     tendermint: tendermint.Api<unknown>;
@@ -64,17 +67,4 @@ export declare type QueryClient = {
 };
 export declare const query: ({ rest }: {
     rest: string;
-}) => {
-    auth: auth.Api<unknown>;
-    bank: bank.Api<unknown>;
-    distribution: distribution.Api<unknown>;
-    ethermintEvm: ethermintEvm.Api<unknown>;
-    ethermintFeemarket: ethermintFeemarket.Api<unknown>;
-    gov: gov.Api<unknown>;
-    ibcTransfer: ibcTransfer.Api<unknown>;
-    slashing: slashing.Api<unknown>;
-    staking: staking.Api<unknown>;
-    tx: tx_.Api<unknown>;
-    tendermint: tendermint.Api<unknown>;
-    wasm: wasm.Api<unknown>;
-};
+}) => QueryClient;

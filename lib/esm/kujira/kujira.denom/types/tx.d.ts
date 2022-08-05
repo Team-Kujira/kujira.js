@@ -1,6 +1,6 @@
-import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
 import { Coin } from "../../../types/cosmos/base/coin";
+import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial, Rpc } from "../../../types";
 export declare const protobufPackage = "kujira.denom";
 /**
  * MsgCreateDenom is the sdk.Msg type for allowing an account to create
@@ -20,11 +20,12 @@ export interface MsgCreateDenomResponse {
 }
 /**
  * MsgMint is the sdk.Msg type for allowing an admin account to mint
- * more of a token.  For now, we only support minting to the sender account
+ * more of a token.
  */
 export interface MsgMint {
     sender: string;
     amount: Coin | undefined;
+    recipient: string;
 }
 export interface MsgMintResponse {
 }
@@ -125,7 +126,3 @@ export declare class MsgClientImpl implements Msg {
     Burn(request: MsgBurn): Promise<MsgBurnResponse>;
     ChangeAdmin(request: MsgChangeAdmin): Promise<MsgChangeAdminResponse>;
 }
-interface Rpc {
-    request(service: string, method: string, data: Uint8Array): Promise<Uint8Array>;
-}
-export {};
