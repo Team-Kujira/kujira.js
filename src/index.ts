@@ -56,8 +56,12 @@ export {
   V1Beta1ValidatorOutstandingRewards,
   V1Beta1ValidatorAccumulatedCommission,
   V1Beta1DelegationDelegatorReward,
+  V1Beta1DecCoin,
 } from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1/rest";
+export * from "./cosmos/cosmos-sdk/cosmos.feegrant.v1beta1/types/feegrant";
 export { voteOptionFromJSON } from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1/types/gov";
+export { V1Beta1Deposit } from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1/rest";
+export { MsgVote } from "./cosmos/cosmos-sdk/cosmos.gov.v1beta1/types/tx";
 export { ValidatorSigningInfo } from "./cosmos/cosmos-sdk/cosmos.slashing.v1beta1/types/slashing";
 export {
   V1Beta1UnbondingDelegation,
@@ -91,6 +95,7 @@ export {
   V1ContractInfo,
 } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/rest";
 export { MsgExecuteContract } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/tx";
+export { InstantiateContractProposal } from "./CosmWasm/wasmd/cosmwasm.wasm.v1/types/proposal";
 export { TxResult } from "./types/tendermint/abci/types";
 export { Coin } from "./types/cosmos/base/coin";
 export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
