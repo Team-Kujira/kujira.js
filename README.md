@@ -9,7 +9,7 @@ See a demo trading bot at https://github.com/TeamKujira/fin-bot-demo
 Install required packages via your preferred package manager
 
 - `kujira.js` (via GitHub)
-- `@cosmjs/stargage`
+- `@cosmjs/stargate`
 - `@cosmjs/proto-signing`
 
 Import tx client `tx` and type registry `registry` from `kujira.js`
