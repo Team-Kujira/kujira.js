@@ -1,6 +1,7 @@
 import { Registry } from "@cosmjs/proto-signing";
 import { AminoTypes } from "@cosmjs/stargate";
 import * as auth from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1";
+import * as authz from "./cosmos/cosmos-sdk/cosmos.authz.v1beta1";
 import * as bank from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1";
 import * as distribution from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1";
 import * as feegrant from "./cosmos/cosmos-sdk/cosmos.feegrant.v1beta1";
@@ -41,6 +42,7 @@ export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => AminoTypes;
 export declare type TxClient = {
+    authz: typeof authz.txClient;
     bank: typeof bank.txClient;
     distribution: typeof distribution.txClient;
     ethermintEvm: typeof ethermintEvm.txClient;
