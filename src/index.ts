@@ -44,6 +44,7 @@ export {
   BaseAccount,
   ModuleAccount,
 } from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
+export { GenericAuthorization } from "./cosmos/cosmos-sdk/cosmos.authz.v1beta1/types/authz";
 export {
   V1Beta1Coin,
   V1Beta1DenomUnit,

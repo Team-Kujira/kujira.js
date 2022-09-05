@@ -1,5 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
+import { GenericAuthorization } from "./types/authz";
 import { MsgExec, MsgRevoke, MsgGrant } from "./types/tx";
 declare const types: ((string | {
     encode(message: MsgExec, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
@@ -39,6 +40,14 @@ declare const types: ((string | {
             expiration?: Date | undefined;
         } | undefined;
     }): MsgGrant;
+})[] | (string | {
+    encode(message: GenericAuthorization, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
+    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): GenericAuthorization;
+    fromJSON(object: any): GenericAuthorization;
+    toJSON(message: GenericAuthorization): unknown;
+    fromPartial(object: {
+        msg?: string | undefined;
+    }): GenericAuthorization;
 })[])[];
 export declare const registry: Registry;
 declare const txClient: {

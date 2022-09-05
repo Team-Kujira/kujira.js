@@ -18,6 +18,7 @@ import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
 import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
 export { ProtobufAny } from "./types";
 export { BaseAccount, ModuleAccount, } from "./cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
+export { GenericAuthorization } from "./cosmos/cosmos-sdk/cosmos.authz.v1beta1/types/authz";
 export { V1Beta1Coin, V1Beta1DenomUnit, V1Beta1Input, V1Beta1Output, V1Beta1Metadata, } from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1/rest";
 export { MsgSend } from "./cosmos/cosmos-sdk/cosmos.bank.v1beta1/types/tx";
 export { V1Beta1ValidatorOutstandingRewards, V1Beta1ValidatorAccumulatedCommission, V1Beta1DelegationDelegatorReward, V1Beta1DecCoin, } from "./cosmos/cosmos-sdk/cosmos.distribution.v1beta1/rest";
