@@ -178,6 +178,7 @@ export const aminoTypes = (prefix: string): AminoTypes =>
   });
 
 export type TxClient = {
+  authz: typeof authz.txClient;
   bank: typeof bank.txClient;
   distribution: typeof distribution.txClient;
   ethermintEvm: typeof ethermintEvm.txClient;
@@ -192,6 +193,7 @@ export type TxClient = {
 };
 
 export const tx: TxClient = {
+  authz: authz.txClient,
   bank: bank.txClient,
   distribution: distribution.txClient,
   ethermintEvm: ethermintEvm.txClient,
