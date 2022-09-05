@@ -59,6 +59,7 @@ export declare type TxClient = {
 export declare const tx: TxClient;
 export declare type QueryClient = {
     auth: auth.Api<unknown>;
+    authz: authz.Api<unknown>;
     bank: bank.Api<unknown>;
     distribution: distribution.Api<unknown>;
     ethermintEvm: ethermintEvm.Api<unknown>;

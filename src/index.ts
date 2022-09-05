@@ -210,6 +210,7 @@ export const tx: TxClient = {
 
 export type QueryClient = {
   auth: auth.Api<unknown>;
+  authz: authz.Api<unknown>;
   bank: bank.Api<unknown>;
   distribution: distribution.Api<unknown>;
   ethermintEvm: ethermintEvm.Api<unknown>;
@@ -227,6 +228,7 @@ export type QueryClient = {
 export const query = ({ rest }: { rest: string }): QueryClient => {
   return {
     auth: new auth.Api({ baseUrl: rest }),
+    authz: new authz.Api({ baseUrl: rest }),
     bank: new bank.Api({ baseUrl: rest }),
     distribution: new distribution.Api({ baseUrl: rest }),
     ethermintEvm: new ethermintEvm.Api({ baseUrl: rest }),
