@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial, Rpc } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 
 export const protobufPackage = "kujira.oracle";
 
@@ -529,52 +529,4 @@ export interface Msg {
   DelegateFeedConsent(
     request: MsgDelegateFeedConsent
   ): Promise<MsgDelegateFeedConsentResponse>;
-}
-
-export class MsgClientImpl implements Msg {
-  private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
-    this.rpc = rpc;
-  }
-  AggregateExchangeRatePrevote(
-    request: MsgAggregateExchangeRatePrevote
-  ): Promise<MsgAggregateExchangeRatePrevoteResponse> {
-    const data = MsgAggregateExchangeRatePrevote.encode(request).finish();
-    const promise = this.rpc.request(
-      "kujira.oracle.Msg",
-      "AggregateExchangeRatePrevote",
-      data
-    );
-    return promise.then((data) =>
-      MsgAggregateExchangeRatePrevoteResponse.decode(new Reader(data))
-    );
-  }
-
-  AggregateExchangeRateVote(
-    request: MsgAggregateExchangeRateVote
-  ): Promise<MsgAggregateExchangeRateVoteResponse> {
-    const data = MsgAggregateExchangeRateVote.encode(request).finish();
-    const promise = this.rpc.request(
-      "kujira.oracle.Msg",
-      "AggregateExchangeRateVote",
-      data
-    );
-    return promise.then((data) =>
-      MsgAggregateExchangeRateVoteResponse.decode(new Reader(data))
-    );
-  }
-
-  DelegateFeedConsent(
-    request: MsgDelegateFeedConsent
-  ): Promise<MsgDelegateFeedConsentResponse> {
-    const data = MsgDelegateFeedConsent.encode(request).finish();
-    const promise = this.rpc.request(
-      "kujira.oracle.Msg",
-      "DelegateFeedConsent",
-      data
-    );
-    return promise.then((data) =>
-      MsgDelegateFeedConsentResponse.decode(new Reader(data))
-    );
-  }
 }

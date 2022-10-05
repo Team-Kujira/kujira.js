@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
-
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 export const protobufPackage = "kujira.scheduler";
 
 /** Params defines the parameters for the module. */

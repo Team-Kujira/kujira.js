@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { util, configure, Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial, longToNumber } from "../../../types";
+import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import {
   Params,
   ExchangeRateTuple,
@@ -373,7 +373,7 @@ export const MissCounter = {
           message.validator_address = reader.string();
           break;
         case 2:
-          message.miss_counter = longToNumber(reader.uint64() as Long);
+          message.miss_counter = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);

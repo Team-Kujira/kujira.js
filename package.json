@@ -15,7 +15,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.29.0",
     "@cosmjs/launchpad": "^0.27.1",
     "@cosmjs/stargate": "^0.29.0",
-    "long": "^5.2.0"
+    "long": "^4.0.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

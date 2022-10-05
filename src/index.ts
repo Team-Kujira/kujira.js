@@ -14,15 +14,17 @@ import {
 } from "@cosmjs/cosmwasm-stargate";
 import Long from "long";
 import { util, configure } from "protobufjs/minimal";
-
 import * as denom from "./kujira/kujira.denom";
 import * as oracle from "./kujira/kujira.oracle";
-import * as scheduler from "./kujira/kujira.scheduler";
 import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
 import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
 import { wasmTypes } from "@cosmjs/cosmwasm-stargate/build/modules";
-
-export { ProtobufAny } from "./types";
+import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
+import { OracleExtension, setupOracleExtension } from "./kujira/kujira.oracle";
+import {
+  SchedulerExtension,
+  setupSchedulerExtension,
+} from "./kujira/kujira.scheduler";
 export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
 
 const types = [
@@ -33,7 +35,6 @@ const types = [
   ...ethermintFeemarket.types,
   // ...evidence.types,
   ...oracle.types,
-  ...scheduler.types,
   ...wasmTypes,
   ...ibcTypes,
 ];
@@ -54,43 +55,43 @@ export const aminoTypes = (prefix: string): s.AminoTypes =>
     ...createWasmAminoConverters(),
   });
 
-export type QueryClient = s.QueryClient &
+export type KujiraQueryClient = s.QueryClient &
   s.AuthExtension &
   AuthzExtension &
   s.BankExtension &
   s.DistributionExtension &
-  // DenomExtension &
+  DenomExtension &
   // EthermintEvmExtension &
   // EthermintFeemarketExtension &
 
   FeegrantExtension &
   s.GovExtension &
-  // OracleExtension &
-  // IbcTransferExtension &
+  OracleExtension &
+  SchedulerExtension &
   SlashingExtension &
   s.StakingExtension &
   s.TxExtension &
   WasmExtension &
   s.IbcExtension;
 
-export const queryClient = async ({
+export const kujiraQueryClient = async ({
   rpc,
 }: {
   rpc: string;
-}): Promise<QueryClient> =>
+}): Promise<KujiraQueryClient> =>
   s.QueryClient.withExtensions(
     await Tendermint34Client.connect(rpc),
     s.setupAuthExtension,
     s.setupAuthzExtension,
     s.setupBankExtension,
-    // setupDenomExtension,
+    setupDenomExtension,
     s.setupDistributionExtension,
     // setupEthermintEvmExtension,
     // setupEthermintFeemarketExtension,
     s.setupFeegrantExtension,
     s.setupGovExtension,
-    // setupOracleExtension,
-    // setupIbcTransferExtension,
+    setupOracleExtension,
+    setupSchedulerExtension,
     s.setupSlashingExtension,
     s.setupStakingExtension,
     s.setupTxExtension,

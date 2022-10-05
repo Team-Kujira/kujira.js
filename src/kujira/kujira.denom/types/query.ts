@@ -2,7 +2,7 @@
 import { Reader, Writer } from "protobufjs/minimal";
 import { Params } from "./params";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
-import { DeepPartial } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 
 export const protobufPackage = "kujira.denom";
 

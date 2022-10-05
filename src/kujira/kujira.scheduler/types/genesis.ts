@@ -1,10 +1,7 @@
-/* eslint-disable */
-import Long from "long";
-
 import { Writer, Reader } from "protobufjs/minimal";
 import { Params } from "./params";
 import { Hook } from "./hook";
-import { DeepPartial, longToNumber } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 
 export const protobufPackage = "kujira.scheduler";
 
@@ -47,7 +44,7 @@ export const GenesisState = {
           message.hookList.push(Hook.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.hookCount = longToNumber(reader.uint64() as Long);
+          message.hookCount = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);

@@ -2,13 +2,8 @@
 import Long from "long";
 
 import { Writer, Reader } from "protobufjs/minimal";
-import {
-  longToNumber,
-  bytesFromBase64,
-  base64FromBytes,
-  DeepPartial,
-} from "../../../types";
-import { Coin } from "../../../types/cosmos/base/coin";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 
 export const protobufPackage = "kujira.scheduler";
 
@@ -55,7 +50,7 @@ export const Hook = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = longToNumber(reader.uint64() as Long);
+          message.id = (reader.uint64() as Long).toNumber();
           break;
         case 2:
           message.executor = reader.string();
@@ -67,7 +62,7 @@ export const Hook = {
           message.msg = reader.bytes();
           break;
         case 5:
-          message.frequency = longToNumber(reader.int64() as Long);
+          message.frequency = (reader.int64() as Long).toNumber();
           break;
         case 6:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -168,3 +163,28 @@ export const Hook = {
     return message;
   },
 };
+
+export function bytesFromBase64(b64: string): Uint8Array {
+  if (globalThis.Buffer) {
+    return Uint8Array.from(globalThis.Buffer.from(b64, "base64"));
+  } else {
+    const bin = globalThis.atob(b64);
+    const arr = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; ++i) {
+      arr[i] = bin.charCodeAt(i);
+    }
+    return arr;
+  }
+}
+
+export function base64FromBytes(arr: Uint8Array): string {
+  if (globalThis.Buffer) {
+    return globalThis.Buffer.from(arr).toString("base64");
+  } else {
+    const bin: string[] = [];
+    arr.forEach((byte) => {
+      bin.push(String.fromCharCode(byte));
+    });
+    return globalThis.btoa(bin.join(""));
+  }
+}

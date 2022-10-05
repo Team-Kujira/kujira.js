@@ -1,15 +1,11 @@
 /* eslint-disable */
 import Long from "long";
 
-import { util, configure, Writer, Reader } from "protobufjs/minimal";
-import {
-  longToNumber,
-  bytesFromBase64,
-  base64FromBytes,
-  DeepPartial,
-} from "../../../types";
-import { Coin } from "../../../types/cosmos/base/coin";
+import { Writer, Reader } from "protobufjs/minimal";
 
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
+import { base64FromBytes, bytesFromBase64 } from "./hook";
 export const protobufPackage = "kujira.scheduler";
 
 export interface CreateHookProposal {
@@ -110,7 +106,7 @@ export const CreateHookProposal = {
           message.msg = reader.bytes();
           break;
         case 6:
-          message.frequency = longToNumber(reader.int64() as Long);
+          message.frequency = (reader.int64() as Long).toNumber();
           break;
         case 7:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -286,7 +282,7 @@ export const UpdateHookProposal = {
           message.description = reader.string();
           break;
         case 3:
-          message.id = longToNumber(reader.uint64() as Long);
+          message.id = (reader.uint64() as Long).toNumber();
           break;
         case 4:
           message.executor = reader.string();
@@ -298,7 +294,7 @@ export const UpdateHookProposal = {
           message.msg = reader.bytes();
           break;
         case 7:
-          message.frequency = longToNumber(reader.int64() as Long);
+          message.frequency = (reader.int64() as Long).toNumber();
           break;
         case 8:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -466,7 +462,7 @@ export const DeleteHookProposal = {
           message.description = reader.string();
           break;
         case 3:
-          message.id = longToNumber(reader.uint64() as Long);
+          message.id = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);

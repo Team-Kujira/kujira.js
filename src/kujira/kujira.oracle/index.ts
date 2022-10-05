@@ -3,6 +3,7 @@ import { Api } from "./rest";
 import { MsgAggregateExchangeRateVote } from "./types/tx";
 import { MsgAggregateExchangeRatePrevote } from "./types/tx";
 import { MsgDelegateFeedConsent } from "./types/tx";
+import { OracleExtension, setupOracleExtension } from "./queries";
 
 export const types = [
   ["/kujira.oracle.MsgAggregateExchangeRateVote", MsgAggregateExchangeRateVote],
@@ -35,4 +36,4 @@ const txClient = {
   }),
 };
 
-export { txClient, Api };
+export { txClient, OracleExtension, setupOracleExtension };

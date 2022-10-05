@@ -1,6 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
-import { Api } from "./rest";
 import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
+import { DenomExtension, setupDenomExtension } from "./queries";
 
 const types = [
   ["/kujira.denom.MsgBurn", MsgBurn],
@@ -30,4 +30,4 @@ const txClient = {
   }),
 };
 
-export { txClient, Api, types };
+export { txClient, types, DenomExtension, setupDenomExtension };

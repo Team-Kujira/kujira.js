@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { util, configure, Writer, Reader } from "protobufjs/minimal";
-import { longToNumber, DeepPartial } from "../../../types";
+import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 
 export const protobufPackage = "kujira.oracle";
 
@@ -92,7 +92,7 @@ export const Params = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.vote_period = longToNumber(reader.uint64() as Long);
+          message.vote_period = (reader.uint64() as Long).toNumber();
           break;
         case 2:
           message.vote_threshold = reader.string();
@@ -101,9 +101,9 @@ export const Params = {
           message.reward_band = reader.string();
           break;
         case 4:
-          message.reward_distribution_window = longToNumber(
+          message.reward_distribution_window = (
             reader.uint64() as Long
-          );
+          ).toNumber();
           break;
         case 5:
           message.whitelist.push(Denom.decode(reader, reader.uint32()));
@@ -112,7 +112,7 @@ export const Params = {
           message.slash_fraction = reader.string();
           break;
         case 7:
-          message.slash_window = longToNumber(reader.uint64() as Long);
+          message.slash_window = (reader.uint64() as Long).toNumber();
           break;
         case 8:
           message.min_valid_per_window = reader.string();
@@ -355,7 +355,7 @@ export const AggregateExchangeRatePrevote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.submit_block = longToNumber(reader.uint64() as Long);
+          message.submit_block = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);

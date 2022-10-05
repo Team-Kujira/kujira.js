@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { Reader, util, configure, Writer } from "protobufjs/minimal";
+import { Reader, Writer } from "protobufjs/minimal";
 import {
   AggregateExchangeRatePrevote,
   AggregateExchangeRateVote,
   Params,
 } from "./oracle";
-import { DeepPartial, longToNumber, Rpc } from "../../../types";
-import { DecCoin } from "../../../types/cosmos/base/coin";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 
 export const protobufPackage = "kujira.oracle";
 
@@ -884,7 +884,7 @@ export const QueryMissCounterResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.miss_counter = longToNumber(reader.uint64() as Long);
+          message.miss_counter = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);
@@ -1788,4 +1788,12 @@ export class QueryClientImpl implements Query {
     const promise = this.rpc.request("kujira.oracle.Query", "Params", data);
     return promise.then((data) => QueryParamsResponse.decode(new Reader(data)));
   }
+}
+
+interface Rpc {
+  request(
+    service: string,
+    method: string,
+    data: Uint8Array
+  ): Promise<Uint8Array>;
 }

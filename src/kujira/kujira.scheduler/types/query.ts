@@ -1,15 +1,15 @@
 /* eslint-disable */
-import { Reader, util, configure, Writer } from "protobufjs/minimal";
+import { Reader, Writer } from "protobufjs/minimal";
 import Long from "long";
 
 import { Params } from "./params";
 import { Hook } from "./hook";
 
-import { DeepPartial, longToNumber } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import {
   PageRequest,
   PageResponse,
-} from "../../../types/cosmos/base/query/pagination";
+} from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
 
 export const protobufPackage = "kujira.scheduler";
 
@@ -157,7 +157,7 @@ export const QueryGetHookRequest = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = longToNumber(reader.uint64() as Long);
+          message.id = (reader.uint64() as Long).toNumber();
           break;
         default:
           reader.skipType(tag & 7);

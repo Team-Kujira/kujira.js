@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import { Coin } from "../../../types/cosmos/base/coin";
-import { util, configure, Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial, Rpc } from "../../../types";
+import { Writer, Reader } from "protobufjs/minimal";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 
 export const protobufPackage = "kujira.denom";
 
@@ -575,38 +575,4 @@ export interface Msg {
    * (MsgForceTransferResponse);
    */
   ChangeAdmin(request: MsgChangeAdmin): Promise<MsgChangeAdminResponse>;
-}
-
-export class MsgClientImpl implements Msg {
-  private readonly rpc: Rpc;
-  constructor(rpc: Rpc) {
-    this.rpc = rpc;
-  }
-  CreateDenom(request: MsgCreateDenom): Promise<MsgCreateDenomResponse> {
-    const data = MsgCreateDenom.encode(request).finish();
-    const promise = this.rpc.request("kujira.denom.Msg", "CreateDenom", data);
-    return promise.then((data) =>
-      MsgCreateDenomResponse.decode(new Reader(data))
-    );
-  }
-
-  Mint(request: MsgMint): Promise<MsgMintResponse> {
-    const data = MsgMint.encode(request).finish();
-    const promise = this.rpc.request("kujira.denom.Msg", "Mint", data);
-    return promise.then((data) => MsgMintResponse.decode(new Reader(data)));
-  }
-
-  Burn(request: MsgBurn): Promise<MsgBurnResponse> {
-    const data = MsgBurn.encode(request).finish();
-    const promise = this.rpc.request("kujira.denom.Msg", "Burn", data);
-    return promise.then((data) => MsgBurnResponse.decode(new Reader(data)));
-  }
-
-  ChangeAdmin(request: MsgChangeAdmin): Promise<MsgChangeAdminResponse> {
-    const data = MsgChangeAdmin.encode(request).finish();
-    const promise = this.rpc.request("kujira.denom.Msg", "ChangeAdmin", data);
-    return promise.then((data) =>
-      MsgChangeAdminResponse.decode(new Reader(data))
-    );
-  }
 }
