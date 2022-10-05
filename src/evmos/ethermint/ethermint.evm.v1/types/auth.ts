@@ -1,5 +1,5 @@
+import { BaseAccount } from "@cosmjs/launchpad";
 import { Writer, Reader } from "protobufjs/minimal";
-import { BaseAccount } from "../../../../cosmos/cosmos-sdk/cosmos.auth.v1beta1/types/auth";
 import { DeepPartial, longToNumber } from "../../../../types";
 
 export const protobufPackage = "cosmos.auth.v1beta1";

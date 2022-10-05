@@ -12,9 +12,9 @@
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.28.9",
+    "@cosmjs/cosmwasm-stargate": "^0.29.0",
     "@cosmjs/launchpad": "^0.27.1",
-    "@cosmjs/stargate": "^0.28.9",
+    "@cosmjs/stargate": "^0.29.0",
     "long": "^5.2.0"
   },
   "devDependencies": {
