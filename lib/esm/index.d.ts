@@ -2,378 +2,69 @@ import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import * as s from "@cosmjs/stargate";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import { FeegrantExtension, SlashingExtension } from "@cosmjs/stargate/build/modules";
+import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { WasmExtension } from "@cosmjs/cosmwasm-stargate";
-import Long from "long";
 import { DenomExtension } from "./kujira/kujira.denom";
 import { OracleExtension } from "./kujira/kujira.oracle";
 import { SchedulerExtension } from "./kujira/kujira.scheduler";
+import { MsgExec, MsgGrant, MsgRevoke } from "cosmjs-types/cosmos/authz/v1beta1/tx";
+import { MsgSend, MsgMultiSend } from "cosmjs-types/cosmos/bank/v1beta1/tx";
+import { MsgFundCommunityPool, MsgSetWithdrawAddress, MsgWithdrawDelegatorReward, MsgWithdrawValidatorCommission } from "cosmjs-types/cosmos/distribution/v1beta1/tx";
+import { MsgGrantAllowance, MsgRevokeAllowance } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
+import { MsgDeposit, MsgSubmitProposal, MsgVote, MsgVoteWeighted } from "cosmjs-types/cosmos/gov/v1beta1/tx";
+import { MsgBeginRedelegate, MsgCreateValidator, MsgDelegate, MsgEditValidator, MsgUndelegate } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
+import { MsgClearAdmin, MsgExecuteContract, MsgMigrateContract, MsgStoreCode, MsgInstantiateContract, MsgUpdateAdmin } from "cosmjs-types/cosmwasm/wasm/v1/tx";
+import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => s.AminoTypes;
 export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & s.BankExtension & s.DistributionExtension & DenomExtension & FeegrantExtension & s.GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & s.StakingExtension & s.TxExtension & WasmExtension & s.IbcExtension;
-export declare const kujiraQueryClient: ({ rpc, }: {
-    rpc: string;
-}) => Promise<KujiraQueryClient>;
+export declare const kujiraQueryClient: ({ client, }: {
+    client: Tendermint34Client;
+}) => KujiraQueryClient;
 export declare const msg: {
     authz: {
-        msgExec: (a: {
-            grantee?: string | undefined;
-            msgs?: {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            }[] | undefined;
-        } & {
-            grantee?: string | undefined;
-            msgs?: ({
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            }[] & ({
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgGrant: (a: {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            grant?: {
-                authorization?: {
-                    typeUrl?: string | undefined;
-                    value?: Uint8Array | undefined;
-                } | undefined;
-                expiration?: {
-                    seconds?: string | number | Long.Long | undefined;
-                    nanos?: number | undefined;
-                } | undefined;
-            } | undefined;
-        } & {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            grant?: ({
-                authorization?: {
-                    typeUrl?: string | undefined;
-                    value?: Uint8Array | undefined;
-                } | undefined;
-                expiration?: {
-                    seconds?: string | number | Long.Long | undefined;
-                    nanos?: number | undefined;
-                } | undefined;
-            } & {
-                authorization?: ({
-                    typeUrl?: string | undefined;
-                    value?: Uint8Array | undefined;
-                } & {
-                    typeUrl?: string | undefined;
-                    value?: Uint8Array | undefined;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-                expiration?: ({
-                    seconds?: string | number | Long.Long | undefined;
-                    nanos?: number | undefined;
-                } & {
-                    seconds?: string | number | (Long.Long & {
-                        high: number;
-                        low: number;
-                        unsigned: boolean;
-                        add: (addend: string | number | Long.Long) => Long.Long;
-                        and: (other: string | number | Long.Long) => Long.Long;
-                        compare: (other: string | number | Long.Long) => number;
-                        comp: (other: string | number | Long.Long) => number;
-                        divide: (divisor: string | number | Long.Long) => Long.Long;
-                        div: (divisor: string | number | Long.Long) => Long.Long;
-                        equals: (other: string | number | Long.Long) => boolean;
-                        eq: (other: string | number | Long.Long) => boolean;
-                        getHighBits: () => number;
-                        getHighBitsUnsigned: () => number;
-                        getLowBits: () => number;
-                        getLowBitsUnsigned: () => number;
-                        getNumBitsAbs: () => number;
-                        greaterThan: (other: string | number | Long.Long) => boolean;
-                        gt: (other: string | number | Long.Long) => boolean;
-                        greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                        gte: (other: string | number | Long.Long) => boolean;
-                        isEven: () => boolean;
-                        isNegative: () => boolean;
-                        isOdd: () => boolean;
-                        isPositive: () => boolean;
-                        isZero: () => boolean;
-                        lessThan: (other: string | number | Long.Long) => boolean;
-                        lt: (other: string | number | Long.Long) => boolean;
-                        lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                        lte: (other: string | number | Long.Long) => boolean;
-                        modulo: (other: string | number | Long.Long) => Long.Long;
-                        mod: (other: string | number | Long.Long) => Long.Long;
-                        multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                        mul: (multiplier: string | number | Long.Long) => Long.Long;
-                        negate: () => Long.Long;
-                        neg: () => Long.Long;
-                        not: () => Long.Long;
-                        notEquals: (other: string | number | Long.Long) => boolean;
-                        neq: (other: string | number | Long.Long) => boolean;
-                        or: (other: string | number | Long.Long) => Long.Long;
-                        shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                        shl: (numBits: number | Long.Long) => Long.Long;
-                        shiftRight: (numBits: number | Long.Long) => Long.Long;
-                        shr: (numBits: number | Long.Long) => Long.Long;
-                        shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                        shru: (numBits: number | Long.Long) => Long.Long;
-                        subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                        sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                        toInt: () => number;
-                        toNumber: () => number;
-                        toBytes: (le?: boolean | undefined) => number[];
-                        toBytesLE: () => number[];
-                        toBytesBE: () => number[];
-                        toSigned: () => Long.Long;
-                        toString: (radix?: number | undefined) => string;
-                        toUnsigned: () => Long.Long;
-                        xor: (other: string | number | Long.Long) => Long.Long;
-                    } & {
-                        [x: string]: never;
-                        [x: number]: never;
-                        [x: symbol]: never;
-                    }) | undefined;
-                    nanos?: number | undefined;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgRevoke: (a: {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            msgTypeUrl?: string | undefined;
-        } & {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            msgTypeUrl?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgExec: (i: MsgExec) => {
+            typeUrl: string;
+            value: MsgExec;
+        };
+        msgGrant: (i: MsgGrant) => {
+            typeUrl: string;
+            value: MsgGrant;
+        };
+        msgRevoke: (i: MsgRevoke) => {
+            typeUrl: string;
+            value: MsgRevoke;
+        };
     };
     bank: {
-        msgSend: (a: {
-            fromAddress?: string | undefined;
-            toAddress?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-        } & {
-            fromAddress?: string | undefined;
-            toAddress?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgMultiSend: (a: {
-            inputs?: {
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            }[] | undefined;
-            outputs?: {
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            }[] | undefined;
-        } & {
-            inputs?: ({
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            }[] & ({
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            } & {
-                address?: string | undefined;
-                coins?: ({
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] & ({
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                } & {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                })[] & {
-                    [x: string]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            outputs?: ({
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            }[] & ({
-                address?: string | undefined;
-                coins?: {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] | undefined;
-            } & {
-                address?: string | undefined;
-                coins?: ({
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                }[] & ({
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                } & {
-                    denom?: string | undefined;
-                    amount?: string | undefined;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                })[] & {
-                    [x: string]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgSend: (i: MsgSend) => {
+            typeUrl: string;
+            value: MsgSend;
+        };
+        msgMultiSend: (i: MsgMultiSend) => {
+            typeUrl: string;
+            value: MsgMultiSend;
+        };
     };
     distribution: {
-        msgFundCommunityPool: (a: {
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-            depositor?: string | undefined;
-        } & {
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            depositor?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgSetWithdrawAddress: (a: {
-            delegatorAddress?: string | undefined;
-            withdrawAddress?: string | undefined;
-        } & {
-            delegatorAddress?: string | undefined;
-            withdrawAddress?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgWithdrawDelegatorReward: (a: {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-        } & {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgWithdrawValidatorCommission: (a: {
-            validatorAddress?: string | undefined;
-        } & {
-            validatorAddress?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgFundCommunityPool: (i: MsgFundCommunityPool) => {
+            typeUrl: string;
+            value: MsgFundCommunityPool;
+        };
+        msgSetWithdrawAddress: (i: MsgSetWithdrawAddress) => {
+            typeUrl: string;
+            value: MsgSetWithdrawAddress;
+        };
+        msgWithdrawDelegatorReward: (i: MsgWithdrawDelegatorReward) => {
+            typeUrl: string;
+            value: MsgWithdrawDelegatorReward;
+        };
+        msgWithdrawValidatorCommission: (i: MsgWithdrawValidatorCommission) => {
+            typeUrl: string;
+            value: MsgWithdrawValidatorCommission;
+        };
     };
     denom: {
         msgBurn: (data: import("./kujira/kujira.denom/types/tx").MsgBurn) => EncodeObject;
@@ -382,350 +73,32 @@ export declare const msg: {
         msgMint: (data: import("./kujira/kujira.denom/types/tx").MsgMint) => EncodeObject;
     };
     feegrant: {
-        msgGrantAllowance: (a: {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            allowance?: {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } | undefined;
-        } & {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-            allowance?: ({
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgRevokeAllowance: (a: {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-        } & {
-            granter?: string | undefined;
-            grantee?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgGrantAllowance: (i: MsgGrantAllowance) => {
+            typeUrl: string;
+            value: MsgGrantAllowance;
+        };
+        msgRevokeAllowance: (i: MsgRevokeAllowance) => {
+            typeUrl: string;
+            value: MsgRevokeAllowance;
+        };
     };
     gov: {
-        msgDeposit: (a: {
-            proposalId?: string | number | Long.Long | undefined;
-            depositor?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-        } & {
-            proposalId?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            depositor?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgSubmitProposal: (a: {
-            content?: {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } | undefined;
-            initialDeposit?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-            proposer?: string | undefined;
-        } & {
-            content?: ({
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            initialDeposit?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            proposer?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgVote: (a: {
-            proposalId?: string | number | Long.Long | undefined;
-            voter?: string | undefined;
-            option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-        } & {
-            proposalId?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            voter?: string | undefined;
-            option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgVoteWeighted: (a: {
-            proposalId?: string | number | Long.Long | undefined;
-            voter?: string | undefined;
-            options?: {
-                option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-                weight?: string | undefined;
-            }[] | undefined;
-        } & {
-            proposalId?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            voter?: string | undefined;
-            options?: ({
-                option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-                weight?: string | undefined;
-            }[] & ({
-                option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-                weight?: string | undefined;
-            } & {
-                option?: import("cosmjs-types/cosmos/gov/v1beta1/gov").VoteOption | undefined;
-                weight?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgDeposit: (i: MsgDeposit) => {
+            typeUrl: string;
+            value: MsgDeposit;
+        };
+        msgSubmitProposal: (i: MsgSubmitProposal) => {
+            typeUrl: string;
+            value: MsgSubmitProposal;
+        };
+        msgVote: (i: MsgVote) => {
+            typeUrl: string;
+            value: MsgVote;
+        };
+        msgVoteWeighted: (i: MsgVoteWeighted) => {
+            typeUrl: string;
+            value: MsgVoteWeighted;
+        };
     };
     oracle: {
         msgAggregateExchangeRateVote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRateVote) => EncodeObject;
@@ -733,799 +106,63 @@ export declare const msg: {
         msgDelegateFeedConsent: (data: import("./kujira/kujira.oracle/types/tx").MsgDelegateFeedConsent) => EncodeObject;
     };
     staking: {
-        msgBeginRedelegate: (a: {
-            delegatorAddress?: string | undefined;
-            validatorSrcAddress?: string | undefined;
-            validatorDstAddress?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } | undefined;
-        } & {
-            delegatorAddress?: string | undefined;
-            validatorSrcAddress?: string | undefined;
-            validatorDstAddress?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgCreateValidator: (a: {
-            description?: {
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } | undefined;
-            commission?: {
-                rate?: string | undefined;
-                maxRate?: string | undefined;
-                maxChangeRate?: string | undefined;
-            } | undefined;
-            minSelfDelegation?: string | undefined;
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            pubkey?: {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } | undefined;
-            value?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } | undefined;
-        } & {
-            description?: ({
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } & {
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            commission?: ({
-                rate?: string | undefined;
-                maxRate?: string | undefined;
-                maxChangeRate?: string | undefined;
-            } & {
-                rate?: string | undefined;
-                maxRate?: string | undefined;
-                maxChangeRate?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            minSelfDelegation?: string | undefined;
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            pubkey?: ({
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                typeUrl?: string | undefined;
-                value?: Uint8Array | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            value?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgDelegate: (a: {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } | undefined;
-        } & {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgEditValidator: (a: {
-            description?: {
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } | undefined;
-            validatorAddress?: string | undefined;
-            commissionRate?: string | undefined;
-            minSelfDelegation?: string | undefined;
-        } & {
-            description?: ({
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } & {
-                moniker?: string | undefined;
-                identity?: string | undefined;
-                website?: string | undefined;
-                securityContact?: string | undefined;
-                details?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            validatorAddress?: string | undefined;
-            commissionRate?: string | undefined;
-            minSelfDelegation?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgUndelegate: (a: {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } | undefined;
-        } & {
-            delegatorAddress?: string | undefined;
-            validatorAddress?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgBeginRedelegate: (i: MsgBeginRedelegate) => {
+            typeUrl: string;
+            value: MsgBeginRedelegate;
+        };
+        msgCreateValidator: (i: MsgCreateValidator) => {
+            typeUrl: string;
+            value: MsgCreateValidator;
+        };
+        msgDelegate: (i: MsgDelegate) => {
+            typeUrl: string;
+            value: MsgDelegate;
+        };
+        msgEditValidator: (i: MsgEditValidator) => {
+            typeUrl: string;
+            value: MsgEditValidator;
+        };
+        msgUndelegate: (i: MsgUndelegate) => {
+            typeUrl: string;
+            value: MsgUndelegate;
+        };
     };
     vesting: {
-        msgCreateVestingAccount: (a: {
-            fromAddress?: string | undefined;
-            toAddress?: string | undefined;
-            amount?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-            endTime?: string | number | Long.Long | undefined;
-            delayed?: boolean | undefined;
-        } & {
-            fromAddress?: string | undefined;
-            toAddress?: string | undefined;
-            amount?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            endTime?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            delayed?: boolean | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgCreateVestingAccount: (i: MsgCreateVestingAccount) => {
+            typeUrl: string;
+            value: MsgCreateVestingAccount;
+        };
     };
     wasm: {
-        msgClearAdmin: (a: {
-            sender?: string | undefined;
-            contract?: string | undefined;
-        } & {
-            sender?: string | undefined;
-            contract?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgExecuteContract: (a: {
-            sender?: string | undefined;
-            contract?: string | undefined;
-            msg?: Uint8Array | undefined;
-            funds?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-        } & {
-            sender?: string | undefined;
-            contract?: string | undefined;
-            msg?: Uint8Array | undefined;
-            funds?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgMigrateContract: (a: {
-            sender?: string | undefined;
-            contract?: string | undefined;
-            codeId?: string | number | Long.Long | undefined;
-            msg?: Uint8Array | undefined;
-        } & {
-            sender?: string | undefined;
-            contract?: string | undefined;
-            codeId?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            msg?: Uint8Array | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgStoreCode: (a: {
-            sender?: string | undefined;
-            wasmByteCode?: Uint8Array | undefined;
-            instantiatePermission?: {
-                permission?: import("cosmjs-types/cosmwasm/wasm/v1/types").AccessType | undefined;
-                address?: string | undefined;
-            } | undefined;
-        } & {
-            sender?: string | undefined;
-            wasmByteCode?: Uint8Array | undefined;
-            instantiatePermission?: ({
-                permission?: import("cosmjs-types/cosmwasm/wasm/v1/types").AccessType | undefined;
-                address?: string | undefined;
-            } & {
-                permission?: import("cosmjs-types/cosmwasm/wasm/v1/types").AccessType | undefined;
-                address?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgInstantiateContract: (a: {
-            sender?: string | undefined;
-            admin?: string | undefined;
-            codeId?: string | number | Long.Long | undefined;
-            label?: string | undefined;
-            msg?: Uint8Array | undefined;
-            funds?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] | undefined;
-        } & {
-            sender?: string | undefined;
-            admin?: string | undefined;
-            codeId?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            label?: string | undefined;
-            msg?: Uint8Array | undefined;
-            funds?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            }[] & ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            })[] & {
-                [x: string]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
-        msgUpdateAdmin: (a: {
-            sender?: string | undefined;
-            newAdmin?: string | undefined;
-            contract?: string | undefined;
-        } & {
-            sender?: string | undefined;
-            newAdmin?: string | undefined;
-            contract?: string | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgClearAdmin: (i: MsgClearAdmin) => {
+            typeUrl: string;
+            value: MsgClearAdmin;
+        };
+        msgExecuteContract: (i: MsgExecuteContract) => {
+            typeUrl: string;
+            value: MsgExecuteContract;
+        };
+        msgMigrateContract: (i: MsgMigrateContract) => {
+            typeUrl: string;
+            value: MsgMigrateContract;
+        };
+        msgStoreCode: (i: MsgStoreCode) => {
+            typeUrl: string;
+            value: MsgStoreCode;
+        };
+        msgInstantiateContract: (i: MsgInstantiateContract) => {
+            typeUrl: string;
+            value: MsgInstantiateContract;
+        };
+        msgUpdateAdmin: (i: MsgUpdateAdmin) => {
+            typeUrl: string;
+            value: MsgUpdateAdmin;
+        };
     };
     ibc: {
-        msgTrasnfer: (a: {
-            sourcePort?: string | undefined;
-            sourceChannel?: string | undefined;
-            token?: {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } | undefined;
-            sender?: string | undefined;
-            receiver?: string | undefined;
-            timeoutHeight?: {
-                revisionNumber?: string | number | Long.Long | undefined;
-                revisionHeight?: string | number | Long.Long | undefined;
-            } | undefined;
-            timeoutTimestamp?: string | number | Long.Long | undefined;
-        } & {
-            sourcePort?: string | undefined;
-            sourceChannel?: string | undefined;
-            token?: ({
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                denom?: string | undefined;
-                amount?: string | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            sender?: string | undefined;
-            receiver?: string | undefined;
-            timeoutHeight?: ({
-                revisionNumber?: string | number | Long.Long | undefined;
-                revisionHeight?: string | number | Long.Long | undefined;
-            } & {
-                revisionNumber?: string | number | (Long.Long & {
-                    high: number;
-                    low: number;
-                    unsigned: boolean;
-                    add: (addend: string | number | Long.Long) => Long.Long;
-                    and: (other: string | number | Long.Long) => Long.Long;
-                    compare: (other: string | number | Long.Long) => number;
-                    comp: (other: string | number | Long.Long) => number;
-                    divide: (divisor: string | number | Long.Long) => Long.Long;
-                    div: (divisor: string | number | Long.Long) => Long.Long;
-                    equals: (other: string | number | Long.Long) => boolean;
-                    eq: (other: string | number | Long.Long) => boolean;
-                    getHighBits: () => number;
-                    getHighBitsUnsigned: () => number;
-                    getLowBits: () => number;
-                    getLowBitsUnsigned: () => number;
-                    getNumBitsAbs: () => number;
-                    greaterThan: (other: string | number | Long.Long) => boolean;
-                    gt: (other: string | number | Long.Long) => boolean;
-                    greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                    gte: (other: string | number | Long.Long) => boolean;
-                    isEven: () => boolean;
-                    isNegative: () => boolean;
-                    isOdd: () => boolean;
-                    isPositive: () => boolean;
-                    isZero: () => boolean;
-                    lessThan: (other: string | number | Long.Long) => boolean;
-                    lt: (other: string | number | Long.Long) => boolean;
-                    lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                    lte: (other: string | number | Long.Long) => boolean;
-                    modulo: (other: string | number | Long.Long) => Long.Long;
-                    mod: (other: string | number | Long.Long) => Long.Long;
-                    multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                    mul: (multiplier: string | number | Long.Long) => Long.Long;
-                    negate: () => Long.Long;
-                    neg: () => Long.Long;
-                    not: () => Long.Long;
-                    notEquals: (other: string | number | Long.Long) => boolean;
-                    neq: (other: string | number | Long.Long) => boolean;
-                    or: (other: string | number | Long.Long) => Long.Long;
-                    shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                    shl: (numBits: number | Long.Long) => Long.Long;
-                    shiftRight: (numBits: number | Long.Long) => Long.Long;
-                    shr: (numBits: number | Long.Long) => Long.Long;
-                    shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                    shru: (numBits: number | Long.Long) => Long.Long;
-                    subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                    sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                    toInt: () => number;
-                    toNumber: () => number;
-                    toBytes: (le?: boolean | undefined) => number[];
-                    toBytesLE: () => number[];
-                    toBytesBE: () => number[];
-                    toSigned: () => Long.Long;
-                    toString: (radix?: number | undefined) => string;
-                    toUnsigned: () => Long.Long;
-                    xor: (other: string | number | Long.Long) => Long.Long;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-                revisionHeight?: string | number | (Long.Long & {
-                    high: number;
-                    low: number;
-                    unsigned: boolean;
-                    add: (addend: string | number | Long.Long) => Long.Long;
-                    and: (other: string | number | Long.Long) => Long.Long;
-                    compare: (other: string | number | Long.Long) => number;
-                    comp: (other: string | number | Long.Long) => number;
-                    divide: (divisor: string | number | Long.Long) => Long.Long;
-                    div: (divisor: string | number | Long.Long) => Long.Long;
-                    equals: (other: string | number | Long.Long) => boolean;
-                    eq: (other: string | number | Long.Long) => boolean;
-                    getHighBits: () => number;
-                    getHighBitsUnsigned: () => number;
-                    getLowBits: () => number;
-                    getLowBitsUnsigned: () => number;
-                    getNumBitsAbs: () => number;
-                    greaterThan: (other: string | number | Long.Long) => boolean;
-                    gt: (other: string | number | Long.Long) => boolean;
-                    greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                    gte: (other: string | number | Long.Long) => boolean;
-                    isEven: () => boolean;
-                    isNegative: () => boolean;
-                    isOdd: () => boolean;
-                    isPositive: () => boolean;
-                    isZero: () => boolean;
-                    lessThan: (other: string | number | Long.Long) => boolean;
-                    lt: (other: string | number | Long.Long) => boolean;
-                    lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                    lte: (other: string | number | Long.Long) => boolean;
-                    modulo: (other: string | number | Long.Long) => Long.Long;
-                    mod: (other: string | number | Long.Long) => Long.Long;
-                    multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                    mul: (multiplier: string | number | Long.Long) => Long.Long;
-                    negate: () => Long.Long;
-                    neg: () => Long.Long;
-                    not: () => Long.Long;
-                    notEquals: (other: string | number | Long.Long) => boolean;
-                    neq: (other: string | number | Long.Long) => boolean;
-                    or: (other: string | number | Long.Long) => Long.Long;
-                    shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                    shl: (numBits: number | Long.Long) => Long.Long;
-                    shiftRight: (numBits: number | Long.Long) => Long.Long;
-                    shr: (numBits: number | Long.Long) => Long.Long;
-                    shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                    shru: (numBits: number | Long.Long) => Long.Long;
-                    subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                    sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                    toInt: () => number;
-                    toNumber: () => number;
-                    toBytes: (le?: boolean | undefined) => number[];
-                    toBytesLE: () => number[];
-                    toBytesBE: () => number[];
-                    toSigned: () => Long.Long;
-                    toString: (radix?: number | undefined) => string;
-                    toUnsigned: () => Long.Long;
-                    xor: (other: string | number | Long.Long) => Long.Long;
-                } & {
-                    [x: string]: never;
-                    [x: number]: never;
-                    [x: symbol]: never;
-                }) | undefined;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-            timeoutTimestamp?: string | number | (Long.Long & {
-                high: number;
-                low: number;
-                unsigned: boolean;
-                add: (addend: string | number | Long.Long) => Long.Long;
-                and: (other: string | number | Long.Long) => Long.Long;
-                compare: (other: string | number | Long.Long) => number;
-                comp: (other: string | number | Long.Long) => number;
-                divide: (divisor: string | number | Long.Long) => Long.Long;
-                div: (divisor: string | number | Long.Long) => Long.Long;
-                equals: (other: string | number | Long.Long) => boolean;
-                eq: (other: string | number | Long.Long) => boolean;
-                getHighBits: () => number;
-                getHighBitsUnsigned: () => number;
-                getLowBits: () => number;
-                getLowBitsUnsigned: () => number;
-                getNumBitsAbs: () => number;
-                greaterThan: (other: string | number | Long.Long) => boolean;
-                gt: (other: string | number | Long.Long) => boolean;
-                greaterThanOrEqual: (other: string | number | Long.Long) => boolean;
-                gte: (other: string | number | Long.Long) => boolean;
-                isEven: () => boolean;
-                isNegative: () => boolean;
-                isOdd: () => boolean;
-                isPositive: () => boolean;
-                isZero: () => boolean;
-                lessThan: (other: string | number | Long.Long) => boolean;
-                lt: (other: string | number | Long.Long) => boolean;
-                lessThanOrEqual: (other: string | number | Long.Long) => boolean;
-                lte: (other: string | number | Long.Long) => boolean;
-                modulo: (other: string | number | Long.Long) => Long.Long;
-                mod: (other: string | number | Long.Long) => Long.Long;
-                multiply: (multiplier: string | number | Long.Long) => Long.Long;
-                mul: (multiplier: string | number | Long.Long) => Long.Long;
-                negate: () => Long.Long;
-                neg: () => Long.Long;
-                not: () => Long.Long;
-                notEquals: (other: string | number | Long.Long) => boolean;
-                neq: (other: string | number | Long.Long) => boolean;
-                or: (other: string | number | Long.Long) => Long.Long;
-                shiftLeft: (numBits: number | Long.Long) => Long.Long;
-                shl: (numBits: number | Long.Long) => Long.Long;
-                shiftRight: (numBits: number | Long.Long) => Long.Long;
-                shr: (numBits: number | Long.Long) => Long.Long;
-                shiftRightUnsigned: (numBits: number | Long.Long) => Long.Long;
-                shru: (numBits: number | Long.Long) => Long.Long;
-                subtract: (subtrahend: string | number | Long.Long) => Long.Long;
-                sub: (subtrahend: string | number | Long.Long) => Long.Long;
-                toInt: () => number;
-                toNumber: () => number;
-                toBytes: (le?: boolean | undefined) => number[];
-                toBytesLE: () => number[];
-                toBytesBE: () => number[];
-                toSigned: () => Long.Long;
-                toString: (radix?: number | undefined) => string;
-                toUnsigned: () => Long.Long;
-                xor: (other: string | number | Long.Long) => Long.Long;
-            } & {
-                [x: string]: never;
-                [x: number]: never;
-                [x: symbol]: never;
-            }) | undefined;
-        } & {
-            [x: string]: never;
-            [x: number]: never;
-            [x: symbol]: never;
-        }) => EncodeObject;
+        msgTransfer: (i: MsgTransfer) => {
+            typeUrl: string;
+            value: MsgTransfer;
+        };
     };
 };

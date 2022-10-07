@@ -65,6 +65,7 @@ import {
   MsgUpdateAdmin,
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
+import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
 
 const types = [
   ...s.defaultRegistryTypes,
@@ -111,13 +112,13 @@ export type KujiraQueryClient = s.QueryClient &
   WasmExtension &
   s.IbcExtension;
 
-export const kujiraQueryClient = async ({
-  rpc,
+export const kujiraQueryClient = ({
+  client,
 }: {
-  rpc: string;
-}): Promise<KujiraQueryClient> =>
+  client: Tendermint34Client;
+}): KujiraQueryClient =>
   s.QueryClient.withExtensions(
-    await Tendermint34Client.connect(rpc),
+    client,
     s.setupAuthExtension,
     s.setupAuthzExtension,
     s.setupBankExtension,
@@ -136,112 +137,138 @@ export const kujiraQueryClient = async ({
     s.setupIbcExtension
   );
 
-const register =
-  <T>(typeUrl: string, int: { fromPartial: (a: T) => any }) =>
-  (a: T): EncodeObject => ({ typeUrl, value: int.fromPartial(a) });
-
 export const msg = {
   authz: {
-    msgExec: register("/cosmos.authz.v1beta1.MsgExec", MsgExec),
-    msgGrant: register("/cosmos.authz.v1beta1.MsgGrant", MsgGrant),
-    msgRevoke: register("/cosmos.authz.v1beta1.MsgRevoke", MsgRevoke),
+    msgExec: (i: MsgExec) => ({
+      typeUrl: "/cosmos.authz.v1beta1.MsgExec",
+      value: MsgExec.fromPartial(i),
+    }),
+    msgGrant: (i: MsgGrant) => ({
+      typeUrl: "/cosmos.authz.v1beta1.MsgGrant",
+      value: MsgGrant.fromPartial(i),
+    }),
+    msgRevoke: (i: MsgRevoke) => ({
+      typeUrl: "/cosmos.authz.v1beta1.MsgRevoke",
+      value: MsgRevoke.fromPartial(i),
+    }),
   },
   bank: {
-    msgSend: register("/cosmos.bank.v1beta1.MsgSend", MsgSend),
-    msgMultiSend: register("/cosmos.bank.v1beta1.MsgMultiSend", MsgMultiSend),
+    msgSend: (i: MsgSend) => ({
+      typeUrl: "/cosmos.bank.v1beta1.MsgSend",
+      value: MsgSend.fromPartial(i),
+    }),
+    msgMultiSend: (i: MsgMultiSend) => ({
+      typeUrl: "/cosmos.bank.v1beta1.MsgMultiSend",
+      value: MsgMultiSend.fromPartial(i),
+    }),
   },
   distribution: {
-    msgFundCommunityPool: register(
-      "/cosmos.distribution.v1beta1.MsgFundCommunityPool",
-      MsgFundCommunityPool
-    ),
-    msgSetWithdrawAddress: register(
-      "/cosmos.distribution.v1beta1.MsgSetWithdrawAddress",
-      MsgSetWithdrawAddress
-    ),
-    msgWithdrawDelegatorReward: register(
-      "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-      MsgWithdrawDelegatorReward
-    ),
-    msgWithdrawValidatorCommission: register(
-      "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-      MsgWithdrawValidatorCommission
-    ),
+    msgFundCommunityPool: (i: MsgFundCommunityPool) => ({
+      typeUrl: "/cosmos.distribution.v1beta1.MsgFundCommunityPool",
+      value: MsgFundCommunityPool.fromJSON(i),
+    }),
+    msgSetWithdrawAddress: (i: MsgSetWithdrawAddress) => ({
+      typeUrl: "/cosmos.distribution.v1beta1.MsgSetWithdrawAddress",
+      value: MsgSetWithdrawAddress.fromJSON(i),
+    }),
+    msgWithdrawDelegatorReward: (i: MsgWithdrawDelegatorReward) => ({
+      typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
+      value: MsgWithdrawDelegatorReward.fromJSON(i),
+    }),
+    msgWithdrawValidatorCommission: (i: MsgWithdrawValidatorCommission) => ({
+      typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
+      value: MsgWithdrawValidatorCommission.fromJSON(i),
+    }),
   },
   denom: denom.msg,
   feegrant: {
-    msgGrantAllowance: register(
-      "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
-      MsgGrantAllowance
-    ),
-    msgRevokeAllowance: register(
-      "/cosmos.feegrant.v1beta1.MsgRevokeAllowance",
-      MsgRevokeAllowance
-    ),
+    msgGrantAllowance: (i: MsgGrantAllowance) => ({
+      typeUrl: "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+      value: MsgGrantAllowance.fromPartial(i),
+    }),
+    msgRevokeAllowance: (i: MsgRevokeAllowance) => ({
+      typeUrl: "/cosmos.feegrant.v1beta1.MsgRevokeAllowance",
+      value: MsgRevokeAllowance.fromPartial(i),
+    }),
   },
   gov: {
-    msgDeposit: register("/cosmos.gov.v1beta1.MsgDeposit", MsgDeposit),
-    msgSubmitProposal: register(
-      "/cosmos.gov.v1beta1.MsgSubmitProposal",
-      MsgSubmitProposal
-    ),
-    msgVote: register("/cosmos.gov.v1beta1.MsgVote", MsgVote),
-    msgVoteWeighted: register(
-      "/cosmos.gov.v1beta1.MsgVoteWeighted",
-      MsgVoteWeighted
-    ),
+    msgDeposit: (i: MsgDeposit) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgDeposit",
+      value: MsgDeposit.fromJSON(i),
+    }),
+    msgSubmitProposal: (i: MsgSubmitProposal) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgSubmitProposal",
+      value: MsgSubmitProposal.fromPartial(i),
+    }),
+    msgVote: (i: MsgVote) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgVote",
+      value: MsgVote.fromJSON(i),
+    }),
+    msgVoteWeighted: (i: MsgVoteWeighted) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgVoteWeighted",
+      value: MsgVoteWeighted.fromPartial(i),
+    }),
   },
   oracle: oracle.msg,
   staking: {
-    msgBeginRedelegate: register(
-      "/cosmos.staking.v1beta1.MsgBeginRedelegate",
-      MsgBeginRedelegate
-    ),
-    msgCreateValidator: register(
-      "/cosmos.staking.v1beta1.MsgCreateValidator",
-      MsgCreateValidator
-    ),
-    msgDelegate: register("/cosmos.staking.v1beta1.MsgDelegate", MsgDelegate),
-    msgEditValidator: register(
-      "/cosmos.staking.v1beta1.MsgEditValidator",
-      MsgEditValidator
-    ),
-    msgUndelegate: register(
-      "/cosmos.staking.v1beta1.MsgUndelegate",
-      MsgUndelegate
-    ),
+    msgBeginRedelegate: (i: MsgBeginRedelegate) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgBeginRedelegate",
+      value: MsgBeginRedelegate.fromPartial(i),
+    }),
+    msgCreateValidator: (i: MsgCreateValidator) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgCreateValidator",
+      value: MsgCreateValidator.fromPartial(i),
+    }),
+    msgDelegate: (i: MsgDelegate) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgDelegate",
+      value: MsgDelegate.fromJSON(i),
+    }),
+    msgEditValidator: (i: MsgEditValidator) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgEditValidator",
+      value: MsgEditValidator.fromPartial(i),
+    }),
+    msgUndelegate: (i: MsgUndelegate) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgUndelegate",
+      value: MsgUndelegate.fromPartial(i),
+    }),
   },
   vesting: {
-    msgCreateVestingAccount: register(
-      "/cosmos.vesting.v1beta1.MsgCreateVestingAccount",
-      MsgCreateVestingAccount
-    ),
+    msgCreateVestingAccount: (i: MsgCreateVestingAccount) => ({
+      typeUrl: "/cosmos.vesting.v1beta1.MsgCreateVestingAccount",
+      value: MsgCreateVestingAccount.fromPartial(i),
+    }),
   },
   wasm: {
-    msgClearAdmin: register("/cosmwasm.wasm.v1.MsgClearAdmin", MsgClearAdmin),
-    msgExecuteContract: register(
-      "/cosmwasm.wasm.v1.MsgExecuteContract",
-      MsgExecuteContract
-    ),
-    msgMigrateContract: register(
-      "/cosmwasm.wasm.v1.MsgMigrateContract",
-      MsgMigrateContract
-    ),
-    msgStoreCode: register("/cosmwasm.wasm.v1.MsgStoreCode", MsgStoreCode),
-    msgInstantiateContract: register(
-      "/cosmwasm.wasm.v1.MsgInstantiateContract",
-      MsgInstantiateContract
-    ),
-    msgUpdateAdmin: register(
-      "/cosmwasm.wasm.v1.MsgUpdateAdmin",
-      MsgUpdateAdmin
-    ),
+    msgClearAdmin: (i: MsgClearAdmin) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgClearAdmin",
+      value: MsgClearAdmin.fromJSON(i),
+    }),
+    msgExecuteContract: (i: MsgExecuteContract) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgExecuteContract",
+      value: MsgExecuteContract.fromPartial(i),
+    }),
+    msgMigrateContract: (i: MsgMigrateContract) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgMigrateContract",
+      value: MsgMigrateContract.fromPartial(i),
+    }),
+    msgStoreCode: (i: MsgStoreCode) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgStoreCode",
+      value: MsgStoreCode.fromJSON(i),
+    }),
+    msgInstantiateContract: (i: MsgInstantiateContract) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgInstantiateContract",
+      value: MsgInstantiateContract.fromPartial(i),
+    }),
+    msgUpdateAdmin: (i: MsgUpdateAdmin) => ({
+      typeUrl: "/cosmwasm.wasm.v1.MsgUpdateAdmin",
+      value: MsgUpdateAdmin.fromPartial(i),
+    }),
   },
   ibc: {
-    msgTrasnfer: register(
-      "/ibc.applications.transfer.v1.MsgTransfer",
-      MsgTransfer
-    ),
+    msgTransfer: (i: MsgTransfer) => ({
+      typeUrl: "/ibc.applications.transfer.v1.MsgTransfer",
+      value: MsgTransfer.fromPartial(i),
+    }),
   },
 };
 

@@ -6,7 +6,8 @@
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "src/"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
@@ -15,6 +16,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.29.0",
     "@cosmjs/launchpad": "^0.27.1",
     "@cosmjs/stargate": "^0.29.0",
+    "cosmjs-types": "0.5.1",
     "long": "^4.0.0"
   },
   "devDependencies": {
