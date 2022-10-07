@@ -1,5 +1,5 @@
 import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial, Rpc } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 export declare const protobufPackage = "kujira.oracle";
 /**
  * MsgAggregateExchangeRatePrevote represents a message to submit
@@ -92,12 +92,5 @@ export interface Msg {
      */
     AggregateExchangeRateVote(request: MsgAggregateExchangeRateVote): Promise<MsgAggregateExchangeRateVoteResponse>;
     /** DelegateFeedConsent defines a method for setting the feeder delegation */
-    DelegateFeedConsent(request: MsgDelegateFeedConsent): Promise<MsgDelegateFeedConsentResponse>;
-}
-export declare class MsgClientImpl implements Msg {
-    private readonly rpc;
-    constructor(rpc: Rpc);
-    AggregateExchangeRatePrevote(request: MsgAggregateExchangeRatePrevote): Promise<MsgAggregateExchangeRatePrevoteResponse>;
-    AggregateExchangeRateVote(request: MsgAggregateExchangeRateVote): Promise<MsgAggregateExchangeRateVoteResponse>;
     DelegateFeedConsent(request: MsgDelegateFeedConsent): Promise<MsgDelegateFeedConsentResponse>;
 }

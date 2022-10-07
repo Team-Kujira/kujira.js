@@ -1,5 +1,4 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
-import { Api } from "./rest";
 import { MsgAggregateExchangeRateVote } from "./types/tx";
 import { MsgAggregateExchangeRatePrevote } from "./types/tx";
 import { MsgDelegateFeedConsent } from "./types/tx";
@@ -17,7 +16,7 @@ export const MissingWalletError = new Error("wallet is required");
 
 export const registry = new Registry(<any>types);
 
-const txClient = {
+const msg = {
   msgAggregateExchangeRateVote: (
     data: MsgAggregateExchangeRateVote
   ): EncodeObject => ({
@@ -36,4 +35,4 @@ const txClient = {
   }),
 };
 
-export { txClient, OracleExtension, setupOracleExtension };
+export { msg, OracleExtension, setupOracleExtension };

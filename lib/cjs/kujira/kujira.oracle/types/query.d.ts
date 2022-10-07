@@ -1,7 +1,7 @@
 import { Reader, Writer } from "protobufjs/minimal";
 import { AggregateExchangeRatePrevote, AggregateExchangeRateVote, Params } from "./oracle";
-import { DeepPartial, Rpc } from "../../../types";
-import { DecCoin } from "../../../types/cosmos/base/coin";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 export declare const protobufPackage = "kujira.oracle";
 /** QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC method. */
 export interface QueryExchangeRateRequest {
@@ -325,3 +325,7 @@ export declare class QueryClientImpl implements Query {
     AggregateVotes(request: QueryAggregateVotesRequest): Promise<QueryAggregateVotesResponse>;
     Params(request: QueryParamsRequest): Promise<QueryParamsResponse>;
 }
+interface Rpc {
+    request(service: string, method: string, data: Uint8Array): Promise<Uint8Array>;
+}
+export {};

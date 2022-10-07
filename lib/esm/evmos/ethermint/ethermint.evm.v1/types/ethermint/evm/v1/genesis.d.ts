@@ -1,6 +1,5 @@
 import { Params, State } from "../../../ethermint/evm/v1/evm";
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../../../../../types";
 export declare const protobufPackage = "ethermint.evm.v1";
 /** GenesisState defines the evm module's genesis state. */
 export interface GenesisState {

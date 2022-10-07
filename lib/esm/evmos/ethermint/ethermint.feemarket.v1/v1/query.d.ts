@@ -1,5 +1,5 @@
 import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial, Rpc } from "../../../../types";
+import { Rpc } from "../../../../types";
 import { Params } from "./feemarket";
 export declare const protobufPackage = "ethermint.feemarket.v1";
 /** QueryParamsRequest defines the request type for querying x/evm parameters. */

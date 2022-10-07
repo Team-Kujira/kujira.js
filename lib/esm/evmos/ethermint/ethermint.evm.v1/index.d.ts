@@ -6,15 +6,7 @@ export declare const types: (string | {
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgEthereumTx;
     fromJSON(object: any): MsgEthereumTx;
     toJSON(message: MsgEthereumTx): unknown;
-    fromPartial(object: {
-        data?: {
-            type_url?: string | undefined;
-            value?: Uint8Array | undefined;
-        } | undefined;
-        size?: number | undefined;
-        hash?: string | undefined;
-        from?: string | undefined;
-    }): MsgEthereumTx;
+    fromPartial(object: DeepPartial<MsgEthereumTx>): MsgEthereumTx;
 })[][];
 export declare const MissingWalletError: Error;
 export declare const registry: Registry;

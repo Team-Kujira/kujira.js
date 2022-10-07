@@ -1,4 +1,3 @@
-import { RpcStatus } from "../../types";
 export interface SchedulerHook {
     /** @format uint64 */
     id?: string;

@@ -1,6 +1,6 @@
 import { Reader, Writer } from "protobufjs/minimal";
 import { AccessTuple, Log } from "../../../ethermint/evm/v1/evm";
-import { Rpc, DeepPartial } from "../../../../../../../types";
+import { Rpc } from "../../../../../../../types";
 import { Any } from "../../../../../../../types/google/protobuf/any";
 export declare const protobufPackage = "ethermint.evm.v1";
 /** MsgEthereumTx encapsulates an Ethereum transaction as an SDK message. */

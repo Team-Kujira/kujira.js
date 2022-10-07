@@ -1,6 +1,6 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
-import { Api } from "./rest";
 import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
+import { DenomExtension, setupDenomExtension } from "./queries";
 declare const types: ((string | {
     encode(message: MsgBurn, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgBurn;
@@ -34,10 +34,10 @@ declare const types: ((string | {
     }): MsgCreateDenom;
 })[])[];
 export declare const registry: Registry;
-declare const txClient: {
+declare const msg: {
     msgBurn: (data: MsgBurn) => EncodeObject;
     msgChangeAdmin: (data: MsgChangeAdmin) => EncodeObject;
     msgCreateDenom: (data: MsgCreateDenom) => EncodeObject;
     msgMint: (data: MsgMint) => EncodeObject;
 };
-export { txClient, Api, types };
+export { msg, types, DenomExtension, setupDenomExtension };

@@ -1,8 +1,8 @@
 import { Registry, EncodeObject } from "@cosmjs/proto-signing";
-import { Api } from "./rest";
 import { MsgAggregateExchangeRateVote } from "./types/tx";
 import { MsgAggregateExchangeRatePrevote } from "./types/tx";
 import { MsgDelegateFeedConsent } from "./types/tx";
+import { OracleExtension, setupOracleExtension } from "./queries";
 export declare const types: ((string | {
     encode(message: MsgAggregateExchangeRateVote, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
     decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgAggregateExchangeRateVote;
@@ -36,9 +36,9 @@ export declare const types: ((string | {
 })[])[];
 export declare const MissingWalletError: Error;
 export declare const registry: Registry;
-declare const txClient: {
+declare const msg: {
     msgAggregateExchangeRateVote: (data: MsgAggregateExchangeRateVote) => EncodeObject;
     msgAggregateExchangeRatePrevote: (data: MsgAggregateExchangeRatePrevote) => EncodeObject;
     msgDelegateFeedConsent: (data: MsgDelegateFeedConsent) => EncodeObject;
 };
-export { txClient, Api };
+export { msg, OracleExtension, setupOracleExtension };

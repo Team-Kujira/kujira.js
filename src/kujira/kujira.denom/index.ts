@@ -11,7 +11,7 @@ const types = [
 
 export const registry = new Registry(<any>types);
 
-const txClient = {
+const msg = {
   msgBurn: (data: MsgBurn): EncodeObject => ({
     typeUrl: "/kujira.denom.MsgBurn",
     value: MsgBurn.fromPartial(data),
@@ -30,4 +30,4 @@ const txClient = {
   }),
 };
 
-export { txClient, types, DenomExtension, setupDenomExtension };
+export { msg, types, DenomExtension, setupDenomExtension };

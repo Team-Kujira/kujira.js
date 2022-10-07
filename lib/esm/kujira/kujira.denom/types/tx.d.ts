@@ -1,6 +1,6 @@
-import { Coin } from "../../../types/cosmos/base/coin";
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial, Rpc } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 export declare const protobufPackage = "kujira.denom";
 /**
  * MsgCreateDenom is the sdk.Msg type for allowing an account to create
@@ -116,13 +116,5 @@ export interface Msg {
      * cases rpc ForceTransfer(MsgForceTransfer) returns
      * (MsgForceTransferResponse);
      */
-    ChangeAdmin(request: MsgChangeAdmin): Promise<MsgChangeAdminResponse>;
-}
-export declare class MsgClientImpl implements Msg {
-    private readonly rpc;
-    constructor(rpc: Rpc);
-    CreateDenom(request: MsgCreateDenom): Promise<MsgCreateDenomResponse>;
-    Mint(request: MsgMint): Promise<MsgMintResponse>;
-    Burn(request: MsgBurn): Promise<MsgBurnResponse>;
     ChangeAdmin(request: MsgChangeAdmin): Promise<MsgChangeAdminResponse>;
 }

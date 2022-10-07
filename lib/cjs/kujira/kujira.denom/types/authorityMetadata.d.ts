@@ -1,5 +1,5 @@
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 export declare const protobufPackage = "kujira.denom";
 /**
  * DenomAuthorityMetadata specifies metadata for addresses that have specific

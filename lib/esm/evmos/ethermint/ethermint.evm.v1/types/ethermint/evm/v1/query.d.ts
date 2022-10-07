@@ -1,7 +1,7 @@
 import { Reader, Writer } from "protobufjs/minimal";
 import { Log, Params, TraceConfig } from "../../../ethermint/evm/v1/evm";
 import { MsgEthereumTx, MsgEthereumTxResponse } from "../../../ethermint/evm/v1/tx";
-import { DeepPartial, Rpc } from "../../../../../../../types";
+import { Rpc } from "../../../../../../../types";
 import { PageRequest, PageResponse } from "../../../../../../../types/cosmos/base/query/pagination";
 export declare const protobufPackage = "ethermint.evm.v1";
 /** QueryAccountRequest is the request type for the Query/Account RPC method. */

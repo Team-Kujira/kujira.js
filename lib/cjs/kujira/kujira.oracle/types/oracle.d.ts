@@ -1,5 +1,5 @@
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 export declare const protobufPackage = "kujira.oracle";
 /** Params defines the parameters for the oracle module. */
 export interface Params {

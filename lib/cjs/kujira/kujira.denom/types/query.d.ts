@@ -1,7 +1,7 @@
 import { Reader, Writer } from "protobufjs/minimal";
 import { Params } from "./params";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
-import { DeepPartial } from "../../../types";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 export declare const protobufPackage = "kujira.denom";
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
 export interface QueryParamsRequest {

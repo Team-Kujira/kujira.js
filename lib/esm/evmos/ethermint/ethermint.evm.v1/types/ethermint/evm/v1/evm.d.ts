@@ -1,5 +1,4 @@
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../../../../../types";
 export declare const protobufPackage = "ethermint.evm.v1";
 /** Params defines the EVM module parameters */
 export interface Params {

@@ -1,6 +1,6 @@
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../types";
-import { Coin } from "../../../types/cosmos/base/coin";
+import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 export declare const protobufPackage = "kujira.scheduler";
 export interface Hook {
     id: number;
@@ -17,3 +17,5 @@ export declare const Hook: {
     toJSON(message: Hook): unknown;
     fromPartial(object: DeepPartial<Hook>): Hook;
 };
+export declare function bytesFromBase64(b64: string): Uint8Array;
+export declare function base64FromBytes(arr: Uint8Array): string;

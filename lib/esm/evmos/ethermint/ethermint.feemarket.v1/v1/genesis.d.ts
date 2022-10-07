@@ -1,5 +1,4 @@
 import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "../../../../types";
 import { Params } from "./feemarket";
 export declare const protobufPackage = "ethermint.feemarket.v1";
 /** GenesisState defines the feemarket module's genesis state. */
