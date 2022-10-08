@@ -1,4 +1,4 @@
-import { Registry, EncodeObject } from "@cosmjs/proto-signing";
+import { Registry } from "@cosmjs/proto-signing";
 import * as s from "@cosmjs/stargate";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import {
@@ -16,16 +16,14 @@ import Long from "long";
 import { util, configure } from "protobufjs/minimal";
 import * as denom from "./kujira/kujira.denom";
 import * as oracle from "./kujira/kujira.oracle";
-// import * as ethermintEvm from "./evmos/ethermint/ethermint.evm.v1";
-// import * as ethermintFeemarket from "./evmos/ethermint/ethermint.feemarket.v1";
 import { wasmTypes } from "@cosmjs/cosmwasm-stargate/build/modules";
 import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
 import { OracleExtension, setupOracleExtension } from "./kujira/kujira.oracle";
+import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import {
   SchedulerExtension,
   setupSchedulerExtension,
 } from "./kujira/kujira.scheduler";
-// export { EthAccount } from "./evmos/ethermint/ethermint.evm.v1/types/auth";
 import {
   MsgExec,
   MsgGrant,
@@ -65,7 +63,38 @@ import {
   MsgUpdateAdmin,
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
-import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
+import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1beta1/distribution";
+import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
+import {
+  ClearAdminProposal,
+  InstantiateContractProposal,
+  MigrateContractProposal,
+  PinCodesProposal,
+  StoreCodeProposal,
+  UnpinCodesProposal,
+  UpdateAdminProposal,
+} from "cosmjs-types/cosmwasm/wasm/v1/proposal";
+import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
+import { GovExtension, setupGovExtension } from "./cosmos/gov";
+
+const proposalTypes = [
+  [
+    "/cosmos.distribution.v1beta1.CommunityPoolSpendProposal",
+    CommunityPoolSpendProposal,
+  ],
+  ["/cosmos.params.v1beta1.ParameterChangeProposal", ParameterChangeProposal],
+
+  ["/cosmwasm.wasm.v1.StoreCodeProposal", StoreCodeProposal],
+  [
+    "/cosmwasm.wasm.v1.InstantiateContractProposal",
+    InstantiateContractProposal,
+  ],
+  ["/cosmwasm.wasm.v1.MigrateContractProposal", MigrateContractProposal],
+  ["/cosmwasm.wasm.v1.UpdateAdminProposal", UpdateAdminProposal],
+  ["/cosmwasm.wasm.v1.ClearAdminProposal", ClearAdminProposal],
+  ["/cosmwasm.wasm.v1.PinCodesProposal", PinCodesProposal],
+  ["/cosmwasm.wasm.v1.UnpinCodesProposal", UnpinCodesProposal],
+];
 
 const types = [
   ...s.defaultRegistryTypes,
@@ -75,6 +104,7 @@ const types = [
   ...oracle.types,
   ...wasmTypes,
   ...ibcTypes,
+  ...proposalTypes,
 ];
 
 export const registry = new Registry(<any>types);
@@ -99,15 +129,12 @@ export type KujiraQueryClient = s.QueryClient &
   s.BankExtension &
   s.DistributionExtension &
   DenomExtension &
-  // EthermintEvmExtension &
-  // EthermintFeemarketExtension &
-
   FeegrantExtension &
-  s.GovExtension &
+  GovExtension &
   OracleExtension &
   SchedulerExtension &
   SlashingExtension &
-  s.StakingExtension &
+  StakingExtension &
   s.TxExtension &
   WasmExtension &
   s.IbcExtension;
@@ -124,14 +151,12 @@ export const kujiraQueryClient = ({
     s.setupBankExtension,
     setupDenomExtension,
     s.setupDistributionExtension,
-    // setupEthermintEvmExtension,
-    // setupEthermintFeemarketExtension,
     s.setupFeegrantExtension,
-    s.setupGovExtension,
+    setupGovExtension,
     setupOracleExtension,
     setupSchedulerExtension,
     s.setupSlashingExtension,
-    s.setupStakingExtension,
+    setupStakingExtension,
     s.setupTxExtension,
     setupWasmExtension,
     s.setupIbcExtension

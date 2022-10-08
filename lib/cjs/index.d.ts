@@ -1,4 +1,4 @@
-import { Registry, EncodeObject } from "@cosmjs/proto-signing";
+import { Registry } from "@cosmjs/proto-signing";
 import * as s from "@cosmjs/stargate";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import { FeegrantExtension, SlashingExtension } from "@cosmjs/stargate/build/modules";
@@ -16,10 +16,12 @@ import { MsgBeginRedelegate, MsgCreateValidator, MsgDelegate, MsgEditValidator, 
 import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
 import { MsgClearAdmin, MsgExecuteContract, MsgMigrateContract, MsgStoreCode, MsgInstantiateContract, MsgUpdateAdmin } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
+import { StakingExtension } from "./cosmos/staking";
+import { GovExtension } from "./cosmos/gov";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => s.AminoTypes;
-export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & s.BankExtension & s.DistributionExtension & DenomExtension & FeegrantExtension & s.GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & s.StakingExtension & s.TxExtension & WasmExtension & s.IbcExtension;
+export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & s.BankExtension & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtension & s.IbcExtension;
 export declare const kujiraQueryClient: ({ client, }: {
     client: Tendermint34Client;
 }) => KujiraQueryClient;
@@ -67,10 +69,10 @@ export declare const msg: {
         };
     };
     denom: {
-        msgBurn: (data: import("./kujira/kujira.denom/types/tx").MsgBurn) => EncodeObject;
-        msgChangeAdmin: (data: import("./kujira/kujira.denom/types/tx").MsgChangeAdmin) => EncodeObject;
-        msgCreateDenom: (data: import("./kujira/kujira.denom/types/tx").MsgCreateDenom) => EncodeObject;
-        msgMint: (data: import("./kujira/kujira.denom/types/tx").MsgMint) => EncodeObject;
+        msgBurn: (data: import("./kujira/kujira.denom/types/tx").MsgBurn) => import("@cosmjs/proto-signing").EncodeObject;
+        msgChangeAdmin: (data: import("./kujira/kujira.denom/types/tx").MsgChangeAdmin) => import("@cosmjs/proto-signing").EncodeObject;
+        msgCreateDenom: (data: import("./kujira/kujira.denom/types/tx").MsgCreateDenom) => import("@cosmjs/proto-signing").EncodeObject;
+        msgMint: (data: import("./kujira/kujira.denom/types/tx").MsgMint) => import("@cosmjs/proto-signing").EncodeObject;
     };
     feegrant: {
         msgGrantAllowance: (i: MsgGrantAllowance) => {
@@ -101,9 +103,9 @@ export declare const msg: {
         };
     };
     oracle: {
-        msgAggregateExchangeRateVote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRateVote) => EncodeObject;
-        msgAggregateExchangeRatePrevote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRatePrevote) => EncodeObject;
-        msgDelegateFeedConsent: (data: import("./kujira/kujira.oracle/types/tx").MsgDelegateFeedConsent) => EncodeObject;
+        msgAggregateExchangeRateVote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRateVote) => import("@cosmjs/proto-signing").EncodeObject;
+        msgAggregateExchangeRatePrevote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRatePrevote) => import("@cosmjs/proto-signing").EncodeObject;
+        msgDelegateFeedConsent: (data: import("./kujira/kujira.oracle/types/tx").MsgDelegateFeedConsent) => import("@cosmjs/proto-signing").EncodeObject;
     };
     staking: {
         msgBeginRedelegate: (i: MsgBeginRedelegate) => {
