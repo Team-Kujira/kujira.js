@@ -95,7 +95,7 @@ const proposalTypes = [
   ["/cosmwasm.wasm.v1.ClearAdminProposal", ClearAdminProposal],
   ["/cosmwasm.wasm.v1.PinCodesProposal", PinCodesProposal],
   ["/cosmwasm.wasm.v1.UnpinCodesProposal", UnpinCodesProposal],
-  ["cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
+  ["/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
 ];
 
 const types = [
