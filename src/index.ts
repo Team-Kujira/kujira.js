@@ -76,6 +76,7 @@ import {
 } from "cosmjs-types/cosmwasm/wasm/v1/proposal";
 import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
 import { GovExtension, setupGovExtension } from "./cosmos/gov";
+import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
 
 const proposalTypes = [
   [
@@ -94,6 +95,7 @@ const proposalTypes = [
   ["/cosmwasm.wasm.v1.ClearAdminProposal", ClearAdminProposal],
   ["/cosmwasm.wasm.v1.PinCodesProposal", PinCodesProposal],
   ["/cosmwasm.wasm.v1.UnpinCodesProposal", UnpinCodesProposal],
+  ["cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
 ];
 
 const types = [
