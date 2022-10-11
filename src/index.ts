@@ -67,6 +67,7 @@ import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1b
 import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
 import {
   ClearAdminProposal,
+  ExecuteContractProposal,
   InstantiateContractProposal,
   MigrateContractProposal,
   PinCodesProposal,
@@ -95,6 +96,7 @@ const proposalTypes = [
   ["/cosmwasm.wasm.v1.ClearAdminProposal", ClearAdminProposal],
   ["/cosmwasm.wasm.v1.PinCodesProposal", PinCodesProposal],
   ["/cosmwasm.wasm.v1.UnpinCodesProposal", UnpinCodesProposal],
+  ["/cosmwasm.wasm.v1.ExecuteContractProposa", ExecuteContractProposal],
   ["/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
 ];
 
