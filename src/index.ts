@@ -124,6 +124,7 @@ export const aminoTypes = (prefix: string): s.AminoTypes =>
     ...s.createGovAminoConverters(),
     ...s.createIbcAminoConverters(),
     ...s.createStakingAminoConverters(prefix),
+    ...s.createVestingAminoConverters(),
     ...createWasmAminoConverters(),
   });
 
