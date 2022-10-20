@@ -411,7 +411,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmjs-types@npm:0.5.1, cosmjs-types@npm:^0.5.0":
+"cosmjs-types@npm:0.5.2":
+  version: 0.5.2
+  resolution: "cosmjs-types@npm:0.5.2"
+  dependencies:
+    long: ^4.0.0
+    protobufjs: ~6.11.2
+  checksum: 0362cb2136a17c0f91f0727a55a1f49058bb56665136cf88e4502febf6da59fa2d4ce91ed75bc55907571b9f1cd99546d594002509781b69fe71fe972dbfe4c1
+  languageName: node
+  linkType: hard
+
+"cosmjs-types@npm:^0.5.0":
   version: 0.5.1
   resolution: "cosmjs-types@npm:0.5.1"
   dependencies:
@@ -604,7 +614,7 @@ __metadata:
     "@cosmjs/cosmwasm-stargate": ^0.29.0
     "@cosmjs/launchpad": ^0.27.1
     "@cosmjs/stargate": ^0.29.0
-    cosmjs-types: 0.5.1
+    cosmjs-types: 0.5.2
     long: ^4.0.0
     typescript: ^4.7.4
   languageName: unknown
