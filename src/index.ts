@@ -79,6 +79,12 @@ import {
 import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
 import { GovExtension, setupGovExtension } from "./cosmos/gov";
 import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
+import {
+  Header,
+  ClientState,
+  ConsensusState,
+  Misbehaviour,
+} from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
 
 const proposalTypes = [
   [
@@ -105,6 +111,13 @@ const proposalTypes = [
   ["/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
 ];
 
+const extraIbc = [
+  ["/ibc.lightclients.tendermint.v1.Header", Header],
+  ["/ibc.lightclients.tendermint.v1.ClientState", ClientState],
+  ["/ibc.lightclients.tendermint.v1.ConsensusState", ConsensusState],
+  ["/ibc.lightclients.tendermint.v1.Misbehaviour", Misbehaviour],
+];
+
 const types = [
   ...s.defaultRegistryTypes,
   ...denom.types,
@@ -114,6 +127,7 @@ const types = [
   ...wasmTypes,
   ...ibcTypes,
   ...proposalTypes,
+  ...extraIbc,
 ];
 
 export const registry = new Registry(<any>types);
