@@ -1,5 +1,4 @@
 import { ChainInfo, FeeCurrency } from "@keplr-wallet/types";
-import { ATOM, USDC, USK } from "./denom";
 
 export const MAINNET = "kaiyo-1";
 export const TESTNET = "harpoon-4";
@@ -97,7 +96,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
     [
       {
         coinDenom: "USK",
-        coinMinimalDenom: USK.reference,
+        coinMinimalDenom:
+          "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
         coinDecimals: 6,
         coinGeckoId: "usk",
         gasPriceStep: {
@@ -108,7 +108,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
       },
       {
         coinDenom: "axlUSDC",
-        coinMinimalDenom: USDC.reference,
+        coinMinimalDenom:
+          "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
         coinDecimals: 6,
         coinGeckoId: "usdc",
         gasPriceStep: {
@@ -119,7 +120,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
       },
       {
         coinDenom: "ATOM",
-        coinMinimalDenom: ATOM.reference,
+        coinMinimalDenom:
+          "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
         coinDecimals: 6,
         coinGeckoId: "cosmoshub",
         gasPriceStep: {
@@ -129,7 +131,7 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
         },
       },
       {
-        coinDenom: "CMD",
+        coinDenom: "CMDX",
         coinMinimalDenom:
           "ibc/3607EB5B5E64DD1C0E12E07F077FF470D5BC4706AFCBC98FE1BA960E5AE4CE07",
         coinDecimals: 6,
