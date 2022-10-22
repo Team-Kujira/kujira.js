@@ -18,6 +18,26 @@ import { MsgClearAdmin, MsgExecuteContract, MsgMigrateContract, MsgStoreCode, Ms
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
 import { StakingExtension } from "./cosmos/staking";
 import { GovExtension } from "./cosmos/gov";
+export * from "./denom";
+export * from "./network";
+export * from "./pairs";
+export * from "./usk";
+import { CosmosChain, IBCConnection } from "./ibc";
+export declare const IBC: {
+    chains: {
+        mainnet: CosmosChain[];
+        testnet: CosmosChain[];
+    };
+    connections: {
+        mainnet: IBCConnection[];
+        testnet: IBCConnection[];
+    };
+    tokens: Record<string, {
+        base_denom: string;
+        path: string;
+    }>;
+};
+export * from "./ibc";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => s.AminoTypes;

@@ -85,6 +85,25 @@ import {
   ConsensusState,
   Misbehaviour,
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
+export * from "./denom";
+export * from "./network";
+export * from "./pairs";
+export * from "./usk";
+import chains from "./resources/chains.json";
+import connections from "./resources/connections.json";
+import tokens from "./resources/tokens.json";
+import { CosmosChain, IBCConnection } from "./ibc";
+
+export const IBC: {
+  chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
+  connections: { mainnet: IBCConnection[]; testnet: IBCConnection[] };
+  tokens: Record<string, { base_denom: string; path: string }>;
+} = {
+  chains,
+  connections,
+  tokens,
+};
+export * from "./ibc";
 
 const proposalTypes = [
   [

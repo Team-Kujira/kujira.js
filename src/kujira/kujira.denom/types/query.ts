@@ -447,13 +447,14 @@ export class QueryClientImpl implements Query {
   constructor(rpc: Rpc) {
     this.rpc = rpc;
   }
-  Params(request: QueryParamsRequest): Promise<QueryParamsResponse> {
+  async Params(request: QueryParamsRequest): Promise<QueryParamsResponse> {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.denom.Query", "Params", data);
-    return promise.then((data) => QueryParamsResponse.decode(new Reader(data)));
+    const data_1 = await promise;
+    return QueryParamsResponse.decode(new Reader(data_1));
   }
 
-  DenomAuthorityMetadata(
+  async DenomAuthorityMetadata(
     request: QueryDenomAuthorityMetadataRequest
   ): Promise<QueryDenomAuthorityMetadataResponse> {
     const data = QueryDenomAuthorityMetadataRequest.encode(request).finish();
@@ -462,12 +463,11 @@ export class QueryClientImpl implements Query {
       "DenomAuthorityMetadata",
       data
     );
-    return promise.then((data) =>
-      QueryDenomAuthorityMetadataResponse.decode(new Reader(data))
-    );
+    const data_1 = await promise;
+    return QueryDenomAuthorityMetadataResponse.decode(new Reader(data_1));
   }
 
-  DenomsFromCreator(
+  async DenomsFromCreator(
     request: QueryDenomsFromCreatorRequest
   ): Promise<QueryDenomsFromCreatorResponse> {
     const data = QueryDenomsFromCreatorRequest.encode(request).finish();
@@ -476,9 +476,8 @@ export class QueryClientImpl implements Query {
       "DenomsFromCreator",
       data
     );
-    return promise.then((data) =>
-      QueryDenomsFromCreatorResponse.decode(new Reader(data))
-    );
+    const data_1 = await promise;
+    return QueryDenomsFromCreatorResponse.decode(new Reader(data_1));
   }
 }
 
