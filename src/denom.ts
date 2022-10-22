@@ -1,4 +1,3 @@
-import { PAIRS } from "./pairs";
 import ibc from "./resources/tokens.json";
 
 const labels: Record<string, string> = {
@@ -71,14 +70,6 @@ const terra: Record<string, string> = {
   uthb: "THT",
   utwd: "TWT",
   uusd: "UST",
-};
-
-const underlying = (denom: string): Denom[] | undefined => {
-  const [a, b, c] = denom.split("/");
-  if (a === "factory" && c === "ulp") {
-    const pair = PAIRS.find((p) => p.address === b);
-    return pair?.denoms;
-  }
 };
 
 const baseDenomToSymbol = (denom: string): string => {
@@ -161,10 +152,8 @@ export class Denom {
     router: string;
     channel: string;
   };
-  public underlying?: Denom[];
 
-  constructor(public reference: string) {
-    this.underlying = underlying(reference);
+  constructor(public reference: string, public underlying?: Denom[]) {
     if (this.reference.startsWith("ibc/")) {
       this.trace = (ibc as Record<string, any>)[this.reference];
     }
@@ -194,8 +183,8 @@ export class Denom {
     this.ics20 = ics20[this.reference];
   }
 
-  public static from(string: string): Denom {
-    return new Denom(string);
+  public static from(string: string, underlying?: Denom[]): Denom {
+    return new Denom(string, underlying);
   }
 
   public eq = (other: Denom): boolean => this.reference == other.reference;
