@@ -1,5 +1,6 @@
 export declare class Denom {
     reference: string;
+    underlying?: Denom[] | undefined;
     symbol: string;
     decimals: number;
     trace?: {
@@ -11,9 +12,8 @@ export declare class Denom {
         router: string;
         channel: string;
     };
-    underlying?: Denom[];
-    constructor(reference: string);
-    static from(string: string): Denom;
+    constructor(reference: string, underlying?: Denom[] | undefined);
+    static from(string: string, underlying?: Denom[]): Denom;
     eq: (other: Denom) => boolean;
 }
 export declare const USK_TESTNET: Denom;
