@@ -38,6 +38,7 @@ export declare const IBC: {
     }>;
 };
 export * from "./ibc";
+export * as kns from "./kns";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
 export declare const aminoTypes: (prefix: string) => s.AminoTypes;

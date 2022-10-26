@@ -104,6 +104,7 @@ export const IBC: {
   tokens,
 };
 export * from "./ibc";
+export * as kns from "./kns";
 
 const proposalTypes = [
   [
