@@ -47,8 +47,19 @@ export type RecordKind =
   | "reverse";
 export type QueryMsg =
   | {
-      resolver: {
+      addr: {
         name: string;
+        prefix?: string | null;
+      };
+    }
+  | {
+      kujira_addr: {
+        addr: string;
+      };
+    }
+  | {
+      name: {
+        addr: string;
       };
     }
   | {
@@ -57,11 +68,14 @@ export type QueryMsg =
       };
     }
   | {
-      kujira_addr: {
-        addr: string;
+      resolver: {
+        name: string;
       };
     };
-export interface KujiraAddrResponse {
+export interface AddrResponse {
+  addr: string;
+}
+export interface NameResponse {
   name: string;
 }
 export interface RecordResponse {
@@ -77,9 +91,17 @@ export interface ResolverResponse {
 
 export interface RegistryReadOnlyInterface {
   contractAddress: string;
-  resolver: ({ name }: { name: string }) => Promise<ResolverResponse>;
+  addr: ({
+    name,
+    prefix,
+  }: {
+    name: string;
+    prefix?: string;
+  }) => Promise<AddrResponse>;
+  kujiraAddr: ({ addr }: { addr: string }) => Promise<NameResponse>;
+  name: ({ addr }: { addr: string }) => Promise<NameResponse>;
   record: ({ name }: { name: string }) => Promise<RecordResponse>;
-  kujiraAddr: ({ addr }: { addr: string }) => Promise<KujiraAddrResponse>;
+  resolver: ({ name }: { name: string }) => Promise<ResolverResponse>;
 }
 export class RegistryQueryClient implements RegistryReadOnlyInterface {
   client: CosmWasmClient;
@@ -88,15 +110,38 @@ export class RegistryQueryClient implements RegistryReadOnlyInterface {
   constructor(client: CosmWasmClient, contractAddress: string) {
     this.client = client;
     this.contractAddress = contractAddress;
-    this.resolver = this.resolver.bind(this);
-    this.record = this.record.bind(this);
+    this.addr = this.addr.bind(this);
     this.kujiraAddr = this.kujiraAddr.bind(this);
+    this.name = this.name.bind(this);
+    this.record = this.record.bind(this);
+    this.resolver = this.resolver.bind(this);
   }
 
-  resolver = async ({ name }: { name: string }): Promise<ResolverResponse> => {
+  addr = async ({
+    name,
+    prefix,
+  }: {
+    name: string;
+    prefix?: string;
+  }): Promise<AddrResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      resolver: {
+      addr: {
         name,
+        prefix,
+      },
+    });
+  };
+  kujiraAddr = async ({ addr }: { addr: string }): Promise<NameResponse> => {
+    return this.client.queryContractSmart(this.contractAddress, {
+      kujira_addr: {
+        addr,
+      },
+    });
+  };
+  name = async ({ addr }: { addr: string }): Promise<NameResponse> => {
+    return this.client.queryContractSmart(this.contractAddress, {
+      name: {
+        addr,
       },
     });
   };
@@ -107,14 +152,10 @@ export class RegistryQueryClient implements RegistryReadOnlyInterface {
       },
     });
   };
-  kujiraAddr = async ({
-    addr,
-  }: {
-    addr: string;
-  }): Promise<KujiraAddrResponse> => {
+  resolver = async ({ name }: { name: string }): Promise<ResolverResponse> => {
     return this.client.queryContractSmart(this.contractAddress, {
-      kujira_addr: {
-        addr,
+      resolver: {
+        name,
       },
     });
   };

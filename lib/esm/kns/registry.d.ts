@@ -30,19 +30,31 @@ export declare type ExecuteMsg = {
 };
 export declare type RecordKind = "domain" | "ipfs" | "ip4" | "ip6" | "kujira_addr" | "reverse";
 export declare type QueryMsg = {
-    resolver: {
+    addr: {
         name: string;
+        prefix?: string | null;
+    };
+} | {
+    kujira_addr: {
+        addr: string;
+    };
+} | {
+    name: {
+        addr: string;
     };
 } | {
     record: {
         name: string;
     };
 } | {
-    kujira_addr: {
-        addr: string;
+    resolver: {
+        name: string;
     };
 };
-export interface KujiraAddrResponse {
+export interface AddrResponse {
+    addr: string;
+}
+export interface NameResponse {
     name: string;
 }
 export interface RecordResponse {
@@ -57,29 +69,43 @@ export interface ResolverResponse {
 }
 export interface RegistryReadOnlyInterface {
     contractAddress: string;
-    resolver: ({ name }: {
+    addr: ({ name, prefix, }: {
         name: string;
-    }) => Promise<ResolverResponse>;
+        prefix?: string;
+    }) => Promise<AddrResponse>;
+    kujiraAddr: ({ addr }: {
+        addr: string;
+    }) => Promise<NameResponse>;
+    name: ({ addr }: {
+        addr: string;
+    }) => Promise<NameResponse>;
     record: ({ name }: {
         name: string;
     }) => Promise<RecordResponse>;
-    kujiraAddr: ({ addr }: {
-        addr: string;
-    }) => Promise<KujiraAddrResponse>;
+    resolver: ({ name }: {
+        name: string;
+    }) => Promise<ResolverResponse>;
 }
 export declare class RegistryQueryClient implements RegistryReadOnlyInterface {
     client: CosmWasmClient;
     contractAddress: string;
     constructor(client: CosmWasmClient, contractAddress: string);
-    resolver: ({ name }: {
+    addr: ({ name, prefix, }: {
         name: string;
-    }) => Promise<ResolverResponse>;
+        prefix?: string | undefined;
+    }) => Promise<AddrResponse>;
+    kujiraAddr: ({ addr }: {
+        addr: string;
+    }) => Promise<NameResponse>;
+    name: ({ addr }: {
+        addr: string;
+    }) => Promise<NameResponse>;
     record: ({ name }: {
         name: string;
     }) => Promise<RecordResponse>;
-    kujiraAddr: ({ addr, }: {
-        addr: string;
-    }) => Promise<KujiraAddrResponse>;
+    resolver: ({ name }: {
+        name: string;
+    }) => Promise<ResolverResponse>;
 }
 export interface RegistryInterface extends RegistryReadOnlyInterface {
     contractAddress: string;

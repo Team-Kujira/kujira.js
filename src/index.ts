@@ -93,6 +93,11 @@ import chains from "./resources/chains.json";
 import connections from "./resources/connections.json";
 import tokens from "./resources/tokens.json";
 import { CosmosChain, IBCConnection } from "./ibc";
+import {
+  CreateHookProposal,
+  DeleteHookProposal,
+  UpdateHookProposal,
+} from "./kujira/kujira.scheduler/types/proposal";
 
 export const IBC: {
   chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
@@ -129,6 +134,9 @@ const proposalTypes = [
     UpdateInstantiateConfigProposal,
   ],
   ["/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
+  ["/kujira.scheduler.CreateHookProposal", CreateHookProposal],
+  ["/kujira.scheduler.UpdateHookProposal", UpdateHookProposal],
+  ["/kujira.scheduler.DeleteHookProposal", DeleteHookProposal],
 ];
 
 const extraIbc = [
