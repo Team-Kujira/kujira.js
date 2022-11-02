@@ -98,6 +98,8 @@ import {
   DeleteHookProposal,
   UpdateHookProposal,
 } from "./kujira/kujira.scheduler/types/proposal";
+import { AminoTypes } from "./aminotypes";
+import { createAuthzAminoConverters } from "./cosmos/authz";
 
 export const IBC: {
   chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
@@ -162,9 +164,9 @@ export const registry = new Registry(<any>types);
 
 export { FinClient, FinQueryClient } from "./fin";
 
-export const aminoTypes = (prefix: string): s.AminoTypes =>
-  new s.AminoTypes({
-    ...s.createAuthzAminoConverters(),
+export const aminoTypes = (prefix: string): AminoTypes =>
+  new AminoTypes({
+    ...createAuthzAminoConverters(),
     ...s.createBankAminoConverters(),
     ...s.createDistributionAminoConverters(),
     ...s.createFeegrantAminoConverters(),

@@ -23,6 +23,7 @@ export * from "./network";
 export * from "./pairs";
 export * from "./usk";
 import { CosmosChain, IBCConnection } from "./ibc";
+import { AminoTypes } from "./aminotypes";
 export declare const IBC: {
     chains: {
         mainnet: CosmosChain[];
@@ -41,7 +42,7 @@ export * from "./ibc";
 export * as kns from "./kns";
 export declare const registry: Registry;
 export { FinClient, FinQueryClient } from "./fin";
-export declare const aminoTypes: (prefix: string) => s.AminoTypes;
+export declare const aminoTypes: (prefix: string) => AminoTypes;
 export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & s.BankExtension & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtension & s.IbcExtension;
 export declare const kujiraQueryClient: ({ client, }: {
     client: Tendermint34Client;
