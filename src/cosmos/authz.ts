@@ -13,8 +13,10 @@ export interface AminoMsgGrant {
 
   readonly grant: {
     authorization: {
-      typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization";
-      value: string;
+      type: "cosmos.authz.v1beta1.GenericAuthorization";
+      value: {
+        msg: string;
+      };
     };
     expiration: string;
   };
@@ -30,11 +32,12 @@ export function createAuthzAminoConverters(): AminoConverters {
         granter: granter,
         grant: {
           authorization: {
-            typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
-            value:
-              (grant?.authorization?.value &&
-                Buffer.from(grant.authorization.value).toString("base64")) ||
-              "",
+            type: "cosmos.authz.v1beta1.GenericAuthorization",
+            value: {
+              msg: GenericAuthorization.decode(
+                grant?.authorization?.value || new Uint8Array()
+              ).msg,
+            },
           },
 
           expiration: grant?.expiration
@@ -52,9 +55,9 @@ export function createAuthzAminoConverters(): AminoConverters {
             authorization: {
               typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
               value: GenericAuthorization.encode(
-                GenericAuthorization.decode(
-                  Buffer.from(grant.authorization.value, "base64")
-                )
+                GenericAuthorization.fromPartial({
+                  msg: grant.authorization.value.msg,
+                })
               ).finish(),
             },
             expiration: Timestamp.fromPartial({

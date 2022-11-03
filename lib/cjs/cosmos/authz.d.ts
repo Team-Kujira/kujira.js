@@ -7,8 +7,10 @@ export interface AminoMsgGrant {
     readonly grantee: string;
     readonly grant: {
         authorization: {
-            typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization";
-            value: string;
+            type: "cosmos.authz.v1beta1.GenericAuthorization";
+            value: {
+                msg: string;
+            };
         };
         expiration: string;
     };
