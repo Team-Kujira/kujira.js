@@ -1,5 +1,4 @@
 import { AminoConverters } from "@cosmjs/stargate";
-import { Any } from "cosmjs-types/google/protobuf/any";
 export interface AminoMsgGrant {
     type: "cosmos-sdk/MsgGrant";
     /** Bech32 account address */
@@ -7,7 +6,10 @@ export interface AminoMsgGrant {
     /** Bech32 account address */
     readonly grantee: string;
     readonly grant: {
-        authorization?: Any;
+        authorization: {
+            typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization";
+            value: string;
+        };
         expiration: string;
     };
 }

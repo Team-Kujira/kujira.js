@@ -1,7 +1,6 @@
 import { AminoConverters } from "@cosmjs/stargate";
 import { GenericAuthorization } from "cosmjs-types/cosmos/authz/v1beta1/authz";
 import { MsgGrant } from "cosmjs-types/cosmos/authz/v1beta1/tx";
-import { Any } from "cosmjs-types/google/protobuf/any";
 import { Timestamp } from "cosmjs-types/google/protobuf/timestamp";
 
 export interface AminoMsgGrant {
@@ -13,11 +12,10 @@ export interface AminoMsgGrant {
   readonly grantee: string;
 
   readonly grant: {
-    // authorization: {
-    //   "@type": "/cosmos.authz.v1beta1.GenericAuthorization";
-    //   msg: string;
-    // };
-    authorization?: Any;
+    authorization: {
+      typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization";
+      value: string;
+    };
     expiration: string;
   };
 }
@@ -31,7 +29,13 @@ export function createAuthzAminoConverters(): AminoConverters {
         grantee: grantee,
         granter: granter,
         grant: {
-          authorization: grant?.authorization,
+          authorization: {
+            typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
+            value:
+              (grant?.authorization?.value &&
+                Buffer.from(grant.authorization.value).toString("base64")) ||
+              "",
+          },
 
           expiration: grant?.expiration
             ? new Date(
@@ -45,7 +49,14 @@ export function createAuthzAminoConverters(): AminoConverters {
           grantee: grantee,
           granter: granter,
           grant: {
-            authorization: grant.authorization,
+            authorization: {
+              typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
+              value: GenericAuthorization.encode(
+                GenericAuthorization.decode(
+                  Buffer.from(grant.authorization.value, "base64")
+                )
+              ).finish(),
+            },
             expiration: Timestamp.fromPartial({
               seconds: new Date(grant.expiration).getTime() / 1000,
               nanos: 0,
