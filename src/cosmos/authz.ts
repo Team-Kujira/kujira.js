@@ -25,7 +25,7 @@ export interface AminoMsgGrant {
 export function createAuthzAminoConverters(): AminoConverters {
   return {
     "/cosmos.authz.v1beta1.MsgGrant": {
-      aminoType: "cosmos-sdk/MsgGrant",
+      aminoType: "cosmos.authz.v1beta1.Grant",
       toAmino: ({ granter, grantee, grant }: MsgGrant): AminoMsgGrant => ({
         type: "cosmos.authz.v1beta1.Grant",
         grantee: grantee,
