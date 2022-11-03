@@ -54,6 +54,16 @@ export class AminoTypes {
       );
     }
     const aminoValue = converter.toAmino(value);
+    console.log({
+      toAmino:
+        "granter" in aminoValue
+          ? aminoValue
+          : {
+              type: converter.aminoType,
+              value: aminoValue,
+            },
+    });
+
     if ("granter" in aminoValue) return aminoValue;
     return {
       type: converter.aminoType,
@@ -81,6 +91,13 @@ export class AminoTypes {
       }
       case 1: {
         const [typeUrl, converter] = matches[0];
+        console.log({
+          fromAmino: {
+            typeUrl: typeUrl,
+            value: converter.fromAmino(value),
+          },
+        });
+
         return {
           typeUrl: typeUrl,
           value: converter.fromAmino(value),
