@@ -4,5 +4,9 @@ export interface AminoMsgGrant {
     readonly granter: string;
     /** Bech32 account address */
     readonly grantee: string;
+    readonly grant: {
+        authorization: string;
+        expiration: string;
+    };
 }
 export declare function createAuthzAminoConverters(): AminoConverters;
