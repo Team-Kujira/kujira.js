@@ -49,7 +49,7 @@ export function createAuthzAminoConverters(): AminoConverters {
               typeUrl: "/cosmos.authz.v1beta1.GenericAuthorization",
               value: GenericAuthorization.encode(
                 GenericAuthorization.fromPartial({
-                  msg: "/cosmos.staking.v1beta1.MsgDelegate",
+                  msg: grant.authorization.msg,
                 })
               ).finish(),
             },
