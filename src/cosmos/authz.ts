@@ -4,7 +4,7 @@ import { MsgGrant } from "cosmjs-types/cosmos/authz/v1beta1/tx";
 import { Timestamp } from "cosmjs-types/google/protobuf/timestamp";
 
 export interface AminoMsgGrant {
-  type: "cosmos-sdk/MsgGrant";
+  type: "cosmos.authz.v1beta1.Grant";
 
   /** Bech32 account address */
   readonly granter: string;
@@ -27,7 +27,7 @@ export function createAuthzAminoConverters(): AminoConverters {
     "/cosmos.authz.v1beta1.MsgGrant": {
       aminoType: "cosmos-sdk/MsgGrant",
       toAmino: ({ granter, grantee, grant }: MsgGrant): AminoMsgGrant => ({
-        type: "cosmos-sdk/MsgGrant",
+        type: "cosmos.authz.v1beta1.Grant",
         grantee: grantee,
         granter: granter,
         grant: {

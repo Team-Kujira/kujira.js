@@ -1,6 +1,6 @@
 import { AminoConverters } from "@cosmjs/stargate";
 export interface AminoMsgGrant {
-    type: "cosmos-sdk/MsgGrant";
+    type: "cosmos.authz.v1beta1.Grant";
     /** Bech32 account address */
     readonly granter: string;
     /** Bech32 account address */
