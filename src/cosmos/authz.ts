@@ -26,9 +26,11 @@ export function createAuthzAminoConverters(): AminoConverters {
           authorization: GenericAuthorization.decode(
             grant?.authorization?.value || new Uint8Array()
           ).msg,
-          expiration: new Date(
-            grant?.expiration?.seconds.toNumber() || 0
-          ).toISOString(),
+          expiration: grant?.expiration
+            ? new Date(
+                grant?.expiration?.seconds.toNumber() * 1000
+              ).toISOString()
+            : new Date().toISOString(),
         },
       }),
       fromAmino: ({ granter, grantee, grant }: AminoMsgGrant): MsgGrant =>
