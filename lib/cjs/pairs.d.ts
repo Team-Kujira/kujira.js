@@ -16,5 +16,9 @@ export declare type Pair = {
     margin?: Margin;
     multiswap: boolean;
     pool?: string;
+    queue?: string;
+};
+export declare const STAKING: {
+    "harpoon-4": string;
 };
 export declare const PAIRS: Pair[];

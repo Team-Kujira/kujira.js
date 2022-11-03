@@ -18,6 +18,12 @@ export type Pair = {
   margin?: Margin;
   multiswap: boolean;
   pool?: string;
+  queue?: string;
+};
+
+export const STAKING = {
+  [TESTNET]:
+    "kujira1ngvmdulqt2cf4cecevtvw9tp6vrlq98sf3l0f5w0dec85uwzhhushpzyv9",
 };
 
 export const PAIRS: Pair[] = [
@@ -368,6 +374,8 @@ export const PAIRS: Pair[] = [
       market:
         MARKETS_HARPOON.kujira1atk8uwy6zf7u4r4qzg52ucgz6f74cuclthzsrc049vynjsr62lns2du3ey,
     },
+    pool: "kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn",
+    queue: "kujira1cwtczwdsj8ewz5p6zzvlfee77xw959r8amtnh2fcul9vdz3tr4hslpz4m5",
   },
 
   {
@@ -396,6 +404,8 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    pool: "kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq",
+    queue: "kujira19m8s6ru20s62ygyr5qdng8yw2la3lemy8rgt55q38hyl57taxmvsgfre6m",
   },
   {
     address:
