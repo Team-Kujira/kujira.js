@@ -74,7 +74,7 @@ export class AminoTypes {
   public fromAmino(input: AminoMsg | AminoMsgGrant): EncodeObject {
     const { type, value } =
       "granter" in input
-        ? { type: "cosmos-sdk/MsgGrant", value: input }
+        ? { type: "cosmos.authz.v1beta1.Grant", value: input }
         : input;
 
     const matches = Object.entries(this.register)
