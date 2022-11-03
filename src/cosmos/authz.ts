@@ -10,7 +10,10 @@ export interface AminoMsgGrant {
   readonly grantee: string;
 
   readonly grant: {
-    authorization: string;
+    authorization: {
+      "@type": "/cosmos.authz.v1beta1.GenericAuthorization";
+      msg: string;
+    };
     expiration: string;
   };
 }
@@ -23,9 +26,13 @@ export function createAuthzAminoConverters(): AminoConverters {
         grantee: grantee,
         granter: granter,
         grant: {
-          authorization: GenericAuthorization.decode(
-            grant?.authorization?.value || new Uint8Array()
-          ).msg,
+          authorization: {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization",
+            msg: GenericAuthorization.decode(
+              grant?.authorization?.value || new Uint8Array()
+            ).msg,
+          },
+
           expiration: grant?.expiration
             ? new Date(
                 grant?.expiration?.seconds.toNumber() * 1000

@@ -5,7 +5,10 @@ export interface AminoMsgGrant {
     /** Bech32 account address */
     readonly grantee: string;
     readonly grant: {
-        authorization: string;
+        authorization: {
+            "@type": "/cosmos.authz.v1beta1.GenericAuthorization";
+            msg: string;
+        };
         expiration: string;
     };
 }
