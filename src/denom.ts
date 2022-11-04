@@ -12,6 +12,7 @@ const labels: Record<string, string> = {
   "weth-wei": "wETH",
   "dot-planck": "DOT",
   aevmos: "EVMOS",
+  demo: "DEMO",
   "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo": "DEMO",
   "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local": "LOCAL",
   "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk":
