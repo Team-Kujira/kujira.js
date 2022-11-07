@@ -4668,12 +4668,7 @@
       "chain_id": "fetchhub-4",
       "chain_name": "fetchhub",
       "codebase": {
-        "compatible_versions": [
-          "v0.10.3",
-          "v0.10.2",
-          "v0.10.1",
-          "v0.10.0"
-        ],
+        "compatible_versions": ["v0.10.3", "v0.10.2", "v0.10.1", "v0.10.0"],
         "git_repo": "https://github.com/fetchai/fetchd",
         "recommended_version": "v0.10.3"
       },
@@ -5156,12 +5151,7 @@
           "linux/arm64": "https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.3.3/gravity-linux-arm64",
           "windows/amd64": "https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.3.3/gravity-windows-amd64.exe"
         },
-        "compatible_versions": [
-          "v1.3.0",
-          "v1.3.1",
-          "v1.3.2",
-          "v1.3.3"
-        ],
+        "compatible_versions": ["v1.3.0", "v1.3.1", "v1.3.2", "v1.3.3"],
         "git_repo": "https://github.com/Gravity-Bridge/Gravity-Bridge",
         "recommended_version": "v1.3.3"
       },
@@ -8698,12 +8688,7 @@
           "darwin/amd64": "https://github.com/provenance-io/provenance/releases/download/v1.8.2/provenance-darwin-amd64-v1.8.2.zip",
           "linux/amd64": "https://github.com/provenance-io/provenance/releases/download/v1.8.2/provenance-linux-amd64-v1.8.2.zip"
         },
-        "compatible_versions": [
-          "v1.7.5",
-          "v1.7.6",
-          "v1.8.0",
-          "v1.8.2"
-        ],
+        "compatible_versions": ["v1.7.5", "v1.7.6", "v1.8.0", "v1.8.2"],
         "git_repo": "https://github.com/provenance-io/provenance",
         "recommended_version": "v1.8.2"
       },
@@ -9073,6 +9058,25 @@
           },
           "name": "Secret Network",
           "symbol": "SCRT"
+        },
+        {
+          "address": "secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+          "base": "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+          "denom_units": [
+            {
+              "denom": "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+              "exponent": 0
+            },
+            {
+              "denom": "shd",
+              "exponent": 6
+            }
+          ],
+          "display": "shd",
+          "logo_URIs": {},
+          "name": "Shade Token",
+          "symbol": "SHD",
+          "type_asset": "cw20"
         }
       ],
       "bech32_prefix": "secret",
