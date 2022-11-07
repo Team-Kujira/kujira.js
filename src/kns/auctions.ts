@@ -53,6 +53,11 @@ export type ExecuteMsg =
     };
 export type QueryMsg =
   | {
+      bid: {
+        id: Uint128,
+      }
+    }
+  | {
       bids_by_domain: {
         domain: string;
         limit?: Uint64 | null;
@@ -114,6 +119,11 @@ export interface ConfigResponse {
 
 export interface AuctionsReadOnlyInterface {
   contractAddress: string;
+  bid: ({
+    id
+  }: {
+    id: Uint128;
+  }) => Promise<Bid>;
   bidsByDomain: ({
     domain,
     limit,
@@ -132,7 +142,13 @@ export interface AuctionsReadOnlyInterface {
     limit?: Uint64;
     startAfter?: Uint128;
   }) => Promise<BidsResponse>;
-  auction: ({ domain }: { domain: string }) => Promise<Auction>;
+  auction: ({
+    domain,
+    id
+  }: {
+    domain?: string;
+    id?: Uint128;
+  }) => Promise<Auction>;
   auctions: ({
     limit,
     startAfter,
@@ -151,6 +167,7 @@ export class AuctionsQueryClient implements AuctionsReadOnlyInterface {
   constructor(client: CosmWasmClient, contractAddress: string) {
     this.client = client;
     this.contractAddress = contractAddress;
+    this.bid = this.bid.bind(this);
     this.bidsByDomain = this.bidsByDomain.bind(this);
     this.bidsByBidder = this.bidsByBidder.bind(this);
     this.auction = this.auction.bind(this);
@@ -158,6 +175,17 @@ export class AuctionsQueryClient implements AuctionsReadOnlyInterface {
     this.config = this.config.bind(this);
   }
 
+  bid = async ({
+    id
+  }: {
+    id: Uint128;
+  }): Promise<Bid> => {
+    return this.client.queryContractSmart(this.contractAddress, {
+      bid: {
+        id
+      }
+    });
+  };
   bidsByDomain = async ({
     domain,
     limit,
@@ -192,11 +220,18 @@ export class AuctionsQueryClient implements AuctionsReadOnlyInterface {
       },
     });
   };
-  auction = async ({ domain }: { domain: string }): Promise<Auction> => {
+  auction = async ({
+    domain,
+    id
+  }: {
+    domain?: string;
+    id?: Uint128;
+  }): Promise<Auction> => {
     return this.client.queryContractSmart(this.contractAddress, {
       auction: {
         domain,
-      },
+        id
+      }
     });
   };
   auctions = async ({

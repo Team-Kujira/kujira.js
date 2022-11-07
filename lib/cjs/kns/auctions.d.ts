@@ -40,6 +40,10 @@ export declare type ExecuteMsg = {
     };
 };
 export declare type QueryMsg = {
+    bid: {
+        id: Uint128;
+    };
+} | {
     bids_by_domain: {
         domain: string;
         limit?: Uint64 | null;
@@ -96,6 +100,9 @@ export interface ConfigResponse {
 }
 export interface AuctionsReadOnlyInterface {
     contractAddress: string;
+    bid: ({ id }: {
+        id: Uint128;
+    }) => Promise<Bid>;
     bidsByDomain: ({ domain, limit, startAfter, }: {
         domain: string;
         limit?: Uint64;
@@ -106,8 +113,9 @@ export interface AuctionsReadOnlyInterface {
         limit?: Uint64;
         startAfter?: Uint128;
     }) => Promise<BidsResponse>;
-    auction: ({ domain }: {
-        domain: string;
+    auction: ({ domain, id }: {
+        domain?: string;
+        id?: Uint128;
     }) => Promise<Auction>;
     auctions: ({ limit, startAfter, state, }: {
         limit?: Uint64;
@@ -120,6 +128,9 @@ export declare class AuctionsQueryClient implements AuctionsReadOnlyInterface {
     client: CosmWasmClient;
     contractAddress: string;
     constructor(client: CosmWasmClient, contractAddress: string);
+    bid: ({ id }: {
+        id: Uint128;
+    }) => Promise<Bid>;
     bidsByDomain: ({ domain, limit, startAfter, }: {
         domain: string;
         limit?: string | undefined;
@@ -130,8 +141,9 @@ export declare class AuctionsQueryClient implements AuctionsReadOnlyInterface {
         limit?: string | undefined;
         startAfter?: string | undefined;
     }) => Promise<BidsResponse>;
-    auction: ({ domain }: {
-        domain: string;
+    auction: ({ domain, id }: {
+        domain?: string | undefined;
+        id?: string | undefined;
     }) => Promise<Auction>;
     auctions: ({ limit, startAfter, state, }: {
         limit?: string | undefined;
