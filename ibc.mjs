@@ -1,8 +1,8 @@
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import fs from "fs";
 import { kujiraQueryClient } from "./lib/cjs/index.js";
-import tokens from "./src/resources/tokens.json";
-import chains from "./src/resources/chains.json";
+import tokens from "./src/resources/tokens.json" assert { type: "json" };
+import chains from "./src/resources/chains.json" assert { type: "json" };
 
 const go = async (rpc) => {
   const tm = await Tendermint34Client.connect(rpc);
@@ -23,7 +23,7 @@ const go = async (rpc) => {
                 console.log(denomTrace);
                 if (denomTrace && denomTrace.baseDenom) {
                   tokens[s.denom] = {
-                    ...denomTrace,
+                    path: denomTrace.path,
                     base_denom: denomTrace.baseDenom,
                   };
                   fs.writeFileSync(
