@@ -41,6 +41,7 @@ const labels: Record<string, string> = {
     "whLOCAL",
   "cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26":
     "ASTRO",
+  "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD",
 
   terra18zqcnl83z98tf6lly37gghm7238k7lh79u4z9a: "bATOM",
   terra1dzhzukyezv0etz22ud940z7adyv7xgcjkahuun: "bETH",
@@ -141,6 +142,13 @@ const ics20: Record<string, ICS20> = {
       "terra1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2s5lvsct",
     router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
     channel: "channel-28",
+  },
+
+  // SHD
+  "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": {
+    contract: "secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+    router: "secret1tqmms5awftpuhalcv5h5mg76fa0tkdz4jv9ex4",
+    channel: "channel-46",
   },
 };
 
