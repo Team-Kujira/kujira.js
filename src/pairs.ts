@@ -62,7 +62,7 @@ export const PAIRS: Pair[] = [
     denoms: [USDC, USK],
     precision: { decimal_places: 4 },
     decimalDelta: 0,
-    multiswap: true,
+    multiswap: false,
   },
   {
     address:
