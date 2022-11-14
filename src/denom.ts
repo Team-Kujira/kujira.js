@@ -197,15 +197,17 @@ export class Denom {
     const u: Record<string, Denom[]> = {
       "factory/kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn/ulp":
         [
-          Denom.from(
+          new Denom(
             "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
           ),
-          USK_TESTNET,
+          new Denom(
+            "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+          ),
         ],
       "factory/kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq/ulp":
         [
-          KUJI,
-          Denom.from(
+          new Denom("ukuji"),
+          new Denom(
             "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
           ),
         ],
