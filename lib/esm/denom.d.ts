@@ -13,7 +13,7 @@ export declare class Denom {
         channel: string;
     };
     constructor(reference: string, underlying?: Denom[] | undefined);
-    static from(string: string, underlying?: Denom[]): Denom;
+    static from(string: string): Denom;
     eq: (other: Denom) => boolean;
 }
 export declare const USK_TESTNET: Denom;

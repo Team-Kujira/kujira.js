@@ -193,8 +193,24 @@ export class Denom {
     this.ics20 = ics20[this.reference];
   }
 
-  public static from(string: string, underlying?: Denom[]): Denom {
-    return new Denom(string, underlying);
+  public static from(string: string): Denom {
+    const u: Record<string, Denom[]> = {
+      "factory/kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn/ulp":
+        [
+          Denom.from(
+            "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+          ),
+          USK_TESTNET,
+        ],
+      "factory/kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq/ulp":
+        [
+          KUJI,
+          Denom.from(
+            "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+          ),
+        ],
+    };
+    return new Denom(string, u[string]);
   }
 
   public eq = (other: Denom): boolean => this.reference == other.reference;
