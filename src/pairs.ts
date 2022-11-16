@@ -23,7 +23,7 @@ export type Pair = {
 
 export const STAKING = {
   [TESTNET]:
-    "kujira1ngvmdulqt2cf4cecevtvw9tp6vrlq98sf3l0f5w0dec85uwzhhushpzyv9",
+    "kujira1e7hxytqdg6v05f8ev3wrfcm5ecu3qyhl7y4ga73z76yuufnlk2rqd4uwf4",
 };
 
 export const PAIRS: Pair[] = [
