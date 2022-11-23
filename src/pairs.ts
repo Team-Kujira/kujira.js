@@ -178,7 +178,7 @@ export const PAIRS: Pair[] = [
       ),
       USK,
     ],
-    precision: { decimal_places: 4 },
+    precision: { decimal_places: 5 },
     decimalDelta: 0,
     multiswap: false,
   },
