@@ -35,6 +35,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    pool: "kujira1sx99fxy4lqx0nv3ys86tkdrch82qygxyec5c8dxsk9raz4at5zpq72gypx",
   },
 
   {
@@ -45,6 +46,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 4 },
     decimalDelta: 0,
     multiswap: true,
+    pool: "kujira13y8hs83sk0la7na2w5g5nzrnjjpnkvmd7e87yd35g8dcph7dn0ksenay2a",
   },
   {
     address:
@@ -64,6 +66,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 4 },
     decimalDelta: 0,
     multiswap: false,
+    pool: "kujira12506pfme6layua70svszn2xza0pt9mnqu2u24lszrdyywmpvnw5qfz8sfq",
   },
   {
     address:
@@ -83,6 +86,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    pool: "kujira1yncutssgh2vj9scaymtteg949hwcft07c6qmgarxnaf04yesq3jsn6g2uv",
     margin: {
       address:
         "kujira1m0z0kk0qqug74n9u9ul23e28x5fszr628h20xwt6jywjpp64xn4qkxmjq3",
