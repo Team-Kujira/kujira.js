@@ -313,7 +313,7 @@ export const PAIRS: Pair[] = [
       ),
       USDC,
     ],
-    precision: { decimal_places: 2 },
+    precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
   },
