@@ -2,6 +2,7 @@ import { PAIRS } from "./pairs";
 import ibc from "./resources/tokens.json";
 
 const labels: Record<string, string> = {
+  usdt: "USDT",
   usat: "NBTC",
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
@@ -189,6 +190,7 @@ export class Denom {
     if (this.symbol === "NBTC") this.decimals = 14;
     if (this.symbol === "BOOT") this.decimals = 0;
     if (this.symbol === "DOT") this.decimals = 10;
+    if (this.reference === "usdt") this.decimals = 10;
 
     this.ics20 = ics20[this.reference];
   }
