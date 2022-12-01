@@ -177,7 +177,7 @@ export class Denom {
     }
 
     this.decimals = 6;
-    if ((this.trace?.base_denom || this.reference).endsWith("-wei"))
+    if ((this.trace?.base_denom || this.reference).endsWith("wei"))
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("-satoshi"))
       this.decimals = 8;
