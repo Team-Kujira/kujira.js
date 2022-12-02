@@ -190,6 +190,7 @@ export class Denom {
     if (this.symbol === "NBTC") this.decimals = 14;
     if (this.symbol === "BOOT") this.decimals = 0;
     if (this.symbol === "DOT") this.decimals = 10;
+    if (this.symbol === "SHD") this.decimals = 8;
     // OKX USDT
     if (
       this.reference ===
