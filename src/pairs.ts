@@ -1,4 +1,4 @@
-import { ATOM, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "./denom";
+import { ATOM, DEMO, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "./denom";
 import { Precision } from "./fin";
 import { MAINNET, NETWORK, TESTNET } from "./network";
 import { Market, MARKETS_HARPOON, MARKETS_KAIYO } from "./usk";
@@ -399,6 +399,17 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 0 },
     decimalDelta: 8,
     multiswap: true,
+  },
+
+  {
+    address:
+      "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
+    chainID: TESTNET,
+    denoms: [KUJI, USK_TESTNET],
+    precision: { decimal_places: 0 },
+    decimalDelta: 0,
+    multiswap: false,
+    pool: "kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8smmwsks49sqjg326",
   },
 
   {
