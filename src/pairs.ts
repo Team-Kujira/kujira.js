@@ -199,8 +199,23 @@ export const PAIRS: Pair[] = [
       ),
       USK,
     ],
-    precision: { decimal_places: 5 },
+    precision: { decimal_places: 3 },
     decimalDelta: 2,
+    multiswap: false,
+  },
+
+  {
+    address:
+      "kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 0,
     multiswap: false,
   },
 
