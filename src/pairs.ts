@@ -221,6 +221,21 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira1nm3yktzcgpnvwu6qpzqgl2ktyvlgsstc7ev849dd3ulaygw75mqqxvtnck",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 4 },
+    decimalDelta: 0,
+    multiswap: false,
+  },
+
+  {
+    address:
       "kujira1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3sl8nek6",
     chainID: MAINNET,
     denoms: [ATOM, USDC],
