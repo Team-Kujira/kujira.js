@@ -17,6 +17,7 @@ export declare type Pair = {
     multiswap: boolean;
     pool?: string;
     queue?: string;
+    calc?: string;
 };
 export declare const STAKING: {
     "harpoon-4": string;
