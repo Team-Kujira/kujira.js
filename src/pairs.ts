@@ -1,4 +1,4 @@
-import { ATOM, DEMO, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "./denom";
+import { ATOM, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "./denom";
 import { Precision } from "./fin";
 import { MAINNET, NETWORK, TESTNET } from "./network";
 import { Market, MARKETS_HARPOON, MARKETS_KAIYO } from "./usk";
@@ -39,7 +39,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     pool: "kujira1sx99fxy4lqx0nv3ys86tkdrch82qygxyec5c8dxsk9raz4at5zpq72gypx",
-    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
@@ -51,7 +51,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     pool: "kujira13y8hs83sk0la7na2w5g5nzrnjjpnkvmd7e87yd35g8dcph7dn0ksenay2a",
-    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
   {
     address:
@@ -62,7 +62,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     pool: "kujira1g9xcvvh48jlckgzw8ajl6dkvhsuqgsx2g8u3v0a6fx69h7f8hffqaqu36t",
-    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
   {
     address:
@@ -247,7 +247,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     pool: "kujira14wv3whn3v9sgf8r0dm7a46v7m7pukhs87x73e0ude3ktuzztfj9qxndumz",
-    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
@@ -277,6 +277,21 @@ export const PAIRS: Pair[] = [
     ],
     precision: { decimal_places: 3 },
     decimalDelta: 0,
+    multiswap: true,
+  },
+
+  {
+    address:
+      "kujira1w4t2qpwvhyhz0g2mwgqjzgsw63dcy5hkfch0tgr8xj9qjcsauq8q5x0zxz",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539"
+      ),
+      USDC,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 4,
     multiswap: true,
   },
 
@@ -505,7 +520,7 @@ export const PAIRS: Pair[] = [
     multiswap: true,
     pool: "kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq",
     queue: "kujira19m8s6ru20s62ygyr5qdng8yw2la3lemy8rgt55q38hyl57taxmvsgfre6m",
-    calc: "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c"
+    calc: "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c",
   },
   {
     address:
