@@ -1,7 +1,7 @@
-import { BigNumber } from "@ethersproject/bignumber";
 import { AccountData } from "@cosmjs/proto-signing";
-import { Denom } from "./denom";
+import { BigNumber } from "@ethersproject/bignumber";
 import { KujiraQueryClient } from ".";
+import { Denom } from "./denom";
 export declare type Market = {
     address: string;
     owner: string;

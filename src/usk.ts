@@ -1,7 +1,7 @@
-import { BigNumber } from "@ethersproject/bignumber";
 import { AccountData } from "@cosmjs/proto-signing";
-import { Denom, USK, USK_TESTNET } from "./denom";
+import { BigNumber } from "@ethersproject/bignumber";
 import { KujiraQueryClient } from ".";
+import { Denom, USK, USK_TESTNET } from "./denom";
 
 export type Market = {
   address: string;
@@ -92,6 +92,24 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     interest_rate: 0.05,
     liquidation_threshold: BigNumber.from(1000000000),
     liquidation_ratio: 0.4,
+    max_debt: BigNumber.from(1000000000000),
+  },
+  kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8: {
+    address:
+      "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+    owner: "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+    stable_denom: USK,
+    stable_denom_admin:
+      "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
+    collateral_denom: Denom.from(
+      "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+    ),
+    oracle_denom: "ETH",
+    max_ratio: 0.6,
+    mint_fee: 0.001,
+    interest_rate: 0.01,
+    liquidation_threshold: BigNumber.from(1000000000),
+    liquidation_ratio: 0.2,
     max_debt: BigNumber.from(1000000000000),
   },
 };

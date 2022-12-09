@@ -180,6 +180,21 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira17w9r23r8v8r7z5lphwj99296fhlye9ej5nq3hlqw554u63m88avspdl9tc",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 2 },
+    decimalDelta: 12,
+    multiswap: false,
+  },
+
+  {
+    address:
       "kujira1v8lkqws3gd6npr0rdk9ch54amh9guas86r4u62jq27hee88lryfsxwrvlk",
     chainID: MAINNET,
     denoms: [
@@ -267,6 +282,21 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira1qjxu65ucccpg8c5kac8ng6yxfqq85fluwd0p9nt74g2304qw8eyq930y7w",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
+      ),
+      USDC,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 12,
+    multiswap: false,
+  },
+
+  {
+    address:
       "kujira16y344e8ryydmeu2g8yyfznq79j7jfnar4p59ngpvaazcj83jzsms6tju67",
     chainID: MAINNET,
     denoms: [
@@ -293,6 +323,21 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 4,
     multiswap: true,
+  },
+
+  {
+    address:
+      "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+      ),
+      USDC,
+    ],
+    precision: { decimal_places: 2 },
+    decimalDelta: 12,
+    multiswap: false,
   },
 
   {
@@ -396,36 +441,6 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
-  },
-
-  {
-    address:
-      "kujira1qjxu65ucccpg8c5kac8ng6yxfqq85fluwd0p9nt74g2304qw8eyq930y7w",
-    chainID: MAINNET,
-    denoms: [
-      Denom.from(
-        "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
-      ),
-      USDC,
-    ],
-    precision: { decimal_places: 3 },
-    decimalDelta: 12,
-    multiswap: false,
-  },
-
-  {
-    address:
-      "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
-    chainID: MAINNET,
-    denoms: [
-      Denom.from(
-        "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
-      ),
-      USDC,
-    ],
-    precision: { decimal_places: 2 },
-    decimalDelta: 12,
-    multiswap: false,
   },
 
   {
