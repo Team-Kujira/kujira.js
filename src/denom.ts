@@ -1,4 +1,3 @@
-import { PAIRS } from "./pairs";
 import ibc from "./resources/tokens.json";
 
 const labels: Record<string, string> = {
@@ -262,6 +261,24 @@ export class Denom {
         [
           new Denom(
             "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+          ),
+          new Denom(
+            "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F"
+          ),
+        ],
+      "factory/kujira1uchf9h2suq6a9a0ksyp5rh9536uqxydswm37sswa888kxxx2kqgqsx3n6h/ulp":
+        [
+          new Denom(
+            "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539"
+          ),
+          new Denom(
+            "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+          ),
+        ],
+      "factory/kujira1337sclk2nc6srd77w4v8qule0nv9r70mrt56r2j8zak3rlg6xc0sl27tar/ulp":
+        [
+          new Denom(
+            "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539"
           ),
           new Denom(
             "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F"
