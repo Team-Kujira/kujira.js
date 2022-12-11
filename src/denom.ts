@@ -293,6 +293,24 @@ export class Denom {
             "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
           ),
         ],
+      "factory/kujira1ngqlypl5h0mkgxmk4why878eq4y5yh6yhdtrw8hdxfz202xluzrs097qn5/ulp":
+        [
+          new Denom(
+            "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+          ),
+          new Denom(
+            "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F"
+          ),
+        ],
+      "factory/kujira1xwvvjq5w0887v2vz4e83kcu38s0jq8q8lqa3z5hxm295q7y4uejqp24la7/ulp":
+        [
+          new Denom(
+            "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+          ),
+          new Denom(
+            "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+          ),
+        ],
     };
     return new Denom(string, u[string]);
   }
