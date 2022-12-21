@@ -71,11 +71,31 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     oracle_denom: "ATOM",
     max_ratio: 0.6,
     mint_fee: 0.001,
-    interest_rate: 0.05,
+    interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
     liquidation_ratio: 0.4,
     max_debt: BigNumber.from(1000000000000),
   },
+
+  kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t: {
+    address:
+      "kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t",
+    owner: "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+    stable_denom: USK,
+    stable_denom_admin:
+      "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
+    collateral_denom: Denom.from(
+      "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833"
+    ),
+    oracle_denom: "BNB",
+    max_ratio: 0.6,
+    mint_fee: 0.001,
+    interest_rate: 0.01,
+    liquidation_threshold: BigNumber.from(1000000000),
+    liquidation_ratio: 0.4,
+    max_debt: BigNumber.from(1000000000000),
+  },
+
   kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u: {
     address:
       "kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u",
@@ -89,7 +109,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     oracle_denom: "DOT",
     max_ratio: 0.6,
     mint_fee: 0.001,
-    interest_rate: 0.05,
+    interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
     liquidation_ratio: 0.4,
     max_debt: BigNumber.from(1000000000000),
