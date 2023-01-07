@@ -101,6 +101,7 @@ export const PAIRS: Pair[] = [
       market:
         MARKETS_KAIYO.kujira1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2smfdslf,
     },
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
@@ -229,6 +230,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 12,
     multiswap: false,
     pool: "kujira1xwvvjq5w0887v2vz4e83kcu38s0jq8q8lqa3z5hxm295q7y4uejqp24la7",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
@@ -325,6 +327,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: false,
     pool: "kujira10sx8wxzev270zrmpq6z3asgpurdjfh9f6rwtgt55mar9m6gtw40s9nfxcy",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
@@ -462,6 +465,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 12,
     multiswap: false,
     pool: "kujira1ngqlypl5h0mkgxmk4why878eq4y5yh6yhdtrw8hdxfz202xluzrs097qn5",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
 
   {
