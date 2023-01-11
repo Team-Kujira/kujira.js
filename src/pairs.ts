@@ -344,6 +344,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: false,
     pool: "kujira1n648rfqqvjxm6c7zgfnfqay85rkapgg0z7da9pnmjazz5m5d7l0qxdtq90",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -554,6 +555,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -569,6 +571,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
