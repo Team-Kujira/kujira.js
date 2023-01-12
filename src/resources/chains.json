@@ -14786,6 +14786,28 @@
           "name": "Eris Staked LUNA",
           "symbol": "ampLUNA",
           "type_asset": "cw20"
+        },
+
+        {
+          "address": "terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz",
+          "base": "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz",
+          "denom_units": [
+            {
+              "denom": "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz",
+              "exponent": 0
+            },
+            {
+              "denom": "dust",
+              "exponent": 6
+            }
+          ],
+          "display": "dUST",
+          "logo_URIs": {
+            "png": ""
+          },
+          "name": "Depeg Nation dUST",
+          "symbol": "dUST",
+          "type_asset": "cw20"
         }
       ],
       "bech32_prefix": "terra",
