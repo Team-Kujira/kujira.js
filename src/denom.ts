@@ -99,6 +99,9 @@ const baseDenomToSymbol = (denom: string): string => {
 
   return baseDenom.startsWith("u")
     ? baseDenom.replace(/^u/, "").toUpperCase()
+    : // Stride
+    baseDenom.startsWith("stu")
+    ? `st${baseDenomToSymbol(baseDenom.replace(/^st/, ""))}`
     : baseDenom;
 };
 
