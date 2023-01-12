@@ -273,10 +273,10 @@ export const PAIRS: Pair[] = [
       Denom.from("factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local"),
       USK,
     ],
-    precision: { decimal_places: 3 },
+    precision: { decimal_places: 5 },
     decimalDelta: 0,
     multiswap: false,
-    pool: "kujira14sar6zdyljp7t9u5zwcwcjrw98kcmqq8685sz7ezfknvauqg23sqrmr6kg",
+    pool: "kujira10wn7s0j66f33kp8rg7cluh9mghkahd5wezkx84wn3kf0cvh2nefsny50r4",
   },
 
   {
