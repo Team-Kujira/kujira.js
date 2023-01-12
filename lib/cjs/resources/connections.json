@@ -704,6 +704,38 @@
                     }
                 }
             ]
+        },
+        {
+            "$schema": "../ibc_data.schema.json",
+            "chain-1": {
+                "chain-name": "kujira",
+                "client-id": "07-tendermint-3",
+                "connection-id": ""
+            },
+            "chain-2": {
+                "chain-name": "stride",
+                "client-id": "07-tendermint-2017",
+                "connection-id": ""
+            },
+            "channels": [
+                {
+                    "chain-1": {
+                        "channel-id": "channel-32",
+                        "port-id": "transfer"
+                    },
+                    "chain-2": {
+                        "channel-id": "channel-8",
+                        "port-id": "transfer"
+                    },
+                    "ordering": "unordered",
+                    "version": "ics20-1",
+                    "tags": {
+                        "status": "live",
+                        "preferred": true,
+                        "dex": "osmosis"
+                    }
+                }
+            ]
         }
     ]
 }

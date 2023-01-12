@@ -157,6 +157,14 @@ const ics20: Record<string, ICS20> = {
     router: "secret1tqmms5awftpuhalcv5h5mg76fa0tkdz4jv9ex4",
     channel: "channel-46",
   },
+
+  // dUST
+  "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz": {
+    contract:
+      "terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz",
+    router: "terra1d90p5lacfxnqgjxjupu234lxnxyeu8fdeef4d0e0nqy3p30r7gss4myn9x",
+    channel: "channel-34",
+  },
 };
 
 const UNDERLYING: Record<string, string[]> = {
