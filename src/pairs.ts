@@ -267,6 +267,22 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira1k7rg9vscg2uldw6868mecryxhlze5e3f4z0f00295ddu7cz3l4ws4d9dfj",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/8318B7E036E50C0CF799848F23ED84778AAA8749D9C0BCD4FF3F4AF73C53387F"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 5 },
+    decimalDelta: 0,
+    multiswap: false,
+    pool: "kujira1059pvpwgg9krqal5kwhnul47heekmuh0uj7ctns47whqegqj5l6q6nvs69",
+  },
+
+  {
+    address:
       "kujira1zz74gvmq6ss3pg5vgahvx47ugpfzr80qu75l97lf2ggdgxq04ddqxkdzey",
     chainID: MAINNET,
     denoms: [

@@ -166,6 +166,7 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
           high: 0.000488,
         },
       },
+
       {
         coinDenom: "OSMO",
         coinMinimalDenom:
