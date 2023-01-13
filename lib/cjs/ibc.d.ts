@@ -1,3 +1,17 @@
+export declare const IBC: {
+    chains: {
+        mainnet: CosmosChain[];
+        testnet: CosmosChain[];
+    };
+    connections: {
+        mainnet: IBCConnection[];
+        testnet: IBCConnection[];
+    };
+    tokens: Record<string, {
+        base_denom: string;
+        path: string;
+    }>;
+};
 export interface IBCConnection {
     "chain-1": {
         "chain-name": string;

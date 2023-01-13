@@ -1,3 +1,17 @@
+import chains from "./resources/chains.json";
+import connections from "./resources/connections.json";
+import tokens from "./resources/tokens.json";
+
+export const IBC: {
+  chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
+  connections: { mainnet: IBCConnection[]; testnet: IBCConnection[] };
+  tokens: Record<string, { base_denom: string; path: string }>;
+} = {
+  chains,
+  connections,
+  tokens,
+};
+
 export interface IBCConnection {
   "chain-1": {
     "chain-name": string;
