@@ -1,0 +1,86 @@
+import { BigNumber } from "@ethersproject/bignumber";
+import { Denom } from "../denom";
+
+export enum Chain {
+  Avalanche = "Avalanche",
+  Kujira = "Kujira",
+  Polkadot = "Polkadot",
+}
+
+export enum Protocol {
+  Acala = "Acala",
+  Karura = "Karura",
+  Mandala = "Mandala",
+  USK = "USK",
+  FIN = "FIN Margin",
+  BOW = "FIN Perpetuals",
+}
+
+export enum MarketType {
+  Acala = "Lending",
+  Karura = "Lending",
+  Mandala = "Lending",
+  USK = "Lending",
+  FIN = "Margin",
+  BOW = "Perpetuals",
+}
+
+export type MarketConfig = {
+  bidThreshold: BigNumber;
+  maxSlot: number;
+  premiumRatePerSlot: number;
+  waitingPeriod: number;
+  market: string;
+};
+
+export type Market = {
+  label: string;
+  chain: Chain;
+  protocol: Protocol;
+  collateralDenom: Denom;
+  bidDenom: Denom;
+  repayDenom: Denom;
+  type?: MarketType;
+  address?: string;
+  botFirst?: boolean;
+  activators?: string[];
+};
+
+export type Bid = {
+  idx: number;
+  premiumSlot: number;
+  amount: BigNumber;
+  pendingLiquidatedCollateral: BigNumber;
+  waitEnd: Date | null;
+};
+
+export type BidPool = {
+  totalBidAmount: BigNumber;
+  premiumRate: number;
+  currentEpoch: number;
+};
+
+export type BidStrategy = {
+  activateAt: LTVThreshold;
+  deactivateAt: LTVThreshold;
+};
+
+export type LTVThreshold = {
+  ltv: number;
+  amount: BigNumber;
+};
+
+export interface IContract<W, Tx> {
+  getPrice: (denom: Denom) => Promise<number>;
+  getCollateralAmount: () => Promise<BigNumber>;
+  getBidPools: () => Promise<BidPool[]>;
+  getBids: (
+    wallet: W
+  ) => (opts?: { limit: number; startAfter: number }) => Promise<Bid[]>;
+  placeBid: (
+    wallet: W
+  ) => (premiumSlot: number, amount: BigNumber) => Promise<Tx>;
+  activateBids: (wallet: W) => (bids: Bid[]) => Promise<Tx>;
+  retractBid: (wallet: W) => (bid: Bid) => Promise<Tx>;
+  claimLiquidations: (wallet: W) => (bids: Bid[]) => Promise<Tx>;
+}
