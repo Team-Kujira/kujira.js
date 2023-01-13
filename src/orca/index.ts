@@ -72,6 +72,14 @@ export const marketConfigs: Record<string, MarketConfig> = {
     waitingPeriod: 600,
     market: "kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t",
   },
+
+  kujira1sdlp8eqp4md6waqv2x9vlvt9dtzyx9ztt0zvkfxaw9kxh3t5gdvqypxlwz: {
+    bidThreshold: BigNumber.from("10000000000"),
+    maxSlot: 30,
+    premiumRatePerSlot: 0.01,
+    waitingPeriod: 600,
+    market: "kujira1r80rh4t7zrlt8d6da4k8xptwywuv39esnt4ax7p7ca7ga7646xssrcu5uf",
+  },
 };
 
 export const getMarkets = (network?: NETWORK): Array<Market> => {
