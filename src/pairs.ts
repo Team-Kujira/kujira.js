@@ -571,6 +571,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: true,
+    pool: "kujira1hs0fmdp9m0udkm7f63z9l92c5z6qa44hg7gcn3kwwrcn8nkdq7vsx79u97",
   },
 
   {
