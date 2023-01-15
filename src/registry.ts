@@ -4,6 +4,7 @@ import * as s from "@cosmjs/stargate";
 import { ibcTypes } from "@cosmjs/stargate/build/modules";
 import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1beta1/distribution";
+import { TextProposal } from "cosmjs-types/cosmos/gov/v1beta1/gov";
 import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
 import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
 import {
@@ -57,6 +58,7 @@ const proposalTypes = [
   ["/kujira.scheduler.CreateHookProposal", CreateHookProposal],
   ["/kujira.scheduler.UpdateHookProposal", UpdateHookProposal],
   ["/kujira.scheduler.DeleteHookProposal", DeleteHookProposal],
+  ["/cosmos.gov.v1beta1.TextProposal", TextProposal],
 ];
 
 const extraIbc = [
