@@ -18,6 +18,7 @@ import {
   UpdateAdminProposal,
   UpdateInstantiateConfigProposal,
 } from "cosmjs-types/cosmwasm/wasm/v1/proposal";
+import { ClientUpdateProposal } from "cosmjs-types/ibc/core/client/v1/client";
 import {
   ClientState,
   ConsensusState,
@@ -59,6 +60,7 @@ const proposalTypes = [
   ["/kujira.scheduler.UpdateHookProposal", UpdateHookProposal],
   ["/kujira.scheduler.DeleteHookProposal", DeleteHookProposal],
   ["/cosmos.gov.v1beta1.TextProposal", TextProposal],
+  ["/ibc.core.client.v1.ClientUpdateProposal", ClientUpdateProposal],
 ];
 
 const extraIbc = [
