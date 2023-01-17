@@ -30,7 +30,7 @@ export class Keplr {
   ): Promise<Keplr> => {
     const keplr = window.keplr;
 
-    if (!keplr) throw new Error("Keplr Not Detected");
+    if (!keplr) throw new Error("Keplr extension not available");
 
     const chainInfo = {
       ...config,

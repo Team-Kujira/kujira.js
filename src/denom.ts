@@ -32,6 +32,7 @@ const labels: Record<string, string> = {
   "wbnb-wei": "wBNB",
   "wftm-wei": "wFTM",
   "wmatic-wei": "wMATIC",
+  "wglmr-wei": "wGLMR",
   "cw20:juno1qsrercqegvs4ye0yqg93knv73ye5dc3prqwd6jcdcuj8ggp6w0us66deup":
     "LOOP",
   "cw20:juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz":
@@ -389,6 +390,24 @@ export const USDC = Denom.from(
 
 export const USDT = Denom.from(
   "ibc/F2331645B9683116188EF36FC04A809C28BD36B54555E8705A37146D0182F045"
+);
+export const wETH = Denom.from(
+  "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F"
+);
+export const wMATIC = Denom.from(
+  "ibc/A64467480BBE4CCFC3CF7E25AD1446AA9BDBD4F5BCB9EF6038B83D6964C784E6"
+);
+export const wBNB = Denom.from(
+  "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833"
+);
+export const wAVAX = Denom.from(
+  "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
+);
+export const wGLMR = Denom.from(
+  "ibc/C8D63703F5805CE6A2B20555139CF6ED9CDFA870389648EB08D688B94B0AE2C1"
+);
+export const wFTM = Denom.from(
+  "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2"
 );
 
 export const factor = ([base, quote]: [Denom, Denom]): number => {
