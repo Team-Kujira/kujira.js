@@ -73,7 +73,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     mint_fee: 0.001,
     interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
-    liquidation_ratio: 0.4,
+    liquidation_ratio: 0.1,
     max_debt: BigNumber.from(1000000000000),
   },
 
@@ -92,7 +92,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     mint_fee: 0.001,
     interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
-    liquidation_ratio: 0.4,
+    liquidation_ratio: 0.1,
     max_debt: BigNumber.from(1000000000000),
   },
 
@@ -111,7 +111,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     mint_fee: 0.001,
     interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
-    liquidation_ratio: 0.4,
+    liquidation_ratio: 0.1,
     max_debt: BigNumber.from(1000000000000),
   },
   kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8: {
@@ -129,7 +129,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     mint_fee: 0.001,
     interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
-    liquidation_ratio: 0.2,
+    liquidation_ratio: 0.1,
     max_debt: BigNumber.from(1000000000000),
   },
 
@@ -148,7 +148,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     mint_fee: 0.001,
     interest_rate: 0.01,
     liquidation_threshold: BigNumber.from(1000000000),
-    liquidation_ratio: 0.2,
+    liquidation_ratio: 0.05,
     max_debt: BigNumber.from(300000000000),
   },
 };
