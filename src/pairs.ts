@@ -67,6 +67,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: false,
+    pool: "kujira1hfj06505jjk2ut5a0j6f5wx04pj2s05qk8nydng7kznkuzpe8w2se24jqx",
   },
 
   {
@@ -181,6 +182,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 12,
     multiswap: false,
+    pool: "kujira1atnrjnyjm4u2znshlt48nwyeqtfyzuqseyj59lylvkvd4dtevdgss6jn4a",
   },
 
   {
@@ -196,6 +198,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 2 },
     decimalDelta: 2,
     multiswap: false,
+    pool: "kujira1g7597zvu8kte7jyg8e297sj363qwyp5mw4hr9cmv49r3dhv599jsdpx9qs",
   },
 
   {
@@ -232,9 +235,10 @@ export const PAIRS: Pair[] = [
       ),
       USK,
     ],
-    precision: { decimal_places: 3 },
+    precision: { decimal_places: 4 },
     decimalDelta: 0,
     multiswap: false,
+    pool: "kujira1vm99wnr4rpqtcyh4fw6q277x2j75r2q8yet3azd7fjecmst7ftds4vhzcd",
   },
 
   {
@@ -266,6 +270,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 3 },
     decimalDelta: 0,
     multiswap: false,
+    pool: "kujira1ww9hyqjzuz7c90hhfkqrucnjtu2tj9myvnfxlzze92mkq9pvmmps4zumv9",
   },
 
   {
@@ -572,6 +577,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 2 },
     decimalDelta: 2,
     multiswap: false,
+    pool: "kujira19ca3j7wj672hnvzs7vj73hlt0u94zc0lpehkx8w5g8crm0sfx4nqvt44f6",
   },
 
   {
