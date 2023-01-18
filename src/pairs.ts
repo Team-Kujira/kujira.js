@@ -53,6 +53,22 @@ export const PAIRS: Pair[] = [
     pool: "kujira13y8hs83sk0la7na2w5g5nzrnjjpnkvmd7e87yd35g8dcph7dn0ksenay2a",
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
+
+  {
+    address:
+      "kujira1xqhakgvn3jeqfade0z4aufer9xylx7ft45fgyhg6z75mauhkjwks9cucyq",
+    chainID: MAINNET,
+    denoms: [
+      KUJI,
+      Denom.from(
+        "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986"
+      ),
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 0,
+    multiswap: false,
+  },
+
   {
     address:
       "kujira193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyq66wfrf",
@@ -154,6 +170,36 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira1fphguznhazgqdlr9mpfh6nmn3vjjr73ksz3ukznv6q7s9ndfq2cs8vhapj",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 12,
+    multiswap: false,
+  },
+
+  {
+    address:
+      "kujira1ulyrqqtx9vqsk92805jk7xxwz77lszmm2f548juyced96tj4lg7qugewsf",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 2 },
+    decimalDelta: 2,
+    multiswap: false,
+  },
+
+  {
+    address:
       "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0",
     chainID: MAINNET,
     denoms: [
@@ -178,6 +224,21 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira1h7eenquygffwsmc8csrlx88zcddwx0aqspq3x2dsl20lwk4r9n2q9t86ht",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/3607EB5B5E64DD1C0E12E07F077FF470D5BC4706AFCBC98FE1BA960E5AE4CE07"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 0,
+    multiswap: false,
+  },
+
+  {
+    address:
       "kujira1dtaqwlmzlk3jku5un6h6rfunttmwsqnfz7evvdf4pwr0wypsl68q49aaud",
     chainID: MAINNET,
     denoms: [
@@ -190,6 +251,21 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     pool: "kujira1nxfag552cng6lwf2q3duyepgvenr670ngj8uljpeydy0rvftgt9qkgd6sq",
+  },
+
+  {
+    address:
+      "kujira1qw5hdcmcf4aq5xmnu6znscurvkgvhxfsyvhz3jvxhasxjwtk3l7sccwcs8",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/1603E8643A49AD47F536F645A4BF0E4C1E06C76F0A98CBE8054B177F1EE7C39A"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 0,
+    multiswap: false,
   },
 
   {
@@ -480,6 +556,21 @@ export const PAIRS: Pair[] = [
     ],
     precision: { decimal_places: 3 },
     decimalDelta: 12,
+    multiswap: false,
+  },
+
+  {
+    address:
+      "kujira12jdezs3kk6y04q3fnl7kq5567pcw0zfr7j0yfsxjqgggdkktut9s2gm7cm",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC"
+      ),
+      USDC,
+    ],
+    precision: { decimal_places: 2 },
+    decimalDelta: 2,
     multiswap: false,
   },
 
