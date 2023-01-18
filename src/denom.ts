@@ -26,6 +26,7 @@ const labels: Record<string, string> = {
     "USK",
   "factory:kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7:uusk":
     "USK",
+  gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "g.PAXG",
   "frax-wei": "FRAX",
   "dai-wei": "DAI",
   "wbtc-satoshi": "wBTC",
@@ -338,6 +339,7 @@ export class Denom {
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("-satoshi"))
       this.decimals = 8;
+    if (this.symbol === "g.PAXG") this.decimals = 18;
     if (this.symbol === "EVMOS") this.decimals = 18;
     if (this.symbol === "wAVAX") this.decimals = 18;
     if (this.symbol === "wETH") this.decimals = 18;

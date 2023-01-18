@@ -368,11 +368,11 @@
             "channels": [
                 {
                     "chain-1": {
-                        "channel-id": "channel-11",
+                        "channel-id": "channel-50",
                         "port-id": "transfer"
                     },
                     "chain-2": {
-                        "channel-id": "channel-83",
+                        "channel-id": "channel-107",
                         "port-id": "transfer"
                     },
                     "ordering": "unordered",
