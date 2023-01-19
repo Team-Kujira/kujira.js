@@ -3,9 +3,10 @@ import { Precision } from "./fin";
 import { NETWORK } from "./network";
 import { Market } from "./usk";
 export declare type Margin = {
-    address: string;
+    market: string;
+    limit?: string;
     fin_address: string;
-    market: Market;
+    config: Market;
 };
 export declare type Pair = {
     address: string;

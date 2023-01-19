@@ -4,9 +4,10 @@ import { MAINNET, NETWORK, TESTNET } from "./network";
 import { Market, MARKETS_HARPOON, MARKETS_KAIYO } from "./usk";
 
 export type Margin = {
-  address: string;
+  market: string;
+  limit?: string;
   fin_address: string;
-  market: Market;
+  config: Market;
 };
 
 export type Pair = {
@@ -111,11 +112,11 @@ export const PAIRS: Pair[] = [
     multiswap: true,
     pool: "kujira1yncutssgh2vj9scaymtteg949hwcft07c6qmgarxnaf04yesq3jsn6g2uv",
     margin: {
-      address:
+      market:
         "kujira1m0z0kk0qqug74n9u9ul23e28x5fszr628h20xwt6jywjpp64xn4qkxmjq3",
       fin_address:
         "kujira1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqr2qp2j",
-      market:
+      config:
         MARKETS_KAIYO.kujira1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2smfdslf,
     },
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
@@ -216,11 +217,11 @@ export const PAIRS: Pair[] = [
     multiswap: false,
     pool: "kujira196yp2agkqa4fqh0asg4lhn53t7fuw5fd8p3avktvy9j0qxf5zlmsz25v0n",
     margin: {
-      address:
+      market:
         "kujira1pep6vkkjexjlsw3y5h4tj27g7s58vkypy8zg7f9qdvlh2992pncqduz84n",
       fin_address:
         "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0",
-      market:
+      config:
         MARKETS_KAIYO.kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t,
     },
   },
@@ -304,11 +305,11 @@ export const PAIRS: Pair[] = [
     multiswap: false,
     pool: "kujira1uchf9h2suq6a9a0ksyp5rh9536uqxydswm37sswa888kxxx2kqgqsx3n6h",
     margin: {
-      address:
+      market:
         "kujira1hjyjafrt09p4hwsnwch29nrrs40lprfgesqdy44wnp27td872hsse2rree",
       fin_address:
         "kujira1jlzw6xal0n2c580g3wxs09tjhlzdht9y8dgszq3tupf8fhl7xjus7ep7ap",
-      market:
+      config:
         MARKETS_KAIYO.kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u,
     },
   },
@@ -329,11 +330,11 @@ export const PAIRS: Pair[] = [
     pool: "kujira1xwvvjq5w0887v2vz4e83kcu38s0jq8q8lqa3z5hxm295q7y4uejqp24la7",
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
     margin: {
-      address:
+      market:
         "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
       fin_address:
         "kujira17w9r23r8v8r7z5lphwj99296fhlye9ej5nq3hlqw554u63m88avspdl9tc",
-      market:
+      config:
         MARKETS_KAIYO.kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8,
     },
   },
@@ -415,11 +416,11 @@ export const PAIRS: Pair[] = [
     multiswap: false,
     pool: "kujira1y0v5znl0ucc6nsdalr9xeg0r3zyw44yn0uyd8tsgc8gl4j8stjcs9vmmr7",
     margin: {
-      address:
+      market:
         "kujira1722g2rudg0rlw45nuuvjhg4a365xztfrdfjgyyfuzlmqmtu2plas34y6x3",
       fin_address:
         "kujira1zz74gvmq6ss3pg5vgahvx47ugpfzr80qu75l97lf2ggdgxq04ddqxkdzey",
-      market:
+      config:
         MARKETS_KAIYO.kujira1r80rh4t7zrlt8d6da4k8xptwywuv39esnt4ax7p7ca7ga7646xssrcu5uf,
     },
   },
@@ -792,11 +793,13 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: true,
     margin: {
-      address:
+      market:
         "kujira1vmnntr773a5p7s4k0t39v6vcgcq87kq2zaw94cy85850n79jx2kq56sqhs",
+      limit:
+        "kujira1a4z3h8fryetfdrq5knu6zzqhcvdcvr39ljxlmrmlce85k6e2n8xsuelz5u",
       fin_address:
         "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg",
-      market:
+      config:
         MARKETS_HARPOON.kujira1atk8uwy6zf7u4r4qzg52ucgz6f74cuclthzsrc049vynjsr62lns2du3ey,
     },
     pool: "kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn",
