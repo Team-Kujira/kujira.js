@@ -1,5 +1,6 @@
 import { setupWasmExtension, WasmExtension } from "@cosmjs/cosmwasm-stargate";
 import * as s from "@cosmjs/stargate";
+import { Coin } from "@cosmjs/stargate";
 import {
   FeegrantExtension,
   SlashingExtension,
@@ -54,3 +55,14 @@ export const kujiraQueryClient = ({
     setupWasmExtension,
     s.setupIbcExtension
   );
+
+export const fetchTokens = (
+  query: KujiraQueryClient,
+  paginationKey?: Uint8Array
+): Promise<Coin[]> => {
+  return query.bank.totalSupply(paginationKey).then(async (xs) => {
+    return xs.pagination?.nextKey.toString()
+      ? [...(await fetchTokens(query, xs.pagination.nextKey)), ...xs.supply]
+      : xs.supply;
+  });
+};

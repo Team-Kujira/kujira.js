@@ -1,5 +1,6 @@
 import { WasmExtension } from "@cosmjs/cosmwasm-stargate";
 import * as s from "@cosmjs/stargate";
+import { Coin } from "@cosmjs/stargate";
 import { FeegrantExtension, SlashingExtension } from "@cosmjs/stargate/build/modules";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
@@ -12,3 +13,4 @@ export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzE
 export declare const kujiraQueryClient: ({ client, }: {
     client: Tendermint34Client;
 }) => KujiraQueryClient;
+export declare const fetchTokens: (query: KujiraQueryClient, paginationKey?: Uint8Array) => Promise<Coin[]>;
