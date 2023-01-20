@@ -7,6 +7,7 @@ import tokens from "./src/resources/tokens.json" assert { type: "json" };
 const go = async (rpc) => {
   const tm = await Tendermint34Client.connect(rpc);
   const client = kujiraQueryClient({ client: tm });
+  console.log(rpc);
   return client.bank
     .totalSupply()
     .then(({ supply }) => {
