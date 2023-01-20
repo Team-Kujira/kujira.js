@@ -19,6 +19,8 @@
     "@cosmjs/stargate": "^0.29.4",
     "@ethersproject/bignumber": "^5.7.0",
     "@keplr-wallet/types": "^0.11.12",
+    "@terra-money/feather.js": "^1.0.0-beta.9",
+    "@terra-money/wallet-controller": "4.0.0-beta.3",
     "@walletconnect/client": "^1.8.0",
     "cosmjs-types": "0.5.2",
     "long": "^4.0.0",
