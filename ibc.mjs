@@ -1,8 +1,8 @@
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import fs from "fs";
 import { kujiraQueryClient } from "./lib/cjs/index.js";
-import tokens from "./src/resources/tokens.json" assert { type: "json" };
 import chains from "./src/resources/chains.json" assert { type: "json" };
+import tokens from "./src/resources/tokens.json" assert { type: "json" };
 
 const go = async (rpc) => {
   const tm = await Tendermint34Client.connect(rpc);
@@ -38,7 +38,10 @@ const go = async (rpc) => {
         })
       );
     })
-    .catch(console.error);
+    .catch((err) => {
+      console.log(rpc);
+      console.error(err);
+    });
 };
 
 await go("https://rpc.harpoon.kujira.setten.io");
@@ -46,8 +49,6 @@ await go("https://rpc.kaiyo.kujira.setten.io");
 
 await Promise.all(
   chains.mainnet.map(({ chain_name }) => {
-    return go(
-      `https://kujira-cosmos.gigalixirapp.com/api/chains/${chain_name}/rpc`
-    ).catch(() => {});
+    return go(`https://rpc.cosmos.directory/${chain_name}`).catch(() => {});
   })
 ).catch(() => {});
