@@ -1,7 +1,7 @@
 import { AccountData } from "@cosmjs/proto-signing";
 import { BigNumber } from "@ethersproject/bignumber";
 import { KujiraQueryClient } from ".";
-import { Denom, USK, USK_TESTNET } from "./denom";
+import { ATOM, Denom, USK, USK_TESTNET } from "./denom";
 
 export type Market = {
   address: string;
@@ -65,9 +65,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     stable_denom: USK,
     stable_denom_admin:
       "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
-    collateral_denom: Denom.from(
-      "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
-    ),
+    collateral_denom: ATOM,
     oracle_denom: "ATOM",
     max_ratio: 0.6,
     mint_fee: 0.001,
@@ -150,6 +148,24 @@ export const MARKETS_KAIYO: Record<string, Market> = {
     liquidation_threshold: BigNumber.from(1000000000),
     liquidation_ratio: 0.05,
     max_debt: BigNumber.from(300000000000),
+  },
+  kujira1twc28l5njc07xuxrs85yahy44y9lw5euwa7kpajc2zdh98w6uyksvjvruq: {
+    address:
+      "kujira1twc28l5njc07xuxrs85yahy44y9lw5euwa7kpajc2zdh98w6uyksvjvruq",
+    owner: "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+    stable_denom: USK,
+    stable_denom_admin:
+      "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
+    collateral_denom: Denom.from(
+      "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
+    ),
+    oracle_denom: "PAXG",
+    max_ratio: 0.6,
+    mint_fee: 0.001,
+    interest_rate: 0.01,
+    liquidation_threshold: BigNumber.from(1000000000),
+    liquidation_ratio: 0.1,
+    max_debt: BigNumber.from(1000000000000),
   },
 };
 
