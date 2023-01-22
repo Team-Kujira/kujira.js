@@ -204,7 +204,8 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
           label: "gPAXG",
           chain: Chain.Kujira,
           protocol: Protocol.USK,
-          address: "",
+          address:
+            "kujira1rn99882aqqy6zcs6clua7zn6zsl74hamqchacg8d9gxh304hequsflxfjt",
           bidDenom: USK,
           collateralDenom: Denom.from(
             "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
