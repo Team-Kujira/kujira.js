@@ -15,7 +15,9 @@ export const NETWORKS = {
 export const RPCS: Record<NETWORK, string[]> = {
   [TESTNET]: ["https://rpc.harpoon.kujira.setten.io"],
   [MAINNET]: [
+    "https://kuji-rpc.kleomedes.network",
     "https://kujira-rpc.polkachu.com",
+    "https://kujira-rpc.theamsolutions.info",
     "https://kujira.mainnet.rpc.autostake.net",
     "https://kujira.rpc.kjnodes.com",
     "https://rpc-kujira.mintthemoon.xyz",
