@@ -8,5 +8,6 @@ export declare const NETWORKS: {
     "kaiyo-1": string;
     localkujira: string;
 };
+export declare const RPCS: Record<NETWORK, string[]>;
 export declare const CHAIN_INFO: Record<NETWORK, ChainInfo>;
 export declare const NETWORK_DEFAULT = "kaiyo-1";

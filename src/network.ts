@@ -12,6 +12,19 @@ export const NETWORKS = {
   [LOCALNET]: "Local",
 };
 
+export const RPCS: Record<NETWORK, string[]> = {
+  [TESTNET]: ["https://rpc.harpoon.kujira.setten.io"],
+  [MAINNET]: [
+    "https://rpc.kaiyo.kujira.setten.io",
+    // "https://kujira.rpc.kjnodes.com",
+    "https://kujira-rpc.polkachu.com",
+    // "https://rpc-kujira.mintthemoon.xyz",
+    // "https://rpc-kujira.synergynodes.com",
+    // "https://kujira-rpc.lavenderfive.com",
+  ],
+  [LOCALNET]: ["http://localhost:26657"],
+};
+
 const chainInfo = (
   chainId: string,
   chainName: string,
