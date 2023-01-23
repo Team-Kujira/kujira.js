@@ -18,7 +18,7 @@ export const RPCS: Record<NETWORK, string[]> = {
     "https://rpc.kaiyo.kujira.setten.io",
     // "https://kujira.rpc.kjnodes.com",
     // "https://kujira-rpc.polkachu.com",
-    // "https://rpc-kujira.mintthemoon.xyz",
+    "https://rpc-kujira.mintthemoon.xyz",
     // "https://rpc-kujira.synergynodes.com",
     // "https://kujira-rpc.lavenderfive.com",
     "https://rpc-kujira.starsquid.io",
