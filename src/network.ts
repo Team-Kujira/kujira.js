@@ -21,6 +21,7 @@ export const RPCS: Record<NETWORK, string[]> = {
     "https://rpc-kujira.mintthemoon.xyz",
     "https://rpc-kujira.synergynodes.com",
     "https://kujira-rpc.lavenderfive.com",
+    "https://rpc-kujira.starsquid.io",
   ],
   [LOCALNET]: ["http://localhost:26657"],
 };
