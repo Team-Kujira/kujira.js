@@ -16,6 +16,7 @@ export const RPCS: Record<NETWORK, string[]> = {
   [TESTNET]: ["https://rpc.harpoon.kujira.setten.io"],
   [MAINNET]: [
     "https://kuji-rpc.kleomedes.network",
+    "https://kujira-rpc.lavenderfive.com",
     "https://kujira-rpc.polkachu.com",
     "https://kujira-rpc.theamsolutions.info",
     "https://kujira.mainnet.rpc.autostake.net",
@@ -23,7 +24,6 @@ export const RPCS: Record<NETWORK, string[]> = {
     "https://rpc-kujira.mintthemoon.xyz",
     "https://rpc-kujira.starsquid.io",
     "https://rpc.kaiyo.kujira.setten.io",
-    // "https://kujira-rpc.lavenderfive.com",
     // "https://rpc-kujira.synergynodes.com",
   ],
   [LOCALNET]: ["http://localhost:26657"],
