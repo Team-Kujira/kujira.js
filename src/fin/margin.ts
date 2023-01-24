@@ -61,6 +61,6 @@ export const fetchPositionsLimit = (
 ): Promise<PositionLimit[]> =>
   queryClient.wasm
     .queryContractSmart(address, {
-      positions: { owner: account },
+      positions: { owner: account.address },
     })
     .then((xs) => xs.positions.map(castPositionLimit(denoms)));
