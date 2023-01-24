@@ -1,6 +1,7 @@
 import Long from "long";
 import { configure, util } from "protobufjs/minimal";
 export * from "./amino";
+export * from "./bignumber";
 export * from "./denom";
 export * as fin from "./fin";
 export * from "./ibc";

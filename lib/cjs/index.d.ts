@@ -1,4 +1,5 @@
 export * from "./amino";
+export * from "./bignumber";
 export * from "./denom";
 export * as fin from "./fin";
 export * from "./ibc";
