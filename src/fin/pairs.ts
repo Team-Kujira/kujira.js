@@ -1,27 +1,7 @@
-import { ATOM, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "./denom";
-import { Precision } from "./fin";
-import { MAINNET, NETWORK, TESTNET } from "./network";
-import { Market, MARKETS_HARPOON, MARKETS_KAIYO } from "./usk";
-
-export type Margin = {
-  market: string;
-  limit?: string;
-  fin_address: string;
-  config: Market;
-};
-
-export type Pair = {
-  address: string;
-  chainID: NETWORK;
-  denoms: [Denom, Denom];
-  precision: Precision;
-  decimalDelta: number;
-  margin?: Margin;
-  multiswap: boolean;
-  pool?: string;
-  queue?: string;
-  calc?: string;
-};
+import { ATOM, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "../denom";
+import { MAINNET, TESTNET } from "../network";
+import { MARKETS_HARPOON, MARKETS_KAIYO } from "../usk";
+import { Pair } from "./types";
 
 export const STAKING = {
   [TESTNET]:

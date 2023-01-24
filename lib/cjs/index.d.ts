@@ -1,13 +1,12 @@
 export * from "./amino";
 export * from "./denom";
-export { FinClient, FinQueryClient } from "./fin";
+export * as fin from "./fin";
 export * from "./ibc";
 export * as kns from "./kns";
 export * from "./msg";
 export * from "./network";
 export * as orca from "./orca";
-export * from "./pairs";
 export * from "./queryClient";
 export * from "./registry";
-export * from "./usk";
+export * as usk from "./usk";
 export * from "./wallets";
