@@ -2,7 +2,6 @@ import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { NETWORK } from "../network";
 import { Market } from "../usk";
-type DenomResponse = { native: string } | { cw20: string } | string;
 
 export type Config = {
   owner: string;

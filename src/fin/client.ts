@@ -7,7 +7,7 @@ import {
   BookResponse,
   Config,
   ConfigResponse,
-  DenomResponse,
+  CW20Denom,
   Order,
   OrderResponse,
   Pair,
@@ -39,7 +39,7 @@ export type History = {
   volume: number;
 }[];
 
-const parseDenom = (response: DenomResponse): Denom => {
+const parseDenom = (response: CW20Denom): Denom => {
   if ("string" === typeof response) {
     return Denom.from(response);
   }
