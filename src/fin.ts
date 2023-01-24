@@ -20,6 +20,10 @@ import {
   Uint128,
 } from "./fin/types";
 export * from "./fin";
+export * from "./fin/client";
+export * from "./fin/margin";
+export * from "./fin/pairs";
+export * from "./fin/types";
 
 export class FinQueryClient implements FinReadOnlyInterface {
   client: CosmWasmClient;

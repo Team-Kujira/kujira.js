@@ -3,6 +3,10 @@ import { CosmWasmClient, ExecuteResult, SigningCosmWasmClient } from "@cosmjs/co
 import { Coin } from "@cosmjs/stargate";
 import { Addr, Asset, BookResponse, ConfigResponse, Decimal, FinReadOnlyInterface, OrderResponse, OrdersResponse, Precision, PriceResponse, SimulationResponse, Uint128 } from "./fin/types";
 export * from "./fin";
+export * from "./fin/client";
+export * from "./fin/margin";
+export * from "./fin/pairs";
+export * from "./fin/types";
 export declare class FinQueryClient implements FinReadOnlyInterface {
     client: CosmWasmClient;
     contractAddress: string;
