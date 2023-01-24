@@ -873,7 +873,7 @@ export const PAIRS: Pair[] = [
       market:
         "kujira1vmnntr773a5p7s4k0t39v6vcgcq87kq2zaw94cy85850n79jx2kq56sqhs",
       limit:
-        "kujira1a4z3h8fryetfdrq5knu6zzqhcvdcvr39ljxlmrmlce85k6e2n8xsuelz5u",
+        "kujira1g38pvehdv63la2ev30k0u4mayv5ml8n9ajq5lqc0a070xf25hsssf9ux7w",
       fin_address:
         "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg",
       config:
