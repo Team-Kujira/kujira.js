@@ -6,6 +6,7 @@ import { defaultPosition as defaultPositionMarket, fetchPosition as fetchPositio
 import { Order } from "./types";
 export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
 export declare type PositionLimit = {
+    idx: string;
     owner: string;
     mint_amount: BigNumber;
     interest_amount: BigNumber;

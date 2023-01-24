@@ -13,6 +13,7 @@ import { Order, OrderResponse } from "./types";
 export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
 
 type PositionLimitResponse = {
+  idx: string;
   owner: string;
   deposit_amount: string;
   mint_amount: string;
@@ -22,6 +23,7 @@ type PositionLimitResponse = {
 };
 
 export type PositionLimit = {
+  idx: string;
   owner: string;
   mint_amount: BigNumber;
   interest_amount: BigNumber;
@@ -32,6 +34,7 @@ export type PositionLimit = {
 const castPositionLimit =
   (denoms: [Denom, Denom]) =>
   (p: PositionLimitResponse): PositionLimit => ({
+    idx: p.idx,
     owner: p.owner,
     mint_amount: BigNumber.from(p.mint_amount),
     interest_amount: BigNumber.from(p.interest_amount),
