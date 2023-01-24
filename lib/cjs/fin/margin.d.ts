@@ -12,3 +12,4 @@ export declare type PositionLimit = {
     order: Order;
 };
 export declare const fetchPositionLimit: (queryClient: KujiraQueryClient, address: string, idx: string, denoms: [Denom, Denom]) => Promise<PositionLimit>;
+export declare const fetchPositionsLimit: (queryClient: KujiraQueryClient, address: string, denoms: [Denom, Denom]) => Promise<PositionLimit[]>;

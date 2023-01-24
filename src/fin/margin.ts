@@ -51,3 +51,14 @@ export const fetchPositionLimit = (
       position: { idx },
     })
     .then(castPositionLimit(denoms));
+
+export const fetchPositionsLimit = (
+  queryClient: KujiraQueryClient,
+  address: string,
+  denoms: [Denom, Denom]
+): Promise<PositionLimit[]> =>
+  queryClient.wasm
+    .queryContractSmart(address, {
+      positions: { owner: address },
+    })
+    .then((xs) => xs.positions.map(castPositionLimit(denoms)));
