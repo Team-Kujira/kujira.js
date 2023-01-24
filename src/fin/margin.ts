@@ -1,3 +1,4 @@
+import { AccountData } from "@cosmjs/launchpad";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
@@ -55,10 +56,11 @@ export const fetchPositionLimit = (
 export const fetchPositionsLimit = (
   queryClient: KujiraQueryClient,
   address: string,
+  account: AccountData,
   denoms: [Denom, Denom]
 ): Promise<PositionLimit[]> =>
   queryClient.wasm
     .queryContractSmart(address, {
-      positions: { owner: address },
+      positions: { owner: account },
     })
     .then((xs) => xs.positions.map(castPositionLimit(denoms)));

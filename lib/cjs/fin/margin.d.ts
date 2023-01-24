@@ -1,3 +1,4 @@
+import { AccountData } from "@cosmjs/launchpad";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
@@ -12,4 +13,4 @@ export declare type PositionLimit = {
     order: Order;
 };
 export declare const fetchPositionLimit: (queryClient: KujiraQueryClient, address: string, idx: string, denoms: [Denom, Denom]) => Promise<PositionLimit>;
-export declare const fetchPositionsLimit: (queryClient: KujiraQueryClient, address: string, denoms: [Denom, Denom]) => Promise<PositionLimit[]>;
+export declare const fetchPositionsLimit: (queryClient: KujiraQueryClient, address: string, account: AccountData, denoms: [Denom, Denom]) => Promise<PositionLimit[]>;
