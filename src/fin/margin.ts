@@ -16,6 +16,7 @@ type PositionLimitResponse = {
   idx: string;
   owner: string;
   deposit_amount: string;
+  margin_amount: string;
   mint_amount: string;
   interest_amount: string;
   liquidation_price: string | null;
@@ -25,6 +26,7 @@ type PositionLimitResponse = {
 export type PositionLimit = {
   idx: string;
   owner: string;
+  margin_amount: BigNumber;
   mint_amount: BigNumber;
   interest_amount: BigNumber;
   liquidation_price: number | null;
@@ -36,6 +38,7 @@ const castPositionLimit =
   (p: PositionLimitResponse): PositionLimit => ({
     idx: p.idx,
     owner: p.owner,
+    margin_amount: BigNumber.from(p.margin_amount),
     mint_amount: BigNumber.from(p.mint_amount),
     interest_amount: BigNumber.from(p.interest_amount),
     liquidation_price: p.liquidation_price

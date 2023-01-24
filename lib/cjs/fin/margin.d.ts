@@ -8,6 +8,7 @@ export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
 export declare type PositionLimit = {
     idx: string;
     owner: string;
+    margin_amount: BigNumber;
     mint_amount: BigNumber;
     interest_amount: BigNumber;
     liquidation_price: number | null;
