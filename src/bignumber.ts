@@ -1,12 +1,8 @@
 const PRECISION = 6;
-import { BigNumber, parseFixed } from "@ethersproject/bignumber";
+import { BigNumber, formatFixed, parseFixed } from "@ethersproject/bignumber";
 
 export const toHuman = (amount: BigNumber, decimals: number) =>
-  amount
-    .mul(10 ** PRECISION)
-    .div(BigNumber.from(10).pow(decimals))
-    .toNumber() /
-  10 ** PRECISION;
+  parseFloat(formatFixed(amount, decimals));
 
 export const fromHumanString = (amount: string, decimals: number) => {
   try {
