@@ -23,6 +23,8 @@ const labels: Record<string, string> = {
     "LOCAL",
   "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk":
     "USK",
+  "factory:kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll:uusk":
+    "USK",
   "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk":
     "USK",
   "factory:kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7:uusk":
@@ -96,6 +98,8 @@ const baseDenomToSymbol = (denom: string): string => {
     ? (ibc as Record<string, any>)[denom]?.base_denom
     : denom.startsWith("factory/")
     ? denom.split("/")[2]
+    : denom.startsWith("factory:")
+    ? denom.split(":")[2]
     : denom;
 
   if (!baseDenom) return "Unknown";
