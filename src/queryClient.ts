@@ -10,6 +10,7 @@ import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { GovExtension, setupGovExtension } from "./cosmos/gov";
 import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
+import { GravityExtension, setupGravityExtension } from "./gravity/v1";
 import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
 import { OracleExtension, setupOracleExtension } from "./kujira/kujira.oracle";
 import {
@@ -31,7 +32,8 @@ export type KujiraQueryClient = s.QueryClient &
   StakingExtension &
   s.TxExtension &
   WasmExtension &
-  s.IbcExtension;
+  s.IbcExtension &
+  GravityExtension;
 
 export const kujiraQueryClient = ({
   client,
@@ -53,7 +55,8 @@ export const kujiraQueryClient = ({
     setupStakingExtension,
     s.setupTxExtension,
     setupWasmExtension,
-    s.setupIbcExtension
+    s.setupIbcExtension,
+    setupGravityExtension
   );
 
 export const fetchTokens = (
