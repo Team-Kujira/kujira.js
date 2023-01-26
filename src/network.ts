@@ -13,7 +13,10 @@ export const NETWORKS = {
 };
 
 export const RPCS: Record<NETWORK, string[]> = {
-  [TESTNET]: ["https://rpc.harpoon.kujira.setten.io"],
+  [TESTNET]: [
+    "https://rpc.harpoon.kujira.setten.io",
+    "https://test-rpc-kujira.mintthemoon.xyz",
+  ],
   [MAINNET]: [
     "https://kuji-rpc.kleomedes.network",
     "https://kujira-rpc.lavenderfive.com",
@@ -27,7 +30,7 @@ export const RPCS: Record<NETWORK, string[]> = {
     "https://rpc-kujira.starsquid.io",
     "https://rpc-kujira.synergynodes.com",
     "https://rpc-kujira.whispernode.com",
-    "https://rpc.kaiyo.kujira.setten.io",
+    "https://rpc.cosmos.directory/kujira",
   ],
   [LOCALNET]: ["http://localhost:26657"],
 };
@@ -85,8 +88,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
   [TESTNET]: chainInfo(
     TESTNET,
     "Kujira Testnet",
-    "https://rpc.harpoon.kujira.setten.io",
-    "https://lcd.harpoon.kujira.setten.io",
+    "https://test-rpc-kujira.mintthemoon.xyz",
+    "https://test-lcd-kujira.mintthemoon.xyz",
     [
       {
         coinDenom: "DEMO",
@@ -111,8 +114,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
   [MAINNET]: chainInfo(
     MAINNET,
     "Kujira",
-    "https://rpc.kaiyo.kujira.setten.io",
-    "https://lcd.kaiyo.kujira.setten.io",
+    "https://rpc.cosmos.directory/kujira",
+    "https://rest.cosmos.directory/kujira",
     [
       {
         coinDenom: "USK",
