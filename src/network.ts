@@ -12,7 +12,7 @@ export const NETWORKS = {
   [LOCALNET]: "Local",
 };
 
-export const RPCS: Record<NETWORK, string[]> = {
+export const RPCS: Record<string, string[]> = {
   [TESTNET]: [
     "https://rpc.harpoon.kujira.setten.io",
     "https://test-rpc-kujira.mintthemoon.xyz",
@@ -33,6 +33,10 @@ export const RPCS: Record<NETWORK, string[]> = {
     "https://rpc.cosmos.directory/kujira",
   ],
   [LOCALNET]: ["http://localhost:26657"],
+  "gravity-bridge-3": [
+    "https://gravity-rpc.synergynodes.com",
+    "https://gravitybridge.rpc.kjnodes.com",
+  ],
 };
 
 const chainInfo = (
