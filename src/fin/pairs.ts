@@ -253,7 +253,7 @@ export const PAIRS: Pair[] = [
     precision: { decimal_places: 4 },
     decimalDelta: 0,
     multiswap: true,
-    pool: "kujira1nxfag552cng6lwf2q3duyepgvenr670ngj8uljpeydy0rvftgt9qkgd6sq",
+    pool: "kujira1rpqhczdrgaa6w0h9fukdcppme3074zcay8ge8lazwefdawp03vwsnpc7ya",
   },
   {
     address:

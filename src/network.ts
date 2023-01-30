@@ -30,7 +30,7 @@ export const RPCS: Record<string, string[]> = {
     "https://rpc-kujira.starsquid.io",
     "https://rpc-kujira.synergynodes.com",
     "https://rpc-kujira.whispernode.com",
-    "http://rpc.kaiyo.kujira.setten.io",
+    "https://rpc.kaiyo.kujira.setten.io",
   ],
   [LOCALNET]: ["http://localhost:26657"],
   "gravity-bridge-3": [
