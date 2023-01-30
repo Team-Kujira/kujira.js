@@ -402,6 +402,22 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp",
+    chainID: MAINNET,
+    denoms: [
+      Denom.from(
+        "ibc/2F1447818CF99498AE62D9FB4D5E0C9FD48C68FC118C34D2ECFFFED0AD082196"
+      ),
+      USK,
+    ],
+    precision: { decimal_places: 5 },
+    decimalDelta: 0,
+    multiswap: false,
+    pool: "kujira13ta4a6cu29na9dch3rtyqasgx57ju3z98530cet46tn5v7sx6k2qg7g3zk",
+  },
+
+  {
+    address:
       "kujira1z7quf5t6g7spjnu2qhcp2x2ksnz4zfut9k73uutpg2q95dd008fqsprtvl",
     chainID: MAINNET,
     denoms: [
