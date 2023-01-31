@@ -9,6 +9,9 @@ const go = async (rpc) => {
   const client = kujiraQueryClient({ client: tm });
   return fetchTokens(client)
     .then((supply) => {
+      if (rpc.includes("mars")) {
+        console.log(supply);
+      }
       return supply.map((s) => {
         return (
           s.denom &&

@@ -37,8 +37,8 @@ const labels: Record<string, string> = {
   gravity0xdAC17F958D2ee523a2206206994597C13D831ec7: "gUSDT",
   gravity0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599: "gwBTC",
   gravity0x6B175474E89094C44Da98b954EedeAC495271d0F: "gDAI",
-
   "frax-wei": "FRAX",
+  inj: "INJ",
   "dai-wei": "DAI",
   "wbtc-satoshi": "wBTC",
   "wbnb-wei": "wBNB",
