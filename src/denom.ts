@@ -12,6 +12,7 @@ const labels: Record<string, string> = {
   "wavax-wei": "wAVAX",
   basecro: "CRO",
   "weth-wei": "wETH",
+  "link-wei": "LINK",
   "dot-planck": "DOT",
   aevmos: "EVMOS",
   demo: "DEMO",
