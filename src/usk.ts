@@ -1,4 +1,3 @@
-import { AccountData } from "@cosmjs/proto-signing";
 import { BigNumber } from "@ethersproject/bignumber";
 import { KujiraQueryClient } from ".";
 import { ATOM, Denom, USK, USK_TESTNET } from "./denom";
@@ -206,7 +205,7 @@ export const defaultPosition = (owner?: string): Position => ({
 export const fetchPosition = (
   queryClient: KujiraQueryClient,
   address: string,
-  account: AccountData
+  account: { address: string }
 ): Promise<Position> =>
   queryClient.wasm
     .queryContractSmart(address, {

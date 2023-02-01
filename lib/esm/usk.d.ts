@@ -1,4 +1,3 @@
-import { AccountData } from "@cosmjs/proto-signing";
 import { BigNumber } from "@ethersproject/bignumber";
 import { KujiraQueryClient } from ".";
 import { Denom } from "./denom";
@@ -26,4 +25,6 @@ export declare type Position = {
     liquidation_price: number | null;
 };
 export declare const defaultPosition: (owner?: string) => Position;
-export declare const fetchPosition: (queryClient: KujiraQueryClient, address: string, account: AccountData) => Promise<Position>;
+export declare const fetchPosition: (queryClient: KujiraQueryClient, address: string, account: {
+    address: string;
+}) => Promise<Position>;
