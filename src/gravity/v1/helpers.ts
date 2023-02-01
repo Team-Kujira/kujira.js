@@ -153,9 +153,9 @@ export const setPaginationParams = (
     // let uint8arr = new Uint8Array(Buffer.from(data,'base64'));
 
     // Uint8Array to String
-    options.params["pagination.key"] = Buffer.from(pagination.key).toString(
-      "base64"
-    );
+    options.params["pagination.key"] = globalThis.Buffer.from(
+      pagination.key
+    ).toString("base64");
   }
   if (typeof pagination?.limit !== "undefined") {
     options.params["pagination.limit"] = pagination.limit.toString();
