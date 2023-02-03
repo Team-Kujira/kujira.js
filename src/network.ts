@@ -36,6 +36,7 @@ export const RPCS: Record<string, string[]> = {
   "gravity-bridge-3": [
     "https://gravity-rpc.synergynodes.com",
     "https://gravitybridge.rpc.kjnodes.com",
+    "https://gravitybridge-rpc.lavenderfive.com",
   ],
 };
 
