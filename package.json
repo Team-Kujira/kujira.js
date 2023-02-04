@@ -21,6 +21,7 @@
     "@keplr-wallet/types": "^0.11.12",
     "cosmjs-types": "0.5.2",
     "long": "^4.0.0",
+    "text-encoding": "^0.7.0",
     "ts-node": "^10.9.1",
     "yarn": "^1.22.19"
   },
