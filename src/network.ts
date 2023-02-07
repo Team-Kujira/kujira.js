@@ -19,10 +19,11 @@ export const RPCS: Record<string, string[]> = {
   ],
   [MAINNET]: [
     "https://kuji-rpc.kleomedes.network",
+    "https://kujira-mainnet-rpc.autostake.net",
+    "https://kujira-rpc.ibs.team",
     "https://kujira-rpc.lavenderfive.com",
     "https://kujira-rpc.polkachu.com",
     "https://kujira-rpc.theamsolutions.info",
-    "https://kujira-mainnet-rpc.autostake.net",
     "https://kujira.rpc.ghostinnet.com",
     "https://kujira.rpc.kjnodes.com",
     "https://rpc-kujira.mintthemoon.xyz",
