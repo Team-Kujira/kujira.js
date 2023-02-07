@@ -418,7 +418,7 @@ export const PAIRS: Pair[] = [
 
   {
     address:
-      "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp",
+      "kujira1ddeadmhum3umygv84frhc87gl2grzjmx9x8fuhjts7zqwuc39xuq53w3d8",
     chainID: MAINNET,
     denoms: [
       Denom.from(
