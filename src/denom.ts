@@ -367,6 +367,7 @@ export class Denom {
     if (this.symbol === "SHD") this.decimals = 8;
     if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
+    if (this.symbol === "wTAO") this.decimals = 9;
     // OKX USDT
     if (
       this.reference ===
