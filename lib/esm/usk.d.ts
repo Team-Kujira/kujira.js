@@ -17,6 +17,13 @@ export declare type Market = {
 };
 export declare const MARKETS_HARPOON: Record<string, Market>;
 export declare const MARKETS_KAIYO: Record<string, Market>;
+export declare type PositionResponse = {
+    owner: string;
+    deposit_amount: string;
+    mint_amount: string;
+    interest_amount: string;
+    liquidation_price: string | null;
+};
 export declare type Position = {
     owner: string;
     deposit_amount: BigNumber;
@@ -24,6 +31,7 @@ export declare type Position = {
     interest_amount: BigNumber;
     liquidation_price: number | null;
 };
+export declare const castPosition: (p: PositionResponse) => Position;
 export declare const defaultPosition: (owner?: string) => Position;
 export declare const fetchPosition: (queryClient: KujiraQueryClient, address: string, account: {
     address: string;

@@ -168,7 +168,7 @@ export const MARKETS_KAIYO: Record<string, Market> = {
   },
 };
 
-type PositionResponse = {
+export type PositionResponse = {
   owner: string;
   deposit_amount: string;
   mint_amount: string;
@@ -184,7 +184,7 @@ export type Position = {
   liquidation_price: number | null;
 };
 
-const castPosition = (p: PositionResponse): Position => ({
+export const castPosition = (p: PositionResponse): Position => ({
   owner: p.owner,
   deposit_amount: BigNumber.from(p.deposit_amount),
   mint_amount: BigNumber.from(p.mint_amount),
