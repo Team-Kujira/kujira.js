@@ -193,5 +193,7 @@ export const formatPrice = (
   denoms: [Denom, Denom]
 ): number => {
   const [, quote] = denoms;
-  return denom.eq(quote) ? factor(denoms) / price : price * factor(denoms);
+  return price && denom.eq(quote)
+    ? factor(denoms) / price
+    : price * factor(denoms);
 };
