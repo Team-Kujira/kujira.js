@@ -1,4 +1,3 @@
-const PRECISION = 6;
 import { BigNumber, formatFixed, parseFixed } from "@ethersproject/bignumber";
 
 export const toHuman = (amount: BigNumber, decimals: number) =>
@@ -12,14 +11,13 @@ export const fromHumanString = (amount: string, decimals: number) => {
   }
 };
 
-export const mulDec = (a: BigNumber, x: number): BigNumber =>
-  a.mul(Math.floor(x * 10 ** PRECISION)).div(BigNumber.from(10).pow(PRECISION));
+export const mulDec = (a: BigNumber, x: number): BigNumber => {
+  const dec = parseFixed(x.toFixed(18), 18);
+  return a.mul(dec).div(BigNumber.from(10).pow(18));
+};
 
-export const divToNumber = (a: BigNumber, x: BigNumber): number =>
-  x.isZero()
+export const divToNumber = (a: BigNumber, b: BigNumber): number => {
+  return b.isZero()
     ? 0
-    : a
-        .mul(10 ** PRECISION)
-        .div(x)
-        .toNumber() /
-      10 ** PRECISION;
+    : parseFloat(formatFixed(a.mul(BigNumber.from(10).pow(18)).div(b), 18));
+};

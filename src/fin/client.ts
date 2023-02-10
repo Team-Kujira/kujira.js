@@ -14,6 +14,7 @@ import {
   Pool,
   PoolResponse,
   Simulation,
+  SimulationResponse,
 } from "./types";
 
 export const castBook =
@@ -82,14 +83,40 @@ export const simulate = async (
   amount: BigNumber,
   denom: Denom,
   pair: Pair,
-  book: Book
+  book: Book | null
 ): Promise<Simulation> => {
-  const sell = denom.eq(pair.denoms[0]);
+  let sim = book
+    ? await simulateLocal(amount, denom, pair, book).catch(() =>
+        simulateQuery(query, amount, denom, pair)
+      )
+    : await simulateQuery(query, amount, denom, pair);
 
-  const pools = [...(sell ? book.quote : book.base)].reverse();
-  const f = BigNumber.from(10).pow(
-    pair.denoms[0].decimals - pair.denoms[1].decimals
+  const beliefReturnAmount = sim.returnAmount.add(sim.commissionAmount);
+  const slippage = divToNumber(
+    beliefReturnAmount.sub(sim.returnAmount),
+    beliefReturnAmount
   );
+
+  return {
+    returnAmount: sim.returnAmount,
+    spreadAmount: sim.spreadAmount,
+    commissionAmount: sim.commissionAmount,
+    rate: divToNumber(sim.returnAmount, amount),
+    slippage,
+  };
+};
+
+const simulateLocal = async (
+  amount: BigNumber,
+  denom: Denom,
+  pair: Pair,
+  book: Book
+): Promise<
+  Pick<Simulation, "returnAmount" | "spreadAmount" | "commissionAmount">
+> => {
+  const sell = denom.eq(pair.denoms[0]);
+  let returned = BigNumber.from(0);
+  const pools = [...(sell ? book.quote : book.base)].reverse();
   const mid = Math.floor(
     (book.base.length && book.quote.length
       ? (book.base[0].quotePrice + book.quote[0].quotePrice) / 2
@@ -97,50 +124,31 @@ export const simulate = async (
   );
 
   let offer = amount;
-  const perfect = sell
-    ? offer.mul(mid).div(f).div(1000000)
-    : offer.mul(f).mul(1000000).div(mid); // mulDec(offer, sell ? mid / f : f / mid);
+  const perfect = sell ? mulDec(offer, mid) : mulDec(offer, 1 / mid); // mulDec(offer, sell ? mid / f : f / mid);
 
-  let returned = BigNumber.from(0);
   while (offer.gt(0)) {
     const pool = pools.pop();
+
     if (!pool) break;
 
+    const price = pool.quotePrice / factor(pair.denoms);
+
     const poolValue = sell
-      ? pool.totalOfferAmount
-          .mul(f)
-          .mul(1000000)
-          .div(Math.floor(pool.quotePrice * 1000000))
-      : pool.totalOfferAmount
-          .mul(Math.floor(pool.quotePrice * 1000000))
-          .div(f)
-          .div(1000000);
+      ? mulDec(pool.totalOfferAmount, 1 / price)
+      : mulDec(pool.totalOfferAmount, price);
 
     const consumedOffer = poolValue.gt(offer) ? offer : poolValue;
+
     const consumedAsk = sell
-      ? consumedOffer
-          .mul(Math.floor(pool.quotePrice * 1000000))
-          .div(f)
-          .div(1000000)
-      : consumedOffer
-          .mul(f)
-          .mul(1000000)
-          .div(Math.floor(pool.quotePrice * 1000000));
+      ? mulDec(consumedOffer, price)
+      : mulDec(consumedOffer, 1 / price);
 
     returned = returned.add(consumedAsk);
     offer = offer.sub(consumedOffer);
   }
 
-  if (offer.gt(0)) {
-    const res = await query.wasm.queryContractSmart(pair.address, {
-      simulation: {
-        offer_asset: {
-          info: { native_token: { denom: denom.reference } },
-          amount: amount.toString(),
-        },
-      },
-    });
-    returned = BigNumber.from(res.return_amount);
+  if (!offer.isZero()) {
+    throw new Error("Out of orders");
   }
 
   const feeAmount = 0.0015;
@@ -149,15 +157,41 @@ export const simulate = async (
   const spreadAmount = perfect.sub(returned);
   const returnAmount = returned.sub(commissionAmount);
 
-  const slippage = divToNumber(spreadAmount, perfect);
-
   return {
-    returnAmount: returnAmount,
-    spreadAmount: spreadAmount,
-    commissionAmount: commissionAmount,
-    rate: sell
-      ? divToNumber(returned.mul(f), amount)
-      : divToNumber(returned, amount.mul(f)),
-    slippage,
+    returnAmount,
+    spreadAmount,
+    commissionAmount,
   };
+};
+
+const simulateQuery = (
+  query: KujiraQueryClient,
+  amount: BigNumber,
+  denom: Denom,
+  pair: Pair
+): Promise<
+  Pick<Simulation, "returnAmount" | "spreadAmount" | "commissionAmount">
+> =>
+  query.wasm
+    .queryContractSmart(pair.address, {
+      simulation: {
+        offer_asset: {
+          info: { native_token: { denom: denom.reference } },
+          amount: amount.toString(),
+        },
+      },
+    })
+    .then((res: SimulationResponse) => ({
+      returnAmount: BigNumber.from(res.return_amount),
+      spreadAmount: BigNumber.from(res.commission_amount),
+      commissionAmount: BigNumber.from(res.commission_amount),
+    }));
+
+export const formatPrice = (
+  price: number,
+  denom: Denom,
+  denoms: [Denom, Denom]
+): number => {
+  const [, quote] = denoms;
+  return denom.eq(quote) ? factor(denoms) / price : price * factor(denoms);
 };

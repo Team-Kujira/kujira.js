@@ -13,4 +13,5 @@ export declare type History = {
     volume: number;
 }[];
 export declare const castOrder: (denoms: [Denom, Denom]) => (response: OrderResponse) => Order;
-export declare const simulate: (query: KujiraQueryClient, amount: BigNumber, denom: Denom, pair: Pair, book: Book) => Promise<Simulation>;
+export declare const simulate: (query: KujiraQueryClient, amount: BigNumber, denom: Denom, pair: Pair, book: Book | null) => Promise<Simulation>;
+export declare const formatPrice: (price: number, denom: Denom, denoms: [Denom, Denom]) => number;
