@@ -15128,6 +15128,27 @@
                     "type_asset": "cw20"
                 },
                 {
+                    "address": "terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8",
+                    "base": "cw20:terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8",
+                    "denom_units": [
+                        {
+                            "denom": "cw20:terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "xastro",
+                            "exponent": 6
+                        }
+                    ],
+                    "display": "xastro",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/astro.png"
+                    },
+                    "name": "Staked Astroport Token",
+                    "symbol": "xASTRO",
+                    "type_asset": "cw20"
+                },
+                {
                     "address": "terra1xzkel96e5e8vfmqw7valzdzzv9hqasfyslclvnmvxdejvpda3xwsskxzus",
                     "base": "cw20:terra1xzkel96e5e8vfmqw7valzdzzv9hqasfyslclvnmvxdejvpda3xwsskxzus",
                     "denom_units": [
