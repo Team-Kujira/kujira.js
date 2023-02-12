@@ -18,6 +18,8 @@ const labels: Record<string, string> = {
   demo: "DEMO",
   local: "LOCAL",
   swth: "SWTH",
+  aacre: "ACRE",
+  aplanq: "PLANQ",
   "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo": "DEMO",
   "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local": "LOCAL",
   "factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local": "LOCAL",
@@ -62,6 +64,9 @@ const labels: Record<string, string> = {
     "whLOCAL",
   "cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26":
     "ASTRO",
+
+  "cw20:terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8":
+    "xASTRO",
   "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD",
   "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz":
     "dUST",
@@ -161,6 +166,13 @@ const ics20: Record<string, ICS20> = {
   "cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26": {
     contract:
       "terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26",
+    router: "terra1d90p5lacfxnqgjxjupu234lxnxyeu8fdeef4d0e0nqy3p30r7gss4myn9x",
+    channel: "channel-34",
+  },
+  // xASTRO
+  "cw20:terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8": {
+    contract:
+      "terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8",
     router: "terra1d90p5lacfxnqgjxjupu234lxnxyeu8fdeef4d0e0nqy3p30r7gss4myn9x",
     channel: "channel-34",
   },
@@ -368,6 +380,8 @@ export class Denom {
     if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
     if (this.symbol === "wTAO") this.decimals = 9;
+    if (this.symbol === "ACRE") this.decimals = 18;
+    if (this.symbol === "PLANQ") this.decimals = 18;
     // OKX USDT
     if (
       this.reference ===
