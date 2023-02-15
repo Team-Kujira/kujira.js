@@ -10,3 +10,4 @@ export * as orca from "./orca";
 export * from "./queryClient";
 export * from "./registry";
 export * as usk from "./usk";
+export * from "./utils";
