@@ -1,6 +1,7 @@
 import ibc from "./resources/tokens.json";
 
 const labels: Record<string, string> = {
+  wei: "OKT",
   ugraviton: "GRAV",
   usdt: "USDT",
   usat: "NBTC",
