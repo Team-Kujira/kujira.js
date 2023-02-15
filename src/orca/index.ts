@@ -163,6 +163,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
             "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539"
           ),
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
         {
           label: "wBNB",
@@ -175,6 +176,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
             "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833"
           ),
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
         {
           label: "wETH",
@@ -187,6 +189,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
             "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
           ),
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
         {
           label: "LUNA",
@@ -199,6 +202,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
             "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986"
           ),
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
         {
           label: "gPAXG",
@@ -211,6 +215,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
             "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
           ),
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
         {
           label: "NBTC",
@@ -221,6 +226,7 @@ export const getMarkets = (network?: NETWORK): Array<Market> => {
           ),
           bidDenom: USK,
           repayDenom: USK,
+          activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
         },
 
         // {
