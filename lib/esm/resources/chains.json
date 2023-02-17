@@ -17327,7 +17327,9 @@
         {
             "$schema": "../chain.schema.json",
             "apis": {
-                "rest": [],
+                "rest": [
+                    { "address": "https://pisco-lcd.terra.dev", "provider": "tfl" }
+                ],
                 "rpc": [
                     {
                         "address": "https://terra-testnet-rpc.polkachu.com",
@@ -17398,6 +17400,10 @@
                 "rpc": [
                     {
                         "address": "https://test-rpc-kujira.mintthemoon.xyz",
+                        "provider": "mintthemoon"
+                    },
+                    {
+                        "address": "https://test-lcd-kujira.mintthemoon.xyz",
                         "provider": "mintthemoon"
                     }
                 ]
