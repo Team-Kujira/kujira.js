@@ -17328,7 +17328,12 @@
             "$schema": "../chain.schema.json",
             "apis": {
                 "rest": [],
-                "rpc": []
+                "rpc": [
+                    {
+                        "address": "https://terra-testnet-rpc.polkachu.com",
+                        "provider": "polkachu"
+                    }
+                ]
             },
             "assets": [
                 {
@@ -17390,7 +17395,12 @@
             "$schema": "../../chain.schema.json",
             "apis": {
                 "rest": [],
-                "rpc": []
+                "rpc": [
+                    {
+                        "address": "https://test-rpc-kujira.mintthemoon.xyz",
+                        "provider": "mintthemoon"
+                    }
+                ]
             },
             "assets": [
                 {
