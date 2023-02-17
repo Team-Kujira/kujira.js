@@ -43,8 +43,9 @@ const go = async (rpc) => {
     });
 };
 
-await go("https://rpc.harpoon.kujira.setten.io");
+await go("https://test-rpc-kujira.mintthemoon.xyz");
 await go("https://rpc.kaiyo.kujira.setten.io");
+await go("https://terra-testnet-rpc.polkachu.com");
 
 await Promise.all(
   chains.mainnet.map(({ chain_name }) => {
