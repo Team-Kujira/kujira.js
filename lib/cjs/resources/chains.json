@@ -17376,7 +17376,7 @@
             "genesis": {
                 "genesis_url": "https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json"
             },
-            "network_type": "mainnet",
+            "network_type": "testnet",
             "node_home": "$HOME/.terra",
             "peers": {
                 "persistent_peers": [],
@@ -17384,6 +17384,71 @@
             },
             "pretty_name": "Terra2",
             "slip44": 330,
+            "status": "live"
+        },
+        {
+            "$schema": "../../chain.schema.json",
+            "apis": {
+                "rest": [],
+                "rpc": []
+            },
+            "assets": [
+                {
+                    "base": "ukuji",
+                    "denom_units": [
+                        {
+                            "denom": "ukuji",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "kuji",
+                            "exponent": 6
+                        }
+                    ],
+                    "description": "The native staking and governance token of the Kujira chain.",
+                    "display": "kuji",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png"
+                    },
+                    "name": "Kuji",
+                    "symbol": "KUJI"
+                }
+            ],
+            "bech32_prefix": "kujira",
+            "chain_id": "harpoon-4",
+            "chain_name": "kujira",
+            "codebase": {
+                "compatible_versions": ["v0.4.0"],
+                "git_repo": "https://github.com/Team-Kujira/core",
+                "recommended_version": "v0.4.0"
+            },
+            "daemon_name": "kujirad",
+            "explorers": [
+                {
+                    "kind": "kujira",
+                    "tx_page": "https://finder.kujira.app/harpoon-4/tx/${txHash}",
+                    "url": "https://finder.kujira.app"
+                }
+            ],
+            "fees": {
+                "fee_tokens": [
+                    {
+                        "denom": "ukuji",
+                        "fixed_min_gas_price": 0
+                    }
+                ]
+            },
+            "genesis": {
+                "genesis_url": "https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json"
+            },
+            "key_algos": ["secp256k1"],
+            "logo_URIs": {
+                "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kujira-chain-logo.png"
+            },
+            "network_type": "testnet",
+            "node_home": "$HOME/.kujira",
+            "pretty_name": "Kujira",
+            "slip44": 118,
             "status": "live"
         }
     ]
