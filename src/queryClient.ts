@@ -8,6 +8,7 @@ import {
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
+import { AllianceExtension, setupAllianceExtension } from "./alliance";
 import {
   BankExtensionExtended,
   setupBankExtensionExtended,
@@ -37,7 +38,8 @@ export type KujiraQueryClient = s.QueryClient &
   s.TxExtension &
   WasmExtension &
   s.IbcExtension &
-  GravityExtension;
+  GravityExtension &
+  AllianceExtension;
 
 export const kujiraQueryClient = ({
   client,
@@ -60,7 +62,8 @@ export const kujiraQueryClient = ({
     s.setupTxExtension,
     setupWasmExtension,
     s.setupIbcExtension,
-    setupGravityExtension
+    setupGravityExtension,
+    setupAllianceExtension
   );
 
 export const fetchTokens = (

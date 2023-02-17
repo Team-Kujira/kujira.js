@@ -179,4 +179,13 @@ export declare const msg: {
         msgValsetUpdatedClaim: (data: import("./gravity/v1/msgs").MsgValsetUpdatedClaim) => import("@cosmjs/proto-signing").EncodeObject;
         msgValsetUpdatedClaimResponse: (data: import("./gravity/v1/msgs").MsgValsetUpdatedClaimResponse) => import("@cosmjs/proto-signing").EncodeObject;
     };
+    alliance: {
+        msgDelegate: (x: import("./alliance/tx").MsgDelegate) => import("@cosmjs/proto-signing").EncodeObject;
+        msgDelegateResponse: (x: import("./alliance/tx").MsgDelegateResponse) => import("@cosmjs/proto-signing").EncodeObject;
+        msgUndelegate: (x: import("./alliance/tx").MsgUndelegate) => import("@cosmjs/proto-signing").EncodeObject;
+        msgUndelegateResponse: (x: import("./alliance/tx").MsgUndelegateResponse) => import("@cosmjs/proto-signing").EncodeObject;
+        msgRedelegate: (x: import("./alliance/tx").MsgRedelegate) => import("@cosmjs/proto-signing").EncodeObject;
+        msgRedelegateResponse: (x: import("./alliance/tx").MsgRedelegateResponse) => import("@cosmjs/proto-signing").EncodeObject;
+        msgClaimDelegationRewards: (x: import("./alliance/tx").MsgClaimDelegationRewards) => import("@cosmjs/proto-signing").EncodeObject;
+    };
 };

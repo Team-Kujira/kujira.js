@@ -25,6 +25,7 @@ import {
   Header,
   Misbehaviour,
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
+import * as alliance from "./alliance";
 import * as gravity from "./gravity/v1";
 import * as denom from "./kujira/kujira.denom";
 import * as oracle from "./kujira/kujira.oracle";
@@ -82,6 +83,7 @@ const types = [
   ...proposalTypes,
   ...extraIbc,
   ...gravity.types,
+  ...alliance.types,
 ];
 
 export const registry = new Registry(<any>types);
