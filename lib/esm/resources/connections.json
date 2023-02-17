@@ -1,5 +1,38 @@
 {
-    "testnet": [],
+    "testnet": [
+        {
+            "$schema": "../ibc_data.schema.json",
+            "chain-1": {
+                "chain-name": "kujira",
+                "client-id": "07-tendermint-3",
+                "connection-id": "connection-2"
+            },
+            "chain-2": {
+                "chain-name": "terra2",
+                "client-id": "07-tendermint-2017",
+                "connection-id": "connection-1559"
+            },
+            "channels": [
+                {
+                    "chain-1": {
+                        "channel-id": "channel-44",
+                        "port-id": "transfer"
+                    },
+                    "chain-2": {
+                        "channel-id": "channel-257",
+                        "port-id": "transfer"
+                    },
+                    "ordering": "unordered",
+                    "version": "ics20-1",
+                    "tags": {
+                        "status": "live",
+                        "preferred": true,
+                        "dex": "osmosis"
+                    }
+                }
+            ]
+        }
+    ],
     "mainnet": [
         {
             "$schema": "../ibc_data.schema.json",
