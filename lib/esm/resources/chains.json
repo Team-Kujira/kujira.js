@@ -17387,7 +17387,7 @@
                 "persistent_peers": [],
                 "seeds": []
             },
-            "pretty_name": "Terra2",
+            "pretty_name": "Terra2 Testnet",
             "slip44": 330,
             "status": "live"
         },
@@ -17457,7 +17457,7 @@
             },
             "network_type": "testnet",
             "node_home": "$HOME/.kujira",
-            "pretty_name": "Kujira",
+            "pretty_name": "Kujira Testnet",
             "slip44": 118,
             "status": "live"
         }
