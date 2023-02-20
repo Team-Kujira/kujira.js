@@ -383,6 +383,7 @@ export class Denom {
     if (this.symbol === "wTAO") this.decimals = 9;
     if (this.symbol === "ACRE") this.decimals = 18;
     if (this.symbol === "PLANQ") this.decimals = 18;
+    if (this.symbol === "SWTH") this.decimals = 8;
     // OKX USDT
     if (
       this.reference ===
