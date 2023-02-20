@@ -53,6 +53,20 @@ export const PAIRS: Pair[] = [
 
   {
     address:
+      "kujira17v40udkwtm9tt2wt73ejj6xh9x4ts8at6zv6nhmusdj4x6ffnl2qpep73h",
+    chainID: MAINNET,
+    denoms: [
+      KUJI,
+      Denom.from("factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local"),
+    ],
+    precision: { decimal_places: 3 },
+    decimalDelta: 0,
+    multiswap: false,
+    pool: "kujira13p352kxfntjkvl0698za8hsfhfxz05kg9h9zxcwyjq72eh8wjpjqr9ugen",
+  },
+
+  {
+    address:
       "kujira193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyq66wfrf",
     chainID: MAINNET,
     denoms: [KUJI, USK],
