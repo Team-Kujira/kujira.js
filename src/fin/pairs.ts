@@ -694,10 +694,10 @@ export const PAIRS: Pair[] = [
       ),
       USK,
     ],
-    precision: { decimal_places: 3 },
+    precision: { decimal_places: 5 },
     decimalDelta: 2,
     multiswap: false,
-    pool: "kujira1zdedwnk5e9axmg5efpu49hy6v06ypu3putvmu86jaw5rpzztqqks4x64f6",
+    pool: "kujira1ytwhduql6krgdp46xr8m9pt79dhdta0n23d5c00v7xxe5ru0hmvsp9uh8v",
   },
 
   {
