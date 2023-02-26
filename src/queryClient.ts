@@ -1,4 +1,3 @@
-import { setupWasmExtension, WasmExtension } from "@cosmjs/cosmwasm-stargate";
 import * as s from "@cosmjs/stargate";
 import { Coin } from "@cosmjs/stargate";
 import {
@@ -15,6 +14,10 @@ import {
 } from "./cosmos/bank";
 import { GovExtension, setupGovExtension } from "./cosmos/gov";
 import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
+import {
+  setupWasmExtensionExtended,
+  WasmExtensionExtended,
+} from "./cosmwasm/wasm";
 import { GravityExtension, setupGravityExtension } from "./gravity/v1";
 import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
 import { OracleExtension, setupOracleExtension } from "./kujira/kujira.oracle";
@@ -36,7 +39,7 @@ export type KujiraQueryClient = s.QueryClient &
   SlashingExtension &
   StakingExtension &
   s.TxExtension &
-  WasmExtension &
+  WasmExtensionExtended &
   s.IbcExtension &
   GravityExtension &
   AllianceExtension;
@@ -60,7 +63,7 @@ export const kujiraQueryClient = ({
     s.setupSlashingExtension,
     setupStakingExtension,
     s.setupTxExtension,
-    setupWasmExtension,
+    setupWasmExtensionExtended,
     s.setupIbcExtension,
     setupGravityExtension,
     setupAllianceExtension
