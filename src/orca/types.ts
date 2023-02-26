@@ -13,7 +13,7 @@ export enum Protocol {
   Mandala = "Mandala",
   USK = "USK",
   FIN = "FIN Margin",
-  BOW = "FIN Perpetuals",
+  PERP = "FIN Perpetuals",
 }
 
 export enum MarketType {
@@ -22,16 +22,8 @@ export enum MarketType {
   Mandala = "Lending",
   USK = "Lending",
   FIN = "Margin",
-  BOW = "Perpetuals",
+  PERP = "Perpetuals",
 }
-
-export type MarketConfig = {
-  bidThreshold: BigNumber;
-  maxSlot: number;
-  premiumRatePerSlot: number;
-  waitingPeriod: number;
-  market: string;
-};
 
 export type Market = {
   label: string;
@@ -44,6 +36,11 @@ export type Market = {
   address?: string;
   botFirst?: boolean;
   activators?: string[];
+  bidThreshold: BigNumber;
+  maxSlot: number;
+  premiumRatePerSlot: number;
+  waitingPeriod: number;
+  markets: string[];
 };
 
 export type Bid = {

@@ -11,7 +11,7 @@ export declare enum Protocol {
     Mandala = "Mandala",
     USK = "USK",
     FIN = "FIN Margin",
-    BOW = "FIN Perpetuals"
+    PERP = "FIN Perpetuals"
 }
 export declare enum MarketType {
     Acala = "Lending",
@@ -19,15 +19,8 @@ export declare enum MarketType {
     Mandala = "Lending",
     USK = "Lending",
     FIN = "Margin",
-    BOW = "Perpetuals"
+    PERP = "Perpetuals"
 }
-export declare type MarketConfig = {
-    bidThreshold: BigNumber;
-    maxSlot: number;
-    premiumRatePerSlot: number;
-    waitingPeriod: number;
-    market: string;
-};
 export declare type Market = {
     label: string;
     chain: Chain;
@@ -39,6 +32,11 @@ export declare type Market = {
     address?: string;
     botFirst?: boolean;
     activators?: string[];
+    bidThreshold: BigNumber;
+    maxSlot: number;
+    premiumRatePerSlot: number;
+    waitingPeriod: number;
+    markets: string[];
 };
 export declare type Bid = {
     idx: number;
