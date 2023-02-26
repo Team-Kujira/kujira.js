@@ -28,8 +28,8 @@ export declare type Market = {
     collateralDenom: Denom;
     bidDenom: Denom;
     repayDenom: Denom;
-    type?: MarketType;
-    address?: string;
+    type: MarketType;
+    address: string;
     botFirst?: boolean;
     activators?: string[];
     bidThreshold: BigNumber;
