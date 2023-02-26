@@ -99,7 +99,8 @@ export const getMarkets = (
           premiumRatePerSlot: 0.01,
           waitingPeriod: 600,
           markets: [
-            "kujira1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2smfdslf",
+            "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
           ],
         },
 
@@ -120,7 +121,8 @@ export const getMarkets = (
           premiumRatePerSlot: 0.01,
           waitingPeriod: 600,
           markets: [
-            "kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u",
+            "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
           ],
         },
         {
@@ -140,7 +142,8 @@ export const getMarkets = (
           premiumRatePerSlot: 0.01,
           waitingPeriod: 600,
           markets: [
-            "kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t",
+            "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
           ],
         },
         {
@@ -155,6 +158,14 @@ export const getMarkets = (
           ),
           repayDenom: USK,
           activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
+          bidThreshold: BigNumber.from(10).pow(6 + 6),
+          maxSlot: 30,
+          premiumRatePerSlot: 0.01,
+          waitingPeriod: 600,
+          markets: [
+            "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
+          ],
         },
         {
           label: "LUNA",
@@ -174,6 +185,7 @@ export const getMarkets = (
           waitingPeriod: 600,
           markets: [
             "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
           ],
         },
         {
@@ -193,7 +205,8 @@ export const getMarkets = (
           premiumRatePerSlot: 0.01,
           waitingPeriod: 600,
           markets: [
-            "kujira1twc28l5njc07xuxrs85yahy44y9lw5euwa7kpajc2zdh98w6uyksvjvruq",
+            "kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8",
+            "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
           ],
         },
         {
