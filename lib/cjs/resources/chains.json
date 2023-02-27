@@ -17321,151 +17321,6 @@
                     "coingecko_id": "oec-token"
                 }
             ]
-        }
-    ],
-    "testnet": [
-        {
-            "$schema": "../chain.schema.json",
-            "apis": {
-                "rest": [
-                    { "address": "https://pisco-lcd.terra.dev", "provider": "tfl" }
-                ],
-                "rpc": [
-                    {
-                        "address": "https://terra-testnet-rpc.polkachu.com",
-                        "provider": "polkachu"
-                    }
-                ]
-            },
-            "assets": [
-                {
-                    "base": "uluna",
-                    "coingecko_id": "terra-luna-2",
-                    "denom_units": [
-                        {
-                            "denom": "uluna",
-                            "exponent": 0
-                        },
-                        {
-                            "denom": "luna",
-                            "exponent": 6
-                        }
-                    ],
-                    "description": "The native staking token of Terra.",
-                    "display": "luna",
-                    "logo_URIs": {
-                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/luna.png"
-                    },
-                    "name": "Luna",
-                    "symbol": "LUNA"
-                }
-            ],
-            "bech32_prefix": "terra",
-            "chain_id": "pisco-1",
-            "chain_name": "terra2",
-            "codebase": {
-                "binaries": {
-                    "darwin/amd64": "https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Darwin_x86_64.tar.gz",
-                    "linux/amd64": "https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Linux_x86_64.tar.gz"
-                },
-                "compatible_versions": ["v2.0.1", "v2.0.0"],
-                "git_repo": "https://github.com/terra-money/core/",
-                "recommended_version": "v2.0.1"
-            },
-            "daemon_name": "terrad",
-            "explorers": [
-                {
-                    "kind": "finder",
-                    "tx_page": "https://finder.terra.money/mainnet/tx/${txHash}",
-                    "url": "http://finder.terra.money/"
-                }
-            ],
-            "genesis": {
-                "genesis_url": "https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json"
-            },
-            "network_type": "testnet",
-            "node_home": "$HOME/.terra",
-            "peers": {
-                "persistent_peers": [],
-                "seeds": []
-            },
-            "pretty_name": "Terra2 Testnet",
-            "slip44": 330,
-            "status": "live"
-        },
-        {
-            "$schema": "../../chain.schema.json",
-            "apis": {
-                "rest": [],
-                "rpc": [
-                    {
-                        "address": "https://test-rpc-kujira.mintthemoon.xyz",
-                        "provider": "mintthemoon"
-                    },
-                    {
-                        "address": "https://test-lcd-kujira.mintthemoon.xyz",
-                        "provider": "mintthemoon"
-                    }
-                ]
-            },
-            "assets": [
-                {
-                    "base": "ukuji",
-                    "denom_units": [
-                        {
-                            "denom": "ukuji",
-                            "exponent": 0
-                        },
-                        {
-                            "denom": "kuji",
-                            "exponent": 6
-                        }
-                    ],
-                    "description": "The native staking and governance token of the Kujira chain.",
-                    "display": "kuji",
-                    "logo_URIs": {
-                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png"
-                    },
-                    "name": "Kuji",
-                    "symbol": "KUJI"
-                }
-            ],
-            "bech32_prefix": "kujira",
-            "chain_id": "harpoon-4",
-            "chain_name": "kujira",
-            "codebase": {
-                "compatible_versions": ["v0.4.0"],
-                "git_repo": "https://github.com/Team-Kujira/core",
-                "recommended_version": "v0.4.0"
-            },
-            "daemon_name": "kujirad",
-            "explorers": [
-                {
-                    "kind": "kujira",
-                    "tx_page": "https://finder.kujira.app/harpoon-4/tx/${txHash}",
-                    "url": "https://finder.kujira.app"
-                }
-            ],
-            "fees": {
-                "fee_tokens": [
-                    {
-                        "denom": "ukuji",
-                        "fixed_min_gas_price": 0
-                    }
-                ]
-            },
-            "genesis": {
-                "genesis_url": "https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json"
-            },
-            "key_algos": ["secp256k1"],
-            "logo_URIs": {
-                "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kujira-chain-logo.png"
-            },
-            "network_type": "testnet",
-            "node_home": "$HOME/.kujira",
-            "pretty_name": "Kujira Testnet",
-            "slip44": 118,
-            "status": "live"
         },
         {
             "$schema": "../chain.schema.json",
@@ -17650,6 +17505,151 @@
                     "tx_page": "https://ping.pub/migaloo/tx/${txHash}"
                 }
             ]
+        }
+    ],
+    "testnet": [
+        {
+            "$schema": "../chain.schema.json",
+            "apis": {
+                "rest": [
+                    { "address": "https://pisco-lcd.terra.dev", "provider": "tfl" }
+                ],
+                "rpc": [
+                    {
+                        "address": "https://terra-testnet-rpc.polkachu.com",
+                        "provider": "polkachu"
+                    }
+                ]
+            },
+            "assets": [
+                {
+                    "base": "uluna",
+                    "coingecko_id": "terra-luna-2",
+                    "denom_units": [
+                        {
+                            "denom": "uluna",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "luna",
+                            "exponent": 6
+                        }
+                    ],
+                    "description": "The native staking token of Terra.",
+                    "display": "luna",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/luna.png"
+                    },
+                    "name": "Luna",
+                    "symbol": "LUNA"
+                }
+            ],
+            "bech32_prefix": "terra",
+            "chain_id": "pisco-1",
+            "chain_name": "terra2",
+            "codebase": {
+                "binaries": {
+                    "darwin/amd64": "https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Darwin_x86_64.tar.gz",
+                    "linux/amd64": "https://github.com/terra-money/core/releases/download/v2.0.1/terra_2.0.1_Linux_x86_64.tar.gz"
+                },
+                "compatible_versions": ["v2.0.1", "v2.0.0"],
+                "git_repo": "https://github.com/terra-money/core/",
+                "recommended_version": "v2.0.1"
+            },
+            "daemon_name": "terrad",
+            "explorers": [
+                {
+                    "kind": "finder",
+                    "tx_page": "https://finder.terra.money/mainnet/tx/${txHash}",
+                    "url": "http://finder.terra.money/"
+                }
+            ],
+            "genesis": {
+                "genesis_url": "https://phoenix-genesis.s3.us-west-1.amazonaws.com/genesis.json"
+            },
+            "network_type": "testnet",
+            "node_home": "$HOME/.terra",
+            "peers": {
+                "persistent_peers": [],
+                "seeds": []
+            },
+            "pretty_name": "Terra2 Testnet",
+            "slip44": 330,
+            "status": "live"
+        },
+        {
+            "$schema": "../../chain.schema.json",
+            "apis": {
+                "rest": [],
+                "rpc": [
+                    {
+                        "address": "https://test-rpc-kujira.mintthemoon.xyz",
+                        "provider": "mintthemoon"
+                    },
+                    {
+                        "address": "https://test-lcd-kujira.mintthemoon.xyz",
+                        "provider": "mintthemoon"
+                    }
+                ]
+            },
+            "assets": [
+                {
+                    "base": "ukuji",
+                    "denom_units": [
+                        {
+                            "denom": "ukuji",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "kuji",
+                            "exponent": 6
+                        }
+                    ],
+                    "description": "The native staking and governance token of the Kujira chain.",
+                    "display": "kuji",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png"
+                    },
+                    "name": "Kuji",
+                    "symbol": "KUJI"
+                }
+            ],
+            "bech32_prefix": "kujira",
+            "chain_id": "harpoon-4",
+            "chain_name": "kujira",
+            "codebase": {
+                "compatible_versions": ["v0.4.0"],
+                "git_repo": "https://github.com/Team-Kujira/core",
+                "recommended_version": "v0.4.0"
+            },
+            "daemon_name": "kujirad",
+            "explorers": [
+                {
+                    "kind": "kujira",
+                    "tx_page": "https://finder.kujira.app/harpoon-4/tx/${txHash}",
+                    "url": "https://finder.kujira.app"
+                }
+            ],
+            "fees": {
+                "fee_tokens": [
+                    {
+                        "denom": "ukuji",
+                        "fixed_min_gas_price": 0
+                    }
+                ]
+            },
+            "genesis": {
+                "genesis_url": "https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json"
+            },
+            "key_algos": ["secp256k1"],
+            "logo_URIs": {
+                "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kujira-chain-logo.png"
+            },
+            "network_type": "testnet",
+            "node_home": "$HOME/.kujira",
+            "pretty_name": "Kujira Testnet",
+            "slip44": 118,
+            "status": "live"
         }
     ]
 }
