@@ -478,6 +478,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: false,
     pool: "kujira14sar6zdyljp7t9u5zwcwcjrw98kcmqq8685sz7ezfknvauqg23sqrmr6kg",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -682,6 +683,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 0,
     multiswap: false,
     pool: "kujira1hmy36p0a87fsv36l8vdmy5uaka69j392s07qgnc5aum9cg9vj88qq8tfgh",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -714,6 +716,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 3,
     multiswap: false,
     pool: "kujira1qmuthgsuvwtgw3dpddrvxjz09lt36zzurl2v657kmr52juekxarsaepvrx",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -995,6 +998,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 3,
     multiswap: false,
     pool: "kujira1gp35at6c4t4pdeslyewf3l7x5hw6qfls7tlqg4dpp6pepc89zqequm8t8p",
+    calc: "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c"
   },
 
   {
