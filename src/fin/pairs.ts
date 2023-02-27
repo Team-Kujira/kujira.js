@@ -998,7 +998,7 @@ export const PAIRS: Pair[] = [
     decimalDelta: 3,
     multiswap: false,
     pool: "kujira1gp35at6c4t4pdeslyewf3l7x5hw6qfls7tlqg4dpp6pepc89zqequm8t8p",
-    calc: "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c"
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu"
   },
 
   {
@@ -1095,7 +1095,7 @@ export const PAIRS: Pair[] = [
     multiswap: true,
     pool: "kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq",
     queue: "kujira19m8s6ru20s62ygyr5qdng8yw2la3lemy8rgt55q38hyl57taxmvsgfre6m",
-    calc: "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c",
+    calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
   {
     address:
