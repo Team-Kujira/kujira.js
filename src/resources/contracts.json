@@ -3792,6 +3792,66 @@
   "harpoon-4": {
     "fin": [
       {
+        "id": 6,
+        "address": "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867",
+        "config": {
+          "owner": "kujira1a9fvh87l6pw0qe6l275ta4ftngenjrhmza6g6k",
+          "denoms": [
+            {
+              "native": "ukuji"
+            },
+            {
+              "native": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "is_bootstrapping": false
+        },
+        "pairs": false
+      },
+      {
+        "id": 6,
+        "address": "kujira1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqx97zgq",
+        "config": {
+          "owner": "kujira1a9fvh87l6pw0qe6l275ta4ftngenjrhmza6g6k",
+          "denoms": [
+            {
+              "native": "ukuji"
+            },
+            {
+              "native": "ibc/A1E1A20C1E4F2F76F301DA625CC476FBD0FCD8CA94DAF60814CA5257B6CD3E3E"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "is_bootstrapping": false
+        },
+        "pairs": false
+      },
+      {
+        "id": 6,
+        "address": "kujira1pvrwmjuusn9wh34j7y520g8gumuy9xtl3gvprlljfdpwju3x7ucseu6vw3",
+        "config": {
+          "owner": "kujira1a9fvh87l6pw0qe6l275ta4ftngenjrhmza6g6k",
+          "denoms": [
+            {
+              "native": "ukuji"
+            },
+            {
+              "native": "ibc/85CE72EE820A66F0ABD5EE3907A34E243E4BE2D6CFAEB4C08DF85BD6C0784FA2"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "is_bootstrapping": true
+        },
+        "pairs": false
+      },
+      {
         "id": 7,
         "address": "kujira10qt8wg0n7z740ssvf3urmvgtjhxpyp74hxqvqt7z226gykuus7eqedsw8k",
         "config": {
