@@ -14,7 +14,7 @@ const IDS = {
     calc: [82],
   },
   [TESTNET]: {
-    fin: [31, 129],
+    fin: [7, 31, 88, 129, 860, 1367],
     bow: [468, 858],
     bowStaking: [439, 855],
     orca: [994],

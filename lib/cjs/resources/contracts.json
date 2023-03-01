@@ -3792,6 +3792,66 @@
     "harpoon-4": {
         "fin": [
             {
+                "id": 7,
+                "address": "kujira10qt8wg0n7z740ssvf3urmvgtjhxpyp74hxqvqt7z226gykuus7eqedsw8k",
+                "config": {
+                    "owner": "kujira1a9fvh87l6pw0qe6l275ta4ftngenjrhmza6g6k",
+                    "denoms": [
+                        {
+                            "native": "ukuji"
+                        },
+                        {
+                            "native": "ibc/F91EA2C0A23697A1048E08C2F787E3A58AC6F706A1CD2257A504925158CFC0F3"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "is_bootstrapping": true
+                },
+                "pairs": false
+            },
+            {
+                "id": 7,
+                "address": "kujira1chejx4qqtvwxy6684yrsmf6pylancxqhk3vsmtleg5ta3zrffljq4xf685",
+                "config": {
+                    "owner": "kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w",
+                    "denoms": [
+                        {
+                            "native": "ukuji"
+                        },
+                        {
+                            "native": "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "is_bootstrapping": false
+                },
+                "pairs": false
+            },
+            {
+                "id": 7,
+                "address": "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "denoms": [
+                        {
+                            "native": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+                        },
+                        {
+                            "native": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "is_bootstrapping": false
+                },
+                "pairs": false
+            },
+            {
                 "id": 31,
                 "address": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
                 "config": {
@@ -3825,6 +3885,50 @@
                     },
                     "decimal_delta": 8,
                     "is_bootstrapping": true
+                },
+                "pairs": false
+            },
+            {
+                "id": 860,
+                "address": "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "denoms": [
+                        {
+                            "native": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+                        },
+                        {
+                            "native": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "is_bootstrapping": false
+                },
+                "pairs": false
+            },
+            {
+                "id": 1367,
+                "address": "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "denoms": [
+                        {
+                            "native": "ukuji"
+                        },
+                        {
+                            "native": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "decimal_delta": 0,
+                    "is_bootstrapping": false,
+                    "fee_taker": "0.003",
+                    "fee_maker": "0.00075",
+                    "fee_maker_negative": true
                 },
                 "pairs": false
             }
