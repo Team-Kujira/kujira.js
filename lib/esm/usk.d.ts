@@ -16,6 +16,21 @@ export declare type Market = {
     liquidation_threshold: BigNumber;
     liquidation_ratio: number;
 };
+declare type Config = {
+    owner: string;
+    stable_denom: string;
+    stable_denom_admin: string;
+    collateral_denom: string;
+    oracle_denom: string;
+    max_ratio: string;
+    mint_fee: string;
+    interest_rate: string;
+    orca_address: string;
+    max_debt: string;
+    liquidation_threshold: string;
+    liquidation_ratio: string;
+};
+export declare const castConfig: (json: Config) => Omit<Market, "address">;
 export declare const MARKETS: Record<NETWORK, Record<string, Market>>;
 export declare type PositionResponse = {
     owner: string;
@@ -36,3 +51,4 @@ export declare const defaultPosition: (owner?: string) => Position;
 export declare const fetchPosition: (queryClient: KujiraQueryClient, address: string, account: {
     address: string;
 }) => Promise<Position>;
+export {};

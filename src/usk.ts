@@ -34,7 +34,7 @@ type Config = {
   liquidation_ratio: string;
 };
 
-const castConfig = (json: Config): Omit<Market, "address"> => ({
+export const castConfig = (json: Config): Omit<Market, "address"> => ({
   owner: json.owner,
   stable_denom: Denom.from(json.stable_denom),
   stable_denom_admin: json.stable_denom_admin,

@@ -1,7 +1,6 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
-import { NETWORK } from "../network";
-import { Market } from "../usk";
+import * as usk from "../usk";
 
 export type Config = {
   owner: string;
@@ -26,16 +25,10 @@ export type Book = {
   quote: Pool[];
 };
 
-export type Margin = {
-  market: string;
-  limit?: string;
-  fin_address: string;
-  config: Market;
-};
+export type Margin = usk.Market;
 
 export type Pair = {
   address: string;
-  chainID: NETWORK;
   denoms: [Denom, Denom];
   precision: Precision;
   decimalDelta: number;
