@@ -55,12 +55,15 @@ const compile =
       [v.address]: {
         address: v.address,
         ...config,
-        pool: contracts[network].bow.find(
-          (b) =>
-            b.config.fin_contract === v.address &&
-            v.config.price_precision.decimal_places ===
-              b.config.price_precision.decimal_places
-        )?.address,
+        pool: contracts[network].bow
+          // Reverse as the laterly created contracts are more likely to be correct
+          .reverse()
+          .find(
+            (b) =>
+              b.config.fin_contract === v.address &&
+              v.config.price_precision.decimal_places ===
+                b.config.price_precision.decimal_places
+          )?.address,
         calc: contracts[network].calc[0]?.pairs.find(
           (x) =>
             x.base_denom === config.denoms[0].reference &&
