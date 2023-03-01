@@ -1,6 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
-import { KujiraQueryClient, LOCALNET, MAINNET, NETWORK, TESTNET } from ".";
 import { Denom } from "./denom";
+import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
+import { KujiraQueryClient } from "./queryClient";
 import contracts from "./resources/contracts.json";
 
 export type Market = {

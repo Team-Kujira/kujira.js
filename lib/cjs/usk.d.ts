@@ -1,6 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
-import { KujiraQueryClient, NETWORK } from ".";
 import { Denom } from "./denom";
+import { NETWORK } from "./network";
+import { KujiraQueryClient } from "./queryClient";
 export declare type Market = {
     address: string;
     owner: string;
