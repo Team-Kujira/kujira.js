@@ -1,6 +1,6 @@
 import { ATOM, Denom, KUJI, USDC, USDT, USK, USK_TESTNET } from "../denom";
 import { MAINNET, TESTNET } from "../network";
-import { MARKETS_HARPOON, MARKETS_KAIYO } from "../usk";
+import * as usk from "../usk";
 import { Pair } from "./types";
 
 export const STAKING = {
@@ -143,7 +143,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqr2qp2j",
       config:
-        MARKETS_KAIYO.kujira1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2smfdslf,
+        usk.MARKETS[MAINNET]
+          .kujira1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2smfdslf,
     },
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
@@ -282,7 +283,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0",
       config:
-        MARKETS_KAIYO.kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t,
+        usk.MARKETS[MAINNET]
+          .kujira1f2jt3f9gzajp5uupeq6xm20h90uzy6l8klvrx52ujaznc8xu8d7s6av27t,
     },
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
@@ -402,7 +404,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira1jlzw6xal0n2c580g3wxs09tjhlzdht9y8dgszq3tupf8fhl7xjus7ep7ap",
       config:
-        MARKETS_KAIYO.kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u,
+        usk.MARKETS[MAINNET]
+          .kujira1eydneup86kyhew5zqt5r7tkxefr3w5qcsn3ssrpcw9hm4npt3wmqa7as3u,
     },
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
@@ -428,7 +431,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira17w9r23r8v8r7z5lphwj99296fhlye9ej5nq3hlqw554u63m88avspdl9tc",
       config:
-        MARKETS_KAIYO.kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8,
+        usk.MARKETS[MAINNET]
+          .kujira1fjews4jcm2yx7una77ds7jjjzlx5vgsessguve8jd8v5rc4cgw9s8rlff8,
     },
   },
 
@@ -597,7 +601,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira1zz74gvmq6ss3pg5vgahvx47ugpfzr80qu75l97lf2ggdgxq04ddqxkdzey",
       config:
-        MARKETS_KAIYO.kujira1r80rh4t7zrlt8d6da4k8xptwywuv39esnt4ax7p7ca7ga7646xssrcu5uf,
+        usk.MARKETS[MAINNET]
+          .kujira1r80rh4t7zrlt8d6da4k8xptwywuv39esnt4ax7p7ca7ga7646xssrcu5uf,
     },
     calc: "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
   },
@@ -1115,7 +1120,8 @@ export const PAIRS: Pair[] = [
       fin_address:
         "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg",
       config:
-        MARKETS_HARPOON.kujira1atk8uwy6zf7u4r4qzg52ucgz6f74cuclthzsrc049vynjsr62lns2du3ey,
+        usk.MARKETS[TESTNET]
+          .kujira1atk8uwy6zf7u4r4qzg52ucgz6f74cuclthzsrc049vynjsr62lns2du3ey,
     },
     pool: "kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn",
     queue: "kujira1cwtczwdsj8ewz5p6zzvlfee77xw959r8amtnh2fcul9vdz3tr4hslpz4m5",

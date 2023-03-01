@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
-    "ibc": "node ibc.mjs"
+    "ibc": "node ibc.mjs",
+    "contracts": "node contracts.mjs"
   },
   "dependencies": {
     "@cosmjs/cosmwasm-stargate": "^0.29.4",

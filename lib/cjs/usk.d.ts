@@ -1,5 +1,5 @@
 import { BigNumber } from "@ethersproject/bignumber";
-import { KujiraQueryClient } from ".";
+import { KujiraQueryClient, NETWORK } from ".";
 import { Denom } from "./denom";
 export declare type Market = {
     address: string;
@@ -11,12 +11,12 @@ export declare type Market = {
     max_ratio: number;
     mint_fee: number;
     interest_rate: number;
+    orca_address: string;
+    max_debt: BigNumber;
     liquidation_threshold: BigNumber;
     liquidation_ratio: number;
-    max_debt: BigNumber;
 };
-export declare const MARKETS_HARPOON: Record<string, Market>;
-export declare const MARKETS_KAIYO: Record<string, Market>;
+export declare const MARKETS: Record<NETWORK, Record<string, Market>>;
 export declare type PositionResponse = {
     owner: string;
     deposit_amount: string;
