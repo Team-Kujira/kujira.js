@@ -43,6 +43,8 @@ const labels: Record<string, string> = {
   gravity0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599: "gwBTC",
   gravity0x6B175474E89094C44Da98b954EedeAC495271d0F: "gDAI",
   gravity0x77E06c9eCCf2E797fd462A92B6D7642EF85b0A44: "wTAO",
+  gravity0xa0b93B9e90aB887E53F9FB8728c009746e989B53: "gTST",
+  gravity0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30: "gINJ",
   "erc20/0xAE6D3334989a22A65228732446731438672418F2": "CNTO",
   "frax-wei": "FRAX",
   inj: "INJ",
@@ -241,11 +243,13 @@ export class Denom {
     if (this.symbol === "DOT") this.decimals = 10;
     if (this.symbol === "SHD") this.decimals = 8;
     if (this.symbol === "INJ") this.decimals = 18;
+    if (this.symbol === "gINJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
     if (this.symbol === "wTAO") this.decimals = 9;
     if (this.symbol === "ACRE") this.decimals = 18;
     if (this.symbol === "PLANQ") this.decimals = 18;
     if (this.symbol === "SWTH") this.decimals = 8;
+    if (this.symbol === "gTST") this.decimals = 18;
     // OKX USDT
     if (
       this.reference ===
