@@ -3852,6 +3852,27 @@
         "pairs": false
       },
       {
+        "id": 30,
+        "address": "kujira1yyca08xqdgvjz0psg56z67ejh9xms6l436u8y58m82npdqqhmmtqdyphsd",
+        "config": {
+          "owner": "kujira1a9fvh87l6pw0qe6l275ta4ftngenjrhmza6g6k",
+          "denoms": [
+            {
+              "native": "ukuji"
+            },
+            {
+              "native": "ibc/0607DD7B560C5E40B0E05CB30AECBD12514539D7C986D040FFDEAA0AE9911088"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "decimal_delta": -12,
+          "is_bootstrapping": true
+        },
+        "pairs": false
+      },
+      {
         "id": 31,
         "address": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
         "config": {
@@ -3935,6 +3956,42 @@
     ],
     "bow": [
       {
+        "id": 308,
+        "address": "kujira19kxd9sqk09zlzqfykk7tzyf70hl009hkekufq8q0ud90ejtqvvxs8xg5cq",
+        "config": {
+          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+          "denoms": [
+            "ukuji",
+            "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "decimal_delta": 0,
+          "fin_contract": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
+          "intervals": [
+            "0.001",
+            "0.002",
+            "0.003",
+            "0.004",
+            "0.005",
+            "0.007",
+            "0.01",
+            "0.012",
+            "0.015",
+            "0.018",
+            "0.02",
+            "0.025",
+            "0.03",
+            "0.04",
+            "0.1"
+          ],
+          "fee": "0",
+          "amp": "1"
+        },
+        "pairs": false
+      },
+      {
         "id": 858,
         "address": "kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn",
         "config": {
@@ -4016,6 +4073,39 @@
     "uskMarket": [],
     "uskMarginSwap": [],
     "uskMarginLimit": [],
-    "calc": []
+    "calc": [
+      {
+        "id": 1273,
+        "address": "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c",
+        "config": null,
+        "pairs": [
+          {
+            "address": "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867",
+            "base_denom": "ukuji",
+            "quote_denom": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518"
+          },
+          {
+            "address": "kujira1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqx97zgq",
+            "base_denom": "ukuji",
+            "quote_denom": "ibc/A1E1A20C1E4F2F76F301DA625CC476FBD0FCD8CA94DAF60814CA5257B6CD3E3E"
+          },
+          {
+            "address": "kujira1pvrwmjuusn9wh34j7y520g8gumuy9xtl3gvprlljfdpwju3x7ucseu6vw3",
+            "base_denom": "ukuji",
+            "quote_denom": "ibc/85CE72EE820A66F0ABD5EE3907A34E243E4BE2D6CFAEB4C08DF85BD6C0784FA2"
+          },
+          {
+            "address": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
+            "base_denom": "ukuji",
+            "quote_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
+          },
+          {
+            "address": "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
+            "base_denom": "ukuji",
+            "quote_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+          }
+        ]
+      }
+    ]
   }
 }

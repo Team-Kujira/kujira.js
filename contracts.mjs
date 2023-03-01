@@ -14,14 +14,14 @@ const IDS = {
     calc: [82],
   },
   [TESTNET]: {
-    fin: [7, 31, 88, 129, 860, 1367],
-    bow: [468, 858],
+    fin: [7, 30, 31, 88, 129, 860, 1367],
+    bow: [308, 468, 858],
     bowStaking: [439, 855],
     orca: [994],
     uskMarket: [66],
     uskMarginSwap: [131],
     uskMarginLimit: [1271],
-    calc: [],
+    calc: [1273],
   },
 };
 
