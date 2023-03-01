@@ -3,6 +3,10 @@ import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import * as usk from "../usk";
 import { Pair } from "./types";
 
+const INCORRECT = [
+  "kujira1zdedwnk5e9axmg5efpu49hy6v06ypu3putvmu86jaw5rpzztqqks4x64f6",
+];
+
 import contracts from "../resources/contracts.json";
 export const STAKING = {
   [TESTNET]:
@@ -56,7 +60,9 @@ const compile =
         address: v.address,
         ...config,
         pool: contracts[network].bow.find(
-          (b) => b.config.fin_contract === v.address
+          (b) =>
+            b.config.fin_contract === v.address &&
+            !INCORRECT.includes(b.address)
         )?.address,
         calc: contracts[network].calc[0]?.pairs.find(
           (x) =>
