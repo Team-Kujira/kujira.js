@@ -58,12 +58,12 @@ const compile =
         pool: contracts[network].bow.find(
           (b) => b.config.fin_contract === v.address
         )?.address,
-        calc: contracts[network].calc[0].pairs.find(
+        calc: contracts[network].calc[0]?.pairs.find(
           (x) =>
             x.base_denom === config.denoms[0].reference &&
             x.quote_denom === config.denoms[1].reference
         )
-          ? contracts[network].calc[0].address
+          ? contracts[network].calc[0]?.address
           : undefined,
         margin: margin
           ? { address: margin.address, ...usk.castConfig(margin.config.market) }
