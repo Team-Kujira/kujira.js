@@ -48,7 +48,7 @@ const compile =
   (a: Record<string, Pair>, v: { address: string; config: Config }) => {
     if (
       v.address ===
-      "kujira13ta4a6cu29na9dch3rtyqasgx57ju3z98530cet46tn5v7sx6k2qg7g3zk"
+      "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp"
     )
       return a;
     const config = castConfig(v.config);
