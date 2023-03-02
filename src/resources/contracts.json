@@ -1860,14 +1860,10 @@
           "decimal_delta": 0,
           "fin_contract": "kujira1qqlk2773dvj8cyv3ftnzvyrknq78yryghp3uyumnumaxu656yreszrdph0",
           "intervals": [
-            "0.005",
-            "0.005",
-            "0.005",
-            "0.006",
-            "0.015",
-            "0.03",
-            "0.075",
-            "0.15"
+            "0.01",
+            "0.01",
+            "0.01",
+            "0.02"
           ],
           "fee": "0.003",
           "amp": "1"
@@ -3990,7 +3986,7 @@
         "pairs": false
       },
       {
-        "id": 1367,
+        "id": 1398,
         "address": "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
         "config": {
           "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
@@ -4130,9 +4126,75 @@
         "pairs": false
       }
     ],
-    "uskMarket": [],
-    "uskMarginSwap": [],
-    "uskMarginLimit": [],
+    "uskMarket": [
+      {
+        "id": 136,
+        "address": "kujira1atk8uwy6zf7u4r4qzg52ucgz6f74cuclthzsrc049vynjsr62lns2du3ey",
+        "config": {
+          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+          "stable_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
+          "stable_denom_admin": "kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll",
+          "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+          "oracle_denom": "ATOM",
+          "max_ratio": "0.6",
+          "mint_fee": "0.0005",
+          "interest_rate": "0.05",
+          "orca_address": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
+          "max_debt": "10000000000000",
+          "liquidation_threshold": "5000000000",
+          "liquidation_ratio": "0.2"
+        },
+        "pairs": false
+      }
+    ],
+    "uskMarginSwap": [
+      {
+        "id": 133,
+        "address": "kujira1vmnntr773a5p7s4k0t39v6vcgcq87kq2zaw94cy85850n79jx2kq56sqhs",
+        "config": {
+          "market": {
+            "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+            "stable_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
+            "stable_denom_admin": "kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll",
+            "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+            "oracle_denom": "ATOM",
+            "max_ratio": "0.6",
+            "mint_fee": "0.0005",
+            "interest_rate": "0",
+            "orca_address": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
+            "max_debt": "10000000000000",
+            "liquidation_threshold": "5000000000",
+            "liquidation_ratio": "0.2"
+          },
+          "fin_address": "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg"
+        },
+        "pairs": false
+      }
+    ],
+    "uskMarginLimit": [
+      {
+        "id": 1272,
+        "address": "kujira1g38pvehdv63la2ev30k0u4mayv5ml8n9ajq5lqc0a070xf25hsssf9ux7w",
+        "config": {
+          "market": {
+            "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+            "stable_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
+            "stable_denom_admin": "kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll",
+            "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+            "oracle_denom": "ATOM",
+            "max_ratio": "0.6",
+            "mint_fee": "0.0005",
+            "interest_rate": "0",
+            "orca_address": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+            "max_debt": "10000000000000",
+            "liquidation_threshold": "5000000000",
+            "liquidation_ratio": "0.2"
+          },
+          "fin_address": "kujira14sa4u42n2a8kmlvj3qcergjhy6g9ps06rzeth94f2y6grlat6u6ssqzgtg"
+        },
+        "pairs": false
+      }
+    ],
     "calc": [
       {
         "id": 1387,

@@ -14,13 +14,13 @@ const IDS = {
     calc: [82],
   },
   [TESTNET]: {
-    fin: [6, 7, 30, 31, 88, 129, 860, 1367],
+    fin: [6, 7, 30, 31, 88, 129, 860, 1367, 1397, 1398],
     bow: [308, 468, 858],
     bowStaking: [439, 855],
     orca: [994],
-    uskMarket: [66],
-    uskMarginSwap: [131],
-    uskMarginLimit: [1271],
+    uskMarket: [66, 136],
+    uskMarginSwap: [131, 133],
+    uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
   },
 };
@@ -28,6 +28,7 @@ const IDS = {
 const res = await Promise.all(
   Object.entries(IDS).map(async ([chain, protocols]) => {
     const rpc = RPCS[chain][0];
+    console.log(rpc);
     const tm = await Tendermint34Client.create(
       new HttpBatchClient(rpc, {
         dispatchInterval: 100,
