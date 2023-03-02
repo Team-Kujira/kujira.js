@@ -21,7 +21,7 @@ const IDS = {
     uskMarket: [66],
     uskMarginSwap: [131],
     uskMarginLimit: [1271],
-    calc: [1273],
+    calc: [1273, 1387],
   },
 };
 
