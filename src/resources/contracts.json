@@ -4048,6 +4048,38 @@
         "pairs": false
       },
       {
+        "id": 644,
+        "address": "kujira16ethwy4fkjn7ymd04ect2wwlq7pwtlxdzw3zg5nvw8smmwsks49sqjg326",
+        "config": {
+          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+          "denoms": [
+            "ukuji",
+            "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "decimal_delta": 0,
+          "fin_contract": "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
+          "intervals": [
+            "0.003",
+            "0.003",
+            "0.005",
+            "0.005",
+            "0.007",
+            "0.01",
+            "0.015",
+            "0.02",
+            "0.025",
+            "0.04",
+            "0.06"
+          ],
+          "fee": "0.01",
+          "amp": "1"
+        },
+        "pairs": false
+      },
+      {
         "id": 858,
         "address": "kujira1a9fha3f02xyzvmanxxl4p3djrnp40ewwkrfkm4gr0exlv028ze3slhv4fn",
         "config": {
