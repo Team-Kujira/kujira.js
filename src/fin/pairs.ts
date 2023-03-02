@@ -46,6 +46,11 @@ const castConfig = (json: Config): Omit<Pair, "address" | "pool" | "calc"> => ({
 const compile =
   (network: keyof typeof contracts) =>
   (a: Record<string, Pair>, v: { address: string; config: Config }) => {
+    if (
+      v.address ===
+      "kujira13ta4a6cu29na9dch3rtyqasgx57ju3z98530cet46tn5v7sx6k2qg7g3zk"
+    )
+      return a;
     const config = castConfig(v.config);
     const margin = contracts[network].uskMarginSwap.find(
       (m) => m.config.fin_address === v.address
