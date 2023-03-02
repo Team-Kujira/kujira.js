@@ -3513,29 +3513,7 @@
         ],
         "uskMarginSwap": [
             {
-                "id": 72,
-                "address": "kujira1pep6vkkjexjlsw3y5h4tj27g7s58vkypy8zg7f9qdvlh2992pncqduz84n",
-                "config": {
-                    "market": {
-                        "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                        "stable_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
-                        "stable_denom_admin": "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
-                        "collateral_denom": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
-                        "oracle_denom": "BNB",
-                        "max_ratio": "0.6",
-                        "mint_fee": "0.001",
-                        "interest_rate": "0",
-                        "orca_address": "kujira12n6yghp8l2gwz9zxnle6e7gm9d0hz4uvnlyaadw5y05ch50c6qrqg4k7r3",
-                        "max_debt": "0",
-                        "liquidation_threshold": "1000000000",
-                        "liquidation_ratio": "0.1"
-                    },
-                    "fin_address": "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0"
-                },
-                "pairs": false
-            },
-            {
-                "id": 72,
+                "id": 87,
                 "address": "kujira1hjyjafrt09p4hwsnwch29nrrs40lprfgesqdy44wnp27td872hsse2rree",
                 "config": {
                     "market": {
@@ -3548,7 +3526,7 @@
                         "mint_fee": "0.001",
                         "interest_rate": "0",
                         "orca_address": "kujira1p748kkq6qmhcml0ycm0g8n4vns7rnch2jtw7mzsrcyudjmpqzzvsy4clw6",
-                        "max_debt": "0",
+                        "max_debt": "500000000000",
                         "liquidation_threshold": "1000000000",
                         "liquidation_ratio": "0.1"
                     },
@@ -3557,7 +3535,29 @@
                 "pairs": false
             },
             {
-                "id": 72,
+                "id": 87,
+                "address": "kujira1pep6vkkjexjlsw3y5h4tj27g7s58vkypy8zg7f9qdvlh2992pncqduz84n",
+                "config": {
+                    "market": {
+                        "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                        "stable_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+                        "stable_denom_admin": "kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7",
+                        "collateral_denom": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
+                        "oracle_denom": "BNB",
+                        "max_ratio": "0.6",
+                        "mint_fee": "0.001",
+                        "interest_rate": "0",
+                        "orca_address": "kujira12n6yghp8l2gwz9zxnle6e7gm9d0hz4uvnlyaadw5y05ch50c6qrqg4k7r3",
+                        "max_debt": "100000000000",
+                        "liquidation_threshold": "1000000000",
+                        "liquidation_ratio": "0.1"
+                    },
+                    "fin_address": "kujira1a0fyanyqm496fpgneqawhlsug6uqfvqg2epnw39q0jdenw3zs8zqsjhdr0"
+                },
+                "pairs": false
+            },
+            {
+                "id": 87,
                 "address": "kujira1m4ves3ymz5hyrj3war3t7uxu9ewt8rwpunja87960n0gre3a5pzspgry4g",
                 "config": {
                     "market": {
@@ -3570,7 +3570,7 @@
                         "mint_fee": "0.001",
                         "interest_rate": "0",
                         "orca_address": "kujira1xc4mksfgs9cww7mlth3gqp6dfx9wh8znvdps5xt4yasxnkhd7kcq2nvxl4",
-                        "max_debt": "0",
+                        "max_debt": "400000000000",
                         "liquidation_threshold": "1000000000",
                         "liquidation_ratio": "0.1"
                     },
@@ -3579,7 +3579,7 @@
                 "pairs": false
             },
             {
-                "id": 72,
+                "id": 87,
                 "address": "kujira1722g2rudg0rlw45nuuvjhg4a365xztfrdfjgyyfuzlmqmtu2plas34y6x3",
                 "config": {
                     "market": {
@@ -3592,7 +3592,7 @@
                         "mint_fee": "0.001",
                         "interest_rate": "0",
                         "orca_address": "kujira1sdlp8eqp4md6waqv2x9vlvt9dtzyx9ztt0zvkfxaw9kxh3t5gdvqypxlwz",
-                        "max_debt": "0",
+                        "max_debt": "100000000000",
                         "liquidation_threshold": "1000000000",
                         "liquidation_ratio": "0.05"
                     },
@@ -3601,7 +3601,7 @@
                 "pairs": false
             },
             {
-                "id": 74,
+                "id": 87,
                 "address": "kujira1m0z0kk0qqug74n9u9ul23e28x5fszr628h20xwt6jywjpp64xn4qkxmjq3",
                 "config": {
                     "market": {
@@ -3614,7 +3614,7 @@
                         "mint_fee": "0.005",
                         "interest_rate": "0",
                         "orca_address": "kujira1q8y46xg993cqg3xjycyw2334tepey7dmnh5jk2psutrz3fc69teskctgfc",
-                        "max_debt": "1000000000000",
+                        "max_debt": "200000000000",
                         "liquidation_threshold": "1000000000",
                         "liquidation_ratio": "0.2"
                     },
@@ -4135,7 +4135,7 @@
         "uskMarginLimit": [],
         "calc": [
             {
-                "id": 1273,
+                "id": 1387,
                 "address": "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c",
                 "config": null,
                 "pairs": [
