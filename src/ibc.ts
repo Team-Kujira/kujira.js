@@ -4,43 +4,13 @@ import tokens from "./resources/tokens.json";
 
 export const IBC: {
   chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
-  connections: { mainnet: IBCConnection[]; testnet: IBCConnection[] };
+  connections: typeof connections;
   tokens: Record<string, { base_denom: string; path: string }>;
 } = {
   chains,
   connections,
   tokens,
 };
-
-export interface IBCConnection {
-  "chain-1": {
-    "chain-name": string;
-    "client-id": string;
-    "connection-id": string;
-  };
-  "chain-2": {
-    "chain-name": string;
-    "client-id": string;
-    "connection-id": string;
-  };
-  channels: {
-    "chain-1": {
-      "channel-id": string;
-      "port-id": string;
-    };
-    "chain-2": {
-      "channel-id": string;
-      "port-id": string;
-    };
-    ordering: string;
-    version: string;
-    tags: {
-      status: string;
-      preferred: boolean;
-      dex: string;
-    };
-  }[];
-}
 
 /**
  * Cosmos Chain.json is a metadata file that contains information about a cosmos sdk based chain.
