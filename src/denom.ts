@@ -5,7 +5,7 @@ const labels: Record<string, string> = {
   wei: "OKT",
   ugraviton: "GRAV",
   usdt: "USDT",
-  usat: "NBTC",
+  usat: "nBTC",
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
   uausdt: "axlUSDT",

@@ -106,7 +106,7 @@ export const MARKETS = {
 export const getMarkets = (network?: NETWORK): Array<Market | Soon> => {
   const soon = network === MAINNET ? SOON : [];
   const markets = Object.values(MARKETS[network || MAINNET]);
-  return [...markets, ...soon].sort((a, b) =>
-    a.collateralDenom.compare(b.collateralDenom)
-  );
+  return [...markets, ...soon]
+    .sort((a, b) => a.collateralDenom.compare(b.collateralDenom))
+    .sort((a) => ("address" in a ? 1 : -1));
 };
