@@ -15321,491 +15321,6 @@
       "status": "live"
     },
     {
-      "$schema": "../../chain.schema.json",
-      "apis": {
-        "rest": [
-          {
-            "address": "https://lcd-testnet.bitcanna.io",
-            "provider": "bitcanna"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://rpc-testnet.bitcanna.io",
-            "provider": "bitcanna"
-          }
-        ]
-      },
-      "bech32_prefix": "bcna",
-      "chain_id": "bitcanna-dev-4",
-      "chain_name": "bitcannadev",
-      "codebase": {
-        "binaries": {
-          "linux/amd64": "https://github.com/BitCannaGlobal/bcna/releases/download/v1.4.4-pre/bcna_linux_amd64.tar.gz"
-        },
-        "compatible_versions": ["v1.4.4-pre"],
-        "git_repo": "https://github.com/BitCannaGlobal/bcna",
-        "recommended_version": "v1.4.4-pre"
-      },
-      "daemon_name": "bcnad",
-      "explorers": [
-        {
-          "tx_page": "https://testnet.explorer.erialos.me/bitcanna/tx/${txHash}",
-          "url": "https://testnet.explorer.erialos.me/bitcanna"
-        },
-        {
-          "tx_page": "https://testnets-cosmos.mintthemoon.xyz/bitcanna/tx/${txHash}",
-          "url": "https://testnets-cosmos.mintthemoon.xyz/bitcanna"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "ubcna",
-            "fixed_min_gas_price": 0.001
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://raw.githubusercontent.com/BitCannaGlobal/testnet-bcna-cosmos/main/instructions/bitcanna-dev-4/genesis.json"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.bcna",
-      "peers": {
-        "persistent_peers": [
-          {
-            "address": "188.166.126.81:26656",
-            "id": "d0de90dd8b40dfe231a65875069a31c534359c95"
-          },
-          {
-            "address": "144.91.89.66:26656",
-            "id": "4ccc6689a4d2590f6b60e34a3a3e70e0888bbcc0"
-          }
-        ],
-        "seeds": [
-          {
-            "address": "144.91.127.5:26656",
-            "id": "3fde4e73ef3fba3418dde89bffe0057508fc5706"
-          }
-        ]
-      },
-      "pretty_name": "BitCanna Devnet",
-      "slip44": 118,
-      "status": "live"
-    },
-    {
-      "$schema": "../../chain.schema.json",
-      "apis": {
-        "rest": [
-          {
-            "address": "https://kujira-testnet-api.polkachu.com/",
-            "provider": "polkachu"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://kujira-testnet-rpc.polkachu.com",
-            "provider": "polkachu"
-          }
-        ]
-      },
-      "bech32_prefix": "kujira",
-      "chain_id": "harpoon-4",
-      "chain_name": "harpoon",
-      "codebase": {
-        "compatible_versions": ["v0.4.0"],
-        "git_repo": "https://github.com/Team-Kujira/core",
-        "recommended_version": "v0.4.0"
-      },
-      "daemon_name": "kujirad",
-      "explorers": [
-        {
-          "kind": "explorers.guru",
-          "tx_page": "https://kujira.explorers.guru/transaction/${txHash}",
-          "url": "https://kujira.explorers.guru"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "ukuji",
-            "fixed_min_gas_price": 0
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.kujira",
-      "pretty_name": "Kujira Harpoon",
-      "slip44": 118,
-      "status": "live"
-    },
-    {
-      "$schema": "../../chain.schema.json",
-      "apis": {
-        "grpc": [
-          {
-            "address": "http://qs.imversed.com:9090",
-            "provider": "imversed"
-          }
-        ],
-        "rest": [
-          {
-            "address": "https://query-endpoint-test.imversed.com/",
-            "provider": "imversed"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://tx-endpoint-test.imversed.com/",
-            "provider": "imversed"
-          }
-        ]
-      },
-      "bech32_prefix": "imv",
-      "chain_id": "imversed-test-1",
-      "chain_name": "imversedtestnet",
-      "codebase": {
-        "binaries": {
-          "darwin/amd64": "https://s.imversed.com/imversed_darwin_amd64.tar.gz",
-          "darwin/arm64": "https://s.imversed.com/imversed_darwin_arm64.tar.gz",
-          "linux/amd64": "https://s.imversed.com/imversed_linux_amd64.tar.gz",
-          "windows/amd64": "https://s.imversed.com/imversed_windows_amd64.tar.gz"
-        },
-        "compatible_versions": ["v2.4.0"],
-        "git_repo": "https://github.com/imversed/imversed",
-        "recommended_version": "v2.4.0"
-      },
-      "daemon_name": "imversed",
-      "explorers": [
-        {
-          "kind": "Big Dipper",
-          "tx_page": "https://tex-s.imversed.com/transactions/${txHash}",
-          "url": "https://tex-s.imversed.com"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "nimv",
-            "fixed_min_gas_price": 0.001
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://s.imversed.com/test-net/genesis.json"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.imversed",
-      "peers": {
-        "persistent_peers": [
-          {
-            "address": "34.133.39.91:26656",
-            "id": "9b1ea21b9a1d098169c19e5d6bfa1397bba5c655",
-            "provider": "imversed"
-          }
-        ]
-      },
-      "pretty_name": "Imversed Testnet",
-      "slip44": 118,
-      "status": "live"
-    },
-    {
-      "$schema": "../../chain.schema.json",
-      "apis": {
-        "grpc": [
-          {
-            "address": "sentry.testnet.saage.io:9090",
-            "provider": "saage"
-          }
-        ],
-        "rest": [
-          {
-            "address": "https://sentry.testnet.saage.io:1317/",
-            "provider": "saage"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://sentry.testnet.saage.io:26657/",
-            "provider": "saage"
-          }
-        ]
-      },
-      "bech32_prefix": "saage",
-      "chain_id": "saage-internal-testnet-1.3",
-      "chain_name": "saagetestnet",
-      "codebase": {
-        "compatible_versions": ["v0.4.1"],
-        "git_repo": "https://github.com/saage-tech/saage-testnet-1",
-        "recommended_version": "v0.4.1"
-      },
-      "daemon_name": "saaged",
-      "explorers": [
-        {
-          "kind": "bigdipper",
-          "tx_page": "http://blockexplorer-1.testnet.saage.io/transactions/{txHash}",
-          "url": "http://blockexplorer-1.testnet.saage.io/"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "usaage",
-            "fixed_min_gas_price": 0
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://github.com/saage-tech/network-testnet-1/blob/master/networks/saage-testnet-3/genesis.json"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.saage",
-      "peers": {
-        "persistent_peers": [
-          {
-            "address": "44.203.79.229:26656",
-            "id": "e1fc6bc72db2c38e55751d350a72eba699a58f2d",
-            "provider": "saage"
-          },
-          {
-            "address": "3.235.167.226:26656",
-            "id": "7ab5678c46266bdb294426de40e2b984e0af2917",
-            "provider": "saage"
-          },
-          {
-            "address": "52.202.79.213:26656",
-            "id": "ff661f7eacf9962bcd8a8aeb63bd8b9a3eee40bd",
-            "provider": "saage"
-          },
-          {
-            "address": "54.226.144.104:26656",
-            "id": "e0e5c42ce3d3c10359c566ffa217e2743048e8df",
-            "provider": "saage"
-          }
-        ]
-      },
-      "pretty_name": "Saage-Testnet",
-      "slip44": 909,
-      "status": "live"
-    },
-    {
-      "$schema": "../chain.schema.json",
-      "apis": {
-        "rest": [
-          {
-            "address": "https://rest-api.stateset.zone",
-            "provider": "stateset"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://rpc.stateset.zone/",
-            "provider": "stateset"
-          }
-        ]
-      },
-      "bech32_prefix": "stateset",
-      "chain_id": "stateset-1-testnet",
-      "chain_name": "stateset-1-testnet",
-      "codebase": {
-        "binaries": {
-          "darwin/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-darwin-amd64",
-          "linux/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-amd64",
-          "linux/arm64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-arm64",
-          "windows/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-windows-amd64.exe"
-        },
-        "compatible_versions": ["v1.0.0"],
-        "git_repo": "https://github.com/stateset/core",
-        "recommended_version": "v1.0.0"
-      },
-      "daemon_name": "statesetd",
-      "explorers": [
-        {
-          "kind": "bigdipper2.0",
-          "tx_page": "https://explore.stateset.zone/transactions/${txHash}",
-          "url": "https://explore.stateset.zone"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "ustate",
-            "fixed_min_gas_price": 0
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://rpc.stateset.zone/genesis"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.statesetd",
-      "peers": {
-        "persistent_peers": [],
-        "seeds": [
-          {
-            "address": "rpc.stateset.zone:26656",
-            "id": "DBC49AA829D16329C1772F7EF76730939E606A41",
-            "provider": "stateset"
-          }
-        ]
-      },
-      "pretty_name": "Stateset Testnet",
-      "slip44": 118,
-      "status": "live"
-    },
-    {
-      "$schema": "../chain.schema.json",
-      "apis": {
-        "grpc": [
-          {
-            "address": "https://grpc.sentry-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://grpc.sentry-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://grpc.state-sync-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://grpc.state-sync-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          }
-        ],
-        "rest": [
-          {
-            "address": "https://rest.sentry-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rest.sentry-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rest.state-sync-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rest.state-sync-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          }
-        ],
-        "rpc": [
-          {
-            "address": "https://rpc.sentry-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rpc.sentry-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rpc.state-sync-01.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          },
-          {
-            "address": "https://rpc.state-sync-02.theta-testnet.polypore.xyz",
-            "provider": "Hypha"
-          }
-        ]
-      },
-      "bech32_prefix": "cosmos",
-      "chain_id": "theta-testnet-001",
-      "chain_name": "theta",
-      "codebase": {
-        "binaries": {
-          "darwin/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-darwin-amd64",
-          "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-linux-amd64",
-          "linux/arm64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-linux-arm64",
-          "windows/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-windows-amd64.exe"
-        },
-        "compatible_versions": ["v6.0.0"],
-        "git_repo": "https://github.com/cosmos/gaia",
-        "recommended_version": "v6.0.0"
-      },
-      "daemon_name": "gaiad",
-      "explorers": [
-        {
-          "kind": "Big Dipper",
-          "tx_page": "https://explorer.theta-testnet.polypore.xyz/transactions/${txHash}",
-          "url": "https://explorer.theta-testnet.polypore.xyz/"
-        }
-      ],
-      "fees": {
-        "fee_tokens": [
-          {
-            "denom": "uatom",
-            "fixed_min_gas_price": 0
-          }
-        ]
-      },
-      "genesis": {
-        "genesis_url": "https://github.com/cosmos/testnets/raw/master/v7-theta/public-testnet/genesis.json.gz"
-      },
-      "key_algos": ["secp256k1"],
-      "network_type": "testnet",
-      "node_home": "$HOME/.gaia",
-      "peers": {
-        "persistent_peers": [
-          {
-            "address": "p2p.sentry-01.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.sentry-02.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.state-sync-01.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.state-sync-02.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          }
-        ],
-        "seeds": [
-          {
-            "address": "p2p.sentry-01.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.sentry-02.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.state-sync-01.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          },
-          {
-            "address": "p2p.state-sync-02.theta-testnet.polypore.xyz:26656",
-            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
-            "provider": "Hypha"
-          }
-        ]
-      },
-      "pretty_name": "Theta Testnet",
-      "slip44": 118,
-      "status": "live"
-    },
-    {
       "$schema": "../chain.schema.json",
       "apis": {
         "rest": [
@@ -17653,6 +17168,491 @@
       "network_type": "testnet",
       "node_home": "$HOME/.kujira",
       "pretty_name": "Kujira Testnet",
+      "slip44": 118,
+      "status": "live"
+    },
+    {
+      "$schema": "../../chain.schema.json",
+      "apis": {
+        "rest": [
+          {
+            "address": "https://kujira-testnet-api.polkachu.com/",
+            "provider": "polkachu"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://kujira-testnet-rpc.polkachu.com",
+            "provider": "polkachu"
+          }
+        ]
+      },
+      "bech32_prefix": "kujira",
+      "chain_id": "harpoon-4",
+      "chain_name": "harpoon",
+      "codebase": {
+        "compatible_versions": ["v0.4.0"],
+        "git_repo": "https://github.com/Team-Kujira/core",
+        "recommended_version": "v0.4.0"
+      },
+      "daemon_name": "kujirad",
+      "explorers": [
+        {
+          "kind": "explorers.guru",
+          "tx_page": "https://kujira.explorers.guru/transaction/${txHash}",
+          "url": "https://kujira.explorers.guru"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "ukuji",
+            "fixed_min_gas_price": 0
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://github.com/Team-Kujira/networks/raw/master/testnet/harpoon-4.json"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.kujira",
+      "pretty_name": "Kujira Harpoon",
+      "slip44": 118,
+      "status": "live"
+    },
+    {
+      "$schema": "../../chain.schema.json",
+      "apis": {
+        "rest": [
+          {
+            "address": "https://lcd-testnet.bitcanna.io",
+            "provider": "bitcanna"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://rpc-testnet.bitcanna.io",
+            "provider": "bitcanna"
+          }
+        ]
+      },
+      "bech32_prefix": "bcna",
+      "chain_id": "bitcanna-dev-4",
+      "chain_name": "bitcannadev",
+      "codebase": {
+        "binaries": {
+          "linux/amd64": "https://github.com/BitCannaGlobal/bcna/releases/download/v1.4.4-pre/bcna_linux_amd64.tar.gz"
+        },
+        "compatible_versions": ["v1.4.4-pre"],
+        "git_repo": "https://github.com/BitCannaGlobal/bcna",
+        "recommended_version": "v1.4.4-pre"
+      },
+      "daemon_name": "bcnad",
+      "explorers": [
+        {
+          "tx_page": "https://testnet.explorer.erialos.me/bitcanna/tx/${txHash}",
+          "url": "https://testnet.explorer.erialos.me/bitcanna"
+        },
+        {
+          "tx_page": "https://testnets-cosmos.mintthemoon.xyz/bitcanna/tx/${txHash}",
+          "url": "https://testnets-cosmos.mintthemoon.xyz/bitcanna"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "ubcna",
+            "fixed_min_gas_price": 0.001
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://raw.githubusercontent.com/BitCannaGlobal/testnet-bcna-cosmos/main/instructions/bitcanna-dev-4/genesis.json"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.bcna",
+      "peers": {
+        "persistent_peers": [
+          {
+            "address": "188.166.126.81:26656",
+            "id": "d0de90dd8b40dfe231a65875069a31c534359c95"
+          },
+          {
+            "address": "144.91.89.66:26656",
+            "id": "4ccc6689a4d2590f6b60e34a3a3e70e0888bbcc0"
+          }
+        ],
+        "seeds": [
+          {
+            "address": "144.91.127.5:26656",
+            "id": "3fde4e73ef3fba3418dde89bffe0057508fc5706"
+          }
+        ]
+      },
+      "pretty_name": "BitCanna Devnet",
+      "slip44": 118,
+      "status": "live"
+    },
+    {
+      "$schema": "../../chain.schema.json",
+      "apis": {
+        "grpc": [
+          {
+            "address": "http://qs.imversed.com:9090",
+            "provider": "imversed"
+          }
+        ],
+        "rest": [
+          {
+            "address": "https://query-endpoint-test.imversed.com/",
+            "provider": "imversed"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://tx-endpoint-test.imversed.com/",
+            "provider": "imversed"
+          }
+        ]
+      },
+      "bech32_prefix": "imv",
+      "chain_id": "imversed-test-1",
+      "chain_name": "imversedtestnet",
+      "codebase": {
+        "binaries": {
+          "darwin/amd64": "https://s.imversed.com/imversed_darwin_amd64.tar.gz",
+          "darwin/arm64": "https://s.imversed.com/imversed_darwin_arm64.tar.gz",
+          "linux/amd64": "https://s.imversed.com/imversed_linux_amd64.tar.gz",
+          "windows/amd64": "https://s.imversed.com/imversed_windows_amd64.tar.gz"
+        },
+        "compatible_versions": ["v2.4.0"],
+        "git_repo": "https://github.com/imversed/imversed",
+        "recommended_version": "v2.4.0"
+      },
+      "daemon_name": "imversed",
+      "explorers": [
+        {
+          "kind": "Big Dipper",
+          "tx_page": "https://tex-s.imversed.com/transactions/${txHash}",
+          "url": "https://tex-s.imversed.com"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "nimv",
+            "fixed_min_gas_price": 0.001
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://s.imversed.com/test-net/genesis.json"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.imversed",
+      "peers": {
+        "persistent_peers": [
+          {
+            "address": "34.133.39.91:26656",
+            "id": "9b1ea21b9a1d098169c19e5d6bfa1397bba5c655",
+            "provider": "imversed"
+          }
+        ]
+      },
+      "pretty_name": "Imversed Testnet",
+      "slip44": 118,
+      "status": "live"
+    },
+    {
+      "$schema": "../chain.schema.json",
+      "apis": {
+        "rest": [
+          {
+            "address": "https://rest-api.stateset.zone",
+            "provider": "stateset"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://rpc.stateset.zone/",
+            "provider": "stateset"
+          }
+        ]
+      },
+      "bech32_prefix": "stateset",
+      "chain_id": "stateset-1-testnet",
+      "chain_name": "stateset-1-testnet",
+      "codebase": {
+        "binaries": {
+          "darwin/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-darwin-amd64",
+          "linux/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-amd64",
+          "linux/arm64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-linux-arm64",
+          "windows/amd64": "https://github.com/stateset/core/releases/download/v1.0.0/statesetd-1.0.0-windows-amd64.exe"
+        },
+        "compatible_versions": ["v1.0.0"],
+        "git_repo": "https://github.com/stateset/core",
+        "recommended_version": "v1.0.0"
+      },
+      "daemon_name": "statesetd",
+      "explorers": [
+        {
+          "kind": "bigdipper2.0",
+          "tx_page": "https://explore.stateset.zone/transactions/${txHash}",
+          "url": "https://explore.stateset.zone"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "ustate",
+            "fixed_min_gas_price": 0
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://rpc.stateset.zone/genesis"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.statesetd",
+      "peers": {
+        "persistent_peers": [],
+        "seeds": [
+          {
+            "address": "rpc.stateset.zone:26656",
+            "id": "DBC49AA829D16329C1772F7EF76730939E606A41",
+            "provider": "stateset"
+          }
+        ]
+      },
+      "pretty_name": "Stateset Testnet",
+      "slip44": 118,
+      "status": "live"
+    },
+    {
+      "$schema": "../../chain.schema.json",
+      "apis": {
+        "grpc": [
+          {
+            "address": "sentry.testnet.saage.io:9090",
+            "provider": "saage"
+          }
+        ],
+        "rest": [
+          {
+            "address": "https://sentry.testnet.saage.io:1317/",
+            "provider": "saage"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://sentry.testnet.saage.io:26657/",
+            "provider": "saage"
+          }
+        ]
+      },
+      "bech32_prefix": "saage",
+      "chain_id": "saage-internal-testnet-1.3",
+      "chain_name": "saagetestnet",
+      "codebase": {
+        "compatible_versions": ["v0.4.1"],
+        "git_repo": "https://github.com/saage-tech/saage-testnet-1",
+        "recommended_version": "v0.4.1"
+      },
+      "daemon_name": "saaged",
+      "explorers": [
+        {
+          "kind": "bigdipper",
+          "tx_page": "http://blockexplorer-1.testnet.saage.io/transactions/{txHash}",
+          "url": "http://blockexplorer-1.testnet.saage.io/"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "usaage",
+            "fixed_min_gas_price": 0
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://github.com/saage-tech/network-testnet-1/blob/master/networks/saage-testnet-3/genesis.json"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.saage",
+      "peers": {
+        "persistent_peers": [
+          {
+            "address": "44.203.79.229:26656",
+            "id": "e1fc6bc72db2c38e55751d350a72eba699a58f2d",
+            "provider": "saage"
+          },
+          {
+            "address": "3.235.167.226:26656",
+            "id": "7ab5678c46266bdb294426de40e2b984e0af2917",
+            "provider": "saage"
+          },
+          {
+            "address": "52.202.79.213:26656",
+            "id": "ff661f7eacf9962bcd8a8aeb63bd8b9a3eee40bd",
+            "provider": "saage"
+          },
+          {
+            "address": "54.226.144.104:26656",
+            "id": "e0e5c42ce3d3c10359c566ffa217e2743048e8df",
+            "provider": "saage"
+          }
+        ]
+      },
+      "pretty_name": "Saage-Testnet",
+      "slip44": 909,
+      "status": "live"
+    },
+    {
+      "$schema": "../chain.schema.json",
+      "apis": {
+        "grpc": [
+          {
+            "address": "https://grpc.sentry-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://grpc.sentry-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://grpc.state-sync-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://grpc.state-sync-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          }
+        ],
+        "rest": [
+          {
+            "address": "https://rest.sentry-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rest.sentry-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rest.state-sync-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rest.state-sync-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          }
+        ],
+        "rpc": [
+          {
+            "address": "https://rpc.sentry-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rpc.sentry-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rpc.state-sync-01.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          },
+          {
+            "address": "https://rpc.state-sync-02.theta-testnet.polypore.xyz",
+            "provider": "Hypha"
+          }
+        ]
+      },
+      "bech32_prefix": "cosmos",
+      "chain_id": "theta-testnet-001",
+      "chain_name": "theta",
+      "codebase": {
+        "binaries": {
+          "darwin/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-darwin-amd64",
+          "linux/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-linux-amd64",
+          "linux/arm64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-linux-arm64",
+          "windows/amd64": "https://github.com/cosmos/gaia/releases/download/v6.0.0/gaiad-v6.0.0-windows-amd64.exe"
+        },
+        "compatible_versions": ["v6.0.0"],
+        "git_repo": "https://github.com/cosmos/gaia",
+        "recommended_version": "v6.0.0"
+      },
+      "daemon_name": "gaiad",
+      "explorers": [
+        {
+          "kind": "Big Dipper",
+          "tx_page": "https://explorer.theta-testnet.polypore.xyz/transactions/${txHash}",
+          "url": "https://explorer.theta-testnet.polypore.xyz/"
+        }
+      ],
+      "fees": {
+        "fee_tokens": [
+          {
+            "denom": "uatom",
+            "fixed_min_gas_price": 0
+          }
+        ]
+      },
+      "genesis": {
+        "genesis_url": "https://github.com/cosmos/testnets/raw/master/v7-theta/public-testnet/genesis.json.gz"
+      },
+      "key_algos": ["secp256k1"],
+      "network_type": "testnet",
+      "node_home": "$HOME/.gaia",
+      "peers": {
+        "persistent_peers": [
+          {
+            "address": "p2p.sentry-01.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.sentry-02.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.state-sync-01.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.state-sync-02.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          }
+        ],
+        "seeds": [
+          {
+            "address": "p2p.sentry-01.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.sentry-02.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.state-sync-01.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          },
+          {
+            "address": "p2p.state-sync-02.theta-testnet.polypore.xyz:26656",
+            "id": "5c9850dc5ec603b0c97ffd8d67bde3221b877acf",
+            "provider": "Hypha"
+          }
+        ]
+      },
+      "pretty_name": "Theta Testnet",
       "slip44": 118,
       "status": "live"
     }

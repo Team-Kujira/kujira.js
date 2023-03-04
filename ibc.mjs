@@ -41,7 +41,6 @@ const runTokens = async (rpc) => {
           client.ibc.transfer
             .denomTrace(s.denom.replace("ibc/", ""))
             .then(async ({ denomTrace }) => {
-              console.log(denomTrace);
               if (denomTrace && denomTrace.baseDenom) {
                 tokens[s.denom] = {
                   path: denomTrace.path,
@@ -64,8 +63,8 @@ const runTokens = async (rpc) => {
     });
 };
 
-// await runTokens("https://test-rpc-kujira.mintthemoon.xyz");
-// await runTokens("https://rpc.kaiyo.kujira.setten.io");
+await runTokens("https://test-rpc-kujira.mintthemoon.xyz");
+await runTokens("https://rpc.kaiyo.kujira.setten.io");
 
 const testnet = await runConnections("https://test-rpc-kujira.mintthemoon.xyz");
 const mainnet = await runConnections("https://rpc-kujira.mintthemoon.xyz");
@@ -88,10 +87,12 @@ fs.writeFileSync(
   )
 );
 
-// await runTokens("https://terra-testnet-rpc.polkachu.com");
+await runTokens("https://terra-testnet-rpc.polkachu.com");
 
-// await Promise.all(
-//   chains.mainnet.map(({ chain_name }) => {
-//     return runTokens(`https://rpc.cosmos.directory/${chain_name}`).catch(() => {});
-//   })
-// ).catch(() => {});
+await Promise.all(
+  chains.mainnet.map(({ chain_name }) => {
+    return runTokens(`https://rpc.cosmos.directory/${chain_name}`).catch(
+      () => {}
+    );
+  })
+).catch(() => {});
