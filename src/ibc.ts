@@ -1,14 +1,17 @@
 import chains from "./resources/chains.json";
+import channels from "./resources/channels.json";
 import connections from "./resources/connections.json";
 import tokens from "./resources/tokens.json";
 
 export const IBC: {
   chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
   connections: typeof connections;
+  channels: typeof channels;
   tokens: Record<string, { base_denom: string; path: string }>;
 } = {
   chains,
   connections,
+  channels,
   tokens,
 };
 
