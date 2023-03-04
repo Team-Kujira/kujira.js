@@ -30,6 +30,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-32": "stride",
     "channel-46": "carbon",
     "channel-50": "gravitybridge",
+    "channel-51": "planq",
     "channel-54": "injective",
     "channel-55": "mars",
     "channel-58": "migaloo",

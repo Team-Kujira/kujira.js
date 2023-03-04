@@ -17020,6 +17020,195 @@
                     "tx_page": "https://ping.pub/migaloo/tx/${txHash}"
                 }
             ]
+        },
+        {
+            "$schema": "../chain.schema.json",
+            "chain_name": "planq",
+            "status": "live",
+            "network_type": "mainnet",
+            "website": "https://planq.network/",
+            "pretty_name": "Planq",
+            "chain_id": "planq_7070-2",
+            "bech32_prefix": "plq",
+            "node_home": "$HOME/.planqd",
+            "daemon_name": "planqd",
+            "key_algos": ["ethsecp256k1"],
+            "slip44": 60,
+            "fees": {
+                "fee_tokens": [
+                    {
+                        "denom": "aplanq",
+                        "fixed_min_gas_price": 20000000000,
+                        "low_gas_price": 30000000000,
+                        "average_gas_price": 35000000000,
+                        "high_gas_price": 40000000000
+                    }
+                ]
+            },
+            "staking": {
+                "staking_tokens": [
+                    {
+                        "denom": "aplanq"
+                    }
+                ]
+            },
+            "assets": [
+                {
+                    "description": "The native EVM, governance and staking token of the Planq Network",
+                    "denom_units": [
+                        {
+                            "denom": "aplanq",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "planq",
+                            "exponent": 18
+                        }
+                    ],
+                    "base": "aplanq",
+                    "name": "Planq",
+                    "display": "planq",
+                    "symbol": "PLQ",
+                    "logo_URIs": {
+                        "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.svg",
+                        "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png"
+                    },
+                    "coingecko_id": "planq"
+                }
+            ],
+            "codebase": {
+                "git_repo": "https://github.com/planq-network/planq",
+                "recommended_version": "v1.0.3",
+                "compatible_versions": ["v1.0.0", "v1.0.1", "v1.0.2"],
+                "binaries": {
+                    "linux/amd64": "https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Linux_x86_64.tar.gz",
+                    "linux/arm64": "https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Linux_arm64.tar.gz",
+                    "darwin/amd64": "https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Darwin_x86_64.tar.gz",
+                    "darwin/arm64": "https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Darwin_arm64.tar.gz",
+                    "windows/amd64": "https://github.com/planq-network/planq/releases/download/v1.0.3/planq_1.0.3_Windows_x86_64.zip"
+                }
+            },
+            "genesis": {
+                "genesis_url": "https://raw.githubusercontent.com/planq-network/networks/main/mainnet/genesis.json"
+            },
+            "peers": {
+                "seeds": [
+                    {
+                        "id": "dd2f0ceaa0b21491ecae17413b242d69916550ae",
+                        "address": "135.125.247.70:26656",
+                        "provider": "Planq Foundation EU"
+                    }
+                ],
+                "persistent_peers": [
+                    {
+                        "id": "dd2f0ceaa0b21491ecae17413b242d69916550ae",
+                        "address": "135.125.247.70:26656",
+                        "provider": "Planq Foundation EU"
+                    },
+                    {
+                        "id": "e6d553dffbbabbfe9602b43d87e5b0ac1a46348a",
+                        "address": "135.125.247.70:26656",
+                        "provider": "Nodine.ID"
+                    }
+                ]
+            },
+            "apis": {
+                "rpc": [
+                    {
+                        "address": "https://rpc.planq.network",
+                        "provider": "planq.network"
+                    },
+                    {
+                        "address": "https://rpc.planq.nodestake.top",
+                        "provider": "NodeStake"
+                    },
+                    {
+                        "address": "https://rpc-planq.nodine.id",
+                        "provider": "Nodine.id"
+                    },
+                    {
+                        "address": "https://rpc-planq.comunitynode.my.id",
+                        "provider": "ComunityNode"
+                    },
+                    {
+                        "address": "https://planq-rpc.enodex.lol",
+                        "provider": "Enodex"
+                    }
+                ],
+                "rest": [
+                    {
+                        "address": "https://rest.planq.network",
+                        "provider": "planq.network"
+                    },
+                    {
+                        "address": "https://api.planq.nodestake.top",
+                        "provider": "NodeStake"
+                    },
+                    {
+                        "address": "https://api-planq.nodine.id",
+                        "provider": "Nodine.ID"
+                    },
+                    {
+                        "address": "https://api-planq.comunitynode.my.id",
+                        "provider": "ComunityNode"
+                    },
+                    {
+                        "address": "https://planq-api.enodex.lol",
+                        "provider": "Enodex"
+                    }
+                ],
+                "grpc": [
+                    {
+                        "address": "grpc.planq.network:443",
+                        "provider": "planq.network"
+                    },
+                    {
+                        "address": "grpc.planq.nodestake.top:443",
+                        "provider": "NodeStake"
+                    },
+                    {
+                        "address": "https://grpc-planq.nodine.id",
+                        "provider": "Nodine.id"
+                    }
+                ],
+                "evm-http-jsonrpc": [
+                    {
+                        "address": "https://evm-rpc.planq.network",
+                        "provider": "planq.network"
+                    },
+                    {
+                        "address": "https://jsonrpc.planq.nodestake.top",
+                        "provider": "NodeStake"
+                    }
+                ]
+            },
+            "explorers": [
+                {
+                    "kind": "bigdipper",
+                    "url": "https://explorer.planq.network",
+                    "tx_page": "https://explorer.planq.network/transactions/${txHash}"
+                },
+                {
+                    "kind": "blockscout",
+                    "url": "https://evm.planq.network",
+                    "tx_page": "https://evm.planq.network/tx/${txHash}"
+                },
+                {
+                    "kind": "NodeStake Explorer",
+                    "url": "https://explorer.nodestake.top/planq",
+                    "tx_page": "https://explorer.nodestake.top/planq/tx/${txHash}"
+                },
+                {
+                    "kind": "TC Network",
+                    "url": "https://explorer.tcnetwork.io/planq",
+                    "tx_page": "https://explorer.tcnetwork.io/planq/transaction/${txHash}"
+                },
+                {
+                    "kind": "Enodex",
+                    "url": "https://explorer.enodex.lol/planq",
+                    "tx_page": "https://explorer.enodex.lol/planq/tx/${txHash}"
+                }
+            ]
         }
     ],
     "testnet": [
