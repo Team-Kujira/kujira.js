@@ -15,6 +15,7 @@ export declare class Denom {
     constructor(reference: string, underlying?: Denom[] | undefined);
     static from(string: string): Denom;
     eq: (other: Denom) => boolean;
+    compare: (other: Denom) => number;
 }
 export declare const USK_TESTNET: Denom;
 export declare const USK: Denom;

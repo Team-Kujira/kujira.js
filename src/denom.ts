@@ -268,6 +268,10 @@ export class Denom {
   }
 
   public eq = (other: Denom): boolean => this.reference == other.reference;
+  public compare = (other: Denom): number =>
+    this.symbol
+      .replace(/[a-z]+/, "")
+      .localeCompare(other.symbol.replace(/[a-z]+/, ""));
 }
 
 export const USK_TESTNET = Denom.from(
