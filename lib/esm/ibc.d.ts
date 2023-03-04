@@ -1,5 +1,6 @@
 import channels from "./resources/channels.json";
 import connections from "./resources/connections.json";
+export declare const TRANSFER_CHANNELS: Record<string, Record<string, string>>;
 export declare const IBC: {
     chains: {
         mainnet: CosmosChain[];
