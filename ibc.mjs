@@ -2,6 +2,7 @@ import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { ClientState } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint.js";
 import fs from "fs";
 import { fetchTokens, kujiraQueryClient } from "./lib/cjs/index.js";
+import chains from "./src/resources/chains.json" assert { type: "json" };
 import tokens from "./src/resources/tokens.json" assert { type: "json" };
 
 const runConnections = async (rpc) => {
