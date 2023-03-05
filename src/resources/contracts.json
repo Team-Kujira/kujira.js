@@ -3416,7 +3416,9 @@
         "address": "kujira144sn0hdpar2enufzme5wqgefeng6m6np6csadmwy7sk5ae3pv9wqw0hj75",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira19kl9ma0u7e9vdhw54mjahh052hcdwzpxmm840phffrff7v3perjsqxfajc"
+          ],
           "bid_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
           "collateral_denom": "ibc/0306D6B66EAA2EDBB7EAD23C0EC9DDFC69BB43E80B398035E90FBCFEF3FD1A87",
           "bid_threshold": "10000000000",
@@ -3558,7 +3560,7 @@
           "max_ratio": "0.6",
           "mint_fee": "0.001",
           "interest_rate": "0.01",
-          "orca_address": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "orca_address": "kujira144sn0hdpar2enufzme5wqgefeng6m6np6csadmwy7sk5ae3pv9wqw0hj75",
           "max_debt": "250000000000",
           "liquidation_threshold": "1000000000",
           "liquidation_ratio": "0.1"
