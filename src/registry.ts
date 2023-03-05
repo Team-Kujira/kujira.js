@@ -3,6 +3,8 @@ import { Registry } from "@cosmjs/proto-signing";
 import * as s from "@cosmjs/stargate";
 import { ibcTypes } from "@cosmjs/stargate/build/modules";
 import {} from "@cosmjs/stargate/build/modules/distribution/messages";
+import { assert } from "@cosmjs/utils";
+import { BaseAccount } from "cosmjs-types/cosmos/auth/v1beta1/auth";
 import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1beta1/distribution";
 import { TextProposal } from "cosmjs-types/cosmos/gov/v1beta1/gov";
 import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
@@ -34,6 +36,7 @@ import {
   DeleteHookProposal,
   UpdateHookProposal,
 } from "./kujira/kujira.scheduler/types/proposal";
+import { StridePeriodicVestingAccount } from "./stride/vesting";
 
 const proposalTypes = [
   [
@@ -87,3 +90,18 @@ const types = [
 ];
 
 export const registry = new Registry(<any>types);
+
+export const accountParser: s.AccountParser = (acc) => {
+  switch (acc.typeUrl) {
+    case "/stride.vesting.StridePeriodicVestingAccount":
+      const baseAccount = StridePeriodicVestingAccount.decode(acc.value)
+        .baseVestingAccount?.baseAccount;
+      assert(baseAccount);
+      return s.accountFromAny({
+        typeUrl: "/cosmos.auth.v1beta1.BaseAccount",
+        value: BaseAccount.encode(baseAccount).finish(),
+      });
+    default:
+      return s.accountFromAny(acc);
+  }
+};
