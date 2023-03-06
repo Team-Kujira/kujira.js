@@ -21,7 +21,7 @@ export const RPCS: Record<string, string[]> = {
     "https://kuji-rpc.kleomedes.network",
     "https://kujira-mainnet-rpc.autostake.net",
     "https://kujira-rpc.ibs.team",
-    // "https://kujira-rpc.lavenderfive.com",
+    "https://kujira-rpc.openbitlab.com",
     "https://kujira-rpc.polkachu.com",
     "https://kujira-rpc.theamsolutions.info",
     "https://kujira.rpc.ghostinnet.com",
@@ -32,6 +32,7 @@ export const RPCS: Record<string, string[]> = {
     "https://rpc-kujira.synergynodes.com",
     "https://rpc-kujira.whispernode.com",
     "https://rpc.kaiyo.kujira.setten.io",
+    // "https://kujira-rpc.lavenderfive.com",
   ],
   [LOCALNET]: ["http://localhost:26657"],
   "gravity-bridge-3": [
