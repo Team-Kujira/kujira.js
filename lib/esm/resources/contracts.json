@@ -1340,7 +1340,7 @@
                         "decimal_places": 3
                     },
                     "decimal_delta": 0,
-                    "is_bootstrapping": true
+                    "is_bootstrapping": false
                 },
                 "pairs": false
             },
@@ -3262,6 +3262,34 @@
                     "amp": "1"
                 },
                 "pairs": false
+            },
+            {
+                "id": 54,
+                "address": "kujira17pfjnng0j8nzkn0kyt0xsfpwj2cfft4yqxv8dmkqzl2adsn9fh0sc4rddu",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "denoms": [
+                        "ibc/0306D6B66EAA2EDBB7EAD23C0EC9DDFC69BB43E80B398035E90FBCFEF3FD1A87",
+                        "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+                    ],
+                    "price_precision": {
+                        "decimal_places": 3
+                    },
+                    "decimal_delta": 0,
+                    "fin_contract": "kujira18rd5fge3m8zvcw4rl94ztre2jra0srpv8d7t64aag4gzw7jkmzeqvx564r",
+                    "intervals": [
+                        "0.01",
+                        "0.01",
+                        "0.01",
+                        "0.02",
+                        "0.03",
+                        "0.05",
+                        "0.1"
+                    ],
+                    "fee": "0.001",
+                    "amp": "1"
+                },
+                "pairs": false
             }
         ],
         "bowStaking": [
@@ -3502,9 +3530,9 @@
                     "oracle_denom": "LUNA",
                     "max_ratio": "0.6",
                     "mint_fee": "0.001",
-                    "interest_rate": "0.01",
+                    "interest_rate": "0.02",
                     "orca_address": "kujira1sdlp8eqp4md6waqv2x9vlvt9dtzyx9ztt0zvkfxaw9kxh3t5gdvqypxlwz",
-                    "max_debt": "300000000000",
+                    "max_debt": "350000000000",
                     "liquidation_threshold": "1000000000",
                     "liquidation_ratio": "0.05"
                 },
