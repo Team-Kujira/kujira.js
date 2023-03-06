@@ -379,6 +379,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@improbable-eng/grpc-web@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "@improbable-eng/grpc-web@npm:0.13.0"
+  dependencies:
+    browser-headers: ^0.4.0
+  peerDependencies:
+    google-protobuf: ^3.2.0
+  checksum: e7cd4ae5ed269be4215b72dea6727c1e8fd139a408386b24084842fbbfa249fb45ea12033ade2872a3d5cdfeb0e0b487563ff9f5b1c308e32aecccf7b80ca441
+  languageName: node
+  linkType: hard
+
+"@injectivelabs/chain-api@npm:^1.9.9":
+  version: 1.9.9
+  resolution: "@injectivelabs/chain-api@npm:1.9.9"
+  dependencies:
+    "@improbable-eng/grpc-web": ^0.13.0
+    google-protobuf: ^3.13.0
+  checksum: 87ac0fb32653b571c23f340f426deb4a08dc1e4a50f67e9aa9029493e8e207e563d854d52b89966ef5b876d05b5758302b1091da4da0e33b40cd8e45019fb805
+  languageName: node
+  linkType: hard
+
 "@iov/crypto@npm:2.1.0":
   version: 2.1.0
   resolution: "@iov/crypto@npm:2.1.0"
@@ -574,6 +595,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/google-protobuf@npm:^3.15.6":
+  version: 3.15.6
+  resolution: "@types/google-protobuf@npm:3.15.6"
+  checksum: e8f7cd9d263093cd0a72eb10ff0bb8221e28aa8b9f601eddbe19b286932aae96fbc9ccb1f3a744525e7811fa87a6aeefd431858b6e2034f14a2dc68710a86d54
+  languageName: node
+  linkType: hard
+
 "@types/long@npm:^4.0.1":
   version: 4.0.2
   resolution: "@types/long@npm:4.0.2"
@@ -704,6 +732,13 @@ __metadata:
   version: 1.1.0
   resolution: "brorand@npm:1.1.0"
   checksum: 8a05c9f3c4b46572dec6ef71012b1946db6cae8c7bb60ccd4b7dd5a84655db49fe043ecc6272e7ef1f69dc53d6730b9e2a3a03a8310509a3d797a618cbee52be
+  languageName: node
+  linkType: hard
+
+"browser-headers@npm:^0.4.0":
+  version: 0.4.1
+  resolution: "browser-headers@npm:0.4.1"
+  checksum: 28b927dd90e4882eeb0625cd4a20a8e868f892144bca794a9b027fad9d2094656daf46473cb9084d650590504c581dd6a711146243035b66e75ade61bbe4d3cf
   languageName: node
   linkType: hard
 
@@ -922,6 +957,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"google-protobuf@npm:^3.13.0":
+  version: 3.21.2
+  resolution: "google-protobuf@npm:3.21.2"
+  checksum: 3caa2e1e2654714cc1a201ac5e5faabcaa48f5fba3d8ff9b64ca66fe19e4e0506b94053f32eddc77bf3a7a47ac1660315c6744185c1e2bb27654fd76fe91b988
+  languageName: node
+  linkType: hard
+
 "has-property-descriptors@npm:^1.0.0":
   version: 1.0.0
   resolution: "has-property-descriptors@npm:1.0.0"
@@ -1089,7 +1131,9 @@ __metadata:
     "@cosmjs/launchpad": ^0.27.1
     "@cosmjs/stargate": ^0.29.4
     "@ethersproject/bignumber": ^5.7.0
+    "@injectivelabs/chain-api": ^1.9.9
     "@keplr-wallet/types": ^0.11.12
+    "@types/google-protobuf": ^3.15.6
     cosmjs-types: 0.5.2
     long: ^4.0.0
     react: ^18.2.0
