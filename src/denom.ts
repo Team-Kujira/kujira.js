@@ -80,6 +80,8 @@ const labels: Record<string, string> = {
   terra1kc87mu460fwkqte29rquh4hc20m54fxwtsx7gp: "bLUNA",
   terra1c00vskhyzdv0z63z2tyetzx2qma67n2z3vzyn0: "bSOL",
   terra1z3e2e4jpk4n0xzzwlkgcfvc95pc5ldq0xcny58: "sAVAX",
+  "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
+    "ampWHALE",
 };
 
 const terra: Record<string, string> = {
@@ -219,7 +221,7 @@ export class Denom {
       this.trace = (ibc as Record<string, any>)[this.reference];
     }
 
-    this.symbol = baseDenomToSymbol(this.trace?.base_denom || this.reference);
+    this.symbol = baseDenomToSymbol(this.reference);
 
     if (this.underlying) {
       this.symbol = `${this.symbol} ${this.underlying
