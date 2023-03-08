@@ -219,7 +219,7 @@ export class Denom {
       this.trace = (ibc as Record<string, any>)[this.reference];
     }
 
-    this.symbol = baseDenomToSymbol(this.reference);
+    this.symbol = baseDenomToSymbol(this.trace?.base_denom || this.reference);
 
     if (this.underlying) {
       this.symbol = `${this.symbol} ${this.underlying
