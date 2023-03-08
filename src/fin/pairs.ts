@@ -70,6 +70,7 @@ const compile =
                 b.config.price_precision.decimal_places &&
               ![
                 "kujira188p624ykuepun8h8kjmcfs553mz2jgeanetyqv7l6xltdld497vqespn6c",
+                "kujira136rwqvwy3flttm9wfnc5xgnlr6mu5k8e2elgzs2hdhuwf50w3l2qp807cx",
               ].includes(b.address)
           )?.address,
         calc: contracts[network].calc[0]?.pairs.find(
