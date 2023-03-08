@@ -1407,6 +1407,20 @@
             "ordering": 1,
             "counterparty": {
                 "portId": "transfer",
+                "channelId": "channel-70"
+            },
+            "connectionHops": [
+                "connection-62"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-59"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
                 "channelId": "channel-56"
             },
             "connectionHops": [
