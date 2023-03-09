@@ -191,11 +191,11 @@ const ics20: Record<string, ICS20> = {
   },
 
   // SHD
-  "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": {
-    contract: "secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
-    router: "secret1tqmms5awftpuhalcv5h5mg76fa0tkdz4jv9ex4",
-    channel: "channel-46",
-  },
+  // "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": {
+  //   contract: "secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d",
+  //   router: "secret1tqmms5awftpuhalcv5h5mg76fa0tkdz4jv9ex4",
+  //   channel: "channel-46",
+  // },
 
   // dUST
   "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz": {
