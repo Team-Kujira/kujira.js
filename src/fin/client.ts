@@ -17,6 +17,11 @@ import {
   SimulationResponse,
 } from "./types";
 
+const filterMigrationError = (agg: Pool[], pool: Pool): Pool[] => {
+  const prev = agg.at(-1);
+  return prev && prev.quotePrice > pool.quotePrice ? agg : [...agg, pool];
+};
+
 export const castBook =
   (denoms: [Denom, Denom]) =>
   (response: BookResponse): Book => ({
@@ -72,11 +77,6 @@ const castPool =
       totalOfferAmount: BigNumber.from(response.total_offer_amount),
     };
   };
-
-const filterMigrationError = (agg: Pool[], pool: Pool): Pool[] => {
-  const prev = agg.at(-1);
-  return prev && prev.quotePrice > pool.quotePrice ? agg : [...agg, pool];
-};
 
 export const simulate = async (
   query: KujiraQueryClient,
