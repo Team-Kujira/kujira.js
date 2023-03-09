@@ -33,7 +33,7 @@ export const castConfig = (response: ConfigResponse): Config => ({
   owner: response.owner,
   denoms: [parseDenom(response.denoms[0]), parseDenom(response.denoms[1])],
   isBootstrapping: response.is_bootstrapping,
-  decimalDelta: response.decimal_delta,
+  decimalDelta: response.decimal_delta || 0,
 });
 
 export type History = {
