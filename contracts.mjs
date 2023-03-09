@@ -12,6 +12,7 @@ const IDS = {
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
     calc: [82],
+    ghostVault: [],
   },
   [TESTNET]: {
     fin: [6, 7, 30, 31, 88, 129, 860, 1367, 1397, 1398],
@@ -22,6 +23,7 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
+    ghostVault: [1411],
   },
 };
 

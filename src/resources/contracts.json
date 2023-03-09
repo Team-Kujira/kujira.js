@@ -815,7 +815,7 @@
             "decimal_places": 2
           },
           "decimal_delta": 2,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -836,7 +836,7 @@
             "decimal_places": 2
           },
           "decimal_delta": 2,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -857,7 +857,7 @@
             "decimal_places": 4
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -962,7 +962,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 12,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -1109,7 +1109,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 12,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -1277,7 +1277,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false
       },
@@ -4018,7 +4018,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ghostVault": []
   },
   "harpoon-4": {
     "fin": [
@@ -4482,6 +4483,7 @@
           }
         ]
       }
-    ]
+    ],
+    "ghostVault": []
   }
 }
