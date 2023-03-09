@@ -18,7 +18,7 @@ import {
 } from "./types";
 
 const filterMigrationError = (agg: Pool[], pool: Pool): Pool[] => {
-  const prev = agg.at(-1);
+  const prev = agg[agg.length - 1];
   return prev && prev.quotePrice > pool.quotePrice ? agg : [...agg, pool];
 };
 
