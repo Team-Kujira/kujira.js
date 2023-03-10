@@ -4847,21 +4847,8 @@
         ],
         "ghostVault": [
             {
-                "id": 1413,
-                "address": "kujira19hw7007hcyhuwke43d43nsahckec9kulya2jjr0klef55tqraxlqq0chrw",
-                "config": {
-                    "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
-                    "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
-                    "oracle_denom": "USDT",
-                    "decimals": 6
-                },
-                "pairs": false,
-                "markets": null,
-                "vaults": false
-            },
-            {
-                "id": 1415,
-                "address": "kujira1jxmnueknfzsjuawdc7n082muvpuug0cd38gldk686gdcaakd0cdq3qaq0z",
+                "id": 1417,
+                "address": "kujira19yyzn4l5txn88fjdndwrhgc58fjcdqqhecgtaueu6a4ah3d48zasq0k4ke",
                 "config": {
                     "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
                     "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
@@ -4871,7 +4858,7 @@
                 "pairs": false,
                 "markets": [
                     {
-                        "addr": "kujira1jyx989z66z8ea84undkadussr38tks8u3ycgpdslezecue6ymr9qs8e07j",
+                        "addr": "kujira1f2m58evffjm5w4c8tfhy7gy6evq0sa76yjl6y4gfldnjghfpkw6smhlh69",
                         "borrow_limit": null,
                         "current_borrows": "0"
                     }
@@ -4881,16 +4868,8 @@
         ],
         "ghostMarket": [
             {
-                "id": 1414,
-                "address": "kujira1u0yp2p3n4du2kqpfgxm25awu27dxlrp0wszl7n84akekct660n6qy5t79p",
-                "config": null,
-                "pairs": false,
-                "markets": false,
-                "vaults": null
-            },
-            {
-                "id": 1416,
-                "address": "kujira1jyx989z66z8ea84undkadussr38tks8u3ycgpdslezecue6ymr9qs8e07j",
+                "id": 1418,
+                "address": "kujira1f2m58evffjm5w4c8tfhy7gy6evq0sa76yjl6y4gfldnjghfpkw6smhlh69",
                 "config": {
                     "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
                     "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
@@ -4902,7 +4881,7 @@
                 "markets": false,
                 "vaults": [
                     {
-                        "addr": "kujira1jxmnueknfzsjuawdc7n082muvpuug0cd38gldk686gdcaakd0cdq3qaq0z",
+                        "addr": "kujira19yyzn4l5txn88fjdndwrhgc58fjcdqqhecgtaueu6a4ah3d48zasq0k4ke",
                         "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
                         "oracle_denom": "USDT",
                         "decimals": 6,
