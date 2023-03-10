@@ -4864,6 +4864,25 @@
                     }
                 ],
                 "vaults": false
+            },
+            {
+                "id": 1420,
+                "address": "kujira1awulcuthtnvzwgvmtdzlw5ycm5fwdq226amtmc5z4tuz02hl0nfs52vc7c",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+                    "oracle_denom": "ATOM",
+                    "decimals": 6
+                },
+                "pairs": false,
+                "markets": [
+                    {
+                        "addr": "kujira1k2dwz48fl6gg04f2w56mjdrxchcy8j7henmxvsadancjcsjd80zsgt2mea",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    }
+                ],
+                "vaults": false
             }
         ],
         "ghostMarket": [
@@ -4884,6 +4903,32 @@
                         "addr": "kujira19yyzn4l5txn88fjdndwrhgc58fjcdqqhecgtaueu6a4ah3d48zasq0k4ke",
                         "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
                         "oracle_denom": "USDT",
+                        "decimals": 6,
+                        "borrow_limit": null,
+                        "current_borrows": "0",
+                        "orca_market": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
+                        "partial_liquidation_target": "0.75",
+                        "partial_liquidation_threshold": "1000000"
+                    }
+                ]
+            },
+            {
+                "id": 1419,
+                "address": "kujira1k2dwz48fl6gg04f2w56mjdrxchcy8j7henmxvsadancjcsjd80zsgt2mea",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "collateral_denom": "ukuji",
+                    "collateral_oracle_denom": "ADA",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.8"
+                },
+                "pairs": false,
+                "markets": false,
+                "vaults": [
+                    {
+                        "addr": "kujira1awulcuthtnvzwgvmtdzlw5ycm5fwdq226amtmc5z4tuz02hl0nfs52vc7c",
+                        "denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+                        "oracle_denom": "ATOM",
                         "decimals": 6,
                         "borrow_limit": null,
                         "current_borrows": "0",
