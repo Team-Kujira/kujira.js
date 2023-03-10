@@ -24,8 +24,8 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
-    ghostVault: [1413],
-    ghostMarket: [1414],
+    ghostVault: [1413, 1415],
+    ghostMarket: [1414, 1416],
   },
 };
 
@@ -66,6 +66,28 @@ const res = await Promise.all(
                               get_pairs: {},
                             })
                             .then(({ pairs }) => pairs)),
+                        markets:
+                          protocol === "ghostVault" &&
+                          (await client.wasm
+                            .queryContractSmart(address, {
+                              markets: {},
+                            })
+                            .then(({ markets }) => markets)
+                            .catch((err) => {
+                              console.log(err);
+                              return null;
+                            })),
+                        vaults:
+                          protocol === "ghostMarket" &&
+                          (await client.wasm
+                            .queryContractSmart(address, {
+                              vaults: {},
+                            })
+                            .then(({ vaults }) => vaults)
+                            .catch((err) => {
+                              console.log(err);
+                              return null;
+                            })),
                       }))
                     )
                   ),
