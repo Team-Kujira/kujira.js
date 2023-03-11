@@ -47,8 +47,10 @@ const compile =
   (network: keyof typeof contracts) =>
   (a: Record<string, Pair>, v: { address: string; config: Config }) => {
     if (
-      v.address ===
-      "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp"
+      [
+        "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp",
+        "kujira143thenn7ugsevf0tl3hz4ved53t6w5r7uq0qcwr8kxgg343jxg0svcrfjf",
+      ].includes(v.address)
     )
       return a;
     const config = castConfig(v.config);
