@@ -65,7 +65,7 @@ const runTokens = async (rpc) => {
 };
 
 await runTokens("https://test-rpc-kujira.mintthemoon.xyz");
-await runTokens("https://rpc.kaiyo.kujira.setten.io");
+await runTokens("https://rpc-kujira.mintthemoon.xyz");
 
 const testnet = await runConnections("https://test-rpc-kujira.mintthemoon.xyz");
 const mainnet = await runConnections("https://rpc-kujira.mintthemoon.xyz");
