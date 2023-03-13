@@ -43,7 +43,7 @@ const castConfig = (json: Config): Omit<Pair, "address" | "pool" | "calc"> => ({
   multiswap: !json.decimal_delta || json.decimal_delta === 0,
 });
 
-const compile =
+export const compile =
   (network: keyof typeof contracts) =>
   (a: Record<string, Pair>, v: { address: string; config: Config }) => {
     if (
