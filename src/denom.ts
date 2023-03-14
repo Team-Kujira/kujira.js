@@ -240,7 +240,7 @@ export class Denom {
     if (this.symbol === "wETH") this.decimals = 18;
     if (this.symbol === "CRO") this.decimals = 8;
     if (this.symbol === "EL1") this.decimals = 18;
-    if (this.symbol === "NBTC") this.decimals = 14;
+    if (this.symbol === "nBTC") this.decimals = 14;
     if (this.symbol === "BOOT") this.decimals = 0;
     if (this.symbol === "DOT") this.decimals = 10;
     if (this.symbol === "SHD") this.decimals = 8;
