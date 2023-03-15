@@ -249,7 +249,7 @@ export class Denom {
     if (this.symbol === "CNTO") this.decimals = 18;
     if (this.symbol === "wTAO") this.decimals = 9;
     if (this.symbol === "ACRE") this.decimals = 18;
-    if (this.symbol === "PLANQ") this.decimals = 18;
+    if (this.symbol === "PLQ") this.decimals = 18;
     if (this.symbol === "SWTH") this.decimals = 8;
     if (this.symbol === "gTST") this.decimals = 18;
     // OKX USDT
