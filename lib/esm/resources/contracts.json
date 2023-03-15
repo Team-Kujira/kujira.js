@@ -4571,7 +4571,8 @@
             }
         ],
         "ghostVault": [],
-        "ghostMarket": []
+        "ghostMarket": [],
+        "pilot": []
     },
     "harpoon-4": {
         "fin": [
@@ -5040,42 +5041,7 @@
                 "vaults": false
             }
         ],
-        "calc": [
-            {
-                "id": 1387,
-                "address": "kujira18g945dfs4jp8zfu428zfkjz0r4sasnxnsnye5m6dznvmgrlcecpsyrwp7c",
-                "config": null,
-                "pairs": [
-                    {
-                        "address": "kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867",
-                        "base_denom": "ukuji",
-                        "quote_denom": "ibc/ED07A3391A112B175915CD8FAF43A2DA8E4790EDE12566649D0C2F97716B8518"
-                    },
-                    {
-                        "address": "kujira1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqx97zgq",
-                        "base_denom": "ukuji",
-                        "quote_denom": "ibc/A1E1A20C1E4F2F76F301DA625CC476FBD0FCD8CA94DAF60814CA5257B6CD3E3E"
-                    },
-                    {
-                        "address": "kujira1pvrwmjuusn9wh34j7y520g8gumuy9xtl3gvprlljfdpwju3x7ucseu6vw3",
-                        "base_denom": "ukuji",
-                        "quote_denom": "ibc/85CE72EE820A66F0ABD5EE3907A34E243E4BE2D6CFAEB4C08DF85BD6C0784FA2"
-                    },
-                    {
-                        "address": "kujira1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsqq4jjh",
-                        "base_denom": "ukuji",
-                        "quote_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo"
-                    },
-                    {
-                        "address": "kujira1wl003xxwqltxpg5pkre0rl605e406ktmq5gnv0ngyjamq69mc2kqm06ey6",
-                        "base_denom": "ukuji",
-                        "quote_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
-                    }
-                ],
-                "markets": false,
-                "vaults": false
-            }
-        ],
+        "calc": [],
         "ghostVault": [
             {
                 "id": 1417,
@@ -5168,6 +5134,21 @@
                         "partial_liquidation_threshold": "1000000"
                     }
                 ]
+            }
+        ],
+        "pilot": [
+            {
+                "id": 1450,
+                "address": "kujira1n2202yp2dgfuauxmp8dltg3zuyphsjcvz977yvu7r5f2cczq57tq0rr299",
+                "config": {
+                    "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+                    "orca_code_id": 1441,
+                    "sale_fee": "0.05",
+                    "withdrawal_fee": "0.005"
+                },
+                "pairs": false,
+                "markets": false,
+                "vaults": false
             }
         ]
     }

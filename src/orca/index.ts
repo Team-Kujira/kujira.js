@@ -93,6 +93,8 @@ const insertMarket = (
       premiumRatePerSlot: parseFloat(v.config.premium_rate_per_slot),
       waitingPeriod: v.config.waiting_period,
       markets: v.config.markets,
+      liquidationFee: parseFloat(v.config.liquidation_fee),
+      withdrawalFee: parseFloat(v.config.withdrawal_fee),
     },
   };
 };

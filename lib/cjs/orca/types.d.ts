@@ -37,6 +37,8 @@ export declare type Market = {
     premiumRatePerSlot: number;
     waitingPeriod: number;
     markets: string[];
+    liquidationFee: number;
+    withdrawalFee: number;
 };
 export declare type Bid = {
     idx: number;

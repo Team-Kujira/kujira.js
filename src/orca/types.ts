@@ -41,6 +41,8 @@ export type Market = {
   premiumRatePerSlot: number;
   waitingPeriod: number;
   markets: string[];
+  liquidationFee: number;
+  withdrawalFee: number;
 };
 
 export type Bid = {
