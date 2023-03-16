@@ -21,3 +21,9 @@ export const divToNumber = (a: BigNumber, b: BigNumber): number => {
     ? 0
     : parseFloat(formatFixed(a.mul(BigNumber.from(10).pow(18)).div(b), 18));
 };
+
+export const bigCompare = (a: BigNumber, b: BigNumber) => {
+  if (a.eq(b)) return 0;
+  if (a.lt(b)) return -1;
+  return 1;
+};
