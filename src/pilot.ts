@@ -14,8 +14,10 @@ type SaleResponse = {
     denom: string;
     amount: string;
   };
+  opens: string;
   closes: string;
-  executed: null;
+  executed: null | string;
+  retracted: null | string;
   orca_address: string;
   orca_config: {
     owner: string;
@@ -47,7 +49,12 @@ export const castSale = (res: SaleResponse): Market => ({
     description: res.description,
     price: parseFloat(res.price),
     amount: BigNumber.from(res.amount.amount),
+    opens: new Date(parseInt(res.closes) / 1000000),
     closes: new Date(parseInt(res.closes) / 1000000),
+    executed: res.executed ? new Date(parseInt(res.executed) / 1000000) : null,
+    retracted: res.retracted
+      ? new Date(parseInt(res.retracted) / 1000000)
+      : null,
   },
   liquidationFee: parseFloat(res.orca_config.liquidation_fee),
   withdrawalFee: parseFloat(res.orca_config.withdrawal_fee),
@@ -55,9 +62,12 @@ export const castSale = (res: SaleResponse): Market => ({
 
 export type Sale = {
   amount: BigNumber;
+  opens: Date;
   closes: Date;
   price: number;
   title: string;
+  executed: Date | null;
+  retracted: Date | null;
   description: string;
 };
 

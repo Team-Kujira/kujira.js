@@ -11,8 +11,10 @@ declare type SaleResponse = {
         denom: string;
         amount: string;
     };
+    opens: string;
     closes: string;
-    executed: null;
+    executed: null | string;
+    retracted: null | string;
     orca_address: string;
     orca_config: {
         owner: string;
@@ -31,9 +33,12 @@ declare type SaleResponse = {
 export declare const castSale: (res: SaleResponse) => Market;
 export declare type Sale = {
     amount: BigNumber;
+    opens: Date;
     closes: Date;
     price: number;
     title: string;
+    executed: Date | null;
+    retracted: Date | null;
     description: string;
 };
 export declare type Market = Omit<orca.Market, "chain" | "protocol" | "repayDenom" | "type"> & {
