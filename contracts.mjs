@@ -27,7 +27,7 @@ const IDS = {
     calc: [1273, 1387],
     ghostVault: [1417, 1420],
     ghostMarket: [1418, 1419],
-    pilot: [1450],
+    pilot: [1471],
   },
 };
 
