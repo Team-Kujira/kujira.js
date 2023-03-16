@@ -1,3 +1,4 @@
+import { Coin } from "@cosmjs/stargate";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
 import * as orca from "./orca";
@@ -64,6 +65,46 @@ export type Market = Omit<
   orca.Market,
   "chain" | "protocol" | "repayDenom" | "type"
 > & { sale: Sale };
+
+const castPilot = (res: {
+  id: number;
+  address: string;
+  config: {
+    owner: string;
+    deposit: {
+      denom: string;
+      amount: string;
+    };
+    orca_code_id: number;
+    sale_fee: string;
+    withdrawal_fee: string;
+  };
+  pairs: boolean;
+  markets: boolean;
+  vaults: boolean;
+}): Pilot => ({
+  address: res.address,
+  owner: res.config.owner,
+  deposit: res.config.deposit,
+  orcaCodeId: res.config.orca_code_id,
+  saleFee: parseFloat(res.config.sale_fee),
+  withdrawalFee: parseFloat(res.config.withdrawal_fee),
+});
+
+export type Pilot = {
+  address: string;
+  owner: string;
+  deposit: Coin;
+  orcaCodeId: number;
+  saleFee: number;
+  withdrawalFee: number;
+};
+
+export const config = (network: "harpoon-4" | "kaiyo-1"): Pilot | null => {
+  const contract = contracts[network].pilot[0];
+  if (!contract) return null;
+  return castPilot(contract);
+};
 
 export const getMarkets = async (
   query: KujiraQueryClient,

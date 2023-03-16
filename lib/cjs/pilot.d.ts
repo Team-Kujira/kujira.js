@@ -1,3 +1,4 @@
+import { Coin } from "@cosmjs/stargate";
 import { BigNumber } from "@ethersproject/bignumber";
 import * as orca from "./orca";
 import { KujiraQueryClient } from "./queryClient";
@@ -38,5 +39,14 @@ export declare type Sale = {
 export declare type Market = Omit<orca.Market, "chain" | "protocol" | "repayDenom" | "type"> & {
     sale: Sale;
 };
+export declare type Pilot = {
+    address: string;
+    owner: string;
+    deposit: Coin;
+    orcaCodeId: number;
+    saleFee: number;
+    withdrawalFee: number;
+};
+export declare const config: (network: "harpoon-4" | "kaiyo-1") => Pilot | null;
 export declare const getMarkets: (query: KujiraQueryClient, network: "harpoon-4" | "kaiyo-1") => Promise<Record<string, Market>>;
 export {};
