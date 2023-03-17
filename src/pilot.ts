@@ -6,6 +6,7 @@ import { KujiraQueryClient } from "./queryClient";
 import contracts from "./resources/contracts.json";
 
 type SaleResponse = {
+  idx: string;
   title: string;
   description: string;
   price: string;
@@ -45,6 +46,7 @@ export const castSale = (res: SaleResponse): Market => ({
   waitingPeriod: res.orca_config.waiting_period,
   markets: res.orca_config.markets,
   sale: {
+    idx: res.idx,
     title: res.title,
     description: res.description,
     price: parseFloat(res.price),
@@ -61,6 +63,7 @@ export const castSale = (res: SaleResponse): Market => ({
 });
 
 export type Sale = {
+  idx: string;
   amount: BigNumber;
   opens: Date;
   closes: Date;

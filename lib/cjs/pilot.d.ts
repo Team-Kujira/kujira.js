@@ -3,6 +3,7 @@ import { BigNumber } from "@ethersproject/bignumber";
 import * as orca from "./orca";
 import { KujiraQueryClient } from "./queryClient";
 declare type SaleResponse = {
+    idx: string;
     title: string;
     description: string;
     price: string;
@@ -32,6 +33,7 @@ declare type SaleResponse = {
 };
 export declare const castSale: (res: SaleResponse) => Market;
 export declare type Sale = {
+    idx: string;
     amount: BigNumber;
     opens: Date;
     closes: Date;
