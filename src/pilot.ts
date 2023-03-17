@@ -10,6 +10,7 @@ type SaleResponse = {
   title: string;
   description: string;
   price: string;
+  owner: string;
   beneficiary: string;
   amount: {
     denom: string;
@@ -48,6 +49,8 @@ export const castSale = (res: SaleResponse): Market => ({
   sale: {
     idx: res.idx,
     title: res.title,
+    owner: res.owner,
+    beneficiary: res.beneficiary,
     description: res.description,
     price: parseFloat(res.price),
     amount: BigNumber.from(res.amount.amount),
@@ -65,6 +68,8 @@ export const castSale = (res: SaleResponse): Market => ({
 export type Sale = {
   idx: string;
   amount: BigNumber;
+  owner: string;
+  beneficiary: string;
   opens: Date;
   closes: Date;
   price: number;

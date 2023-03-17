@@ -7,6 +7,7 @@ declare type SaleResponse = {
     title: string;
     description: string;
     price: string;
+    owner: string;
     beneficiary: string;
     amount: {
         denom: string;
@@ -35,6 +36,8 @@ export declare const castSale: (res: SaleResponse) => Market;
 export declare type Sale = {
     idx: string;
     amount: BigNumber;
+    owner: string;
+    beneficiary: string;
     opens: Date;
     closes: Date;
     price: number;
