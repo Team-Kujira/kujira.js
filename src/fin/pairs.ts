@@ -73,6 +73,7 @@ export const compile =
               ![
                 "kujira188p624ykuepun8h8kjmcfs553mz2jgeanetyqv7l6xltdld497vqespn6c",
                 "kujira136rwqvwy3flttm9wfnc5xgnlr6mu5k8e2elgzs2hdhuwf50w3l2qp807cx",
+                "kujira1xgjefq7fs4yj29t9gk0t9esgw52s68j83yeac3ru2mefdp529qsqca7hhv",
               ].includes(b.address)
           )?.address,
         calc: contracts[network].calc[0]?.pairs.find(
