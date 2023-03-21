@@ -1558,7 +1558,7 @@
                         "decimal_places": 3
                     },
                     "decimal_delta": 0,
-                    "is_bootstrapping": true
+                    "is_bootstrapping": false
                 },
                 "pairs": false,
                 "markets": false,
@@ -4595,7 +4595,25 @@
         ],
         "ghostVault": [],
         "ghostMarket": [],
-        "pilot": []
+        "pilot": [
+            {
+                "id": 95,
+                "address": "kujira1xdl5drjwzmfescppqje6dmu42m04fehvvtnpyqcvgr88f6dnrakst4y8vs",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "deposit": {
+                        "denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+                        "amount": "1000000000"
+                    },
+                    "orca_code_id": 96,
+                    "sale_fee": "0.05",
+                    "withdrawal_fee": "0.005"
+                },
+                "pairs": false,
+                "markets": false,
+                "vaults": false
+            }
+        ]
     },
     "harpoon-4": {
         "fin": [
@@ -5161,7 +5179,7 @@
         ],
         "pilot": [
             {
-                "id": 1471,
+                "id": 1476,
                 "address": "kujira157hhywpt8tn039su8f3lzjgxu7ayypups86l7sjxd4qkpvv86rwquh9mm2",
                 "config": {
                     "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",

@@ -14,7 +14,7 @@ const IDS = {
     calc: [82],
     ghostVault: [],
     ghostMarket: [],
-    pilot: [],
+    pilot: [95],
   },
   [TESTNET]: {
     fin: [6, 7, 30, 31, 88, 129, 860, 1367, 1397, 1398],
@@ -27,7 +27,7 @@ const IDS = {
     calc: [1273, 1387],
     ghostVault: [1417, 1420],
     ghostMarket: [1418, 1419],
-    pilot: [1471],
+    pilot: [1476],
   },
 };
 
