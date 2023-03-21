@@ -13,6 +13,7 @@ export type Order = {
   idx: number;
   owner: string;
   quotePrice: number;
+  quotePriceInt: BigNumber;
   offerDenom: Denom;
   offerAmount: BigNumber;
   filledAmount: BigNumber;
@@ -41,6 +42,7 @@ export type Pair = {
 
 export type Pool = {
   quotePrice: number;
+  quotePriceInt: BigNumber;
   offerDenom: Denom;
   totalOfferAmount: BigNumber;
 };

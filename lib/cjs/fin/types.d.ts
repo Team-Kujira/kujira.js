@@ -11,6 +11,7 @@ export declare type Order = {
     idx: number;
     owner: string;
     quotePrice: number;
+    quotePriceInt: BigNumber;
     offerDenom: Denom;
     offerAmount: BigNumber;
     filledAmount: BigNumber;
@@ -35,6 +36,7 @@ export declare type Pair = {
 };
 export declare type Pool = {
     quotePrice: number;
+    quotePriceInt: BigNumber;
     offerDenom: Denom;
     totalOfferAmount: BigNumber;
 };

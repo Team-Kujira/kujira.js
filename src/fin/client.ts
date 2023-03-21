@@ -1,4 +1,4 @@
-import { BigNumber } from "@ethersproject/bignumber";
+import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { divToNumber, mulDec } from "../bignumber";
 import { Denom, factor } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
@@ -61,6 +61,7 @@ export const castOrder =
     idx: parseInt(response.idx),
     owner: response.owner,
     quotePrice: parseFloat(response.quote_price) * factor(denoms),
+    quotePriceInt: parseFixed(response.quote_price, 18),
     offerDenom: parseDenom(response.offer_denom),
     offerAmount: BigNumber.from(response.offer_amount),
     filledAmount: BigNumber.from(response.filled_amount),
@@ -73,6 +74,7 @@ const castPool =
   (response: PoolResponse): Pool => {
     return {
       quotePrice: parseFloat(response.quote_price) * factor(denoms),
+      quotePriceInt: parseFixed(response.quote_price, 18),
       offerDenom: parseDenom(response.offer_denom),
       totalOfferAmount: BigNumber.from(response.total_offer_amount),
     };
