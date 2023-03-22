@@ -44,8 +44,8 @@ export declare type Simulation = {
     returnAmount: BigNumber;
     spreadAmount: BigNumber;
     commissionAmount: BigNumber;
-    rate: number;
-    slippage: number;
+    rate: BigNumber;
+    slippage: BigNumber;
 };
 export declare type CW20Denom = {
     native: string;

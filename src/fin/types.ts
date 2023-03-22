@@ -51,8 +51,8 @@ export type Simulation = {
   returnAmount: BigNumber;
   spreadAmount: BigNumber;
   commissionAmount: BigNumber;
-  rate: number;
-  slippage: number;
+  rate: BigNumber;
+  slippage: BigNumber;
 };
 
 export type CW20Denom =
