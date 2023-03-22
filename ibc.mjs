@@ -68,7 +68,7 @@ await runTokens("https://test-rpc-kujira.mintthemoon.xyz");
 await runTokens("https://rpc-kujira.mintthemoon.xyz");
 
 const testnet = await runConnections("https://test-rpc-kujira.mintthemoon.xyz");
-const mainnet = await runConnections("https://rpc-kujira.mintthemoon.xyz");
+const mainnet = await runConnections("https://rpc-kujira.whispernode.com");
 
 fs.writeFileSync(
   "./src/resources/channels.json",
