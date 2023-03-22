@@ -82,6 +82,14 @@ const castPool =
 
 const WEI = BigNumber.from(10).pow(18);
 
+export const DEFAULT_SIMULATION: Simulation = {
+  returnAmount: BigNumber.from(0),
+  spreadAmount: BigNumber.from(0),
+  commissionAmount: BigNumber.from(0),
+  rate: BigNumber.from(0),
+  slippage: BigNumber.from(0),
+};
+
 export const simulate = async (
   query: KujiraQueryClient,
   amount: BigNumber,
@@ -89,6 +97,7 @@ export const simulate = async (
   pair: Pair,
   book: Book | null
 ): Promise<Simulation> => {
+  if (amount.isZero()) return DEFAULT_SIMULATION;
   const sell = denom.eq(pair.denoms[0]);
   const mid =
     book && book.base.length && book.quote.length
