@@ -17,6 +17,7 @@ const labels: Record<string, string> = {
   "link-wei": "LINK",
   "dot-planck": "DOT",
   aevmos: "EVMOS",
+  afet: "FET",
   demo: "DEMO",
   local: "LOCAL",
   swth: "SWTH",
@@ -254,6 +255,7 @@ export class Denom {
     if (this.symbol === "SWTH") this.decimals = 8;
     if (this.symbol === "gTST") this.decimals = 18;
     if (this.symbol === "ARB") this.decimals = 18;
+    if (this.symbol === "FET") this.decimals = 18;
     // OKX USDT
     if (
       this.reference ===
