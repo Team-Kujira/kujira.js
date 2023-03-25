@@ -7,6 +7,7 @@ export * as kns from "./kns";
 export * from "./msg";
 export * from "./network";
 export * as orca from "./orca";
+export * as parsers from "./parsers";
 export * as pilot from "./pilot";
 export * from "./queryClient";
 export * from "./registry";
