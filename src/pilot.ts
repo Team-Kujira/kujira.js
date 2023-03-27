@@ -1,5 +1,5 @@
 import { Coin } from "@cosmjs/stargate";
-import { BigNumber } from "@ethersproject/bignumber";
+import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
 import * as orca from "./orca";
 import { KujiraQueryClient } from "./queryClient";
@@ -44,6 +44,7 @@ export const castSale = (res: SaleResponse): Market => ({
   bidThreshold: BigNumber.from(res.orca_config.bid_threshold),
   maxSlot: res.orca_config.max_slot,
   premiumRatePerSlot: parseFloat(res.orca_config.premium_rate_per_slot),
+  premiumRatePerSlotInt: parseFixed(res.orca_config.premium_rate_per_slot, 18),
   waitingPeriod: res.orca_config.waiting_period,
   markets: res.orca_config.markets,
   sale: {

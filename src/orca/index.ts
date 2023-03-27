@@ -1,7 +1,7 @@
 import { Chain, Market, MarketType, Protocol } from "./types";
 // import * as Acala from "@acala-network/contracts/utils/AcalaAddress";
 // import * as Karura from "@acala-network/contracts/utils/KaruraAddress";
-import { BigNumber } from "@ethersproject/bignumber";
+import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom, USK } from "../denom";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
@@ -91,6 +91,7 @@ const insertMarket = (
       bidThreshold: BigNumber.from(v.config.bid_threshold),
       maxSlot: v.config.max_slot,
       premiumRatePerSlot: parseFloat(v.config.premium_rate_per_slot),
+      premiumRatePerSlotInt: parseFixed(v.config.premium_rate_per_slot, 18),
       waitingPeriod: v.config.waiting_period,
       markets: v.config.markets,
       liquidationFee: parseFloat(v.config.liquidation_fee),

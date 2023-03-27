@@ -39,6 +39,7 @@ export type Market = {
   bidThreshold: BigNumber;
   maxSlot: number;
   premiumRatePerSlot: number;
+  premiumRatePerSlotInt: BigNumber;
   waitingPeriod: number;
   markets: string[];
   liquidationFee: number;
