@@ -57,6 +57,7 @@ export type Bid = {
 export type BidPool = {
   totalBidAmount: BigNumber;
   premiumRate: number;
+  premiumRateInt: BigNumber;
   currentEpoch: number;
 };
 

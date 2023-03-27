@@ -51,6 +51,7 @@ export declare type Bid = {
 export declare type BidPool = {
     totalBidAmount: BigNumber;
     premiumRate: number;
+    premiumRateInt: BigNumber;
     currentEpoch: number;
 };
 export declare type BidStrategy = {
