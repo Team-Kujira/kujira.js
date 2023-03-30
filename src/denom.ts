@@ -1,3 +1,4 @@
+import { sha256 } from "@cosmjs/crypto";
 import contracts from "./resources/contracts.json";
 import ibc from "./resources/tokens.json";
 
@@ -273,12 +274,29 @@ export class Denom {
     return new Denom(string, underlying?.config.denoms.map(Denom.from));
   }
 
+  /*
+  Method for creating a denom that hasn't yet been IBC'd and so doesn't have an 
+  entry in tokens.json
+  */
+  public static from_path(port: string, channel: string, denom: string): Denom {
+    let d = new Denom(ibcDenom(port, channel, denom));
+    d.trace = { base_denom: denom, path: `${port}/${channel}` };
+    d.symbol = baseDenomToSymbol(denom);
+    return d;
+  }
+
   public eq = (other: Denom): boolean => this.reference == other.reference;
   public compare = (other: Denom): number =>
     this.symbol
       .replace(/[a-z]+/, "")
       .localeCompare(other.symbol.replace(/[a-z]+/, ""));
 }
+
+const ibcDenom = (port: string, channel: string, denom: string): string =>
+  "ibc/" +
+  Buffer.from(sha256(Buffer.from(`${port}/${channel}/${denom}`))).toString(
+    "hex"
+  );
 
 export const USK_TESTNET = Denom.from(
   "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
@@ -297,29 +315,31 @@ export const ATOM = Denom.from(
   "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
 );
 
-export const USDC = Denom.from(
+export const axlUSDC = Denom.from(
   "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F"
 );
 
-export const USDT = Denom.from(
+export const nobleUSDC = Denom.from_path("transfer", "channel-62", "uusdc");
+
+export const axlUSDT = Denom.from(
   "ibc/F2331645B9683116188EF36FC04A809C28BD36B54555E8705A37146D0182F045"
 );
-export const wETH = Denom.from(
+export const axlwETH = Denom.from(
   "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
 );
-export const wMATIC = Denom.from(
+export const axlwMATIC = Denom.from(
   "ibc/A64467480BBE4CCFC3CF7E25AD1446AA9BDBD4F5BCB9EF6038B83D6964C784E6"
 );
-export const wBNB = Denom.from(
+export const axlwBNB = Denom.from(
   "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833"
 );
-export const wAVAX = Denom.from(
+export const axlwAVAX = Denom.from(
   "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
 );
-export const wGLMR = Denom.from(
+export const axlwGLMR = Denom.from(
   "ibc/C8D63703F5805CE6A2B20555139CF6ED9CDFA870389648EB08D688B94B0AE2C1"
 );
-export const wFTM = Denom.from(
+export const axlwFTM = Denom.from(
   "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2"
 );
 
