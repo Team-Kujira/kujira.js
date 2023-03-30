@@ -7,6 +7,9 @@ const labels: Record<string, string> = {
   ugraviton: "GRAV",
   usdt: "USDT",
   usat: "nBTC",
+  // Noble USDC
+  "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9":
+    "USDC",
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
   uausdt: "axlUSDT",
@@ -112,6 +115,9 @@ const terra: Record<string, string> = {
 };
 
 const baseDenomToSymbol = (denom: string): string => {
+  const raw = labels[denom];
+  if (raw) return raw;
+
   const baseDenom = denom.startsWith("ibc/")
     ? (ibc as Record<string, any>)[denom]?.base_denom
     : denom.startsWith("factory/")
@@ -281,7 +287,6 @@ export class Denom {
   public static from_path(port: string, channel: string, denom: string): Denom {
     let d = new Denom(ibcDenom(port, channel, denom));
     d.trace = { base_denom: denom, path: `${port}/${channel}` };
-    d.symbol = baseDenomToSymbol(denom);
     return d;
   }
 
