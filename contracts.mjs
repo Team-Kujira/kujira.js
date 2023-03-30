@@ -11,7 +11,7 @@ const IDS = {
     uskMarket: [73],
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
-    calc: [97],
+    calc: [99],
     ghostVault: [],
     ghostMarket: [],
     pilot: [95],
@@ -65,7 +65,7 @@ const res = await Promise.all(
                           protocol === "calc" &&
                           (await client.wasm
                             .queryContractSmart(address, {
-                              get_pairs: { limit: 100 },
+                              get_pairs: {},
                             })
                             .then(({ pairs }) => pairs)),
                         markets:
