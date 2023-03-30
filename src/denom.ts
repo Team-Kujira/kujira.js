@@ -294,9 +294,9 @@ export class Denom {
 
 const ibcDenom = (port: string, channel: string, denom: string): string =>
   "ibc/" +
-  Buffer.from(sha256(Buffer.from(`${port}/${channel}/${denom}`))).toString(
-    "hex"
-  );
+  Buffer.from(sha256(Buffer.from(`${port}/${channel}/${denom}`)))
+    .toString("hex")
+    .toUpperCase();
 
 export const USK_TESTNET = Denom.from(
   "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk"
