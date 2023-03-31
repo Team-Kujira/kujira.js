@@ -97,15 +97,6 @@ const labels: Record<string, string> = {
   terra1z3e2e4jpk4n0xzzwlkgcfvc95pc5ldq0xcny58: "sAVAX",
   "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
     "ampWHALE",
-  ...ghostVaults.reduce(
-    (a, v) => ({
-      ...a,
-      [v.config.receipt_denom.split("/")[2]]: `x${
-        Denom.from(v.config.denom).symbol
-      }`,
-    }),
-    {}
-  ),
 };
 
 const terra: Record<string, string> = {
@@ -135,6 +126,11 @@ const terra: Record<string, string> = {
 const baseDenomToSymbol = (denom: string): string => {
   const raw = labels[denom];
   if (raw) return raw;
+
+  const factoryAddress = denom.split("/")[1];
+  const ghost =
+    factoryAddress && ghostVaults.find((a) => a.address === factoryAddress);
+  if (ghost) return `x${Denom.from(ghost.config.denom).symbol}`;
 
   const baseDenom = denom.startsWith("ibc/")
     ? (ibc as Record<string, any>)[denom]?.base_denom
