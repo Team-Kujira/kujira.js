@@ -1,5 +1,6 @@
 import { NETWORK } from "../network";
 import { Pair } from "./types";
+export declare const FILTERED: string[];
 import contracts from "../resources/contracts.json";
 export declare const STAKING: {
     "harpoon-4": string;

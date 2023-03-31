@@ -3,6 +3,14 @@ import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import * as usk from "../usk";
 import { Pair } from "./types";
 
+export const FILTERED = [
+  "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp",
+  "kujira143thenn7ugsevf0tl3hz4ved53t6w5r7uq0qcwr8kxgg343jxg0svcrfjf",
+  "kujira12g0jkp5hqlujw57akq2prkq4hq7hsy4qecmv93gdyzelggzpc4dsjtkvh2",
+  "kujira1qshjsyprd79w5q494themln57qz35txt2kx7yc6c0u4nmd4cy27qanxdlc",
+  "kujira1kc3msrd9gvnfumfcshlkvcdgklf9m9ln7llfqsxqalcfk9xjr5uqdy8us6",
+];
+
 import contracts from "../resources/contracts.json";
 export const STAKING = {
   [TESTNET]:
@@ -46,15 +54,7 @@ const castConfig = (json: Config): Omit<Pair, "address" | "pool" | "calc"> => ({
 export const compile =
   (network: keyof typeof contracts) =>
   (a: Record<string, Pair>, v: { address: string; config: Config }) => {
-    if (
-      [
-        "kujira18638dsuf7p3a2e23seqz8zegqrcpsdr5nw6j2a50qg6r3q8vn3qqrg9lzp",
-        "kujira143thenn7ugsevf0tl3hz4ved53t6w5r7uq0qcwr8kxgg343jxg0svcrfjf",
-        "kujira12g0jkp5hqlujw57akq2prkq4hq7hsy4qecmv93gdyzelggzpc4dsjtkvh2",
-        "kujira1qshjsyprd79w5q494themln57qz35txt2kx7yc6c0u4nmd4cy27qanxdlc",
-      ].includes(v.address)
-    )
-      return a;
+    if (FILTERED.includes(v.address)) return a;
     const config = castConfig(v.config);
     const margin = contracts[network].uskMarginSwap.find(
       (m) => m.config.fin_address === v.address
