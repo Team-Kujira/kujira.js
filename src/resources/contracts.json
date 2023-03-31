@@ -5245,96 +5245,57 @@
     "calc": [],
     "ghostVault": [
       {
-        "id": 1417,
-        "address": "kujira19yyzn4l5txn88fjdndwrhgc58fjcdqqhecgtaueu6a4ah3d48zasq0k4ke",
+        "id": 1555,
+        "address": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
         "config": {
-          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
           "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
           "oracle_denom": "USDT",
-          "decimals": 6
+          "decimals": 6,
+          "receipt_denom": "factory/kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we/ghostUSK",
+          "debt_token_denom": "factory/kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we/debtUSK"
         },
         "pairs": false,
-        "markets": [
-          {
-            "addr": "kujira1f2m58evffjm5w4c8tfhy7gy6evq0sa76yjl6y4gfldnjghfpkw6smhlh69",
-            "borrow_limit": null,
-            "current_borrows": "1000000"
-          }
-        ],
-        "vaults": false
-      },
-      {
-        "id": 1420,
-        "address": "kujira1awulcuthtnvzwgvmtdzlw5ycm5fwdq226amtmc5z4tuz02hl0nfs52vc7c",
-        "config": {
-          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
-          "denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
-          "oracle_denom": "ATOM",
-          "decimals": 6
-        },
-        "pairs": false,
-        "markets": [
-          {
-            "addr": "kujira1k2dwz48fl6gg04f2w56mjdrxchcy8j7henmxvsadancjcsjd80zsgt2mea",
-            "borrow_limit": null,
-            "current_borrows": "1000000"
-          }
-        ],
+        "markets": null,
         "vaults": false
       }
     ],
     "ghostMarket": [
       {
-        "id": 1418,
-        "address": "kujira1f2m58evffjm5w4c8tfhy7gy6evq0sa76yjl6y4gfldnjghfpkw6smhlh69",
+        "id": 1556,
+        "address": "kujira12pag7p0v9c3tvqdnypgxa38c3ngf6ed53p9qh8xc0jmw4ky5cspqjlsq0e",
         "config": {
-          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+          "orca_addr": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
           "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
           "collateral_oracle_denom": "ATOM",
           "collateral_decimals": 6,
-          "max_ltv": "0.8"
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000",
+          "partial_liquidation_target": "0.7"
         },
         "pairs": false,
         "markets": false,
-        "vaults": [
-          {
-            "addr": "kujira19yyzn4l5txn88fjdndwrhgc58fjcdqqhecgtaueu6a4ah3d48zasq0k4ke",
-            "denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
-            "oracle_denom": "USDT",
-            "decimals": 6,
-            "borrow_limit": null,
-            "current_borrows": "1000000",
-            "orca_market": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
-            "partial_liquidation_target": "0.75",
-            "partial_liquidation_threshold": "1000000"
-          }
-        ]
+        "vaults": null
       },
       {
-        "id": 1419,
-        "address": "kujira1k2dwz48fl6gg04f2w56mjdrxchcy8j7henmxvsadancjcsjd80zsgt2mea",
+        "id": 1557,
+        "address": "kujira1t88e60depax2zz43mt5ggxdzqe225guhn0jdyl3ccq5x30lcu2hqcnzt2t",
         "config": {
-          "owner": "kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
-          "collateral_denom": "ukuji",
-          "collateral_oracle_denom": "ADA",
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+          "orca_addr": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
+          "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+          "collateral_oracle_denom": "ATOM",
           "collateral_decimals": 6,
-          "max_ltv": "0.8"
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000",
+          "partial_liquidation_target": "0.7"
         },
         "pairs": false,
         "markets": false,
-        "vaults": [
-          {
-            "addr": "kujira1awulcuthtnvzwgvmtdzlw5ycm5fwdq226amtmc5z4tuz02hl0nfs52vc7c",
-            "denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
-            "oracle_denom": "ATOM",
-            "decimals": 6,
-            "borrow_limit": null,
-            "current_borrows": "1000000",
-            "orca_market": "kujira1exd7mzv8azf7tpqukm6fzxnvdt7a8kddyz2puwzk9lm7qmlx3vxq0thezm",
-            "partial_liquidation_target": "0.75",
-            "partial_liquidation_threshold": "1000000"
-          }
-        ]
+        "vaults": null
       }
     ],
     "pilot": [
