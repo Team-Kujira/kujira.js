@@ -1,4 +1,5 @@
 import { sha256 } from "@cosmjs/crypto";
+import { MAINNET, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 import ibc from "./resources/tokens.json";
 
@@ -285,10 +286,24 @@ export class Denom {
   }
 
   public static from(string: string): Denom {
-    const underlying = Object.values(contracts)
+    const bowUnderlying = Object.values(contracts)
       .flatMap((x) => x.bow)
-      .find((x) => `factory/${x.address}/ulp` === string);
-    return new Denom(string, underlying?.config.denoms.map(Denom.from));
+      .find((x) => `factory/${x.address}/ulp` === string)
+      ?.config.denoms.map(Denom.from);
+
+    const factoryAddress =
+      string.startsWith("factory/") && string.split("/")[1];
+    const ghostVaults = [
+      ...contracts[MAINNET].ghostVault,
+      ...contracts[TESTNET].ghostVault,
+    ];
+    const ghostVault = ghostVaults.find((f) => f.address === factoryAddress);
+
+    return new Denom(
+      string,
+      bowUnderlying ||
+        (ghostVault ? [Denom.from(ghostVault.config.denom)] : undefined)
+    );
   }
 
   /*
