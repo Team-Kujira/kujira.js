@@ -81,6 +81,8 @@ const labels: Record<string, string> = {
   "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD",
   "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz":
     "dUST",
+  "cw20L:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv":
+    "ROAR",
 
   terra18zqcnl83z98tf6lly37gghm7238k7lh79u4z9a: "bATOM",
   terra1dzhzukyezv0etz22ud940z7adyv7xgcjkahuun: "bETH",
@@ -196,6 +198,14 @@ const ics20: Record<string, ICS20> = {
   "cw20:terra1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2s5lvsct": {
     contract:
       "terra1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2s5lvsct",
+    router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
+    channel: "channel-28",
+  },
+
+  // ROAR
+  "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv": {
+    contract:
+      "terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv",
     router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
     channel: "channel-28",
   },
