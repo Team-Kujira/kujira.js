@@ -3,6 +3,11 @@ import { MAINNET, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 import ibc from "./resources/tokens.json";
 
+const ghostVaults = [
+  ...contracts[MAINNET].ghostVault,
+  ...contracts[TESTNET].ghostVault,
+];
+
 const labels: Record<string, string> = {
   wei: "OKT",
   ugraviton: "GRAV",
@@ -92,6 +97,15 @@ const labels: Record<string, string> = {
   terra1z3e2e4jpk4n0xzzwlkgcfvc95pc5ldq0xcny58: "sAVAX",
   "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
     "ampWHALE",
+  ...ghostVaults.reduce(
+    (a, v) => ({
+      ...a,
+      [v.config.receipt_denom.split("/")[2]]: `x${
+        Denom.from(v.config.denom).symbol
+      }`,
+    }),
+    {}
+  ),
 };
 
 const terra: Record<string, string> = {
@@ -293,10 +307,6 @@ export class Denom {
 
     const factoryAddress =
       string.startsWith("factory/") && string.split("/")[1];
-    const ghostVaults = [
-      ...contracts[MAINNET].ghostVault,
-      ...contracts[TESTNET].ghostVault,
-    ];
     const ghostVault = ghostVaults.find((f) => f.address === factoryAddress);
 
     return new Denom(
