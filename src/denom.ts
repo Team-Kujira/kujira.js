@@ -9,6 +9,7 @@ const ghostVaults = [
 ];
 
 const labels: Record<string, string> = {
+  ulp: "LP ",
   wei: "OKT",
   ugraviton: "GRAV",
   usdt: "USDT",
@@ -130,7 +131,7 @@ const baseDenomToSymbol = (denom: string): string => {
   const factoryAddress = denom.split("/")[1];
   const ghost =
     factoryAddress && ghostVaults.find((a) => a.address === factoryAddress);
-  if (ghost) return `x${Denom.from(ghost.config.denom).symbol}`;
+  if (ghost) return `x`;
 
   const baseDenom = denom.startsWith("ibc/")
     ? (ibc as Record<string, any>)[denom]?.base_denom
@@ -255,7 +256,7 @@ export class Denom {
     this.symbol = baseDenomToSymbol(this.reference);
 
     if (this.underlying) {
-      this.symbol = `${this.symbol} ${this.underlying
+      this.symbol = `${this.symbol}${this.underlying
         .map((d) => d.symbol)
         .join("-")}`;
     }
