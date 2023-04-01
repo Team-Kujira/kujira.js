@@ -100,7 +100,6 @@ const castPilot = (res: {
   };
   pairs: boolean;
   markets: boolean;
-  vaults: boolean;
 }): Pilot => ({
   address: res.address,
   owner: res.config.owner,

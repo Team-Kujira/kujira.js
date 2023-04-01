@@ -25,8 +25,8 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
-    ghostVault: [1555],
-    ghostMarket: [1556, 1557],
+    ghostVault: [1563],
+    ghostMarket: [1556],
     pilot: [1476],
   },
 };
@@ -75,17 +75,6 @@ const res = await Promise.all(
                               markets: {},
                             })
                             .then(({ markets }) => markets)
-                            .catch((err) => {
-                              console.log(err);
-                              return null;
-                            })),
-                        vaults:
-                          protocol === "ghostMarket" &&
-                          (await client.wasm
-                            .queryContractSmart(address, {
-                              vaults: {},
-                            })
-                            .then(({ vaults }) => vaults)
                             .catch((err) => {
                               console.log(err);
                               return null;
