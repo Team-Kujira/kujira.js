@@ -5068,6 +5068,20 @@
                         "current_borrows": "0"
                     }
                 ]
+            },
+            {
+                "id": 1563,
+                "address": "kujira1rdvzx4r90dn5fu5qaqlsaq0rhwjkqmqult0wds20tekts7jmqe7stz5jpl",
+                "config": {
+                    "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+                    "denom": "factory/kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we/ghostUSK",
+                    "oracle_denom": "USDT",
+                    "decimals": 6,
+                    "receipt_denom": "factory/kujira1rdvzx4r90dn5fu5qaqlsaq0rhwjkqmqult0wds20tekts7jmqe7stz5jpl/xxUSK",
+                    "debt_token_denom": "factory/kujira1rdvzx4r90dn5fu5qaqlsaq0rhwjkqmqult0wds20tekts7jmqe7stz5jpl/dxUSK"
+                },
+                "pairs": false,
+                "markets": []
             }
         ],
         "ghostMarket": [
