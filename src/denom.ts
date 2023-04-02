@@ -88,7 +88,7 @@ const labels: Record<string, string> = {
   "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD",
   "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz":
     "dUST",
-  "cw20L:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv":
+  "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv":
     "ROAR",
 
   terra18zqcnl83z98tf6lly37gghm7238k7lh79u4z9a: "bATOM",
