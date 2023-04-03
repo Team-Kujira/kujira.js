@@ -35,6 +35,7 @@ const labels: Record<string, string> = {
   aacre: "ACRE",
   aplanq: "PLQ",
   ufrienzies: "FRNZ",
+  stinj: "stINJ",
   "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo": "DEMO",
   "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local": "LOCAL",
   "factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local": "LOCAL",
@@ -278,6 +279,7 @@ export class Denom {
     if (this.symbol === "SHD") this.decimals = 8;
     if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "gINJ") this.decimals = 18;
+    if (this.symbol === "stINJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
     if (this.symbol === "wTAO") this.decimals = 9;
     if (this.symbol === "ACRE") this.decimals = 18;
