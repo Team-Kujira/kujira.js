@@ -15469,6 +15469,27 @@
                     "name": "Depeg Nation dUST",
                     "symbol": "dUST",
                     "type_asset": "cw20"
+                },
+                {
+                    "address": "terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv",
+                    "base": "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv",
+                    "denom_units": [
+                        {
+                            "denom": "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "roat",
+                            "exponent": 6
+                        }
+                    ],
+                    "display": "ROAR",
+                    "logo_URIs": {
+                        "png": ""
+                    },
+                    "name": "Lion DAO ROAR",
+                    "symbol": "ROAR",
+                    "type_asset": "cw20"
                 }
             ],
             "bech32_prefix": "terra",
