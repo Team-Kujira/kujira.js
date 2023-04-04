@@ -38,6 +38,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-60": "fetch-ai",
     "channel-61": "agoric",
     "channel-62": "noble",
+    "channel-63": "stafihub",
   },
 };
 
