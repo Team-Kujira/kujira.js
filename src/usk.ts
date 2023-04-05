@@ -7,20 +7,20 @@ import contracts from "./resources/contracts.json";
 export type Market = {
   address: string;
   owner: string;
-  stable_denom: Denom;
-  stable_denom_admin: string;
-  collateral_denom: Denom;
-  oracle_denom: string;
-  max_ratio: number;
-  mint_fee: number;
-  interest_rate: number;
-  orca_address: string;
-  max_debt: BigNumber;
-  liquidation_threshold: BigNumber;
-  liquidation_ratio: number;
+  stableDenom: Denom;
+  stableDenomAdmin: string;
+  collateralDenom: Denom;
+  oracleDenom: string;
+  maxRatio: number;
+  mintFee: number;
+  interestRate: number;
+  orcaAddress: string;
+  maxDebt: BigNumber;
+  liquidationThreshold: BigNumber;
+  liquidationRatio: number;
 };
 
-type Config = {
+type ConfigResponse = {
   owner: string;
   stable_denom: string;
   stable_denom_admin: string;
@@ -35,6 +35,21 @@ type Config = {
   liquidation_ratio: string;
 };
 
+export type Config = {
+  owner: string;
+  stableDenom: string;
+  stableDenomAdmin: string;
+  collateralDenom: string;
+  oracleDenom: string;
+  maxRatio: string;
+  mintFee: string;
+  interestRate: string;
+  orcaAddress: string;
+  maxDebt: string;
+  liquidationThreshold: string;
+  liquidationRatio: string;
+};
+
 export type Status = {
   debtAmount: BigNumber;
 };
@@ -43,24 +58,24 @@ export const castStatus = (res: { debt_amount: string }): Status => ({
   debtAmount: BigNumber.from(res.debt_amount),
 });
 
-export const castConfig = (json: Config): Omit<Market, "address"> => ({
+export const castConfig = (json: ConfigResponse): Omit<Market, "address"> => ({
   owner: json.owner,
-  stable_denom: Denom.from(json.stable_denom),
-  stable_denom_admin: json.stable_denom_admin,
-  collateral_denom: Denom.from(json.collateral_denom),
-  oracle_denom: json.oracle_denom,
-  max_ratio: parseFloat(json.max_ratio),
-  mint_fee: parseFloat(json.mint_fee),
-  interest_rate: parseFloat(json.interest_rate),
-  orca_address: json.orca_address,
-  max_debt: BigNumber.from(json.max_debt),
-  liquidation_threshold: BigNumber.from(json.liquidation_threshold),
-  liquidation_ratio: parseFloat(json.liquidation_ratio),
+  stableDenom: Denom.from(json.stable_denom),
+  stableDenomAdmin: json.stable_denom_admin,
+  collateralDenom: Denom.from(json.collateral_denom),
+  oracleDenom: json.oracle_denom,
+  maxRatio: parseFloat(json.max_ratio),
+  mintFee: parseFloat(json.mint_fee),
+  interestRate: parseFloat(json.interest_rate),
+  orcaAddress: json.orca_address,
+  maxDebt: BigNumber.from(json.max_debt),
+  liquidationThreshold: BigNumber.from(json.liquidation_threshold),
+  liquidationRatio: parseFloat(json.liquidation_ratio),
 });
 
 const compile = (
   a: Record<string, Market>,
-  v: { address: string; config: Config }
+  v: { address: string; config: ConfigResponse }
 ) => ({
   ...a,
   [v.address]: { address: v.address, ...castConfig(v.config) },

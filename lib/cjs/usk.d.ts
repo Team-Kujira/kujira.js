@@ -5,19 +5,19 @@ import { KujiraQueryClient } from "./queryClient";
 export declare type Market = {
     address: string;
     owner: string;
-    stable_denom: Denom;
-    stable_denom_admin: string;
-    collateral_denom: Denom;
-    oracle_denom: string;
-    max_ratio: number;
-    mint_fee: number;
-    interest_rate: number;
-    orca_address: string;
-    max_debt: BigNumber;
-    liquidation_threshold: BigNumber;
-    liquidation_ratio: number;
+    stableDenom: Denom;
+    stableDenomAdmin: string;
+    collateralDenom: Denom;
+    oracleDenom: string;
+    maxRatio: number;
+    mintFee: number;
+    interestRate: number;
+    orcaAddress: string;
+    maxDebt: BigNumber;
+    liquidationThreshold: BigNumber;
+    liquidationRatio: number;
 };
-declare type Config = {
+declare type ConfigResponse = {
     owner: string;
     stable_denom: string;
     stable_denom_admin: string;
@@ -31,13 +31,27 @@ declare type Config = {
     liquidation_threshold: string;
     liquidation_ratio: string;
 };
+export declare type Config = {
+    owner: string;
+    stableDenom: string;
+    stableDenomAdmin: string;
+    collateralDenom: string;
+    oracleDenom: string;
+    maxRatio: string;
+    mintFee: string;
+    interestRate: string;
+    orcaAddress: string;
+    maxDebt: string;
+    liquidationThreshold: string;
+    liquidationRatio: string;
+};
 export declare type Status = {
     debtAmount: BigNumber;
 };
 export declare const castStatus: (res: {
     debt_amount: string;
 }) => Status;
-export declare const castConfig: (json: Config) => Omit<Market, "address">;
+export declare const castConfig: (json: ConfigResponse) => Omit<Market, "address">;
 export declare const MARKETS: Record<NETWORK, Record<string, Market>>;
 export declare type PositionResponse = {
     owner: string;
