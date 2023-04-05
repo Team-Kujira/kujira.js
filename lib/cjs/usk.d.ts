@@ -31,6 +31,12 @@ declare type Config = {
     liquidation_threshold: string;
     liquidation_ratio: string;
 };
+export declare type Status = {
+    debtAmount: BigNumber;
+};
+export declare const castStatus: (res: {
+    debt_amount: string;
+}) => Status;
 export declare const castConfig: (json: Config) => Omit<Market, "address">;
 export declare const MARKETS: Record<NETWORK, Record<string, Market>>;
 export declare type PositionResponse = {

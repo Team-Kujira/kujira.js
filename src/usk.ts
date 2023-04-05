@@ -35,6 +35,14 @@ type Config = {
   liquidation_ratio: string;
 };
 
+export type Status = {
+  debtAmount: BigNumber;
+};
+
+export const castStatus = (res: { debt_amount: string }): Status => ({
+  debtAmount: BigNumber.from(res.debt_amount),
+});
+
 export const castConfig = (json: Config): Omit<Market, "address"> => ({
   owner: json.owner,
   stable_denom: Denom.from(json.stable_denom),
