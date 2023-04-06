@@ -561,6 +561,20 @@
       "channelId": "channel-44"
     },
     {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-209"
+      },
+      "connectionHops": [
+        "connection-41"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-45"
+    },
+    {
       "state": 1,
       "ordering": 1,
       "counterparty": {
