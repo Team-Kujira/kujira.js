@@ -49,7 +49,7 @@ const castConfig = (json: Config): Omit<Pair, "address" | "pool" | "calc"> => ({
   ],
   precision: { decimal_places: json.price_precision.decimal_places },
   decimalDelta: json.decimal_delta || 0,
-  multiswap: !json.decimal_delta || json.decimal_delta === 0,
+  multiswap: true,
 });
 
 export const compile =
