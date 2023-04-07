@@ -296,6 +296,10 @@ export class Denom {
     )
       this.decimals = 18;
 
+    // Handle ghost underlying
+    if (this.underlying?.length === 1 && this.decimals !== 6)
+      this.decimals = this.underlying[0].decimals;
+
     this.ics20 = ics20[this.reference];
   }
 
