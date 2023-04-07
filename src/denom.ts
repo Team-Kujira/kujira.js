@@ -288,6 +288,7 @@ export class Denom {
     if (this.symbol === "gTST") this.decimals = 18;
     if (this.symbol === "ARB") this.decimals = 18;
     if (this.symbol === "FET") this.decimals = 18;
+    if (this.symbol === "HANS") this.decimals = 18;
     // OKX USDT
     if (
       this.reference ===
