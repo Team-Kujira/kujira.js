@@ -151,7 +151,10 @@ const baseDenomToSymbol = (denom: string): string => {
   const t = terra[denom];
   if (t) return t;
 
-  return baseDenom.startsWith("u")
+  // Stafi
+  return baseDenom.startsWith("ur")
+    ? "r" + baseDenom.replace(/^ur/, "").toUpperCase()
+    : baseDenom.startsWith("u")
     ? baseDenom.replace(/^u/, "").toUpperCase()
     : // Stride
     baseDenom.startsWith("stu")
