@@ -34,6 +34,7 @@ export const RPCS: Record<string, string[]> = {
     "https://rpc-kujira.synergynodes.com",
     "https://rpc-kujira.whispernode.com",
     "https://rpc.kaiyo.kujira.setten.io",
+    "https://rpc.kujira.rektdao.club",
     // "https://kujira-rpc.lavenderfive.com",
   ],
   [LOCALNET]: ["http://localhost:26657"],
