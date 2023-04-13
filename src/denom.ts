@@ -22,6 +22,7 @@ const labels: Record<string, string> = {
   uausdt: "axlUSDT",
   uusdt: "axlUSDT",
   atevmos: "EVMOS",
+  staevmos: "stEVMOS",
   "wavax-wei": "wAVAX",
   basecro: "CRO",
   "weth-wei": "wETH",
@@ -36,6 +37,7 @@ const labels: Record<string, string> = {
   aplanq: "PLQ",
   ufrienzies: "FRNZ",
   stinj: "stINJ",
+  nanomobx: "MOBX",
   "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo": "DEMO",
   "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local": "LOCAL",
   "factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local": "LOCAL",
@@ -65,6 +67,7 @@ const labels: Record<string, string> = {
   gravity0x35a532d376FFd9a705d0Bb319532837337A398E7: "wDOGE",
   gravity0x07baC35846e5eD502aA91AdF6A9e7aA210F2DcbE: "erowan",
   gravity0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9: "wLUNC",
+  gravity0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE: "SHIB",
   "erc20/0xAE6D3334989a22A65228732446731438672418F2": "CNTO",
   "frax-wei": "FRAX",
   inj: "INJ",
@@ -74,6 +77,7 @@ const labels: Record<string, string> = {
   "wftm-wei": "wFTM",
   "wmatic-wei": "wMATIC",
   "wglmr-wei": "wGLMR",
+  "busd-wei": "BUSD",
   "cw20:juno1qsrercqegvs4ye0yqg93knv73ye5dc3prqwd6jcdcuj8ggp6w0us66deup":
     "LOOP",
   "cw20:juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz":
@@ -98,7 +102,7 @@ const labels: Record<string, string> = {
     "ROAR",
 
   "cw20:terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml":
-    "bLUNA",
+    "boneLUNA",
 
   "cw20:secret1s09x2xvfd2lp2skgzm29w2xtena7s8fq98v852": "AMBER",
   "cw20:secret1k6u0cy4feepm6pehnz804zmwakuwdapm69tuc4": "stkd-SCRT",
@@ -317,6 +321,8 @@ export class Denom {
     if (this.symbol === "wDOGE") this.decimals = 18;
     if (this.symbol === "erowan") this.decimals = 18;
     if (this.symbol === "wLUNC") this.decimals = 18;
+    if (this.symbol === "SHIB") this.decimals = 18;
+    if (this.symbol === "MOBX") this.decimals = 9;
     // OKX USDT
     if (
       this.reference ===
