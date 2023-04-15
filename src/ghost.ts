@@ -14,6 +14,7 @@ export type Market = {
   collateralDecimals: number;
   maxLtv: number;
   vault: Vault;
+  borrowFee: BigNumber;
 };
 
 export type MarketState = {
@@ -106,6 +107,7 @@ export const castMarket = (
     collateral_decimals: number;
     max_ltv: string;
     vault_addr: string;
+    borrow_fee: string;
   },
   vault: Vault
 ): Market => ({
@@ -116,6 +118,7 @@ export const castMarket = (
   collateralDecimals: raw.collateral_decimals,
   maxLtv: parseFloat(raw.max_ltv),
   vault,
+  borrowFee: parseFixed(raw.borrow_fee, 18),
 });
 
 export const castVault = (

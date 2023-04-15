@@ -14,6 +14,7 @@ export declare type Market = {
     collateralDecimals: number;
     maxLtv: number;
     vault: Vault;
+    borrowFee: BigNumber;
 };
 export declare type MarketState = {
     deposited: BigNumber;
@@ -66,6 +67,7 @@ export declare const castMarket: (address: string, raw: {
     collateral_decimals: number;
     max_ltv: string;
     vault_addr: string;
+    borrow_fee: string;
 }, vault: Vault) => Market;
 export declare const castVault: (address: string, raw: {
     owner: string;
