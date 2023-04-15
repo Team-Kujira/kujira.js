@@ -1,6 +1,6 @@
 import { HttpBatchClient, Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import fs from "fs";
-import { kujiraQueryClient, MAINNET, RPCS, TESTNET } from "./lib/cjs/index.js";
+import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
 const IDS = {
   [MAINNET]: {
@@ -25,8 +25,8 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
-    ghostVault: [1592],
-    ghostMarket: [1593, 1594],
+    ghostVault: [1598],
+    ghostMarket: [1593, 1594, 1616],
     pilot: [1476],
   },
 };
