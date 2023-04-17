@@ -4704,7 +4704,7 @@
         "uskMarginLimit": [],
         "calc": [
             {
-                "id": 99,
+                "id": 104,
                 "address": "kujira1e6fjnq7q20sh9cca76wdkfg69esha5zn53jjewrtjgm4nktk824stzyysu",
                 "config": null,
                 "pairs": [
@@ -5565,6 +5565,24 @@
                     "orca_addr": "kujira1luarayrneq0908cr2ty8enkfemql6ejm53gfnzpm4msyqawm88ts06ghsy",
                     "collateral_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
                     "collateral_oracle_denom": "USDT",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.8",
+                    "full_liquidation_threshold": "100000",
+                    "partial_liquidation_target": "0.7",
+                    "borrow_fee": "0.02"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 1616,
+                "address": "kujira108etewle6jpcnem44jqdaa53ktg0qm4a9kx6mu0qtkrg38mk45tq6w8zqy",
+                "config": {
+                    "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+                    "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+                    "orca_addr": "kujira1t0hpcxzcsye4s609ycrlq0q5jm9v9eglhpjlmp38rrtdu0662cxq8x7z49",
+                    "collateral_denom": "ukuji",
+                    "collateral_oracle_denom": "KUJI",
                     "collateral_decimals": 6,
                     "max_ltv": "0.8",
                     "full_liquidation_threshold": "100000",
