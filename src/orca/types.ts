@@ -72,7 +72,6 @@ export type LTVThreshold = {
 };
 
 export interface IContract<W, Tx> {
-  getPrice: (denom: Denom) => Promise<number>;
   getCollateralAmount: () => Promise<BigNumber>;
   getBidPools: () => Promise<BidPool[]>;
   getBids: (
