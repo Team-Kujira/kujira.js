@@ -55,6 +55,7 @@ export declare type Vault = {
     decimals: number;
     receiptDenom: Denom;
     debtTokenDenom: Denom;
+    utilizationRates: [BigNumber, BigNumber][];
     markets: {
         addr: string;
         borrowLimit: null | BigNumber;
