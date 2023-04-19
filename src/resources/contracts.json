@@ -1425,7 +1425,7 @@
             "decimal_places": 4
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -4928,7 +4928,40 @@
         "markets": false
       }
     ],
-    "ghostVault": [],
+    "ghostVault": [
+      {
+        "id": 106,
+        "address": "kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+          "oracle": {
+            "static": "1"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/urcpt",
+          "debt_token_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ukuji",
+          "oracle": {
+            "live": "KUJI"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep/urcpt",
+          "debt_token_denom": "factory/kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      }
+    ],
     "ghostMarket": [],
     "pilot": [
       {
