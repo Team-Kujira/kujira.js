@@ -160,18 +160,18 @@ export const castVault = (
 });
 
 export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
-  [MAINNET]: {},
+  [MAINNET]: contracts[MAINNET].ghostVault.reduce(
+    (a, v) => ({
+      ...a,
+      [v.address]: castVault(v.address, v.config, v.markets || []),
+    }),
+    {}
+  ),
   [TESTNET]: contracts[TESTNET].ghostVault.reduce(
-    (a, v) =>
-      v.markets
-        ? {
-            ...a,
-            [v.address]: castVault(v.address, v.config, v.markets),
-          }
-        : {
-            ...a,
-            [v.address]: castVault(v.address, v.config, []),
-          },
+    (a, v) => ({
+      ...a,
+      [v.address]: castVault(v.address, v.config, v.markets || []),
+    }),
     {}
   ),
   [LOCALNET]: {},
