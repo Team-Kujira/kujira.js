@@ -12,7 +12,7 @@ const IDS = {
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
     calc: [104],
-    ghostVault: [],
+    ghostVault: [106],
     ghostMarket: [],
     pilot: [95],
   },
@@ -25,7 +25,7 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
-    ghostVault: [1598],
+    ghostVault: [1634],
     ghostMarket: [1593, 1594, 1616],
     pilot: [1476],
   },
@@ -33,7 +33,7 @@ const IDS = {
 
 const res = await Promise.all(
   Object.entries(IDS).map(async ([chain, protocols]) => {
-    const rpc = RPCS[chain][0];
+    const rpc = RPCS[chain][1];
     const tm = await Tendermint34Client.create(
       new HttpBatchClient(rpc, {
         dispatchInterval: 100,
