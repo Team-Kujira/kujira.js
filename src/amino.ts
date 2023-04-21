@@ -1,9 +1,10 @@
 import { createWasmAminoConverters } from "@cosmjs/cosmwasm-stargate";
 import * as s from "@cosmjs/stargate";
+import { createAuthzAminoConverters } from "./amino/authz";
 
 export const aminoTypes = (prefix: string): s.AminoTypes =>
   new s.AminoTypes({
-    ...s.createAuthzAminoConverters(),
+    ...createAuthzAminoConverters(),
     ...s.createBankAminoConverters(),
     ...s.createDistributionAminoConverters(),
     ...s.createFeegrantAminoConverters(),
