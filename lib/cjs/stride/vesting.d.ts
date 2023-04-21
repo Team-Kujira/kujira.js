@@ -1,5 +1,5 @@
+import { DeepPartial } from "cosmjs-types";
 import { BaseVestingAccount, Period } from "cosmjs-types/cosmos/vesting/v1beta1/vesting";
-import { DeepPartial } from "cosmjs-types/google/protobuf/any";
 import * as _m0 from "protobufjs/minimal";
 /**
  * StridePeriodicVestingAccount implements the VestingAccount interface. It

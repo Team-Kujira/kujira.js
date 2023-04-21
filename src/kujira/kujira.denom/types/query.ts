@@ -1,8 +1,8 @@
 /* eslint-disable */
+import { DeepPartial } from "cosmjs-types";
 import { Reader, Writer } from "protobufjs/minimal";
-import { Params } from "./params";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Params } from "./params";
 
 export const protobufPackage = "kujira.denom";
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
+import { DeepPartial } from "cosmjs-types";
 import { Reader, Writer } from "protobufjs/minimal";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 
 export const protobufPackage = "kujira.oracle";
 

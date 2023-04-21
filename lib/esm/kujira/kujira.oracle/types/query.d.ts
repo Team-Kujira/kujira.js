@@ -1,7 +1,7 @@
+import { DeepPartial } from "cosmjs-types";
+import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { Reader, Writer } from "protobufjs/minimal";
 import { AggregateExchangeRatePrevote, AggregateExchangeRateVote, Params } from "./oracle";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
-import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 export declare const protobufPackage = "kujira.oracle";
 /** QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC method. */
 export interface QueryExchangeRateRequest {

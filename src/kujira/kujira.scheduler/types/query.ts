@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { Reader, Writer } from "protobufjs/minimal";
 import Long from "long";
+import { Reader, Writer } from "protobufjs/minimal";
 
-import { Params } from "./params";
 import { Hook } from "./hook";
+import { Params } from "./params";
 
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { DeepPartial } from "cosmjs-types";
 import {
   PageRequest,
   PageResponse,

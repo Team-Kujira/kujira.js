@@ -1,12 +1,18 @@
 import { AminoMsg } from "@cosmjs/amino";
 import { AminoConverters } from "@cosmjs/stargate";
-import { Grant } from "cosmjs-types/cosmos/authz/v1beta1/authz";
+declare type AminoGrant = {
+    expiration?: string;
+    authorization: {
+        type: string;
+        value: any;
+    };
+};
 export interface AminoMsgGrant extends AminoMsg {
     readonly type: "cosmos-sdk/MsgGrant";
     readonly value: {
         readonly granter: string;
         readonly grantee: string;
-        readonly grant?: Grant;
+        readonly grant?: AminoGrant;
     };
 }
 export interface AminoMsgRevoke extends AminoMsg {
@@ -18,3 +24,4 @@ export interface AminoMsgRevoke extends AminoMsg {
     };
 }
 export declare function createAuthzAminoConverters(): AminoConverters;
+export {};

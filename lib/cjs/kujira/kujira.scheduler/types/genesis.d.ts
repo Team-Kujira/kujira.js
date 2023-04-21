@@ -1,7 +1,7 @@
-import { Writer, Reader } from "protobufjs/minimal";
-import { Params } from "./params";
+import { DeepPartial } from "cosmjs-types";
+import { Reader, Writer } from "protobufjs/minimal";
 import { Hook } from "./hook";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Params } from "./params";
 export declare const protobufPackage = "kujira.scheduler";
 /** GenesisState defines the scheduler module's genesis state. */
 export interface GenesisState {

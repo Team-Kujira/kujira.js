@@ -1,7 +1,7 @@
 import { Reader, Writer } from "protobufjs/minimal";
-import { Params } from "./params";
 import { Hook } from "./hook";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Params } from "./params";
+import { DeepPartial } from "cosmjs-types";
 import { PageRequest, PageResponse } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
 export declare const protobufPackage = "kujira.scheduler";
 /** QueryParamsRequest is request type for the Query/Params RPC method. */

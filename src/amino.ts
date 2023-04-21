@@ -10,7 +10,7 @@ export const aminoTypes = (prefix: string): s.AminoTypes =>
     ...s.createFeegrantAminoConverters(),
     ...s.createGovAminoConverters(),
     ...s.createIbcAminoConverters(),
-    ...s.createStakingAminoConverters(prefix),
+    ...s.createStakingAminoConverters(),
     ...s.createVestingAminoConverters(),
     ...createWasmAminoConverters(),
   });

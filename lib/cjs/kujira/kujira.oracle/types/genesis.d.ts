@@ -1,6 +1,6 @@
-import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
-import { Params, ExchangeRateTuple, AggregateExchangeRatePrevote, AggregateExchangeRateVote } from "./oracle";
+import { DeepPartial } from "cosmjs-types";
+import { Reader, Writer } from "protobufjs/minimal";
+import { AggregateExchangeRatePrevote, AggregateExchangeRateVote, ExchangeRateTuple, Params } from "./oracle";
 export declare const protobufPackage = "kujira.oracle";
 /** GenesisState defines the oracle module's genesis state. */
 export interface GenesisState {

@@ -1,7 +1,7 @@
-import { Params } from "./params";
+import { DeepPartial } from "cosmjs-types";
+import { Reader, Writer } from "protobufjs/minimal";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
-import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { Params } from "./params";
 export declare const protobufPackage = "kujira.denom";
 /** GenesisState defines the denom module's genesis state. */
 export interface GenesisState {

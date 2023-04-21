@@ -1,6 +1,6 @@
-import { Writer, Reader } from "protobufjs/minimal";
-import { DeepPartial } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import { DeepPartial } from "cosmjs-types";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
+import { Reader, Writer } from "protobufjs/minimal";
 export declare const protobufPackage = "kujira.scheduler";
 export interface Hook {
     id: number;

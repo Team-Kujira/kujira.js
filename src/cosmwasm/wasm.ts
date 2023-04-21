@@ -1,5 +1,5 @@
 import { JsonObject, setupWasmExtension } from "@cosmjs/cosmwasm-stargate";
-import { createProtobufRpcClient, QueryClient } from "@cosmjs/stargate";
+import { QueryClient, createProtobufRpcClient } from "@cosmjs/stargate";
 import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
 import {
   QueryAllContractStateResponse,
