@@ -39,6 +39,12 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-61": "agoric",
     "channel-62": "noble",
     "channel-63": "stafihub",
+    "channel-64": "akash",
+    "channel-65": "assetmantle",
+    "channel-67": "crescent",
+    "channel-68": "regen",
+    "channel-69": "sommelier",
+    "channel-70": "omniflixhub",
   },
 };
 
