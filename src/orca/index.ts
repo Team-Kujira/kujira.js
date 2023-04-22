@@ -7,49 +7,6 @@ import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
 export * from "./types";
 
-export type Soon = Pick<
-  Market,
-  "label" | "chain" | "protocol" | "collateralDenom" | "bidDenom" | "repayDenom"
->;
-
-export const SOON: Soon[] = [
-  {
-    label: "NBTC",
-    chain: Chain.Kujira,
-    protocol: Protocol.USK,
-    collateralDenom: Denom.from(
-      "ibc/784AEA7C1DC3C62F9A04EB8DC3A3D1DCB7B03BA8CB2476C5825FA0C155D3018E"
-    ),
-    bidDenom: USK,
-    repayDenom: USK,
-  },
-
-  {
-    label: "ATOM Short",
-    chain: Chain.Kujira,
-    protocol: Protocol.PERP,
-    collateralDenom: USK,
-    bidDenom: Denom.from(
-      "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
-    ),
-    repayDenom: Denom.from(
-      "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
-    ),
-  },
-  {
-    label: "NBTC Short",
-    chain: Chain.Kujira,
-    protocol: Protocol.PERP,
-    collateralDenom: USK,
-    bidDenom: Denom.from(
-      "ibc/784AEA7C1DC3C62F9A04EB8DC3A3D1DCB7B03BA8CB2476C5825FA0C155D3018E"
-    ),
-    repayDenom: Denom.from(
-      "ibc/784AEA7C1DC3C62F9A04EB8DC3A3D1DCB7B03BA8CB2476C5825FA0C155D3018E"
-    ),
-  },
-];
-
 const insertMarket = (
   a: Record<string, Market>,
   v: {
@@ -106,10 +63,7 @@ export const MARKETS = {
   [LOCALNET]: {},
 };
 
-export const getMarkets = (network?: NETWORK): Array<Market | Soon> => {
-  const soon = network === MAINNET ? SOON : [];
+export const getMarkets = (network?: NETWORK): Array<Market> => {
   const markets = Object.values(MARKETS[network || MAINNET]);
-  return [...markets, ...soon]
-    .sort((a, b) => a.collateralDenom.compare(b.collateralDenom))
-    .sort((a, b) => ("address" in b ? 1 : -1));
+  return markets.sort((a, b) => a.collateralDenom.compare(b.collateralDenom));
 };
