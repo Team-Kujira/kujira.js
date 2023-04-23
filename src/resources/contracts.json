@@ -5016,6 +5016,22 @@
         },
         "pairs": false,
         "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "oracle": {
+            "live": "USDC"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "debt_token_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/udebt"
+        },
+        "pairs": false,
+        "markets": []
       }
     ],
     "ghostMarket": [],
