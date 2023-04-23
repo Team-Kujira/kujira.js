@@ -5000,6 +5000,22 @@
         },
         "pairs": false,
         "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1e6kvcdpxtu30t8x9sx0k692tln9z636gyu8sqf6w5fm5z3jrvjjqc8qfkr",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+          "oracle": {
+            "live": "ATOM"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1e6kvcdpxtu30t8x9sx0k692tln9z636gyu8sqf6w5fm5z3jrvjjqc8qfkr/urcpt",
+          "debt_token_denom": "factory/kujira1e6kvcdpxtu30t8x9sx0k692tln9z636gyu8sqf6w5fm5z3jrvjjqc8qfkr/udebt"
+        },
+        "pairs": false,
+        "markets": []
       }
     ],
     "ghostMarket": [],
