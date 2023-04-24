@@ -178,7 +178,20 @@ export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
 };
 
 export const MARKETS: Record<NETWORK, Record<string, Market>> = {
-  [MAINNET]: {},
+  [MAINNET]: contracts[MAINNET].ghostMarket.reduce(
+    (a, v) =>
+      VAULTS[MAINNET][v.config.vault_addr]
+        ? {
+            ...a,
+            [v.address]: castMarket(
+              v.address,
+              v.config,
+              VAULTS[MAINNET][v.config.vault_addr]
+            ),
+          }
+        : a,
+    {}
+  ),
   [TESTNET]: contracts[TESTNET].ghostMarket.reduce(
     (a, v) =>
       VAULTS[TESTNET][v.config.vault_addr]

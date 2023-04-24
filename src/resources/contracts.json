@@ -1359,7 +1359,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -1491,7 +1491,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -5136,7 +5136,44 @@
         "markets": []
       }
     ],
-    "ghostMarket": [],
+    "ghostMarket": [
+      {
+        "id": 109,
+        "address": "kujira1fpqcnev8dq6cd9pkum3wnt4jraxjeflmjcr9xqush2fr4ke4aupq6d3c6h",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep",
+          "orca_addr": "kujira1j2nygy0hg0v3r6wa4qhx69xqu8kkgwwtky3wl0zxa3wswqap6mfqncr098",
+          "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+          "collateral_oracle_denom": "USK",
+          "collateral_decimals": 6,
+          "max_ltv": "0.5",
+          "full_liquidation_threshold": "1000000",
+          "partial_liquidation_target": "0.4",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 109,
+        "address": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf",
+          "orca_addr": "kujira1098ay2tx2238hwfmntjyfjms9zyqwlcdvmydyhq9d08lt8tj5mlss06myq",
+          "collateral_denom": "ukuji",
+          "collateral_oracle_denom": "KUJI",
+          "collateral_decimals": 6,
+          "max_ltv": "0.5",
+          "full_liquidation_threshold": "1000000",
+          "partial_liquidation_target": "0.4",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      }
+    ],
     "pilot": [
       {
         "id": 95,
