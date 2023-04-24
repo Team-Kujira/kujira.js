@@ -4586,7 +4586,9 @@
         "address": "kujira1j2nygy0hg0v3r6wa4qhx69xqu8kkgwwtky3wl0zxa3wswqap6mfqncr098",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1fpqcnev8dq6cd9pkum3wnt4jraxjeflmjcr9xqush2fr4ke4aupq6d3c6h"
+          ],
           "bid_denom": "factory/kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep/urcpt",
           "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
           "bid_threshold": "10000000000",
@@ -5091,7 +5093,7 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "63001828243"
+            "current_borrows": "65326415432"
           }
         ]
       },
@@ -5145,6 +5147,150 @@
           "decimals": 6,
           "receipt_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "debt_token_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
+          "oracle": {
+            "live": "BNB"
+          },
+          "decimals": 18,
+          "receipt_denom": "factory/kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9/urcpt",
+          "debt_token_denom": "factory/kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539",
+          "oracle": {
+            "live": "DOT"
+          },
+          "decimals": 10,
+          "receipt_denom": "factory/kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg/urcpt",
+          "debt_token_denom": "factory/kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7",
+          "oracle": {
+            "live": "ETH"
+          },
+          "decimals": 18,
+          "receipt_denom": "factory/kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd/urcpt",
+          "debt_token_denom": "factory/kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira19mmvst3l3y6c3mtyqhj7vxne4g69ayd9lq323w7k270p6fp0sy6qlv642l",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
+          "oracle": {
+            "live": "LUNA"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira19mmvst3l3y6c3mtyqhj7vxne4g69ayd9lq323w7k270p6fp0sy6qlv642l/urcpt",
+          "debt_token_denom": "factory/kujira19mmvst3l3y6c3mtyqhj7vxne4g69ayd9lq323w7k270p6fp0sy6qlv642l/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1md94f5metrd4fhecalrmhtac5t4upeg9gz2e24hmuszdtgfxy85qvkphnw",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3",
+          "oracle": {
+            "live": "PAXG"
+          },
+          "decimals": 18,
+          "receipt_denom": "factory/kujira1md94f5metrd4fhecalrmhtac5t4upeg9gz2e24hmuszdtgfxy85qvkphnw/urcpt",
+          "debt_token_denom": "factory/kujira1md94f5metrd4fhecalrmhtac5t4upeg9gz2e24hmuszdtgfxy85qvkphnw/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1xhxefc8v3tt0n75wpzfqcrukzyfneyttdppqst84zzdxnf223m2qm4g5at",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC",
+          "oracle": {
+            "live": "wBTC"
+          },
+          "decimals": 8,
+          "receipt_denom": "factory/kujira1xhxefc8v3tt0n75wpzfqcrukzyfneyttdppqst84zzdxnf223m2qm4g5at/urcpt",
+          "debt_token_denom": "factory/kujira1xhxefc8v3tt0n75wpzfqcrukzyfneyttdppqst84zzdxnf223m2qm4g5at/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira13aga84rpxpvuf9xqrz88pc2gtd3duz7qs4kvlgnzwhdurluhhncqh4exwr",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/0306D6B66EAA2EDBB7EAD23C0EC9DDFC69BB43E80B398035E90FBCFEF3FD1A87",
+          "oracle": {
+            "live": "STATOM"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira13aga84rpxpvuf9xqrz88pc2gtd3duz7qs4kvlgnzwhdurluhhncqh4exwr/urcpt",
+          "debt_token_denom": "factory/kujira13aga84rpxpvuf9xqrz88pc2gtd3duz7qs4kvlgnzwhdurluhhncqh4exwr/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1f3gz32fkrxaymetnfzxppj0yaqz3hjqf3m5jft6m5ehy9xat7elq3unwuc",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/F97BDCE220CCB52139C73066E36C45EC7EDCEEF1DAFF891A34F4FBA195A2E6E8",
+          "oracle": {
+            "live": "STOSMO"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1f3gz32fkrxaymetnfzxppj0yaqz3hjqf3m5jft6m5ehy9xat7elq3unwuc/urcpt",
+          "debt_token_denom": "factory/kujira1f3gz32fkrxaymetnfzxppj0yaqz3hjqf3m5jft6m5ehy9xat7elq3unwuc/udebt"
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1gqlvqhp8hqlvljcy2fpz39jslse39phye3drhe6ntdsmlyygkjwq9v6xmz",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
+          "oracle": {
+            "live": "OSMO"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1gqlvqhp8hqlvljcy2fpz39jslse39phye3drhe6ntdsmlyygkjwq9v6xmz/urcpt",
+          "debt_token_denom": "factory/kujira1gqlvqhp8hqlvljcy2fpz39jslse39phye3drhe6ntdsmlyygkjwq9v6xmz/udebt"
         },
         "pairs": false,
         "markets": []
