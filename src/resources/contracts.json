@@ -4564,7 +4564,9 @@
         "address": "kujira1098ay2tx2238hwfmntjyfjms9zyqwlcdvmydyhq9d08lt8tj5mlss06myq",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm"
+          ],
           "bid_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/urcpt",
           "collateral_denom": "ukuji",
           "bid_threshold": "10000000000",
@@ -5085,7 +5087,13 @@
           "debt_token_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/udebt"
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
+            "borrow_limit": null,
+            "current_borrows": "63001828243"
+          }
+        ]
       },
       {
         "id": 106,
@@ -5101,7 +5109,13 @@
           "debt_token_denom": "factory/kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep/udebt"
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1fpqcnev8dq6cd9pkum3wnt4jraxjeflmjcr9xqush2fr4ke4aupq6d3c6h",
+            "borrow_limit": null,
+            "current_borrows": "621279"
+          }
+        ]
       },
       {
         "id": 106,
@@ -5727,7 +5741,7 @@
           {
             "addr": "kujira18tf39rrlskc20c582rf3je3qrshcgufgplgc800dtm6q96nk84rq57k695",
             "borrow_limit": null,
-            "current_borrows": "4473118721"
+            "current_borrows": "4467511717"
           },
           {
             "addr": "kujira1t88e60depax2zz43mt5ggxdzqe225guhn0jdyl3ccq5x30lcu2hqcnzt2t",
@@ -5754,7 +5768,7 @@
           {
             "addr": "kujira10mqusaxs79ugxcpcjhwm4j0k3fdfkuqjctg5qkxvz9a8xvzymscslrkpqr",
             "borrow_limit": null,
-            "current_borrows": "40332844906672753436"
+            "current_borrows": "40305494104678675772"
           }
         ]
       },
