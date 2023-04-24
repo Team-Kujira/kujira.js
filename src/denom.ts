@@ -148,7 +148,7 @@ const baseDenomToSymbol = (denom: string): string => {
   const factoryAddress = denom.split("/")[1];
   const ghost =
     factoryAddress && ghostVaults.find((a) => a.address === factoryAddress);
-  if (ghost) return `x`;
+  if (ghost) return denom.endsWith("/udebt") ? `debt` : `x`;
 
   const baseDenom = denom.startsWith("ibc/")
     ? (ibc as Record<string, any>)[denom]?.base_denom
