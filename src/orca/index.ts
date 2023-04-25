@@ -7,6 +7,10 @@ import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
 export * from "./types";
 
+export const FILTERED = [
+  "kujira1pq2qqjuxwm93sxhr9s3vlpj7lrtjfdml68qjf3a3qfpw5ctj67nsdfmkrv",
+];
+
 const insertMarket = (
   a: Record<string, Market>,
   v: {
@@ -28,6 +32,7 @@ const insertMarket = (
     };
   }
 ): Record<string, Market> => {
+  if (FILTERED.includes(v.address)) return a;
   const collateralDenom = Denom.from(v.config.collateral_denom);
   return {
     ...a,
