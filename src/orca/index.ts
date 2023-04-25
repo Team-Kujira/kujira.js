@@ -9,6 +9,7 @@ export * from "./types";
 
 export const FILTERED = [
   "kujira1pq2qqjuxwm93sxhr9s3vlpj7lrtjfdml68qjf3a3qfpw5ctj67nsdfmkrv",
+  "kujira13wd3tqd3k2hldhcpqm6wnf00rdx98yf5a2sv3s7mzs7uwgqzvpnsk9kygc",
 ];
 
 const insertMarket = (
