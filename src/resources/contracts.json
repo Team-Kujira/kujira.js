@@ -5883,7 +5883,7 @@
           {
             "addr": "kujira1kxsfuw7m8ytmgvtsus40fg725h8pxw3ved7nkvvuyjehxus9ydcqnl4nmc",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "60097650595836"
           }
         ]
       },
@@ -6103,7 +6103,7 @@
           "vault_addr": "kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9",
           "orca_addr": "kujira12cp7te0h39u2h6kjqrm9pautkpmee8c3k0487f86eqlpc2l9an9sdt9yg8",
           "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
-          "collateral_oracle_denom": "BNB",
+          "collateral_oracle_denom": "USK",
           "collateral_decimals": 6,
           "max_ltv": "0.6",
           "full_liquidation_threshold": "1000000000",
