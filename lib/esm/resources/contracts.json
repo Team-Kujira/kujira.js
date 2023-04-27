@@ -4854,7 +4854,9 @@
                 "address": "kujira1q9w5x3l9lzlmpnsuwa48lms0ge26sx9kcmmh482p76g43enjkxhq7tvkd3",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira160ksljczfsxewyf03c8s5lvhaqvwxsm5zr6nfjq2un7zs74e2aysjuye8j"
+                    ],
                     "bid_denom": "factory/kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd/urcpt",
                     "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
                     "bid_threshold": "4000000000000000000",
@@ -5927,7 +5929,13 @@
                     "debt_token_denom": "factory/kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd/udebt"
                 },
                 "pairs": false,
-                "markets": []
+                "markets": [
+                    {
+                        "addr": "kujira160ksljczfsxewyf03c8s5lvhaqvwxsm5zr6nfjq2un7zs74e2aysjuye8j",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    }
+                ]
             },
             {
                 "id": 106,
@@ -6154,6 +6162,24 @@
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
                     "vault_addr": "kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg",
                     "orca_addr": "kujira1gdqgq270w490hemdmyc9qdmmcg9x6tdx47lhj3e4twfukvdrlj0q970ly9",
+                    "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+                    "collateral_oracle_denom": "USK",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.6",
+                    "full_liquidation_threshold": "1000000000",
+                    "partial_liquidation_target": "0.5",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira160ksljczfsxewyf03c8s5lvhaqvwxsm5zr6nfjq2un7zs74e2aysjuye8j",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd",
+                    "orca_addr": "kujira1q9w5x3l9lzlmpnsuwa48lms0ge26sx9kcmmh482p76g43enjkxhq7tvkd3",
                     "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
                     "collateral_oracle_denom": "USK",
                     "collateral_decimals": 6,
