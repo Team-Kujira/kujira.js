@@ -5270,7 +5270,9 @@
                 "address": "kujira1h8z8th0w65y6cz35k7k6j2e0uldm7grtuw62z8x3c5v0fgv2z6ts9jmt8r",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm"
+                    ],
                     "bid_denom": "factory/kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep/urcpt",
                     "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
                     "bid_threshold": "20000000000",
@@ -5310,7 +5312,9 @@
                 "address": "kujira1sd2krzrnlrcnda2tn40s6lgep6a0k94vwre0ljvt79k5mqv0vpxqddvxfe",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665"
+                    ],
                     "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
                     "collateral_denom": "ukuji",
                     "bid_threshold": "10000000000",
@@ -5838,6 +5842,11 @@
                         "addr": "kujira1fpqcnev8dq6cd9pkum3wnt4jraxjeflmjcr9xqush2fr4ke4aupq6d3c6h",
                         "borrow_limit": null,
                         "current_borrows": "106877418"
+                    },
+                    {
+                        "addr": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
                     }
                 ]
             },
@@ -5877,7 +5886,13 @@
                     "debt_token_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/udebt"
                 },
                 "pairs": false,
-                "markets": []
+                "markets": [
+                    {
+                        "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    }
+                ]
             },
             {
                 "id": 106,
@@ -6290,6 +6305,42 @@
                     "max_ltv": "0.6",
                     "full_liquidation_threshold": "1000000000",
                     "partial_liquidation_target": "0.5",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+                    "orca_addr": "kujira1sd2krzrnlrcnda2tn40s6lgep6a0k94vwre0ljvt79k5mqv0vpxqddvxfe",
+                    "collateral_denom": "ukuji",
+                    "collateral_oracle_denom": "KUJI",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "1000000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira143fwcudwy0exd6zd3xyvqt2kae68ud6n8jqchufu7wdg5sryd4lqtlvvep",
+                    "orca_addr": "kujira1h8z8th0w65y6cz35k7k6j2e0uldm7grtuw62z8x3c5v0fgv2z6ts9jmt8r",
+                    "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+                    "collateral_oracle_denom": "USDC",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "1000000000",
+                    "partial_liquidation_target": "0.4",
                     "borrow_fee": "0.002"
                 },
                 "pairs": false,
