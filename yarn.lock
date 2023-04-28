@@ -379,24 +379,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@injectivelabs/chain-api@npm:1.9.18":
-  version: 1.9.18
-  resolution: "@injectivelabs/chain-api@npm:1.9.18"
+"@improbable-eng/grpc-web@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "@improbable-eng/grpc-web@npm:0.13.0"
   dependencies:
-    "@injectivelabs/grpc-web": ^0.0.1
-    google-protobuf: ^3.13.0
-  checksum: e52b4ec04bdcbd83db1fee8314df5ed88fbeac33b89846bdbabeb5fb3b3ad0bec9f5024ee90ba53c62fa74f03797459d74bb55a63534d164f0d4845462c04f3b
+    browser-headers: ^0.4.0
+  peerDependencies:
+    google-protobuf: ^3.2.0
+  checksum: e7cd4ae5ed269be4215b72dea6727c1e8fd139a408386b24084842fbbfa249fb45ea12033ade2872a3d5cdfeb0e0b487563ff9f5b1c308e32aecccf7b80ca441
   languageName: node
   linkType: hard
 
-"@injectivelabs/grpc-web@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@injectivelabs/grpc-web@npm:0.0.1"
+"@injectivelabs/chain-api@npm:1.9.9":
+  version: 1.9.9
+  resolution: "@injectivelabs/chain-api@npm:1.9.9"
   dependencies:
-    browser-headers: ^0.4.1
-  peerDependencies:
-    google-protobuf: ^3.14.0
-  checksum: 121832da2ee37e48531b1e90003778afd75668e527a25c8539310081677a5e662689ef7e68fe6014b86f65175fdfd58cc2cd33a959d6661d320810b08996b03c
+    "@improbable-eng/grpc-web": ^0.13.0
+    google-protobuf: ^3.13.0
+  checksum: 87ac0fb32653b571c23f340f426deb4a08dc1e4a50f67e9aa9029493e8e207e563d854d52b89966ef5b876d05b5758302b1091da4da0e33b40cd8e45019fb805
   languageName: node
   linkType: hard
 
@@ -735,7 +735,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browser-headers@npm:^0.4.1":
+"browser-headers@npm:^0.4.0":
   version: 0.4.1
   resolution: "browser-headers@npm:0.4.1"
   checksum: 28b927dd90e4882eeb0625cd4a20a8e868f892144bca794a9b027fad9d2094656daf46473cb9084d650590504c581dd6a711146243035b66e75ade61bbe4d3cf
@@ -1131,7 +1131,7 @@ __metadata:
     "@cosmjs/launchpad": ^0.27.1
     "@cosmjs/stargate": ^0.30.1
     "@ethersproject/bignumber": ^5.7.0
-    "@injectivelabs/chain-api": 1.9.18
+    "@injectivelabs/chain-api": 1.9.9
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
     cosmjs-types: ^0.7.2
