@@ -379,13 +379,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@injectivelabs/chain-api@npm:^1.9.20":
-  version: 1.9.20
-  resolution: "@injectivelabs/chain-api@npm:1.9.20"
+"@injectivelabs/chain-api@npm:1.9.18":
+  version: 1.9.18
+  resolution: "@injectivelabs/chain-api@npm:1.9.18"
   dependencies:
     "@injectivelabs/grpc-web": ^0.0.1
     google-protobuf: ^3.13.0
-  checksum: dea21f814751b2d62ab1e92cab991a9c3fb7454a0c6c6631dc5c52ab60b9da7e562a72b3fd43dbc2f745d9dcbb5105e4d6423d6fffcab3fe238968f864cf6f2c
+  checksum: e52b4ec04bdcbd83db1fee8314df5ed88fbeac33b89846bdbabeb5fb3b3ad0bec9f5024ee90ba53c62fa74f03797459d74bb55a63534d164f0d4845462c04f3b
   languageName: node
   linkType: hard
 
@@ -1131,7 +1131,7 @@ __metadata:
     "@cosmjs/launchpad": ^0.27.1
     "@cosmjs/stargate": ^0.30.1
     "@ethersproject/bignumber": ^5.7.0
-    "@injectivelabs/chain-api": ^1.9.20
+    "@injectivelabs/chain-api": 1.9.18
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
     cosmjs-types: ^0.7.2
