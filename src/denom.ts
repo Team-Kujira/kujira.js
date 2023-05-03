@@ -32,6 +32,8 @@ const labels: Record<string, string> = {
   basecro: "CRO",
   "weth-wei": "wETH",
   "link-wei": "LINK",
+  "wsteth-wei": "wstETH",
+  "reth-wei": "rETH",
   "dot-planck": "DOT",
   aevmos: "EVMOS",
   afet: "FET",
