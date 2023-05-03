@@ -5,6 +5,24 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@babel/runtime@npm:^7.21.0":
+  version: 7.21.5
+  resolution: "@babel/runtime@npm:7.21.5"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 358f2779d3187f5c67ad302e8f8d435412925d0b991d133c7d4a7b1ddd5a3fda1b6f34537cb64628dfd96a27ae46df105bed3895b8d754b88cacdded8d1129dd
+  languageName: node
+  linkType: hard
+
+"@chain-registry/types@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "@chain-registry/types@npm:0.16.0"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+  checksum: 494c42f494583cd9aa05c0088191864591ac28909c0323fd0d0d6922b2866c3690c59558391ac3843778275ad308845a791019081d0f65d11d72e0d64071d345
+  languageName: node
+  linkType: hard
+
 "@confio/ics23@npm:^0.6.8":
   version: 0.6.8
   resolution: "@confio/ics23@npm:0.6.8"
@@ -762,6 +780,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chain-registry@npm:^1.13.0":
+  version: 1.13.0
+  resolution: "chain-registry@npm:1.13.0"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+    "@chain-registry/types": ^0.16.0
+  checksum: ba1343f57f79f9ef64a9c736f0b4c10f7a9e2509d6aa2e41fc793f84daf922253376c96a8e29a44b41bf67289a9bb416263b7c4f16238c57c6fe6f9c42c88299
+  languageName: node
+  linkType: hard
+
 "charenc@npm:~0.0.1":
   version: 0.0.2
   resolution: "charenc@npm:0.0.2"
@@ -1134,6 +1162,7 @@ __metadata:
     "@injectivelabs/chain-api": 1.9.9
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
+    chain-registry: ^1.13.0
     cosmjs-types: ^0.7.2
     long: ^4.0.0
     react: ^18.2.0
@@ -1359,6 +1388,13 @@ __metadata:
   version: 1.0.0
   resolution: "readonly-date@npm:1.0.0"
   checksum: 78481e2abf3c2f9bc526029458aee3e2b1c476ca1434c4cc9db5c9aba51bf8f1323c1995d764ff01f2055b01f13e05416b2e14b387f644b0a5a56554c3ee9d0a
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 

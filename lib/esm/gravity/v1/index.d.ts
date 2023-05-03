@@ -3,7 +3,7 @@ import { MsgBatchSendToEthClaim, MsgBatchSendToEthClaimResponse, MsgCancelSendTo
 import { GravityExtension, setupGravityExtension } from "./queries";
 declare const types: (string | {
     encode(_: MsgBatchSendToEthClaimResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgBatchSendToEthClaimResponse;
+    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgBatchSendToEthClaimResponse;
     fromJSON(_: any): MsgBatchSendToEthClaimResponse;
     toJSON(_: MsgBatchSendToEthClaimResponse): unknown;
     fromPartial(_: Partial<MsgBatchSendToEthClaimResponse>): MsgBatchSendToEthClaimResponse;

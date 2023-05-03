@@ -3,7 +3,7 @@ import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
 import { DenomExtension, setupDenomExtension } from "./queries";
 declare const types: ((string | {
     encode(message: MsgBurn, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgBurn;
+    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgBurn;
     fromJSON(object: any): MsgBurn;
     toJSON(message: MsgBurn): unknown;
     fromPartial(object: {
@@ -15,7 +15,7 @@ declare const types: ((string | {
     }): MsgBurn;
 })[] | (string | {
     encode(message: MsgChangeAdmin, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgChangeAdmin;
+    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgChangeAdmin;
     fromJSON(object: any): MsgChangeAdmin;
     toJSON(message: MsgChangeAdmin): unknown;
     fromPartial(object: {
@@ -25,7 +25,7 @@ declare const types: ((string | {
     }): MsgChangeAdmin;
 })[] | (string | {
     encode(message: MsgCreateDenom, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgCreateDenom;
+    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgCreateDenom;
     fromJSON(object: any): MsgCreateDenom;
     toJSON(message: MsgCreateDenom): unknown;
     fromPartial(object: {
