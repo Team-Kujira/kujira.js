@@ -10,6 +10,7 @@ export const FILTERED = [
   "kujira1qshjsyprd79w5q494themln57qz35txt2kx7yc6c0u4nmd4cy27qanxdlc",
   "kujira1kc3msrd9gvnfumfcshlkvcdgklf9m9ln7llfqsxqalcfk9xjr5uqdy8us6",
   "kujira13l8gwanf37938wgfv5yktmfzxjwaj4ysn4gl96vj78xcqqxlcrgssfl797",
+  "kujira1vt9lmzw5wc9gss07ty9cf8ytpy7se77u7xytylv4xvklsfggmxgquklr7p",
 ];
 
 import contracts from "../resources/contracts.json";
