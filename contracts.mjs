@@ -41,6 +41,7 @@ const res = await Promise.all(
       })
     );
     const client = kujiraQueryClient({ client: tm });
+
     return {
       chain,
       protocols: await Promise.all(
@@ -56,11 +57,32 @@ const res = await Promise.all(
                     Promise.all(
                       x.contracts.map(async (address) => ({
                         address,
-                        config: await client.wasm
-                          .queryContractSmart(address, {
-                            config: {},
-                          })
-                          .catch(() => null),
+                        config:
+                          protocol === "ghostVault"
+                            ? {
+                                ...(await client.wasm
+                                  .queryContractSmart(address, {
+                                    config: {},
+                                  })
+                                  .catch(() => null)),
+                                interest: await client.wasm
+                                  .queryContractRaw(
+                                    address,
+                                    Uint8Array.from([115, 116, 97, 116, 101])
+                                  )
+                                  .then(({ data }) =>
+                                    JSON.parse(Buffer.from(data).toString())
+                                  )
+                                  .then(
+                                    ({ utilization_to_rate }) =>
+                                      utilization_to_rate
+                                  ),
+                              }
+                            : await client.wasm
+                                .queryContractSmart(address, {
+                                  config: {},
+                                })
+                                .catch(() => null),
                         pairs:
                           protocol === "calc" &&
                           (await client.wasm
