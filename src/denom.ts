@@ -339,6 +339,12 @@ export class Denom {
     if (this.symbol === "wLUNC") this.decimals = 18;
     if (this.symbol === "SHIB") this.decimals = 18;
     if (this.symbol === "MOBX") this.decimals = 9;
+    if (
+      this.underlying?.length === 2 &&
+      this.underlying[0].decimals === this.underlying[1].decimals
+    ) {
+      this.decimals = this.underlying[0].decimals;
+    }
     // OKX USDT
     if (
       this.reference ===
