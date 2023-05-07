@@ -882,28 +882,6 @@
       },
       {
         "id": 56,
-        "address": "kujira1rtpn4nxkx7u5y4uf5lp4ywrhmnms07p8p8wc3pmw53hfv0lhyxdqlfhgrt",
-        "config": {
-          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "denoms": [
-            {
-              "native": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
-            },
-            {
-              "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
-            }
-          ],
-          "price_precision": {
-            "decimal_places": 2
-          },
-          "decimal_delta": 12,
-          "is_bootstrapping": false
-        },
-        "pairs": false,
-        "markets": false
-      },
-      {
-        "id": 56,
         "address": "kujira158zzjcvkz7r3j5hueurcw22qrjerqw4dtrzlalztr7whjykjwvrsrahdnq",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
@@ -2247,6 +2225,30 @@
             "decimal_places": 12
           },
           "decimal_delta": 0,
+          "is_bootstrapping": false,
+          "fee_taker": "0.0015",
+          "fee_maker": "0.00075"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 94,
+        "address": "kujira1rtpn4nxkx7u5y4uf5lp4ywrhmnms07p8p8wc3pmw53hfv0lhyxdqlfhgrt",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            {
+              "native": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
+            },
+            {
+              "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 2
+          },
+          "decimal_delta": 12,
           "is_bootstrapping": false,
           "fee_taker": "0.0015",
           "fee_maker": "0.00075"
@@ -5197,7 +5199,9 @@
         "address": "kujira1w89df8jswv0m4fvj6rpy2hq8jp3tgn82pglwqe20lhus957a5qms77s863",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1fg5cn4537y5lr7d5v9c8avg26hmfespznrz2yr86h3gdhsh8lpgstcjkks"
+          ],
           "bid_denom": "factory/kujira1e6kvcdpxtu30t8x9sx0k692tln9z636gyu8sqf6w5fm5z3jrvjjqc8qfkr/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -5217,7 +5221,9 @@
         "address": "kujira1nh09mmjhmj9x8t7laa8wktfpul42ykg4zgfljx5rgnfhjzjvjrfsy8lta2",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira17vd6lvee5rsnhkr5qvzrpec034m6sc7x4ucm2e8a2xd32jn4t0zsaal9sp"
+          ],
           "bid_denom": "factory/kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "30000000000000000000",
@@ -5237,7 +5243,9 @@
         "address": "kujira1070qfw283ywwmmvjwg2gwcd37vc5nlweetnrq88udg8z95mqlucstrmdjc",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira12r706fa0exy85f2y7gj8uwrwk4epj35tfv53h69mtqke3gxy0zmqekwx4l"
+          ],
           "bid_denom": "factory/kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "15000000000000",
@@ -5257,7 +5265,9 @@
         "address": "kujira1unn3w0rm6kuw8pc98z0v6xw09594plmsgh596ugrwqurgff70hqqkeemdu",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira17vh59tnxdxjunfwqvftv59epulvszf0up7p42hdlhyttz3q6s4esadsewc"
+          ],
           "bid_denom": "factory/kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "4000000000000000000",
@@ -5277,7 +5287,9 @@
         "address": "kujira18jzq7upxxeaanyv2062clcr7fsucw3mmle2ck94rmulhzyjmc9lslpmh9f",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1apefg3pm4kucny3y26nqs57qeavvl7gzquxhm5rjgumvcuekf7esreguaa"
+          ],
           "bid_denom": "factory/kujira19mmvst3l3y6c3mtyqhj7vxne4g69ayd9lq323w7k270p6fp0sy6qlv642l/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "6500000000",
@@ -5297,7 +5309,9 @@
         "address": "kujira18sgt5sfs832s8a7a9htdad8mtwxph8r3ufut4cnc0vjgsxawde0qpd02pt",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1hlknsfc2dpax7avtr8h5uy2w3tusj39thwp5f2j99h378shsj40shqa9qm"
+          ],
           "bid_denom": "factory/kujira1md94f5metrd4fhecalrmhtac5t4upeg9gz2e24hmuszdtgfxy85qvkphnw/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "2000000000000000000",
@@ -5317,7 +5331,9 @@
         "address": "kujira1gdtp92jlmt0ek36d7vjw7d7088yn8a2500m765zugz7zwvjdnsksu6g6jh",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1qdyrewr4760gqjtepgqrr3vhpltarkxc6jlxpzsupqhlr9kvtwusy5vzax"
+          ],
           "bid_denom": "factory/kujira1xhxefc8v3tt0n75wpzfqcrukzyfneyttdppqst84zzdxnf223m2qm4g5at/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "5000000000",
@@ -5337,7 +5353,9 @@
         "address": "kujira1rdaw7qtpkt2ech5f9lf4377n39gsqd7yxxp4hglfwuf732w5xdzsq0mm08",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1ray7jwummuq9uj9cypgek6s9wy4683sqfzfsh64rl2wnfp7q0h6q5h2l46"
+          ],
           "bid_denom": "factory/kujira13aga84rpxpvuf9xqrz88pc2gtd3duz7qs4kvlgnzwhdurluhhncqh4exwr/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -5357,7 +5375,9 @@
         "address": "kujira1dy4dt3um2p3e8q8hklqn595gyc0lkc8c9608zdp4kpln5pljvrfslnwgue",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1w3239v6syc7kzjxxcry6zjh099zjsgse6yvps99ar87esq6zx97srktuqa"
+          ],
           "bid_denom": "factory/kujira1f3gz32fkrxaymetnfzxppj0yaqz3hjqf3m5jft6m5ehy9xat7elq3unwuc/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "14000000000",
@@ -5377,7 +5397,9 @@
         "address": "kujira1p4jguykwh7mw0aq2w8c5ueunnqs6dt9ftjsxmntf5wfj2922gc3sz4l22m",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1u6h2x7fvavfvrkz8g90xgj6f3nu9z6way69sun0w37j2gp8gk7ssac6n75"
+          ],
           "bid_denom": "factory/kujira1gqlvqhp8hqlvljcy2fpz39jslse39phye3drhe6ntdsmlyygkjwq9v6xmz/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "14000000000",
@@ -5615,7 +5637,9 @@
         "address": "kujira1zvkvjvnqdkh050tee5rtd28u9tstnj2pp4lxkxucequ5wml8enuqy4fmas",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira104hh9ln9pk0983vlqxtkapa0r07pxdw4rvswlf3twdkz5zvjarfqpc7h7l"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
           "bid_threshold": "10000000000",
@@ -5635,7 +5659,9 @@
         "address": "kujira17s0dgea677gk4j2mhfznwhjyx3h50urqxy5pefp8j0dq74tvmnqqy54akw",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1hm7fnc90c742chwcn57vv7jvx785dvahhml7r4at7m2xxfjtevxqmmzy23"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
           "bid_threshold": "10000000000",
@@ -5655,7 +5681,9 @@
         "address": "kujira1lneqp9dg3wj0n9cltqhy20tzq4dzpfgapcgl7lexlsp57mkrkzqqe07e93",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1447x4l0mldqrmw7m3jucj6d2tqzuvq55sdzuepvrlt9cwcydeycqk6m2us"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539",
           "bid_threshold": "10000000000",
@@ -5675,7 +5703,9 @@
         "address": "kujira1sm4ct4fvhqy7keawyrsjax0ff6jlpql0qc0tgkcngzfyh7yfyytqpyrefa",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1gpgj03nhkt06fm0ca60fhg3f6ewsmdqh0svkwrv4r9wfzt6eu5esckl5la"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7",
           "bid_threshold": "10000000000",
@@ -5695,7 +5725,9 @@
         "address": "kujira17j9flhxz4tg0zmzppurwzweg4pqgjsllhm76qd5v8wwcfmxn30lsdnrqdu",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1cwylrd5492x0p7ekau0d0tm7gyy42chrrndkptx0j785nt2a5ktsn8qrcx"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
           "bid_threshold": "10000000000",
@@ -5715,7 +5747,9 @@
         "address": "kujira10tsd6x03u0eru7xw4m95ejh2twp4eza3tlasa33lkwcc4xr36rhqug6wtu",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira18lgq4egc9w8j3mmjfdjxph3gqak6emzcvvcslsyqumzdckqmdvaqsq0w7v"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3",
           "bid_threshold": "10000000000",
@@ -5735,7 +5769,9 @@
         "address": "kujira1hyjgmdverqec5uzfkw7augyecju2gql4rs2njyzjr7mwm62jvv3qx3kupq",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira14ul4zced8uecd7aqtac4397ys0y2uyhgfj0zr0sjq78damxl7sxskudeuu"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC",
           "bid_threshold": "10000000000",
@@ -5755,7 +5791,9 @@
         "address": "kujira1rlscrsfhjs3mkhr0rl2e6yfy42kg5g73590dszymwfxhpwgxrlrslwmc0v",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1rzp4s0hh66f48ucadfkr6hs8dhfp09ejc00x3mvwwm77ncmx3hjs24qahg"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/F97BDCE220CCB52139C73066E36C45EC7EDCEEF1DAFF891A34F4FBA195A2E6E8",
           "bid_threshold": "10000000000",
@@ -5775,7 +5813,9 @@
         "address": "kujira1vzjjlwgg3kzscqvrh66tptjnqzuuzjka0g2v6kgawsf7fgr2pctse8d3u8",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira147lhx45w6sc556hxv4z993383lgq73g3rgygedda806z3mphxqhqlu2plf"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/0306D6B66EAA2EDBB7EAD23C0EC9DDFC69BB43E80B398035E90FBCFEF3FD1A87",
           "bid_threshold": "10000000000",
@@ -5795,7 +5835,9 @@
         "address": "kujira1n5sn22xgmjww7esezvf9ykgujugs5clxluqlw3hasxll5f6klymsq4urvc",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1y2ut2tcm4m60z78l24p7p6djv22vjwc06pzkuy55qykjn8zxyarqfh09uw"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
           "bid_threshold": "10000000000",
@@ -6819,7 +6861,7 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "149517471805"
+            "current_borrows": "151503801170"
           }
         ]
       },
@@ -7247,12 +7289,12 @@
           {
             "addr": "kujira1fpqcnev8dq6cd9pkum3wnt4jraxjeflmjcr9xqush2fr4ke4aupq6d3c6h",
             "borrow_limit": null,
-            "current_borrows": "1218893"
+            "current_borrows": "14955725"
           },
           {
             "addr": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
             "borrow_limit": null,
-            "current_borrows": "5594847059"
+            "current_borrows": "5046372437"
           }
         ]
       },
@@ -7678,9 +7720,14 @@
         "pairs": false,
         "markets": [
           {
+            "addr": "kujira1fg5cn4537y5lr7d5v9c8avg26hmfespznrz2yr86h3gdhsh8lpgstcjkks",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
             "addr": "kujira1qcqxs8twh505ey0w87mu0f9gjc4dpqlm64t734yftuz7t2kee09smdzy76",
             "borrow_limit": null,
-            "current_borrows": "113305139"
+            "current_borrows": "127262006"
           }
         ]
       },
@@ -8106,9 +8153,59 @@
         "pairs": false,
         "markets": [
           {
+            "addr": "kujira104hh9ln9pk0983vlqxtkapa0r07pxdw4rvswlf3twdkz5zvjarfqpc7h7l",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1447x4l0mldqrmw7m3jucj6d2tqzuvq55sdzuepvrlt9cwcydeycqk6m2us",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira147lhx45w6sc556hxv4z993383lgq73g3rgygedda806z3mphxqhqlu2plf",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira14ul4zced8uecd7aqtac4397ys0y2uyhgfj0zr0sjq78damxl7sxskudeuu",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira18lgq4egc9w8j3mmjfdjxph3gqak6emzcvvcslsyqumzdckqmdvaqsq0w7v",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1cwylrd5492x0p7ekau0d0tm7gyy42chrrndkptx0j785nt2a5ktsn8qrcx",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1gpgj03nhkt06fm0ca60fhg3f6ewsmdqh0svkwrv4r9wfzt6eu5esckl5la",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1hm7fnc90c742chwcn57vv7jvx785dvahhml7r4at7m2xxfjtevxqmmzy23",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1rzp4s0hh66f48ucadfkr6hs8dhfp09ejc00x3mvwwm77ncmx3hjs24qahg",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1y2ut2tcm4m60z78l24p7p6djv22vjwc06pzkuy55qykjn8zxyarqfh09uw",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
             "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
             "borrow_limit": null,
-            "current_borrows": "20914985475"
+            "current_borrows": "20896018576"
           }
         ]
       },
@@ -8533,6 +8630,11 @@
         },
         "pairs": false,
         "markets": [
+          {
+            "addr": "kujira17vd6lvee5rsnhkr5qvzrpec034m6sc7x4ucm2e8a2xd32jn4t0zsaal9sp",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
           {
             "addr": "kujira1kxsfuw7m8ytmgvtsus40fg725h8pxw3ved7nkvvuyjehxus9ydcqnl4nmc",
             "borrow_limit": null,
@@ -8961,6 +9063,11 @@
         },
         "pairs": false,
         "markets": [
+          {
+            "addr": "kujira12r706fa0exy85f2y7gj8uwrwk4epj35tfv53h69mtqke3gxy0zmqekwx4l",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
           {
             "addr": "kujira13l2x25c85te7ydhglgmlkdcrxs2sx7wqw5c53k8cz9ypmev9lj6skfjf4e",
             "borrow_limit": null,
@@ -9393,6 +9500,11 @@
             "addr": "kujira160ksljczfsxewyf03c8s5lvhaqvwxsm5zr6nfjq2un7zs74e2aysjuye8j",
             "borrow_limit": null,
             "current_borrows": "41635761124960"
+          },
+          {
+            "addr": "kujira17vh59tnxdxjunfwqvftv59epulvszf0up7p42hdlhyttz3q6s4esadsewc",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       },
@@ -9820,7 +9932,12 @@
           {
             "addr": "kujira12888k926jhrcsemxpu7qe3hta7rd32w2pmpa8d5ar4x54gykg27s6np8ez",
             "borrow_limit": null,
-            "current_borrows": "23131086"
+            "current_borrows": "895485"
+          },
+          {
+            "addr": "kujira1apefg3pm4kucny3y26nqs57qeavvl7gzquxhm5rjgumvcuekf7esreguaa",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       },
@@ -10245,6 +10362,11 @@
         },
         "pairs": false,
         "markets": [
+          {
+            "addr": "kujira1hlknsfc2dpax7avtr8h5uy2w3tusj39thwp5f2j99h378shsj40shqa9qm",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
           {
             "addr": "kujira1hvz9j8d6yxga2h4xvhjaccxwnnv64y8nf699r06rp7js7f9a4x0q2kcxzy",
             "borrow_limit": null,
@@ -10673,6 +10795,11 @@
         },
         "pairs": false,
         "markets": [
+          {
+            "addr": "kujira1qdyrewr4760gqjtepgqrr3vhpltarkxc6jlxpzsupqhlr9kvtwusy5vzax",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
           {
             "addr": "kujira1ydu7rsk00ygxr9hz06h3n0dysedcq072uufcyp7fxdnwa8zrntpsjjpqy8",
             "borrow_limit": null,
@@ -11105,6 +11232,11 @@
             "addr": "kujira1fdujgm7a6qg2h0awe05377g288m9ejxv2av5ynyrp6mahwka8w6sddqyfx",
             "borrow_limit": null,
             "current_borrows": "40683234"
+          },
+          {
+            "addr": "kujira1ray7jwummuq9uj9cypgek6s9wy4683sqfzfsh64rl2wnfp7q0h6q5h2l46",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       },
@@ -11532,7 +11664,12 @@
           {
             "addr": "kujira1pu49hthnf9xgvtw8hx2glsljdz3dr90z6uvy7jlp8e8s94zlhmls20yhpd",
             "borrow_limit": null,
-            "current_borrows": "7385183"
+            "current_borrows": "5499"
+          },
+          {
+            "addr": "kujira1w3239v6syc7kzjxxcry6zjh099zjsgse6yvps99ar87esq6zx97srktuqa",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       },
@@ -11958,9 +12095,14 @@
         "pairs": false,
         "markets": [
           {
+            "addr": "kujira1u6h2x7fvavfvrkz8g90xgj6f3nu9z6way69sun0w37j2gp8gk7ssac6n75",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
             "addr": "kujira1wluc9s0fug6xx6ygeq5xjq3q4kx20uerhc6qe0shptfxcvgzvvkqhxqhv3",
             "borrow_limit": null,
-            "current_borrows": "84973161"
+            "current_borrows": "73471728"
           }
         ]
       },
@@ -14922,7 +15064,7 @@
         "id": 106,
         "address": "kujira1yntegc5v3tvl0xfrde0rupnt9kfnx0sy9lytge9g2mryjknudk6qg4zyw9",
         "config": {
-          "owner": "kujira1ghmq7k50rwpsnye39aefngd2k7x9kc2hrqq5xd",
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
           "denom": "ibc/5A3DCF59BC9EC5C0BB7AA0CA0279FC2BB126640CB8B8F704F7BC2DC42495041B",
           "oracle": {
             "live": "INJ"
@@ -16872,6 +17014,366 @@
           "collateral_decimals": 8,
           "max_ltv": "0.6",
           "full_liquidation_threshold": "1000000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira104hh9ln9pk0983vlqxtkapa0r07pxdw4rvswlf3twdkz5zvjarfqpc7h7l",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1zvkvjvnqdkh050tee5rtd28u9tstnj2pp4lxkxucequ5wml8enuqy4fmas",
+          "collateral_denom": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
+          "collateral_oracle_denom": "ATOM",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira147lhx45w6sc556hxv4z993383lgq73g3rgygedda806z3mphxqhqlu2plf",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1vzjjlwgg3kzscqvrh66tptjnqzuuzjka0g2v6kgawsf7fgr2pctse8d3u8",
+          "collateral_denom": "ibc/0306D6B66EAA2EDBB7EAD23C0EC9DDFC69BB43E80B398035E90FBCFEF3FD1A87",
+          "collateral_oracle_denom": "STATOM",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1hm7fnc90c742chwcn57vv7jvx785dvahhml7r4at7m2xxfjtevxqmmzy23",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira17s0dgea677gk4j2mhfznwhjyx3h50urqxy5pefp8j0dq74tvmnqqy54akw",
+          "collateral_denom": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
+          "collateral_oracle_denom": "BNB",
+          "collateral_decimals": 18,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira14ul4zced8uecd7aqtac4397ys0y2uyhgfj0zr0sjq78damxl7sxskudeuu",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1hyjgmdverqec5uzfkw7augyecju2gql4rs2njyzjr7mwm62jvv3qx3kupq",
+          "collateral_denom": "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC",
+          "collateral_oracle_denom": "WBTC",
+          "collateral_decimals": 8,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1447x4l0mldqrmw7m3jucj6d2tqzuvq55sdzuepvrlt9cwcydeycqk6m2us",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1lneqp9dg3wj0n9cltqhy20tzq4dzpfgapcgl7lexlsp57mkrkzqqe07e93",
+          "collateral_denom": "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539",
+          "collateral_oracle_denom": "DOT",
+          "collateral_decimals": 10,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1gpgj03nhkt06fm0ca60fhg3f6ewsmdqh0svkwrv4r9wfzt6eu5esckl5la",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1sm4ct4fvhqy7keawyrsjax0ff6jlpql0qc0tgkcngzfyh7yfyytqpyrefa",
+          "collateral_denom": "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7",
+          "collateral_oracle_denom": "ETH",
+          "collateral_decimals": 18,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1cwylrd5492x0p7ekau0d0tm7gyy42chrrndkptx0j785nt2a5ktsn8qrcx",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira17j9flhxz4tg0zmzppurwzweg4pqgjsllhm76qd5v8wwcfmxn30lsdnrqdu",
+          "collateral_denom": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
+          "collateral_oracle_denom": "LUNA",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1rzp4s0hh66f48ucadfkr6hs8dhfp09ejc00x3mvwwm77ncmx3hjs24qahg",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1rlscrsfhjs3mkhr0rl2e6yfy42kg5g73590dszymwfxhpwgxrlrslwmc0v",
+          "collateral_denom": "ibc/F97BDCE220CCB52139C73066E36C45EC7EDCEEF1DAFF891A34F4FBA195A2E6E8",
+          "collateral_oracle_denom": "STOSMO",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1y2ut2tcm4m60z78l24p7p6djv22vjwc06pzkuy55qykjn8zxyarqfh09uw",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira1n5sn22xgmjww7esezvf9ykgujugs5clxluqlw3hasxll5f6klymsq4urvc",
+          "collateral_denom": "ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23",
+          "collateral_oracle_denom": "OSMO",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira18lgq4egc9w8j3mmjfdjxph3gqak6emzcvvcslsyqumzdckqmdvaqsq0w7v",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+          "orca_addr": "kujira10tsd6x03u0eru7xw4m95ejh2twp4eza3tlasa33lkwcc4xr36rhqug6wtu",
+          "collateral_denom": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3",
+          "collateral_oracle_denom": "PAXG",
+          "collateral_decimals": 18,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1fg5cn4537y5lr7d5v9c8avg26hmfespznrz2yr86h3gdhsh8lpgstcjkks",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1e6kvcdpxtu30t8x9sx0k692tln9z636gyu8sqf6w5fm5z3jrvjjqc8qfkr",
+          "orca_addr": "kujira1w89df8jswv0m4fvj6rpy2hq8jp3tgn82pglwqe20lhus957a5qms77s863",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1ray7jwummuq9uj9cypgek6s9wy4683sqfzfsh64rl2wnfp7q0h6q5h2l46",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira13aga84rpxpvuf9xqrz88pc2gtd3duz7qs4kvlgnzwhdurluhhncqh4exwr",
+          "orca_addr": "kujira1rdaw7qtpkt2ech5f9lf4377n39gsqd7yxxp4hglfwuf732w5xdzsq0mm08",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira17vd6lvee5rsnhkr5qvzrpec034m6sc7x4ucm2e8a2xd32jn4t0zsaal9sp",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1zqt93wk5gkayyvclq7h9fyvtgvstu3kg23ez5hxgqyrtq2sut6jsk9tzx9",
+          "orca_addr": "kujira1nh09mmjhmj9x8t7laa8wktfpul42ykg4zgfljx5rgnfhjzjvjrfsy8lta2",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1qdyrewr4760gqjtepgqrr3vhpltarkxc6jlxpzsupqhlr9kvtwusy5vzax",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1xhxefc8v3tt0n75wpzfqcrukzyfneyttdppqst84zzdxnf223m2qm4g5at",
+          "orca_addr": "kujira1gdtp92jlmt0ek36d7vjw7d7088yn8a2500m765zugz7zwvjdnsksu6g6jh",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira12r706fa0exy85f2y7gj8uwrwk4epj35tfv53h69mtqke3gxy0zmqekwx4l",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1h35rpadutnwjrsy8nn83fhfsu54xs3tpgsn04fd8l08lxdl22jeqt6jmhg",
+          "orca_addr": "kujira1070qfw283ywwmmvjwg2gwcd37vc5nlweetnrq88udg8z95mqlucstrmdjc",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira17vh59tnxdxjunfwqvftv59epulvszf0up7p42hdlhyttz3q6s4esadsewc",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1r57gjas00pftgcwg7xfg32246atuua5axmqlnnw9usdyzpfjjqusxsqcjd",
+          "orca_addr": "kujira1unn3w0rm6kuw8pc98z0v6xw09594plmsgh596ugrwqurgff70hqqkeemdu",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1apefg3pm4kucny3y26nqs57qeavvl7gzquxhm5rjgumvcuekf7esreguaa",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira19mmvst3l3y6c3mtyqhj7vxne4g69ayd9lq323w7k270p6fp0sy6qlv642l",
+          "orca_addr": "kujira18jzq7upxxeaanyv2062clcr7fsucw3mmle2ck94rmulhzyjmc9lslpmh9f",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1w3239v6syc7kzjxxcry6zjh099zjsgse6yvps99ar87esq6zx97srktuqa",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1f3gz32fkrxaymetnfzxppj0yaqz3hjqf3m5jft6m5ehy9xat7elq3unwuc",
+          "orca_addr": "kujira1dy4dt3um2p3e8q8hklqn595gyc0lkc8c9608zdp4kpln5pljvrfslnwgue",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1u6h2x7fvavfvrkz8g90xgj6f3nu9z6way69sun0w37j2gp8gk7ssac6n75",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1gqlvqhp8hqlvljcy2fpz39jslse39phye3drhe6ntdsmlyygkjwq9v6xmz",
+          "orca_addr": "kujira1p4jguykwh7mw0aq2w8c5ueunnqs6dt9ftjsxmntf5wfj2922gc3sz4l22m",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1hlknsfc2dpax7avtr8h5uy2w3tusj39thwp5f2j99h378shsj40shqa9qm",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1md94f5metrd4fhecalrmhtac5t4upeg9gz2e24hmuszdtgfxy85qvkphnw",
+          "orca_addr": "kujira18sgt5sfs832s8a7a9htdad8mtwxph8r3ufut4cnc0vjgsxawde0qpd02pt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
           "partial_liquidation_target": "0.5",
           "borrow_fee": "0.002"
         },
