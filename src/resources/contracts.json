@@ -5987,7 +5987,9 @@
         "address": "kujira1ex8e7kj5kh6uxlkyf3rzhgf8q397prcfmyknlqus8r03ptvdxr3samvac8",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1y5606y0q6hq2mgs2d5ceg9r965dk6uw5rusr4zcsylvflxp4w7es4yrgpd"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/7023F9629A70F8112764D959D04F52EA3115A0AED3CEE59694799FD8C91A97FA",
           "bid_threshold": "1000000000",
@@ -6183,7 +6185,9 @@
         "address": "kujira1fxsy8k4utwene4rtzctx77h6wa4f95pv9zga37fn8n506m80qaes9xaa5v",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1gl74auhehy40d6w9wc7dz3gwda25uwzx8yrq35vna462ygrfewts0u80hq"
+          ],
           "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
           "collateral_denom": "ibc/119334C55720942481F458C9C462F5C0CD1F1E7EEAC4679D674AA67221916AEA",
           "bid_threshold": "1000000000",
@@ -6243,7 +6247,9 @@
         "address": "kujira16z54v48y0enzn3vrxphwt47zpt6y3nl3wv2erf5v0suf7hv40t5sxzljpx",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1xumhdlvjp5n8vnpsj5t32v9qy9hycg40s5n3se0mxuzzdlunaemq32d69j"
+          ],
           "bid_denom": "factory/kujira14vdfdpsrr8u4m3zvrfa0d6ekzc52xp0lemz2wjh8g0hu225nvm2qhcpd9m/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -6263,7 +6269,9 @@
         "address": "kujira1k86aq2stfe26ajmn4lgq2cl7w46m6hfjryacwcgg0rzxrh5ld2sq684wrt",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1600mg2xazuec0hsty77jl3kvl9kje45un59u5r5gmqxdantcf3eqxtnqfv"
+          ],
           "bid_denom": "factory/kujira17kl23pj9sfzt0ytg6pdpz6ue04emmfczdae90xzwvrp34qvqy3tq8297uv/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -6303,7 +6311,9 @@
         "address": "kujira17fvetnxz4jhx4kh7ue5l90gljxqvp2f0hydymkkkmhav75vrfnlsyaedyc",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1dcngpyuyc3fcypj69emka0uk3xeemxdrz7gx792uw7f99srhw2sscnmywg"
+          ],
           "bid_denom": "factory/kujira1tn9avv3nug2y0wxsqchrtardxrfdhsfh7azzmfhygy6fryfayhnq44pv03/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "100000000000",
@@ -6323,7 +6333,9 @@
         "address": "kujira1jqff8wxvu97mpm0m88fnl4qxnfvwve5tlwzgm386su7kqfj380tq2z3zrp",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira15znqsswksq3kttm3pa0rpxysdx2cyrxfg0k0j7yg6u2ya24g6ymq09757h"
+          ],
           "bid_denom": "factory/kujira1xrl5g68yhwspqzn2xtsq07keyv4ntcm8k477zkaadw0l58xeygdq7zkl5a/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -6343,7 +6355,9 @@
         "address": "kujira1tnpefqpj5xmetcnnfejkvqqr8v98eaae837pqr2d59zuksgfnmgqg5df9d",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira15ukt3sqj0pczae8q6rjel8320cv8wu3mfw775s3e57gu49rssczs9lvett"
+          ],
           "bid_denom": "factory/kujira1ejcmcak0yxsqxy94w62gu74n3gp557hf5d200y022zrnq7jr7udsrwuk0n/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -6363,7 +6377,9 @@
         "address": "kujira1eux3gka32dhmxpjrzh64crsha9jm60yxnspjhhq2e4phkkwu77zs3ewm6y",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira12gdczsewrxr36a5y29044v2e2s2cs3pjnjgtv9r5k6zk2pr7w0xqlhxv94"
+          ],
           "bid_denom": "factory/kujira1fhca5fgr4zrvl0me4p2lahxsk9a5v7nvv0uxsrld6udw7sdj5mhscdetns/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -6383,7 +6399,9 @@
         "address": "kujira1retne3qavs8r9jxrcj4aqun7zdgfgrvn5zm9h950layktc68aqrq3u8nd0",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1jph3wj22lkl5kh63gxrqv3rz2lx3ka6du6pjqxvqn7tfh4rq550qy8k647"
+          ],
           "bid_denom": "factory/kujira1yntegc5v3tvl0xfrde0rupnt9kfnx0sy9lytge9g2mryjknudk6qg4zyw9/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -6423,7 +6441,9 @@
         "address": "kujira1sz67myglwpphmcsvcs9z4te7l7jdmwpa3d3c2c8e9pwm0za7kklqmrk7c9",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1rp82my3e2vlr3eu3kkvzyscnzyugtxzg9dh96wpc9pd2jq0r206q0vdru9"
+          ],
           "bid_denom": "factory/kujira195zfkf8uzufmwhc4zzclythlh43m2rme2rd3rlstt6c7yzw386xqskc02y/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -6443,7 +6463,9 @@
         "address": "kujira1zvnhkgvmswkqm8f6xa0qsd3znsryzcuhh29y6gdrmtywq0n8jguqcxye8n",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1l7wmhl5mlqjf8l43hc4tj8dgty4maya9a65j968lq00f5482rs9q9xmw29"
+          ],
           "bid_denom": "factory/kujira16wvvrvl5qgx9x0kdj8tqr6jz5dncmt3a9xh5pl4fa9q0pwt3t7zsuy9hu5/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000000000000000",
@@ -8742,6 +8764,11 @@
           },
           {
             "addr": "kujira1y2ut2tcm4m60z78l24p7p6djv22vjwc06pzkuy55qykjn8zxyarqfh09uw",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1y5606y0q6hq2mgs2d5ceg9r965dk6uw5rusr4zcsylvflxp4w7es4yrgpd",
             "borrow_limit": null,
             "current_borrows": "0"
           },
@@ -13069,7 +13096,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1xumhdlvjp5n8vnpsj5t32v9qy9hycg40s5n3se0mxuzzdlunaemq32d69j",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -13491,7 +13524,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1600mg2xazuec0hsty77jl3kvl9kje45un59u5r5gmqxdantcf3eqxtnqfv",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -13913,7 +13952,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1t2mhclg2vsalgj5622qj26ng4hry8q4lrkd0v0cfzelu29c2amuq4g3kxq",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -14335,7 +14380,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1dcngpyuyc3fcypj69emka0uk3xeemxdrz7gx792uw7f99srhw2sscnmywg",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -14757,13 +14808,19 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira15znqsswksq3kttm3pa0rpxysdx2cyrxfg0k0j7yg6u2ya24g6ymq09757h",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
         "address": "kujira1ejcmcak0yxsqxy94w62gu74n3gp557hf5d200y022zrnq7jr7udsrwuk0n",
         "config": {
-          "owner": "kujira1ghmq7k50rwpsnye39aefngd2k7x9kc2hrqq5xd",
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
           "denom": "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2",
           "oracle": {
             "live": "FTM"
@@ -15179,7 +15236,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira15ukt3sqj0pczae8q6rjel8320cv8wu3mfw775s3e57gu49rssczs9lvett",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -15601,7 +15664,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira12gdczsewrxr36a5y29044v2e2s2cs3pjnjgtv9r5k6zk2pr7w0xqlhxv94",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -16023,7 +16092,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1jph3wj22lkl5kh63gxrqv3rz2lx3ka6du6pjqxvqn7tfh4rq550qy8k647",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -16445,7 +16520,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira199s9lxfetcvc0n0gvtexcc0tmpxjee6vm5q4uqfdfv292qfr7uaqkpuu6v",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -16867,7 +16948,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1rp82my3e2vlr3eu3kkvzyscnzyugtxzg9dh96wpc9pd2jq0r206q0vdru9",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
@@ -17289,7 +17376,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1l7wmhl5mlqjf8l43hc4tj8dgty4maya9a65j968lq00f5482rs9q9xmw29",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       },
       {
         "id": 106,
