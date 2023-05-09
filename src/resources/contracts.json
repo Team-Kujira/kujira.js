@@ -6487,7 +6487,9 @@
         "address": "kujira1qy0w4lq65j6fvu90a669s9dt8hf2r96w4ta2z9y6vpkeqkxyawvqkcdjeu",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1ptqmu2kjr892hnh7mpmeam9hlppwlrxpxftkvunjgths500yvpgsyejufn"
+          ],
           "bid_denom": "factory/kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -7423,7 +7425,7 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "203559988771"
+            "current_borrows": "203513239184"
           }
         ]
       },
@@ -17851,7 +17853,13 @@
           ]
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1ptqmu2kjr892hnh7mpmeam9hlppwlrxpxftkvunjgths500yvpgsyejufn",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       }
     ],
     "ghostMarket": [
@@ -18889,6 +18897,24 @@
           "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
           "orca_addr": "kujira1vk7jhyj3sgrev7jwenzz7stnqtvf6jxwca9348qcr69vegg3s62qxf0tue",
           "collateral_denom": "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5",
+          "collateral_oracle_denom": "SCRT",
+          "collateral_decimals": 6,
+          "max_ltv": "0.6",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.5",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1ptqmu2kjr892hnh7mpmeam9hlppwlrxpxftkvunjgths500yvpgsyejufn",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk",
+          "orca_addr": "kujira1qy0w4lq65j6fvu90a669s9dt8hf2r96w4ta2z9y6vpkeqkxyawvqkcdjeu",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "collateral_oracle_denom": "SCRT",
           "collateral_decimals": 6,
           "max_ltv": "0.6",
