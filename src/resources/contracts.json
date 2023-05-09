@@ -1425,7 +1425,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 12,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -1491,7 +1491,7 @@
             "decimal_places": 4
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -1513,7 +1513,7 @@
             "decimal_places": 3
           },
           "decimal_delta": 0,
-          "is_bootstrapping": true
+          "is_bootstrapping": false
         },
         "pairs": false,
         "markets": false
@@ -1577,6 +1577,28 @@
           ],
           "price_precision": {
             "decimal_places": 3
+          },
+          "decimal_delta": 0,
+          "is_bootstrapping": false
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 56,
+        "address": "kujira1nj62pjqhyqw52f2j6247qlsdtrugrnjlr3f5u7fe3xckrsuckfjssut55y",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            {
+              "native": "ibc/217755344c0d40c75036110e20b0427cc6505760f071be4080dad5ac845969ee"
+            },
+            {
+              "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 4
           },
           "decimal_delta": 0,
           "is_bootstrapping": true
@@ -5959,6 +5981,466 @@
         },
         "pairs": false,
         "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1ex8e7kj5kh6uxlkyf3rzhgf8q397prcfmyknlqus8r03ptvdxr3samvac8",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/7023F9629A70F8112764D959D04F52EA3115A0AED3CEE59694799FD8C91A97FA",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1m8u8jmhmux8p94f872pk45k55lh5xatn6jttez2hfh2npvlun32q0n82fn",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/96179F5B44CCC15E03AB43D7118E714B4D5CE8F187F7D8A60F2A514299761EA9",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1jn25lueyhhe89j5hx74yazmz52ucmkyyar8vxmpfwzwvegqwn6ustfrudu",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira14ez5uee4v220ruarg6s7rl2zqk7n7gxm0kl8urllds5vpswhkhvsnqnveg",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/BBC45F1B65B6D3C11C3C56A9428D38C3A8D03944473791C52DFB7CD3F8342CBC",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1a8vux6j0z23ymzl6sxkrx8yfxnyxr728v5tha7jv07qr5kksplksypc063",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/E543A9F9E5BA7871F1095CB3B65D018472D88696611B95BABED8AADA89C2741C",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1xydx37duu0ghlh9un9rpyfvc6gmfrwn05y52du6sx2alj82sm3eslvmg3j",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1xqsnkxm63zjufz679d7jtj9yrzdupkdlncdgpfqsgtp5auguztpsq90hq7",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/C8D63703F5805CE6A2B20555139CF6ED9CDFA870389648EB08D688B94B0AE2C1",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1h3qjrpgg66a8agwscps4ma8crhg3lemywqfnd80g3272hvjcugxsmluxfk",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/5A3DCF59BC9EC5C0BB7AA0CA0279FC2BB126640CB8B8F704F7BC2DC42495041B",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1nfyqjuupjcl5gyy4ruzntfp75amhpanv52c8vgtmc37cc2xspd3qwukcka",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1fxsy8k4utwene4rtzctx77h6wa4f95pv9zga37fn8n506m80qaes9xaa5v",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/119334C55720942481F458C9C462F5C0CD1F1E7EEAC4679D674AA67221916AEA",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1lp0ydeqxf6w5g4g0d4us4yyhldh7ft3xjdv6ja7xgdt3j9nas9qq68a5q9",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/A64467480BBE4CCFC3CF7E25AD1446AA9BDBD4F5BCB9EF6038B83D6964C784E6",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1vk7jhyj3sgrev7jwenzz7stnqtvf6jxwca9348qcr69vegg3s62qxf0tue",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3/urcpt",
+          "collateral_denom": "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira16z54v48y0enzn3vrxphwt47zpt6y3nl3wv2erf5v0suf7hv40t5sxzljpx",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira14vdfdpsrr8u4m3zvrfa0d6ekzc52xp0lemz2wjh8g0hu225nvm2qhcpd9m/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1k86aq2stfe26ajmn4lgq2cl7w46m6hfjryacwcgg0rzxrh5ld2sq684wrt",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira17kl23pj9sfzt0ytg6pdpz6ue04emmfczdae90xzwvrp34qvqy3tq8297uv/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1hea5n3fqed3fdgcera2z6zewsyg7cmym50z3fzvfcs2qhqs9x2hq6neran",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1nme9czeqz23w9e6gmxqyk3vat3frl4jjm79665ukh0ypn3s8vcws3s0xt5/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "100000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira17fvetnxz4jhx4kh7ue5l90gljxqvp2f0hydymkkkmhav75vrfnlsyaedyc",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1tn9avv3nug2y0wxsqchrtardxrfdhsfh7azzmfhygy6fryfayhnq44pv03/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "100000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1jqff8wxvu97mpm0m88fnl4qxnfvwve5tlwzgm386su7kqfj380tq2z3zrp",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1xrl5g68yhwspqzn2xtsq07keyv4ntcm8k477zkaadw0l58xeygdq7zkl5a/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1tnpefqpj5xmetcnnfejkvqqr8v98eaae837pqr2d59zuksgfnmgqg5df9d",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1ejcmcak0yxsqxy94w62gu74n3gp557hf5d200y022zrnq7jr7udsrwuk0n/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1eux3gka32dhmxpjrzh64crsha9jm60yxnspjhhq2e4phkkwu77zs3ewm6y",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1fhca5fgr4zrvl0me4p2lahxsk9a5v7nvv0uxsrld6udw7sdj5mhscdetns/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1retne3qavs8r9jxrcj4aqun7zdgfgrvn5zm9h950layktc68aqrq3u8nd0",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1yntegc5v3tvl0xfrde0rupnt9kfnx0sy9lytge9g2mryjknudk6qg4zyw9/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1v8rzrq77vvnlvkyvlxc9qgj7u9gjtxcsrpu5eappra3ej7k44gjswvz7p6",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira1q8p9n7cefe8eet4c62l5q7dx2c9y6c6hnlkaghkqhukt2kaf58zs3yrap4/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1sz67myglwpphmcsvcs9z4te7l7jdmwpa3d3c2c8e9pwm0za7kklqmrk7c9",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira195zfkf8uzufmwhc4zzclythlh43m2rme2rd3rlstt6c7yzw386xqskc02y/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1zvnhkgvmswkqm8f6xa0qsd3znsryzcuhh29y6gdrmtywq0n8jguqcxye8n",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [],
+          "bid_denom": "factory/kujira16wvvrvl5qgx9x0kdj8tqr6jz5dncmt3a9xh5pl4fa9q0pwt3t7zsuy9hu5/urcpt",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "bid_threshold": "1000000000000000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
       }
     ],
     "uskMarket": [
@@ -6856,12 +7338,12 @@
           {
             "addr": "kujira1a6hhtps5eus0uqjupcug0ks7fzman70eduyph33999tr3tuhgcpsuked0l",
             "borrow_limit": null,
-            "current_borrows": "1698605930"
+            "current_borrows": "3493315200"
           },
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "151503801170"
+            "current_borrows": "203559988771"
           }
         ]
       },
@@ -7722,7 +8204,7 @@
           {
             "addr": "kujira1fg5cn4537y5lr7d5v9c8avg26hmfespznrz2yr86h3gdhsh8lpgstcjkks",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "284640725"
           },
           {
             "addr": "kujira1qcqxs8twh505ey0w87mu0f9gjc4dpqlm64t734yftuz7t2kee09smdzy76",
@@ -8155,7 +8637,7 @@
           {
             "addr": "kujira104hh9ln9pk0983vlqxtkapa0r07pxdw4rvswlf3twdkz5zvjarfqpc7h7l",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "99792034"
           },
           {
             "addr": "kujira1447x4l0mldqrmw7m3jucj6d2tqzuvq55sdzuepvrlt9cwcydeycqk6m2us",
@@ -8190,7 +8672,7 @@
           {
             "addr": "kujira1hm7fnc90c742chwcn57vv7jvx785dvahhml7r4at7m2xxfjtevxqmmzy23",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "32997"
           },
           {
             "addr": "kujira1rzp4s0hh66f48ucadfkr6hs8dhfp09ejc00x3mvwwm77ncmx3hjs24qahg",
@@ -8205,7 +8687,7 @@
           {
             "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
             "borrow_limit": null,
-            "current_borrows": "20896018576"
+            "current_borrows": "103226744434"
           }
         ]
       },
@@ -9932,7 +10414,7 @@
           {
             "addr": "kujira12888k926jhrcsemxpu7qe3hta7rd32w2pmpa8d5ar4x54gykg27s6np8ez",
             "borrow_limit": null,
-            "current_borrows": "895485"
+            "current_borrows": "56848721"
           },
           {
             "addr": "kujira1apefg3pm4kucny3y26nqs57qeavvl7gzquxhm5rjgumvcuekf7esreguaa",
@@ -10365,7 +10847,7 @@
           {
             "addr": "kujira1hlknsfc2dpax7avtr8h5uy2w3tusj39thwp5f2j99h378shsj40shqa9qm",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "509705460649167167"
           },
           {
             "addr": "kujira1hvz9j8d6yxga2h4xvhjaccxwnnv64y8nf699r06rp7js7f9a4x0q2kcxzy",
@@ -12097,12 +12579,12 @@
           {
             "addr": "kujira1u6h2x7fvavfvrkz8g90xgj6f3nu9z6way69sun0w37j2gp8gk7ssac6n75",
             "borrow_limit": null,
-            "current_borrows": "0"
+            "current_borrows": "669194027"
           },
           {
             "addr": "kujira1wluc9s0fug6xx6ygeq5xjq3q4kx20uerhc6qe0shptfxcvgzvvkqhxqhv3",
             "borrow_limit": null,
-            "current_borrows": "73471728"
+            "current_borrows": "4429775"
           }
         ]
       },
@@ -16338,6 +16820,428 @@
           "decimals": 18,
           "receipt_denom": "factory/kujira16wvvrvl5qgx9x0kdj8tqr6jz5dncmt3a9xh5pl4fa9q0pwt3t7zsuy9hu5/urcpt",
           "debt_token_denom": "factory/kujira16wvvrvl5qgx9x0kdj8tqr6jz5dncmt3a9xh5pl4fa9q0pwt3t7zsuy9hu5/udebt",
+          "interest": [
+            [
+              "1",
+              "3"
+            ],
+            [
+              "0.99",
+              "2.927"
+            ],
+            [
+              "0.98",
+              "2.854"
+            ],
+            [
+              "0.97",
+              "2.781"
+            ],
+            [
+              "0.96",
+              "2.708"
+            ],
+            [
+              "0.95",
+              "2.635"
+            ],
+            [
+              "0.94",
+              "2.562"
+            ],
+            [
+              "0.93",
+              "2.489"
+            ],
+            [
+              "0.92",
+              "2.416"
+            ],
+            [
+              "0.91",
+              "2.343"
+            ],
+            [
+              "0.9",
+              "2.27"
+            ],
+            [
+              "0.89",
+              "2.197"
+            ],
+            [
+              "0.88",
+              "2.124"
+            ],
+            [
+              "0.87",
+              "2.051"
+            ],
+            [
+              "0.86",
+              "1.978"
+            ],
+            [
+              "0.85",
+              "1.905"
+            ],
+            [
+              "0.84",
+              "1.832"
+            ],
+            [
+              "0.83",
+              "1.759"
+            ],
+            [
+              "0.82",
+              "1.686"
+            ],
+            [
+              "0.81",
+              "1.613"
+            ],
+            [
+              "0.8",
+              "1.54"
+            ],
+            [
+              "0.79",
+              "1.467"
+            ],
+            [
+              "0.78",
+              "1.394"
+            ],
+            [
+              "0.77",
+              "1.321"
+            ],
+            [
+              "0.76",
+              "1.248"
+            ],
+            [
+              "0.75",
+              "1.175"
+            ],
+            [
+              "0.74",
+              "1.102"
+            ],
+            [
+              "0.73",
+              "1.029"
+            ],
+            [
+              "0.72",
+              "0.956"
+            ],
+            [
+              "0.71",
+              "0.883"
+            ],
+            [
+              "0.7",
+              "0.81"
+            ],
+            [
+              "0.69",
+              "0.737"
+            ],
+            [
+              "0.68",
+              "0.664"
+            ],
+            [
+              "0.67",
+              "0.591"
+            ],
+            [
+              "0.66",
+              "0.518"
+            ],
+            [
+              "0.65",
+              "0.445"
+            ],
+            [
+              "0.64",
+              "0.372"
+            ],
+            [
+              "0.63",
+              "0.299"
+            ],
+            [
+              "0.62",
+              "0.226"
+            ],
+            [
+              "0.61",
+              "0.153"
+            ],
+            [
+              "0.6",
+              "0.08"
+            ],
+            [
+              "0.59",
+              "0.079"
+            ],
+            [
+              "0.58",
+              "0.078"
+            ],
+            [
+              "0.57",
+              "0.077"
+            ],
+            [
+              "0.56",
+              "0.076"
+            ],
+            [
+              "0.55",
+              "0.075"
+            ],
+            [
+              "0.54",
+              "0.074"
+            ],
+            [
+              "0.53",
+              "0.073"
+            ],
+            [
+              "0.52",
+              "0.072"
+            ],
+            [
+              "0.51",
+              "0.071"
+            ],
+            [
+              "0.5",
+              "0.07"
+            ],
+            [
+              "0.49",
+              "0.069"
+            ],
+            [
+              "0.48",
+              "0.068"
+            ],
+            [
+              "0.47",
+              "0.067"
+            ],
+            [
+              "0.46",
+              "0.066"
+            ],
+            [
+              "0.45",
+              "0.065"
+            ],
+            [
+              "0.44",
+              "0.064"
+            ],
+            [
+              "0.43",
+              "0.063"
+            ],
+            [
+              "0.42",
+              "0.062"
+            ],
+            [
+              "0.41",
+              "0.061"
+            ],
+            [
+              "0.4",
+              "0.06"
+            ],
+            [
+              "0.39",
+              "0.059"
+            ],
+            [
+              "0.38",
+              "0.058"
+            ],
+            [
+              "0.37",
+              "0.057"
+            ],
+            [
+              "0.36",
+              "0.056"
+            ],
+            [
+              "0.35",
+              "0.055"
+            ],
+            [
+              "0.34",
+              "0.054"
+            ],
+            [
+              "0.33",
+              "0.053"
+            ],
+            [
+              "0.32",
+              "0.052"
+            ],
+            [
+              "0.31",
+              "0.051"
+            ],
+            [
+              "0.3",
+              "0.05"
+            ],
+            [
+              "0.29",
+              "0.049"
+            ],
+            [
+              "0.28",
+              "0.048"
+            ],
+            [
+              "0.27",
+              "0.047"
+            ],
+            [
+              "0.26",
+              "0.046"
+            ],
+            [
+              "0.25",
+              "0.045"
+            ],
+            [
+              "0.24",
+              "0.044"
+            ],
+            [
+              "0.23",
+              "0.043"
+            ],
+            [
+              "0.22",
+              "0.042"
+            ],
+            [
+              "0.21",
+              "0.041"
+            ],
+            [
+              "0.2",
+              "0.04"
+            ],
+            [
+              "0.19",
+              "0.039"
+            ],
+            [
+              "0.18",
+              "0.038"
+            ],
+            [
+              "0.17",
+              "0.037"
+            ],
+            [
+              "0.16",
+              "0.036"
+            ],
+            [
+              "0.15",
+              "0.035"
+            ],
+            [
+              "0.14",
+              "0.034"
+            ],
+            [
+              "0.13",
+              "0.033"
+            ],
+            [
+              "0.12",
+              "0.032"
+            ],
+            [
+              "0.11",
+              "0.031"
+            ],
+            [
+              "0.1",
+              "0.03"
+            ],
+            [
+              "0.09",
+              "0.029"
+            ],
+            [
+              "0.08",
+              "0.028"
+            ],
+            [
+              "0.07",
+              "0.027"
+            ],
+            [
+              "0.06",
+              "0.026"
+            ],
+            [
+              "0.05",
+              "0.025"
+            ],
+            [
+              "0.04",
+              "0.024"
+            ],
+            [
+              "0.03",
+              "0.023"
+            ],
+            [
+              "0.02",
+              "0.022"
+            ],
+            [
+              "0.01",
+              "0.021"
+            ],
+            [
+              "0",
+              "0.02"
+            ]
+          ]
+        },
+        "pairs": false,
+        "markets": []
+      },
+      {
+        "id": 106,
+        "address": "kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denom": "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5",
+          "oracle": {
+            "live": "SCRT"
+          },
+          "decimals": 6,
+          "receipt_denom": "factory/kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk/urcpt",
+          "debt_token_denom": "factory/kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk/udebt",
           "interest": [
             [
               "1",
