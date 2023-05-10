@@ -22,6 +22,8 @@ const labels: Record<string, string> = {
     "LUNC",
   "ibc/217755344C0D40C75036110E20B0427CC6505760F071BE4080DAD5AC845969EE":
     "USTC",
+  "ibc/217755344c0d40c75036110e20b0427cc6505760f071be4080dad5ac845969ee":
+    "USTC",
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
   uausdt: "axlUSDT",
