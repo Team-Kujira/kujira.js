@@ -401,6 +401,13 @@ export class Denom {
     this.symbol
       .replace(/[a-z]+/, "")
       .localeCompare(other.symbol.replace(/[a-z]+/, ""));
+
+  public normalizedReference = (): string => {
+    if (this.reference.startsWith("ibc/")) {
+      return `ibc/${this.reference.replace("ibc/", "").toLocaleUpperCase()}`;
+    }
+    return this.reference;
+  };
 }
 
 const ibcDenom = (port: string, channel: string, denom: string): string =>

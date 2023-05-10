@@ -17,6 +17,7 @@ export declare class Denom {
     static from_path(port: string, channel: string, denom: string): Denom;
     eq: (other: Denom) => boolean;
     compare: (other: Denom) => number;
+    normalizedReference: () => string;
 }
 export declare const USK_TESTNET: Denom;
 export declare const USK: Denom;
