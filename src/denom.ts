@@ -22,6 +22,8 @@ const labels: Record<string, string> = {
     "LUNC",
   "ibc/217755344C0D40C75036110E20B0427CC6505760F071BE4080DAD5AC845969EE":
     "USTC",
+  "ibc/217755344c0d40c75036110e20b0427cc6505760f071be4080dad5ac845969ee":
+    "USTC",
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
   uausdt: "axlUSDT",
@@ -368,11 +370,6 @@ export class Denom {
   }
 
   public static from(string: string): Denom {
-    if (string.startsWith("ibc/")) {
-      const [_, hash] = string.split("/");
-      string = `ibc/${hash.toUpperCase()}`;
-    }
-
     const bowUnderlying = Object.values(contracts)
       .flatMap((x) => x.bow)
       .find((x) => `factory/${x.address}/ulp` === string)
