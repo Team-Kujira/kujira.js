@@ -1,5 +1,6 @@
 import { Coin } from "@cosmjs/stargate";
 import { BigNumber } from "@ethersproject/bignumber";
+import { NETWORK } from "./network";
 import * as orca from "./orca";
 import { KujiraQueryClient } from "./queryClient";
 declare type SaleResponse = {
@@ -32,7 +33,7 @@ declare type SaleResponse = {
         fee_address: string;
     };
 };
-export declare const castSale: (res: SaleResponse) => Market;
+export declare const castSale: (network: NETWORK, res: SaleResponse) => Market;
 export declare type Sale = {
     idx: string;
     amount: BigNumber;

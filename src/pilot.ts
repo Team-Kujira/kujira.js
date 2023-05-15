@@ -1,6 +1,7 @@
 import { Coin } from "@cosmjs/stargate";
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
+import { MAINNET, NETWORK } from "./network";
 import * as orca from "./orca";
 import { KujiraQueryClient } from "./queryClient";
 import contracts from "./resources/contracts.json";
@@ -36,7 +37,7 @@ type SaleResponse = {
   };
 };
 
-export const castSale = (res: SaleResponse): Market => ({
+export const castSale = (network: NETWORK, res: SaleResponse): Market => ({
   label: Denom.from(res.amount.denom).symbol,
   collateralDenom: Denom.from(res.amount.denom),
   bidDenom: Denom.from(res.orca_config.bid_denom),
@@ -47,6 +48,13 @@ export const castSale = (res: SaleResponse): Market => ({
   premiumRatePerSlotInt: parseFixed(res.orca_config.premium_rate_per_slot, 18),
   waitingPeriod: res.orca_config.waiting_period,
   markets: res.orca_config.markets,
+  activators:
+    network === MAINNET
+      ? [
+          // SeaShanty
+          "kujira1mrwwpea5emn05wmj7d7eweppmw98qj2a642r0e",
+        ]
+      : [],
   sale: {
     idx: res.idx,
     title: res.title,
@@ -136,7 +144,7 @@ export const getMarkets = async (
       x.sales.reduce(
         (a: Record<string, Market>, v: SaleResponse) => ({
           ...a,
-          [v.orca_address]: castSale(v),
+          [v.orca_address]: castSale(network, v),
         }),
         {}
       )
