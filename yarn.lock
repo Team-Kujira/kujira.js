@@ -780,13 +780,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "chain-registry@npm:1.13.0"
+"chain-registry@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "chain-registry@npm:1.14.0"
   dependencies:
     "@babel/runtime": ^7.21.0
     "@chain-registry/types": ^0.16.0
-  checksum: ba1343f57f79f9ef64a9c736f0b4c10f7a9e2509d6aa2e41fc793f84daf922253376c96a8e29a44b41bf67289a9bb416263b7c4f16238c57c6fe6f9c42c88299
+  checksum: 6b8adc80424525ae67c7228b398bc6119d63292b1504b20fbd1b07c74c2133a3d2e3d49c7266534b5580044cf3b542a5e7f84edb5252e4cd7530fb571fc1fe49
   languageName: node
   linkType: hard
 
@@ -1162,7 +1162,7 @@ __metadata:
     "@injectivelabs/chain-api": 1.9.9
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
-    chain-registry: ^1.13.0
+    chain-registry: ^1.14.0
     cosmjs-types: ^0.7.2
     long: ^4.0.0
     react: ^18.2.0
