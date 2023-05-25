@@ -1,13 +1,13 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import * as usk from "../usk";
-export declare type Config = {
+export type Config = {
     owner: string;
     denoms: [Denom, Denom];
     isBootstrapping: boolean;
     decimalDelta: number;
 };
-export declare type Order = {
+export type Order = {
     idx: number;
     owner: string;
     quotePrice: number;
@@ -18,12 +18,12 @@ export declare type Order = {
     createdAt: Date;
     originalOfferAmount: BigNumber;
 };
-export declare type Book = {
+export type Book = {
     base: Pool[];
     quote: Pool[];
 };
-export declare type Margin = usk.Market;
-export declare type Pair = {
+export type Margin = usk.Market;
+export type Pair = {
     address: string;
     denoms: [Denom, Denom];
     precision: Precision;
@@ -34,27 +34,27 @@ export declare type Pair = {
     queue?: string;
     calc?: string;
 };
-export declare type Pool = {
+export type Pool = {
     quotePrice: number;
     quotePriceInt: BigNumber;
     offerDenom: Denom;
     totalOfferAmount: BigNumber;
 };
-export declare type Simulation = {
+export type Simulation = {
     returnAmount: BigNumber;
     spreadAmount: BigNumber;
     commissionAmount: BigNumber;
     rate: BigNumber;
     slippage: BigNumber;
 };
-export declare type CW20Denom = {
+export type CW20Denom = {
     native: string;
 } | {
     cw20: Addr;
 };
-export declare type Addr = string;
-export declare type Decimal = string;
-export declare type Uint128 = string;
+export type Addr = string;
+export type Decimal = string;
+export type Uint128 = string;
 export interface BookResponse {
     base: PoolResponse[];
     quote: PoolResponse[];
@@ -64,7 +64,7 @@ export interface PoolResponse {
     quote_price: Decimal;
     total_offer_amount: Uint128;
 }
-export declare type Precision = {
+export type Precision = {
     significant_figures: number;
 } | {
     decimal_places: number;
@@ -76,7 +76,7 @@ export interface ConfigResponse {
     price_precision: Precision;
     decimal_delta: number;
 }
-export declare type ExecuteMsg = {
+export type ExecuteMsg = {
     receive: Cw20ReceiveMsg;
 } | {
     launch: {};
@@ -110,7 +110,7 @@ export declare type ExecuteMsg = {
         order_idxs?: Uint128[] | null;
     };
 };
-export declare type Binary = string;
+export type Binary = string;
 export interface Cw20ReceiveMsg {
     amount: Uint128;
     msg: Binary;
@@ -125,8 +125,8 @@ export interface InstantiateMsg {
     owner: Addr;
     price_precision: Precision;
 }
-export declare type Timestamp = Uint64;
-export declare type Uint64 = string;
+export type Timestamp = Uint64;
+export type Uint64 = string;
 export interface OrderResponse {
     created_at: Timestamp;
     filled_amount: Uint128;
@@ -143,7 +143,7 @@ export interface OrdersResponse {
 export interface PriceResponse {
     pools: [PoolResponse, PoolResponse];
 }
-export declare type QueryMsg = {
+export type QueryMsg = {
     config: {};
 } | {
     simulation: {
@@ -169,7 +169,7 @@ export declare type QueryMsg = {
         offset?: number | null;
     };
 };
-export declare type AssetInfo = {
+export type AssetInfo = {
     token: {
         contract_addr: string;
     };

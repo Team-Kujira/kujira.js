@@ -1,9 +1,9 @@
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
 import { Addr } from "./common";
-export declare type Uint64 = string;
-export declare type Decimal = string;
-export declare type Uint128 = string;
+export type Uint64 = string;
+export type Decimal = string;
+export type Uint128 = string;
 export interface InstantiateMsg {
     base_duration: Uint64;
     can_register: boolean;
@@ -20,7 +20,7 @@ export interface InstantiateMsg {
     symbol: string;
     token_uri_base: string;
 }
-export declare type ExecuteMsg = {
+export type ExecuteMsg = {
     transfer_nft: {
         recipient: string;
         token_id: string;
@@ -62,16 +62,16 @@ export declare type ExecuteMsg = {
         msg: RegistrarExecuteMsg;
     };
 };
-export declare type Binary = string;
-export declare type Expiration = {
+export type Binary = string;
+export type Expiration = {
     at_height: number;
 } | {
     at_time: Timestamp;
 } | {
     never: {};
 };
-export declare type Timestamp = Uint64;
-export declare type RegistrarExecuteMsg = {
+export type Timestamp = Uint64;
+export type RegistrarExecuteMsg = {
     configure: {
         admin?: string | null;
         base_duration?: Uint64 | null;
@@ -98,7 +98,7 @@ export declare type RegistrarExecuteMsg = {
         token_id: string;
     };
 };
-export declare type RecordKind = "domain" | "ipfs" | "ip4" | "ip6" | "kujira_addr" | "reverse";
+export type RecordKind = "domain" | "ipfs" | "ip4" | "ip6" | "kujira_addr" | "reverse";
 export interface MintMsgForRecordInfo {
     extension: RecordInfo;
     owner: string;
@@ -108,7 +108,7 @@ export interface MintMsgForRecordInfo {
 export interface RecordInfo {
     expiration: Uint64;
 }
-export declare type QueryMsg = {
+export type QueryMsg = {
     owner_of: {
         include_expired?: boolean | null;
         token_id: string;

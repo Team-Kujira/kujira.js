@@ -12,7 +12,7 @@ import { GravityExtension } from "./gravity/v1";
 import { DenomExtension } from "./kujira/kujira.denom";
 import { OracleExtension } from "./kujira/kujira.oracle";
 import { SchedulerExtension } from "./kujira/kujira.scheduler";
-export declare type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & BankExtensionExtended & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtensionExtended & s.IbcExtension & GravityExtension & AllianceExtension;
+export type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & BankExtensionExtended & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtensionExtended & s.IbcExtension & GravityExtension & AllianceExtension;
 export declare const kujiraQueryClient: ({ client, }: {
     client: Tendermint34Client;
 }) => KujiraQueryClient;

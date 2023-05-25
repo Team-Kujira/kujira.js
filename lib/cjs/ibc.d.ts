@@ -14,7 +14,7 @@ export declare const IBC: {
         path: string;
     }>;
 };
-export declare type CosmosChainAsset = Asset;
-export declare type CosmosChain = Chain & {
+export type CosmosChainAsset = Asset;
+export type CosmosChain = Chain & {
     assets: CosmosChainAsset[];
 };

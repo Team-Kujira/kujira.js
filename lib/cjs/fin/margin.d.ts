@@ -5,7 +5,7 @@ import { KujiraQueryClient } from "../queryClient";
 import { defaultPosition as defaultPositionMarket, fetchPosition as fetchPositionMarket, Position as PositionMarket } from "../usk";
 import { Order } from "./types";
 export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
-export declare type PositionLimit = {
+export type PositionLimit = {
     idx: string;
     owner: string;
     margin_amount: BigNumber;

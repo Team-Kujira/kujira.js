@@ -1,6 +1,6 @@
 import { AminoMsg } from "@cosmjs/amino";
 import { AminoConverters } from "@cosmjs/stargate";
-declare type AminoGrant = {
+type AminoGrant = {
     expiration?: string;
     authorization: {
         type: string;

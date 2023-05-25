@@ -3,7 +3,7 @@ import { Coin, StdFee } from "@cosmjs/amino";
 export interface InstantiateMsg {
     internal_resolver: string;
 }
-export declare type ExecuteMsg = {
+export type ExecuteMsg = {
     set_resolver: {
         admin: string;
         allowed_kinds: RecordKind[];
@@ -28,8 +28,8 @@ export declare type ExecuteMsg = {
         name?: string | null;
     };
 };
-export declare type RecordKind = "domain" | "ipfs" | "ip4" | "ip6" | "kujira_addr" | "reverse";
-export declare type QueryMsg = {
+export type RecordKind = "domain" | "ipfs" | "ip4" | "ip6" | "kujira_addr" | "reverse";
+export type QueryMsg = {
     addr: {
         name: string;
         prefix?: string | null;

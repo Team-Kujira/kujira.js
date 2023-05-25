@@ -2,7 +2,7 @@ import { JsonObject } from "@cosmjs/cosmwasm-stargate";
 import { QueryClient } from "@cosmjs/stargate";
 import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
 import { QueryAllContractStateResponse, QueryCodeResponse, QueryCodesResponse, QueryContractHistoryResponse, QueryContractInfoResponse, QueryContractsByCodeResponse, QueryRawContractStateResponse } from "cosmjs-types/cosmwasm/wasm/v1/query";
-export declare type WasmExtensionExtended = {
+export type WasmExtensionExtended = {
     readonly wasm: {
         readonly listCodeInfo: (pageRequest?: PageRequest) => Promise<QueryCodesResponse>;
         /**

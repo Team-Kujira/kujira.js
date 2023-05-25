@@ -4,7 +4,7 @@ import { KujiraQueryClient } from "../queryClient";
 import { Book, BookResponse, Config, ConfigResponse, Order, OrderResponse, Pair, Simulation } from "./types";
 export declare const castBook: (denoms: [Denom, Denom]) => (response: BookResponse) => Book;
 export declare const castConfig: (response: ConfigResponse) => Config;
-export declare type History = {
+export type History = {
     time: Date;
     open: number;
     close: number;

@@ -1,7 +1,7 @@
 import { CosmWasmClient, SigningCosmWasmClient, ExecuteResult } from "@cosmjs/cosmwasm-stargate";
 import { Coin, StdFee } from "@cosmjs/amino";
 import { Addr } from "./common";
-export declare type Uint64 = string;
+export type Uint64 = string;
 export interface InstantiateMsg {
     can_bid: boolean;
     denom: string;
@@ -10,7 +10,7 @@ export interface InstantiateMsg {
     open_duration: Uint64;
     registrar: string;
 }
-export declare type ExecuteMsg = {
+export type ExecuteMsg = {
     place_bid: {
         domain: string;
     };
@@ -39,7 +39,7 @@ export declare type ExecuteMsg = {
         registrar?: string | null;
     };
 };
-export declare type QueryMsg = {
+export type QueryMsg = {
     bids_by_domain: {
         domain: string;
         limit?: Uint64 | null;
@@ -64,7 +64,7 @@ export declare type QueryMsg = {
 } | {
     config: {};
 };
-export declare type Uint128 = string;
+export type Uint128 = string;
 export interface Auction {
     bid_id: Uint128;
     deposit_start: Uint64;

@@ -2,7 +2,7 @@ import { Coin, QueryClient } from "@cosmjs/stargate";
 import { Metadata } from "cosmjs-types/cosmos/bank/v1beta1/bank";
 import { QueryTotalSupplyResponse } from "cosmjs-types/cosmos/bank/v1beta1/query";
 import "text-encoding";
-export declare type BankExtensionExtended = {
+export type BankExtensionExtended = {
     readonly bank: {
         readonly balance: (address: string, denom: string) => Promise<Coin>;
         readonly allBalances: (address: string) => Promise<Coin[]>;
