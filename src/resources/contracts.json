@@ -6732,7 +6732,9 @@
         "address": "kujira1x0kynan6p0chzmqyc9utq3y6ygq8t343cxuvua598uq6a0krvu7sny98m2",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1egr92mccxjxg8t6uv9clnzzfpfmv4e7r0fjvya2v7t9u06nu73rquerym6"
+          ],
           "bid_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/urcpt",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
           "bid_threshold": "1000000000",
@@ -7688,7 +7690,12 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "234579280752"
+            "current_borrows": "235432487445"
+          },
+          {
+            "addr": "kujira1egr92mccxjxg8t6uv9clnzzfpfmv4e7r0fjvya2v7t9u06nu73rquerym6",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       },
@@ -19187,6 +19194,24 @@
         },
         "pairs": false,
         "markets": false
+      },
+      {
+        "id": 113,
+        "address": "kujira1egr92mccxjxg8t6uv9clnzzfpfmv4e7r0fjvya2v7t9u06nu73rquerym6",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf",
+          "orca_addr": "kujira1x0kynan6p0chzmqyc9utq3y6ygq8t343cxuvua598uq6a0krvu7sny98m2",
+          "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+          "collateral_oracle_denom": "USDC",
+          "collateral_decimals": 6,
+          "max_ltv": "0.85",
+          "full_liquidation_threshold": "1000000000",
+          "partial_liquidation_target": "0.8",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
       }
     ],
     "pilot": [
@@ -21085,7 +21110,98 @@
         ]
       }
     ],
-    "ghostMarket": [],
+    "ghostMarket": [
+      {
+        "id": 1944,
+        "address": "kujira1t88e60depax2zz43mt5ggxdzqe225guhn0jdyl3ccq5x30lcu2hqcnzt2t",
+        "config": {
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+          "orca_addr": "kujira1uuh7h6akhzdczw5l68qkqklurqaq0x6qh9murr596gpa5ltd0kqqnu6d3k",
+          "collateral_denom": "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo",
+          "collateral_oracle_denom": "ATOM",
+          "collateral_decimals": 6,
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "1000000",
+          "partial_liquidation_target": "0.7",
+          "borrow_fee": "0.02"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 1944,
+        "address": "kujira18tf39rrlskc20c582rf3je3qrshcgufgplgc800dtm6q96nk84rq57k695",
+        "config": {
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+          "orca_addr": "kujira14y22a87j3ma8ejx8sum9kpwds0ujscfkzf5au0lxu6vjhx54vjsqzf2035",
+          "collateral_denom": "factory/kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h/uhans",
+          "collateral_oracle_denom": "ETH",
+          "collateral_decimals": 18,
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000000000000000",
+          "partial_liquidation_target": "0.7",
+          "borrow_fee": "0.02"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 1944,
+        "address": "kujira10mqusaxs79ugxcpcjhwm4j0k3fdfkuqjctg5qkxvz9a8xvzymscslrkpqr",
+        "config": {
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira1dlx2mp9ausmrxua6nr49ak6x8jcwaya7rhyjudmr0akpjgeyk4ysyv0c94",
+          "orca_addr": "kujira1whhk9xcjtvge6t2ce2yfnllhh90u54pv59cxkz3cgzrfakk9x78srzxqqk",
+          "collateral_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
+          "collateral_oracle_denom": "USDT",
+          "collateral_decimals": 6,
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000",
+          "partial_liquidation_target": "0.7",
+          "borrow_fee": "0.02"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 1944,
+        "address": "kujira17zf6dhlktmr46tqmgjjcrtsyepm8a7wwf07q08ra805r9z4d7tdq7d7w84",
+        "config": {
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira1lygkvmry3gkyzc38vps7txv7d5ak2yxfvcmwsqnj9gjwd7meyc8q9kza6u",
+          "orca_addr": "kujira1luarayrneq0908cr2ty8enkfemql6ejm53gfnzpm4msyqawm88ts06ghsy",
+          "collateral_denom": "factory/kujira1r85reqy6h0lu02vyz0hnzhv5whsns55gdt4w0d7ft87utzk7u0wqr4ssll/uusk",
+          "collateral_oracle_denom": "USDT",
+          "collateral_decimals": 6,
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000",
+          "partial_liquidation_target": "0.7",
+          "borrow_fee": "0.02"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 1944,
+        "address": "kujira108etewle6jpcnem44jqdaa53ktg0qm4a9kx6mu0qtkrg38mk45tq6w8zqy",
+        "config": {
+          "owner": "kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+          "vault_addr": "kujira19r7998wj50nss7r4f6dpqwmyetevw0udl5udlrt8jtswa65nplvsflv7we",
+          "orca_addr": "kujira1t0hpcxzcsye4s609ycrlq0q5jm9v9eglhpjlmp38rrtdu0662cxq8x7z49",
+          "collateral_denom": "ukuji",
+          "collateral_oracle_denom": "KUJI",
+          "collateral_decimals": 6,
+          "max_ltv": "0.8",
+          "full_liquidation_threshold": "100000",
+          "partial_liquidation_target": "0.7",
+          "borrow_fee": "0.02"
+        },
+        "pairs": false,
+        "markets": false
+      }
+    ],
     "pilot": [
       {
         "id": 1476,
