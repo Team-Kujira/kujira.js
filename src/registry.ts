@@ -105,6 +105,10 @@ export const accountParser: s.AccountParser = (acc) => {
       const account = InjectiveTypesV1Beta1Account.EthAccount.decode(acc.value);
       const ethBaseAccount = account.baseAccount!;
       const pubKey = ethBaseAccount.pubKey;
+      console.log(
+        `/injective.types.v1beta1.EthAccount`,
+        JSON.stringify(account, null, 2)
+      );
 
       return {
         address: ethBaseAccount.address,
