@@ -11,9 +11,10 @@ const IDS = {
     uskMarket: [73],
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
-    calc: [104],
+    calc: [121],
     ghostVault: [106],
     ghostMarket: [109, 113],
+    ghostMargin: [],
     pilot: [95],
   },
   [TESTNET]: {
@@ -27,6 +28,7 @@ const IDS = {
     calc: [1273, 1387],
     ghostVault: [1943],
     ghostMarket: [1944],
+    ghostMargin: [1950],
     pilot: [1476],
   },
 };
