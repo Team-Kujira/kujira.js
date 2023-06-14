@@ -1,6 +1,7 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
 import { NETWORK } from "./network";
+export declare const FILTERED: string[];
 export type OracleDenom = {
     live: string;
 } | {

@@ -5,6 +5,10 @@ import { RATE_DEFAULT, rates } from "./ghost/rates";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
+export const FILTERED = [
+  "kujira1fj2y8uslgw89x50scw7njwxjg4f42u84hkw3nguf3kn0fm69wxqsrl3p6k",
+];
+
 export type OracleDenom = { live: string } | { static: BigNumber };
 
 export type Market = {
@@ -161,17 +165,23 @@ export const castVault = (
 
 export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
   [MAINNET]: contracts[MAINNET].ghostVault.reduce(
-    (a, v) => ({
-      ...a,
-      [v.address]: castVault(v.address, v.config, v.markets || []),
-    }),
+    (a, v) =>
+      FILTERED.includes(v.address)
+        ? a
+        : {
+            ...a,
+            [v.address]: castVault(v.address, v.config, v.markets || []),
+          },
     {}
   ),
   [TESTNET]: contracts[TESTNET].ghostVault.reduce(
-    (a, v) => ({
-      ...a,
-      [v.address]: castVault(v.address, v.config, v.markets || []),
-    }),
+    (a, v) =>
+      FILTERED.includes(v.address)
+        ? a
+        : {
+            ...a,
+            [v.address]: castVault(v.address, v.config, v.markets || []),
+          },
     {}
   ),
   [LOCALNET]: {},
@@ -180,7 +190,9 @@ export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
 export const MARKETS: Record<NETWORK, Record<string, Market>> = {
   [MAINNET]: contracts[MAINNET].ghostMarket.reduce(
     (a, v) =>
-      VAULTS[MAINNET][v.config.vault_addr]
+      FILTERED.includes(v.address)
+        ? a
+        : VAULTS[MAINNET][v.config.vault_addr]
         ? {
             ...a,
             [v.address]: castMarket(
@@ -194,7 +206,9 @@ export const MARKETS: Record<NETWORK, Record<string, Market>> = {
   ),
   [TESTNET]: contracts[TESTNET].ghostMarket.reduce(
     (a, v) =>
-      VAULTS[TESTNET][v.config.vault_addr]
+      FILTERED.includes(v.address)
+        ? a
+        : VAULTS[TESTNET][v.config.vault_addr]
         ? {
             ...a,
             [v.address]: castMarket(
