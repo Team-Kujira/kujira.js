@@ -35,7 +35,7 @@ const IDS = {
 
 const res = await Promise.all(
   Object.entries(IDS).map(async ([chain, protocols]) => {
-    const rpc = RPCS[chain][1];
+    const rpc = RPCS[chain][0];
     const tm = await Tendermint34Client.create(
       new HttpBatchClient(rpc, {
         dispatchInterval: 100,

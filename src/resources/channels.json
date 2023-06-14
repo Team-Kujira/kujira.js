@@ -648,6 +648,20 @@
   "mainnet": [
     {
       "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-172"
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-5\",\"host_connection_id\":\"connection-111\",\"address\":\"stars10vvraf9qpfts20z3djz8zr0m0sfp292jmnlpm7dz8gtnvkhqmw7s04l0dh\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira16s4etqsg456m5txn8ec39n4f2u9r0f642vdlxu",
+      "channelId": "channel-93"
+    },
+    {
+      "state": 3,
       "ordering": 1,
       "counterparty": {
         "portId": "transfer",
@@ -1933,6 +1947,34 @@
       "version": "ics20-1",
       "portId": "transfer",
       "channelId": "channel-91"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-37"
+      },
+      "connectionHops": [
+        "connection-104"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-92"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-39"
+      },
+      "connectionHops": [
+        "connection-105"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-94"
     }
   ]
 }
