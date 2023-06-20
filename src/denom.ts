@@ -279,6 +279,14 @@ const ics20: Record<string, ICS20> = {
     channel: "channel-28",
   },
 
+  // BLUE
+  "cw20:terra1gwrz9xzhqsygyr5asrgyq3pu0ewpn00mv2zenu86yvx2nlwpe8lqppv584": {
+    contract:
+      "terra1gwrz9xzhqsygyr5asrgyq3pu0ewpn00mv2zenu86yvx2nlwpe8lqppv584",
+    router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
+    channel: "channel-28",
+  },
+
   // bLUNA
   "cw20:terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml": {
     contract:
