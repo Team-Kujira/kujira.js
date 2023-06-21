@@ -15600,6 +15600,48 @@
           "type_asset": "cw20"
         },
         {
+                    "address": "terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
+                    "base": "cw20:terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
+                    "denom_units": [
+                        {
+                            "denom": "cw20:terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "cub",
+                            "exponent": 6
+                        }
+                    ],
+                    "display": "CUB",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/lioncubdao/logo/main/cub.png"
+                    },
+                    "name": "Lion CUB DAO",
+                    "symbol": "CUB",
+                    "type_asset": "cw20"
+                },
+                {
+                    "address": "terra1gwrz9xzhqsygyr5asrgyq3pu0ewpn00mv2zenu86yvx2nlwpe8lqppv584",
+                    "base": "cw20:terra1gwrz9xzhqsygyr5asrgyq3pu0ewpn00mv2zenu86yvx2nlwpe8lqppv584",
+                    "denom_units": [
+                        {
+                            "denom": "cw20:terra1gwrz9xzhqsygyr5asrgyq3pu0ewpn00mv2zenu86yvx2nlwpe8lqppv584",
+                            "exponent": 0
+                        },
+                        {
+                            "denom": "blue",
+                            "exponent": 6
+                        }
+                    ],
+                    "display": "BLUE",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/lioncubdao/logo/main/blue.png"
+                    },
+                    "name": "Blue CUB DAO",
+                    "symbol": "BLUE",
+                    "type_asset": "cw20"
+                },
+        {
           "description": "The GraveDigger is the Liquid Staking Product of BackBone Labs. It will have its own platform. Its liquid staking derivative (LSD) is boneLUNA.",
           "type_asset": "cw20",
           "address": "terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml",
