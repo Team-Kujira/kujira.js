@@ -540,13 +540,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmjs-types@npm:^0.7.1, cosmjs-types@npm:^0.7.2":
-  version: 0.7.2
-  resolution: "cosmjs-types@npm:0.7.2"
+"cosmjs-types@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "cosmjs-types@npm:0.8.0"
   dependencies:
     long: ^4.0.0
     protobufjs: ~6.11.2
-  checksum: 4a0b730a7f1ae8efa8bd044f9ebdd7921f26319ff2abf36ac7e2f93ef6f3e73d90c1775ce2325611d47c4ccc72a708a63e31e89d9d80ad75c1107c7228e09bc8
+  checksum: 99714ec956d2cb2e521d39896c9c9a24cf9df0d370265c203646ea015b51e86472efc0cb11f67a80f0649d178b0bcff77ac659e67fdfc8b2437cd7a42018577f
   languageName: node
   linkType: hard
 
@@ -752,7 +752,7 @@ __metadata:
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
     chain-registry: ^1.14.0
-    cosmjs-types: ^0.7.2
+    cosmjs-types: ^0.8.0
     long: ^4.0.0
     react: ^18.2.0
     text-encoding: ^0.7.0
