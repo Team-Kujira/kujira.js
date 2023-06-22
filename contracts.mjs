@@ -5,9 +5,9 @@ import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 const IDS = {
   [MAINNET]: {
     fin: [63, 56, 92, 94],
-    bow: [36, 46, 54],
+    bow: [36, 46, 54, 126],
     bowStaking: [61, 88],
-    orca: [59, 108],
+    orca: [59, 108, 127],
     uskMarket: [73],
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
