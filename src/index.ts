@@ -5,6 +5,7 @@ export * from "./bignumber";
 export * from "./denom";
 export * as fin from "./fin";
 export * as ghost from "./ghost";
+export * as gravity from "./gravity/v1";
 export * from "./ibc";
 export * as kns from "./kns";
 export * as local from "./local";
