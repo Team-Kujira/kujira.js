@@ -37,6 +37,7 @@ export {
   OutgoingTransferTx,
   OutgoingTxBatch,
 } from "./batch";
+export { GenesisState, GravityNonces, Params } from "./genesis";
 export {
   Query,
   QueryAttestationsRequest,
