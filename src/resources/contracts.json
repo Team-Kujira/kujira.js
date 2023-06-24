@@ -8048,12 +8048,12 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "289214841088"
+            "current_borrows": "289369052980"
           },
           {
             "addr": "kujira1egr92mccxjxg8t6uv9clnzzfpfmv4e7r0fjvya2v7t9u06nu73rquerym6",
             "borrow_limit": null,
-            "current_borrows": "5371002726"
+            "current_borrows": "5761012769"
           }
         ]
       },
@@ -8914,7 +8914,7 @@
           {
             "addr": "kujira1fg5cn4537y5lr7d5v9c8avg26hmfespznrz2yr86h3gdhsh8lpgstcjkks",
             "borrow_limit": null,
-            "current_borrows": "948633325"
+            "current_borrows": "1037288656"
           },
           {
             "addr": "kujira1qcqxs8twh505ey0w87mu0f9gjc4dpqlm64t734yftuz7t2kee09smdzy76",
@@ -9457,7 +9457,7 @@
           {
             "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
             "borrow_limit": null,
-            "current_borrows": "343024259030"
+            "current_borrows": "344502485331"
           }
         ]
       },
@@ -19574,7 +19574,7 @@
           "vault_addr": "kujira1pdfmup5qgqdlceh5ygaj67lyk59ntk8fk7lwtp0m2z2wcqgndslq8xxqlk",
           "orca_addr": "kujira1qy0w4lq65j6fvu90a669s9dt8hf2r96w4ta2z9y6vpkeqkxyawvqkcdjeu",
           "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
-          "collateral_oracle_denom": "SCRT",
+          "collateral_oracle_denom": "USDC",
           "collateral_decimals": 6,
           "max_ltv": "0.6",
           "full_liquidation_threshold": "100000000",
