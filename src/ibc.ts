@@ -49,6 +49,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-70": "omniflixhub",
     "channel-71": "terra",
     "channel-75": "neutron",
+    "channel-95": "kava",
   },
 };
 
