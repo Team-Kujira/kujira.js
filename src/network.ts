@@ -30,6 +30,7 @@ export const RPCS: Record<string, string[]> = {
     "https://kujira.rpc.kjnodes.com",
     "https://rpc-kujira.mintthemoon.xyz",
     "https://rpc-kujira.mms.team",
+    "https://rpc-kujira.rorcualnodes.com",
     "https://rpc-kujira.starsquid.io",
     "https://rpc-kujira.synergynodes.com",
     "https://rpc.kujira.rektdao.club",

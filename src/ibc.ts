@@ -29,7 +29,6 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-23": "evmos",
     "channel-27": "okexchain",
     "channel-32": "stride",
-    "channel-43": "teritori",
     "channel-46": "carbon",
     "channel-50": "gravitybridge",
     "channel-51": "planq",
@@ -49,6 +48,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-70": "omniflixhub",
     "channel-71": "terra",
     "channel-75": "neutron",
+    "channel-89": "teritori",
     "channel-95": "kava",
   },
 };
