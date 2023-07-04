@@ -8204,12 +8204,17 @@
                     {
                         "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
                         "borrow_limit": null,
-                        "current_borrows": "303216900812"
+                        "current_borrows": "302696564033"
                     },
                     {
                         "addr": "kujira1egr92mccxjxg8t6uv9clnzzfpfmv4e7r0fjvya2v7t9u06nu73rquerym6",
                         "borrow_limit": null,
                         "current_borrows": "5371002726"
+                    },
+                    {
+                        "addr": "kujira1xa3qnrpjnvjzhc882xek2ghxf237wnt49f2yhu99vpuvj4tdjhfqwlrlq7",
+                        "borrow_limit": "100000000000",
+                        "current_borrows": "0"
                     }
                 ]
             },
