@@ -1,4 +1,5 @@
 import { HttpBatchClient, Tendermint34Client } from "@cosmjs/tendermint-rpc";
+import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination.js";
 import fs from "fs";
 import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
@@ -54,7 +55,10 @@ const res = await Promise.all(
               ids.map(async (id) => ({
                 id,
                 contracts: await client.wasm
-                  .listContractsByCodeId(id)
+                  .listContractsByCodeId(
+                    id,
+                    PageRequest.fromPartial({ limit: 100000 })
+                  )
                   .then((x) =>
                     Promise.all(
                       x.contracts.map(async (address) => ({
