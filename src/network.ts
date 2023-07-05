@@ -22,7 +22,6 @@ export const RPCS: Record<string, string[]> = {
   [MAINNET]: [
     "https://kujira-mainnet-rpc.autostake.com",
     "https://kujira-rpc.ibs.team",
-    "https://kujira-rpc.lavenderfive.com",
     "https://kujira-rpc.nodes.defiantlabs.net",
     "https://kujira-rpc.openbitlab.com",
     "https://kujira-rpc.theamsolutions.info",
@@ -35,6 +34,7 @@ export const RPCS: Record<string, string[]> = {
     "https://rpc-kujira.synergynodes.com",
     "https://rpc.kujira.rektdao.club",
     // "https://kuji-rpc.kleomedes.network",
+    // "https://kujira-rpc.lavenderfive.com",
     // "https://kujira-rpc.polkachu.com",
     // "https://rpc-kujira.whispernode.com",
     // "https://rpc.kaiyo.kujira.setten.io",
