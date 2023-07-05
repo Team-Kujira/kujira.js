@@ -1989,6 +1989,62 @@
             "version": "ics20-1",
             "portId": "transfer",
             "channelId": "channel-95"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
+                "channelId": "channel-94"
+            },
+            "connectionHops": [
+                "connection-107"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-96"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
+                "channelId": "channel-46"
+            },
+            "connectionHops": [
+                "connection-108"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-97"
+        },
+        {
+            "state": 2,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
+                "channelId": "channel-10"
+            },
+            "connectionHops": [
+                "connection-109"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-98"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
+                "channelId": "channel-11"
+            },
+            "connectionHops": [
+                "connection-110"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-99"
         }
     ]
 }
