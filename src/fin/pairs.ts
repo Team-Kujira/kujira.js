@@ -88,8 +88,8 @@ export const compile =
           )?.address,
         calc: contracts[network].calc[0]?.pairs.find(
           (x) =>
-            x.base_denom === config.denoms[0].reference &&
-            x.quote_denom === config.denoms[1].reference
+            x.denoms[0] === config.denoms[0].reference &&
+            x.denoms[1] === config.denoms[1].reference
         )
           ? contracts[network].calc[0]?.address
           : undefined,

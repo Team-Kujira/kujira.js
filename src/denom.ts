@@ -395,7 +395,7 @@ export class Denom {
     const bowUnderlying = Object.values(contracts)
       .flatMap((x) => x.bow)
       .find((x) => `factory/${x.address}/ulp` === string)
-      ?.config.denoms.map(Denom.from);
+      ?.config.denoms?.map(Denom.from);
 
     const factoryAddress =
       string.startsWith("factory/") && string.split("/")[1];
