@@ -54,7 +54,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
   },
 };
 
-const MANUAL: Chain[] = [
+const CHAINS: CosmosChain[] = [
   {
     $schema: "../chain.schema.json",
     chain_name: "archway",
@@ -303,6 +303,34 @@ const MANUAL: Chain[] = [
         account_page: "https://archway.exploreme.pro/account/${accountAddress}",
       },
     ],
+    assets: [
+      {
+        description: "The native token of Archway network",
+        denom_units: [
+          {
+            denom: "aarch",
+            exponent: 0,
+          },
+          {
+            denom: "uarch",
+            exponent: 12,
+          },
+          {
+            denom: "arch",
+            exponent: 18,
+          },
+        ],
+        base: "aarch",
+        name: "Archway",
+        display: "arch",
+        symbol: "ARCH",
+        logo_URIs: {
+          png: "https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.png",
+          svg: "https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.svg",
+        },
+        coingecko_id: "archway",
+      },
+    ],
   },
 ];
 
@@ -312,7 +340,7 @@ export const IBC: {
   channels: typeof channels;
   tokens: Record<string, { base_denom: string; path: string }>;
 } = {
-  chains: [...chains, ...MANUAL].reduce(
+  chains: [...chains, ...CHAINS].reduce(
     (a, v) => {
       const assets_ =
         assets.find((a) => a.chain_name === v.chain_name)?.assets || [];
