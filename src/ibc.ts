@@ -340,7 +340,7 @@ export const IBC: {
   channels: typeof channels;
   tokens: Record<string, { base_denom: string; path: string }>;
 } = {
-  chains: [...chains, ...CHAINS].reduce(
+  chains: chains.reduce(
     (a, v) => {
       const assets_ =
         assets.find((a) => a.chain_name === v.chain_name)?.assets || [];
@@ -348,7 +348,7 @@ export const IBC: {
       const key = v.network_type === "mainnet" ? "mainnet" : "testnet";
       return { ...a, [key]: [...a[key], x] };
     },
-    { mainnet: [], testnet: [] }
+    { mainnet: CHAINS, testnet: [] }
   ),
   connections,
   channels: {
