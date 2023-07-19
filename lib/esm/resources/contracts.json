@@ -7696,7 +7696,9 @@
                 "address": "kujira1qlvfeu02a8gqr3l6e7vdesr25ch5juuqvkl06apce2dsg6ed2qlqr3r9gm",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira1jrwaayyhmqhj6s5fzx9v6akmcxsktz56fa5spz0km6p3r5eduyjsvus77j"
+                    ],
                     "bid_denom": "factory/kujira133d9khk2m9ckxt7cy7fypmpy4a3st5azsq5se7wz90csjavjktfsc59c4z/urcpt",
                     "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
                     "bid_threshold": "1000000000",
@@ -19353,7 +19355,13 @@
                     ]
                 },
                 "pairs": false,
-                "markets": []
+                "markets": [
+                    {
+                        "addr": "kujira1jrwaayyhmqhj6s5fzx9v6akmcxsktz56fa5spz0km6p3r5eduyjsvus77j",
+                        "borrow_limit": "100000000000",
+                        "current_borrows": "0"
+                    }
+                ]
             }
         ],
         "ghostMarket": [
@@ -20446,6 +20454,78 @@
                     "orca_addr": "kujira1r5n48c0pc3axf9mmhguanayw547qcstyx55evcq65svjndfrdx9qrwt7hl",
                     "collateral_denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
                     "collateral_oracle_denom": "MNTA",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "100000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira1jrwaayyhmqhj6s5fzx9v6akmcxsktz56fa5spz0km6p3r5eduyjsvus77j",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira133d9khk2m9ckxt7cy7fypmpy4a3st5azsq5se7wz90csjavjktfsc59c4z",
+                    "orca_addr": "kujira1qlvfeu02a8gqr3l6e7vdesr25ch5juuqvkl06apce2dsg6ed2qlqr3r9gm",
+                    "collateral_denom": "ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F",
+                    "collateral_oracle_denom": "USDC",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "100000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira19fkntnvua2dllxtlqg5p9ce5nyg6nfwrla3px24rt9xcf33qjvks5l8sf0",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira133d9khk2m9ckxt7cy7fypmpy4a3st5azsq5se7wz90csjavjktfsc59c4z",
+                    "orca_addr": "kujira1xw6uhcz4rw4f7hhcn4markf2s76mypu4pwdpja5fe27y944vdrssvdrnwq",
+                    "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+                    "collateral_oracle_denom": "USK",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "100000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira1fhx20htag2saw9g3w8uwdv203ucvpmcxlvdwtljm5rmrxn4pu7dsqkl73k",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf",
+                    "orca_addr": "kujira197j8vwtxeh95cvrgzy0luzws84fqe98caq03rs6f0p24cp7fq48qxxzh3h",
+                    "collateral_denom": "ibc/173E561B8E97AB49FBA540663C1D02DC1B2D2871B5C8434935982CB15B0C7765",
+                    "collateral_oracle_denom": "NTRN",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "100000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 113,
+                "address": "kujira1lxane500vcvrc0cjj0rak2h2emepm9lhv9rgrxarkwqqttyurznqakexed",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira1e224c8ry0nuun5expxm00hmssl8qnsjkd02ft94p3m2a33xked2qypgys3",
+                    "orca_addr": "kujira1rf2h5f85hcfk934j6sfet68qeac5833a4mvnq523ej0g4sqd4ufs8cthh0",
+                    "collateral_denom": "ibc/173E561B8E97AB49FBA540663C1D02DC1B2D2871B5C8434935982CB15B0C7765",
+                    "collateral_oracle_denom": "NTRN",
                     "collateral_decimals": 6,
                     "max_ltv": "0.5",
                     "full_liquidation_threshold": "100000000",
