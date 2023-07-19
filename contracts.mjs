@@ -5,7 +5,7 @@ import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
 const IDS = {
   [MAINNET]: {
-    fin: [63, 56, 92, 94],
+    fin: [63, 56, 92, 94, 134],
     bow: [36, 46, 54, 126],
     bowStaking: [61, 88],
     orca: [59, 108, 127],
@@ -36,7 +36,7 @@ const IDS = {
 
 const res = await Promise.all(
   Object.entries(IDS).map(async ([chain, protocols]) => {
-    const rpc = RPCS[chain][1];
+    const rpc = RPCS[chain][0];
     const tm = await Tendermint34Client.create(
       new HttpBatchClient(rpc, {
         dispatchInterval: 100,
