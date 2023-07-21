@@ -7,6 +7,7 @@ import contracts from "./resources/contracts.json";
 
 export const FILTERED = [
   "kujira1fj2y8uslgw89x50scw7njwxjg4f42u84hkw3nguf3kn0fm69wxqsrl3p6k",
+  "kujira14r4d6xw6jgu6d4en0uxalx9slaft54h499scmeyj63w4axavhvuqdgfr8d",
 ];
 
 export type OracleDenom = { live: string } | { static: BigNumber };
