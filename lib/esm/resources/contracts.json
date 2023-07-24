@@ -20529,6 +20529,11 @@
                         "addr": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
                         "borrow_limit": null,
                         "current_borrows": "7498604879"
+                    },
+                    {
+                        "addr": "kujira1nxhlw9cvd9rrlkjmdkzqku6323estvgtttfvl8p8guung7p3lfrqd8d7kr",
+                        "borrow_limit": "50000000000",
+                        "current_borrows": "0"
                     }
                 ]
             }
