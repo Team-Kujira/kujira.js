@@ -1,7 +1,6 @@
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { divToNumber, mulDec } from "./bignumber";
 import { Denom } from "./denom";
-import { RATE_DEFAULT, rates } from "./ghost/rates";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
@@ -89,6 +88,24 @@ export const castPosition = (res: {
   collateralAmount: BigNumber.from(res.collateral_amount),
 });
 
+export type Interest =
+  | {
+      type: "rates";
+      value: [BigNumber, BigNumber][];
+    }
+  | {
+      type: "curve";
+      value: [
+        BigNumber,
+        {
+          linear: {
+            start: [BigNumber, BigNumber];
+            end: [BigNumber, BigNumber];
+          };
+        }
+      ][];
+    };
+
 export type Vault = {
   address: string;
   owner: string;
@@ -97,7 +114,7 @@ export type Vault = {
   decimals: number;
   receiptDenom: Denom;
   debtTokenDenom: Denom;
-  utilizationRates: [BigNumber, BigNumber][];
+  interest: Interest;
   markets: {
     addr: string;
     borrowLimit: null | BigNumber;
@@ -137,6 +154,19 @@ export const castVault = (
     decimals: number;
     receipt_denom: string;
     debt_token_denom: string;
+    interest:
+      | { utilization_to_rate: [[string, string]] }
+      | {
+          utilization_to_curve: [
+            string,
+            {
+              linear: {
+                start: [string, string];
+                end: [string, string];
+              };
+            }
+          ][];
+        };
   },
   markets: {
     addr: string;
@@ -158,11 +188,50 @@ export const castVault = (
     addr: m.addr,
     borrowLimit: m.borrow_limit ? BigNumber.from(m.borrow_limit) : null,
   })),
-  utilizationRates: (rates[address] || RATE_DEFAULT).map(([a, b]) => [
-    parseFixed(a, 18),
-    parseFixed(b, 18),
-  ]),
+  interest: castInterest(raw.interest),
 });
+
+const castInterest = (
+  raw:
+    | { utilization_to_rate: [[string, string]] }
+    | {
+        utilization_to_curve: [
+          string,
+          {
+            linear: {
+              start: [string, string];
+              end: [string, string];
+            };
+          }
+        ][];
+      }
+): Interest =>
+  "utilization_to_rate" in raw
+    ? {
+        type: "rates",
+        value: raw.utilization_to_rate.map(([a, b]) => [
+          parseFixed(a, 18),
+          parseFixed(b, 18),
+        ]),
+      }
+    : {
+        type: "curve",
+        value: raw.utilization_to_curve.map((x) => [
+          parseFixed(x[0], 18),
+          {
+            linear: {
+              start: [
+                parseFixed(x[1].linear.start[0], 18),
+                parseFixed(x[1].linear.start[1], 18),
+              ],
+              end: [
+                parseFixed(x[1].linear.end[0], 18),
+                parseFixed(x[1].linear.end[1], 18),
+              ],
+            },
+          },
+        ]),
+      };
 
 export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
   [MAINNET]: contracts[MAINNET].ghostVault.reduce(
@@ -171,7 +240,12 @@ export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
         ? a
         : {
             ...a,
-            [v.address]: castVault(v.address, v.config, v.markets || []),
+            [v.address]: castVault(
+              v.address,
+              // @ts-expect-error TS not liking the Rust serialization of tuples
+              v.config,
+              v.markets || []
+            ),
           },
     {}
   ),
@@ -181,7 +255,12 @@ export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
         ? a
         : {
             ...a,
-            [v.address]: castVault(v.address, v.config, v.markets || []),
+            [v.address]: castVault(
+              v.address,
+              // @ts-expect-error TS not liking the Rust serialization of tuples
+              v.config,
+              v.markets || []
+            ),
           },
     {}
   ),

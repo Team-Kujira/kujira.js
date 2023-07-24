@@ -13,8 +13,8 @@ const IDS = {
     uskMarginSwap: [72, 74, 87],
     uskMarginLimit: [],
     calc: [132],
-    ghostVault: [106],
-    ghostMarket: [109, 113],
+    ghostVault: [106, 135],
+    ghostMarket: [109, 113, 136],
     ghostMargin: [],
     pilot: [95],
   },
@@ -27,8 +27,8 @@ const IDS = {
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
     calc: [1273, 1387],
-    ghostVault: [1943],
-    ghostMarket: [1944],
+    ghostVault: [2171],
+    ghostMarket: [2172],
     ghostMargin: [1950],
     pilot: [1476],
   },
@@ -71,18 +71,27 @@ const res = await Promise.all(
                                     config: {},
                                   })
                                   .catch(() => ({}))),
-                                interest: await client.wasm
-                                  .queryContractRaw(
-                                    address,
-                                    Uint8Array.from([115, 116, 97, 116, 101])
-                                  )
-                                  .then(({ data }) =>
-                                    JSON.parse(Buffer.from(data).toString())
-                                  )
-                                  .then(
-                                    ({ utilization_to_rate }) =>
-                                      utilization_to_rate
-                                  ),
+                                interest:
+                                  id === 106
+                                    ? await client.wasm
+                                        .queryContractRaw(
+                                          address,
+                                          Uint8Array.from([
+                                            115, 116, 97, 116, 101,
+                                          ])
+                                        )
+                                        .then(({ data }) =>
+                                          JSON.parse(
+                                            Buffer.from(data).toString()
+                                          )
+                                        )
+                                        .then(({ utilization_to_rate }) => ({
+                                          utilization_to_rate,
+                                        }))
+                                    : await client.wasm.queryContractSmart(
+                                        address,
+                                        { interest_params: {} }
+                                      ),
                               }
                             : await client.wasm
                                 .queryContractSmart(address, {

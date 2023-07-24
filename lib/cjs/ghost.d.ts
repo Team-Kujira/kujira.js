@@ -48,6 +48,21 @@ export declare const castPosition: (res: {
     debt_shares: number;
     collateral_amount: number;
 }) => Position;
+export type Interest = {
+    type: "rates";
+    value: [BigNumber, BigNumber][];
+} | {
+    type: "curve";
+    value: [
+        BigNumber,
+        {
+            linear: {
+                start: [BigNumber, BigNumber];
+                end: [BigNumber, BigNumber];
+            };
+        }
+    ][];
+};
 export type Vault = {
     address: string;
     owner: string;
@@ -56,7 +71,7 @@ export type Vault = {
     decimals: number;
     receiptDenom: Denom;
     debtTokenDenom: Denom;
-    utilizationRates: [BigNumber, BigNumber][];
+    interest: Interest;
     markets: {
         addr: string;
         borrowLimit: null | BigNumber;
@@ -82,6 +97,19 @@ export declare const castVault: (address: string, raw: {
     decimals: number;
     receipt_denom: string;
     debt_token_denom: string;
+    interest: {
+        utilization_to_rate: [[string, string]];
+    } | {
+        utilization_to_curve: [
+            string,
+            {
+                linear: {
+                    start: [string, string];
+                    end: [string, string];
+                };
+            }
+        ][];
+    };
 }, markets: {
     addr: string;
     borrow_limit: null | string;
