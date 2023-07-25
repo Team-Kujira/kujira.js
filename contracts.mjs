@@ -20,7 +20,7 @@ const IDS = {
   },
   [TESTNET]: {
     fin: [31, 2229],
-    bow: [308, 468, 644, 858, 1925],
+    bow: [1925],
     bowStaking: [439, 855],
     orca: [994, 1577],
     uskMarket: [66, 136],
