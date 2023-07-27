@@ -15,6 +15,13 @@ export const FILTERED = [
   "kujira1trxh7pu70dmzpqyqs4yltx2h5202k9e9fpssee0tdq4x2jr9praqg7c96e",
 ];
 
+export const NOTICES = {
+  kujira1v8lkqws3gd6npr0rdk9ch54amh9guas86r4u62jq27hee88lryfsxwrvlk:
+    "The FURY token from JUNO will be replaced by the native staking token from the new FURY blockchain after launch. A snapshot of token holders was taken at block height 9200000 on Juno",
+  kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz:
+    "This SHD token from Shade Protocol was replaced with a new version. Tokens can be migrated on [Shade Protocol's app](https://app.shadeprotocol.io/migrate). Trade the new token [here](https://fin.kujira.network/trade/kujira1vdv74x0w4mq2v57r4mydps89jw4wsrqtrxez3tylzqwmy972a9fssy5e3y).",
+};
+
 import contracts from "../resources/contracts.json";
 export const STAKING = {
   [TESTNET]:

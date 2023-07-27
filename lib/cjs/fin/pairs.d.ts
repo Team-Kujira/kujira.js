@@ -1,6 +1,10 @@
 import { NETWORK } from "../network";
 import { Pair } from "./types";
 export declare const FILTERED: string[];
+export declare const NOTICES: {
+    kujira1v8lkqws3gd6npr0rdk9ch54amh9guas86r4u62jq27hee88lryfsxwrvlk: string;
+    kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz: string;
+};
 import contracts from "../resources/contracts.json";
 export declare const STAKING: {
     "harpoon-4": string;
