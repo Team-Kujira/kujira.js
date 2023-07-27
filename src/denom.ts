@@ -111,7 +111,7 @@ const labels: Record<string, string> = {
 
   "cw20:terra1x62mjnme4y0rdnag3r8rfgjuutsqlkkyuh4ndgex0wl3wue25uksau39q8":
     "xASTRO",
-  "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD",
+  "cw20:secret1qfql357amn448duf5gvp9gr48sxx9tsnhupu3d": "SHD.legacy",
   "cw20:terra17gck626vgax9jpe6utm7dhx4vdzawfkt0jhru03l7a3dzu98wedsfad4sz":
     "dUST",
   "cw20:terra1lxx40s29qvkrcj8fsa3yzyehy7w50umdvvnls2r830rys6lu2zns63eelv":
