@@ -63,6 +63,8 @@ const labels: Record<string, string> = {
     "USK",
   "factory:kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7:uusk":
     "USK",
+  "factory/kujira1v3hcejcerf0d9em9ds8rpyyq68vx3u9u4k0fvw4e9hacdy8nn6pqx4urcw/urcpt":
+    "cMNTA",
   gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "gPAXG",
   gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "gPSTAKE",
   gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2: "gwETH",
