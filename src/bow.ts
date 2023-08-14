@@ -4,6 +4,7 @@ import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
 export type Pool = {
+  address: string;
   owner: string;
   denoms: [Denom, Denom];
   pricePrecision: number;
@@ -27,6 +28,7 @@ export type PoolResponse = {
 };
 
 export type Margin = {
+  address: string;
   owner: string;
   bowContract: string;
   denoms: [Denom, Denom];
@@ -41,7 +43,7 @@ export type Margin = {
 export type MarginResponse = {
   owner: string;
   bow_contract: string;
-  denoms: [[string, number], [string, number]];
+  denoms: (string | number)[][];
   vaults: (string | null)[];
   orcas: (string | null)[];
   max_ltv: string;
@@ -50,7 +52,12 @@ export type MarginResponse = {
   borrow_fee: string;
 };
 
-export const castPool = (res: PoolResponse): Pool => ({
+export const castPool = (
+  address: string,
+  res: PoolResponse,
+  margin?: [string, { config: MarginResponse }]
+): Pool => ({
+  address,
   owner: res.owner,
   denoms: [Denom.from(res.denoms[0]), Denom.from(res.denoms[1])],
   pricePrecision: res.price_precision.decimal_places,
@@ -59,11 +66,14 @@ export const castPool = (res: PoolResponse): Pool => ({
   intervals: res.intervals.map((x) => parseFixed(x, 18)),
   amp: parseFixed(res.amp, 18),
   fee: parseFixed(res.fee, 18),
+  margin: margin && castMargin(margin[0], margin[1].config),
 });
 
-export const castMargin = (res: MarginResponse): Margin => ({
+export const castMargin = (address: string, res: MarginResponse): Margin => ({
+  address,
   owner: res.owner,
   bowContract: res.bow_contract,
+  //   @ts-expect-error denoms[x][0] is the string representation
   denoms: [Denom.from(res.denoms[0][0]), Denom.from(res.denoms[1][0])],
   vaults: [res.vaults[0], res.vaults[1]],
   orcas: [res.orcas[0], res.orcas[1]],
@@ -77,14 +87,20 @@ export const POOLS: Record<NETWORK, Record<string, Pool>> = {
   [MAINNET]: contracts[MAINNET].bow.reduce(
     (a, v) => ({
       ...a,
-      [v.address]: castPool(v.config),
+      [v.address]: castPool(v.address, v.config),
     }),
     {}
   ),
   [TESTNET]: contracts[TESTNET].bow.reduce(
     (a, v) => ({
       ...a,
-      [v.address]: castPool(v.config),
+      [v.address]: castPool(
+        v.address,
+        v.config,
+        Object.entries(contracts[TESTNET].bowMargin).find(
+          (x) => x[1].config.bow_contract === v.address
+        )
+      ),
     }),
     {}
   ),
