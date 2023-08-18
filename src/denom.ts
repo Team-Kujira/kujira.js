@@ -39,6 +39,7 @@ const labels: Record<string, string> = {
   "reth-wei": "rETH",
   "dot-planck": "DOT",
   "pepe-wei": "PEPE",
+  "yieldeth-wei": "yieldETH",
   aevmos: "EVMOS",
   afet: "FET",
   demo: "DEMO",
