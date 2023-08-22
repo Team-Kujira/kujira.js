@@ -66,6 +66,7 @@ const labels: Record<string, string> = {
     "USK",
   "factory/kujira1v3hcejcerf0d9em9ds8rpyyq68vx3u9u4k0fvw4e9hacdy8nn6pqx4urcw/urcpt":
     "cMNTA",
+  "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
   gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "gPAXG",
   gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "gPSTAKE",
   gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2: "gwETH",
@@ -102,7 +103,8 @@ const labels: Record<string, string> = {
     "AQUA",
   "cw20:juno168ctmpyppk90d34p3jjy658zf5a5l3w8wk35wht6ccqj4mr0yv8s4j5awr":
     "NETA",
-  "cw20:juno1r4pzw8f9z0sypct5l9j906d47z998ulwvhvqe5xdwgy8wf84583sxwh0pa": "RAC",
+  "cw20:juno1r4pzw8f9z0sypct5l9j906d47z998ulwvhvqe5xdwgy8wf84583sxwh0pa":
+    "RAC.legacy",
   "cw20:juno1j0a9ymgngasfn3l5me8qpd53l5zlm9wurfdk7r65s5mg6tkxal3qpgf5se":
     "GLTO",
   "cw20:terra1ecgazyd0waaj3g7l9cmy5gulhxkps2gmxu9ghducvuypjq68mq2s5lvsct":

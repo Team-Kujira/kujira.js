@@ -20,6 +20,8 @@ export const NOTICES = {
     "The FURY token from JUNO will be replaced by the native staking token from the new FURY blockchain after launch. A snapshot of token holders was taken at block height 9200000 on Juno",
   kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz:
     "This SHD token from Shade Protocol was replaced with a new version. Tokens can be migrated on [Shade Protocol's app](https://app.shadeprotocol.io/migrate). Trade the new token [here](https://fin.kujira.network/trade/kujira1vdv74x0w4mq2v57r4mydps89jw4wsrqtrxez3tylzqwmy972a9fssy5e3y).",
+  kujira1kmw6fk5p7an27u8f3er08xrwvzlehczymgshkqxzfrxyrfleu2eqxykaln:
+    "The RAC token from the Juno network has been replaced with a native token on Migaloo. See [their medium post](https://medium.com/@racoon-supply/rac-is-now-an-ibc-asset-1dccad0df7bb) for instructions on how to migrate",
 };
 
 import contracts from "../resources/contracts.json";
