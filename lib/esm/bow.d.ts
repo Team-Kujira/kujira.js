@@ -29,7 +29,18 @@ export type Margin = {
     address: string;
     owner: string;
     bowContract: string;
-    denoms: [Denom, Denom];
+    denoms: [
+        {
+            denom: Denom;
+            decimals: number;
+            oracle: string;
+        },
+        {
+            denom: Denom;
+            decimals: number;
+            oracle: string;
+        }
+    ];
     vaults: [string | null, string | null];
     orcas: [string | null, string | null];
     maxLtv: BigNumber;
@@ -40,7 +51,11 @@ export type Margin = {
 export type MarginResponse = {
     owner: string;
     bow_contract: string;
-    denoms: (string | number)[][];
+    denoms: {
+        denom: string;
+        decimals: number;
+        oracle: string;
+    }[];
     vaults: (string | null)[];
     orcas: (string | null)[];
     max_ltv: string;

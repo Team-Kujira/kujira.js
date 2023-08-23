@@ -31,7 +31,10 @@ export type Margin = {
   address: string;
   owner: string;
   bowContract: string;
-  denoms: [Denom, Denom];
+  denoms: [
+    { denom: Denom; decimals: number; oracle: string },
+    { denom: Denom; decimals: number; oracle: string }
+  ];
   vaults: [string | null, string | null];
   orcas: [string | null, string | null];
   maxLtv: BigNumber;
@@ -43,7 +46,7 @@ export type Margin = {
 export type MarginResponse = {
   owner: string;
   bow_contract: string;
-  denoms: (string | number)[][];
+  denoms: { denom: string; decimals: number; oracle: string }[];
   vaults: (string | null)[];
   orcas: (string | null)[];
   max_ltv: string;
@@ -73,8 +76,18 @@ export const castMargin = (address: string, res: MarginResponse): Margin => ({
   address,
   owner: res.owner,
   bowContract: res.bow_contract,
-  //   @ts-expect-error denoms[x][0] is the string representation
-  denoms: [Denom.from(res.denoms[0][0]), Denom.from(res.denoms[1][0])],
+  denoms: [
+    {
+      denom: Denom.from(res.denoms[0].denom),
+      decimals: res.denoms[0].decimals,
+      oracle: res.denoms[0].oracle,
+    },
+    {
+      denom: Denom.from(res.denoms[1].denom),
+      decimals: res.denoms[1].decimals,
+      oracle: res.denoms[1].oracle,
+    },
+  ],
   vaults: [res.vaults[0], res.vaults[1]],
   orcas: [res.orcas[0], res.orcas[1]],
   maxLtv: parseFixed(res.max_ltv, 18),
