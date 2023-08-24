@@ -58,7 +58,7 @@ export type MarginResponse = {
 export const castPool = (
   address: string,
   res: PoolResponse,
-  margin?: [string, { config: MarginResponse }]
+  margin?: { address: string; config: MarginResponse }
 ): Pool => ({
   address,
   owner: res.owner,
@@ -69,7 +69,7 @@ export const castPool = (
   intervals: res.intervals.map((x) => parseFixed(x, 18)),
   amp: parseFixed(res.amp, 18),
   fee: parseFixed(res.fee, 18),
-  margin: margin && castMargin(margin[0], margin[1].config),
+  margin: margin && castMargin(margin.address, margin.config),
 });
 
 export const castMargin = (address: string, res: MarginResponse): Margin => ({
@@ -110,8 +110,8 @@ export const POOLS: Record<NETWORK, Record<string, Pool>> = {
       [v.address]: castPool(
         v.address,
         v.config,
-        Object.entries(contracts[TESTNET].bowMargin).find(
-          (x) => x[1].config.bow_contract === v.address
+        Object.values(contracts[TESTNET].bowMargin).find(
+          (x) => x.config.bow_contract === v.address
         )
       ),
     }),

@@ -63,8 +63,9 @@ export type MarginResponse = {
     partial_liquidation_target: string;
     borrow_fee: string;
 };
-export declare const castPool: (address: string, res: PoolResponse, margin?: [string, {
+export declare const castPool: (address: string, res: PoolResponse, margin?: {
+    address: string;
     config: MarginResponse;
-}]) => Pool;
+} | undefined) => Pool;
 export declare const castMargin: (address: string, res: MarginResponse) => Margin;
 export declare const POOLS: Record<NETWORK, Record<string, Pool>>;
