@@ -1,7 +1,7 @@
 {
   "name": "kujira.js",
   "description": "JS Interface for the Kujira Blockchain",
-  "version": "0.8.142",
+  "version": "0.8.143",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",

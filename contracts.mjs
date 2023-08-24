@@ -21,7 +21,7 @@ const IDS = {
   },
   [TESTNET]: {
     fin: [31, 2229],
-    bow: [1925],
+    bow: [1925, 2362],
     bowStaking: [439, 855],
     orca: [994, 1577],
     uskMarket: [66, 136],
@@ -32,7 +32,7 @@ const IDS = {
     ghostMarket: [2172],
     ghostMargin: [1950],
     pilot: [1476],
-    bowMargin: [2352],
+    bowMargin: [2363],
   },
 };
 
