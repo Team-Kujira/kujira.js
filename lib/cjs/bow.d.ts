@@ -63,6 +63,27 @@ export type MarginResponse = {
     partial_liquidation_target: string;
     borrow_fee: string;
 };
+export type PositionResponse = {
+    holder: string;
+    lp_amount: string;
+    ltv: string;
+    debt_shares: {
+        amount: string;
+        denom: string;
+        ratio: string;
+    }[];
+};
+export type Position = {
+    holder: string;
+    lpAmount: BigNumber;
+    ltv: BigNumber;
+    debtShares: Record<string, {
+        amount: BigNumber;
+        denom: Denom;
+        ratio: BigNumber;
+    }>;
+};
+export declare const castPosition: (res: PositionResponse) => Position;
 export declare const castPool: (address: string, res: PoolResponse, margin?: {
     address: string;
     config: MarginResponse;

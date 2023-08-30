@@ -55,6 +55,48 @@ export type MarginResponse = {
   borrow_fee: string;
 };
 
+export type PositionResponse = {
+  holder: string;
+  lp_amount: string;
+  ltv: string;
+  debt_shares: {
+    amount: string;
+    denom: string;
+    ratio: string;
+  }[];
+};
+
+export type Position = {
+  holder: string;
+  lpAmount: BigNumber;
+  ltv: BigNumber;
+  debtShares: Record<
+    string,
+    {
+      amount: BigNumber;
+      denom: Denom;
+      ratio: BigNumber;
+    }
+  >;
+};
+
+export const castPosition = (res: PositionResponse): Position => ({
+  holder: res.holder,
+  lpAmount: BigNumber.from(res.lp_amount),
+  ltv: parseFixed(res.ltv, 18),
+  debtShares: res.debt_shares.reduce(
+    (a, v) => ({
+      ...a,
+      [v.denom]: {
+        amount: BigNumber.from(v.amount),
+        denom: Denom.from(v.denom),
+        ratio: parseFixed(v.ratio, 18),
+      },
+    }),
+    {}
+  ),
+});
+
 export const castPool = (
   address: string,
   res: PoolResponse,
