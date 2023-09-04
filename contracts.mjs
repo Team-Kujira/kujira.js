@@ -5,16 +5,16 @@ import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
 const IDS = {
   [MAINNET]: {
-    fin: [63, 56, 92, 94, 134],
-    bow: [36, 46, 54, 126],
-    bowStaking: [61, 88],
-    orca: [59, 108, 127],
+    fin: [63, 134],
+    bow: [54, 126],
+    bowStaking: [88],
+    orca: [108, 122],
     uskMarket: [73],
-    uskMarginSwap: [72, 74, 87],
+    uskMarginSwap: [87],
     uskMarginLimit: [],
     calc: [132],
     ghostVault: [106, 135, 140],
-    ghostMarket: [109, 113, 136],
+    ghostMarket: [113, 136],
     ghostMargin: [],
     pilot: [95],
     bowMargin: [],
