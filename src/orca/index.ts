@@ -2,7 +2,7 @@ import { Chain, Market, MarketType, Protocol } from "./types";
 // import * as Acala from "@acala-network/contracts/utils/AcalaAddress";
 // import * as Karura from "@acala-network/contracts/utils/KaruraAddress";
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
-import { Denom, USK } from "../denom";
+import { Denom } from "../denom";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
 export * from "./types";
@@ -48,10 +48,7 @@ const insertMarket = (
       type: MarketType.USK,
       address: v.address,
       botFirst: false,
-      activators:
-        v.config.bid_denom === USK.reference
-          ? ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"]
-          : [],
+      activators: ["kujira16a03hk5ev6963a4yj3kcrvmh4hej3w3j70kv2n"],
       bidThreshold: BigNumber.from(v.config.bid_threshold),
       maxSlot: v.config.max_slot,
       premiumRatePerSlot: parseFloat(v.config.premium_rate_per_slot),
