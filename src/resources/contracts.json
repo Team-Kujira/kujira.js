@@ -10868,6 +10868,11 @@
             "current_borrows": "1606234091"
           },
           {
+            "addr": "kujira1uq8stwcjsn63pshsf8gw9vql2smcsmvhl4kaxzvkpeelz0ne0r6sf5at69",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
             "addr": "kujira1vskf87xj8ulvazm23t534rsargv77snmphk8u73cj4pq3dupf4gs6c9l47",
             "borrow_limit": null,
             "current_borrows": "104949030"
