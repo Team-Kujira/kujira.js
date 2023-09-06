@@ -14,7 +14,7 @@ const IDS = {
     uskMarginLimit: [],
     calc: [132],
     ghostVault: [106, 135, 140],
-    ghostMarket: [113, 136],
+    ghostMarket: [136],
     ghostMargin: [],
     pilot: [95],
     bowMargin: [],
