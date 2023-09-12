@@ -8885,7 +8885,9 @@
         "address": "kujira1unjlgxr494m0f2dchkz8sy308zf8zn7wef93a7jzwhunne38pqhspm7xzk",
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-          "markets": [],
+          "markets": [
+            "kujira1fu04yc7pwaxg8gnplnmcku2vk58j54cquxy46c5jyd09c8au2jxq2nd379"
+          ],
           "bid_denom": "factory/kujira1jelmu9tdmr6hqg0d6qw4g6c9mwrexrzuryh50fwcavcpthp5m0uq20853h/urcpt",
           "collateral_denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
           "bid_threshold": "1000000000",
@@ -20751,6 +20753,11 @@
             "addr": "kujira1dwyyglafmme9hm8mek6j5et8z25m5uhy7edkrwltwumav56e8y5q3gpx8d",
             "borrow_limit": null,
             "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1fu04yc7pwaxg8gnplnmcku2vk58j54cquxy46c5jyd09c8au2jxq2nd379",
+            "borrow_limit": null,
+            "current_borrows": "0"
           }
         ]
       }
@@ -22097,6 +22104,24 @@
           "orca_addr": "kujira153h08qcf32vfaj47w9v3tu0ymqv3m52csw4wg0v5s03t2qkryfksr7kwmt",
           "collateral_denom": "ukuji",
           "collateral_oracle_denom": "KUJI",
+          "collateral_decimals": 6,
+          "max_ltv": "0.5",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.4",
+          "borrow_fee": "0.002"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 136,
+        "address": "kujira1fu04yc7pwaxg8gnplnmcku2vk58j54cquxy46c5jyd09c8au2jxq2nd379",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "vault_addr": "kujira1jelmu9tdmr6hqg0d6qw4g6c9mwrexrzuryh50fwcavcpthp5m0uq20853h",
+          "orca_addr": "kujira1unjlgxr494m0f2dchkz8sy308zf8zn7wef93a7jzwhunne38pqhspm7xzk",
+          "collateral_denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
+          "collateral_oracle_denom": "MNTA",
           "collateral_decimals": 6,
           "max_ltv": "0.5",
           "full_liquidation_threshold": "100000000",
