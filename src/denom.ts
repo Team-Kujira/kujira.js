@@ -144,6 +144,7 @@ const labels: Record<string, string> = {
   terra1z3e2e4jpk4n0xzzwlkgcfvc95pc5ldq0xcny58: "sAVAX",
   "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
     "ampWHALE",
+  "erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9": "NEOK",
 };
 
 const terra: Record<string, string> = {
@@ -360,6 +361,8 @@ export class Denom {
     }
 
     this.decimals = 6;
+    if ((this.trace?.base_denom || this.reference).startsWith("erc20/"))
+      this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("wei"))
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("-satoshi"))
