@@ -9,6 +9,7 @@ import {
   QueryClientImpl,
   QueryTotalSupplyResponse,
 } from "cosmjs-types/cosmos/bank/v1beta1/query";
+import { PageRequest } from "cosmjs-types/helpers";
 import "text-encoding";
 
 export type BankExtensionExtended = {
@@ -36,6 +37,14 @@ export function setupBankExtensionExtended(
   return {
     bank: {
       ...setupBankExtension(base).bank,
+      allBalances: async (address: string, pagination?: PageRequest) => {
+        const { balances } = await queryService.AllBalances({
+          address,
+          pagination,
+        });
+        return balances;
+      },
+
       spendableBalances: async (address: string) => {
         const { balances } = await queryService.SpendableBalances({
           address: address,
