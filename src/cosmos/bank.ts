@@ -15,7 +15,10 @@ import "text-encoding";
 export type BankExtensionExtended = {
   readonly bank: {
     readonly balance: (address: string, denom: string) => Promise<Coin>;
-    readonly allBalances: (address: string) => Promise<Coin[]>;
+    readonly allBalances: (
+      address: string,
+      pagination?: PageRequest
+    ) => Promise<Coin[]>;
     readonly spendableBalances: (address: string) => Promise<Coin[]>;
     readonly totalSupply: (
       paginationKey?: Uint8Array
