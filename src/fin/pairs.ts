@@ -81,7 +81,13 @@ export const compile =
           // Reverse as the laterly created contracts are more likely to be correct
           .reverse()
           .find(
-            (b) =>
+            (b: {
+              address: string;
+              config: {
+                fin_contract: string;
+                price_precision: { decimal_places: number };
+              };
+            }) =>
               b.config.fin_contract === v.address &&
               v.config.price_precision.decimal_places ===
                 b.config.price_precision.decimal_places &&
@@ -93,6 +99,7 @@ export const compile =
                 "kujira1ywlrdpqymukghjwhfyp2n98r49j56wej36n4l08egkdlwj4fn87ql2l2ey",
                 "kujira1dj2s8uvup63fsmpfdfpmu570es4whswp806w0p6usdamtglhwvfqd5jx40",
                 "kujira1cdy6aje8zszx5vryttkkm5rn9g2n53ltfds753fsn63m09cmhx0sgp6v6m",
+                "kujira1h356yzzk2yw7q5s26dewdgaptw05fxplgmxdxcfqcatjyurckuks6zfay8",
               ].includes(b.address)
           )?.address,
         calc: contracts[network].calc[0]?.pairs.find(

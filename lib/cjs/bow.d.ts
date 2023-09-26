@@ -1,16 +1,15 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
 import { NETWORK } from "./network";
+type Strategy = "xyk" | "lsd" | "stable";
 export type Pool = {
+    strategy: Strategy;
     address: string;
     owner: string;
     denoms: [Denom, Denom];
     pricePrecision: number;
     decimalDelta: number;
     finContract: string;
-    intervals: BigNumber[];
-    fee: BigNumber;
-    amp: BigNumber;
     margin?: Margin;
 };
 export type PoolResponse = {
@@ -21,9 +20,8 @@ export type PoolResponse = {
     };
     decimal_delta: number;
     fin_contract: string;
-    intervals: string[];
-    fee: string;
-    amp: string;
+    amp?: any;
+    adapter?: any;
 };
 export type Margin = {
     address: string;
@@ -90,3 +88,4 @@ export declare const castPool: (address: string, res: PoolResponse, margin?: {
 } | undefined) => Pool;
 export declare const castMargin: (address: string, res: MarginResponse) => Margin;
 export declare const POOLS: Record<NETWORK, Record<string, Pool>>;
+export {};

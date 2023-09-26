@@ -1,3 +1,4 @@
+import { Denom } from "../denom";
 import { NETWORK } from "../network";
 import { Pair } from "./types";
 export declare const FILTERED: string[];
@@ -25,6 +26,32 @@ type Config = {
 export declare const compile: (network: keyof typeof contracts) => (a: Record<string, Pair>, v: {
     address: string;
     config: Config;
-}) => Record<string, Pair>;
+}) => {
+    [x: string]: Pair | {
+        pool: any;
+        calc: string | undefined;
+        margin: {
+            owner: string;
+            stableDenom: Denom;
+            stableDenomAdmin: string;
+            collateralDenom: Denom;
+            oracleDenom: string;
+            maxRatio: number;
+            mintFee: number;
+            interestRate: number;
+            orcaAddress: string;
+            maxDebt: import("@ethersproject/bignumber").BigNumber;
+            liquidationThreshold: import("@ethersproject/bignumber").BigNumber;
+            liquidationRatio: number;
+            address: string;
+        } | undefined;
+        denoms: [Denom, Denom];
+        precision: import("./types").Precision;
+        decimalDelta: number;
+        multiswap: boolean;
+        queue?: string | undefined;
+        address: string;
+    };
+};
 export declare const PAIRS: Record<NETWORK, Record<string, Pair>>;
 export {};

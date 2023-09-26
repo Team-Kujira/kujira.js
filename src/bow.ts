@@ -3,16 +3,16 @@ import { Denom } from "./denom";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
+type Strategy = "xyk" | "lsd" | "stable";
+
 export type Pool = {
+  strategy: Strategy;
   address: string;
   owner: string;
   denoms: [Denom, Denom];
   pricePrecision: number;
   decimalDelta: number;
   finContract: string;
-  intervals: BigNumber[];
-  fee: BigNumber;
-  amp: BigNumber;
   margin?: Margin;
 };
 
@@ -22,9 +22,8 @@ export type PoolResponse = {
   price_precision: { decimal_places: number };
   decimal_delta: number;
   fin_contract: string;
-  intervals: string[];
-  fee: string;
-  amp: string;
+  amp?: any;
+  adapter?: any;
 };
 
 export type Margin = {
@@ -102,15 +101,13 @@ export const castPool = (
   res: PoolResponse,
   margin?: { address: string; config: MarginResponse }
 ): Pool => ({
+  strategy: "amp" in res ? "xyk" : "adapter" in res ? "lsd" : "stable",
   address,
   owner: res.owner,
   denoms: [Denom.from(res.denoms[0]), Denom.from(res.denoms[1])],
   pricePrecision: res.price_precision.decimal_places,
   decimalDelta: res.decimal_delta,
   finContract: res.fin_contract,
-  intervals: res.intervals.map((x) => parseFixed(x, 18)),
-  amp: parseFixed(res.amp, 18),
-  fee: parseFixed(res.fee, 18),
   margin: margin && castMargin(margin.address, margin.config),
 });
 
