@@ -3,7 +3,18 @@ import { Denom } from "./denom";
 import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
-type Strategy = "xyk" | "lsd" | "stable";
+export const EXCLUDED = [
+  "kujira188p624ykuepun8h8kjmcfs553mz2jgeanetyqv7l6xltdld497vqespn6c",
+  "kujira136rwqvwy3flttm9wfnc5xgnlr6mu5k8e2elgzs2hdhuwf50w3l2qp807cx",
+  "kujira1xgjefq7fs4yj29t9gk0t9esgw52s68j83yeac3ru2mefdp529qsqca7hhv",
+  "kujira167gut7dskwurax8an630m3yy2cwa2fp3kmcpdzucyy6ppg7njgyqhl7w50",
+  "kujira1ywlrdpqymukghjwhfyp2n98r49j56wej36n4l08egkdlwj4fn87ql2l2ey",
+  "kujira1dj2s8uvup63fsmpfdfpmu570es4whswp806w0p6usdamtglhwvfqd5jx40",
+  "kujira1cdy6aje8zszx5vryttkkm5rn9g2n53ltfds753fsn63m09cmhx0sgp6v6m",
+  "kujira1h356yzzk2yw7q5s26dewdgaptw05fxplgmxdxcfqcatjyurckuks6zfay8",
+];
+
+export type Strategy = "xyk" | "lsd" | "stable";
 
 export type Pool = {
   strategy: Strategy;
@@ -137,23 +148,29 @@ export const castMargin = (address: string, res: MarginResponse): Margin => ({
 
 export const POOLS: Record<NETWORK, Record<string, Pool>> = {
   [MAINNET]: contracts[MAINNET].bow.reduce(
-    (a, v) => ({
-      ...a,
-      [v.address]: castPool(v.address, v.config),
-    }),
+    (a, v) =>
+      EXCLUDED.includes(v.address)
+        ? a
+        : {
+            ...a,
+            [v.address]: castPool(v.address, v.config),
+          },
     {}
   ),
   [TESTNET]: contracts[TESTNET].bow.reduce(
-    (a, v) => ({
-      ...a,
-      [v.address]: castPool(
-        v.address,
-        v.config,
-        Object.values(contracts[TESTNET].bowMargin).find(
-          (x) => x.config.bow_contract === v.address
-        )
-      ),
-    }),
+    (a, v) =>
+      EXCLUDED.includes(v.address)
+        ? a
+        : {
+            ...a,
+            [v.address]: castPool(
+              v.address,
+              v.config,
+              Object.values(contracts[TESTNET].bowMargin).find(
+                (x) => x.config.bow_contract === v.address
+              )
+            ),
+          },
     {}
   ),
   [LOCALNET]: {},

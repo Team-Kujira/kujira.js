@@ -1,7 +1,8 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
 import { NETWORK } from "./network";
-type Strategy = "xyk" | "lsd" | "stable";
+export declare const EXCLUDED: string[];
+export type Strategy = "xyk" | "lsd" | "stable";
 export type Pool = {
     strategy: Strategy;
     address: string;
@@ -88,4 +89,3 @@ export declare const castPool: (address: string, res: PoolResponse, margin?: {
 } | undefined) => Pool;
 export declare const castMargin: (address: string, res: MarginResponse) => Margin;
 export declare const POOLS: Record<NETWORK, Record<string, Pool>>;
-export {};

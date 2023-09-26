@@ -80,6 +80,7 @@ export const compile =
         pool: contracts[network].bow
           // Reverse as the laterly created contracts are more likely to be correct
           .reverse()
+          // @ts-ignore
           .find(
             (b: {
               address: string;
