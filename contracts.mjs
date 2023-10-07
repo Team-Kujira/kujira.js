@@ -38,7 +38,7 @@ const IDS = {
     ghostMarket: [2172],
     ghostMargin: [1950],
     pilot: [1476],
-    bowMargin: [2363],
+    bowMargin: [2464],
   },
 };
 
