@@ -9373,7 +9373,9 @@
                 "address": "kujira1ch03l6pvwt8tz6p5egguw5sd9pfqk32vlfgnnxpy6lrz6tau946s6kgp6y",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira1t0jhnuryzxtyqf0pyt95nu9x7kvdzx2tc2r0s3mtzlpjd0k0rr4qeak6e4"
+                    ],
                     "bid_denom": "factory/kujira1sr3tceueht9tp6tzvxpjvwkfr8uk87edwwe24jt7ug7xn85za5tqq30tf7/urcpt",
                     "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
                     "bid_threshold": "1000000000",
@@ -21320,7 +21322,13 @@
                     }
                 },
                 "pairs": false,
-                "markets": []
+                "markets": [
+                    {
+                        "addr": "kujira1t0jhnuryzxtyqf0pyt95nu9x7kvdzx2tc2r0s3mtzlpjd0k0rr4qeak6e4",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    }
+                ]
             }
         ],
         "ghostMarket": [
@@ -22701,6 +22709,24 @@
                     "orca_addr": "kujira1wa0cls9sf9x0svxajl2n8q0fyrfc4q377lv4semtwger4j8aacfqj25ujf",
                     "collateral_denom": "ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602",
                     "collateral_oracle_denom": "STARS",
+                    "collateral_decimals": 6,
+                    "max_ltv": "0.5",
+                    "full_liquidation_threshold": "100000000",
+                    "partial_liquidation_target": "0.4",
+                    "borrow_fee": "0.002"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 136,
+                "address": "kujira1t0jhnuryzxtyqf0pyt95nu9x7kvdzx2tc2r0s3mtzlpjd0k0rr4qeak6e4",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "vault_addr": "kujira1sr3tceueht9tp6tzvxpjvwkfr8uk87edwwe24jt7ug7xn85za5tqq30tf7",
+                    "orca_addr": "kujira1ch03l6pvwt8tz6p5egguw5sd9pfqk32vlfgnnxpy6lrz6tau946s6kgp6y",
+                    "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+                    "collateral_oracle_denom": "USK",
                     "collateral_decimals": 6,
                     "max_ltv": "0.5",
                     "full_liquidation_threshold": "100000000",
