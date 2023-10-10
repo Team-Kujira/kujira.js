@@ -6,17 +6,17 @@ import {
 } from "@cosmjs/stargate/build/modules";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import {} from "@cosmjs/stargate/build/modules/distribution/messages";
-import { Tendermint34Client } from "@cosmjs/tendermint-rpc";
+import { TendermintClient } from "@cosmjs/tendermint-rpc";
 import { AllianceExtension, setupAllianceExtension } from "./alliance";
 import {
   BankExtensionExtended,
   setupBankExtensionExtended,
 } from "./cosmos/bank";
 import { GovExtension, setupGovExtension } from "./cosmos/gov";
-import { setupStakingExtension, StakingExtension } from "./cosmos/staking";
+import { StakingExtension, setupStakingExtension } from "./cosmos/staking";
 import {
-  setupWasmExtensionExtended,
   WasmExtensionExtended,
+  setupWasmExtensionExtended,
 } from "./cosmwasm/wasm";
 import { GravityExtension, setupGravityExtension } from "./gravity/v1";
 import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
@@ -47,7 +47,7 @@ export type KujiraQueryClient = s.QueryClient &
 export const kujiraQueryClient = ({
   client,
 }: {
-  client: Tendermint34Client;
+  client: TendermintClient;
 }): KujiraQueryClient =>
   s.QueryClient.withExtensions(
     client,
