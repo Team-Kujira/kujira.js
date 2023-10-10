@@ -6,7 +6,7 @@ import {
 } from "@cosmjs/stargate/build/modules";
 import { AuthzExtension } from "@cosmjs/stargate/build/modules/authz/queries";
 import {} from "@cosmjs/stargate/build/modules/distribution/messages";
-import { TendermintClient } from "@cosmjs/tendermint-rpc";
+import { Tendermint37Client } from "@cosmjs/tendermint-rpc";
 import { AllianceExtension, setupAllianceExtension } from "./alliance";
 import {
   BankExtensionExtended,
@@ -47,7 +47,7 @@ export type KujiraQueryClient = s.QueryClient &
 export const kujiraQueryClient = ({
   client,
 }: {
-  client: TendermintClient;
+  client: Tendermint37Client;
 }): KujiraQueryClient =>
   s.QueryClient.withExtensions(
     client,
