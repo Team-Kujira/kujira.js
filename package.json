@@ -1,7 +1,7 @@
 {
   "name": "kujira.js",
   "description": "JS Interface for the Kujira Blockchain",
-  "version": "0.8.172",
+  "version": "0.9.1",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -15,9 +15,9 @@
     "contracts": "node contracts.mjs"
   },
   "dependencies": {
-    "@cosmjs/cosmwasm-stargate": "^0.30.1",
+    "@cosmjs/cosmwasm-stargate": "^0.31.1",
     "@cosmjs/launchpad": "^0.27.1",
-    "@cosmjs/stargate": "^0.30.1",
+    "@cosmjs/stargate": "^0.31.1",
     "@ethersproject/bignumber": "^5.7.0",
     "@injectivelabs/chain-api": "1.9.9",
     "@injectivelabs/core-proto-ts": "^0.0.18",
