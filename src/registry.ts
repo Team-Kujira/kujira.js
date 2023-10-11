@@ -12,6 +12,7 @@ import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/para
 import { MsgSoftwareUpgrade } from "cosmjs-types/cosmos/upgrade/v1beta1/tx";
 import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
 
+import { MsgExecLegacyContent } from "@injectivelabs/core-proto-ts/cjs/cosmos/gov/v1/tx";
 import {
   ClearAdminProposal,
   ExecuteContractProposal,
@@ -68,6 +69,7 @@ const proposalTypes = [
   ["/kujira.scheduler.UpdateHookProposal", UpdateHookProposal],
   ["/kujira.scheduler.DeleteHookProposal", DeleteHookProposal],
   ["/cosmos.gov.v1beta1.TextProposal", TextProposal],
+  ["/cosmos.gov.v1.MsgExecLegacyContent", MsgExecLegacyContent],
   ["/ibc.core.client.v1.ClientUpdateProposal", ClientUpdateProposal],
 ];
 
