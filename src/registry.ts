@@ -9,7 +9,9 @@ import { BaseAccount } from "cosmjs-types/cosmos/auth/v1beta1/auth";
 import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1beta1/distribution";
 import { TextProposal } from "cosmjs-types/cosmos/gov/v1beta1/gov";
 import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
+import { MsgSoftwareUpgrade } from "cosmjs-types/cosmos/upgrade/v1beta1/tx";
 import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
+
 import {
   ClearAdminProposal,
   ExecuteContractProposal,
@@ -61,6 +63,7 @@ const proposalTypes = [
     UpdateInstantiateConfigProposal,
   ],
   ["/cosmos.upgrade.v1beta1.SoftwareUpgradeProposal", SoftwareUpgradeProposal],
+  ["/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade", MsgSoftwareUpgrade],
   ["/kujira.scheduler.CreateHookProposal", CreateHookProposal],
   ["/kujira.scheduler.UpdateHookProposal", UpdateHookProposal],
   ["/kujira.scheduler.DeleteHookProposal", DeleteHookProposal],
