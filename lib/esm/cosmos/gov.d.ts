@@ -1,7 +1,7 @@
-import { QueryClient, GovParamsType, GovProposalId } from "@cosmjs/stargate";
-import { QueryDepositResponse, QueryDepositsResponse, QueryParamsResponse, QueryProposalResponse, QueryProposalsResponse, QueryTallyResultResponse, QueryVoteResponse, QueryVotesResponse } from "cosmjs-types/cosmos/gov/v1beta1/query";
+import { GovParamsType, GovProposalId, QueryClient } from "@cosmjs/stargate";
 import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination";
-import { ProposalStatus } from "cosmjs-types/cosmos/gov/v1beta1/gov";
+import { ProposalStatus } from "cosmjs-types/cosmos/gov/v1/gov";
+import { QueryDepositResponse, QueryDepositsResponse, QueryParamsResponse, QueryProposalResponse, QueryProposalsResponse, QueryTallyResultResponse, QueryVoteResponse, QueryVotesResponse } from "cosmjs-types/cosmos/gov/v1/query";
 export interface GovExtension {
     readonly gov: {
         readonly params: (parametersType: GovParamsType) => Promise<QueryParamsResponse>;
