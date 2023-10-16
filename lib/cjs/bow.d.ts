@@ -63,6 +63,7 @@ export type MarginResponse = {
     borrow_fee: string;
 };
 export type PositionResponse = {
+    idx: string;
     holder: string;
     lp_amount: string;
     ltv: string;
@@ -73,6 +74,7 @@ export type PositionResponse = {
     }[];
 };
 export type Position = {
+    idx: string;
     holder: string;
     lpAmount: BigNumber;
     ltv: BigNumber;

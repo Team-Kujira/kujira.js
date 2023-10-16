@@ -66,6 +66,7 @@ export type MarginResponse = {
 };
 
 export type PositionResponse = {
+  idx: string;
   holder: string;
   lp_amount: string;
   ltv: string;
@@ -77,6 +78,7 @@ export type PositionResponse = {
 };
 
 export type Position = {
+  idx: string;
   holder: string;
   lpAmount: BigNumber;
   ltv: BigNumber;
@@ -91,6 +93,7 @@ export type Position = {
 };
 
 export const castPosition = (res: PositionResponse): Position => ({
+  idx: res.idx,
   holder: res.holder,
   lpAmount: BigNumber.from(res.lp_amount),
   ltv: parseFixed(res.ltv, 18),
