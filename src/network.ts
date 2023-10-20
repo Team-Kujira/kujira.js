@@ -41,7 +41,7 @@ export const RPCS: Record<string, string[]> = {
     // "https://rpc-kujira.whispernode.com",
     // "https://rpc.kaiyo.kujira.setten.io",
   ],
-  [POND]: ["http://localhost:10157"],
+  [POND]: ["http://127.0.0.1:10157"],
   "gravity-bridge-3": [
     "https://gravity-rpc.synergynodes.com",
     "https://gravitybridge.rpc.kjnodes.com",
@@ -122,8 +122,8 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
   [POND]: chainInfo(
     POND,
     "Kujira Pond",
-    "http://localhost:10157",
-    "http://localhost:10117"
+    "http://127.0.0.1:10157",
+    "http://127.0.0.1:10117"
   ),
   [MAINNET]: chainInfo(
     MAINNET,
