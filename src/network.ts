@@ -41,7 +41,7 @@ export const RPCS: Record<string, string[]> = {
     // "https://rpc-kujira.whispernode.com",
     // "https://rpc.kaiyo.kujira.setten.io",
   ],
-  [POND]: ["http://localhost:26657"],
+  [POND]: ["http://localhost:10157"],
   "gravity-bridge-3": [
     "https://gravity-rpc.synergynodes.com",
     "https://gravitybridge.rpc.kjnodes.com",
