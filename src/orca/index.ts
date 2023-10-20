@@ -3,7 +3,7 @@ import { Chain, Market, MarketType, Protocol } from "./types";
 // import * as Karura from "@acala-network/contracts/utils/KaruraAddress";
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
-import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
+import { MAINNET, NETWORK, POND, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
 export * from "./types";
 
@@ -64,7 +64,7 @@ const insertMarket = (
 export const MARKETS = {
   [MAINNET]: Object.values(contracts[MAINNET].orca).reduce(insertMarket, {}),
   [TESTNET]: Object.values(contracts[TESTNET].orca).reduce(insertMarket, {}),
-  [LOCALNET]: {},
+  [POND]: {},
 };
 
 export const getMarkets = (network?: NETWORK): Array<Market> => {

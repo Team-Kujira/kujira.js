@@ -5,6 +5,6 @@ export declare const FILTERED: string[];
 export declare const MARKETS: {
     "kaiyo-1": Record<string, Market>;
     "harpoon-4": Record<string, Market>;
-    localkujira: {};
+    "pond-1": {};
 };
 export declare const getMarkets: (network?: NETWORK) => Array<Market>;

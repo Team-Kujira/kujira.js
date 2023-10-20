@@ -1,6 +1,6 @@
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
-import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
+import { MAINNET, NETWORK, POND, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
 export const EXCLUDED = [
@@ -176,5 +176,5 @@ export const POOLS: Record<NETWORK, Record<string, Pool>> = {
           },
     {}
   ),
-  [LOCALNET]: {},
+  [POND]: {},
 };

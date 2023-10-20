@@ -1,6 +1,6 @@
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "./denom";
-import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
+import { MAINNET, NETWORK, POND, TESTNET } from "./network";
 import { KujiraQueryClient } from "./queryClient";
 import contracts from "./resources/contracts.json";
 
@@ -84,7 +84,7 @@ const compile = (
 export const MARKETS: Record<NETWORK, Record<string, Market>> = {
   [MAINNET]: contracts["kaiyo-1"].uskMarket.reduce(compile, {}),
   [TESTNET]: contracts["harpoon-4"].uskMarket.reduce(compile, {}),
-  [LOCALNET]: {},
+  [POND]: {},
 };
 
 export type PositionResponse = {

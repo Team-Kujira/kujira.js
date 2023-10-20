@@ -1,7 +1,7 @@
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { divToNumber, mulDec } from "./bignumber";
 import { Denom } from "./denom";
-import { LOCALNET, MAINNET, NETWORK, TESTNET } from "./network";
+import { MAINNET, NETWORK, POND, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 
 export const FILTERED = [
@@ -264,7 +264,7 @@ export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
           },
     {}
   ),
-  [LOCALNET]: {},
+  [POND]: {},
 };
 
 export const MARKETS: Record<NETWORK, Record<string, Market>> = {
@@ -300,5 +300,5 @@ export const MARKETS: Record<NETWORK, Record<string, Market>> = {
         : a,
     {}
   ),
-  [LOCALNET]: {},
+  [POND]: {},
 };

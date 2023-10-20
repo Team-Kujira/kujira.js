@@ -1,5 +1,5 @@
 import { Denom } from "../denom";
-import { LOCALNET, MAINNET, NETWORK, TESTNET } from "../network";
+import { MAINNET, NETWORK, POND, TESTNET } from "../network";
 import * as usk from "../usk";
 import { Pair } from "./types";
 
@@ -120,5 +120,5 @@ export const compile =
 export const PAIRS: Record<NETWORK, Record<string, Pair>> = {
   [MAINNET]: contracts["kaiyo-1"].fin.reduce(compile("kaiyo-1"), {}),
   [TESTNET]: contracts["harpoon-4"].fin.reduce(compile("harpoon-4"), {}),
-  [LOCALNET]: {},
+  [POND]: {},
 };

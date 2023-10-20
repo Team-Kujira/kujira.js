@@ -2,14 +2,14 @@ import { ChainInfo, FeeCurrency } from "@keplr-wallet/types";
 
 export const MAINNET = "kaiyo-1";
 export const TESTNET = "harpoon-4";
-export const LOCALNET = "localkujira";
+export const POND = "pond-1";
 
-export type NETWORK = typeof MAINNET | typeof TESTNET | typeof LOCALNET;
+export type NETWORK = typeof MAINNET | typeof TESTNET | typeof POND;
 
 export const NETWORKS = {
   [TESTNET]: "Testnet",
   [MAINNET]: "Mainnet",
-  [LOCALNET]: "Local",
+  [POND]: "Pond",
 };
 
 export const RPCS: Record<string, string[]> = {
@@ -41,7 +41,7 @@ export const RPCS: Record<string, string[]> = {
     // "https://rpc-kujira.whispernode.com",
     // "https://rpc.kaiyo.kujira.setten.io",
   ],
-  [LOCALNET]: ["http://localhost:26657"],
+  [POND]: ["http://localhost:26657"],
   "gravity-bridge-3": [
     "https://gravity-rpc.synergynodes.com",
     "https://gravitybridge.rpc.kjnodes.com",
@@ -119,11 +119,11 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
       },
     ]
   ),
-  [LOCALNET]: chainInfo(
-    LOCALNET,
-    "Kujira Local",
-    "http://localhost:26657",
-    "http://localhost:1317"
+  [POND]: chainInfo(
+    POND,
+    "Kujira Pond",
+    "http://localhost:10157",
+    "http://localhost:10117"
   ),
   [MAINNET]: chainInfo(
     MAINNET,
