@@ -1,3 +1,4 @@
+export * from "./cw3";
 export * from "./keplr";
 export * from "./leap";
 export * from "./leapSnap";
