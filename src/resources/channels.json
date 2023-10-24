@@ -589,6 +589,20 @@
       "channelId": "channel-46"
     },
     {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-316"
+      },
+      "connectionHops": [
+        "connection-43"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-47"
+    },
+    {
       "state": 1,
       "ordering": 1,
       "counterparty": {
@@ -939,6 +953,20 @@
       "version": "ics20-1",
       "portId": "transfer",
       "channelId": "channel-114"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-4"
+      },
+      "connectionHops": [
+        "connection-119"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-115"
     },
     {
       "state": 3,

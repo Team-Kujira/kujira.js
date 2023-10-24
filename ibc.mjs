@@ -64,11 +64,11 @@ const runTokens = async (rpc) => {
     });
 };
 
-await runTokens("https://test-rpc-kujira.mintthemoon.xyz");
-await runTokens("https://rpc-kujira.mintthemoon.xyz");
+await runTokens("https://kujira-testnet-rpc.polkachu.com");
+await runTokens("https://kujira-rpc.polkachu.com");
 
-const testnet = await runConnections("https://test-rpc-kujira.mintthemoon.xyz");
-const mainnet = await runConnections("https://rpc-kujira.whispernode.com");
+const testnet = await runConnections("https://kujira-testnet-rpc.polkachu.com");
+const mainnet = await runConnections("https://kujira-rpc.polkachu.com");
 
 fs.writeFileSync(
   "./src/resources/channels.json",
