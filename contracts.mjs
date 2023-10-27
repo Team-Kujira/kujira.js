@@ -29,7 +29,7 @@ const IDS = {
     fin: [31, 2229],
     bow: [1925, 2362],
     bowStaking: [439, 855],
-    orca: [994, 1577],
+    orca: [1952],
     uskMarket: [66, 136],
     uskMarginSwap: [131, 133],
     uskMarginLimit: [1271, 1272],
