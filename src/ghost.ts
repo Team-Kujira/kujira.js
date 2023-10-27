@@ -88,23 +88,18 @@ export const castPosition = (res: {
   collateralAmount: BigNumber.from(res.collateral_amount),
 });
 
-export type Interest =
-  | {
-      type: "rates";
-      value: [BigNumber, BigNumber][];
+export type Interest = {
+  type: "curve";
+  value: [
+    BigNumber,
+    {
+      linear: {
+        start: [BigNumber, BigNumber];
+        end: [BigNumber, BigNumber];
+      };
     }
-  | {
-      type: "curve";
-      value: [
-        BigNumber,
-        {
-          linear: {
-            start: [BigNumber, BigNumber];
-            end: [BigNumber, BigNumber];
-          };
-        }
-      ][];
-    };
+  ][];
+};
 
 export type Vault = {
   address: string;
@@ -154,19 +149,17 @@ export const castVault = (
     decimals: number;
     receipt_denom: string;
     debt_token_denom: string;
-    interest:
-      | { utilization_to_rate: [[string, string]] }
-      | {
-          utilization_to_curve: [
-            string,
-            {
-              linear: {
-                start: [string, string];
-                end: [string, string];
-              };
-            }
-          ][];
-        };
+    interest: {
+      utilization_to_curve: [
+        string,
+        {
+          linear: {
+            start: [string, string];
+            end: [string, string];
+          };
+        }
+      ][];
+    };
   },
   markets: {
     addr: string;
@@ -191,47 +184,34 @@ export const castVault = (
   interest: castInterest(raw.interest),
 });
 
-const castInterest = (
-  raw:
-    | { utilization_to_rate: [[string, string]] }
-    | {
-        utilization_to_curve: [
-          string,
-          {
-            linear: {
-              start: [string, string];
-              end: [string, string];
-            };
-          }
-        ][];
-      }
-): Interest =>
-  "utilization_to_rate" in raw
-    ? {
-        type: "rates",
-        value: raw.utilization_to_rate.map(([a, b]) => [
-          parseFixed(a, 18),
-          parseFixed(b, 18),
-        ]),
-      }
-    : {
-        type: "curve",
-        value: raw.utilization_to_curve.map((x) => [
-          parseFixed(x[0], 18),
-          {
-            linear: {
-              start: [
-                parseFixed(x[1].linear.start[0], 18),
-                parseFixed(x[1].linear.start[1], 18),
-              ],
-              end: [
-                parseFixed(x[1].linear.end[0], 18),
-                parseFixed(x[1].linear.end[1], 18),
-              ],
-            },
-          },
-        ]),
+const castInterest = (raw: {
+  utilization_to_curve: [
+    string,
+    {
+      linear: {
+        start: [string, string];
+        end: [string, string];
       };
+    }
+  ][];
+}): Interest => ({
+  type: "curve",
+  value: raw.utilization_to_curve.map((x) => [
+    parseFixed(x[0], 18),
+    {
+      linear: {
+        start: [
+          parseFixed(x[1].linear.start[0], 18),
+          parseFixed(x[1].linear.start[1], 18),
+        ],
+        end: [
+          parseFixed(x[1].linear.end[0], 18),
+          parseFixed(x[1].linear.end[1], 18),
+        ],
+      },
+    },
+  ]),
+});
 
 export const VAULTS: Record<NETWORK, Record<string, Vault>> = {
   [MAINNET]: contracts[MAINNET].ghostVault.reduce(

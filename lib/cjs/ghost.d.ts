@@ -49,9 +49,6 @@ export declare const castPosition: (res: {
     collateral_amount: number;
 }) => Position;
 export type Interest = {
-    type: "rates";
-    value: [BigNumber, BigNumber][];
-} | {
     type: "curve";
     value: [
         BigNumber,
@@ -98,8 +95,6 @@ export declare const castVault: (address: string, raw: {
     receipt_denom: string;
     debt_token_denom: string;
     interest: {
-        utilization_to_rate: [[string, string]];
-    } | {
         utilization_to_curve: [
             string,
             {
