@@ -1,4 +1,5 @@
 import { sha256 } from "@cosmjs/crypto";
+import { assets } from "chain-registry";
 import { MAINNET, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
 import ibc from "./resources/tokens.json";
@@ -7,6 +8,9 @@ const ghostVaults = [
   ...contracts[MAINNET].ghostVault,
   ...contracts[TESTNET].ghostVault,
 ];
+
+const wormholeAssets =
+  assets.find((x) => x.chain_name === "gateway")?.assets || [];
 
 const labels: Record<string, string> = {
   ulp: "LP ",
@@ -148,8 +152,7 @@ const labels: Record<string, string> = {
     "ampWHALE",
   "erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9": "NEOK",
 
-  "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4":
-    "whUSDC",
+  ...wormholeAssets.reduce((a, v) => ({ ...a, [v.base]: `wh${v.symbol}` }), {}),
 };
 
 const terra: Record<string, string> = {
@@ -366,6 +369,15 @@ export class Denom {
     }
 
     this.decimals = 6;
+
+    // wormhole
+    if (this.trace?.path === `transfer/channel-113`) {
+      this.decimals =
+        wormholeAssets
+          .find((a) => a.base === this.trace?.base_denom)
+          ?.denom_units.at(-1)?.exponent || this.decimals;
+    }
+
     if ((this.trace?.base_denom || this.reference).startsWith("erc20/"))
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("wei"))
