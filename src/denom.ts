@@ -67,6 +67,7 @@ const labels: Record<string, string> = {
     "USK",
   "factory/kujira1v3hcejcerf0d9em9ds8rpyyq68vx3u9u4k0fvw4e9hacdy8nn6pqx4urcw/urcpt":
     "cMNTA",
+
   "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
   gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "gPAXG",
   gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "gPSTAKE",
@@ -146,6 +147,9 @@ const labels: Record<string, string> = {
   "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
     "ampWHALE",
   "erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9": "NEOK",
+
+  "factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4":
+    "whUSDC",
 };
 
 const terra: Record<string, string> = {
