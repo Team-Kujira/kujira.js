@@ -14,12 +14,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/types@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "@chain-registry/types@npm:0.16.0"
+"@chain-registry/types@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@chain-registry/types@npm:0.17.0"
   dependencies:
     "@babel/runtime": ^7.21.0
-  checksum: 494c42f494583cd9aa05c0088191864591ac28909c0323fd0d0d6922b2866c3690c59558391ac3843778275ad308845a791019081d0f65d11d72e0d64071d345
+  checksum: 4a36ecb2b50da88af79bdb825fcfef9f6acebb4dd02cc4d09caacd10741006f9aebbf0672284caa5519261221b2736ab52e4ed16a126a68f4f64cbb931872661
   languageName: node
   linkType: hard
 
@@ -521,13 +521,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.15.0":
-  version: 1.15.0
-  resolution: "chain-registry@npm:1.15.0"
+"chain-registry@npm:^1.20.0":
+  version: 1.20.0
+  resolution: "chain-registry@npm:1.20.0"
   dependencies:
     "@babel/runtime": ^7.21.0
-    "@chain-registry/types": ^0.16.0
-  checksum: b52766106723b20c9ecdc9e33f3d5bdeca27e973d3b2787125a8ddb0e0d8fd275dc035c4d1f65f6b7ca793748285dd371bd872c68f5531460c8f2e30405fdfdb
+    "@chain-registry/types": ^0.17.0
+  checksum: 0b28cea3503a9a0f3028bdeb9dd5922fc6be10d112aa0b45218d0167e1d1c68d736d14d26110b33321ba99aa5abe4a3cc6473758307a149aceeea51f768ba5d3
   languageName: node
   linkType: hard
 
@@ -751,7 +751,7 @@ __metadata:
     "@injectivelabs/core-proto-ts": ^0.0.18
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
-    chain-registry: ^1.15.0
+    chain-registry: ^1.20.0
     cosmjs-types: ^0.8.0
     long: ^4.0.0
     react: ^18.2.0
