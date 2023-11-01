@@ -20,7 +20,7 @@ import {
   MsgSubmitProposal,
   MsgVote,
   MsgVoteWeighted,
-} from "cosmjs-types/cosmos/gov/v1beta1/tx";
+} from "cosmjs-types/cosmos/gov/v1/tx";
 import {
   MsgBeginRedelegate,
   MsgCreateValidator,
