@@ -99,19 +99,19 @@ export const msg = {
   },
   gov: {
     msgDeposit: (i: MsgDeposit) => ({
-      typeUrl: "/cosmos.gov.v1beta1.MsgDeposit",
+      typeUrl: "/cosmos.gov.v1.MsgDeposit",
       value: MsgDeposit.fromJSON(i),
     }),
     msgSubmitProposal: (i: MsgSubmitProposal) => ({
-      typeUrl: "/cosmos.gov.v1beta1.MsgSubmitProposal",
+      typeUrl: "/cosmos.gov.v1.MsgSubmitProposal",
       value: MsgSubmitProposal.fromPartial(i),
     }),
     msgVote: (i: MsgVote) => ({
-      typeUrl: "/cosmos.gov.v1beta1.MsgVote",
+      typeUrl: "/cosmos.gov.v1.MsgVote",
       value: MsgVote.fromJSON(i),
     }),
     msgVoteWeighted: (i: MsgVoteWeighted) => ({
-      typeUrl: "/cosmos.gov.v1beta1.MsgVoteWeighted",
+      typeUrl: "/cosmos.gov.v1.MsgVoteWeighted",
       value: MsgVoteWeighted.fromPartial(i),
     }),
   },
