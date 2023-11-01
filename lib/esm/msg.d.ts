@@ -143,11 +143,11 @@ export declare const msg: {
             value: MsgUpdateAdmin;
         };
         msgInstantiateContract2: (i: MsgInstantiateContract2) => {
-            typeUel: string;
+            typeUrl: string;
             value: MsgInstantiateContract2;
         };
         msgUpdateInstantiateConfig: (i: MsgUpdateInstantiateConfig) => {
-            typeUel: string;
+            typeUrl: string;
             value: MsgUpdateInstantiateConfig;
         };
     };

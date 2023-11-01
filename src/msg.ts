@@ -172,11 +172,11 @@ export const msg = {
       value: MsgUpdateAdmin.fromPartial(i),
     }),
     msgInstantiateContract2: (i: MsgInstantiateContract2) => ({
-      typeUel: "/cosmwasm.wasm.v1.MsgInstantiateContract2",
+      typeUrl: "/cosmwasm.wasm.v1.MsgInstantiateContract2",
       value: MsgInstantiateContract2.fromPartial(i),
     }),
     msgUpdateInstantiateConfig: (i: MsgUpdateInstantiateConfig) => ({
-      typeUel: "/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig",
+      typeUrl: "/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig",
       value: MsgUpdateInstantiateConfig.fromPartial(i),
     }),
   },
