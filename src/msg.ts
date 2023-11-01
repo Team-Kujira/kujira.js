@@ -33,9 +33,11 @@ import {
   MsgClearAdmin,
   MsgExecuteContract,
   MsgInstantiateContract,
+  MsgInstantiateContract2,
   MsgMigrateContract,
   MsgStoreCode,
   MsgUpdateAdmin,
+  MsgUpdateInstantiateConfig,
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
 import * as alliance from "./alliance";
@@ -168,6 +170,14 @@ export const msg = {
     msgUpdateAdmin: (i: MsgUpdateAdmin) => ({
       typeUrl: "/cosmwasm.wasm.v1.MsgUpdateAdmin",
       value: MsgUpdateAdmin.fromPartial(i),
+    }),
+    msgInstantiateContract2: (i: MsgInstantiateContract2) => ({
+      typeUel: "/cosmwasm.wasm.v1.MsgInstantiateContract2",
+      value: MsgInstantiateContract2.fromPartial(i),
+    }),
+    msgUpdateInstantiateConfig: (i: MsgUpdateInstantiateConfig) => ({
+      typeUel: "/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig",
+      value: MsgUpdateInstantiateConfig.fromPartial(i),
     }),
   },
   ibc: {
