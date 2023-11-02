@@ -3,6 +3,7 @@ import { MsgMultiSend, MsgSend } from "cosmjs-types/cosmos/bank/v1beta1/tx";
 import { MsgFundCommunityPool, MsgSetWithdrawAddress, MsgWithdrawDelegatorReward, MsgWithdrawValidatorCommission } from "cosmjs-types/cosmos/distribution/v1beta1/tx";
 import { MsgGrantAllowance, MsgRevokeAllowance } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
 import { MsgDeposit, MsgSubmitProposal, MsgVote, MsgVoteWeighted } from "cosmjs-types/cosmos/gov/v1/tx";
+import * as govV1Beta1 from "cosmjs-types/cosmos/gov/v1beta1/tx";
 import { MsgBeginRedelegate, MsgCreateValidator, MsgDelegate, MsgEditValidator, MsgUndelegate } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
 import { MsgClearAdmin, MsgExecuteContract, MsgInstantiateContract, MsgInstantiateContract2, MsgMigrateContract, MsgStoreCode, MsgUpdateAdmin, MsgUpdateInstantiateConfig } from "cosmjs-types/cosmwasm/wasm/v1/tx";
@@ -71,6 +72,10 @@ export declare const msg: {
             typeUrl: string;
             value: MsgDeposit;
         };
+        msgDepositBeta: (i: govV1Beta1.MsgDeposit) => {
+            typeUrl: string;
+            value: govV1Beta1.MsgDeposit;
+        };
         msgSubmitProposal: (i: MsgSubmitProposal) => {
             typeUrl: string;
             value: MsgSubmitProposal;
@@ -78,6 +83,10 @@ export declare const msg: {
         msgVote: (i: MsgVote) => {
             typeUrl: string;
             value: MsgVote;
+        };
+        msgVoteBeta: (i: govV1Beta1.MsgVote) => {
+            typeUrl: string;
+            value: govV1Beta1.MsgVote;
         };
         msgVoteWeighted: (i: MsgVoteWeighted) => {
             typeUrl: string;

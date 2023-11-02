@@ -21,6 +21,7 @@ import {
   MsgVote,
   MsgVoteWeighted,
 } from "cosmjs-types/cosmos/gov/v1/tx";
+import * as govV1Beta1 from "cosmjs-types/cosmos/gov/v1beta1/tx";
 import {
   MsgBeginRedelegate,
   MsgCreateValidator,
@@ -104,6 +105,10 @@ export const msg = {
       typeUrl: "/cosmos.gov.v1.MsgDeposit",
       value: MsgDeposit.fromJSON(i),
     }),
+    msgDepositBeta: (i: govV1Beta1.MsgDeposit) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgDeposit",
+      value: govV1Beta1.MsgDeposit.fromJSON(i),
+    }),
     msgSubmitProposal: (i: MsgSubmitProposal) => ({
       typeUrl: "/cosmos.gov.v1.MsgSubmitProposal",
       value: MsgSubmitProposal.fromPartial(i),
@@ -111,6 +116,10 @@ export const msg = {
     msgVote: (i: MsgVote) => ({
       typeUrl: "/cosmos.gov.v1.MsgVote",
       value: MsgVote.fromJSON(i),
+    }),
+    msgVoteBeta: (i: govV1Beta1.MsgVote) => ({
+      typeUrl: "/cosmos.gov.v1beta1.MsgVote",
+      value: govV1Beta1.MsgVote.fromJSON(i),
     }),
     msgVoteWeighted: (i: MsgVoteWeighted) => ({
       typeUrl: "/cosmos.gov.v1.MsgVoteWeighted",
