@@ -46,6 +46,7 @@ const labels: Record<string, string> = {
   "yieldeth-wei": "yieldETH",
   aevmos: "EVMOS",
   afet: "FET",
+  adydx: "DYDX",
   demo: "DEMO",
   local: "LOCAL",
   swth: "SWTH",
@@ -415,6 +416,7 @@ export class Denom {
     if (this.symbol === "MOBX") this.decimals = 9;
     if (this.symbol === "ARCH") this.decimals = 18;
     if (this.symbol === "RIO") this.decimals = 18;
+    if (this.symbol === "DYDX") this.decimals = 18;
     if (
       this.underlying?.length === 2 &&
       this.underlying[0].decimals === this.underlying[1].decimals
