@@ -42,6 +42,92 @@ const IDS = {
   },
 };
 
+const fetchId = (client, protocol) => async (id) => ({
+  id,
+  contracts: await fetchContracts(client)(id).then(async (res) => {
+    return Promise.all(res.map(fetchContractData(client, protocol, id)));
+  }),
+});
+
+const fetchProtocol =
+  (client) =>
+  async ([protocol, ids]) => {
+    return {
+      protocol,
+      ids: await Promise.all(ids.map(fetchId(client, protocol))),
+    };
+  };
+
+const fetchContractData = (client, protocol, id) => async (address) => {
+  return {
+    address,
+    config:
+      protocol === "ghostVault"
+        ? {
+            ...(await client.wasm
+              .queryContractSmart(address, {
+                config: {},
+              })
+              .catch(() => ({}))),
+            interest:
+              id === 106
+                ? await client.wasm
+                    .queryContractRaw(
+                      address,
+                      Uint8Array.from([115, 116, 97, 116, 101])
+                    )
+                    .then(({ data }) =>
+                      JSON.parse(Buffer.from(data).toString())
+                    )
+                    .then(({ utilization_to_rate }) => ({
+                      utilization_to_rate,
+                    }))
+                : await client.wasm.queryContractSmart(address, {
+                    interest_params: {},
+                  }),
+          }
+        : await client.wasm
+            .queryContractSmart(address, {
+              config: {},
+            })
+            .catch(() => ({})),
+    pairs:
+      protocol === "calc" &&
+      (await client.wasm
+        .queryContractSmart(address, {
+          get_pairs: {},
+        })
+        .then(({ pairs }) => pairs)),
+    markets:
+      protocol === "ghostVault" &&
+      (await client.wasm
+        .queryContractSmart(address, {
+          markets: {},
+        })
+        .then(({ markets }) => markets)
+        .catch((err) => {
+          console.log(err);
+          return null;
+        })),
+  };
+};
+
+const fetchContracts = (client) => async (id, pageRequest) => {
+  const { contracts, pagination } = await client.wasm.listContractsByCodeId(
+    id,
+    pageRequest
+  );
+  return pagination.nextKey.length
+    ? [
+        ...contracts,
+        ...(await fetchContracts(client)(
+          id,
+          PageRequest.fromPartial({ key: pagination.nextKey })
+        )),
+      ]
+    : contracts;
+};
+
 const res = await Promise.all(
   Object.entries(IDS).map(async ([chain, protocols]) => {
     const rpc = RPCS[chain][0];
@@ -56,81 +142,7 @@ const res = await Promise.all(
     return {
       chain,
       protocols: await Promise.all(
-        Object.entries(protocols).map(async ([protocol, ids]) => {
-          return {
-            protocol,
-            ids: await Promise.all(
-              ids.map(async (id) => ({
-                id,
-                contracts: await client.wasm
-                  .listContractsByCodeId(
-                    id,
-                    PageRequest.fromPartial({ limit: 100000 })
-                  )
-                  .then((x) =>
-                    Promise.all(
-                      x.contracts.map(async (address) => ({
-                        address,
-                        config:
-                          protocol === "ghostVault"
-                            ? {
-                                ...(await client.wasm
-                                  .queryContractSmart(address, {
-                                    config: {},
-                                  })
-                                  .catch(() => ({}))),
-                                interest:
-                                  id === 106
-                                    ? await client.wasm
-                                        .queryContractRaw(
-                                          address,
-                                          Uint8Array.from([
-                                            115, 116, 97, 116, 101,
-                                          ])
-                                        )
-                                        .then(({ data }) =>
-                                          JSON.parse(
-                                            Buffer.from(data).toString()
-                                          )
-                                        )
-                                        .then(({ utilization_to_rate }) => ({
-                                          utilization_to_rate,
-                                        }))
-                                    : await client.wasm.queryContractSmart(
-                                        address,
-                                        { interest_params: {} }
-                                      ),
-                              }
-                            : await client.wasm
-                                .queryContractSmart(address, {
-                                  config: {},
-                                })
-                                .catch(() => ({})),
-                        pairs:
-                          protocol === "calc" &&
-                          (await client.wasm
-                            .queryContractSmart(address, {
-                              get_pairs: {},
-                            })
-                            .then(({ pairs }) => pairs)),
-                        markets:
-                          protocol === "ghostVault" &&
-                          (await client.wasm
-                            .queryContractSmart(address, {
-                              markets: {},
-                            })
-                            .then(({ markets }) => markets)
-                            .catch((err) => {
-                              console.log(err);
-                              return null;
-                            })),
-                      }))
-                    )
-                  ),
-              }))
-            ),
-          };
-        })
+        Object.entries(protocols).map(fetchProtocol(client))
       ),
     };
   })
@@ -159,3 +171,5 @@ fs.writeFileSync(
   "./src/resources/contracts.json",
   JSON.stringify(flattened, null, 2)
 );
+
+process.exit();
