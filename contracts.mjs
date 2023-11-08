@@ -9,7 +9,7 @@ const IDS = {
     bow: [
       54, 126,
       // LSD Strategy
-      158,
+      158, 167,
       // Stable Strategy
       161, 166,
     ],
