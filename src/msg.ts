@@ -1,34 +1,17 @@
-import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import {
   MsgExec,
   MsgGrant,
   MsgRevoke,
 } from "cosmjs-types/cosmos/authz/v1beta1/tx";
-import { MsgMultiSend, MsgSend } from "cosmjs-types/cosmos/bank/v1beta1/tx";
-import {
-  MsgFundCommunityPool,
-  MsgSetWithdrawAddress,
-  MsgWithdrawDelegatorReward,
-  MsgWithdrawValidatorCommission,
-} from "cosmjs-types/cosmos/distribution/v1beta1/tx";
+import * as bank from "cosmjs-types/cosmos/bank/v1beta1/tx";
+import * as distribution from "cosmjs-types/cosmos/distribution/v1beta1/tx";
 import {
   MsgGrantAllowance,
   MsgRevokeAllowance,
 } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
-import {
-  MsgDeposit,
-  MsgSubmitProposal,
-  MsgVote,
-  MsgVoteWeighted,
-} from "cosmjs-types/cosmos/gov/v1/tx";
+import * as gov from "cosmjs-types/cosmos/gov/v1/tx";
 import * as govV1Beta1 from "cosmjs-types/cosmos/gov/v1beta1/tx";
-import {
-  MsgBeginRedelegate,
-  MsgCreateValidator,
-  MsgDelegate,
-  MsgEditValidator,
-  MsgUndelegate,
-} from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import * as staking from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
 import {
   MsgClearAdmin,
@@ -62,31 +45,43 @@ export const msg = {
     }),
   },
   bank: {
-    msgSend: (i: MsgSend) => ({
+    msgSend: (i: bank.MsgSend) => ({
       typeUrl: "/cosmos.bank.v1beta1.MsgSend",
-      value: MsgSend.fromPartial(i),
+      value: bank.MsgSend.fromPartial(i),
     }),
-    msgMultiSend: (i: MsgMultiSend) => ({
+    msgMultiSend: (i: bank.MsgMultiSend) => ({
       typeUrl: "/cosmos.bank.v1beta1.MsgMultiSend",
-      value: MsgMultiSend.fromPartial(i),
+      value: bank.MsgMultiSend.fromPartial(i),
+    }),
+    msgUpdateParams: (i: bank.MsgUpdateParams) => ({
+      typeUrl: "/cosmos.bank.v1beta1.MsgUpdateParams",
+      value: bank.MsgUpdateParams.fromPartial(i),
     }),
   },
   distribution: {
-    msgFundCommunityPool: (i: MsgFundCommunityPool) => ({
+    msgFundCommunityPool: (i: distribution.MsgFundCommunityPool) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgFundCommunityPool",
-      value: MsgFundCommunityPool.fromJSON(i),
+      value: distribution.MsgFundCommunityPool.fromJSON(i),
     }),
-    msgSetWithdrawAddress: (i: MsgSetWithdrawAddress) => ({
+    msgSetWithdrawAddress: (i: distribution.MsgSetWithdrawAddress) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgSetWithdrawAddress",
-      value: MsgSetWithdrawAddress.fromJSON(i),
+      value: distribution.MsgSetWithdrawAddress.fromJSON(i),
     }),
-    msgWithdrawDelegatorReward: (i: MsgWithdrawDelegatorReward) => ({
+    msgWithdrawDelegatorReward: (
+      i: distribution.MsgWithdrawDelegatorReward
+    ) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-      value: MsgWithdrawDelegatorReward.fromJSON(i),
+      value: distribution.MsgWithdrawDelegatorReward.fromJSON(i),
     }),
-    msgWithdrawValidatorCommission: (i: MsgWithdrawValidatorCommission) => ({
+    msgWithdrawValidatorCommission: (
+      i: distribution.MsgWithdrawValidatorCommission
+    ) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-      value: MsgWithdrawValidatorCommission.fromJSON(i),
+      value: distribution.MsgWithdrawValidatorCommission.fromJSON(i),
+    }),
+    msgUpdateParams: (i: distribution.MsgUpdateParams) => ({
+      typeUrl: "/cosmos.distribution.v1beta1.MsgUpdateParams",
+      value: distribution.MsgUpdateParams.fromPartial(i),
     }),
   },
   denom: denom.msg,
@@ -101,52 +96,60 @@ export const msg = {
     }),
   },
   gov: {
-    msgDeposit: (i: MsgDeposit) => ({
+    msgDeposit: (i: gov.MsgDeposit) => ({
       typeUrl: "/cosmos.gov.v1.MsgDeposit",
-      value: MsgDeposit.fromJSON(i),
+      value: gov.MsgDeposit.fromJSON(i),
     }),
     msgDepositBeta: (i: govV1Beta1.MsgDeposit) => ({
       typeUrl: "/cosmos.gov.v1beta1.MsgDeposit",
       value: govV1Beta1.MsgDeposit.fromJSON(i),
     }),
-    msgSubmitProposal: (i: MsgSubmitProposal) => ({
+    msgSubmitProposal: (i: gov.MsgSubmitProposal) => ({
       typeUrl: "/cosmos.gov.v1.MsgSubmitProposal",
-      value: MsgSubmitProposal.fromPartial(i),
+      value: gov.MsgSubmitProposal.fromPartial(i),
     }),
-    msgVote: (i: MsgVote) => ({
+    msgVote: (i: gov.MsgVote) => ({
       typeUrl: "/cosmos.gov.v1.MsgVote",
-      value: MsgVote.fromJSON(i),
+      value: gov.MsgVote.fromJSON(i),
     }),
     msgVoteBeta: (i: govV1Beta1.MsgVote) => ({
       typeUrl: "/cosmos.gov.v1beta1.MsgVote",
       value: govV1Beta1.MsgVote.fromJSON(i),
     }),
-    msgVoteWeighted: (i: MsgVoteWeighted) => ({
+    msgVoteWeighted: (i: gov.MsgVoteWeighted) => ({
       typeUrl: "/cosmos.gov.v1.MsgVoteWeighted",
-      value: MsgVoteWeighted.fromPartial(i),
+      value: gov.MsgVoteWeighted.fromPartial(i),
+    }),
+    msgUpdateParams: (i: gov.MsgUpdateParams) => ({
+      typeUrl: "/cosmos.gov.v1.MsgUpdateParams",
+      value: gov.MsgUpdateParams.fromPartial(i),
     }),
   },
   oracle: oracle.msg,
   staking: {
-    msgBeginRedelegate: (i: MsgBeginRedelegate) => ({
+    msgBeginRedelegate: (i: staking.MsgBeginRedelegate) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgBeginRedelegate",
-      value: MsgBeginRedelegate.fromPartial(i),
+      value: staking.MsgBeginRedelegate.fromPartial(i),
     }),
-    msgCreateValidator: (i: MsgCreateValidator) => ({
+    msgCreateValidator: (i: staking.MsgCreateValidator) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgCreateValidator",
-      value: MsgCreateValidator.fromPartial(i),
+      value: staking.MsgCreateValidator.fromPartial(i),
     }),
-    msgDelegate: (i: MsgDelegate) => ({
+    msgDelegate: (i: staking.MsgDelegate) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgDelegate",
-      value: MsgDelegate.fromJSON(i),
+      value: staking.MsgDelegate.fromJSON(i),
     }),
-    msgEditValidator: (i: MsgEditValidator) => ({
+    msgEditValidator: (i: staking.MsgEditValidator) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgEditValidator",
-      value: MsgEditValidator.fromPartial(i),
+      value: staking.MsgEditValidator.fromPartial(i),
     }),
-    msgUndelegate: (i: MsgUndelegate) => ({
+    msgUndelegate: (i: staking.MsgUndelegate) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgUndelegate",
-      value: MsgUndelegate.fromPartial(i),
+      value: staking.MsgUndelegate.fromPartial(i),
+    }),
+    msgUpdateParams: (i: staking.MsgUpdateParams) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgUpdateParams",
+      value: staking.MsgUpdateParams.fromPartial(i),
     }),
   },
   vesting: {

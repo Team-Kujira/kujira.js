@@ -1,10 +1,10 @@
 import { MsgExec, MsgGrant, MsgRevoke } from "cosmjs-types/cosmos/authz/v1beta1/tx";
-import { MsgMultiSend, MsgSend } from "cosmjs-types/cosmos/bank/v1beta1/tx";
-import { MsgFundCommunityPool, MsgSetWithdrawAddress, MsgWithdrawDelegatorReward, MsgWithdrawValidatorCommission } from "cosmjs-types/cosmos/distribution/v1beta1/tx";
+import * as bank from "cosmjs-types/cosmos/bank/v1beta1/tx";
+import * as distribution from "cosmjs-types/cosmos/distribution/v1beta1/tx";
 import { MsgGrantAllowance, MsgRevokeAllowance } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
-import { MsgDeposit, MsgSubmitProposal, MsgVote, MsgVoteWeighted } from "cosmjs-types/cosmos/gov/v1/tx";
+import * as gov from "cosmjs-types/cosmos/gov/v1/tx";
 import * as govV1Beta1 from "cosmjs-types/cosmos/gov/v1beta1/tx";
-import { MsgBeginRedelegate, MsgCreateValidator, MsgDelegate, MsgEditValidator, MsgUndelegate } from "cosmjs-types/cosmos/staking/v1beta1/tx";
+import * as staking from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
 import { MsgClearAdmin, MsgExecuteContract, MsgInstantiateContract, MsgInstantiateContract2, MsgMigrateContract, MsgStoreCode, MsgUpdateAdmin, MsgUpdateInstantiateConfig } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
@@ -24,31 +24,39 @@ export declare const msg: {
         };
     };
     bank: {
-        msgSend: (i: MsgSend) => {
+        msgSend: (i: bank.MsgSend) => {
             typeUrl: string;
-            value: MsgSend;
+            value: bank.MsgSend;
         };
-        msgMultiSend: (i: MsgMultiSend) => {
+        msgMultiSend: (i: bank.MsgMultiSend) => {
             typeUrl: string;
-            value: MsgMultiSend;
+            value: bank.MsgMultiSend;
+        };
+        msgUpdateParams: (i: bank.MsgUpdateParams) => {
+            typeUrl: string;
+            value: bank.MsgUpdateParams;
         };
     };
     distribution: {
-        msgFundCommunityPool: (i: MsgFundCommunityPool) => {
+        msgFundCommunityPool: (i: distribution.MsgFundCommunityPool) => {
             typeUrl: string;
-            value: MsgFundCommunityPool;
+            value: distribution.MsgFundCommunityPool;
         };
-        msgSetWithdrawAddress: (i: MsgSetWithdrawAddress) => {
+        msgSetWithdrawAddress: (i: distribution.MsgSetWithdrawAddress) => {
             typeUrl: string;
-            value: MsgSetWithdrawAddress;
+            value: distribution.MsgSetWithdrawAddress;
         };
-        msgWithdrawDelegatorReward: (i: MsgWithdrawDelegatorReward) => {
+        msgWithdrawDelegatorReward: (i: distribution.MsgWithdrawDelegatorReward) => {
             typeUrl: string;
-            value: MsgWithdrawDelegatorReward;
+            value: distribution.MsgWithdrawDelegatorReward;
         };
-        msgWithdrawValidatorCommission: (i: MsgWithdrawValidatorCommission) => {
+        msgWithdrawValidatorCommission: (i: distribution.MsgWithdrawValidatorCommission) => {
             typeUrl: string;
-            value: MsgWithdrawValidatorCommission;
+            value: distribution.MsgWithdrawValidatorCommission;
+        };
+        msgUpdateParams: (i: distribution.MsgUpdateParams) => {
+            typeUrl: string;
+            value: distribution.MsgUpdateParams;
         };
     };
     denom: {
@@ -68,29 +76,33 @@ export declare const msg: {
         };
     };
     gov: {
-        msgDeposit: (i: MsgDeposit) => {
+        msgDeposit: (i: gov.MsgDeposit) => {
             typeUrl: string;
-            value: MsgDeposit;
+            value: gov.MsgDeposit;
         };
         msgDepositBeta: (i: govV1Beta1.MsgDeposit) => {
             typeUrl: string;
             value: govV1Beta1.MsgDeposit;
         };
-        msgSubmitProposal: (i: MsgSubmitProposal) => {
+        msgSubmitProposal: (i: gov.MsgSubmitProposal) => {
             typeUrl: string;
-            value: MsgSubmitProposal;
+            value: gov.MsgSubmitProposal;
         };
-        msgVote: (i: MsgVote) => {
+        msgVote: (i: gov.MsgVote) => {
             typeUrl: string;
-            value: MsgVote;
+            value: gov.MsgVote;
         };
         msgVoteBeta: (i: govV1Beta1.MsgVote) => {
             typeUrl: string;
             value: govV1Beta1.MsgVote;
         };
-        msgVoteWeighted: (i: MsgVoteWeighted) => {
+        msgVoteWeighted: (i: gov.MsgVoteWeighted) => {
             typeUrl: string;
-            value: MsgVoteWeighted;
+            value: gov.MsgVoteWeighted;
+        };
+        msgUpdateParams: (i: gov.MsgUpdateParams) => {
+            typeUrl: string;
+            value: gov.MsgUpdateParams;
         };
     };
     oracle: {
@@ -99,25 +111,29 @@ export declare const msg: {
         msgDelegateFeedConsent: (data: import("./kujira/kujira.oracle/types/tx").MsgDelegateFeedConsent) => import("@cosmjs/proto-signing").EncodeObject;
     };
     staking: {
-        msgBeginRedelegate: (i: MsgBeginRedelegate) => {
+        msgBeginRedelegate: (i: staking.MsgBeginRedelegate) => {
             typeUrl: string;
-            value: MsgBeginRedelegate;
+            value: staking.MsgBeginRedelegate;
         };
-        msgCreateValidator: (i: MsgCreateValidator) => {
+        msgCreateValidator: (i: staking.MsgCreateValidator) => {
             typeUrl: string;
-            value: MsgCreateValidator;
+            value: staking.MsgCreateValidator;
         };
-        msgDelegate: (i: MsgDelegate) => {
+        msgDelegate: (i: staking.MsgDelegate) => {
             typeUrl: string;
-            value: MsgDelegate;
+            value: staking.MsgDelegate;
         };
-        msgEditValidator: (i: MsgEditValidator) => {
+        msgEditValidator: (i: staking.MsgEditValidator) => {
             typeUrl: string;
-            value: MsgEditValidator;
+            value: staking.MsgEditValidator;
         };
-        msgUndelegate: (i: MsgUndelegate) => {
+        msgUndelegate: (i: staking.MsgUndelegate) => {
             typeUrl: string;
-            value: MsgUndelegate;
+            value: staking.MsgUndelegate;
+        };
+        msgUpdateParams: (i: staking.MsgUpdateParams) => {
+            typeUrl: string;
+            value: staking.MsgUpdateParams;
         };
     };
     vesting: {
