@@ -70,6 +70,7 @@ const labels: Record<string, string> = {
     "USK",
   "factory:kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7:uusk":
     "USK",
+  "factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/urfuzn": "rFUZN",
   "factory/kujira1v3hcejcerf0d9em9ds8rpyyq68vx3u9u4k0fvw4e9hacdy8nn6pqx4urcw/urcpt":
     "cMNTA",
 
