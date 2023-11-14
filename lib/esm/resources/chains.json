@@ -15593,6 +15593,27 @@
                     "type_asset": "cw20"
                 },
                 {
+            "address": "terra10se906awphtccf4vd83m0ulpmpt9v4msuakmpy0pwvmtxmup3kdq25rayn",
+            "base": "cw20:terra10se906awphtccf4vd83m0ulpmpt9v4msuakmpy0pwvmtxmup3kdq25rayn",
+            "denom_units": [
+            {
+              "denom": "cw20:terra10se906awphtccf4vd83m0ulpmpt9v4msuakmpy0pwvmtxmup3kdq25rayn",
+              "exponent": 0
+            },
+            {
+               "denom": "xxx",
+                "exponent": 10
+            }
+                    ],
+                    "display": "xxx",
+                    "logo_URIs": {
+                        "png": "https://raw.githubusercontent.com/egrassy/logo/main/xxx.png"
+                    },
+                    "name": "TheOnlyOne",
+                    "symbol": "xxx",
+                    "type_asset": "cw20"
+                },
+                {
                     "address": "terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
                     "base": "cw20:terra1lalvk0r6nhruel7fvzdppk3tup3mh5j4d4eadrqzfhle4zrf52as58hh9t",
                     "denom_units": [
