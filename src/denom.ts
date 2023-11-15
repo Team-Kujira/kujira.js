@@ -377,7 +377,7 @@ export class Denom {
 
     this.symbol = baseDenomToSymbol(this.reference);
     if (this.trace?.base_denom.startsWith("gamm")) {
-      this.symbol = "Osmosis LP";
+      this.symbol = "Osmosis LP ";
     }
 
     if (this.underlying) {
