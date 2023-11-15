@@ -2,6 +2,7 @@ import { sha256 } from "@cosmjs/crypto";
 import { assets } from "chain-registry";
 import { MAINNET, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
+import osmosis from "./resources/osmosis.json";
 import ibc from "./resources/tokens.json";
 
 const ghostVaults = [
@@ -197,6 +198,7 @@ const baseDenomToSymbol = (denom: string): string => {
   const raw = labels[denom];
   if (raw) return raw;
 
+  if (denom.startsWith("gamm/")) return "Osmosis LP";
   const factoryAddress = denom.split("/")[1];
   const ghost =
     factoryAddress && ghostVaults.find((a) => a.address === factoryAddress);
@@ -456,6 +458,10 @@ export class Denom {
       .find((x) => `factory/${x.address}/ulp` === string)
       ?.config.denoms?.map(Denom.from);
 
+    const osmosisUnderlying = osmosis
+      .find((x) => `gamm/pool/${x.id}` === string)
+      ?.assets?.map((x) => Denom.from(x.token.denom));
+
     const factoryAddress =
       string.startsWith("factory/") && string.split("/")[1];
     const ghostVault = ghostVaults.find((f) => f.address === factoryAddress);
@@ -463,6 +469,7 @@ export class Denom {
     return new Denom(
       string,
       bowUnderlying ||
+        osmosisUnderlying ||
         (ghostVault ? [Denom.from(ghostVault.config.denom)] : undefined)
     );
   }

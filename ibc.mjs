@@ -97,3 +97,16 @@ await Promise.all(
     );
   })
 ).catch(() => {});
+
+const res = await fetch(
+  "https://rest.cosmos.directory/osmosis/osmosis/gamm/v1beta1/pools?pagination.limit=100000"
+);
+const { pools } = await res.json();
+fs.writeFileSync(
+  "./src/resources/osmosis.json",
+  JSON.stringify(
+    pools.map((p) => ({ id: p.id, address: p.address, assets: p.pool_assets })),
+    null,
+    2
+  )
+);
