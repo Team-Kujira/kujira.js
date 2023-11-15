@@ -198,7 +198,6 @@ const baseDenomToSymbol = (denom: string): string => {
   const raw = labels[denom];
   if (raw) return raw;
 
-  if (denom.startsWith("gamm/")) return "Osmosis LP";
   const factoryAddress = denom.split("/")[1];
   const ghost =
     factoryAddress && ghostVaults.find((a) => a.address === factoryAddress);
@@ -377,6 +376,9 @@ export class Denom {
     }
 
     this.symbol = baseDenomToSymbol(this.reference);
+    if (this.trace?.base_denom.startsWith("gamm")) {
+      this.symbol = "Osmosis LP";
+    }
 
     if (this.underlying) {
       this.symbol = `${this.symbol}${this.underlying
@@ -458,9 +460,13 @@ export class Denom {
       .find((x) => `factory/${x.address}/ulp` === string)
       ?.config.denoms?.map(Denom.from);
 
-    const osmosisUnderlying = osmosis
-      .find((x) => `gamm/pool/${x.id}` === string)
-      ?.assets?.map((x) => Denom.from(x.token.denom));
+    let osmosisUnderlying;
+    if (string.startsWith("ibc/")) {
+      const trace = (ibc as Record<string, any>)[string];
+      osmosisUnderlying = osmosis
+        .find((x) => `gamm/pool/${x.id}` === trace?.base_denom)
+        ?.assets?.map((x) => Denom.from(x.token.denom));
+    }
 
     const factoryAddress =
       string.startsWith("factory/") && string.split("/")[1];
