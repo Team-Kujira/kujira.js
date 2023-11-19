@@ -28,6 +28,7 @@ export const RPCS: Record<string, string[]> = {
     "https://kujira-rpc.theamsolutions.info",
     "https://kujira.rpc.ghostinnet.com",
     "https://kujira.rpc.kjnodes.com",
+    "https://kujira-rpc.publicnode.com",
     "https://rpc-kujira.capybaralabs.com/",
     "https://rpc-kujira.mintthemoon.xyz",
     "https://rpc-kujira.mms.team",
