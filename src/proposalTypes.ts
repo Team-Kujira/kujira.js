@@ -1,10 +1,3 @@
-import { wasmTypes } from "@cosmjs/cosmwasm-stargate/build/modules";
-import { Registry } from "@cosmjs/proto-signing";
-import * as s from "@cosmjs/stargate";
-import { ibcTypes } from "@cosmjs/stargate/build/modules";
-import {} from "@cosmjs/stargate/build/modules/distribution/messages";
-import { assert } from "@cosmjs/utils";
-import { BaseAccount } from "cosmjs-types/cosmos/auth/v1beta1/auth";
 import { MsgUpdateParams } from "cosmjs-types/cosmos/bank/v1beta1/tx";
 import { CommunityPoolSpendProposal } from "cosmjs-types/cosmos/distribution/v1beta1/distribution";
 import { MsgCommunityPoolSpend } from "cosmjs-types/cosmos/distribution/v1beta1/tx";
@@ -35,22 +28,12 @@ import {
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { ClientUpdateProposal } from "cosmjs-types/ibc/core/client/v1/client";
 import {
-  ClientState,
-  ConsensusState,
-  Header,
-  Misbehaviour,
-} from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
-import * as alliance from "./alliance";
-import * as gravity from "./gravity/v1";
-import * as denom from "./kujira/kujira.denom";
-import * as oracle from "./kujira/kujira.oracle";
-import {
   CreateHookProposal,
   DeleteHookProposal,
   UpdateHookProposal,
 } from "./kujira/kujira.scheduler/types/proposal";
-import { StridePeriodicVestingAccount } from "./stride/vesting";
-const proposalTypes = [
+
+export const proposalTypes = [
   [
     "/cosmos.distribution.v1beta1.CommunityPoolSpendProposal",
     CommunityPoolSpendProposal,
@@ -80,8 +63,8 @@ const proposalTypes = [
   ["/cosmwasm.wasm.v1.MsgMigrateContract", MsgMigrateContract],
   ["/cosmwasm.wasm.v1.MsgUpdateAdmin", MsgUpdateAdmin],
   ["/cosmwasm.wasm.v1.MsgClearAdmin", MsgClearAdmin],
-  // ["/cosmwasm.wasm.v1.MsgPinCodes", MsgPinCodes],
-  // ["/cosmwasm.wasm.v1.MsgUnpinCodes", MsgUnpinCodes],
+  ["/cosmwasm.wasm.v1.MsgPinCodes", MsgPinCodes],
+  ["/cosmwasm.wasm.v1.MsgUnpinCodes", MsgUnpinCodes],
   ["/cosmwasm.wasm.v1.MsgExecuteContract", MsgExecuteContract],
   ["/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig", MsgUpdateInstantiateConfig],
 
@@ -94,61 +77,3 @@ const proposalTypes = [
   ["/cosmos.gov.v1.MsgExecLegacyContent", MsgExecLegacyContent],
   ["/ibc.core.client.v1.ClientUpdateProposal", ClientUpdateProposal],
 ];
-
-const extraIbc = [
-  ["/ibc.lightclients.tendermint.v1.Header", Header],
-  ["/ibc.lightclients.tendermint.v1.ClientState", ClientState],
-  ["/ibc.lightclients.tendermint.v1.ConsensusState", ConsensusState],
-  ["/ibc.lightclients.tendermint.v1.Misbehaviour", Misbehaviour],
-];
-
-const types = [
-  ...s.defaultRegistryTypes,
-  ...denom.types,
-  // ...ethermintEvm.types,
-  // ...ethermintFeemarket.types,
-  ...oracle.types,
-  ...wasmTypes,
-  ...ibcTypes,
-  ...proposalTypes,
-  ...extraIbc,
-  ...gravity.types,
-  ...alliance.types,
-];
-
-export const registry = new Registry(<any>types);
-
-export const accountParser: s.AccountParser = (acc) => {
-  switch (acc.typeUrl) {
-    case "/stride.vesting.StridePeriodicVestingAccount":
-      const baseAccount = StridePeriodicVestingAccount.decode(acc.value)
-        .baseVestingAccount?.baseAccount;
-      assert(baseAccount);
-      return s.accountFromAny({
-        typeUrl: "/cosmos.auth.v1beta1.BaseAccount",
-        value: BaseAccount.encode(baseAccount).finish(),
-      });
-    // case "/injective.types.v1beta1.EthAccount":
-    //   const account = InjectiveTypesV1Beta1Account.EthAccount.decode(acc.value);
-    //   const ethBaseAccount = account.baseAccount!;
-    //   const pubKey = ethBaseAccount.pubKey;
-    //   console.log(
-    //     `/injective.types.v1beta1.EthAccount`,
-    //     JSON.stringify(account, null, 2)
-    //   );
-
-    //   return {
-    //     address: ethBaseAccount.address,
-    //     pubkey: pubKey
-    //       ? {
-    //           type: "/injective.crypto.v1beta1.ethsecp256k1.PubKey",
-    //           value: Buffer.from(pubKey.value).toString("base64"),
-    //         }
-    //       : null,
-    //     accountNumber: parseInt(ethBaseAccount.accountNumber, 10),
-    //     sequence: parseInt(ethBaseAccount.sequence, 10),
-    //   };
-    default:
-      return s.accountFromAny(acc);
-  }
-};

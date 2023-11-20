@@ -289,50 +289,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@improbable-eng/grpc-web@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "@improbable-eng/grpc-web@npm:0.13.0"
-  dependencies:
-    browser-headers: ^0.4.0
-  peerDependencies:
-    google-protobuf: ^3.2.0
-  checksum: e7cd4ae5ed269be4215b72dea6727c1e8fd139a408386b24084842fbbfa249fb45ea12033ade2872a3d5cdfeb0e0b487563ff9f5b1c308e32aecccf7b80ca441
-  languageName: node
-  linkType: hard
-
-"@injectivelabs/chain-api@npm:1.9.9":
-  version: 1.9.9
-  resolution: "@injectivelabs/chain-api@npm:1.9.9"
-  dependencies:
-    "@improbable-eng/grpc-web": ^0.13.0
-    google-protobuf: ^3.13.0
-  checksum: 87ac0fb32653b571c23f340f426deb4a08dc1e4a50f67e9aa9029493e8e207e563d854d52b89966ef5b876d05b5758302b1091da4da0e33b40cd8e45019fb805
-  languageName: node
-  linkType: hard
-
-"@injectivelabs/core-proto-ts@npm:^0.0.18":
-  version: 0.0.18
-  resolution: "@injectivelabs/core-proto-ts@npm:0.0.18"
-  dependencies:
-    "@injectivelabs/grpc-web": ^0.0.1
-    google-protobuf: ^3.14.0
-    protobufjs: ^7.0.0
-    rxjs: ^7.4.0
-  checksum: b57df18365f39c961b124da3881c73825559649cfbd5b13fe937db3ce23170ef5ee4cbe8206f63a61e2b51d03f98bee370b9f09c78cf27880f6d10284d23af93
-  languageName: node
-  linkType: hard
-
-"@injectivelabs/grpc-web@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@injectivelabs/grpc-web@npm:0.0.1"
-  dependencies:
-    browser-headers: ^0.4.1
-  peerDependencies:
-    google-protobuf: ^3.14.0
-  checksum: 121832da2ee37e48531b1e90003778afd75668e527a25c8539310081677a5e662689ef7e68fe6014b86f65175fdfd58cc2cd33a959d6661d320810b08996b03c
-  languageName: node
-  linkType: hard
-
 "@keplr-wallet/types@npm:^0.11.12":
   version: 0.11.63
   resolution: "@keplr-wallet/types@npm:0.11.63"
@@ -514,13 +470,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browser-headers@npm:^0.4.0, browser-headers@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "browser-headers@npm:0.4.1"
-  checksum: 28b927dd90e4882eeb0625cd4a20a8e868f892144bca794a9b027fad9d2094656daf46473cb9084d650590504c581dd6a711146243035b66e75ade61bbe4d3cf
-  languageName: node
-  linkType: hard
-
 "chain-registry@npm:^1.20.0":
   version: 1.20.0
   resolution: "chain-registry@npm:1.20.0"
@@ -638,13 +587,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-protobuf@npm:^3.13.0, google-protobuf@npm:^3.14.0":
-  version: 3.21.2
-  resolution: "google-protobuf@npm:3.21.2"
-  checksum: 3caa2e1e2654714cc1a201ac5e5faabcaa48f5fba3d8ff9b64ca66fe19e4e0506b94053f32eddc77bf3a7a47ac1660315c6744185c1e2bb27654fd76fe91b988
-  languageName: node
-  linkType: hard
-
 "has-property-descriptors@npm:^1.0.0":
   version: 1.0.0
   resolution: "has-property-descriptors@npm:1.0.0"
@@ -747,8 +689,6 @@ __metadata:
     "@cosmjs/launchpad": ^0.27.1
     "@cosmjs/stargate": ^0.31.1
     "@ethersproject/bignumber": ^5.7.0
-    "@injectivelabs/chain-api": 1.9.9
-    "@injectivelabs/core-proto-ts": ^0.0.18
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
     chain-registry: ^1.20.0
@@ -797,13 +737,6 @@ __metadata:
   version: 4.0.0
   resolution: "long@npm:4.0.0"
   checksum: 16afbe8f749c7c849db1f4de4e2e6a31ac6e617cead3bdc4f9605cb703cd20e1e9fc1a7baba674ffcca57d660a6e5b53a9e236d7b25a295d3855cca79cc06744
-  languageName: node
-  linkType: hard
-
-"long@npm:^5.0.0":
-  version: 5.2.3
-  resolution: "long@npm:5.2.3"
-  checksum: 885ede7c3de4facccbd2cacc6168bae3a02c3e836159ea4252c87b6e34d40af819824b2d4edce330bfb5c4d6e8ce3ec5864bdcf9473fa1f53a4f8225860e5897
   languageName: node
   linkType: hard
 
@@ -886,26 +819,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:^7.0.0":
-  version: 7.2.3
-  resolution: "protobufjs@npm:7.2.3"
-  dependencies:
-    "@protobufjs/aspromise": ^1.1.2
-    "@protobufjs/base64": ^1.1.2
-    "@protobufjs/codegen": ^2.0.4
-    "@protobufjs/eventemitter": ^1.1.0
-    "@protobufjs/fetch": ^1.1.0
-    "@protobufjs/float": ^1.0.2
-    "@protobufjs/inquire": ^1.1.0
-    "@protobufjs/path": ^1.1.2
-    "@protobufjs/pool": ^1.1.0
-    "@protobufjs/utf8": ^1.1.0
-    "@types/node": ">=13.7.0"
-    long: ^5.0.0
-  checksum: 9afa6de5fced0139a5180c063718508fac3ea734a9f1aceb99712367b15473a83327f91193f16b63540f9112b09a40912f5f0441a9b0d3f3c6a1c7f707d78249
-  languageName: node
-  linkType: hard
-
 "react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
@@ -950,15 +863,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.4.0":
-  version: 7.8.1
-  resolution: "rxjs@npm:7.8.1"
-  dependencies:
-    tslib: ^2.1.0
-  checksum: de4b53db1063e618ec2eca0f7965d9137cabe98cf6be9272efe6c86b47c17b987383df8574861bcced18ebd590764125a901d5506082be84a8b8e364bf05f119
-  languageName: node
-  linkType: hard
-
 "safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.2.0, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
@@ -998,13 +902,6 @@ __metadata:
   version: 0.7.0
   resolution: "text-encoding@npm:0.7.0"
   checksum: b6109a843fb1b8748b32e1ecd6df74d370f46c13ac136bcb6ca15db70209bb0b8ec1f296ebb4b0dd9961150e205dcc044b89f8cf7657f6faef78c7569a2a81bc
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.1.0":
-  version: 2.5.2
-  resolution: "tslib@npm:2.5.2"
-  checksum: 4d3c1e238b94127ed0e88aa0380db3c2ddae581dc0f4bae5a982345e9f50ee5eda90835b8bfba99b02df10a5734470be197158c36f9129ac49fdc14a6a9da222
   languageName: node
   linkType: hard
 

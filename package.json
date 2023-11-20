@@ -1,7 +1,7 @@
 {
   "name": "kujira.js",
   "description": "JS Interface for the Kujira Blockchain",
-  "version": "0.9.56",
+  "version": "0.9.57",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -19,8 +19,6 @@
     "@cosmjs/launchpad": "^0.27.1",
     "@cosmjs/stargate": "^0.31.1",
     "@ethersproject/bignumber": "^5.7.0",
-    "@injectivelabs/chain-api": "1.9.9",
-    "@injectivelabs/core-proto-ts": "^0.0.18",
     "@keplr-wallet/types": "^0.11.12",
     "@types/google-protobuf": "^3.15.6",
     "chain-registry": "^1.20.0",
