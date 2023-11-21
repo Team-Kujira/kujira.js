@@ -63,8 +63,8 @@ export const proposalTypes = [
   ["/cosmwasm.wasm.v1.MsgMigrateContract", MsgMigrateContract],
   ["/cosmwasm.wasm.v1.MsgUpdateAdmin", MsgUpdateAdmin],
   ["/cosmwasm.wasm.v1.MsgClearAdmin", MsgClearAdmin],
-  ["/cosmwasm.wasm.v1.MsgPinCodes", MsgPinCodes],
-  ["/cosmwasm.wasm.v1.MsgUnpinCodes", MsgUnpinCodes],
+  // ["/cosmwasm.wasm.v1.MsgPinCodes", MsgPinCodes],
+  // ["/cosmwasm.wasm.v1.MsgUnpinCodes", MsgUnpinCodes],
   ["/cosmwasm.wasm.v1.MsgExecuteContract", MsgExecuteContract],
   ["/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig", MsgUpdateInstantiateConfig],
 
