@@ -4245,6 +4245,30 @@
         },
         "pairs": false,
         "markets": false
+      },
+      {
+        "id": 162,
+        "address": "kujira1x3rdas5j2vh9vz0vqjtnc5aa4elafuzgjvhz37gtsrz0944cup3qdzsyh6",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            {
+              "native": "ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3"
+            },
+            {
+              "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+            }
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "decimal_delta": 2,
+          "is_bootstrapping": true,
+          "fee_taker": "0.0015",
+          "fee_maker": "0.00075"
+        },
+        "pairs": false,
+        "markets": false
       }
     ],
     "bow": [
@@ -9298,6 +9322,36 @@
             "0.01",
             "0.02",
             "0.02",
+            "0.05",
+            "0.1",
+            "0.2"
+          ],
+          "fee": "0.001",
+          "amp": "1"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 126,
+        "address": "kujira1vcmh95lje5dln782pxckma65eujs4sv960w22whgsp7a2ajsc6lsvnlhgd",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            "ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3",
+            "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+          ],
+          "price_precision": {
+            "decimal_places": 3
+          },
+          "decimal_delta": 2,
+          "fin_contract": "kujira1x3rdas5j2vh9vz0vqjtnc5aa4elafuzgjvhz37gtsrz0944cup3qdzsyh6",
+          "intervals": [
+            "0.001",
+            "0.005",
+            "0.005",
+            "0.01",
+            "0.01",
             "0.05",
             "0.1",
             "0.2"
