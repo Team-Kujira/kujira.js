@@ -20,6 +20,7 @@ export type Market = {
   maxLtv: number;
   vault: Vault;
   borrowFee: BigNumber;
+  orcaAddress: string;
 };
 
 export type MarketState = {
@@ -127,6 +128,7 @@ export const castMarket = (
     max_ltv: string;
     vault_addr: string;
     borrow_fee: string;
+    orca_addr: string;
   },
   vault: Vault
 ): Market => ({
@@ -138,6 +140,7 @@ export const castMarket = (
   maxLtv: parseFloat(raw.max_ltv),
   vault,
   borrowFee: parseFixed(raw.borrow_fee, 18),
+  orcaAddress: raw.orca_addr,
 });
 
 export const castVault = (
