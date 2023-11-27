@@ -23,7 +23,7 @@ const IDS = {
     ghostMarket: [136],
     ghostMargin: [],
     pilot: [95],
-    bowMargin: [],
+    bowMargin: [188],
   },
   [TESTNET]: {
     fin: [31, 2229],

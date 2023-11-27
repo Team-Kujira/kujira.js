@@ -1,11 +1,36 @@
-import { Chain, Market, MarketType, Protocol } from "./types";
-// import * as Acala from "@acala-network/contracts/utils/AcalaAddress";
-// import * as Karura from "@acala-network/contracts/utils/KaruraAddress";
 import { BigNumber, parseFixed } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { MAINNET, NETWORK, POND, TESTNET } from "../network";
 import contracts from "../resources/contracts.json";
+import {
+  Bid,
+  BidPool,
+  BidPoolResponse,
+  BidResponse,
+  Chain,
+  Market,
+  MarketType,
+  Protocol,
+} from "./types";
 export * from "./types";
+
+export const castBidPool = (response: BidPoolResponse): BidPool => ({
+  totalBidAmount: BigNumber.from(response.total_bid_amount),
+  premiumRate: parseFloat(response.premium_rate),
+  premiumRateInt: parseFixed(response.premium_rate, 18),
+  currentEpoch: parseInt(response.current_epoch),
+});
+
+export const castBid = (response: BidResponse): Bid => ({
+  idx: parseInt(response.idx),
+  premiumSlot: response.premium_slot,
+  amount: BigNumber.from(response.amount),
+  pendingLiquidatedCollateral: BigNumber.from(
+    response.pending_liquidated_collateral
+  ),
+  waitEnd:
+    (response.wait_end && new Date(parseInt(response.wait_end) * 1000)) || null,
+});
 
 export const FILTERED = [
   "kujira1pq2qqjuxwm93sxhr9s3vlpj7lrtjfdml68qjf3a3qfpw5ctj67nsdfmkrv",

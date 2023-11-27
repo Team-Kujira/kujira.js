@@ -41,6 +41,27 @@ export type Market = {
     liquidationFee: number;
     withdrawalFee: number;
 };
+export type BidResponse = {
+    idx: string;
+    collateral_token: string;
+    premium_slot: number;
+    bidder: string;
+    amount: string;
+    product_snapshot: string;
+    sum_snapshot: string;
+    pending_liquidated_collateral: string;
+    wait_end?: string;
+    epoch_snapshot: number;
+    scale_snapshot: number;
+};
+export type BidPoolResponse = {
+    sum_snapshot: string;
+    product_snapshot: string;
+    total_bid_amount: string;
+    premium_rate: string;
+    current_epoch: string;
+    current_scale: string;
+};
 export type Bid = {
     idx: number;
     premiumSlot: number;
