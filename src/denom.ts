@@ -98,13 +98,35 @@ const labels: Record<string, string> = {
   gravity0x77E06c9eCCf2E797fd462A92B6D7642EF85b0A44: "wTAO",
   gravity0xa0b93B9e90aB887E53F9FB8728c009746e989B53: "gTST",
   gravity0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30: "gINJ",
-  gravity0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1: "ARB",
-  gravity0x4c11249814f11b9346808179Cf06e71ac328c1b5: "ORAI",
-  gravity0x93581991f68DBaE1eA105233b67f7FA0D6BDeE7b: "wEVMOS",
-  gravity0x35a532d376FFd9a705d0Bb319532837337A398E7: "wDOGE",
-  gravity0x07baC35846e5eD502aA91AdF6A9e7aA210F2DcbE: "erowan",
-  gravity0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9: "wLUNC",
-  gravity0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE: "SHIB",
+  gravity0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1: "gARB",
+  gravity0x4c11249814f11b9346808179Cf06e71ac328c1b5: "gORAI",
+  gravity0x93581991f68DBaE1eA105233b67f7FA0D6BDeE7b: "gwEVMOS",
+  gravity0x35a532d376FFd9a705d0Bb319532837337A398E7: "gwDOGE",
+  gravity0x07baC35846e5eD502aA91AdF6A9e7aA210F2DcbE: "gerowan",
+  gravity0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9: "gwLUNC",
+  gravity0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE: "gSHIB",
+
+  // 18
+  gravity0xAa6E8127831c9DE45ae56bB1b0d4D4Da6e5665BD: "gETH2x-FLI",
+  // 6
+  gravity0x44017598f2AF1bD733F9D87b5017b4E7c1B28DDE: "gstkATOM",
+  // 18
+  gravity0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55: "gBAND",
+  // 6
+  gravity0xEa5A82B35244d9e5E48781F00b11B14E627D2951: "gATOM",
+  // 18
+  gravity0x83F20F44975D03b1b09e64809B757c47f942BEeA: "gsDAI",
+  // 18
+  gravity0x6982508145454Ce325dDbE47a25d4ec3d2311933: "gPEPE",
+  // 18
+  gravity0x817bbDbC3e8A1204f3691d14bB44992841e3dB35: "gCUDOS",
+  // 18
+  gravity0xd23Ed8cA350CE2631F7EcDC5E6bf80D0A1DeBB7B: "gPLQ",
+  // 18
+  gravity0xd3E4Ba569045546D09CF021ECC5dFe42b1d7f6E4: "gMNW",
+  // 18
+  gravity0x514910771AF9Ca656af840dff83E8264EcF986CA: "gLINK",
+
   "erc20/0xAE6D3334989a22A65228732446731438672418F2": "CNTO",
   "frax-wei": "FRAX",
   inj: "INJ",
@@ -397,6 +419,8 @@ export class Denom {
     }
 
     if ((this.trace?.base_denom || this.reference).startsWith("erc20/"))
+      this.decimals = 18;
+    if ((this.trace?.base_denom || this.reference).startsWith("gravity"))
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("wei"))
       this.decimals = 18;
