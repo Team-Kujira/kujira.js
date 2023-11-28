@@ -9411,6 +9411,36 @@
         "markets": false
       },
       {
+        "id": 126,
+        "address": "kujira1k0rmx2hlw2f6arsqteryf4l65gk0jyxv6rt04ecz6jqy9f70ujssueqqzf",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            "factory/kujira166ysf07ze5suazfzj0r05tv8amk2yn8zvsfuu7/uplnk",
+            "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+          ],
+          "price_precision": {
+            "decimal_places": 6
+          },
+          "decimal_delta": 0,
+          "fin_contract": "kujira1phpdpsnrkfvqr5883p8jlqslknuc7ypfd78er5ajkfpd3cuy7hqs93a4n7",
+          "intervals": [
+            "0.001",
+            "0.005",
+            "0.005",
+            "0.01",
+            "0.01",
+            "0.05",
+            "0.1",
+            "0.2"
+          ],
+          "fee": "0.001",
+          "amp": "1"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
         "id": 158,
         "address": "kujira1776ux77z9juxf2x3mvt4hs2txauynkzngn4l6zc97jze59rykxuq7mgxjw",
         "config": {
