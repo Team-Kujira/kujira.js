@@ -131,6 +131,10 @@ export declare const msg: {
             typeUrl: string;
             value: staking.MsgUndelegate;
         };
+        msgCancelUnbondingDelegation: (i: staking.MsgCancelUnbondingDelegation) => {
+            typeUrl: string;
+            value: staking.MsgCancelUnbondingDelegation;
+        };
         msgUpdateParams: (i: staking.MsgUpdateParams) => {
             typeUrl: string;
             value: staking.MsgUpdateParams;

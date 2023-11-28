@@ -147,6 +147,12 @@ export const msg = {
       typeUrl: "/cosmos.staking.v1beta1.MsgUndelegate",
       value: staking.MsgUndelegate.fromPartial(i),
     }),
+    msgCancelUnbondingDelegation: (
+      i: staking.MsgCancelUnbondingDelegation
+    ) => ({
+      typeUrl: "/cosmos.staking.v1beta1.MsgCancelUnbondingDelegation",
+      value: staking.MsgCancelUnbondingDelegation.fromPartial(i),
+    }),
     msgUpdateParams: (i: staking.MsgUpdateParams) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgUpdateParams",
       value: staking.MsgUpdateParams.fromPartial(i),
