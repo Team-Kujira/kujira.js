@@ -11,6 +11,7 @@ import { MsgCommunityPoolSpend } from "cosmjs-types/cosmos/distribution/v1beta1/
 import { MsgExecLegacyContent } from "cosmjs-types/cosmos/gov/v1/tx";
 import { TextProposal } from "cosmjs-types/cosmos/gov/v1beta1/gov";
 import { ParameterChangeProposal } from "cosmjs-types/cosmos/params/v1beta1/params";
+import { MsgCancelUnbondingDelegation } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import { MsgSoftwareUpgrade } from "cosmjs-types/cosmos/upgrade/v1beta1/tx";
 import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upgrade";
 import {
@@ -104,6 +105,10 @@ const extraIbc = [
 
 const types = [
   ...s.defaultRegistryTypes,
+  [
+    "/cosmos.staking.v1beta1.MsgCancelUnbondingDelegation",
+    MsgCancelUnbondingDelegation,
+  ],
   ...denom.types,
   // ...ethermintEvm.types,
   // ...ethermintFeemarket.types,
