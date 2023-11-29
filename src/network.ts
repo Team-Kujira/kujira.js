@@ -72,24 +72,8 @@ const chainInfo = (
     bech32PrefixConsAddr: "kujira" + "valcons",
     bech32PrefixConsPub: "kujira" + "valconspub",
   },
-  currencies: [
-    {
-      coinDenom: "KUJI",
-      coinMinimalDenom: "ukuji",
-      coinDecimals: 6,
-      coinGeckoId: "kujira",
-    },
-    ...fees,
-  ],
-  feeCurrencies: [
-    {
-      coinDenom: "KUJI",
-      coinMinimalDenom: "ukuji",
-      coinDecimals: 6,
-      coinGeckoId: "kujira",
-    },
-    ...fees,
-  ],
+  currencies: fees,
+  feeCurrencies: fees,
   stakeCurrency: {
     coinDenom: "KUJI",
     coinMinimalDenom: "ukuji",
@@ -106,6 +90,14 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
     "https://test-rpc-kujira.mintthemoon.xyz",
     "https://test-lcd-kujira.mintthemoon.xyz",
     [
+      {
+        coinDenom: "KUJI",
+        coinMinimalDenom: "ukuji",
+        coinDecimals: 6,
+        coinGeckoId: "kujira",
+        gasPriceStep: { low: 0.0034, average: 0.0051, high: 0.00681 },
+      },
+
       {
         coinDenom: "DEMO",
         coinMinimalDenom:
@@ -124,7 +116,16 @@ export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
     POND,
     "Kujira Pond",
     "http://127.0.0.1:10157",
-    "http://127.0.0.1:10117"
+    "http://127.0.0.1:10117",
+    [
+      {
+        coinDenom: "KUJI",
+        coinMinimalDenom: "ukuji",
+        coinDecimals: 6,
+        coinGeckoId: "kujira",
+        gasPriceStep: { low: 0.0034, average: 0.0051, high: 0.00681 },
+      },
+    ]
   ),
   [MAINNET]: chainInfo(
     MAINNET,
