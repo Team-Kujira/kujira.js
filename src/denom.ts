@@ -446,6 +446,7 @@ export class Denom {
     if (this.symbol === "BOOT") this.decimals = 0;
     if (this.symbol === "DOT") this.decimals = 10;
     if (this.symbol === "SHD") this.decimals = 8;
+    if (this.symbol === "SHD,legacy") this.decimals = 8;
     if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "gINJ") this.decimals = 18;
     if (this.symbol === "stINJ") this.decimals = 18;
