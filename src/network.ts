@@ -17,7 +17,7 @@ export const RPCS: Record<string, string[]> = {
     // "https://rpc.harpoon.kujira.setten.io",
     "https://kujira-testnet-rpc.polkachu.com",
     "https://rpc-harpoon-4.starsquid.io",
-    // "https://test-rpc-kujira.mintthemoon.xyz",
+    "https://test-rpc-kujira.mintthemoon.xyz",
     // "https://dev-rpc-kujira.mintthemoon.xyz",
   ],
   [MAINNET]: [
