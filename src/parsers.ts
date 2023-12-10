@@ -48,7 +48,8 @@ export const transfers = (
       const key = Buffer.from(v.key).toString();
       const value = Buffer.from(v.value).toString();
       if (key === "receiver" && value === address) {
-        const amount = Buffer.from(all[idx + 1].value).toString();
+        // SDK attributes are sorted alphabetically from SDK 47 - we have `amount` and `receiver` here
+        const amount = Buffer.from(all[idx - 1].value).toString();
         const parsed = parseCoins(amount);
         return addCoins(agg, parsed);
       } else {
@@ -62,7 +63,8 @@ export const transfers = (
       const key = Buffer.from(v.key).toString();
       const value = Buffer.from(v.value).toString();
       if (key === "spender" && value === address) {
-        const amount = Buffer.from(all[idx + 1].value).toString();
+        // SDK attributes are sorted alphabetically from SDK 47 - we have `amount` and `spender` here
+        const amount = Buffer.from(all[idx - 1].value).toString();
         const parsed = parseCoins(amount);
         return addCoins(agg, parsed);
       } else {
