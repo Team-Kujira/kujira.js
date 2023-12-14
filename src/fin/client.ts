@@ -5,9 +5,9 @@ import { KujiraQueryClient } from "../queryClient";
 import {
   Book,
   BookResponse,
+  CW20Denom,
   Config,
   ConfigResponse,
-  CW20Denom,
   Order,
   OrderResponse,
   Pair,
@@ -133,7 +133,6 @@ export const simulate = async (
     slippage,
   };
 };
-
 const simulateLocal = async (
   amount: BigNumber,
   denom: Denom,
@@ -145,7 +144,7 @@ const simulateLocal = async (
   let returned = BigNumber.from(0);
   const pools = [...(sell ? book.quote : book.base)].reverse();
 
-  let offer = amount.mul(WEI);
+  let offer = amount;
 
   while (offer.gt(0)) {
     const pool = pools.pop();
@@ -154,14 +153,15 @@ const simulateLocal = async (
     const price = pool.quotePriceInt;
 
     const poolValue = sell
-      ? pool.totalOfferAmount.div(price)
-      : pool.totalOfferAmount.mul(price);
+      ? pool.totalOfferAmount.mul(WEI).div(price)
+      : pool.totalOfferAmount.mul(price).div(WEI);
 
     const consumedOffer = poolValue.gt(offer) ? offer : poolValue;
 
     const consumedAsk = sell
-      ? consumedOffer.mul(price)
-      : consumedOffer.div(price);
+      ? consumedOffer.mul(price).div(WEI)
+      : consumedOffer.mul(WEI).div(price);
+
     returned = returned.add(consumedAsk);
     offer = offer.sub(consumedOffer);
   }
