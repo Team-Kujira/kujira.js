@@ -41,8 +41,9 @@ import {
   Misbehaviour,
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
 import * as alliance from "./alliance";
+import * as eth from "./ethermint/types";
 import * as gravity from "./gravity/v1";
-import { EthAccount } from "./injective/types";
+import * as inj from "./injective/types";
 import * as denom from "./kujira/kujira.denom";
 import * as oracle from "./kujira/kujira.oracle";
 import {
@@ -134,16 +135,33 @@ export const accountParser: s.AccountParser = (acc) => {
         value: BaseAccount.encode(baseAccount).finish(),
       });
     case "/injective.types.v1beta1.EthAccount":
-      const account = EthAccount.decode(acc.value as Uint8Array);
-      const baseEthAccount = account.baseAccount!;
-      const pubKey = baseEthAccount.pubKey;
+      const injAccount = inj.EthAccount.decode(acc.value as Uint8Array);
+      const baseInjAccount = injAccount.baseAccount!;
+      const pubKey = baseInjAccount.pubKey;
 
       return {
-        address: baseEthAccount.address,
+        address: baseInjAccount.address,
         pubkey: pubKey
           ? {
               type: "/injective.crypto.v1beta1.ethsecp256k1.PubKey",
               value: Buffer.from(pubKey.value).toString("base64"),
+            }
+          : null,
+        accountNumber: baseInjAccount.accountNumber.toNumber(),
+        sequence: baseInjAccount.sequence.toNumber(),
+      };
+
+    case "/ethermint.types.v1.EthAccount":
+      const account = eth.EthAccount.decode(acc.value as Uint8Array);
+      const baseEthAccount = account.baseAccount!;
+      const pubKeyEth = baseEthAccount.pubKey;
+
+      return {
+        address: baseEthAccount.address,
+        pubkey: pubKeyEth
+          ? {
+              type: "/ethermint.crypto.v1.ethsecp256k1.PubKey",
+              value: Buffer.from(pubKeyEth.value).toString("base64"),
             }
           : null,
         accountNumber: baseEthAccount.accountNumber.toNumber(),
