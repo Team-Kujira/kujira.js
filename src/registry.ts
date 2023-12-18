@@ -2,7 +2,6 @@ import { wasmTypes } from "@cosmjs/cosmwasm-stargate/build/modules";
 import { Registry } from "@cosmjs/proto-signing";
 import * as s from "@cosmjs/stargate";
 import { ibcTypes } from "@cosmjs/stargate/build/modules";
-import {} from "@cosmjs/stargate/build/modules/distribution/messages";
 import { assert } from "@cosmjs/utils";
 import { BaseAccount } from "cosmjs-types/cosmos/auth/v1beta1/auth";
 import { MsgUpdateParams } from "cosmjs-types/cosmos/bank/v1beta1/tx";
@@ -43,6 +42,7 @@ import {
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
 import * as alliance from "./alliance";
 import * as gravity from "./gravity/v1";
+import { EthAccount } from "./injective/types";
 import * as denom from "./kujira/kujira.denom";
 import * as oracle from "./kujira/kujira.oracle";
 import {
@@ -133,26 +133,22 @@ export const accountParser: s.AccountParser = (acc) => {
         typeUrl: "/cosmos.auth.v1beta1.BaseAccount",
         value: BaseAccount.encode(baseAccount).finish(),
       });
-    // case "/injective.types.v1beta1.EthAccount":
-    //   const account = InjectiveTypesV1Beta1Account.EthAccount.decode(acc.value);
-    //   const ethBaseAccount = account.baseAccount!;
-    //   const pubKey = ethBaseAccount.pubKey;
-    //   console.log(
-    //     `/injective.types.v1beta1.EthAccount`,
-    //     JSON.stringify(account, null, 2)
-    //   );
+    case "/injective.types.v1beta1.EthAccount":
+      const account = EthAccount.decode(acc.value as Uint8Array);
+      const baseEthAccount = account.baseAccount!;
+      const pubKey = baseEthAccount.pubKey;
 
-    //   return {
-    //     address: ethBaseAccount.address,
-    //     pubkey: pubKey
-    //       ? {
-    //           type: "/injective.crypto.v1beta1.ethsecp256k1.PubKey",
-    //           value: Buffer.from(pubKey.value).toString("base64"),
-    //         }
-    //       : null,
-    //     accountNumber: parseInt(ethBaseAccount.accountNumber, 10),
-    //     sequence: parseInt(ethBaseAccount.sequence, 10),
-    //   };
+      return {
+        address: baseEthAccount.address,
+        pubkey: pubKey
+          ? {
+              type: "/injective.crypto.v1beta1.ethsecp256k1.PubKey",
+              value: Buffer.from(pubKey.value).toString("base64"),
+            }
+          : null,
+        accountNumber: baseEthAccount.accountNumber.toNumber(),
+        sequence: baseEthAccount.sequence.toNumber(),
+      };
     default:
       return s.accountFromAny(acc);
   }
