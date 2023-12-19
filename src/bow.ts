@@ -158,7 +158,13 @@ export const POOLS: Record<NETWORK, Record<string, Pool>> = {
         ? a
         : {
             ...a,
-            [v.address]: castPool(v.address, v.config),
+            [v.address]: castPool(
+              v.address,
+              v.config,
+              Object.values(contracts[MAINNET].bowMargin).find(
+                (x) => x.config.bow_contract === v.address
+              )
+            ),
           },
     {}
   ),
