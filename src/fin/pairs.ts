@@ -13,6 +13,7 @@ export const FILTERED = [
   "kujira1vt9lmzw5wc9gss07ty9cf8ytpy7se77u7xytylv4xvklsfggmxgquklr7p",
   "kujira1467jk0ljtesmtcut5tec9j4a6rnu59vd38ea5n0q2y6k85qk803qqqhsg8",
   "kujira1trxh7pu70dmzpqyqs4yltx2h5202k9e9fpssee0tdq4x2jr9praqg7c96e",
+  "kujira19xhhd7ax09mjj3cy4k2zzztm79z2kzll03qk3wzjyj8kgmynfkyqsfa05j",
 ];
 
 export const NOTICES = {
