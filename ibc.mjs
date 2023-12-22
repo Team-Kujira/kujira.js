@@ -65,10 +65,10 @@ const runTokens = async (rpc) => {
 };
 
 await runTokens("https://kujira-testnet-rpc.polkachu.com");
-await runTokens("https://kujira-rpc.polkachu.com");
+await runTokens("https://rpc-kujira.mintthemoon.xyz");
 
 const testnet = await runConnections("https://kujira-testnet-rpc.polkachu.com");
-const mainnet = await runConnections("https://kujira-rpc.polkachu.com");
+const mainnet = await runConnections("https://rpc-kujira.mintthemoon.xyz");
 
 fs.writeFileSync(
   "./src/resources/channels.json",

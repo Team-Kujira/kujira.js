@@ -6805,7 +6805,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 18252277,
+                        "low": 18393948,
                         "high": 0,
                         "unsigned": true
                     }
@@ -6954,7 +6954,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 12290197,
+                        "low": 12532550,
                         "high": 0,
                         "unsigned": true
                     }
@@ -7252,7 +7252,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 6487809,
+                        "low": 6635044,
                         "high": 0,
                         "unsigned": true
                     }
@@ -8146,7 +8146,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 7704382,
+                        "low": 7843729,
                         "high": 0,
                         "unsigned": true
                     }
@@ -8593,7 +8593,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 2352761,
+                        "low": 2498699,
                         "high": 0,
                         "unsigned": true
                     }
@@ -8891,7 +8891,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 2352761,
+                        "low": 2498699,
                         "high": 0,
                         "unsigned": true
                     }
@@ -9189,7 +9189,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 2841801,
+                        "low": 2990259,
                         "high": 0,
                         "unsigned": true
                     }
@@ -9338,7 +9338,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 9650115,
+                        "low": 9793470,
                         "high": 0,
                         "unsigned": true
                     }
@@ -9636,7 +9636,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 6123541,
+                        "low": 6262346,
                         "high": 0,
                         "unsigned": true
                     }
@@ -9934,7 +9934,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 6139661,
+                        "low": 6287831,
                         "high": 0,
                         "unsigned": true
                     }
@@ -10232,7 +10232,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 4164268,
+                        "low": 4328900,
                         "high": 0,
                         "unsigned": true
                     }
@@ -10530,7 +10530,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 11492130,
+                        "low": 11722950,
                         "high": 0,
                         "unsigned": true
                     }
@@ -10710,7 +10710,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 312656,
+                        "low": 385294,
                         "high": 0,
                         "unsigned": true
                     }
@@ -10859,7 +10859,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 3223279,
+                        "low": 4043779,
                         "high": 0,
                         "unsigned": true
                     }
@@ -11008,7 +11008,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 413901,
+                        "low": 590114,
                         "high": 0,
                         "unsigned": true
                     }
@@ -11455,7 +11455,305 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 13073852,
+                        "low": 13538836,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "proofSpecs": [
+                    {
+                        "leafSpec": {
+                            "hash": 1,
+                            "prehashKey": 0,
+                            "prehashValue": 1,
+                            "length": 1,
+                            "prefix": {
+                                "0": 0
+                            }
+                        },
+                        "innerSpec": {
+                            "childOrder": [
+                                0,
+                                1
+                            ],
+                            "childSize": 33,
+                            "minPrefixLength": 4,
+                            "maxPrefixLength": 12,
+                            "emptyChild": {},
+                            "hash": 1
+                        },
+                        "maxDepth": 0,
+                        "minDepth": 0
+                    },
+                    {
+                        "leafSpec": {
+                            "hash": 1,
+                            "prehashKey": 0,
+                            "prehashValue": 1,
+                            "length": 1,
+                            "prefix": {
+                                "0": 0
+                            }
+                        },
+                        "innerSpec": {
+                            "childOrder": [
+                                0,
+                                1
+                            ],
+                            "childSize": 32,
+                            "minPrefixLength": 1,
+                            "maxPrefixLength": 1,
+                            "emptyChild": {},
+                            "hash": 1
+                        },
+                        "maxDepth": 0,
+                        "minDepth": 0
+                    }
+                ],
+                "upgradePath": [
+                    "upgrade",
+                    "upgradedIBCState"
+                ],
+                "allowUpdateAfterExpiry": true,
+                "allowUpdateAfterMisbehaviour": true
+            }
+        },
+        {
+            "id": "connection-127",
+            "clientId": "07-tendermint-164",
+            "versions": [
+                {
+                    "identifier": "1",
+                    "features": [
+                        "ORDER_ORDERED",
+                        "ORDER_UNORDERED"
+                    ]
+                }
+            ],
+            "state": 3,
+            "counterparty": {
+                "clientId": "07-tendermint-6",
+                "connectionId": "connection-4",
+                "prefix": {
+                    "keyPrefix": {
+                        "0": 105,
+                        "1": 98,
+                        "2": 99
+                    }
+                }
+            },
+            "delayPeriod": {
+                "low": 0,
+                "high": 0,
+                "unsigned": true
+            },
+            "clientState": {
+                "chainId": "andromeda-1",
+                "trustLevel": {
+                    "numerator": {
+                        "low": 2,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "denominator": {
+                        "low": 3,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "trustingPeriod": {
+                    "seconds": {
+                        "low": 1209600,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "unbondingPeriod": {
+                    "seconds": {
+                        "low": 1814400,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "maxClockDrift": {
+                    "seconds": {
+                        "low": 60,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "frozenHeight": {
+                    "revisionNumber": {
+                        "low": 0,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "revisionHeight": {
+                        "low": 0,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "latestHeight": {
+                    "revisionNumber": {
+                        "low": 1,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "revisionHeight": {
+                        "low": 383073,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "proofSpecs": [
+                    {
+                        "leafSpec": {
+                            "hash": 1,
+                            "prehashKey": 0,
+                            "prehashValue": 1,
+                            "length": 1,
+                            "prefix": {
+                                "0": 0
+                            }
+                        },
+                        "innerSpec": {
+                            "childOrder": [
+                                0,
+                                1
+                            ],
+                            "childSize": 33,
+                            "minPrefixLength": 4,
+                            "maxPrefixLength": 12,
+                            "emptyChild": {},
+                            "hash": 1
+                        },
+                        "maxDepth": 0,
+                        "minDepth": 0
+                    },
+                    {
+                        "leafSpec": {
+                            "hash": 1,
+                            "prehashKey": 0,
+                            "prehashValue": 1,
+                            "length": 1,
+                            "prefix": {
+                                "0": 0
+                            }
+                        },
+                        "innerSpec": {
+                            "childOrder": [
+                                0,
+                                1
+                            ],
+                            "childSize": 32,
+                            "minPrefixLength": 1,
+                            "maxPrefixLength": 1,
+                            "emptyChild": {},
+                            "hash": 1
+                        },
+                        "maxDepth": 0,
+                        "minDepth": 0
+                    }
+                ],
+                "upgradePath": [
+                    "upgrade",
+                    "upgradedIBCState"
+                ],
+                "allowUpdateAfterExpiry": true,
+                "allowUpdateAfterMisbehaviour": true
+            }
+        },
+        {
+            "id": "connection-128",
+            "clientId": "07-tendermint-165",
+            "versions": [
+                {
+                    "identifier": "1",
+                    "features": [
+                        "ORDER_ORDERED",
+                        "ORDER_UNORDERED"
+                    ]
+                }
+            ],
+            "state": 3,
+            "counterparty": {
+                "clientId": "07-tendermint-84",
+                "connectionId": "connection-62",
+                "prefix": {
+                    "keyPrefix": {
+                        "0": 105,
+                        "1": 98,
+                        "2": 99
+                    }
+                }
+            },
+            "delayPeriod": {
+                "low": 0,
+                "high": 0,
+                "unsigned": true
+            },
+            "clientState": {
+                "chainId": "cheqd-mainnet-1",
+                "trustLevel": {
+                    "numerator": {
+                        "low": 1,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "denominator": {
+                        "low": 3,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "trustingPeriod": {
+                    "seconds": {
+                        "low": 777600,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "unbondingPeriod": {
+                    "seconds": {
+                        "low": 1210000,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "maxClockDrift": {
+                    "seconds": {
+                        "low": 80,
+                        "high": 0,
+                        "unsigned": false
+                    },
+                    "nanos": 0
+                },
+                "frozenHeight": {
+                    "revisionNumber": {
+                        "low": 0,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "revisionHeight": {
+                        "low": 0,
+                        "high": 0,
+                        "unsigned": true
+                    }
+                },
+                "latestHeight": {
+                    "revisionNumber": {
+                        "low": 1,
+                        "high": 0,
+                        "unsigned": true
+                    },
+                    "revisionHeight": {
+                        "low": 11210946,
                         "high": 0,
                         "unsigned": true
                     }
@@ -11902,7 +12200,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 10836549,
+                        "low": 10981542,
                         "high": 0,
                         "unsigned": true
                     }
@@ -12498,7 +12796,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 17676149,
+                        "low": 17883252,
                         "high": 0,
                         "unsigned": true
                     }
@@ -12647,7 +12945,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 12748609,
+                        "low": 12892590,
                         "high": 0,
                         "unsigned": true
                     }
@@ -13243,7 +13541,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 24190963,
+                        "low": 24458424,
                         "high": 0,
                         "unsigned": true
                     }
@@ -13392,7 +13690,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 24190963,
+                        "low": 24458424,
                         "high": 0,
                         "unsigned": true
                     }
@@ -14286,7 +14584,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 8114956,
+                        "low": 8258298,
                         "high": 0,
                         "unsigned": true
                     }
@@ -14435,7 +14733,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 12290347,
+                        "low": 12541082,
                         "high": 0,
                         "unsigned": true
                     }
@@ -14584,7 +14882,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 6745348,
+                        "low": 6892776,
                         "high": 0,
                         "unsigned": true
                     }
@@ -15627,7 +15925,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 8114928,
+                        "low": 8258298,
                         "high": 0,
                         "unsigned": true
                     }
@@ -15925,7 +16223,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14980877,
+                        "low": 15147095,
                         "high": 0,
                         "unsigned": true
                     }
@@ -16074,7 +16372,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 50911335,
+                        "low": 51342395,
                         "high": 0,
                         "unsigned": true
                     }
@@ -16223,7 +16521,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 5906752,
+                        "low": 6059252,
                         "high": 0,
                         "unsigned": true
                     }
@@ -16819,7 +17117,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 9613305,
+                        "low": 9749265,
                         "high": 0,
                         "unsigned": true
                     }
@@ -16968,7 +17266,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 6457746,
+                        "low": 6620939,
                         "high": 0,
                         "unsigned": true
                     }
@@ -17564,7 +17862,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 11331646,
+                        "low": 11478532,
                         "high": 0,
                         "unsigned": true
                     }
@@ -18160,7 +18458,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 54158347,
+                        "low": 55150510,
                         "high": 0,
                         "unsigned": true
                     }
@@ -18309,7 +18607,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 4679631,
+                        "low": 4822991,
                         "high": 0,
                         "unsigned": true
                     }
@@ -18607,7 +18905,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14394797,
+                        "low": 14529421,
                         "high": 0,
                         "unsigned": true
                     }
@@ -18756,7 +19054,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14394797,
+                        "low": 14529421,
                         "high": 0,
                         "unsigned": true
                     }
@@ -19054,7 +19352,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 4538809,
+                        "low": 4689593,
                         "high": 0,
                         "unsigned": true
                     }
@@ -19203,7 +19501,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 10456416,
+                        "low": 10600140,
                         "high": 0,
                         "unsigned": true
                     }
@@ -19352,7 +19650,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 4538809,
+                        "low": 4689593,
                         "high": 0,
                         "unsigned": true
                     }
@@ -19948,7 +20246,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 12888890,
+                        "low": 13029269,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20097,7 +20395,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 3921198,
+                        "low": 4070486,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20246,7 +20544,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 3921198,
+                        "low": 4070486,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20395,7 +20693,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 3921198,
+                        "low": 4070486,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20693,7 +20991,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14086051,
+                        "low": 14227595,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20842,7 +21140,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 11964117,
+                        "low": 12109980,
                         "high": 0,
                         "unsigned": true
                     }
@@ -20991,7 +21289,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14086051,
+                        "low": 14227595,
                         "high": 0,
                         "unsigned": true
                     }
@@ -21140,7 +21438,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14086051,
+                        "low": 14227595,
                         "high": 0,
                         "unsigned": true
                     }
@@ -21289,7 +21587,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 14086051,
+                        "low": 14227595,
                         "high": 0,
                         "unsigned": true
                     }
@@ -21587,7 +21885,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 9937622,
+                        "low": 10099703,
                         "high": 0,
                         "unsigned": true
                     }
@@ -21736,7 +22034,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 9937622,
+                        "low": 10099703,
                         "high": 0,
                         "unsigned": true
                     }
@@ -21885,7 +22183,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 13741415,
+                        "low": 13888495,
                         "high": 0,
                         "unsigned": true
                     }
@@ -22034,7 +22332,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 12155819,
+                        "low": 12305126,
                         "high": 0,
                         "unsigned": true
                     }
@@ -22183,7 +22481,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 9798467,
+                        "low": 9952361,
                         "high": 0,
                         "unsigned": true
                     }
@@ -22332,7 +22630,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 15811593,
+                        "low": 15956066,
                         "high": 0,
                         "unsigned": true
                     }
@@ -22779,7 +23077,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 7288810,
+                        "low": 7443538,
                         "high": 0,
                         "unsigned": true
                     }
@@ -22928,7 +23226,7 @@
                         "unsigned": true
                     },
                     "revisionHeight": {
-                        "low": 5187716,
+                        "low": 5430557,
                         "high": 0,
                         "unsigned": true
                     }
