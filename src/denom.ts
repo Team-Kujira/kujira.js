@@ -190,6 +190,7 @@ const labels: Record<string, string> = {
   "factory/migaloo1436kxs0w2es6xlqpp9rd35e3d0cjnw4sv8j3a7483sgks29jqwgshqdky4/ampWHALE":
     "ampWHALE",
   "erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9": "NEOK",
+  "factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt": "NEWT",
 
   ...wormholeAssets.reduce((a, v) => ({ ...a, [v.base]: `wh${v.symbol}` }), {}),
 };
