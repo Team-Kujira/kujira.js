@@ -80,7 +80,6 @@ const chainInfo = (
     coinDecimals: 6,
     coinGeckoId: "kujira",
   },
-  coinType: 118,
 });
 
 export const CHAIN_INFO: Record<NETWORK, ChainInfo> = {
