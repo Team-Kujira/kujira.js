@@ -138,6 +138,7 @@ const labels: Record<string, string> = {
   "wmatic-wei": "wMATIC",
   "wglmr-wei": "wGLMR",
   "busd-wei": "BUSD",
+  ncheq: "CHEQ",
   "cw20:juno1qsrercqegvs4ye0yqg93knv73ye5dc3prqwd6jcdcuj8ggp6w0us66deup":
     "LOOP",
   "cw20:juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz":
@@ -470,6 +471,7 @@ export class Denom {
     if (this.symbol === "ARCH") this.decimals = 18;
     if (this.symbol === "RIO") this.decimals = 18;
     if (this.symbol === "DYDX") this.decimals = 18;
+    if (this.symbol === "CHEQ") this.decimals = 9;
     if (
       this.underlying?.length === 2 &&
       this.underlying[0].decimals === this.underlying[1].decimals
