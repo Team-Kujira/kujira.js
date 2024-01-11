@@ -2423,6 +2423,328 @@
       "version": "ics20-1",
       "portId": "transfer",
       "channelId": "channel-99"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-473"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-125"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-473"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-126"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-473"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-127"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-473"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-128"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-474"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-129"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-474"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-130"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1z0fepsfeeew78uwespyneswt5q9aqntj55xdwdasefxpu7zjed2qa6t582",
+        "channelId": "channel-474"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira13nqh8m3394cpm62h8wm0uagqux37zaxs30e6e2zgg3acdx5yr5aq08ezlr",
+      "channelId": "channel-132"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron162fvv88dxpsapf3rnux63anruqach36r8qg73ehm2dv3fkat2rusw70nlx",
+        "channelId": "channel-69"
+      },
+      "connectionHops": [
+        "connection-82"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira14dckdzh7t30lkpdr0hgdqsqh52erux4tst5rl7jhvc693plnm39qp2r95q",
+      "channelId": "channel-140"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.osmo1546fnys90560am2jzuzsl0csmqc502g8ywgwpf3q9jdfucyr93jq7urvlm",
+        "channelId": "channel-16723"
+      },
+      "connectionHops": [
+        "connection-2"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira15454vhqp90cy7u2swyaf79e53hervg0g6h78jgfsgydys5vgqa6shcruhm",
+      "channelId": "channel-147"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.terra14qj6ejeuqmgtx63fujulzcvnr290wcjmmfkvqdqh5p4vjdkuewzsyagufs",
+        "channelId": "channel-333"
+      },
+      "connectionHops": [
+        "connection-3"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira15u8wevalrxd62y6z549fmkmjdt3k2adr4zzsjgwp0uw365gmy45qkn8s8v",
+      "channelId": "channel-141"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.osmo174mke7nylzwylaerfk6j8epzy5yxnvnfvrlx6gy2j0sq8sjf80lsw6skfn",
+        "channelId": "channel-16722"
+      },
+      "connectionHops": [
+        "connection-2"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira18zwe6dyezfla7p6zevm4wkatrajr4dn9lzf4l07ssdjz39s2322sw6ppuz",
+      "channelId": "channel-145"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.osmo174mke7nylzwylaerfk6j8epzy5yxnvnfvrlx6gy2j0sq8sjf80lsw6skfn",
+        "channelId": "channel-16722"
+      },
+      "connectionHops": [
+        "connection-2"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira18zwe6dyezfla7p6zevm4wkatrajr4dn9lzf4l07ssdjz39s2322sw6ppuz",
+      "channelId": "channel-146"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.juno1vv7s07lcv2de64nphg255y7vsreasg6k89vq48gqf754wpsc5w0qmwupeu",
+        "channelId": "channel-475"
+      },
+      "connectionHops": [
+        "connection-1"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1kthhh99l9ec60jr4eytnva40ep52tjvjlup9y2a409vgc7sutn6qv4rrxj",
+      "channelId": "channel-131"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.terra1r5h8yun7yrlp9r8d508zlupzkhd2nhydljsyu6uwhllya972hxmqeu4spg",
+        "channelId": "channel-335"
+      },
+      "connectionHops": [
+        "connection-3"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1ky62g8mpg03ym4x2qa2x3ewtekmd78hf9899es4al9qzehl2vscs9t30fq",
+      "channelId": "channel-143"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.terra1r5h8yun7yrlp9r8d508zlupzkhd2nhydljsyu6uwhllya972hxmqeu4spg",
+        "channelId": "channel-335"
+      },
+      "connectionHops": [
+        "connection-3"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1ky62g8mpg03ym4x2qa2x3ewtekmd78hf9899es4al9qzehl2vscs9t30fq",
+      "channelId": "channel-144"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.archway1hnt7vrz40qy8lnz9577z0dxw6nedvgmxtqxqvt0ayts6e256v7cq3yzmlg",
+        "channelId": "channel-90"
+      },
+      "connectionHops": [
+        "connection-110"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1q4r43ywst620wc9valw592nxs8k2a7vlsawkws0tz8x5675aaxxs5etvt8",
+      "channelId": "channel-133"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.stars1hp26cl5crsuyt9srmc9qjjmsf2fxv0sykxgvlcwk8qz59plm5xlqzk2n5g",
+        "channelId": "channel-276"
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1rd4l7q3c8737g3zjejlwkch3nht4hg00565k9dqezyrtsdn7xhns4thzes",
+      "channelId": "channel-135"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1gkrrj668pf84sefae7yqgseeugnfeygrat8tnu06q8vtqfvc6mhqk7sysy",
+        "channelId": "channel-68"
+      },
+      "connectionHops": [
+        "connection-82"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1uexv52ffftauns6v2vlgvahc42k92nn0j0qa94u8re6dgp8zgfgqpw8uef",
+      "channelId": "channel-138"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1gkrrj668pf84sefae7yqgseeugnfeygrat8tnu06q8vtqfvc6mhqk7sysy",
+        "channelId": "channel-68"
+      },
+      "connectionHops": [
+        "connection-82"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1uexv52ffftauns6v2vlgvahc42k92nn0j0qa94u8re6dgp8zgfgqpw8uef",
+      "channelId": "channel-139"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1gkrrj668pf84sefae7yqgseeugnfeygrat8tnu06q8vtqfvc6mhqk7sysy",
+        "channelId": "channel-68"
+      },
+      "connectionHops": [
+        "connection-82"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1uexv52ffftauns6v2vlgvahc42k92nn0j0qa94u8re6dgp8zgfgqpw8uef",
+      "channelId": "channel-142"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.stars1qm2nv8vx9qf673h9r68vzwce4xf9kvyvkk54a28xnn5x5etcthuswrglxc",
+        "channelId": "channel-277"
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1wgjpx4d38gt3tc9rvyffk8upgs4sa805r0a3dleehtll67t7jyuqypclff",
+      "channelId": "channel-136"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.archway1mtjcp0l5tszsxncg73nga8u974ssy2rfmseyeuzekujw553d2nzqppclue",
+        "channelId": "channel-91"
+      },
+      "connectionHops": [
+        "connection-110"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1xgrswwqadqgeaxejsy5gcpw0dlx8z6wzyavu07n5w5tvnl2k5ucqt93myv",
+      "channelId": "channel-134"
+    },
+    {
+      "state": 2,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.archway1mtjcp0l5tszsxncg73nga8u974ssy2rfmseyeuzekujw553d2nzqppclue",
+        "channelId": "channel-91"
+      },
+      "connectionHops": [
+        "connection-110"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1xgrswwqadqgeaxejsy5gcpw0dlx8z6wzyavu07n5w5tvnl2k5ucqt93myv",
+      "channelId": "channel-137"
     }
   ]
 }
