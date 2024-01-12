@@ -675,6 +675,104 @@
   ],
   "mainnet": [
     {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-148"
+    },
+    {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-149"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-337"
+      },
+      "connectionHops": [
+        "connection-3"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-3\\\",\\\"host_connection_id\\\":\\\"connection-13\\\",\\\"address\\\":\\\"terra17j3c6qtfk20s28nceu4vwyhz0jtsnk2v9y8e58nayyks8v69yxdskyfse3\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-150"
+    },
+    {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-151"
+    },
+    {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-152"
+    },
+    {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-153"
+    },
+    {
+      "state": 1,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": ""
+      },
+      "connectionHops": [
+        "connection-5"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-5\\\",\\\"host_connection_id\\\":\\\"connection-111\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira16qpvzhmawvsm8mcj4hdvtz25dadatdhhgw79xa",
+      "channelId": "channel-154"
+    },
+    {
       "state": 3,
       "ordering": 2,
       "counterparty": {
