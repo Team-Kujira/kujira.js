@@ -11608,7 +11608,8 @@
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
           "markets": [
-            "kujira1xa3qnrpjnvjzhc882xek2ghxf237wnt49f2yhu99vpuvj4tdjhfqwlrlq7"
+            "kujira1xa3qnrpjnvjzhc882xek2ghxf237wnt49f2yhu99vpuvj4tdjhfqwlrlq7",
+            "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr"
           ],
           "bid_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/urcpt",
           "collateral_denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
@@ -12318,7 +12319,8 @@
         "config": {
           "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
           "markets": [
-            "kujira1fu04yc7pwaxg8gnplnmcku2vk58j54cquxy46c5jyd09c8au2jxq2nd379"
+            "kujira1fu04yc7pwaxg8gnplnmcku2vk58j54cquxy46c5jyd09c8au2jxq2nd379",
+            "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2"
           ],
           "bid_denom": "factory/kujira1jelmu9tdmr6hqg0d6qw4g6c9mwrexrzuryh50fwcavcpthp5m0uq20853h/urcpt",
           "collateral_denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
@@ -12586,6 +12588,50 @@
           ],
           "bid_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
           "collateral_denom": "ibc/21F041CFE99994E0D027D0C5F72A9EB6224CBCAF5A6AD5DDB75F67A781D46C68",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira12xsjc875wdu233c53f6k2m8sn265yxu7sle8zgjwyh07lw6pmn4s7klzf7",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [
+            "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2"
+          ],
+          "bid_denom": "factory/kujira1ya42knfcsvy6eztegsn3hz7zpjvhzn05ge85xa2dy2zrjeul9hnspp3c06/urcpt",
+          "collateral_denom": "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9",
+          "bid_threshold": "1000000000",
+          "max_slot": 30,
+          "premium_rate_per_slot": "0.01",
+          "closed_slots": [],
+          "waiting_period": 600,
+          "liquidation_fee": "0.01",
+          "withdrawal_fee": "0.005",
+          "fee_address": "kujira17xpfvakm2amg962yls6f84z3kell8c5lp3pcxh"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 108,
+        "address": "kujira1fhyhmvqf322ue9zz9pmlwq2t6la6668dwez89sfqnvwdrtr8va4ss40d63",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "markets": [
+            "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr"
+          ],
+          "bid_denom": "factory/kujira1ya42knfcsvy6eztegsn3hz7zpjvhzn05ge85xa2dy2zrjeul9hnspp3c06/urcpt",
+          "collateral_denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
           "bid_threshold": "1000000000",
           "max_slot": 30,
           "premium_rate_per_slot": "0.01",
@@ -13752,7 +13798,7 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": null,
-            "current_borrows": "1798092653299"
+            "current_borrows": "1798454963605"
           },
           {
             "addr": "kujira1avffxgkhn27kwwes38x5me40mrna5z98zwync5kwt68ua6hughtq0tyh33",
@@ -13768,6 +13814,11 @@
             "addr": "kujira1fhx20htag2saw9g3w8uwdv203ucvpmcxlvdwtljm5rmrxn4pu7dsqkl73k",
             "borrow_limit": "100000000000",
             "current_borrows": "71434767"
+          },
+          {
+            "addr": "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr",
+            "borrow_limit": null,
+            "current_borrows": "0"
           },
           {
             "addr": "kujira1gk76hvc7qlu7fcjy58477nu6fc556e6tqvhlw7q02q6levsewufqnua8y6",
@@ -13843,7 +13894,7 @@
           {
             "addr": "kujira1fswgxnl7e0ta7u08nr3yg9nvupt0urdq4f7trhzwtcav7jkldqsqv605kr",
             "borrow_limit": null,
-            "current_borrows": "2752877010"
+            "current_borrows": "2749888973"
           },
           {
             "addr": "kujira1qcqxs8twh505ey0w87mu0f9gjc4dpqlm64t734yftuz7t2kee09smdzy76",
@@ -14029,7 +14080,7 @@
           {
             "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
             "borrow_limit": null,
-            "current_borrows": "1539483609046"
+            "current_borrows": "1534388009907"
           }
         ]
       },
@@ -15427,7 +15478,18 @@
           }
         },
         "pairs": false,
-        "markets": []
+        "markets": [
+          {
+            "addr": "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          },
+          {
+            "addr": "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr",
+            "borrow_limit": null,
+            "current_borrows": "0"
+          }
+        ]
       }
     ],
     "ghostMarket": [
@@ -16969,6 +17031,74 @@
           "orcas": [
             "kujira18fgg4hsd4h2ruuedrgs0057rv8pl5dgav77w0qw07wuxfsadmu8s47sm5u",
             "kujira162wmlrn8ahplj7t4lj5reke99vt647d4t0wyqsez073tycu0p2vqc5akd4"
+          ],
+          "max_ltv": "0.75",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.2",
+          "borrow_fee": "0.01"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 188,
+        "address": "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "bow_contract": "kujira1xtaadmh06s8u3z5mypp8qayhrnxgga5wr88s7raram4rz8zu37hquf82wk",
+          "denoms": [
+            {
+              "denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
+              "decimals": 6,
+              "oracle": "MNTA"
+            },
+            {
+              "denom": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk",
+              "decimals": 6,
+              "oracle": "USK"
+            }
+          ],
+          "vaults": [
+            "kujira1ya42knfcsvy6eztegsn3hz7zpjvhzn05ge85xa2dy2zrjeul9hnspp3c06",
+            "kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf"
+          ],
+          "orcas": [
+            "kujira1fhyhmvqf322ue9zz9pmlwq2t6la6668dwez89sfqnvwdrtr8va4ss40d63",
+            "kujira1r5n48c0pc3axf9mmhguanayw547qcstyx55evcq65svjndfrdx9qrwt7hl"
+          ],
+          "max_ltv": "0.75",
+          "full_liquidation_threshold": "100000000",
+          "partial_liquidation_target": "0.2",
+          "borrow_fee": "0.01"
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
+        "id": 188,
+        "address": "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "bow_contract": "kujira1742pe93mxm0cwqjxgxh6th9sspdrluqvw9pha9q69eeatue4x5xs0wdq2d",
+          "denoms": [
+            {
+              "denom": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
+              "decimals": 6,
+              "oracle": "MNTA"
+            },
+            {
+              "denom": "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9",
+              "decimals": 6,
+              "oracle": "USDC"
+            }
+          ],
+          "vaults": [
+            "kujira1ya42knfcsvy6eztegsn3hz7zpjvhzn05ge85xa2dy2zrjeul9hnspp3c06",
+            "kujira1jelmu9tdmr6hqg0d6qw4g6c9mwrexrzuryh50fwcavcpthp5m0uq20853h"
+          ],
+          "orcas": [
+            "kujira12xsjc875wdu233c53f6k2m8sn265yxu7sle8zgjwyh07lw6pmn4s7klzf7",
+            "kujira1unjlgxr494m0f2dchkz8sy308zf8zn7wef93a7jzwhunne38pqhspm7xzk"
           ],
           "max_ltv": "0.75",
           "full_liquidation_threshold": "100000000",
