@@ -14,12 +14,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/types@npm:^0.17.0":
-  version: 0.17.0
-  resolution: "@chain-registry/types@npm:0.17.0"
+"@chain-registry/types@npm:^0.18.0":
+  version: 0.18.0
+  resolution: "@chain-registry/types@npm:0.18.0"
   dependencies:
     "@babel/runtime": ^7.21.0
-  checksum: 4a36ecb2b50da88af79bdb825fcfef9f6acebb4dd02cc4d09caacd10741006f9aebbf0672284caa5519261221b2736ab52e4ed16a126a68f4f64cbb931872661
+  checksum: 420bc6fc93389cd52f7f744349f0d453322b4f83fcd18a3c379f9bc7731822abf8f1442ae20298518f1a15bd1c442a4942d1bb16becc874215acea86204d715e
   languageName: node
   linkType: hard
 
@@ -470,13 +470,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chain-registry@npm:^1.20.0":
-  version: 1.20.0
-  resolution: "chain-registry@npm:1.20.0"
+"chain-registry@npm:^1.27.0":
+  version: 1.27.0
+  resolution: "chain-registry@npm:1.27.0"
   dependencies:
     "@babel/runtime": ^7.21.0
-    "@chain-registry/types": ^0.17.0
-  checksum: 0b28cea3503a9a0f3028bdeb9dd5922fc6be10d112aa0b45218d0167e1d1c68d736d14d26110b33321ba99aa5abe4a3cc6473758307a149aceeea51f768ba5d3
+    "@chain-registry/types": ^0.18.0
+  checksum: cfe13f3e2d1ba08785fdb4c14e7525c5956adf54b93d2e18118499502dbd8c015df330ba73bc32f3a40ca2360c31f59b7613feee5a197e37225b02e3ef1054aa
   languageName: node
   linkType: hard
 
@@ -691,7 +691,7 @@ __metadata:
     "@ethersproject/bignumber": ^5.7.0
     "@keplr-wallet/types": ^0.11.12
     "@types/google-protobuf": ^3.15.6
-    chain-registry: ^1.20.0
+    chain-registry: ^1.27.0
     cosmjs-types: ^0.8.0
     long: ^4.0.0
     react: ^18.2.0

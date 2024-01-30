@@ -1,7 +1,7 @@
 {
   "name": "kujira.js",
   "description": "JS Interface for the Kujira Blockchain",
-  "version": "0.9.113",
+  "version": "0.9.114",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -21,7 +21,7 @@
     "@ethersproject/bignumber": "^5.7.0",
     "@keplr-wallet/types": "^0.11.12",
     "@types/google-protobuf": "^3.15.6",
-    "chain-registry": "^1.20.0",
+    "chain-registry": "^1.27.0",
     "cosmjs-types": "^0.8.0",
     "long": "^4.0.0",
     "text-encoding": "^0.7.0",
