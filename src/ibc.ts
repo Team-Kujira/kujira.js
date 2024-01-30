@@ -58,6 +58,7 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-117": "celestia",
     "channel-118": "dydx",
     "channel-119": "furya",
+    "channel-123": "andromeda",
   },
 };
 
