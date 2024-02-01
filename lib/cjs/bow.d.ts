@@ -12,6 +12,9 @@ export type Pool = {
     decimalDelta: number;
     finContract: string;
     margin?: Margin;
+    adapter?: {
+        contract: string;
+    };
 };
 export type PoolResponse = {
     owner: string;

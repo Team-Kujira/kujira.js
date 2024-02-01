@@ -28,6 +28,7 @@ export type Pool = {
   decimalDelta: number;
   finContract: string;
   margin?: Margin;
+  adapter?: { contract: string };
 };
 
 export type PoolResponse = {
@@ -126,6 +127,7 @@ export const castPool = (
   decimalDelta: res.decimal_delta,
   finContract: res.fin_contract,
   margin: margin && castMargin(margin.address, margin.config),
+  adapter: res.adapter,
 });
 
 export const castMargin = (address: string, res: MarginResponse): Margin => ({
