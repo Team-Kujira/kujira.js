@@ -13,7 +13,9 @@ export type Pool = {
     finContract: string;
     margin?: Margin;
     adapter?: {
-        contract: string;
+        contract: {
+            address: string;
+        };
     };
 };
 export type PoolResponse = {
@@ -25,7 +27,13 @@ export type PoolResponse = {
     decimal_delta: number;
     fin_contract: string;
     amp?: any;
-    adapter?: any;
+    adapter?: {
+        contract: {
+            address: string;
+        } | string;
+    } | {
+        oracle: any;
+    };
 };
 export type Margin = {
     address: string;

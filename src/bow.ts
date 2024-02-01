@@ -28,7 +28,7 @@ export type Pool = {
   decimalDelta: number;
   finContract: string;
   margin?: Margin;
-  adapter?: { contract: string };
+  adapter?: { contract: { address: string } };
 };
 
 export type PoolResponse = {
@@ -38,7 +38,14 @@ export type PoolResponse = {
   decimal_delta: number;
   fin_contract: string;
   amp?: any;
-  adapter?: any;
+  adapter?:
+    | {
+        contract:
+          | { address: string }
+          // legacy
+          | string;
+      }
+    | { oracle: any };
 };
 
 export type Margin = {
@@ -127,7 +134,7 @@ export const castPool = (
   decimalDelta: res.decimal_delta,
   finContract: res.fin_contract,
   margin: margin && castMargin(margin.address, margin.config),
-  adapter: res.adapter,
+  adapter: res.adapter && castAdapter(res.adapter),
 });
 
 export const castMargin = (address: string, res: MarginResponse): Margin => ({
@@ -153,6 +160,22 @@ export const castMargin = (address: string, res: MarginResponse): Margin => ({
   partialLiquidationTarget: parseFixed(res.partial_liquidation_target, 18),
   borrowFee: parseFixed(res.borrow_fee, 18),
 });
+
+const castAdapter = (
+  res:
+    | {
+        contract:
+          | { address: string }
+          // legacy
+          | string;
+      }
+    | { oracle: any }
+): { contract: { address: string } } | undefined => {
+  if ("oracle" in res) return undefined;
+  if (typeof res.contract === "string")
+    return { contract: { address: res.contract } };
+  return { contract: { address: res.contract.address } };
+};
 
 export const POOLS: Record<NETWORK, Record<string, Pool>> = {
   [MAINNET]: contracts[MAINNET].bow.reduce(
