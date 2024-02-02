@@ -29,6 +29,7 @@ const labels: Record<string, string> = {
     "USTC",
   "ibc/217755344c0d40c75036110e20b0427cc6505760f071be4080dad5ac845969ee":
     "USTC",
+
   uausdc: "axlUSDC",
   uusdc: "axlUSDC",
   uausdt: "axlUSDT",
@@ -252,6 +253,9 @@ const baseDenomToSymbol = (denom: string): string => {
     ? "r" + baseDenom.replace(/^ur/, "").toUpperCase()
     : baseDenom.startsWith("u")
     ? baseDenom.replace(/^u/, "").toUpperCase()
+    : // Persistence
+    baseDenom.startsWith("stk/")
+    ? `stk${baseDenomToSymbol(baseDenom.replace(/^stk\//, ""))}`
     : // Stride
     baseDenom.startsWith("stu")
     ? `st${baseDenomToSymbol(baseDenom.replace(/^st/, ""))}`
