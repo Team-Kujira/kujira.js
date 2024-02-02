@@ -12843,7 +12843,9 @@
                 "address": "kujira1mn4ukkejhvm46hm28xd593egxlta5p085h43xxjpsqm4dmm2gc5sku8ywt",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira1l0t6rafq7ufsm3aewskf6dme04cr3w2yg3l3y7hzlls2aqfcmt0q7hxuvc"
+                    ],
                     "bid_denom": "factory/kujira1jelmu9tdmr6hqg0d6qw4g6c9mwrexrzuryh50fwcavcpthp5m0uq20853h/urcpt",
                     "collateral_denom": "ibc/086C1B2E9E611F23D3C9159C858D3F4C6A911D348DFB916A11AE306A865A77A8",
                     "bid_threshold": "1000000000",
@@ -12863,7 +12865,9 @@
                 "address": "kujira1glc907qtuh52806tzxnw7ng02jrws0evqx8avz2wevera5j4fygq2un5k6",
                 "config": {
                     "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
-                    "markets": [],
+                    "markets": [
+                        "kujira10cmukht3esg3nwt64kjz3wcv8ap8ugssg7nr4yl66mkqdf57gyusnz6myy"
+                    ],
                     "bid_denom": "factory/kujira1w4yaama77v53fp0f9343t9w2f932z526vj970n2jv5055a7gt92sxgwypf/urcpt",
                     "collateral_denom": "ibc/086C1B2E9E611F23D3C9159C858D3F4C6A911D348DFB916A11AE306A865A77A8",
                     "bid_threshold": "1000000000",
@@ -13903,6 +13907,11 @@
                         "current_borrows": "185264861521"
                     },
                     {
+                        "addr": "kujira1l0t6rafq7ufsm3aewskf6dme04cr3w2yg3l3y7hzlls2aqfcmt0q7hxuvc",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    },
+                    {
                         "addr": "kujira1lrk6z5yxjaractukayphr5h45v8sh3j39u25qgrqxyz0hw9wzwtssggsuk",
                         "borrow_limit": null,
                         "current_borrows": "1491293478539"
@@ -14120,6 +14129,11 @@
                 },
                 "pairs": false,
                 "markets": [
+                    {
+                        "addr": "kujira10cmukht3esg3nwt64kjz3wcv8ap8ugssg7nr4yl66mkqdf57gyusnz6myy",
+                        "borrow_limit": null,
+                        "current_borrows": "0"
+                    },
                     {
                         "addr": "kujira1a6hhtps5eus0uqjupcug0ks7fzman70eduyph33999tr3tuhgcpsuked0l",
                         "borrow_limit": null,
