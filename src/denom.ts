@@ -60,6 +60,7 @@ const labels: Record<string, string> = {
   nanomobx: "MOBX",
   ario: "RIO",
   ophir: "OPHIR",
+  adym: "DYM",
   "factory/kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5/demo": "DEMO",
   "factory/kujira12w0ua4eqnkk0aahtnjlt6h3dhxael6x25s507w/local": "LOCAL",
   "factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local": "LOCAL",
@@ -476,6 +477,7 @@ export class Denom {
     if (this.symbol === "ARCH") this.decimals = 18;
     if (this.symbol === "RIO") this.decimals = 18;
     if (this.symbol === "DYDX") this.decimals = 18;
+    if (this.symbol === "DYM") this.decimals = 18;
     if (this.symbol === "CHEQ") this.decimals = 9;
     if (
       this.underlying?.length === 2 &&
