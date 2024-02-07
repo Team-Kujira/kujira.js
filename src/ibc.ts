@@ -59,8 +59,86 @@ export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
     "channel-118": "dydx",
     "channel-119": "furya",
     "channel-123": "andromeda",
+    "channel-124": "cheqd",
+    "channel-160": "dymension",
   },
 };
+
+const EXTRA = [
+  {
+    chain_name: "dymension",
+    status: "live",
+    network_type: "mainnet",
+    website: "https://portal.dymension.xyz",
+    pretty_name: "Dymension Hub",
+    chain_id: "dymension_1100-1",
+    bech32_prefix: "dym",
+    slip44: 60,
+    daemon_name: "dymd",
+    fees: {
+      fee_tokens: [
+        {
+          denom: "adym",
+          low_gas_price: 20000000000,
+          average_gas_price: 20000000000,
+          high_gas_price: 20000000000,
+        },
+      ],
+    },
+    staking: {
+      staking_tokens: [
+        {
+          denom: "adym",
+        },
+      ],
+    },
+    logo_URIs: {
+      png: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.png",
+      svg: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg",
+    },
+    description:
+      "Dymension is a network of easily deployable and lightning fast modular blockchains called RollApps.",
+    images: [
+      {
+        png: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.png",
+        svg: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg",
+      },
+    ],
+    codebase: {
+      git_repo: "https://github.com/dymensionxyz/dymension",
+    },
+    assets: [
+      {
+        description:
+          "The native governance and staking token of the Dymension Hub",
+        denom_units: [
+          {
+            denom: "adym",
+            exponent: 0,
+          },
+          {
+            denom: "dym",
+            exponent: 18,
+          },
+        ],
+        base: "adym",
+        name: "Dymension",
+        display: "dym",
+        symbol: "DYM",
+        logo_URIs: {
+          png: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.png",
+          svg: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg",
+        },
+        images: [
+          {
+            png: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.png",
+            svg: "https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg",
+          },
+        ],
+      },
+    ],
+  },
+];
 
 export const IBC: {
   chains: { mainnet: CosmosChain[]; testnet: CosmosChain[] };
@@ -76,7 +154,7 @@ export const IBC: {
       const key = v.network_type === "mainnet" ? "mainnet" : "testnet";
       return { ...a, [key]: [...a[key], x] };
     },
-    { mainnet: [], testnet: [] }
+    { mainnet: EXTRA, testnet: [] }
   ),
   connections,
   channels: {
