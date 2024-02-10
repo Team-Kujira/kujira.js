@@ -20,7 +20,7 @@ export interface AminoMsgRevoke extends AminoMsg {
     readonly value: {
         readonly granter: string;
         readonly grantee: string;
-        readonly msgTypeUrl: string;
+        readonly msg_type_url: string;
     };
 }
 export declare function createAuthzAminoConverters(): AminoConverters;

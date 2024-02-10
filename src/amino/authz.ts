@@ -33,8 +33,6 @@ export interface AminoMsgRevoke extends AminoMsg {
 }
 
 const grantToAmino = (grant: Grant): AminoGrant => {
-  console.log({ original: grant });
-
   const expiration = new Date(
     Math.floor(grant.expiration?.seconds.toNumber() || 0) * 1000
   )
@@ -77,16 +75,12 @@ const grantToAmino = (grant: Grant): AminoGrant => {
 };
 
 const grantFromAmino = (grant: AminoGrant): Grant => {
-  console.log({ amino: grant });
-
   const expiration =
     grant.expiration &&
     Long.fromNumber(new Date(grant.expiration).getTime() / 1000);
 
   switch (grant.authorization.type) {
     case "wasm/ContractExecutionAuthorization":
-      console.log(grant.authorization);
-
       return {
         expiration: expiration ? { seconds: expiration, nanos: 0 } : undefined,
         authorization: {
@@ -139,8 +133,6 @@ export function createAuthzAminoConverters(): AminoConverters {
         grantee,
         grant,
       }: AminoMsgGrant["value"]): MsgGrant => {
-        console.log({ returned: grant && grantFromAmino(grant) });
-
         return {
           granter: granter,
           grantee: grantee,

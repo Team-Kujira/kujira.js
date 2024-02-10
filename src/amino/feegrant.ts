@@ -1,7 +1,10 @@
 import { AminoMsg } from "@cosmjs/amino";
 import { AminoConverters, Coin } from "@cosmjs/stargate";
-import { MsgGrantAllowance, MsgRevokeAllowance } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
 import { BasicAllowance } from "cosmjs-types/cosmos/feegrant/v1beta1/feegrant";
+import {
+  MsgGrantAllowance,
+  MsgRevokeAllowance,
+} from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
 import Long from "long";
 
 type AminoAllowance = {
@@ -15,7 +18,7 @@ type AminoBasicAllowance = {
     seconds?: string | number | Long.Long;
     nanos?: number;
   };
-}
+};
 
 export interface AminoMsgGrantAllowance extends AminoMsg {
   type: "cosmos-sdk/MsgGrantAllowance";
@@ -33,50 +36,48 @@ export interface AminoMsgRevokeAllowance extends AminoMsg {
   };
 }
 
-const allowanceToAmino = (allowance: {typeUrl: string, value: Uint8Array}): AminoAllowance => {
-  console.log({ original: allowance });
-
+const allowanceToAmino = (allowance: {
+  typeUrl: string;
+  value: Uint8Array;
+}): AminoAllowance => {
   switch (allowance.typeUrl) {
     case "/cosmos.feegrant.v1beta1.BasicAllowance": {
-      const basicAllowance = BasicAllowance.decode(allowance.value)
+      const basicAllowance = BasicAllowance.decode(allowance.value);
       const aminoBasicAllowance = {
         type: "cosmos-sdk/BasicAllowance",
-        value:  {
+        value: {
           spend_limit: basicAllowance.spendLimit,
-          expiration: basicAllowance.expiration
-        }
-      }
-      return aminoBasicAllowance
+          expiration: basicAllowance.expiration,
+        },
+      };
+      return aminoBasicAllowance;
     }
     default:
-      throw new Error(
-        `${allowance.typeUrl} not supported for Ledger`
-      );
+      throw new Error(`${allowance.typeUrl} not supported for Ledger`);
   }
 };
 
-const allowanceFromAmino = (allowance: AminoAllowance): {typeUrl: string, value: Uint8Array} => {
-  console.log({ amino: allowance })
-
+const allowanceFromAmino = (
+  allowance: AminoAllowance
+): { typeUrl: string; value: Uint8Array } => {
   switch (allowance.type) {
     case "cosmos-sdk/BasicAllowance": {
-        console.log(allowance.value);
-
-        const basicAllowance = {
-          typeUrl: "/cosmos.feegrant.v1beta1.BasicAllowance",
-          value: BasicAllowance.encode(BasicAllowance.fromPartial({
+      const basicAllowance = {
+        typeUrl: "/cosmos.feegrant.v1beta1.BasicAllowance",
+        value: BasicAllowance.encode(
+          BasicAllowance.fromPartial({
             spendLimit: allowance.value.spend_limit,
-            expiration: allowance.value.expiration
-            })).finish()          
-        }
-        return basicAllowance
-      }
+            expiration: allowance.value.expiration,
+          })
+        ).finish(),
+      };
+      return basicAllowance;
+    }
     default:
       throw new Error(`${allowance.type} not supported from Ledger`);
   }
 };
 
-  
 export function createFeegrantAminoConverters(): AminoConverters {
   return {
     "/cosmos.feegrant.v1beta1.MsgGrantAllowance": {
@@ -84,46 +85,46 @@ export function createFeegrantAminoConverters(): AminoConverters {
       toAmino: ({
         granter,
         grantee,
-        allowance
+        allowance,
       }: MsgGrantAllowance): AminoMsgGrantAllowance["value"] => {
         return {
           granter,
           grantee,
-          allowance: allowanceToAmino(allowance!)
+          allowance: allowanceToAmino(allowance!),
         };
       },
       fromAmino: ({
         granter,
         grantee,
-        allowance
+        allowance,
       }: AminoMsgGrantAllowance["value"]): MsgGrantAllowance => {
         return {
           granter,
           grantee,
-          allowance: allowance && allowanceFromAmino(allowance)
+          allowance: allowance && allowanceFromAmino(allowance),
         };
-      }
+      },
     },
     "/cosmos.feegrant.v1beta1.MsgRevokeAllowance": {
       aminoType: "cosmos-sdk/MsgRevokeAllowance",
       toAmino: ({
         granter,
-        grantee
+        grantee,
       }: MsgRevokeAllowance): AminoMsgRevokeAllowance["value"] => {
         return {
           granter,
-          grantee
+          grantee,
         };
       },
       fromAmino: ({
         granter,
-        grantee
+        grantee,
       }: AminoMsgRevokeAllowance["value"]): MsgRevokeAllowance => {
         return {
           granter,
-          grantee
+          grantee,
         };
-      }
-    }
-  }
+      },
+    },
+  };
 }
