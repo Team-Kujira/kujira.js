@@ -28,7 +28,7 @@ export interface AminoMsgRevoke extends AminoMsg {
   readonly value: {
     readonly granter: string;
     readonly grantee: string;
-    readonly msgTypeUrl: string;
+    readonly msg_type_url: string;
   };
 }
 
@@ -157,16 +157,16 @@ export function createAuthzAminoConverters(): AminoConverters {
       }: MsgRevoke): AminoMsgRevoke["value"] => ({
         granter: granter,
         grantee: grantee,
-        msgTypeUrl,
+        msg_type_url: msgTypeUrl,
       }),
       fromAmino: ({
         granter,
         grantee,
-        msgTypeUrl,
+        msg_type_url,
       }: AminoMsgRevoke["value"]): MsgRevoke => ({
         granter: granter,
         grantee: grantee,
-        msgTypeUrl,
+        msgTypeUrl: msg_type_url,
       }),
     },
   };
