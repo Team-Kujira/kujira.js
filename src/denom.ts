@@ -91,6 +91,8 @@ const labels: Record<string, string> = {
     "qcKUJI",
 
   "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
+  "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn":
+    "LVN",
   gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "gPAXG",
   gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "gPSTAKE",
   gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2: "gwETH",
