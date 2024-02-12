@@ -90,7 +90,8 @@ const labels: Record<string, string> = {
 
   "factory/kujira1jaf8tsgvchqfmycv8wmncv52t4fcv3ehuh57gsd9ycce5ewn87ksnwhlkr/urcpt":
     "qcKUJI",
-
+  "factory/kujira1l04ged98c7a7s9tllu62ld09ztylwf442qgm4thfgmadrvngeumsz4zrh2/urcpt":
+    "qcFUZN",
   "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
   "factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn":
     "LVN",
