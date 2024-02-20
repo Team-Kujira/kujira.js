@@ -13,7 +13,7 @@ const IDS = {
       // Stable Strategy
       161, 166,
     ],
-    bowStaking: [213],
+    bowStaking: [240],
     orca: [108, 220, 234],
     uskMarket: [73],
     uskMarginSwap: [87],
