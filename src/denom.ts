@@ -88,10 +88,13 @@ const labels: Record<string, string> = {
   "factory/kujira14el9xd5e688s7g8yra2rjjv26dmjatfrkgrpkyly5hh9hswn2ngs3p9vag/urcpt":
     "qcMNTA",
 
-  "factory/kujira1q0wefkmer7y8l2m9cwzhkm3dgwm8haaya0lslnk2gf2y7n68kecsfq498v/urcpt":
-    "qcKUJI",
+  // Old testnet qcKUJI
   "factory/kujira1jaf8tsgvchqfmycv8wmncv52t4fcv3ehuh57gsd9ycce5ewn87ksnwhlkr/urcpt":
     "qcKUJI",
+
+  "factory/kujira1eqqr3ad0lh84ua4m5qu2n4jjz6h73d64jfwvng0w2k0lnhltt4jqdex4z9/urcpt":
+    "qcKUJI",
+
   "factory/kujira1l04ged98c7a7s9tllu62ld09ztylwf442qgm4thfgmadrvngeumsz4zrh2/urcpt":
     "qcFUZN",
   "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
