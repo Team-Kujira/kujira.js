@@ -407,6 +407,14 @@ const ics20: Record<string, ICS20> = {
     router: "terra1lwdvjtl5lecxcyfl7hc362gczqh03msgcwlh76xa0fcu0usf7ejskkfulk",
     channel: "",
   },
+
+    // Bitmos
+  "cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq": {
+    contract:
+      "terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",
+    router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
+    channel: "channel-28",
+  },
 };
 
 export class Denom {
