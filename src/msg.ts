@@ -61,23 +61,23 @@ export const msg = {
   distribution: {
     msgFundCommunityPool: (i: distribution.MsgFundCommunityPool) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgFundCommunityPool",
-      value: distribution.MsgFundCommunityPool.fromJSON(i),
+      value: distribution.MsgFundCommunityPool.fromPartial(i),
     }),
     msgSetWithdrawAddress: (i: distribution.MsgSetWithdrawAddress) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgSetWithdrawAddress",
-      value: distribution.MsgSetWithdrawAddress.fromJSON(i),
+      value: distribution.MsgSetWithdrawAddress.fromPartial(i),
     }),
     msgWithdrawDelegatorReward: (
       i: distribution.MsgWithdrawDelegatorReward
     ) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-      value: distribution.MsgWithdrawDelegatorReward.fromJSON(i),
+      value: distribution.MsgWithdrawDelegatorReward.fromPartial(i),
     }),
     msgWithdrawValidatorCommission: (
       i: distribution.MsgWithdrawValidatorCommission
     ) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-      value: distribution.MsgWithdrawValidatorCommission.fromJSON(i),
+      value: distribution.MsgWithdrawValidatorCommission.fromPartial(i),
     }),
     msgUpdateParams: (i: distribution.MsgUpdateParams) => ({
       typeUrl: "/cosmos.distribution.v1beta1.MsgUpdateParams",
@@ -98,11 +98,11 @@ export const msg = {
   gov: {
     msgDeposit: (i: gov.MsgDeposit) => ({
       typeUrl: "/cosmos.gov.v1.MsgDeposit",
-      value: gov.MsgDeposit.fromJSON(i),
+      value: gov.MsgDeposit.fromPartial(i),
     }),
     msgDepositBeta: (i: govV1Beta1.MsgDeposit) => ({
       typeUrl: "/cosmos.gov.v1beta1.MsgDeposit",
-      value: govV1Beta1.MsgDeposit.fromJSON(i),
+      value: govV1Beta1.MsgDeposit.fromPartial(i),
     }),
     msgSubmitProposal: (i: gov.MsgSubmitProposal) => ({
       typeUrl: "/cosmos.gov.v1.MsgSubmitProposal",
@@ -110,11 +110,11 @@ export const msg = {
     }),
     msgVote: (i: gov.MsgVote) => ({
       typeUrl: "/cosmos.gov.v1.MsgVote",
-      value: gov.MsgVote.fromJSON(i),
+      value: gov.MsgVote.fromPartial(i),
     }),
     msgVoteBeta: (i: govV1Beta1.MsgVote) => ({
       typeUrl: "/cosmos.gov.v1beta1.MsgVote",
-      value: govV1Beta1.MsgVote.fromJSON(i),
+      value: govV1Beta1.MsgVote.fromPartial(i),
     }),
     msgVoteWeighted: (i: gov.MsgVoteWeighted) => ({
       typeUrl: "/cosmos.gov.v1.MsgVoteWeighted",
@@ -137,7 +137,7 @@ export const msg = {
     }),
     msgDelegate: (i: staking.MsgDelegate) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgDelegate",
-      value: staking.MsgDelegate.fromJSON(i),
+      value: staking.MsgDelegate.fromPartial(i),
     }),
     msgEditValidator: (i: staking.MsgEditValidator) => ({
       typeUrl: "/cosmos.staking.v1beta1.MsgEditValidator",
@@ -167,7 +167,7 @@ export const msg = {
   wasm: {
     msgClearAdmin: (i: MsgClearAdmin) => ({
       typeUrl: "/cosmwasm.wasm.v1.MsgClearAdmin",
-      value: MsgClearAdmin.fromJSON(i),
+      value: MsgClearAdmin.fromPartial(i),
     }),
     msgExecuteContract: (i: MsgExecuteContract) => ({
       typeUrl: "/cosmwasm.wasm.v1.MsgExecuteContract",
@@ -179,7 +179,7 @@ export const msg = {
     }),
     msgStoreCode: (i: MsgStoreCode) => ({
       typeUrl: "/cosmwasm.wasm.v1.MsgStoreCode",
-      value: MsgStoreCode.fromJSON(i),
+      value: MsgStoreCode.fromPartial(i),
     }),
     msgInstantiateContract: (i: MsgInstantiateContract) => ({
       typeUrl: "/cosmwasm.wasm.v1.MsgInstantiateContract",
