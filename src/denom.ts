@@ -88,8 +88,13 @@ const labels: Record<string, string> = {
   "factory/kujira14el9xd5e688s7g8yra2rjjv26dmjatfrkgrpkyly5hh9hswn2ngs3p9vag/urcpt":
     "qcMNTA",
 
+  // Old testnet qcKUJI
   "factory/kujira1jaf8tsgvchqfmycv8wmncv52t4fcv3ehuh57gsd9ycce5ewn87ksnwhlkr/urcpt":
     "qcKUJI",
+
+  "factory/kujira1eqqr3ad0lh84ua4m5qu2n4jjz6h73d64jfwvng0w2k0lnhltt4jqdex4z9/urcpt":
+    "qcKUJI",
+
   "factory/kujira1l04ged98c7a7s9tllu62ld09ztylwf442qgm4thfgmadrvngeumsz4zrh2/urcpt":
     "qcFUZN",
   "factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/urac": "RAC",
@@ -401,6 +406,14 @@ const ics20: Record<string, ICS20> = {
     contract: "terra188w26t95tf4dz77raftme8p75rggatxjxfeknw",
     router: "terra1lwdvjtl5lecxcyfl7hc362gczqh03msgcwlh76xa0fcu0usf7ejskkfulk",
     channel: "",
+  },
+
+    // Bitmos
+  "cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq": {
+    contract:
+      "terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",
+    router: "terra1e0mrzy8077druuu42vs0hu7ugguade0cj65dgtauyaw4gsl4kv0qtdf2au",
+    channel: "channel-28",
   },
 };
 

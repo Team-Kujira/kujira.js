@@ -5,7 +5,7 @@ import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
 const IDS = {
   [MAINNET]: {
-    fin: [63, 134, 162],
+    fin: [63, 134, 162, 243],
     bow: [
       54, 126,
       // LSD Strategy
@@ -13,7 +13,7 @@ const IDS = {
       // Stable Strategy
       161, 166,
     ],
-    bowStaking: [213],
+    bowStaking: [244],
     orca: [108, 220, 234],
     uskMarket: [73],
     uskMarginSwap: [87],

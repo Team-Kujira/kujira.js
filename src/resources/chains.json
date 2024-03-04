@@ -15642,6 +15642,27 @@
           "type_asset": "cw20"
         },
         {
+          "address": "terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",
+          "base": "cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",
+          "denom_units": [
+            {
+              "denom": "cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",
+              "exponent": 0
+            },
+            {
+              "denom": "bitmos",
+              "exponent": 6
+            }
+          ],
+          "display": "BMOS",
+          "logo_URIs": {
+            "png": "https://raw.githubusercontent.com/bitmos-io/data/main/logos/bitmos_100.png"
+          },
+          "name": "BITMOS",
+          "symbol": "BMOS",
+          "type_asset": "cw20"
+        },
+        {
           "description": "The GraveDigger is the Liquid Staking Product of BackBone Labs. It will have its own platform. Its liquid staking derivative (LSD) is boneLUNA.",
           "type_asset": "cw20",
           "address": "terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml",
