@@ -603,6 +603,20 @@
             "channelId": "channel-47"
         },
         {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
+                "channelId": "channel-43"
+            },
+            "connectionHops": [
+                "connection-44"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-48"
+        },
+        {
             "state": 1,
             "ordering": 1,
             "counterparty": {
@@ -671,6 +685,20 @@
             "version": "ics20-1",
             "portId": "transfer",
             "channelId": "channel-9"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "wasm.secret1nch89tk69s4stnmjn288pg2qg0v86r6mvywrvz",
+                "channelId": "channel-45"
+            },
+            "connectionHops": [
+                "connection-44"
+            ],
+            "version": "ibc-v1",
+            "portId": "wasm.kujira1vnn584sx5ve33ya5qktkedv5xtx8fg5w35rt7y3j6dvpjcm7d4rqv55nce",
+            "channelId": "channel-49"
         }
     ],
     "mainnet": [
