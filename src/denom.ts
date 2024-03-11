@@ -56,6 +56,7 @@ const labels: Record<string, string> = {
   aacre: "ACRE",
   aplanq: "PLQ",
   ufrienzies: "FRNZ",
+  ubedrock: "ROCK",
   stinj: "stINJ",
   nanomobx: "MOBX",
   ario: "RIO",
@@ -408,7 +409,7 @@ const ics20: Record<string, ICS20> = {
     channel: "",
   },
 
-    // Bitmos
+  // Bitmos
   "cw20:terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq": {
     contract:
       "terra1sxe8u2hjczlekwfkcq0rs28egt38pg3wqzfx4zcrese4fnvzzupsk9gjkq",

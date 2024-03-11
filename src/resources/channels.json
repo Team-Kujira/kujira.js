@@ -1393,6 +1393,34 @@
       "ordering": 1,
       "counterparty": {
         "portId": "transfer",
+        "channelId": "channel-93"
+      },
+      "connectionHops": [
+        "connection-135"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-162"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-31"
+      },
+      "connectionHops": [
+        "connection-136"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-163"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
         "channelId": "channel-21"
       },
       "connectionHops": [
