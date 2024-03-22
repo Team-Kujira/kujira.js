@@ -24,6 +24,12 @@ export const EXCLUDED = [
   "kujira1rpqhczdrgaa6w0h9fukdcppme3074zcay8ge8lazwefdawp03vwsnpc7ya",
   "kujira13ta4a6cu29na9dch3rtyqasgx57ju3z98530cet46tn5v7sx6k2qg7g3zk",
   "kujira1qxx58hln33sgasp5t6tdvhvwacqvkngq7y8mj0pzxhjy6ap9d2qs6u8jk7",
+  "kujira1kxjqngkqxv43nk7r3rnp4k28yh697atyydu83j0hp7gh3ryfxnvqa76twh",
+  "kujira1hu7uw5unyr5wnc5shkg2sfflmnkrx38hu3k5l0h3welm3mc9x82qhg425v",
+  "kujira1yps6lf07smvq6th3f77hspj8fcj3rz8n52wgdu6j4j867runy95qd4clmz",
+  "kujira1ngn4dwwwv25t38phsv3ulwckm4kf35v9dgq858x9q5gj6e520jns537m3a",
+  "kujira10ecrs8u7l3stdqvv9yjhcwa7tnqkma27s06vq6zs75dk3evk0u2qzruunt",
+  "kujira1rkurt0cxe42ml0usj3cm3ycdxg3z8afw4rllvu0jyu9rqmrdj6us2u0wyv",
 ];
 
 export type Strategy = "xyk" | "lsd" | "stable";
