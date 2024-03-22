@@ -8,6 +8,188 @@
                 "channelId": ""
             },
             "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira123uuzjz3sw0m383qxgy6wvzdyyzuz5g5sukwht7e0uw890k7g7kqk79sfr-ica_fee_collector",
+            "channelId": "channel-63"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira123uuzjz3sw0m383qxgy6wvzdyyzuz5g5sukwht7e0uw890k7g7kqk79sfr-ica_hub",
+            "channelId": "channel-61"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira123uuzjz3sw0m383qxgy6wvzdyyzuz5g5sukwht7e0uw890k7g7kqk79sfr-ica_reward_collector",
+            "channelId": "channel-62"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_fee_collector",
+            "channelId": "channel-59"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_hub",
+            "channelId": "channel-57"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_hub",
+            "channelId": "channel-64"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_hub",
+            "channelId": "channel-65"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_hub",
+            "channelId": "channel-66"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_hub",
+            "channelId": "channel-67"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira18zjrjshjtvle9u58427flk0mnmqv6phajkh85pvzlm9p5v6h5j7s9p9wa9-ica_reward_collector",
+            "channelId": "channel-58"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1eu3yck9cvgapafnfdh22tf352x4p8g0kjpnvl4vlne5pkcej35pqhn7ums-rewards",
+            "channelId": "channel-69"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1eu3yck9cvgapafnfdh22tf352x4p8g0kjpnvl4vlne5pkcej35pqhn7ums-staking",
+            "channelId": "channel-68"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1eu3yck9cvgapafnfdh22tf352x4p8g0kjpnvl4vlne5pkcej35pqhn7ums-staking",
+            "channelId": "channel-70"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
                 "connection-14"
             ],
             "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-14\",\"host_connection_id\":\"connection-0\",\"address\":\"\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
@@ -106,11 +288,123 @@
                 "channelId": ""
             },
             "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1ltvwg69sw3c5z99c6rr08hal7v0kdzfxz07yj5",
+            "channelId": "channel-60"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1mc8r0mcrye0tcwldn82fyyaa4zv6vve9j2me6h",
+            "channelId": "channel-52"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1ry74k4wu2v9xz7ggy998ercpsxhv4md64yncruzrn8awy360zw3qxrle9t-rewards",
+            "channelId": "channel-54"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1ry74k4wu2v9xz7ggy998ercpsxhv4md64yncruzrn8awy360zw3qxrle9t-staking",
+            "channelId": "channel-53"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1wk3m94knfjkuj6a99xxk63t52uyvpefwevv8czcekpf0tc2r33kscqjhgx-rewards",
+            "channelId": "channel-56"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1wk3m94knfjkuj6a99xxk63t52uyvpefwevv8czcekpf0tc2r33kscqjhgx-staking",
+            "channelId": "channel-55"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
                 "connection-14"
             ],
             "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-14\",\"host_connection_id\":\"connection-0\",\"address\":\"\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
             "portId": "icacontroller-kujira1xesqr8vjvy34jhu027zd70ypl0nnev5eh42prp",
             "channelId": "channel-25"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1xhusq7ls2ezaf8cgmh5th6cz0aygh8zz7wts5l646k9scmwp0clqdx4ecl-rewards",
+            "channelId": "channel-72"
+        },
+        {
+            "state": 1,
+            "ordering": 2,
+            "counterparty": {
+                "portId": "icahost",
+                "channelId": ""
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+            "portId": "icacontroller-kujira1xhusq7ls2ezaf8cgmh5th6cz0aygh8zz7wts5l646k9scmwp0clqdx4ecl-staking",
+            "channelId": "channel-71"
         },
         {
             "state": 3,
@@ -635,6 +929,20 @@
             "ordering": 1,
             "counterparty": {
                 "portId": "transfer",
+                "channelId": "channel-4004"
+            },
+            "connectionHops": [
+                "connection-47"
+            ],
+            "version": "ics20-1",
+            "portId": "transfer",
+            "channelId": "channel-51"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "transfer",
                 "channelId": "channel-6"
             },
             "connectionHops": [
@@ -685,6 +993,20 @@
             "version": "ics20-1",
             "portId": "transfer",
             "channelId": "channel-9"
+        },
+        {
+            "state": 3,
+            "ordering": 1,
+            "counterparty": {
+                "portId": "wasm.secret1ghted77eynn75f6wrpdayp0c5fau6p25xxs2l6",
+                "channelId": "channel-51"
+            },
+            "connectionHops": [
+                "connection-46"
+            ],
+            "version": "ibc-v1",
+            "portId": "wasm.kujira17zq4ck08qj32fkrj5rkp4cha3gdl3z76wc65w0e8rfesl3xvqw8ssp82j5",
+            "channelId": "channel-50"
         },
         {
             "state": 3,

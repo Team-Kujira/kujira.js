@@ -7,6 +7,7 @@ import tokens from "./resources/tokens.json";
 export const TRANSFER_CHANNELS: Record<string, Record<string, string>> = {
   testnet: {
     "channel-44": "terra2",
+    "channel-51": "theta",
   },
   mainnet: {
     "channel-0": "cosmoshub",
