@@ -33,6 +33,10 @@ import {
   MsgUpdateAdmin,
   MsgUpdateInstantiateConfig,
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
+import {
+  MsgRegisterInterchainAccount,
+  MsgSendTx,
+} from "cosmjs-types/ibc/applications/interchain_accounts/controller/v1/tx";
 import { ClientUpdateProposal } from "cosmjs-types/ibc/core/client/v1/client";
 import {
   ClientState,
@@ -102,6 +106,11 @@ const extraIbc = [
   ["/ibc.lightclients.tendermint.v1.ClientState", ClientState],
   ["/ibc.lightclients.tendermint.v1.ConsensusState", ConsensusState],
   ["/ibc.lightclients.tendermint.v1.Misbehaviour", Misbehaviour],
+  [
+    "/ibc.applications.interchain_accounts.controller.v1.MsgRegisterInterchainAccount",
+    MsgRegisterInterchainAccount,
+  ],
+  ["/ibc.applications.interchain_accounts.controller.v1.MsgSendTx", MsgSendTx],
 ];
 
 const types = [
