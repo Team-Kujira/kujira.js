@@ -12,4 +12,10 @@ export interface AminoMsgCancelUnbondingDelegation extends AminoMsg {
         readonly creation_height: string;
     };
 }
+export interface AminoMsgWithdrawAllDelegatorRewards extends AminoMsg {
+    readonly type: "cosmos-sdk/MsgWithdrawAllDelegatorRewards";
+    readonly value: {
+        delegator_address: string;
+    };
+}
 export declare const aminoTypes: (prefix: string) => s.AminoTypes;

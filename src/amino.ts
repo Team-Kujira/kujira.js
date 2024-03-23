@@ -5,6 +5,7 @@ import { assertDefinedAndNotNull } from "@cosmjs/utils";
 import { MsgCancelUnbondingDelegation } from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import Long from "long";
 import { createAuthzAminoConverters } from "./amino/authz";
+import { MsgWithdrawAllDelegatorRewards } from "./batch/types/tx";
 
 /** Performs an undelegation from a delegate and a validator */
 export interface AminoMsgCancelUnbondingDelegation extends AminoMsg {
@@ -16,6 +17,13 @@ export interface AminoMsgCancelUnbondingDelegation extends AminoMsg {
     readonly validator_address: string;
     readonly amount: s.Coin;
     readonly creation_height: string;
+  };
+}
+
+export interface AminoMsgWithdrawAllDelegatorRewards extends AminoMsg {
+  readonly type: "cosmos-sdk/MsgWithdrawAllDelegatorRewards";
+  readonly value: {
+    delegator_address: string;
   };
 }
 
@@ -46,6 +54,22 @@ const extra = {
       validatorAddress: validator_address,
       amount: amount,
       creationHeight: Long.fromString(creation_height),
+    }),
+  },
+
+  "/batch.MsgWithdrawAllDelegatorRewards": {
+    aminoType: "cosmos-sdk/MsgWithdrawAllDelegatorRewards",
+    toAmino: ({
+      delegatorAddress,
+    }: MsgWithdrawAllDelegatorRewards): AminoMsgWithdrawAllDelegatorRewards["value"] => {
+      return {
+        delegator_address: delegatorAddress,
+      };
+    },
+    fromAmino: ({
+      delegator_address,
+    }: AminoMsgWithdrawAllDelegatorRewards["value"]): MsgWithdrawAllDelegatorRewards => ({
+      delegatorAddress: delegator_address,
     }),
   },
 };
