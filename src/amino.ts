@@ -9,7 +9,7 @@ import { MsgWithdrawAllDelegatorRewards } from "./batch/types/tx";
 
 /** Performs an undelegation from a delegate and a validator */
 export interface AminoMsgCancelUnbondingDelegation extends AminoMsg {
-  readonly type: "cosmos-sdk/MsgCancelUnbondingDelegatio";
+  readonly type: "cosmos-sdk/MsgCancelUnbondingDelegation";
   readonly value: {
     /** Bech32 encoded delegator address */
     readonly delegator_address: string;
@@ -21,7 +21,7 @@ export interface AminoMsgCancelUnbondingDelegation extends AminoMsg {
 }
 
 export interface AminoMsgWithdrawAllDelegatorRewards extends AminoMsg {
-  readonly type: "cosmos-sdk/MsgWithdrawAllDelegatorRewards";
+  readonly type: "batch/MsgWithdrawAllDelegatorRewards";
   readonly value: {
     delegator_address: string;
   };
@@ -58,7 +58,7 @@ const extra = {
   },
 
   "/batch.MsgWithdrawAllDelegatorRewards": {
-    aminoType: "cosmos-sdk/MsgWithdrawAllDelegatorRewards",
+    aminoType: "batch/MsgWithdrawAllDelegatorRewards",
     toAmino: ({
       delegatorAddress,
     }: MsgWithdrawAllDelegatorRewards): AminoMsgWithdrawAllDelegatorRewards["value"] => {
