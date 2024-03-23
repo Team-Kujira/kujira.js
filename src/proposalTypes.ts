@@ -31,7 +31,7 @@ import {
   CreateHookProposal,
   DeleteHookProposal,
   UpdateHookProposal,
-} from "./kujira/kujira.scheduler/types/proposal";
+} from "./kujira/scheduler/types/proposal";
 
 export const proposalTypes = [
   [

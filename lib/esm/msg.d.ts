@@ -60,10 +60,10 @@ export declare const msg: {
         };
     };
     denom: {
-        msgBurn: (data: import("./kujira/kujira.denom/types/tx").MsgBurn) => import("@cosmjs/proto-signing").EncodeObject;
-        msgChangeAdmin: (data: import("./kujira/kujira.denom/types/tx").MsgChangeAdmin) => import("@cosmjs/proto-signing").EncodeObject;
-        msgCreateDenom: (data: import("./kujira/kujira.denom/types/tx").MsgCreateDenom) => import("@cosmjs/proto-signing").EncodeObject;
-        msgMint: (data: import("./kujira/kujira.denom/types/tx").MsgMint) => import("@cosmjs/proto-signing").EncodeObject;
+        msgBurn: (data: import("./kujira/denom/types/tx").MsgBurn) => import("@cosmjs/proto-signing").EncodeObject;
+        msgChangeAdmin: (data: import("./kujira/denom/types/tx").MsgChangeAdmin) => import("@cosmjs/proto-signing").EncodeObject;
+        msgCreateDenom: (data: import("./kujira/denom/types/tx").MsgCreateDenom) => import("@cosmjs/proto-signing").EncodeObject;
+        msgMint: (data: import("./kujira/denom/types/tx").MsgMint) => import("@cosmjs/proto-signing").EncodeObject;
     };
     feegrant: {
         msgGrantAllowance: (i: MsgGrantAllowance) => {
@@ -106,9 +106,9 @@ export declare const msg: {
         };
     };
     oracle: {
-        msgAggregateExchangeRateVote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRateVote) => import("@cosmjs/proto-signing").EncodeObject;
-        msgAggregateExchangeRatePrevote: (data: import("./kujira/kujira.oracle/types/tx").MsgAggregateExchangeRatePrevote) => import("@cosmjs/proto-signing").EncodeObject;
-        msgDelegateFeedConsent: (data: import("./kujira/kujira.oracle/types/tx").MsgDelegateFeedConsent) => import("@cosmjs/proto-signing").EncodeObject;
+        msgAggregateExchangeRateVote: (data: import("./kujira/oracle/types/tx").MsgAggregateExchangeRateVote) => import("@cosmjs/proto-signing").EncodeObject;
+        msgAggregateExchangeRatePrevote: (data: import("./kujira/oracle/types/tx").MsgAggregateExchangeRatePrevote) => import("@cosmjs/proto-signing").EncodeObject;
+        msgDelegateFeedConsent: (data: import("./kujira/oracle/types/tx").MsgDelegateFeedConsent) => import("@cosmjs/proto-signing").EncodeObject;
     };
     staking: {
         msgBeginRedelegate: (i: staking.MsgBeginRedelegate) => {
@@ -224,5 +224,9 @@ export declare const msg: {
         msgRedelegate: (x: import("./alliance/tx").MsgRedelegate) => import("@cosmjs/proto-signing").EncodeObject;
         msgRedelegateResponse: (x: import("./alliance/tx").MsgRedelegateResponse) => import("@cosmjs/proto-signing").EncodeObject;
         msgClaimDelegationRewards: (x: import("./alliance/tx").MsgClaimDelegationRewards) => import("@cosmjs/proto-signing").EncodeObject;
+    };
+    batch: {
+        msgWithdrawAllDelegatorRewards: (data: import("./batch/types/tx").MsgWithdrawAllDelegatorRewards) => import("@cosmjs/proto-signing").EncodeObject;
+        msgBatchResetDelegation: (data: import("./batch/types/tx").MsgBatchResetDelegation) => import("@cosmjs/proto-signing").EncodeObject;
     };
 };

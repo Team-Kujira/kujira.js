@@ -25,9 +25,10 @@ import {
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
 import * as alliance from "./alliance";
+import * as batch from "./batch";
 import * as gravity from "./gravity/v1";
-import * as denom from "./kujira/kujira.denom";
-import * as oracle from "./kujira/kujira.oracle";
+import * as denom from "./kujira/denom";
+import * as oracle from "./kujira/oracle";
 
 export const msg = {
   authz: {
@@ -206,4 +207,5 @@ export const msg = {
   },
   gravity: gravity.msg,
   alliance: alliance.msg,
+  batch: batch.msg,
 };

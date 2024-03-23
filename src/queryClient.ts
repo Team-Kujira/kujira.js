@@ -19,12 +19,13 @@ import {
   setupWasmExtensionExtended,
 } from "./cosmwasm/wasm";
 import { GravityExtension, setupGravityExtension } from "./gravity/v1";
-import { DenomExtension, setupDenomExtension } from "./kujira/kujira.denom";
-import { OracleExtension, setupOracleExtension } from "./kujira/kujira.oracle";
+import { CwIcaExtension, setupCwIcaExtension } from "./kujira/cwica";
+import { DenomExtension, setupDenomExtension } from "./kujira/denom";
+import { OracleExtension, setupOracleExtension } from "./kujira/oracle";
 import {
   SchedulerExtension,
   setupSchedulerExtension,
-} from "./kujira/kujira.scheduler";
+} from "./kujira/scheduler";
 
 export type KujiraQueryClient = s.QueryClient &
   s.AuthExtension &
@@ -42,7 +43,8 @@ export type KujiraQueryClient = s.QueryClient &
   WasmExtensionExtended &
   s.IbcExtension &
   GravityExtension &
-  AllianceExtension;
+  AllianceExtension &
+  CwIcaExtension;
 
 export const kujiraQueryClient = ({
   client,
@@ -66,7 +68,8 @@ export const kujiraQueryClient = ({
     setupWasmExtensionExtended,
     s.setupIbcExtension,
     setupGravityExtension,
-    setupAllianceExtension
+    setupAllianceExtension,
+    setupCwIcaExtension
   );
 
 export const fetchTokens = (

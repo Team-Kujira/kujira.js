@@ -45,16 +45,17 @@ import {
   Misbehaviour,
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
 import * as alliance from "./alliance";
+import * as batch from "./batch";
 import * as eth from "./ethermint/types";
 import * as gravity from "./gravity/v1";
 import * as inj from "./injective/types";
-import * as denom from "./kujira/kujira.denom";
-import * as oracle from "./kujira/kujira.oracle";
+import * as denom from "./kujira/denom";
+import * as oracle from "./kujira/oracle";
 import {
   CreateHookProposal,
   DeleteHookProposal,
   UpdateHookProposal,
-} from "./kujira/kujira.scheduler/types/proposal";
+} from "./kujira/scheduler/types/proposal";
 import { StridePeriodicVestingAccount } from "./stride/vesting";
 const proposalTypes = [
   [
@@ -129,6 +130,7 @@ const types = [
   ...extraIbc,
   ...gravity.types,
   ...alliance.types,
+  ...batch.types,
 ];
 
 export const registry = new Registry(<any>types);

@@ -9,10 +9,11 @@ import { GovExtension } from "./cosmos/gov";
 import { StakingExtension } from "./cosmos/staking";
 import { WasmExtensionExtended } from "./cosmwasm/wasm";
 import { GravityExtension } from "./gravity/v1";
-import { DenomExtension } from "./kujira/kujira.denom";
-import { OracleExtension } from "./kujira/kujira.oracle";
-import { SchedulerExtension } from "./kujira/kujira.scheduler";
-export type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & BankExtensionExtended & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtensionExtended & s.IbcExtension & GravityExtension & AllianceExtension;
+import { CwIcaExtension } from "./kujira/cwica";
+import { DenomExtension } from "./kujira/denom";
+import { OracleExtension } from "./kujira/oracle";
+import { SchedulerExtension } from "./kujira/scheduler";
+export type KujiraQueryClient = s.QueryClient & s.AuthExtension & AuthzExtension & BankExtensionExtended & s.DistributionExtension & DenomExtension & FeegrantExtension & GovExtension & OracleExtension & SchedulerExtension & SlashingExtension & StakingExtension & s.TxExtension & WasmExtensionExtended & s.IbcExtension & GravityExtension & AllianceExtension & CwIcaExtension;
 export declare const kujiraQueryClient: ({ client, }: {
     client: Tendermint37Client;
 }) => KujiraQueryClient;

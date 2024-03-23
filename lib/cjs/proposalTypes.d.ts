@@ -10,7 +10,7 @@ import { SoftwareUpgradeProposal } from "cosmjs-types/cosmos/upgrade/v1beta1/upg
 import { ClearAdminProposal, ExecuteContractProposal, InstantiateContractProposal, MigrateContractProposal, PinCodesProposal, StoreCodeProposal, UpdateAdminProposal, UpdateInstantiateConfigProposal } from "cosmjs-types/cosmwasm/wasm/v1/proposal";
 import { MsgClearAdmin, MsgExecuteContract, MsgInstantiateContract, MsgMigrateContract, MsgStoreCode, MsgUpdateAdmin, MsgUpdateInstantiateConfig } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { ClientUpdateProposal } from "cosmjs-types/ibc/core/client/v1/client";
-import { CreateHookProposal, DeleteHookProposal } from "./kujira/kujira.scheduler/types/proposal";
+import { CreateHookProposal, DeleteHookProposal } from "./kujira/scheduler/types/proposal";
 export declare const proposalTypes: ((string | {
     encode(message: CommunityPoolSpendProposal, writer?: import("protobufjs").Writer | undefined): import("protobufjs").Writer;
     decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): CommunityPoolSpendProposal;
