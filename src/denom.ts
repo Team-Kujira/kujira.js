@@ -30,10 +30,10 @@ const labels: Record<string, string> = {
   "ibc/217755344c0d40c75036110e20b0427cc6505760f071be4080dad5ac845969ee":
     "USTC",
 
-  uausdc: "axlUSDC",
-  uusdc: "axlUSDC",
-  uausdt: "axlUSDT",
-  uusdt: "axlUSDT",
+  uausdc: "USDC",
+  uusdc: "USDC",
+  uausdt: "USDT",
+  uusdt: "USDT",
   atevmos: "EVMOS",
   staevmos: "stEVMOS",
   "wavax-wei": "wAVAX",
@@ -432,11 +432,15 @@ export class Denom {
   };
 
   constructor(public reference: string, public underlying?: Denom[]) {
+    this.symbol = "";
     if (this.reference.startsWith("ibc/")) {
       this.trace = (ibc as Record<string, any>)[this.reference];
+      if (this.trace?.path === "transfer/channel-9") {
+        this.symbol = "axl";
+      }
     }
 
-    this.symbol = baseDenomToSymbol(this.reference);
+    this.symbol += baseDenomToSymbol(this.reference);
     if (this.trace?.base_denom.startsWith("gamm")) {
       this.symbol = "Osmosis LP ";
     }
