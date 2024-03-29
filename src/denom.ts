@@ -103,44 +103,44 @@ const labels: Record<string, string> = {
     "LVN",
   "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc":
     "wBTC",
-  gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "gPAXG",
-  gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "gPSTAKE",
-  gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2: "gwETH",
-  gravity0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48: "gUSDC",
-  gravity0xdAC17F958D2ee523a2206206994597C13D831ec7: "gUSDT",
-  gravity0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599: "gwBTC",
-  gravity0x6B175474E89094C44Da98b954EedeAC495271d0F: "gDAI",
-  gravity0x77E06c9eCCf2E797fd462A92B6D7642EF85b0A44: "wTAO",
-  gravity0xa0b93B9e90aB887E53F9FB8728c009746e989B53: "gTST",
-  gravity0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30: "gINJ",
-  gravity0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1: "gARB",
-  gravity0x4c11249814f11b9346808179Cf06e71ac328c1b5: "gORAI",
-  gravity0x93581991f68DBaE1eA105233b67f7FA0D6BDeE7b: "gwEVMOS",
-  gravity0x35a532d376FFd9a705d0Bb319532837337A398E7: "gwDOGE",
-  gravity0x07baC35846e5eD502aA91AdF6A9e7aA210F2DcbE: "gerowan",
-  gravity0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9: "gwLUNC",
-  gravity0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE: "gSHIB",
+  gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78: "PAXG",
+  gravity0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006: "PSTAKE",
+  gravity0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2: "wETH",
+  gravity0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48: "USDC",
+  gravity0xdAC17F958D2ee523a2206206994597C13D831ec7: "USDT",
+  gravity0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599: "wBTC",
+  gravity0x6B175474E89094C44Da98b954EedeAC495271d0F: "DAI",
+  gravity0x77E06c9eCCf2E797fd462A92B6D7642EF85b0A44: "TAO",
+  gravity0xa0b93B9e90aB887E53F9FB8728c009746e989B53: "TST",
+  gravity0xe28b3B32B6c345A34Ff64674606124Dd5Aceca30: "INJ",
+  gravity0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1: "ARB",
+  gravity0x4c11249814f11b9346808179Cf06e71ac328c1b5: "ORAI",
+  gravity0x93581991f68DBaE1eA105233b67f7FA0D6BDeE7b: "wEVMOS",
+  gravity0x35a532d376FFd9a705d0Bb319532837337A398E7: "wDOGE",
+  gravity0x07baC35846e5eD502aA91AdF6A9e7aA210F2DcbE: "erowan",
+  gravity0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9: "wLUNC",
+  gravity0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE: "SHIB",
 
   // 18
-  gravity0xAa6E8127831c9DE45ae56bB1b0d4D4Da6e5665BD: "gETH2x-FLI",
+  gravity0xAa6E8127831c9DE45ae56bB1b0d4D4Da6e5665BD: "ETH2x-FLI",
   // 6
-  gravity0x44017598f2AF1bD733F9D87b5017b4E7c1B28DDE: "gstkATOM",
+  gravity0x44017598f2AF1bD733F9D87b5017b4E7c1B28DDE: "stkATOM",
   // 18
-  gravity0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55: "gBAND",
+  gravity0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55: "BAND",
   // 6
-  gravity0xEa5A82B35244d9e5E48781F00b11B14E627D2951: "gATOM",
+  gravity0xEa5A82B35244d9e5E48781F00b11B14E627D2951: "ATOM",
   // 18
-  gravity0x83F20F44975D03b1b09e64809B757c47f942BEeA: "gsDAI",
+  gravity0x83F20F44975D03b1b09e64809B757c47f942BEeA: "sDAI",
   // 18
-  gravity0x6982508145454Ce325dDbE47a25d4ec3d2311933: "gPEPE",
+  gravity0x6982508145454Ce325dDbE47a25d4ec3d2311933: "PEPE",
   // 18
-  gravity0x817bbDbC3e8A1204f3691d14bB44992841e3dB35: "gCUDOS",
+  gravity0x817bbDbC3e8A1204f3691d14bB44992841e3dB35: "CUDOS",
   // 18
-  gravity0xd23Ed8cA350CE2631F7EcDC5E6bf80D0A1DeBB7B: "gPLQ",
+  gravity0xd23Ed8cA350CE2631F7EcDC5E6bf80D0A1DeBB7B: "PLQ",
   // 18
-  gravity0xd3E4Ba569045546D09CF021ECC5dFe42b1d7f6E4: "gMNW",
+  gravity0xd3E4Ba569045546D09CF021ECC5dFe42b1d7f6E4: "MNW",
   // 18
-  gravity0x514910771AF9Ca656af840dff83E8264EcF986CA: "gLINK",
+  gravity0x514910771AF9Ca656af840dff83E8264EcF986CA: "LINK",
 
   "erc20/0xAE6D3334989a22A65228732446731438672418F2": "CNTO",
   "frax-wei": "FRAX",
@@ -211,7 +211,7 @@ const labels: Record<string, string> = {
   "factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt": "NEWT",
   "erc20/tether/usdt": "USDT",
 
-  ...wormholeAssets.reduce((a, v) => ({ ...a, [v.base]: `wh${v.symbol}` }), {}),
+  ...wormholeAssets.reduce((a, v) => ({ ...a, [v.base]: v.symbol }), {}),
 };
 
 const terra: Record<string, string> = {
@@ -437,12 +437,9 @@ export class Denom {
     this.symbol = "";
     if (this.reference.startsWith("ibc/")) {
       this.trace = (ibc as Record<string, any>)[this.reference];
-      if (this.trace?.path === "transfer/channel-9") {
-        this.symbol = "axl";
-      }
     }
 
-    this.symbol += baseDenomToSymbol(this.reference);
+    this.symbol = baseDenomToSymbol(this.reference);
     if (this.trace?.base_denom.startsWith("gamm")) {
       this.symbol = "Osmosis LP ";
     }
@@ -471,7 +468,7 @@ export class Denom {
       this.decimals = 18;
     if ((this.trace?.base_denom || this.reference).endsWith("-satoshi"))
       this.decimals = 8;
-    if (this.symbol === "gPAXG") this.decimals = 18;
+    if (this.symbol.startsWith("PAXG")) this.decimals = 18;
     if (this.symbol === "EVMOS") this.decimals = 18;
     if (this.symbol === "wAVAX") this.decimals = 18;
     if (this.symbol === "wETH") this.decimals = 18;
@@ -480,10 +477,10 @@ export class Denom {
     if (this.symbol === "nBTC") this.decimals = 14;
     if (this.symbol === "BOOT") this.decimals = 0;
     if (this.symbol === "DOT") this.decimals = 10;
+    if (this.symbol.startsWith("SHD")) this.decimals = 8;
     if (this.symbol === "SHD") this.decimals = 8;
-    if (this.symbol === "SHD,legacy") this.decimals = 8;
     if (this.symbol === "INJ") this.decimals = 18;
-    if (this.symbol === "gINJ") this.decimals = 18;
+    if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "stINJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
     if (this.symbol === "wTAO") this.decimals = 9;
@@ -524,6 +521,16 @@ export class Denom {
       this.decimals = this.underlying[0].decimals;
 
     this.ics20 = ics20[this.reference];
+
+    if (this.trace?.path === "transfer/channel-9" && this.symbol !== "AXL") {
+      this.symbol += ".axl";
+    }
+    if (this.trace?.path === "transfer/channel-50" && this.symbol !== "GRAV") {
+      this.symbol += ".grv";
+    }
+    if (this.trace?.path === "transfer/channel-113") {
+      this.symbol += ".wh";
+    }
   }
 
   public static from(string: string): Denom {
