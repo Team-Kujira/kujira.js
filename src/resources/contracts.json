@@ -11109,6 +11109,35 @@
         "markets": false
       },
       {
+        "id": 161,
+        "address": "kujira1c4e2zk4z0anrufjh64gxtse6e4s5g52fe2ja8ke3r9e0pvpd0z0qws8zsp",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            "ibc/301DAF9CB0A9E247CD478533EF0E21F48FF8118C4A51F77C8BC3EB70E5566DBC",
+            "ibc/AF4CF77A64B784DE1C40471BBB366722DBE7FFEB8C42C71D2B7FB447BA193549"
+          ],
+          "price_precision": {
+            "decimal_places": 6
+          },
+          "decimal_delta": 0,
+          "fin_contract": "kujira1eggqn7e0cxe2j8jrxh72xqhzw8kzjnrhhlkgwj2w7k03skrssupqk8rg6u",
+          "strategy": {
+            "target_price": "1",
+            "ask_fee": "0.0011",
+            "ask_factor": "0.0005",
+            "ask_utilization": "0.8",
+            "ask_count": 15,
+            "bid_fee": "0.0011",
+            "bid_factor": "0.0005",
+            "bid_utilization": "0.8",
+            "bid_count": 15
+          }
+        },
+        "pairs": false,
+        "markets": false
+      },
+      {
         "id": 166,
         "address": "kujira1euap7mtdpkggl478pv03e630gwft3yh4h9ewtdtjmvc7760gs4wsynutx7",
         "config": {

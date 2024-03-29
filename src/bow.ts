@@ -30,6 +30,7 @@ export const EXCLUDED = [
   "kujira1ngn4dwwwv25t38phsv3ulwckm4kf35v9dgq858x9q5gj6e520jns537m3a",
   "kujira10ecrs8u7l3stdqvv9yjhcwa7tnqkma27s06vq6zs75dk3evk0u2qzruunt",
   "kujira1rkurt0cxe42ml0usj3cm3ycdxg3z8afw4rllvu0jyu9rqmrdj6us2u0wyv",
+  "kujira12uu0rch5f8khm0kkpcnuqxlj9wq73nymjllrqsp5x642t30jvlfqr7lkkn",
 ];
 
 export type Strategy = "xyk" | "lsd" | "stable";
