@@ -483,11 +483,11 @@ export class Denom {
     if (this.symbol === "INJ") this.decimals = 18;
     if (this.symbol === "stINJ") this.decimals = 18;
     if (this.symbol === "CNTO") this.decimals = 18;
-    if (this.symbol === "wTAO") this.decimals = 9;
+    if (this.symbol.startsWith("wTAO")) this.decimals = 9;
     if (this.symbol === "ACRE") this.decimals = 18;
     if (this.symbol === "PLQ") this.decimals = 18;
     if (this.symbol === "SWTH") this.decimals = 8;
-    if (this.symbol === "wBTC") this.decimals = 8;
+    if (this.symbol.startsWith("wBTC")) this.decimals = 8;
     if (this.symbol === "gTST") this.decimals = 18;
     if (this.symbol === "ARB") this.decimals = 18;
     if (this.symbol === "FET") this.decimals = 18;
