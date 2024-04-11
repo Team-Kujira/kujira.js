@@ -7,7 +7,6 @@ import {
   ContractExecutionAuthorization,
   MaxFundsLimit,
 } from "cosmjs-types/cosmwasm/wasm/v1/authz";
-import Long from "long";
 
 type AminoGrant = {
   expiration?: string;
@@ -19,7 +18,7 @@ export interface AminoMsgGrant extends AminoMsg {
   readonly value: {
     readonly granter: string;
     readonly grantee: string;
-    readonly grant?: AminoGrant;
+    readonly grant: AminoGrant;
   };
 }
 
@@ -34,7 +33,7 @@ export interface AminoMsgRevoke extends AminoMsg {
 
 const grantToAmino = (grant: Grant): AminoGrant => {
   const expiration = new Date(
-    Math.floor(grant.expiration?.seconds.toNumber() || 0) * 1000
+    Math.floor(Number(grant.expiration?.seconds || 0)) * 1000
   )
     .toISOString()
     .replace(/\.\d+Z/, "Z");
@@ -76,8 +75,7 @@ const grantToAmino = (grant: Grant): AminoGrant => {
 
 const grantFromAmino = (grant: AminoGrant): Grant => {
   const expiration =
-    grant.expiration &&
-    Long.fromNumber(new Date(grant.expiration).getTime() / 1000);
+    grant.expiration && BigInt(new Date(grant.expiration).getTime() / 1000);
 
   switch (grant.authorization.type) {
     case "wasm/ContractExecutionAuthorization":
@@ -136,7 +134,7 @@ export function createAuthzAminoConverters(): AminoConverters {
         return {
           granter: granter,
           grantee: grantee,
-          grant: grant && grantFromAmino(grant),
+          grant: grantFromAmino(grant),
         };
       },
     },

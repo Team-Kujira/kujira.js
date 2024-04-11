@@ -44,7 +44,6 @@ import {
   Header,
   Misbehaviour,
 } from "cosmjs-types/ibc/lightclients/tendermint/v1/tendermint";
-import * as alliance from "./alliance";
 import * as batch from "./batch";
 import * as eth from "./ethermint/types";
 import * as gravity from "./gravity/v1";
@@ -129,7 +128,6 @@ const types = [
   ...proposalTypes,
   ...extraIbc,
   ...gravity.types,
-  ...alliance.types,
   ...batch.types,
 ];
 
@@ -158,8 +156,8 @@ export const accountParser: s.AccountParser = (acc) => {
               value: Buffer.from(pubKey.value).toString("base64"),
             }
           : null,
-        accountNumber: baseInjAccount.accountNumber.toNumber(),
-        sequence: baseInjAccount.sequence.toNumber(),
+        accountNumber: Number(baseInjAccount.accountNumber),
+        sequence: Number(baseInjAccount.sequence),
       };
 
     case "/ethermint.types.v1.EthAccount":
@@ -175,8 +173,8 @@ export const accountParser: s.AccountParser = (acc) => {
               value: Buffer.from(pubKeyEth.value).toString("base64"),
             }
           : null,
-        accountNumber: baseEthAccount.accountNumber.toNumber(),
-        sequence: baseEthAccount.sequence.toNumber(),
+        accountNumber: Number(baseEthAccount.accountNumber),
+        sequence: Number(baseEthAccount.sequence),
       };
     default:
       return s.accountFromAny(acc);

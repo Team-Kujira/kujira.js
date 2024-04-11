@@ -1,13 +1,13 @@
 /* eslint-disable */
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Metadata } from "cosmjs-types/cosmos/bank/v1beta1/bank";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
-import { base64FromBytes, bytesFromBase64, isSet, Long } from "./helpers";
+import { base64FromBytes, bytesFromBase64, isSet } from "./helpers";
 export const protobufPackage = "gravity.v1";
 /** BridgeValidator represents a validator's ETH address and its power */
 
 export interface BridgeValidator {
-  power: Long;
+  power: bigint;
   ethereumAddress: string;
 }
 /**
@@ -17,9 +17,9 @@ export interface BridgeValidator {
  */
 
 export interface Valset {
-  nonce: Long;
+  nonce: bigint;
   members: BridgeValidator[];
-  height: Long;
+  height: bigint;
   rewardAmount: string;
   /** the reward token in it's Ethereum hex address representation */
 
@@ -34,8 +34,8 @@ export interface Valset {
  */
 
 export interface LastObservedEthereumBlockHeight {
-  cosmosBlockHeight: Long;
-  ethereumBlockHeight: Long;
+  cosmosBlockHeight: bigint;
+  ethereumBlockHeight: bigint;
 }
 /**
  * This records the relationship between an ERC20 token and the denom
@@ -58,7 +58,7 @@ export interface ERC20ToDenom {
 export interface UnhaltBridgeProposal {
   title: string;
   description: string;
-  targetNonce: Long;
+  targetNonce: bigint;
 }
 /**
  * AirdropProposal defines a custom governance proposal type that allows an airdrop to occur in a decentralized
@@ -72,7 +72,7 @@ export interface AirdropProposal {
   description: string;
   denom: string;
   recipients: Uint8Array;
-  amounts: Long[];
+  amounts: bigint[];
 }
 /**
  * IBCMetadataProposal defines a custom governance proposal type that allows governance to set the
@@ -108,12 +108,12 @@ export interface PendingIbcAutoForward {
   ibcChannel: string;
   /** the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue */
 
-  eventNonce: Long;
+  eventNonce: bigint;
 }
 
 function createBaseBridgeValidator(): BridgeValidator {
   return {
-    power: Long.UZERO,
+    power: BigInt(0),
     ethereumAddress: "",
   };
 }
@@ -121,9 +121,9 @@ function createBaseBridgeValidator(): BridgeValidator {
 export const BridgeValidator = {
   encode(
     message: BridgeValidator,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.power.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.power !== BigInt(0)) {
       writer.uint32(8).uint64(message.power);
     }
 
@@ -134,8 +134,9 @@ export const BridgeValidator = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): BridgeValidator {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): BridgeValidator {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseBridgeValidator();
 
@@ -144,7 +145,7 @@ export const BridgeValidator = {
 
       switch (tag >>> 3) {
         case 1:
-          message.power = reader.uint64() as Long;
+          message.power = reader.uint64();
           break;
 
         case 2:
@@ -162,7 +163,7 @@ export const BridgeValidator = {
 
   fromJSON(object: any): BridgeValidator {
     return {
-      power: isSet(object.power) ? Long.fromValue(object.power) : Long.UZERO,
+      power: isSet(object.power) ? BigInt(object.power) : BigInt(0),
       ethereumAddress: isSet(object.ethereumAddress)
         ? String(object.ethereumAddress)
         : "",
@@ -172,7 +173,7 @@ export const BridgeValidator = {
   toJSON(message: BridgeValidator): unknown {
     const obj: any = {};
     message.power !== undefined &&
-      (obj.power = (message.power || Long.UZERO).toString());
+      (obj.power = (message.power || BigInt(0)).toString());
     message.ethereumAddress !== undefined &&
       (obj.ethereumAddress = message.ethereumAddress);
     return obj;
@@ -182,8 +183,8 @@ export const BridgeValidator = {
     const message = createBaseBridgeValidator();
     message.power =
       object.power !== undefined && object.power !== null
-        ? Long.fromValue(object.power)
-        : Long.UZERO;
+        ? BigInt(object.power)
+        : BigInt(0);
     message.ethereumAddress = object.ethereumAddress ?? "";
     return message;
   },
@@ -191,9 +192,9 @@ export const BridgeValidator = {
 
 function createBaseValset(): Valset {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     members: [],
-    height: Long.UZERO,
+    height: BigInt(0),
     rewardAmount: "",
     rewardToken: "",
   };
@@ -202,9 +203,9 @@ function createBaseValset(): Valset {
 export const Valset = {
   encode(
     message: Valset,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -212,7 +213,7 @@ export const Valset = {
       BridgeValidator.encode(v!, writer.uint32(18).fork()).ldelim();
     }
 
-    if (!message.height.isZero()) {
+    if (message.height !== BigInt(0)) {
       writer.uint32(24).uint64(message.height);
     }
 
@@ -227,8 +228,9 @@ export const Valset = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): Valset {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): Valset {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseValset();
 
@@ -237,7 +239,7 @@ export const Valset = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -245,7 +247,7 @@ export const Valset = {
           break;
 
         case 3:
-          message.height = reader.uint64() as Long;
+          message.height = reader.uint64();
           break;
 
         case 4:
@@ -267,11 +269,11 @@ export const Valset = {
 
   fromJSON(object: any): Valset {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       members: Array.isArray(object?.members)
         ? object.members.map((e: any) => BridgeValidator.fromJSON(e))
         : [],
-      height: isSet(object.height) ? Long.fromValue(object.height) : Long.UZERO,
+      height: isSet(object.height) ? BigInt(object.height) : BigInt(0),
       rewardAmount: isSet(object.rewardAmount)
         ? String(object.rewardAmount)
         : "",
@@ -282,7 +284,7 @@ export const Valset = {
   toJSON(message: Valset): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
 
     if (message.members) {
       obj.members = message.members.map((e) =>
@@ -293,7 +295,7 @@ export const Valset = {
     }
 
     message.height !== undefined &&
-      (obj.height = (message.height || Long.UZERO).toString());
+      (obj.height = (message.height || BigInt(0)).toString());
     message.rewardAmount !== undefined &&
       (obj.rewardAmount = message.rewardAmount);
     message.rewardToken !== undefined &&
@@ -305,14 +307,14 @@ export const Valset = {
     const message = createBaseValset();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.members =
       object.members?.map((e) => BridgeValidator.fromPartial(e)) || [];
     message.height =
       object.height !== undefined && object.height !== null
-        ? Long.fromValue(object.height)
-        : Long.UZERO;
+        ? BigInt(object.height)
+        : BigInt(0);
     message.rewardAmount = object.rewardAmount ?? "";
     message.rewardToken = object.rewardToken ?? "";
     return message;
@@ -321,21 +323,21 @@ export const Valset = {
 
 function createBaseLastObservedEthereumBlockHeight(): LastObservedEthereumBlockHeight {
   return {
-    cosmosBlockHeight: Long.UZERO,
-    ethereumBlockHeight: Long.UZERO,
+    cosmosBlockHeight: BigInt(0),
+    ethereumBlockHeight: BigInt(0),
   };
 }
 
 export const LastObservedEthereumBlockHeight = {
   encode(
     message: LastObservedEthereumBlockHeight,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.cosmosBlockHeight.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.cosmosBlockHeight !== BigInt(0)) {
       writer.uint32(8).uint64(message.cosmosBlockHeight);
     }
 
-    if (!message.ethereumBlockHeight.isZero()) {
+    if (message.ethereumBlockHeight !== BigInt(0)) {
       writer.uint32(16).uint64(message.ethereumBlockHeight);
     }
 
@@ -343,10 +345,11 @@ export const LastObservedEthereumBlockHeight = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): LastObservedEthereumBlockHeight {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseLastObservedEthereumBlockHeight();
 
@@ -355,11 +358,11 @@ export const LastObservedEthereumBlockHeight = {
 
       switch (tag >>> 3) {
         case 1:
-          message.cosmosBlockHeight = reader.uint64() as Long;
+          message.cosmosBlockHeight = reader.uint64();
           break;
 
         case 2:
-          message.ethereumBlockHeight = reader.uint64() as Long;
+          message.ethereumBlockHeight = reader.uint64();
           break;
 
         default:
@@ -374,11 +377,11 @@ export const LastObservedEthereumBlockHeight = {
   fromJSON(object: any): LastObservedEthereumBlockHeight {
     return {
       cosmosBlockHeight: isSet(object.cosmosBlockHeight)
-        ? Long.fromValue(object.cosmosBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.cosmosBlockHeight)
+        : BigInt(0),
       ethereumBlockHeight: isSet(object.ethereumBlockHeight)
-        ? Long.fromValue(object.ethereumBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethereumBlockHeight)
+        : BigInt(0),
     };
   },
 
@@ -386,11 +389,11 @@ export const LastObservedEthereumBlockHeight = {
     const obj: any = {};
     message.cosmosBlockHeight !== undefined &&
       (obj.cosmosBlockHeight = (
-        message.cosmosBlockHeight || Long.UZERO
+        message.cosmosBlockHeight || BigInt(0)
       ).toString());
     message.ethereumBlockHeight !== undefined &&
       (obj.ethereumBlockHeight = (
-        message.ethereumBlockHeight || Long.UZERO
+        message.ethereumBlockHeight || BigInt(0)
       ).toString());
     return obj;
   },
@@ -402,13 +405,13 @@ export const LastObservedEthereumBlockHeight = {
     message.cosmosBlockHeight =
       object.cosmosBlockHeight !== undefined &&
       object.cosmosBlockHeight !== null
-        ? Long.fromValue(object.cosmosBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.cosmosBlockHeight)
+        : BigInt(0);
     message.ethereumBlockHeight =
       object.ethereumBlockHeight !== undefined &&
       object.ethereumBlockHeight !== null
-        ? Long.fromValue(object.ethereumBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethereumBlockHeight)
+        : BigInt(0);
     return message;
   },
 };
@@ -423,8 +426,8 @@ function createBaseERC20ToDenom(): ERC20ToDenom {
 export const ERC20ToDenom = {
   encode(
     message: ERC20ToDenom,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.erc20 !== "") {
       writer.uint32(10).string(message.erc20);
     }
@@ -436,8 +439,9 @@ export const ERC20ToDenom = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): ERC20ToDenom {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ERC20ToDenom {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseERC20ToDenom();
 
@@ -488,15 +492,15 @@ function createBaseUnhaltBridgeProposal(): UnhaltBridgeProposal {
   return {
     title: "",
     description: "",
-    targetNonce: Long.UZERO,
+    targetNonce: BigInt(0),
   };
 }
 
 export const UnhaltBridgeProposal = {
   encode(
     message: UnhaltBridgeProposal,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -505,7 +509,7 @@ export const UnhaltBridgeProposal = {
       writer.uint32(18).string(message.description);
     }
 
-    if (!message.targetNonce.isZero()) {
+    if (message.targetNonce !== BigInt(0)) {
       writer.uint32(32).uint64(message.targetNonce);
     }
 
@@ -513,10 +517,11 @@ export const UnhaltBridgeProposal = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): UnhaltBridgeProposal {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseUnhaltBridgeProposal();
 
@@ -533,7 +538,7 @@ export const UnhaltBridgeProposal = {
           break;
 
         case 4:
-          message.targetNonce = reader.uint64() as Long;
+          message.targetNonce = reader.uint64();
           break;
 
         default:
@@ -550,8 +555,8 @@ export const UnhaltBridgeProposal = {
       title: isSet(object.title) ? String(object.title) : "",
       description: isSet(object.description) ? String(object.description) : "",
       targetNonce: isSet(object.targetNonce)
-        ? Long.fromValue(object.targetNonce)
-        : Long.UZERO,
+        ? BigInt(object.targetNonce)
+        : BigInt(0),
     };
   },
 
@@ -561,7 +566,7 @@ export const UnhaltBridgeProposal = {
     message.description !== undefined &&
       (obj.description = message.description);
     message.targetNonce !== undefined &&
-      (obj.targetNonce = (message.targetNonce || Long.UZERO).toString());
+      (obj.targetNonce = (message.targetNonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -571,8 +576,8 @@ export const UnhaltBridgeProposal = {
     message.description = object.description ?? "";
     message.targetNonce =
       object.targetNonce !== undefined && object.targetNonce !== null
-        ? Long.fromValue(object.targetNonce)
-        : Long.UZERO;
+        ? BigInt(object.targetNonce)
+        : BigInt(0);
     return message;
   },
 };
@@ -590,8 +595,8 @@ function createBaseAirdropProposal(): AirdropProposal {
 export const AirdropProposal = {
   encode(
     message: AirdropProposal,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -618,8 +623,9 @@ export const AirdropProposal = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): AirdropProposal {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): AirdropProposal {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAirdropProposal();
 
@@ -648,10 +654,10 @@ export const AirdropProposal = {
             const end2 = reader.uint32() + reader.pos;
 
             while (reader.pos < end2) {
-              message.amounts.push(reader.uint64() as Long);
+              message.amounts.push(reader.uint64());
             }
           } else {
-            message.amounts.push(reader.uint64() as Long);
+            message.amounts.push(reader.uint64());
           }
 
           break;
@@ -674,7 +680,7 @@ export const AirdropProposal = {
         ? bytesFromBase64(object.recipients)
         : new Uint8Array(),
       amounts: Array.isArray(object?.amounts)
-        ? object.amounts.map((e: any) => Long.fromValue(e))
+        ? object.amounts.map((e: any) => BigInt(e))
         : [],
     };
   },
@@ -691,7 +697,7 @@ export const AirdropProposal = {
       ));
 
     if (message.amounts) {
-      obj.amounts = message.amounts.map((e) => (e || Long.UZERO).toString());
+      obj.amounts = message.amounts.map((e) => (e || BigInt(0)).toString());
     } else {
       obj.amounts = [];
     }
@@ -705,7 +711,7 @@ export const AirdropProposal = {
     message.description = object.description ?? "";
     message.denom = object.denom ?? "";
     message.recipients = object.recipients ?? new Uint8Array();
-    message.amounts = object.amounts?.map((e) => Long.fromValue(e)) || [];
+    message.amounts = object.amounts?.map((e) => BigInt(e)) || [];
     return message;
   },
 };
@@ -722,8 +728,8 @@ function createBaseIBCMetadataProposal(): IBCMetadataProposal {
 export const IBCMetadataProposal = {
   encode(
     message: IBCMetadataProposal,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -743,8 +749,12 @@ export const IBCMetadataProposal = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): IBCMetadataProposal {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): IBCMetadataProposal {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseIBCMetadataProposal();
 
@@ -819,15 +829,15 @@ function createBasePendingIbcAutoForward(): PendingIbcAutoForward {
     foreignReceiver: "",
     token: undefined,
     ibcChannel: "",
-    eventNonce: Long.UZERO,
+    eventNonce: BigInt(0),
   };
 }
 
 export const PendingIbcAutoForward = {
   encode(
     message: PendingIbcAutoForward,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.foreignReceiver !== "") {
       writer.uint32(10).string(message.foreignReceiver);
     }
@@ -840,7 +850,7 @@ export const PendingIbcAutoForward = {
       writer.uint32(26).string(message.ibcChannel);
     }
 
-    if (!message.eventNonce.isZero()) {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(32).uint64(message.eventNonce);
     }
 
@@ -848,10 +858,11 @@ export const PendingIbcAutoForward = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): PendingIbcAutoForward {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBasePendingIbcAutoForward();
 
@@ -872,7 +883,7 @@ export const PendingIbcAutoForward = {
           break;
 
         case 4:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         default:
@@ -892,8 +903,8 @@ export const PendingIbcAutoForward = {
       token: isSet(object.token) ? Coin.fromJSON(object.token) : undefined,
       ibcChannel: isSet(object.ibcChannel) ? String(object.ibcChannel) : "",
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
     };
   },
 
@@ -905,7 +916,7 @@ export const PendingIbcAutoForward = {
       (obj.token = message.token ? Coin.toJSON(message.token) : undefined);
     message.ibcChannel !== undefined && (obj.ibcChannel = message.ibcChannel);
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -919,8 +930,8 @@ export const PendingIbcAutoForward = {
     message.ibcChannel = object.ibcChannel ?? "";
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     return message;
   },
 };

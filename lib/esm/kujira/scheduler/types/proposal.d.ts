@@ -1,5 +1,5 @@
-import { Reader, Writer } from "protobufjs/minimal";
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 export declare const protobufPackage = "kujira.scheduler";
 export interface CreateHookProposal {
@@ -35,22 +35,22 @@ export interface DeleteHookProposal {
     id: number;
 }
 export declare const CreateHookProposal: {
-    encode(message: CreateHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): CreateHookProposal;
+    encode(message: CreateHookProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): CreateHookProposal;
     fromJSON(object: any): CreateHookProposal;
     toJSON(message: CreateHookProposal): unknown;
     fromPartial(object: DeepPartial<CreateHookProposal>): CreateHookProposal;
 };
 export declare const UpdateHookProposal: {
-    encode(message: UpdateHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): UpdateHookProposal;
+    encode(message: UpdateHookProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UpdateHookProposal;
     fromJSON(object: any): UpdateHookProposal;
     toJSON(message: UpdateHookProposal): unknown;
     fromPartial(object: DeepPartial<UpdateHookProposal>): UpdateHookProposal;
 };
 export declare const DeleteHookProposal: {
-    encode(message: DeleteHookProposal, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): DeleteHookProposal;
+    encode(message: DeleteHookProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DeleteHookProposal;
     fromJSON(object: any): DeleteHookProposal;
     toJSON(message: DeleteHookProposal): unknown;
     fromPartial(object: DeepPartial<DeleteHookProposal>): DeleteHookProposal;

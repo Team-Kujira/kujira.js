@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 
 export const protobufPackage = "kujira.denom";
 
@@ -19,16 +19,20 @@ const baseDenomAuthorityMetadata: object = { Admin: "" };
 export const DenomAuthorityMetadata = {
   encode(
     message: DenomAuthorityMetadata,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.Admin !== "") {
       writer.uint32(10).string(message.Admin);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): DenomAuthorityMetadata {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): DenomAuthorityMetadata {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseDenomAuthorityMetadata } as DenomAuthorityMetadata;
     while (reader.pos < end) {

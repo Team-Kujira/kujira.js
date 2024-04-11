@@ -1,9 +1,7 @@
 /* eslint-disable */
-import Long from "long";
-
-import { Reader, Writer } from "protobufjs/minimal";
 
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { base64FromBytes, bytesFromBase64 } from "./hook";
 export const protobufPackage = "kujira.scheduler";
@@ -54,8 +52,8 @@ const baseCreateHookProposal: object = {
 export const CreateHookProposal = {
   encode(
     message: CreateHookProposal,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -80,8 +78,12 @@ export const CreateHookProposal = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): CreateHookProposal {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): CreateHookProposal {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseCreateHookProposal,
@@ -106,7 +108,7 @@ export const CreateHookProposal = {
           message.msg = reader.bytes();
           break;
         case 6:
-          message.frequency = (reader.int64() as Long).toNumber();
+          message.frequency = reader.int32();
           break;
         case 7:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -236,8 +238,8 @@ const baseUpdateHookProposal: object = {
 export const UpdateHookProposal = {
   encode(
     message: UpdateHookProposal,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -265,8 +267,12 @@ export const UpdateHookProposal = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): UpdateHookProposal {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): UpdateHookProposal {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseUpdateHookProposal,
@@ -282,7 +288,7 @@ export const UpdateHookProposal = {
           message.description = reader.string();
           break;
         case 3:
-          message.id = (reader.uint64() as Long).toNumber();
+          message.id = reader.uint32();
           break;
         case 4:
           message.executor = reader.string();
@@ -294,7 +300,7 @@ export const UpdateHookProposal = {
           message.msg = reader.bytes();
           break;
         case 7:
-          message.frequency = (reader.int64() as Long).toNumber();
+          message.frequency = reader.int32();
           break;
         case 8:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -432,8 +438,8 @@ const baseDeleteHookProposal: object = {
 export const DeleteHookProposal = {
   encode(
     message: DeleteHookProposal,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.title !== "") {
       writer.uint32(10).string(message.title);
     }
@@ -446,8 +452,12 @@ export const DeleteHookProposal = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): DeleteHookProposal {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): DeleteHookProposal {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseDeleteHookProposal,
@@ -462,7 +472,7 @@ export const DeleteHookProposal = {
           message.description = reader.string();
           break;
         case 3:
-          message.id = (reader.uint64() as Long).toNumber();
+          message.id = reader.uint32();
           break;
         default:
           reader.skipType(tag & 7);

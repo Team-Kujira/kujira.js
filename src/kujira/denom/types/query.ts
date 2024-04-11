@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
 import { Params } from "./params";
 
@@ -34,12 +34,19 @@ export interface QueryDenomsFromCreatorResponse {
 const baseQueryParamsRequest: object = {};
 
 export const QueryParamsRequest = {
-  encode(_: QueryParamsRequest, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsRequest } as QueryParamsRequest;
     while (reader.pos < end) {
@@ -74,16 +81,20 @@ const baseQueryParamsResponse: object = {};
 export const QueryParamsResponse = {
   encode(
     message: QueryParamsResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsResponse } as QueryParamsResponse;
     while (reader.pos < end) {
@@ -133,8 +144,8 @@ const baseQueryDenomAuthorityMetadataRequest: object = { denom: "" };
 export const QueryDenomAuthorityMetadataRequest = {
   encode(
     message: QueryDenomAuthorityMetadataRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -142,10 +153,11 @@ export const QueryDenomAuthorityMetadataRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomAuthorityMetadataRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryDenomAuthorityMetadataRequest,
@@ -202,8 +214,8 @@ const baseQueryDenomAuthorityMetadataResponse: object = {};
 export const QueryDenomAuthorityMetadataResponse = {
   encode(
     message: QueryDenomAuthorityMetadataResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.authority_metadata !== undefined) {
       DenomAuthorityMetadata.encode(
         message.authority_metadata,
@@ -214,10 +226,11 @@ export const QueryDenomAuthorityMetadataResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomAuthorityMetadataResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryDenomAuthorityMetadataResponse,
@@ -290,8 +303,8 @@ const baseQueryDenomsFromCreatorRequest: object = { creator: "" };
 export const QueryDenomsFromCreatorRequest = {
   encode(
     message: QueryDenomsFromCreatorRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.creator !== "") {
       writer.uint32(10).string(message.creator);
     }
@@ -299,10 +312,11 @@ export const QueryDenomsFromCreatorRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomsFromCreatorRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryDenomsFromCreatorRequest,
@@ -359,8 +373,8 @@ const baseQueryDenomsFromCreatorResponse: object = { denoms: "" };
 export const QueryDenomsFromCreatorResponse = {
   encode(
     message: QueryDenomsFromCreatorResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.denoms) {
       writer.uint32(10).string(v!);
     }
@@ -368,10 +382,11 @@ export const QueryDenomsFromCreatorResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomsFromCreatorResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryDenomsFromCreatorResponse,
@@ -451,7 +466,7 @@ export class QueryClientImpl implements Query {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.denom.Query", "Params", data);
     const data_1 = await promise;
-    return QueryParamsResponse.decode(new Reader(data_1));
+    return QueryParamsResponse.decode(new BinaryReader(data_1));
   }
 
   async DenomAuthorityMetadata(
@@ -464,7 +479,7 @@ export class QueryClientImpl implements Query {
       data
     );
     const data_1 = await promise;
-    return QueryDenomAuthorityMetadataResponse.decode(new Reader(data_1));
+    return QueryDenomAuthorityMetadataResponse.decode(new BinaryReader(data_1));
   }
 
   async DenomsFromCreator(
@@ -477,7 +492,7 @@ export class QueryClientImpl implements Query {
       data
     );
     const data_1 = await promise;
-    return QueryDenomsFromCreatorResponse.decode(new Reader(data_1));
+    return QueryDenomsFromCreatorResponse.decode(new BinaryReader(data_1));
   }
 }
 

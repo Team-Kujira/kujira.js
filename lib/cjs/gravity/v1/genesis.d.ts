@@ -1,9 +1,7 @@
-/// <reference types="long" />
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
 import { Attestation } from "./attestation";
 import { OutgoingLogicCall, OutgoingTransferTx, OutgoingTxBatch } from "./batch";
-import { Long } from "./helpers";
 import { MsgConfirmBatch, MsgConfirmLogicCall, MsgSetOrchestratorAddress, MsgValsetConfirm } from "./msgs";
 import { ERC20ToDenom, PendingIbcAutoForward, Valset } from "./types";
 export declare const protobufPackage = "gravity.v1";
@@ -48,17 +46,17 @@ export interface Params {
     gravityId: string;
     contractSourceHash: string;
     bridgeEthereumAddress: string;
-    bridgeChainId: Long;
-    signedValsetsWindow: Long;
-    signedBatchesWindow: Long;
-    signedLogicCallsWindow: Long;
-    targetBatchTimeout: Long;
-    averageBlockTime: Long;
-    averageEthereumBlockTime: Long;
+    bridgeChainId: bigint;
+    signedValsetsWindow: bigint;
+    signedBatchesWindow: bigint;
+    signedLogicCallsWindow: bigint;
+    targetBatchTimeout: bigint;
+    averageBlockTime: bigint;
+    averageEthereumBlockTime: bigint;
     slashFractionValset: Uint8Array;
     slashFractionBatch: Uint8Array;
     slashFractionLogicCall: Uint8Array;
-    unbondSlashingValsetsWindow: Long;
+    unbondSlashingValsetsWindow: bigint;
     slashFractionBadEthSignature: Uint8Array;
     valsetReward?: Coin;
     bridgeActive: boolean;
@@ -67,7 +65,7 @@ export interface Params {
      * from Ethereum to the bridge
      */
     ethereumBlacklist: string[];
-    minChainFeeBasisPoints: Long;
+    minChainFeeBasisPoints: bigint;
 }
 /** GenesisState struct, containing all persistant data required by the Gravity module */
 export interface GenesisState {
@@ -88,47 +86,47 @@ export interface GenesisState {
 /** GravityCounters contains the many noces and counters required to maintain the bridge state in the genesis */
 export interface GravityNonces {
     /** the nonce of the last generated validator set */
-    latestValsetNonce: Long;
+    latestValsetNonce: bigint;
     /** the last observed Gravity.sol contract event nonce */
-    lastObservedNonce: Long;
+    lastObservedNonce: bigint;
     /** the last valset nonce we have slashed, to prevent double slashing */
-    lastSlashedValsetNonce: Long;
+    lastSlashedValsetNonce: bigint;
     /**
      * the last batch Cosmos chain block that batch slashing has completed for
      * there is an individual batch nonce for each token type so this removes
      * the need to store them all
      */
-    lastSlashedBatchBlock: Long;
+    lastSlashedBatchBlock: bigint;
     /** the last cosmos block that logic call slashing has completed for */
-    lastSlashedLogicCallBlock: Long;
+    lastSlashedLogicCallBlock: bigint;
     /**
      * the last transaction id from the Gravity TX pool, this prevents ID
      * duplication during chain upgrades
      */
-    lastTxPoolId: Long;
+    lastTxPoolId: bigint;
     /**
      * the last batch id from the Gravity batch pool, this prevents ID duplication
      * during chain upgrades
      */
-    lastBatchId: Long;
+    lastBatchId: bigint;
 }
 export declare const Params: {
-    encode(message: Params, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Params;
+    encode(message: Params, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: Partial<Params>): Params;
 };
 export declare const GenesisState: {
-    encode(message: GenesisState, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GenesisState;
+    encode(message: GenesisState, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: Partial<GenesisState>): GenesisState;
 };
 export declare const GravityNonces: {
-    encode(message: GravityNonces, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GravityNonces;
+    encode(message: GravityNonces, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GravityNonces;
     fromJSON(object: any): GravityNonces;
     toJSON(message: GravityNonces): unknown;
     fromPartial(object: Partial<GravityNonces>): GravityNonces;

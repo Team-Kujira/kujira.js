@@ -1,7 +1,7 @@
 import { DeepPartial, Exact } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { Rpc, isSet } from "cosmjs-types/helpers";
-import { Reader, Writer } from "protobufjs/minimal";
 
 /* eslint-disable */
 export const protobufPackage = "batch";
@@ -31,18 +31,19 @@ export const MsgWithdrawAllDelegatorRewards = {
   typeUrl: "/batch.MsgWithdrawAllDelegatorRewards",
   encode(
     message: MsgWithdrawAllDelegatorRewards,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.delegatorAddress !== "") {
       writer.uint32(10).string(message.delegatorAddress);
     }
     return writer;
   },
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgWithdrawAllDelegatorRewards {
-    const reader = input instanceof Reader ? input : new Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawAllDelegatorRewards();
     while (reader.pos < end) {
@@ -87,18 +88,19 @@ export const MsgWithdrawAllDelegatorRewardsResponse = {
   typeUrl: "/batch.MsgWithdrawAllDelegatorRewardsResponse",
   encode(
     message: MsgWithdrawAllDelegatorRewardsResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.amount) {
       Coin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgWithdrawAllDelegatorRewardsResponse {
-    const reader = input instanceof Reader ? input : new Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgWithdrawAllDelegatorRewardsResponse();
     while (reader.pos < end) {
@@ -148,8 +150,8 @@ export const MsgBatchResetDelegation = {
   typeUrl: "/batch.MsgBatchResetDelegation",
   encode(
     message: MsgBatchResetDelegation,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.delegatorAddress !== "") {
       writer.uint32(10).string(message.delegatorAddress);
     }
@@ -161,8 +163,12 @@ export const MsgBatchResetDelegation = {
     }
     return writer;
   },
-  decode(input: Reader | Uint8Array, length?: number): MsgBatchResetDelegation {
-    const reader = input instanceof Reader ? input : new Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgBatchResetDelegation {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBatchResetDelegation();
     while (reader.pos < end) {
@@ -227,15 +233,16 @@ export const MsgBatchResetDelegationResponse = {
   typeUrl: "/batch.MsgBatchResetDelegationResponse",
   encode(
     _: MsgBatchResetDelegationResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgBatchResetDelegationResponse {
-    const reader = input instanceof Reader ? input : new Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBatchResetDelegationResponse();
     while (reader.pos < end) {
@@ -298,7 +305,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgWithdrawAllDelegatorRewardsResponse.decode(new Reader(data))
+      MsgWithdrawAllDelegatorRewardsResponse.decode(new BinaryReader(data))
     );
   }
   BatchResetDelegation(
@@ -307,7 +314,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgBatchResetDelegation.encode(request).finish();
     const promise = this.rpc.request("batch.Msg", "BatchResetDelegation", data);
     return promise.then((data) =>
-      MsgBatchResetDelegationResponse.decode(new Reader(data))
+      MsgBatchResetDelegationResponse.decode(new BinaryReader(data))
     );
   }
 }

@@ -1,6 +1,6 @@
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import { Reader, Writer } from "protobufjs/minimal";
 import { AggregateExchangeRatePrevote, AggregateExchangeRateVote, Params } from "./oracle";
 export declare const protobufPackage = "kujira.oracle";
 /** QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC method. */
@@ -135,155 +135,155 @@ export interface QueryParamsResponse {
     params: Params | undefined;
 }
 export declare const QueryExchangeRateRequest: {
-    encode(message: QueryExchangeRateRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryExchangeRateRequest;
+    encode(message: QueryExchangeRateRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRateRequest;
     fromJSON(object: any): QueryExchangeRateRequest;
     toJSON(message: QueryExchangeRateRequest): unknown;
     fromPartial(object: DeepPartial<QueryExchangeRateRequest>): QueryExchangeRateRequest;
 };
 export declare const QueryExchangeRateResponse: {
-    encode(message: QueryExchangeRateResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryExchangeRateResponse;
+    encode(message: QueryExchangeRateResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRateResponse;
     fromJSON(object: any): QueryExchangeRateResponse;
     toJSON(message: QueryExchangeRateResponse): unknown;
     fromPartial(object: DeepPartial<QueryExchangeRateResponse>): QueryExchangeRateResponse;
 };
 export declare const QueryExchangeRatesRequest: {
-    encode(_: QueryExchangeRatesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryExchangeRatesRequest;
+    encode(_: QueryExchangeRatesRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRatesRequest;
     fromJSON(_: any): QueryExchangeRatesRequest;
     toJSON(_: QueryExchangeRatesRequest): unknown;
     fromPartial(_: DeepPartial<QueryExchangeRatesRequest>): QueryExchangeRatesRequest;
 };
 export declare const QueryExchangeRatesResponse: {
-    encode(message: QueryExchangeRatesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryExchangeRatesResponse;
+    encode(message: QueryExchangeRatesResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryExchangeRatesResponse;
     fromJSON(object: any): QueryExchangeRatesResponse;
     toJSON(message: QueryExchangeRatesResponse): unknown;
     fromPartial(object: DeepPartial<QueryExchangeRatesResponse>): QueryExchangeRatesResponse;
 };
 export declare const QueryActivesRequest: {
-    encode(_: QueryActivesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryActivesRequest;
+    encode(_: QueryActivesRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryActivesRequest;
     fromJSON(_: any): QueryActivesRequest;
     toJSON(_: QueryActivesRequest): unknown;
     fromPartial(_: DeepPartial<QueryActivesRequest>): QueryActivesRequest;
 };
 export declare const QueryActivesResponse: {
-    encode(message: QueryActivesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryActivesResponse;
+    encode(message: QueryActivesResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryActivesResponse;
     fromJSON(object: any): QueryActivesResponse;
     toJSON(message: QueryActivesResponse): unknown;
     fromPartial(object: DeepPartial<QueryActivesResponse>): QueryActivesResponse;
 };
 export declare const QueryVoteTargetsRequest: {
-    encode(_: QueryVoteTargetsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryVoteTargetsRequest;
+    encode(_: QueryVoteTargetsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryVoteTargetsRequest;
     fromJSON(_: any): QueryVoteTargetsRequest;
     toJSON(_: QueryVoteTargetsRequest): unknown;
     fromPartial(_: DeepPartial<QueryVoteTargetsRequest>): QueryVoteTargetsRequest;
 };
 export declare const QueryVoteTargetsResponse: {
-    encode(message: QueryVoteTargetsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryVoteTargetsResponse;
+    encode(message: QueryVoteTargetsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryVoteTargetsResponse;
     fromJSON(object: any): QueryVoteTargetsResponse;
     toJSON(message: QueryVoteTargetsResponse): unknown;
     fromPartial(object: DeepPartial<QueryVoteTargetsResponse>): QueryVoteTargetsResponse;
 };
 export declare const QueryFeederDelegationRequest: {
-    encode(message: QueryFeederDelegationRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryFeederDelegationRequest;
+    encode(message: QueryFeederDelegationRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryFeederDelegationRequest;
     fromJSON(object: any): QueryFeederDelegationRequest;
     toJSON(message: QueryFeederDelegationRequest): unknown;
     fromPartial(object: DeepPartial<QueryFeederDelegationRequest>): QueryFeederDelegationRequest;
 };
 export declare const QueryFeederDelegationResponse: {
-    encode(message: QueryFeederDelegationResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryFeederDelegationResponse;
+    encode(message: QueryFeederDelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryFeederDelegationResponse;
     fromJSON(object: any): QueryFeederDelegationResponse;
     toJSON(message: QueryFeederDelegationResponse): unknown;
     fromPartial(object: DeepPartial<QueryFeederDelegationResponse>): QueryFeederDelegationResponse;
 };
 export declare const QueryMissCounterRequest: {
-    encode(message: QueryMissCounterRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryMissCounterRequest;
+    encode(message: QueryMissCounterRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryMissCounterRequest;
     fromJSON(object: any): QueryMissCounterRequest;
     toJSON(message: QueryMissCounterRequest): unknown;
     fromPartial(object: DeepPartial<QueryMissCounterRequest>): QueryMissCounterRequest;
 };
 export declare const QueryMissCounterResponse: {
-    encode(message: QueryMissCounterResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryMissCounterResponse;
+    encode(message: QueryMissCounterResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryMissCounterResponse;
     fromJSON(object: any): QueryMissCounterResponse;
     toJSON(message: QueryMissCounterResponse): unknown;
     fromPartial(object: DeepPartial<QueryMissCounterResponse>): QueryMissCounterResponse;
 };
 export declare const QueryAggregatePrevoteRequest: {
-    encode(message: QueryAggregatePrevoteRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregatePrevoteRequest;
+    encode(message: QueryAggregatePrevoteRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevoteRequest;
     fromJSON(object: any): QueryAggregatePrevoteRequest;
     toJSON(message: QueryAggregatePrevoteRequest): unknown;
     fromPartial(object: DeepPartial<QueryAggregatePrevoteRequest>): QueryAggregatePrevoteRequest;
 };
 export declare const QueryAggregatePrevoteResponse: {
-    encode(message: QueryAggregatePrevoteResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregatePrevoteResponse;
+    encode(message: QueryAggregatePrevoteResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevoteResponse;
     fromJSON(object: any): QueryAggregatePrevoteResponse;
     toJSON(message: QueryAggregatePrevoteResponse): unknown;
     fromPartial(object: DeepPartial<QueryAggregatePrevoteResponse>): QueryAggregatePrevoteResponse;
 };
 export declare const QueryAggregatePrevotesRequest: {
-    encode(_: QueryAggregatePrevotesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregatePrevotesRequest;
+    encode(_: QueryAggregatePrevotesRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevotesRequest;
     fromJSON(_: any): QueryAggregatePrevotesRequest;
     toJSON(_: QueryAggregatePrevotesRequest): unknown;
     fromPartial(_: DeepPartial<QueryAggregatePrevotesRequest>): QueryAggregatePrevotesRequest;
 };
 export declare const QueryAggregatePrevotesResponse: {
-    encode(message: QueryAggregatePrevotesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregatePrevotesResponse;
+    encode(message: QueryAggregatePrevotesResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregatePrevotesResponse;
     fromJSON(object: any): QueryAggregatePrevotesResponse;
     toJSON(message: QueryAggregatePrevotesResponse): unknown;
     fromPartial(object: DeepPartial<QueryAggregatePrevotesResponse>): QueryAggregatePrevotesResponse;
 };
 export declare const QueryAggregateVoteRequest: {
-    encode(message: QueryAggregateVoteRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregateVoteRequest;
+    encode(message: QueryAggregateVoteRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVoteRequest;
     fromJSON(object: any): QueryAggregateVoteRequest;
     toJSON(message: QueryAggregateVoteRequest): unknown;
     fromPartial(object: DeepPartial<QueryAggregateVoteRequest>): QueryAggregateVoteRequest;
 };
 export declare const QueryAggregateVoteResponse: {
-    encode(message: QueryAggregateVoteResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregateVoteResponse;
+    encode(message: QueryAggregateVoteResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVoteResponse;
     fromJSON(object: any): QueryAggregateVoteResponse;
     toJSON(message: QueryAggregateVoteResponse): unknown;
     fromPartial(object: DeepPartial<QueryAggregateVoteResponse>): QueryAggregateVoteResponse;
 };
 export declare const QueryAggregateVotesRequest: {
-    encode(_: QueryAggregateVotesRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregateVotesRequest;
+    encode(_: QueryAggregateVotesRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVotesRequest;
     fromJSON(_: any): QueryAggregateVotesRequest;
     toJSON(_: QueryAggregateVotesRequest): unknown;
     fromPartial(_: DeepPartial<QueryAggregateVotesRequest>): QueryAggregateVotesRequest;
 };
 export declare const QueryAggregateVotesResponse: {
-    encode(message: QueryAggregateVotesResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryAggregateVotesResponse;
+    encode(message: QueryAggregateVotesResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAggregateVotesResponse;
     fromJSON(object: any): QueryAggregateVotesResponse;
     toJSON(message: QueryAggregateVotesResponse): unknown;
     fromPartial(object: DeepPartial<QueryAggregateVotesResponse>): QueryAggregateVotesResponse;
 };
 export declare const QueryParamsRequest: {
-    encode(_: QueryParamsRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest;
+    encode(_: QueryParamsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
-    encode(message: QueryParamsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse;
+    encode(message: QueryParamsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;

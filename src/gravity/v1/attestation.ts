@@ -1,7 +1,7 @@
 /* eslint-disable */
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Any } from "cosmjs-types/google/protobuf/any";
-import * as _m0 from "protobufjs/minimal";
-import { isSet, Long } from "./helpers";
+import { isSet } from "./helpers";
 export const protobufPackage = "gravity.v1";
 /**
  * ClaimType is the cosmos type of an event from the counterpart chain that can
@@ -106,7 +106,7 @@ export function claimTypeToJSON(object: ClaimType): string {
 export interface Attestation {
   observed: boolean;
   votes: string[];
-  height: Long;
+  height: bigint;
   claim?: Any;
 }
 /**
@@ -166,7 +166,7 @@ function createBaseAttestation(): Attestation {
   return {
     observed: false,
     votes: [],
-    height: Long.UZERO,
+    height: BigInt(0),
     claim: undefined,
   };
 }
@@ -174,8 +174,8 @@ function createBaseAttestation(): Attestation {
 export const Attestation = {
   encode(
     message: Attestation,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.observed === true) {
       writer.uint32(8).bool(message.observed);
     }
@@ -184,7 +184,7 @@ export const Attestation = {
       writer.uint32(18).string(v!);
     }
 
-    if (!message.height.isZero()) {
+    if (message.height != BigInt(0)) {
       writer.uint32(24).uint64(message.height);
     }
 
@@ -195,8 +195,9 @@ export const Attestation = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): Attestation {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): Attestation {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseAttestation();
 
@@ -213,7 +214,7 @@ export const Attestation = {
           break;
 
         case 3:
-          message.height = reader.uint64() as Long;
+          message.height = reader.uint64();
           break;
 
         case 4:
@@ -235,7 +236,7 @@ export const Attestation = {
       votes: Array.isArray(object?.votes)
         ? object.votes.map((e: any) => String(e))
         : [],
-      height: isSet(object.height) ? Long.fromValue(object.height) : Long.UZERO,
+      height: isSet(object.height) ? BigInt(object.height) : BigInt(0),
       claim: isSet(object.claim) ? Any.fromJSON(object.claim) : undefined,
     };
   },
@@ -251,7 +252,7 @@ export const Attestation = {
     }
 
     message.height !== undefined &&
-      (obj.height = (message.height || Long.UZERO).toString());
+      (obj.height = (message.height || BigInt(0)).toString());
     message.claim !== undefined &&
       (obj.claim = message.claim ? Any.toJSON(message.claim) : undefined);
     return obj;
@@ -263,8 +264,8 @@ export const Attestation = {
     message.votes = object.votes?.map((e) => e) || [];
     message.height =
       object.height !== undefined && object.height !== null
-        ? Long.fromValue(object.height)
-        : Long.UZERO;
+        ? BigInt(object.height)
+        : BigInt(0);
     message.claim =
       object.claim !== undefined && object.claim !== null
         ? Any.fromPartial(object.claim)
@@ -283,8 +284,8 @@ function createBaseERC20Token(): ERC20Token {
 export const ERC20Token = {
   encode(
     message: ERC20Token,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.contract !== "") {
       writer.uint32(10).string(message.contract);
     }
@@ -296,8 +297,9 @@ export const ERC20Token = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): ERC20Token {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): ERC20Token {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseERC20Token();
 
@@ -357,8 +359,8 @@ function createBaseEventObservation(): EventObservation {
 export const EventObservation = {
   encode(
     message: EventObservation,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.attestationType !== "") {
       writer.uint32(10).string(message.attestationType);
     }
@@ -382,8 +384,9 @@ export const EventObservation = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventObservation {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EventObservation {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventObservation();
 
@@ -475,8 +478,8 @@ function createBaseEventInvalidSendToCosmosReceiver(): EventInvalidSendToCosmosR
 export const EventInvalidSendToCosmosReceiver = {
   encode(
     message: EventInvalidSendToCosmosReceiver,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.amount !== "") {
       writer.uint32(10).string(message.amount);
     }
@@ -497,10 +500,11 @@ export const EventInvalidSendToCosmosReceiver = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventInvalidSendToCosmosReceiver {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventInvalidSendToCosmosReceiver();
 
@@ -574,8 +578,8 @@ function createBaseEventSendToCosmos(): EventSendToCosmos {
 export const EventSendToCosmos = {
   encode(
     message: EventSendToCosmos,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.amount !== "") {
       writer.uint32(10).string(message.amount);
     }
@@ -591,8 +595,9 @@ export const EventSendToCosmos = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToCosmos {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EventSendToCosmos {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSendToCosmos();
 
@@ -658,8 +663,8 @@ function createBaseEventSendToCosmosLocal(): EventSendToCosmosLocal {
 export const EventSendToCosmosLocal = {
   encode(
     message: EventSendToCosmosLocal,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.nonce !== "") {
       writer.uint32(10).string(message.nonce);
     }
@@ -680,10 +685,11 @@ export const EventSendToCosmosLocal = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSendToCosmosLocal {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSendToCosmosLocal();
 
@@ -757,8 +763,8 @@ function createBaseEventSendToCosmosPendingIbcAutoForward(): EventSendToCosmosPe
 export const EventSendToCosmosPendingIbcAutoForward = {
   encode(
     message: EventSendToCosmosPendingIbcAutoForward,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.nonce !== "") {
       writer.uint32(10).string(message.nonce);
     }
@@ -783,10 +789,11 @@ export const EventSendToCosmosPendingIbcAutoForward = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSendToCosmosPendingIbcAutoForward {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSendToCosmosPendingIbcAutoForward();
 
@@ -871,8 +878,8 @@ function createBaseEventSendToCosmosExecutedIbcAutoForward(): EventSendToCosmosE
 export const EventSendToCosmosExecutedIbcAutoForward = {
   encode(
     message: EventSendToCosmosExecutedIbcAutoForward,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.nonce !== "") {
       writer.uint32(10).string(message.nonce);
     }
@@ -905,10 +912,11 @@ export const EventSendToCosmosExecutedIbcAutoForward = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSendToCosmosExecutedIbcAutoForward {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSendToCosmosExecutedIbcAutoForward();
 

@@ -1,7 +1,5 @@
-/// <reference types="long" />
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Any } from "cosmjs-types/google/protobuf/any";
-import * as _m0 from "protobufjs/minimal";
-import { Long } from "./helpers";
 export declare const protobufPackage = "gravity.v1";
 /**
  * ClaimType is the cosmos type of an event from the counterpart chain that can
@@ -44,7 +42,7 @@ export declare function claimTypeToJSON(object: ClaimType): string;
 export interface Attestation {
     observed: boolean;
     votes: string[];
-    height: Long;
+    height: bigint;
     claim?: Any;
 }
 /**
@@ -99,57 +97,57 @@ export interface EventSendToCosmosExecutedIbcAutoForward {
     timeoutHeight: string;
 }
 export declare const Attestation: {
-    encode(message: Attestation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Attestation;
+    encode(message: Attestation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Attestation;
     fromJSON(object: any): Attestation;
     toJSON(message: Attestation): unknown;
     fromPartial(object: Partial<Attestation>): Attestation;
 };
 export declare const ERC20Token: {
-    encode(message: ERC20Token, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ERC20Token;
+    encode(message: ERC20Token, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ERC20Token;
     fromJSON(object: any): ERC20Token;
     toJSON(message: ERC20Token): unknown;
     fromPartial(object: Partial<ERC20Token>): ERC20Token;
 };
 export declare const EventObservation: {
-    encode(message: EventObservation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventObservation;
+    encode(message: EventObservation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventObservation;
     fromJSON(object: any): EventObservation;
     toJSON(message: EventObservation): unknown;
     fromPartial(object: Partial<EventObservation>): EventObservation;
 };
 export declare const EventInvalidSendToCosmosReceiver: {
-    encode(message: EventInvalidSendToCosmosReceiver, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventInvalidSendToCosmosReceiver;
+    encode(message: EventInvalidSendToCosmosReceiver, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventInvalidSendToCosmosReceiver;
     fromJSON(object: any): EventInvalidSendToCosmosReceiver;
     toJSON(message: EventInvalidSendToCosmosReceiver): unknown;
     fromPartial(object: Partial<EventInvalidSendToCosmosReceiver>): EventInvalidSendToCosmosReceiver;
 };
 export declare const EventSendToCosmos: {
-    encode(message: EventSendToCosmos, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToCosmos;
+    encode(message: EventSendToCosmos, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSendToCosmos;
     fromJSON(object: any): EventSendToCosmos;
     toJSON(message: EventSendToCosmos): unknown;
     fromPartial(object: Partial<EventSendToCosmos>): EventSendToCosmos;
 };
 export declare const EventSendToCosmosLocal: {
-    encode(message: EventSendToCosmosLocal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToCosmosLocal;
+    encode(message: EventSendToCosmosLocal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSendToCosmosLocal;
     fromJSON(object: any): EventSendToCosmosLocal;
     toJSON(message: EventSendToCosmosLocal): unknown;
     fromPartial(object: Partial<EventSendToCosmosLocal>): EventSendToCosmosLocal;
 };
 export declare const EventSendToCosmosPendingIbcAutoForward: {
-    encode(message: EventSendToCosmosPendingIbcAutoForward, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToCosmosPendingIbcAutoForward;
+    encode(message: EventSendToCosmosPendingIbcAutoForward, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSendToCosmosPendingIbcAutoForward;
     fromJSON(object: any): EventSendToCosmosPendingIbcAutoForward;
     toJSON(message: EventSendToCosmosPendingIbcAutoForward): unknown;
     fromPartial(object: Partial<EventSendToCosmosPendingIbcAutoForward>): EventSendToCosmosPendingIbcAutoForward;
 };
 export declare const EventSendToCosmosExecutedIbcAutoForward: {
-    encode(message: EventSendToCosmosExecutedIbcAutoForward, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToCosmosExecutedIbcAutoForward;
+    encode(message: EventSendToCosmosExecutedIbcAutoForward, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSendToCosmosExecutedIbcAutoForward;
     fromJSON(object: any): EventSendToCosmosExecutedIbcAutoForward;
     toJSON(message: EventSendToCosmosExecutedIbcAutoForward): unknown;
     fromPartial(object: Partial<EventSendToCosmosExecutedIbcAutoForward>): EventSendToCosmosExecutedIbcAutoForward;

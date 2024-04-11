@@ -1,6 +1,5 @@
 import { AminoMsg } from "@cosmjs/amino";
 import { AminoConverters, Coin } from "@cosmjs/stargate";
-import Long from "long";
 type AminoAllowance = {
     type: string;
     value: AminoBasicAllowance;
@@ -8,7 +7,7 @@ type AminoAllowance = {
 type AminoBasicAllowance = {
     spend_limit?: Coin[];
     expiration?: {
-        seconds?: string | number | Long.Long;
+        seconds?: bigint;
         nanos?: number;
     };
 };

@@ -1,18 +1,18 @@
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import { Reader, Writer } from "protobufjs/minimal";
 export declare const protobufPackage = "kujira.scheduler";
 export interface Hook {
-    id: number;
+    id: bigint;
     executor: string;
     contract: string;
     msg: Uint8Array;
-    frequency: number;
+    frequency: bigint;
     funds: Coin[];
 }
 export declare const Hook: {
-    encode(message: Hook, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): Hook;
+    encode(message: Hook, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Hook;
     fromJSON(object: any): Hook;
     toJSON(message: Hook): unknown;
     fromPartial(object: DeepPartial<Hook>): Hook;

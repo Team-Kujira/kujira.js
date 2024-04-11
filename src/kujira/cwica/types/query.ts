@@ -1,6 +1,6 @@
 import { DeepPartial, Exact } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Rpc, isSet } from "cosmjs-types/helpers";
-import { Reader, Writer } from "protobufjs/minimal";
 
 /* eslint-disable */
 export const protobufPackage = "kujira.cwica";
@@ -25,8 +25,8 @@ export const QueryInterchainAccountRequest = {
   typeUrl: "/kujira.cwica.QueryInterchainAccountRequest",
   encode(
     message: QueryInterchainAccountRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.owner !== "") {
       writer.uint32(10).string(message.owner);
     }
@@ -39,10 +39,11 @@ export const QueryInterchainAccountRequest = {
     return writer;
   },
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryInterchainAccountRequest {
-    const reader = input instanceof Reader ? input : new Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryInterchainAccountRequest();
     while (reader.pos < end) {
@@ -99,18 +100,19 @@ export const QueryInterchainAccountResponse = {
   typeUrl: "/kujira.cwica.QueryInterchainAccountResponse",
   encode(
     message: QueryInterchainAccountResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.interchainAccountAddress !== "") {
       writer.uint32(10).string(message.interchainAccountAddress);
     }
     return writer;
   },
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryInterchainAccountResponse {
-    const reader = input instanceof Reader ? input : new Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryInterchainAccountResponse();
     while (reader.pos < end) {
@@ -169,7 +171,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryInterchainAccountResponse.decode(new Reader(data))
+      QueryInterchainAccountResponse.decode(new BinaryReader(data))
     );
   }
 }

@@ -11,7 +11,7 @@ export type WasmExtensionExtended = {
          * Throws an error if no code with this id
          */
         readonly getCode: (id: number) => Promise<QueryCodeResponse>;
-        readonly listContractsByCodeId: (id: number, pageRequest?: PageRequest) => Promise<QueryContractsByCodeResponse>;
+        readonly listContractsByCodeId: (id: bigint, pageRequest?: PageRequest) => Promise<QueryContractsByCodeResponse>;
         /**
          * Returns null when contract was not found at this address.
          */

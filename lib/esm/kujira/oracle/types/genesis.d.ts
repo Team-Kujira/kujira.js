@@ -1,5 +1,5 @@
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { AggregateExchangeRatePrevote, AggregateExchangeRateVote, ExchangeRateTuple, Params } from "./oracle";
 export declare const protobufPackage = "kujira.oracle";
 /** GenesisState defines the oracle module's genesis state. */
@@ -26,25 +26,25 @@ export interface FeederDelegation {
  */
 export interface MissCounter {
     validator_address: string;
-    miss_counter: number;
+    miss_counter: bigint;
 }
 export declare const GenesisState: {
-    encode(message: GenesisState, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): GenesisState;
+    encode(message: GenesisState, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const FeederDelegation: {
-    encode(message: FeederDelegation, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): FeederDelegation;
+    encode(message: FeederDelegation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FeederDelegation;
     fromJSON(object: any): FeederDelegation;
     toJSON(message: FeederDelegation): unknown;
     fromPartial(object: DeepPartial<FeederDelegation>): FeederDelegation;
 };
 export declare const MissCounter: {
-    encode(message: MissCounter, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MissCounter;
+    encode(message: MissCounter, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MissCounter;
     fromJSON(object: any): MissCounter;
     toJSON(message: MissCounter): unknown;
     fromPartial(object: DeepPartial<MissCounter>): MissCounter;

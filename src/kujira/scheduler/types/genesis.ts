@@ -1,5 +1,5 @@
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Hook } from "./hook";
 import { Params } from "./params";
 
@@ -10,27 +10,31 @@ export interface GenesisState {
   params: Params | undefined;
   hookList: Hook[];
   /** this line is used by starport scaffolding # genesis/proto/state */
-  hookCount: number;
+  hookCount: bigint;
 }
 
 const baseGenesisState: object = { hookCount: 0 };
 
 export const GenesisState = {
-  encode(message: GenesisState, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.hookList) {
       Hook.encode(v!, writer.uint32(18).fork()).ldelim();
     }
-    if (message.hookCount !== 0) {
+    if (message.hookCount !== BigInt(0)) {
       writer.uint32(24).uint64(message.hookCount);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseGenesisState } as GenesisState;
     message.hookList = [];
@@ -44,7 +48,7 @@ export const GenesisState = {
           message.hookList.push(Hook.decode(reader, reader.uint32()));
           break;
         case 3:
-          message.hookCount = (reader.uint64() as Long).toNumber();
+          message.hookCount = reader.uint64();
           break;
         default:
           reader.skipType(tag & 7);
@@ -68,9 +72,9 @@ export const GenesisState = {
       }
     }
     if (object.hookCount !== undefined && object.hookCount !== null) {
-      message.hookCount = Number(object.hookCount);
+      message.hookCount = BigInt(object.hookCount);
     } else {
-      message.hookCount = 0;
+      message.hookCount = BigInt(0);
     }
     return message;
   },
@@ -106,7 +110,7 @@ export const GenesisState = {
     if (object.hookCount !== undefined && object.hookCount !== null) {
       message.hookCount = object.hookCount;
     } else {
-      message.hookCount = 0;
+      message.hookCount = BigInt(0);
     }
     return message;
   },

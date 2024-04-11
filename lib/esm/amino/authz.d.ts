@@ -12,7 +12,7 @@ export interface AminoMsgGrant extends AminoMsg {
     readonly value: {
         readonly granter: string;
         readonly grantee: string;
-        readonly grant?: AminoGrant;
+        readonly grant: AminoGrant;
     };
 }
 export interface AminoMsgRevoke extends AminoMsg {

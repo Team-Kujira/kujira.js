@@ -1,12 +1,10 @@
-/// <reference types="long" />
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Metadata } from "cosmjs-types/cosmos/bank/v1beta1/bank";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
-import { Long } from "./helpers";
 export declare const protobufPackage = "gravity.v1";
 /** BridgeValidator represents a validator's ETH address and its power */
 export interface BridgeValidator {
-    power: Long;
+    power: bigint;
     ethereumAddress: string;
 }
 /**
@@ -15,9 +13,9 @@ export interface BridgeValidator {
  * ETH because of the significant gas savings
  */
 export interface Valset {
-    nonce: Long;
+    nonce: bigint;
     members: BridgeValidator[];
-    height: Long;
+    height: bigint;
     rewardAmount: string;
     /** the reward token in it's Ethereum hex address representation */
     rewardToken: string;
@@ -30,8 +28,8 @@ export interface Valset {
  * even if no Ethereum block height has been relayed for a long time
  */
 export interface LastObservedEthereumBlockHeight {
-    cosmosBlockHeight: Long;
-    ethereumBlockHeight: Long;
+    cosmosBlockHeight: bigint;
+    ethereumBlockHeight: bigint;
 }
 /**
  * This records the relationship between an ERC20 token and the denom
@@ -52,7 +50,7 @@ export interface ERC20ToDenom {
 export interface UnhaltBridgeProposal {
     title: string;
     description: string;
-    targetNonce: Long;
+    targetNonce: bigint;
 }
 /**
  * AirdropProposal defines a custom governance proposal type that allows an airdrop to occur in a decentralized
@@ -65,7 +63,7 @@ export interface AirdropProposal {
     description: string;
     denom: string;
     recipients: Uint8Array;
-    amounts: Long[];
+    amounts: bigint[];
 }
 /**
  * IBCMetadataProposal defines a custom governance proposal type that allows governance to set the
@@ -96,60 +94,60 @@ export interface PendingIbcAutoForward {
     /** the IBC channel to send `Amount` over via ibc-transfer module */
     ibcChannel: string;
     /** the EventNonce from the MsgSendToCosmosClaim, used for ordering the queue */
-    eventNonce: Long;
+    eventNonce: bigint;
 }
 export declare const BridgeValidator: {
-    encode(message: BridgeValidator, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): BridgeValidator;
+    encode(message: BridgeValidator, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): BridgeValidator;
     fromJSON(object: any): BridgeValidator;
     toJSON(message: BridgeValidator): unknown;
     fromPartial(object: Partial<BridgeValidator>): BridgeValidator;
 };
 export declare const Valset: {
-    encode(message: Valset, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Valset;
+    encode(message: Valset, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Valset;
     fromJSON(object: any): Valset;
     toJSON(message: Valset): unknown;
     fromPartial(object: Partial<Valset>): Valset;
 };
 export declare const LastObservedEthereumBlockHeight: {
-    encode(message: LastObservedEthereumBlockHeight, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): LastObservedEthereumBlockHeight;
+    encode(message: LastObservedEthereumBlockHeight, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): LastObservedEthereumBlockHeight;
     fromJSON(object: any): LastObservedEthereumBlockHeight;
     toJSON(message: LastObservedEthereumBlockHeight): unknown;
     fromPartial(object: Partial<LastObservedEthereumBlockHeight>): LastObservedEthereumBlockHeight;
 };
 export declare const ERC20ToDenom: {
-    encode(message: ERC20ToDenom, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ERC20ToDenom;
+    encode(message: ERC20ToDenom, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ERC20ToDenom;
     fromJSON(object: any): ERC20ToDenom;
     toJSON(message: ERC20ToDenom): unknown;
     fromPartial(object: Partial<ERC20ToDenom>): ERC20ToDenom;
 };
 export declare const UnhaltBridgeProposal: {
-    encode(message: UnhaltBridgeProposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): UnhaltBridgeProposal;
+    encode(message: UnhaltBridgeProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UnhaltBridgeProposal;
     fromJSON(object: any): UnhaltBridgeProposal;
     toJSON(message: UnhaltBridgeProposal): unknown;
     fromPartial(object: Partial<UnhaltBridgeProposal>): UnhaltBridgeProposal;
 };
 export declare const AirdropProposal: {
-    encode(message: AirdropProposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): AirdropProposal;
+    encode(message: AirdropProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): AirdropProposal;
     fromJSON(object: any): AirdropProposal;
     toJSON(message: AirdropProposal): unknown;
     fromPartial(object: Partial<AirdropProposal>): AirdropProposal;
 };
 export declare const IBCMetadataProposal: {
-    encode(message: IBCMetadataProposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): IBCMetadataProposal;
+    encode(message: IBCMetadataProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): IBCMetadataProposal;
     fromJSON(object: any): IBCMetadataProposal;
     toJSON(message: IBCMetadataProposal): unknown;
     fromPartial(object: Partial<IBCMetadataProposal>): IBCMetadataProposal;
 };
 export declare const PendingIbcAutoForward: {
-    encode(message: PendingIbcAutoForward, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PendingIbcAutoForward;
+    encode(message: PendingIbcAutoForward, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): PendingIbcAutoForward;
     fromJSON(object: any): PendingIbcAutoForward;
     toJSON(message: PendingIbcAutoForward): unknown;
     fromPartial(object: Partial<PendingIbcAutoForward>): PendingIbcAutoForward;

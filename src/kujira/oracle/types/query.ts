@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { DecCoin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import { Reader, Writer } from "protobufjs/minimal";
 import {
   AggregateExchangeRatePrevote,
   AggregateExchangeRateVote,
@@ -162,8 +162,8 @@ const baseQueryExchangeRateRequest: object = { denom: "" };
 export const QueryExchangeRateRequest = {
   encode(
     message: QueryExchangeRateRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -171,10 +171,11 @@ export const QueryExchangeRateRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryExchangeRateRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryExchangeRateRequest,
@@ -231,8 +232,8 @@ const baseQueryExchangeRateResponse: object = { exchange_rate: "" };
 export const QueryExchangeRateResponse = {
   encode(
     message: QueryExchangeRateResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.exchange_rate !== "") {
       writer.uint32(10).string(message.exchange_rate);
     }
@@ -240,10 +241,11 @@ export const QueryExchangeRateResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryExchangeRateResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryExchangeRateResponse,
@@ -301,16 +303,17 @@ const baseQueryExchangeRatesRequest: object = {};
 export const QueryExchangeRatesRequest = {
   encode(
     _: QueryExchangeRatesRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryExchangeRatesRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryExchangeRatesRequest,
@@ -353,8 +356,8 @@ const baseQueryExchangeRatesResponse: object = {};
 export const QueryExchangeRatesResponse = {
   encode(
     message: QueryExchangeRatesResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.exchange_rates) {
       DecCoin.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -362,10 +365,11 @@ export const QueryExchangeRatesResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryExchangeRatesResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryExchangeRatesResponse,
@@ -429,12 +433,19 @@ export const QueryExchangeRatesResponse = {
 const baseQueryActivesRequest: object = {};
 
 export const QueryActivesRequest = {
-  encode(_: QueryActivesRequest, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: QueryActivesRequest,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryActivesRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryActivesRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryActivesRequest } as QueryActivesRequest;
     while (reader.pos < end) {
@@ -469,16 +480,20 @@ const baseQueryActivesResponse: object = { actives: "" };
 export const QueryActivesResponse = {
   encode(
     message: QueryActivesResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.actives) {
       writer.uint32(10).string(v!);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryActivesResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryActivesResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryActivesResponse } as QueryActivesResponse;
     message.actives = [];
@@ -532,12 +547,19 @@ export const QueryActivesResponse = {
 const baseQueryVoteTargetsRequest: object = {};
 
 export const QueryVoteTargetsRequest = {
-  encode(_: QueryVoteTargetsRequest, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: QueryVoteTargetsRequest,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryVoteTargetsRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryVoteTargetsRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryVoteTargetsRequest,
@@ -580,8 +602,8 @@ const baseQueryVoteTargetsResponse: object = { vote_targets: "" };
 export const QueryVoteTargetsResponse = {
   encode(
     message: QueryVoteTargetsResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.vote_targets) {
       writer.uint32(10).string(v!);
     }
@@ -589,10 +611,11 @@ export const QueryVoteTargetsResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryVoteTargetsResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryVoteTargetsResponse,
@@ -656,8 +679,8 @@ const baseQueryFeederDelegationRequest: object = { validator_addr: "" };
 export const QueryFeederDelegationRequest = {
   encode(
     message: QueryFeederDelegationRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator_addr !== "") {
       writer.uint32(10).string(message.validator_addr);
     }
@@ -665,10 +688,11 @@ export const QueryFeederDelegationRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryFeederDelegationRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryFeederDelegationRequest,
@@ -726,8 +750,8 @@ const baseQueryFeederDelegationResponse: object = { feeder_addr: "" };
 export const QueryFeederDelegationResponse = {
   encode(
     message: QueryFeederDelegationResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.feeder_addr !== "") {
       writer.uint32(10).string(message.feeder_addr);
     }
@@ -735,10 +759,11 @@ export const QueryFeederDelegationResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryFeederDelegationResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryFeederDelegationResponse,
@@ -796,16 +821,20 @@ const baseQueryMissCounterRequest: object = { validator_addr: "" };
 export const QueryMissCounterRequest = {
   encode(
     message: QueryMissCounterRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator_addr !== "") {
       writer.uint32(10).string(message.validator_addr);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryMissCounterRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryMissCounterRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryMissCounterRequest,
@@ -863,8 +892,8 @@ const baseQueryMissCounterResponse: object = { miss_counter: 0 };
 export const QueryMissCounterResponse = {
   encode(
     message: QueryMissCounterResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.miss_counter !== 0) {
       writer.uint32(8).uint64(message.miss_counter);
     }
@@ -872,10 +901,11 @@ export const QueryMissCounterResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryMissCounterResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryMissCounterResponse,
@@ -884,7 +914,7 @@ export const QueryMissCounterResponse = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.miss_counter = (reader.uint64() as Long).toNumber();
+          message.miss_counter = reader.uint32();
           break;
         default:
           reader.skipType(tag & 7);
@@ -933,8 +963,8 @@ const baseQueryAggregatePrevoteRequest: object = { validator_addr: "" };
 export const QueryAggregatePrevoteRequest = {
   encode(
     message: QueryAggregatePrevoteRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator_addr !== "") {
       writer.uint32(10).string(message.validator_addr);
     }
@@ -942,10 +972,11 @@ export const QueryAggregatePrevoteRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregatePrevoteRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregatePrevoteRequest,
@@ -1003,8 +1034,8 @@ const baseQueryAggregatePrevoteResponse: object = {};
 export const QueryAggregatePrevoteResponse = {
   encode(
     message: QueryAggregatePrevoteResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.aggregate_prevote !== undefined) {
       AggregateExchangeRatePrevote.encode(
         message.aggregate_prevote,
@@ -1015,10 +1046,11 @@ export const QueryAggregatePrevoteResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregatePrevoteResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregatePrevoteResponse,
@@ -1091,16 +1123,17 @@ const baseQueryAggregatePrevotesRequest: object = {};
 export const QueryAggregatePrevotesRequest = {
   encode(
     _: QueryAggregatePrevotesRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregatePrevotesRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregatePrevotesRequest,
@@ -1143,8 +1176,8 @@ const baseQueryAggregatePrevotesResponse: object = {};
 export const QueryAggregatePrevotesResponse = {
   encode(
     message: QueryAggregatePrevotesResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.aggregate_prevotes) {
       AggregateExchangeRatePrevote.encode(
         v!,
@@ -1155,10 +1188,11 @@ export const QueryAggregatePrevotesResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregatePrevotesResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregatePrevotesResponse,
@@ -1236,8 +1270,8 @@ const baseQueryAggregateVoteRequest: object = { validator_addr: "" };
 export const QueryAggregateVoteRequest = {
   encode(
     message: QueryAggregateVoteRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator_addr !== "") {
       writer.uint32(10).string(message.validator_addr);
     }
@@ -1245,10 +1279,11 @@ export const QueryAggregateVoteRequest = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregateVoteRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregateVoteRequest,
@@ -1306,8 +1341,8 @@ const baseQueryAggregateVoteResponse: object = {};
 export const QueryAggregateVoteResponse = {
   encode(
     message: QueryAggregateVoteResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.aggregate_vote !== undefined) {
       AggregateExchangeRateVote.encode(
         message.aggregate_vote,
@@ -1318,10 +1353,11 @@ export const QueryAggregateVoteResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregateVoteResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregateVoteResponse,
@@ -1388,16 +1424,17 @@ const baseQueryAggregateVotesRequest: object = {};
 export const QueryAggregateVotesRequest = {
   encode(
     _: QueryAggregateVotesRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregateVotesRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregateVotesRequest,
@@ -1440,8 +1477,8 @@ const baseQueryAggregateVotesResponse: object = {};
 export const QueryAggregateVotesResponse = {
   encode(
     message: QueryAggregateVotesResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.aggregate_votes) {
       AggregateExchangeRateVote.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1449,10 +1486,11 @@ export const QueryAggregateVotesResponse = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAggregateVotesResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseQueryAggregateVotesResponse,
@@ -1524,12 +1562,19 @@ export const QueryAggregateVotesResponse = {
 const baseQueryParamsRequest: object = {};
 
 export const QueryParamsRequest = {
-  encode(_: QueryParamsRequest, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsRequest } as QueryParamsRequest;
     while (reader.pos < end) {
@@ -1564,16 +1609,20 @@ const baseQueryParamsResponse: object = {};
 export const QueryParamsResponse = {
   encode(
     message: QueryParamsResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsResponse } as QueryParamsResponse;
     while (reader.pos < end) {
@@ -1673,7 +1722,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryExchangeRateResponse.decode(new Reader(data))
+      QueryExchangeRateResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1687,7 +1736,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryExchangeRatesResponse.decode(new Reader(data))
+      QueryExchangeRatesResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1695,7 +1744,7 @@ export class QueryClientImpl implements Query {
     const data = QueryActivesRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.oracle.Query", "Actives", data);
     return promise.then((data) =>
-      QueryActivesResponse.decode(new Reader(data))
+      QueryActivesResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1709,7 +1758,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryFeederDelegationResponse.decode(new Reader(data))
+      QueryFeederDelegationResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1723,7 +1772,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryMissCounterResponse.decode(new Reader(data))
+      QueryMissCounterResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1737,7 +1786,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryAggregatePrevoteResponse.decode(new Reader(data))
+      QueryAggregatePrevoteResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1751,7 +1800,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryAggregatePrevotesResponse.decode(new Reader(data))
+      QueryAggregatePrevotesResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1765,7 +1814,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryAggregateVoteResponse.decode(new Reader(data))
+      QueryAggregateVoteResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -1779,14 +1828,16 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryAggregateVotesResponse.decode(new Reader(data))
+      QueryAggregateVotesResponse.decode(new BinaryReader(data))
     );
   }
 
   Params(request: QueryParamsRequest): Promise<QueryParamsResponse> {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.oracle.Query", "Params", data);
-    return promise.then((data) => QueryParamsResponse.decode(new Reader(data)));
+    return promise.then((data) =>
+      QueryParamsResponse.decode(new BinaryReader(data))
+    );
   }
 }
 

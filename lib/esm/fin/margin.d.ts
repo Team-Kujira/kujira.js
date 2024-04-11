@@ -1,10 +1,10 @@
-import { AccountData } from "@cosmjs/launchpad";
+import { AccountData } from "@cosmjs/proto-signing";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
 import { defaultPosition as defaultPositionMarket, fetchPosition as fetchPositionMarket, Position as PositionMarket } from "../usk";
 import { Order } from "./types";
-export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
+export { defaultPositionMarket, fetchPositionMarket, PositionMarket };
 export type PositionLimit = {
     idx: string;
     owner: string;

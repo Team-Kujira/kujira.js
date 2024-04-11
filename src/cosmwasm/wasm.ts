@@ -11,7 +11,6 @@ import {
   QueryContractsByCodeResponse,
   QueryRawContractStateResponse,
 } from "cosmjs-types/cosmwasm/wasm/v1/query";
-import Long from "long";
 
 export type WasmExtensionExtended = {
   readonly wasm: {
@@ -25,7 +24,7 @@ export type WasmExtensionExtended = {
      */
     readonly getCode: (id: number) => Promise<QueryCodeResponse>;
     readonly listContractsByCodeId: (
-      id: number,
+      id: bigint,
       pageRequest?: PageRequest
     ) => Promise<QueryContractsByCodeResponse>;
     /**
@@ -85,9 +84,9 @@ export function setupWasmExtensionExtended(
         };
         return queryService.Codes(request);
       },
-      listContractsByCodeId: async (id: number, pageRequest?: PageRequest) => {
+      listContractsByCodeId: async (id: bigint, pageRequest?: PageRequest) => {
         const request = {
-          codeId: Long.fromNumber(id),
+          codeId: id,
           pagination: pageRequest,
         };
         return queryService.ContractsByCode(request);

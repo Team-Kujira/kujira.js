@@ -2,8 +2,8 @@ import { Registry, EncodeObject } from "@cosmjs/proto-signing";
 import { MsgBurn, MsgChangeAdmin, MsgCreateDenom, MsgMint } from "./types/tx";
 import { DenomExtension, setupDenomExtension } from "./queries";
 declare const types: ((string | {
-    encode(message: MsgBurn, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgBurn;
+    encode(message: MsgBurn, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgBurn;
     fromJSON(object: any): MsgBurn;
     toJSON(message: MsgBurn): unknown;
     fromPartial(object: {
@@ -14,8 +14,8 @@ declare const types: ((string | {
         } | undefined;
     }): MsgBurn;
 })[] | (string | {
-    encode(message: MsgChangeAdmin, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgChangeAdmin;
+    encode(message: MsgChangeAdmin, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgChangeAdmin;
     fromJSON(object: any): MsgChangeAdmin;
     toJSON(message: MsgChangeAdmin): unknown;
     fromPartial(object: {
@@ -24,8 +24,8 @@ declare const types: ((string | {
         newAdmin?: string | undefined;
     }): MsgChangeAdmin;
 })[] | (string | {
-    encode(message: MsgCreateDenom, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgCreateDenom;
+    encode(message: MsgCreateDenom, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgCreateDenom;
     fromJSON(object: any): MsgCreateDenom;
     toJSON(message: MsgCreateDenom): unknown;
     fromPartial(object: {

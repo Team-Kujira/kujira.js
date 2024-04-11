@@ -3,7 +3,7 @@ import { AllianceExtension, setupAllianceExtension } from "./queries";
 import { MsgClaimDelegationRewards, MsgDelegate, MsgDelegateResponse, MsgRedelegate, MsgRedelegateResponse, MsgUndelegate, MsgUndelegateResponse } from "./tx";
 declare const types: (string | {
     encode(_: MsgDelegateResponse, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgDelegateResponse;
+    decode(input: Uint8Array | import("protobufjs").Reader, length?: number | undefined): MsgDelegateResponse;
     fromJSON(_: any): MsgDelegateResponse;
     toJSON(_: MsgDelegateResponse): unknown;
     fromPartial(_: Partial<MsgDelegateResponse>): MsgDelegateResponse;

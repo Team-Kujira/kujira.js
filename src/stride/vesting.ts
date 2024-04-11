@@ -1,32 +1,31 @@
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { BaseVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/vesting";
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
 
 /** Period defines a length of time and amount of coins that will vest. */
 export interface Period {
-  startTime: Long;
-  length: Long;
+  startTime: bigint;
+  length: bigint;
   amount: Coin[];
   actionType: number;
 }
 
 const basePeriod: object = {
-  startTime: Long.ZERO,
-  length: Long.ZERO,
+  startTime: BigInt(0),
+  length: BigInt(0),
   actionType: 0,
 };
 
 export const Period = {
   encode(
     message: Period,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.startTime.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.startTime !== BigInt(0)) {
       writer.uint32(8).int64(message.startTime);
     }
-    if (!message.length.isZero()) {
+    if (message.length !== BigInt(0)) {
       writer.uint32(16).int64(message.length);
     }
     for (const v of message.amount) {
@@ -38,8 +37,9 @@ export const Period = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): Period {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): Period {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...basePeriod } as Period;
     message.amount = [];
@@ -47,10 +47,10 @@ export const Period = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.startTime = reader.int64() as Long;
+          message.startTime = reader.int64();
           break;
         case 2:
-          message.length = reader.int64() as Long;
+          message.length = reader.int64();
           break;
         case 3:
           message.amount.push(Coin.decode(reader, reader.uint32()));
@@ -70,14 +70,14 @@ export const Period = {
     const message = { ...basePeriod } as Period;
     message.amount = [];
     if (object.startTime !== undefined && object.startTime !== null) {
-      message.startTime = Long.fromString(object.startTime);
+      message.startTime = BigInt(object.startTime);
     } else {
-      message.startTime = Long.ZERO;
+      message.startTime = BigInt(0);
     }
     if (object.length !== undefined && object.length !== null) {
-      message.length = Long.fromString(object.length);
+      message.length = BigInt(object.length);
     } else {
-      message.length = Long.ZERO;
+      message.length = BigInt(0);
     }
     if (object.amount !== undefined && object.amount !== null) {
       for (const e of object.amount) {
@@ -95,9 +95,9 @@ export const Period = {
   toJSON(message: Period): unknown {
     const obj: any = {};
     message.startTime !== undefined &&
-      (obj.startTime = (message.startTime || Long.ZERO).toString());
+      (obj.startTime = (message.startTime || BigInt(0)).toString());
     message.length !== undefined &&
-      (obj.length = (message.length || Long.ZERO).toString());
+      (obj.length = (message.length || BigInt(0)).toString());
     if (message.amount) {
       obj.amount = message.amount.map((e) => (e ? Coin.toJSON(e) : undefined));
     } else {
@@ -111,14 +111,14 @@ export const Period = {
     const message = { ...basePeriod } as Period;
     message.amount = [];
     if (object.startTime !== undefined && object.startTime !== null) {
-      message.startTime = object.startTime as Long;
+      message.startTime = object.startTime;
     } else {
-      message.startTime = Long.ZERO;
+      message.startTime = BigInt(0);
     }
     if (object.length !== undefined && object.length !== null) {
-      message.length = object.length as Long;
+      message.length = object.length;
     } else {
-      message.length = Long.ZERO;
+      message.length = BigInt(0);
     }
     if (object.amount !== undefined && object.amount !== null) {
       for (const e of object.amount) {
@@ -154,8 +154,8 @@ function createBaseStridePeriodicVestingAccount(): StridePeriodicVestingAccount 
 export const StridePeriodicVestingAccount = {
   encode(
     message: StridePeriodicVestingAccount,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.baseVestingAccount !== undefined) {
       BaseVestingAccount.encode(
         message.baseVestingAccount,
@@ -171,10 +171,11 @@ export const StridePeriodicVestingAccount = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): StridePeriodicVestingAccount {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseStridePeriodicVestingAccount();
 

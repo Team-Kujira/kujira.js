@@ -1,13 +1,13 @@
 /* eslint-disable */
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
 import { Attestation } from "./attestation";
 import {
   OutgoingLogicCall,
   OutgoingTransferTx,
   OutgoingTxBatch,
 } from "./batch";
-import { base64FromBytes, bytesFromBase64, isSet, Long } from "./helpers";
+import { base64FromBytes, bytesFromBase64, isSet } from "./helpers";
 import {
   MsgConfirmBatch,
   MsgConfirmLogicCall,
@@ -58,17 +58,17 @@ export interface Params {
   gravityId: string;
   contractSourceHash: string;
   bridgeEthereumAddress: string;
-  bridgeChainId: Long;
-  signedValsetsWindow: Long;
-  signedBatchesWindow: Long;
-  signedLogicCallsWindow: Long;
-  targetBatchTimeout: Long;
-  averageBlockTime: Long;
-  averageEthereumBlockTime: Long;
+  bridgeChainId: bigint;
+  signedValsetsWindow: bigint;
+  signedBatchesWindow: bigint;
+  signedLogicCallsWindow: bigint;
+  targetBatchTimeout: bigint;
+  averageBlockTime: bigint;
+  averageEthereumBlockTime: bigint;
   slashFractionValset: Uint8Array;
   slashFractionBatch: Uint8Array;
   slashFractionLogicCall: Uint8Array;
-  unbondSlashingValsetsWindow: Long;
+  unbondSlashingValsetsWindow: bigint;
   slashFractionBadEthSignature: Uint8Array;
   valsetReward?: Coin;
   bridgeActive: boolean;
@@ -78,7 +78,7 @@ export interface Params {
    */
 
   ethereumBlacklist: string[];
-  minChainFeeBasisPoints: Long;
+  minChainFeeBasisPoints: bigint;
 }
 /** GenesisState struct, containing all persistant data required by the Gravity module */
 
@@ -101,35 +101,35 @@ export interface GenesisState {
 
 export interface GravityNonces {
   /** the nonce of the last generated validator set */
-  latestValsetNonce: Long;
+  latestValsetNonce: bigint;
   /** the last observed Gravity.sol contract event nonce */
 
-  lastObservedNonce: Long;
+  lastObservedNonce: bigint;
   /** the last valset nonce we have slashed, to prevent double slashing */
 
-  lastSlashedValsetNonce: Long;
+  lastSlashedValsetNonce: bigint;
   /**
    * the last batch Cosmos chain block that batch slashing has completed for
    * there is an individual batch nonce for each token type so this removes
    * the need to store them all
    */
 
-  lastSlashedBatchBlock: Long;
+  lastSlashedBatchBlock: bigint;
   /** the last cosmos block that logic call slashing has completed for */
 
-  lastSlashedLogicCallBlock: Long;
+  lastSlashedLogicCallBlock: bigint;
   /**
    * the last transaction id from the Gravity TX pool, this prevents ID
    * duplication during chain upgrades
    */
 
-  lastTxPoolId: Long;
+  lastTxPoolId: bigint;
   /**
    * the last batch id from the Gravity batch pool, this prevents ID duplication
    * during chain upgrades
    */
 
-  lastBatchId: Long;
+  lastBatchId: bigint;
 }
 
 function createBaseParams(): Params {
@@ -137,30 +137,30 @@ function createBaseParams(): Params {
     gravityId: "",
     contractSourceHash: "",
     bridgeEthereumAddress: "",
-    bridgeChainId: Long.UZERO,
-    signedValsetsWindow: Long.UZERO,
-    signedBatchesWindow: Long.UZERO,
-    signedLogicCallsWindow: Long.UZERO,
-    targetBatchTimeout: Long.UZERO,
-    averageBlockTime: Long.UZERO,
-    averageEthereumBlockTime: Long.UZERO,
+    bridgeChainId: BigInt(0),
+    signedValsetsWindow: BigInt(0),
+    signedBatchesWindow: BigInt(0),
+    signedLogicCallsWindow: BigInt(0),
+    targetBatchTimeout: BigInt(0),
+    averageBlockTime: BigInt(0),
+    averageEthereumBlockTime: BigInt(0),
     slashFractionValset: new Uint8Array(),
     slashFractionBatch: new Uint8Array(),
     slashFractionLogicCall: new Uint8Array(),
-    unbondSlashingValsetsWindow: Long.UZERO,
+    unbondSlashingValsetsWindow: BigInt(0),
     slashFractionBadEthSignature: new Uint8Array(),
     valsetReward: undefined,
     bridgeActive: false,
     ethereumBlacklist: [],
-    minChainFeeBasisPoints: Long.UZERO,
+    minChainFeeBasisPoints: BigInt(0),
   };
 }
 
 export const Params = {
   encode(
     message: Params,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.gravityId !== "") {
       writer.uint32(10).string(message.gravityId);
     }
@@ -173,31 +173,31 @@ export const Params = {
       writer.uint32(34).string(message.bridgeEthereumAddress);
     }
 
-    if (!message.bridgeChainId.isZero()) {
+    if (message.bridgeChainId !== BigInt(0)) {
       writer.uint32(40).uint64(message.bridgeChainId);
     }
 
-    if (!message.signedValsetsWindow.isZero()) {
+    if (message.signedValsetsWindow !== BigInt(0)) {
       writer.uint32(48).uint64(message.signedValsetsWindow);
     }
 
-    if (!message.signedBatchesWindow.isZero()) {
+    if (message.signedBatchesWindow !== BigInt(0)) {
       writer.uint32(56).uint64(message.signedBatchesWindow);
     }
 
-    if (!message.signedLogicCallsWindow.isZero()) {
+    if (message.signedLogicCallsWindow !== BigInt(0)) {
       writer.uint32(64).uint64(message.signedLogicCallsWindow);
     }
 
-    if (!message.targetBatchTimeout.isZero()) {
+    if (message.targetBatchTimeout !== BigInt(0)) {
       writer.uint32(72).uint64(message.targetBatchTimeout);
     }
 
-    if (!message.averageBlockTime.isZero()) {
+    if (message.averageBlockTime !== BigInt(0)) {
       writer.uint32(80).uint64(message.averageBlockTime);
     }
 
-    if (!message.averageEthereumBlockTime.isZero()) {
+    if (message.averageEthereumBlockTime !== BigInt(0)) {
       writer.uint32(88).uint64(message.averageEthereumBlockTime);
     }
 
@@ -213,7 +213,7 @@ export const Params = {
       writer.uint32(114).bytes(message.slashFractionLogicCall);
     }
 
-    if (!message.unbondSlashingValsetsWindow.isZero()) {
+    if (message.unbondSlashingValsetsWindow !== BigInt(0)) {
       writer.uint32(120).uint64(message.unbondSlashingValsetsWindow);
     }
 
@@ -233,15 +233,16 @@ export const Params = {
       writer.uint32(154).string(v!);
     }
 
-    if (!message.minChainFeeBasisPoints.isZero()) {
+    if (message.minChainFeeBasisPoints !== BigInt(0)) {
       writer.uint32(160).uint64(message.minChainFeeBasisPoints);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): Params {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseParams();
 
@@ -262,31 +263,31 @@ export const Params = {
           break;
 
         case 5:
-          message.bridgeChainId = reader.uint64() as Long;
+          message.bridgeChainId = reader.uint64();
           break;
 
         case 6:
-          message.signedValsetsWindow = reader.uint64() as Long;
+          message.signedValsetsWindow = reader.uint64();
           break;
 
         case 7:
-          message.signedBatchesWindow = reader.uint64() as Long;
+          message.signedBatchesWindow = reader.uint64();
           break;
 
         case 8:
-          message.signedLogicCallsWindow = reader.uint64() as Long;
+          message.signedLogicCallsWindow = reader.uint64();
           break;
 
         case 9:
-          message.targetBatchTimeout = reader.uint64() as Long;
+          message.targetBatchTimeout = reader.uint64();
           break;
 
         case 10:
-          message.averageBlockTime = reader.uint64() as Long;
+          message.averageBlockTime = reader.uint64();
           break;
 
         case 11:
-          message.averageEthereumBlockTime = reader.uint64() as Long;
+          message.averageEthereumBlockTime = reader.uint64();
           break;
 
         case 12:
@@ -302,7 +303,7 @@ export const Params = {
           break;
 
         case 15:
-          message.unbondSlashingValsetsWindow = reader.uint64() as Long;
+          message.unbondSlashingValsetsWindow = reader.uint64();
           break;
 
         case 16:
@@ -322,7 +323,7 @@ export const Params = {
           break;
 
         case 20:
-          message.minChainFeeBasisPoints = reader.uint64() as Long;
+          message.minChainFeeBasisPoints = reader.uint64();
           break;
 
         default:
@@ -344,26 +345,26 @@ export const Params = {
         ? String(object.bridgeEthereumAddress)
         : "",
       bridgeChainId: isSet(object.bridgeChainId)
-        ? Long.fromValue(object.bridgeChainId)
-        : Long.UZERO,
+        ? BigInt(object.bridgeChainId)
+        : BigInt(0),
       signedValsetsWindow: isSet(object.signedValsetsWindow)
-        ? Long.fromValue(object.signedValsetsWindow)
-        : Long.UZERO,
+        ? BigInt(object.signedValsetsWindow)
+        : BigInt(0),
       signedBatchesWindow: isSet(object.signedBatchesWindow)
-        ? Long.fromValue(object.signedBatchesWindow)
-        : Long.UZERO,
+        ? BigInt(object.signedBatchesWindow)
+        : BigInt(0),
       signedLogicCallsWindow: isSet(object.signedLogicCallsWindow)
-        ? Long.fromValue(object.signedLogicCallsWindow)
-        : Long.UZERO,
+        ? BigInt(object.signedLogicCallsWindow)
+        : BigInt(0),
       targetBatchTimeout: isSet(object.targetBatchTimeout)
-        ? Long.fromValue(object.targetBatchTimeout)
-        : Long.UZERO,
+        ? BigInt(object.targetBatchTimeout)
+        : BigInt(0),
       averageBlockTime: isSet(object.averageBlockTime)
-        ? Long.fromValue(object.averageBlockTime)
-        : Long.UZERO,
+        ? BigInt(object.averageBlockTime)
+        : BigInt(0),
       averageEthereumBlockTime: isSet(object.averageEthereumBlockTime)
-        ? Long.fromValue(object.averageEthereumBlockTime)
-        : Long.UZERO,
+        ? BigInt(object.averageEthereumBlockTime)
+        : BigInt(0),
       slashFractionValset: isSet(object.slashFractionValset)
         ? bytesFromBase64(object.slashFractionValset)
         : new Uint8Array(),
@@ -374,8 +375,8 @@ export const Params = {
         ? bytesFromBase64(object.slashFractionLogicCall)
         : new Uint8Array(),
       unbondSlashingValsetsWindow: isSet(object.unbondSlashingValsetsWindow)
-        ? Long.fromValue(object.unbondSlashingValsetsWindow)
-        : Long.UZERO,
+        ? BigInt(object.unbondSlashingValsetsWindow)
+        : BigInt(0),
       slashFractionBadEthSignature: isSet(object.slashFractionBadEthSignature)
         ? bytesFromBase64(object.slashFractionBadEthSignature)
         : new Uint8Array(),
@@ -389,8 +390,8 @@ export const Params = {
         ? object.ethereumBlacklist.map((e: any) => String(e))
         : [],
       minChainFeeBasisPoints: isSet(object.minChainFeeBasisPoints)
-        ? Long.fromValue(object.minChainFeeBasisPoints)
-        : Long.UZERO,
+        ? BigInt(object.minChainFeeBasisPoints)
+        : BigInt(0),
     };
   },
 
@@ -402,30 +403,30 @@ export const Params = {
     message.bridgeEthereumAddress !== undefined &&
       (obj.bridgeEthereumAddress = message.bridgeEthereumAddress);
     message.bridgeChainId !== undefined &&
-      (obj.bridgeChainId = (message.bridgeChainId || Long.UZERO).toString());
+      (obj.bridgeChainId = (message.bridgeChainId || BigInt(0)).toString());
     message.signedValsetsWindow !== undefined &&
       (obj.signedValsetsWindow = (
-        message.signedValsetsWindow || Long.UZERO
+        message.signedValsetsWindow || BigInt(0)
       ).toString());
     message.signedBatchesWindow !== undefined &&
       (obj.signedBatchesWindow = (
-        message.signedBatchesWindow || Long.UZERO
+        message.signedBatchesWindow || BigInt(0)
       ).toString());
     message.signedLogicCallsWindow !== undefined &&
       (obj.signedLogicCallsWindow = (
-        message.signedLogicCallsWindow || Long.UZERO
+        message.signedLogicCallsWindow || BigInt(0)
       ).toString());
     message.targetBatchTimeout !== undefined &&
       (obj.targetBatchTimeout = (
-        message.targetBatchTimeout || Long.UZERO
+        message.targetBatchTimeout || BigInt(0)
       ).toString());
     message.averageBlockTime !== undefined &&
       (obj.averageBlockTime = (
-        message.averageBlockTime || Long.UZERO
+        message.averageBlockTime || BigInt(0)
       ).toString());
     message.averageEthereumBlockTime !== undefined &&
       (obj.averageEthereumBlockTime = (
-        message.averageEthereumBlockTime || Long.UZERO
+        message.averageEthereumBlockTime || BigInt(0)
       ).toString());
     message.slashFractionValset !== undefined &&
       (obj.slashFractionValset = base64FromBytes(
@@ -447,7 +448,7 @@ export const Params = {
       ));
     message.unbondSlashingValsetsWindow !== undefined &&
       (obj.unbondSlashingValsetsWindow = (
-        message.unbondSlashingValsetsWindow || Long.UZERO
+        message.unbondSlashingValsetsWindow || BigInt(0)
       ).toString());
     message.slashFractionBadEthSignature !== undefined &&
       (obj.slashFractionBadEthSignature = base64FromBytes(
@@ -470,7 +471,7 @@ export const Params = {
 
     message.minChainFeeBasisPoints !== undefined &&
       (obj.minChainFeeBasisPoints = (
-        message.minChainFeeBasisPoints || Long.UZERO
+        message.minChainFeeBasisPoints || BigInt(0)
       ).toString());
     return obj;
   },
@@ -482,37 +483,37 @@ export const Params = {
     message.bridgeEthereumAddress = object.bridgeEthereumAddress ?? "";
     message.bridgeChainId =
       object.bridgeChainId !== undefined && object.bridgeChainId !== null
-        ? Long.fromValue(object.bridgeChainId)
-        : Long.UZERO;
+        ? BigInt(object.bridgeChainId)
+        : BigInt(0);
     message.signedValsetsWindow =
       object.signedValsetsWindow !== undefined &&
       object.signedValsetsWindow !== null
-        ? Long.fromValue(object.signedValsetsWindow)
-        : Long.UZERO;
+        ? BigInt(object.signedValsetsWindow)
+        : BigInt(0);
     message.signedBatchesWindow =
       object.signedBatchesWindow !== undefined &&
       object.signedBatchesWindow !== null
-        ? Long.fromValue(object.signedBatchesWindow)
-        : Long.UZERO;
+        ? BigInt(object.signedBatchesWindow)
+        : BigInt(0);
     message.signedLogicCallsWindow =
       object.signedLogicCallsWindow !== undefined &&
       object.signedLogicCallsWindow !== null
-        ? Long.fromValue(object.signedLogicCallsWindow)
-        : Long.UZERO;
+        ? BigInt(object.signedLogicCallsWindow)
+        : BigInt(0);
     message.targetBatchTimeout =
       object.targetBatchTimeout !== undefined &&
       object.targetBatchTimeout !== null
-        ? Long.fromValue(object.targetBatchTimeout)
-        : Long.UZERO;
+        ? BigInt(object.targetBatchTimeout)
+        : BigInt(0);
     message.averageBlockTime =
       object.averageBlockTime !== undefined && object.averageBlockTime !== null
-        ? Long.fromValue(object.averageBlockTime)
-        : Long.UZERO;
+        ? BigInt(object.averageBlockTime)
+        : BigInt(0);
     message.averageEthereumBlockTime =
       object.averageEthereumBlockTime !== undefined &&
       object.averageEthereumBlockTime !== null
-        ? Long.fromValue(object.averageEthereumBlockTime)
-        : Long.UZERO;
+        ? BigInt(object.averageEthereumBlockTime)
+        : BigInt(0);
     message.slashFractionValset =
       object.slashFractionValset ?? new Uint8Array();
     message.slashFractionBatch = object.slashFractionBatch ?? new Uint8Array();
@@ -521,8 +522,8 @@ export const Params = {
     message.unbondSlashingValsetsWindow =
       object.unbondSlashingValsetsWindow !== undefined &&
       object.unbondSlashingValsetsWindow !== null
-        ? Long.fromValue(object.unbondSlashingValsetsWindow)
-        : Long.UZERO;
+        ? BigInt(object.unbondSlashingValsetsWindow)
+        : BigInt(0);
     message.slashFractionBadEthSignature =
       object.slashFractionBadEthSignature ?? new Uint8Array();
     message.valsetReward =
@@ -534,8 +535,8 @@ export const Params = {
     message.minChainFeeBasisPoints =
       object.minChainFeeBasisPoints !== undefined &&
       object.minChainFeeBasisPoints !== null
-        ? Long.fromValue(object.minChainFeeBasisPoints)
-        : Long.UZERO;
+        ? BigInt(object.minChainFeeBasisPoints)
+        : BigInt(0);
     return message;
   },
 };
@@ -561,8 +562,8 @@ function createBaseGenesisState(): GenesisState {
 export const GenesisState = {
   encode(
     message: GenesisState,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -621,8 +622,9 @@ export const GenesisState = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGenesisState();
 
@@ -904,54 +906,55 @@ export const GenesisState = {
 
 function createBaseGravityNonces(): GravityNonces {
   return {
-    latestValsetNonce: Long.UZERO,
-    lastObservedNonce: Long.UZERO,
-    lastSlashedValsetNonce: Long.UZERO,
-    lastSlashedBatchBlock: Long.UZERO,
-    lastSlashedLogicCallBlock: Long.UZERO,
-    lastTxPoolId: Long.UZERO,
-    lastBatchId: Long.UZERO,
+    latestValsetNonce: BigInt(0),
+    lastObservedNonce: BigInt(0),
+    lastSlashedValsetNonce: BigInt(0),
+    lastSlashedBatchBlock: BigInt(0),
+    lastSlashedLogicCallBlock: BigInt(0),
+    lastTxPoolId: BigInt(0),
+    lastBatchId: BigInt(0),
   };
 }
 
 export const GravityNonces = {
   encode(
     message: GravityNonces,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.latestValsetNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.latestValsetNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.latestValsetNonce);
     }
 
-    if (!message.lastObservedNonce.isZero()) {
+    if (message.lastObservedNonce !== BigInt(0)) {
       writer.uint32(16).uint64(message.lastObservedNonce);
     }
 
-    if (!message.lastSlashedValsetNonce.isZero()) {
+    if (message.lastSlashedValsetNonce !== BigInt(0)) {
       writer.uint32(24).uint64(message.lastSlashedValsetNonce);
     }
 
-    if (!message.lastSlashedBatchBlock.isZero()) {
+    if (message.lastSlashedBatchBlock !== BigInt(0)) {
       writer.uint32(32).uint64(message.lastSlashedBatchBlock);
     }
 
-    if (!message.lastSlashedLogicCallBlock.isZero()) {
+    if (message.lastSlashedLogicCallBlock !== BigInt(0)) {
       writer.uint32(40).uint64(message.lastSlashedLogicCallBlock);
     }
 
-    if (!message.lastTxPoolId.isZero()) {
+    if (message.lastTxPoolId !== BigInt(0)) {
       writer.uint32(48).uint64(message.lastTxPoolId);
     }
 
-    if (!message.lastBatchId.isZero()) {
+    if (message.lastBatchId !== BigInt(0)) {
       writer.uint32(56).uint64(message.lastBatchId);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): GravityNonces {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): GravityNonces {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseGravityNonces();
 
@@ -960,31 +963,31 @@ export const GravityNonces = {
 
       switch (tag >>> 3) {
         case 1:
-          message.latestValsetNonce = reader.uint64() as Long;
+          message.latestValsetNonce = reader.uint64();
           break;
 
         case 2:
-          message.lastObservedNonce = reader.uint64() as Long;
+          message.lastObservedNonce = reader.uint64();
           break;
 
         case 3:
-          message.lastSlashedValsetNonce = reader.uint64() as Long;
+          message.lastSlashedValsetNonce = reader.uint64();
           break;
 
         case 4:
-          message.lastSlashedBatchBlock = reader.uint64() as Long;
+          message.lastSlashedBatchBlock = reader.uint64();
           break;
 
         case 5:
-          message.lastSlashedLogicCallBlock = reader.uint64() as Long;
+          message.lastSlashedLogicCallBlock = reader.uint64();
           break;
 
         case 6:
-          message.lastTxPoolId = reader.uint64() as Long;
+          message.lastTxPoolId = reader.uint64();
           break;
 
         case 7:
-          message.lastBatchId = reader.uint64() as Long;
+          message.lastBatchId = reader.uint64();
           break;
 
         default:
@@ -999,26 +1002,26 @@ export const GravityNonces = {
   fromJSON(object: any): GravityNonces {
     return {
       latestValsetNonce: isSet(object.latestValsetNonce)
-        ? Long.fromValue(object.latestValsetNonce)
-        : Long.UZERO,
+        ? BigInt(object.latestValsetNonce)
+        : BigInt(0),
       lastObservedNonce: isSet(object.lastObservedNonce)
-        ? Long.fromValue(object.lastObservedNonce)
-        : Long.UZERO,
+        ? BigInt(object.lastObservedNonce)
+        : BigInt(0),
       lastSlashedValsetNonce: isSet(object.lastSlashedValsetNonce)
-        ? Long.fromValue(object.lastSlashedValsetNonce)
-        : Long.UZERO,
+        ? BigInt(object.lastSlashedValsetNonce)
+        : BigInt(0),
       lastSlashedBatchBlock: isSet(object.lastSlashedBatchBlock)
-        ? Long.fromValue(object.lastSlashedBatchBlock)
-        : Long.UZERO,
+        ? BigInt(object.lastSlashedBatchBlock)
+        : BigInt(0),
       lastSlashedLogicCallBlock: isSet(object.lastSlashedLogicCallBlock)
-        ? Long.fromValue(object.lastSlashedLogicCallBlock)
-        : Long.UZERO,
+        ? BigInt(object.lastSlashedLogicCallBlock)
+        : BigInt(0),
       lastTxPoolId: isSet(object.lastTxPoolId)
-        ? Long.fromValue(object.lastTxPoolId)
-        : Long.UZERO,
+        ? BigInt(object.lastTxPoolId)
+        : BigInt(0),
       lastBatchId: isSet(object.lastBatchId)
-        ? Long.fromValue(object.lastBatchId)
-        : Long.UZERO,
+        ? BigInt(object.lastBatchId)
+        : BigInt(0),
     };
   },
 
@@ -1026,28 +1029,28 @@ export const GravityNonces = {
     const obj: any = {};
     message.latestValsetNonce !== undefined &&
       (obj.latestValsetNonce = (
-        message.latestValsetNonce || Long.UZERO
+        message.latestValsetNonce || BigInt(0)
       ).toString());
     message.lastObservedNonce !== undefined &&
       (obj.lastObservedNonce = (
-        message.lastObservedNonce || Long.UZERO
+        message.lastObservedNonce || BigInt(0)
       ).toString());
     message.lastSlashedValsetNonce !== undefined &&
       (obj.lastSlashedValsetNonce = (
-        message.lastSlashedValsetNonce || Long.UZERO
+        message.lastSlashedValsetNonce || BigInt(0)
       ).toString());
     message.lastSlashedBatchBlock !== undefined &&
       (obj.lastSlashedBatchBlock = (
-        message.lastSlashedBatchBlock || Long.UZERO
+        message.lastSlashedBatchBlock || BigInt(0)
       ).toString());
     message.lastSlashedLogicCallBlock !== undefined &&
       (obj.lastSlashedLogicCallBlock = (
-        message.lastSlashedLogicCallBlock || Long.UZERO
+        message.lastSlashedLogicCallBlock || BigInt(0)
       ).toString());
     message.lastTxPoolId !== undefined &&
-      (obj.lastTxPoolId = (message.lastTxPoolId || Long.UZERO).toString());
+      (obj.lastTxPoolId = (message.lastTxPoolId || BigInt(0)).toString());
     message.lastBatchId !== undefined &&
-      (obj.lastBatchId = (message.lastBatchId || Long.UZERO).toString());
+      (obj.lastBatchId = (message.lastBatchId || BigInt(0)).toString());
     return obj;
   },
 
@@ -1056,36 +1059,36 @@ export const GravityNonces = {
     message.latestValsetNonce =
       object.latestValsetNonce !== undefined &&
       object.latestValsetNonce !== null
-        ? Long.fromValue(object.latestValsetNonce)
-        : Long.UZERO;
+        ? BigInt(object.latestValsetNonce)
+        : BigInt(0);
     message.lastObservedNonce =
       object.lastObservedNonce !== undefined &&
       object.lastObservedNonce !== null
-        ? Long.fromValue(object.lastObservedNonce)
-        : Long.UZERO;
+        ? BigInt(object.lastObservedNonce)
+        : BigInt(0);
     message.lastSlashedValsetNonce =
       object.lastSlashedValsetNonce !== undefined &&
       object.lastSlashedValsetNonce !== null
-        ? Long.fromValue(object.lastSlashedValsetNonce)
-        : Long.UZERO;
+        ? BigInt(object.lastSlashedValsetNonce)
+        : BigInt(0);
     message.lastSlashedBatchBlock =
       object.lastSlashedBatchBlock !== undefined &&
       object.lastSlashedBatchBlock !== null
-        ? Long.fromValue(object.lastSlashedBatchBlock)
-        : Long.UZERO;
+        ? BigInt(object.lastSlashedBatchBlock)
+        : BigInt(0);
     message.lastSlashedLogicCallBlock =
       object.lastSlashedLogicCallBlock !== undefined &&
       object.lastSlashedLogicCallBlock !== null
-        ? Long.fromValue(object.lastSlashedLogicCallBlock)
-        : Long.UZERO;
+        ? BigInt(object.lastSlashedLogicCallBlock)
+        : BigInt(0);
     message.lastTxPoolId =
       object.lastTxPoolId !== undefined && object.lastTxPoolId !== null
-        ? Long.fromValue(object.lastTxPoolId)
-        : Long.UZERO;
+        ? BigInt(object.lastTxPoolId)
+        : BigInt(0);
     message.lastBatchId =
       object.lastBatchId !== undefined && object.lastBatchId !== null
-        ? Long.fromValue(object.lastBatchId)
-        : Long.UZERO;
+        ? BigInt(object.lastBatchId)
+        : BigInt(0);
     return message;
   },
 };

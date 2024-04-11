@@ -1,5 +1,5 @@
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 export declare const protobufPackage = "kujira.oracle";
 /**
  * MsgAggregateExchangeRatePrevote represents a message to submit
@@ -38,43 +38,43 @@ export interface MsgDelegateFeedConsent {
 export interface MsgDelegateFeedConsentResponse {
 }
 export declare const MsgAggregateExchangeRatePrevote: {
-    encode(message: MsgAggregateExchangeRatePrevote, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgAggregateExchangeRatePrevote;
+    encode(message: MsgAggregateExchangeRatePrevote, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgAggregateExchangeRatePrevote;
     fromJSON(object: any): MsgAggregateExchangeRatePrevote;
     toJSON(message: MsgAggregateExchangeRatePrevote): unknown;
     fromPartial(object: DeepPartial<MsgAggregateExchangeRatePrevote>): MsgAggregateExchangeRatePrevote;
 };
 export declare const MsgAggregateExchangeRatePrevoteResponse: {
-    encode(_: MsgAggregateExchangeRatePrevoteResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgAggregateExchangeRatePrevoteResponse;
+    encode(_: MsgAggregateExchangeRatePrevoteResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgAggregateExchangeRatePrevoteResponse;
     fromJSON(_: any): MsgAggregateExchangeRatePrevoteResponse;
     toJSON(_: MsgAggregateExchangeRatePrevoteResponse): unknown;
     fromPartial(_: DeepPartial<MsgAggregateExchangeRatePrevoteResponse>): MsgAggregateExchangeRatePrevoteResponse;
 };
 export declare const MsgAggregateExchangeRateVote: {
-    encode(message: MsgAggregateExchangeRateVote, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgAggregateExchangeRateVote;
+    encode(message: MsgAggregateExchangeRateVote, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgAggregateExchangeRateVote;
     fromJSON(object: any): MsgAggregateExchangeRateVote;
     toJSON(message: MsgAggregateExchangeRateVote): unknown;
     fromPartial(object: DeepPartial<MsgAggregateExchangeRateVote>): MsgAggregateExchangeRateVote;
 };
 export declare const MsgAggregateExchangeRateVoteResponse: {
-    encode(_: MsgAggregateExchangeRateVoteResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgAggregateExchangeRateVoteResponse;
+    encode(_: MsgAggregateExchangeRateVoteResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgAggregateExchangeRateVoteResponse;
     fromJSON(_: any): MsgAggregateExchangeRateVoteResponse;
     toJSON(_: MsgAggregateExchangeRateVoteResponse): unknown;
     fromPartial(_: DeepPartial<MsgAggregateExchangeRateVoteResponse>): MsgAggregateExchangeRateVoteResponse;
 };
 export declare const MsgDelegateFeedConsent: {
-    encode(message: MsgDelegateFeedConsent, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgDelegateFeedConsent;
+    encode(message: MsgDelegateFeedConsent, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateFeedConsent;
     fromJSON(object: any): MsgDelegateFeedConsent;
     toJSON(message: MsgDelegateFeedConsent): unknown;
     fromPartial(object: DeepPartial<MsgDelegateFeedConsent>): MsgDelegateFeedConsent;
 };
 export declare const MsgDelegateFeedConsentResponse: {
-    encode(_: MsgDelegateFeedConsentResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgDelegateFeedConsentResponse;
+    encode(_: MsgDelegateFeedConsentResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgDelegateFeedConsentResponse;
     fromJSON(_: any): MsgDelegateFeedConsentResponse;
     toJSON(_: MsgDelegateFeedConsentResponse): unknown;
     fromPartial(_: DeepPartial<MsgDelegateFeedConsentResponse>): MsgDelegateFeedConsentResponse;

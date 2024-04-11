@@ -1,5 +1,5 @@
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 export declare const protobufPackage = "kujira.denom";
 /**
  * DenomAuthorityMetadata specifies metadata for addresses that have specific
@@ -11,8 +11,8 @@ export interface DenomAuthorityMetadata {
     Admin: string;
 }
 export declare const DenomAuthorityMetadata: {
-    encode(message: DenomAuthorityMetadata, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): DenomAuthorityMetadata;
+    encode(message: DenomAuthorityMetadata, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DenomAuthorityMetadata;
     fromJSON(object: any): DenomAuthorityMetadata;
     toJSON(message: DenomAuthorityMetadata): unknown;
     fromPartial(object: DeepPartial<DenomAuthorityMetadata>): DenomAuthorityMetadata;

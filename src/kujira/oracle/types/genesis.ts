@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import {
   AggregateExchangeRatePrevote,
   AggregateExchangeRateVote,
@@ -36,13 +36,16 @@ export interface FeederDelegation {
  */
 export interface MissCounter {
   validator_address: string;
-  miss_counter: number;
+  miss_counter: bigint;
 }
 
 const baseGenesisState: object = {};
 
 export const GenesisState = {
-  encode(message: GenesisState, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -67,8 +70,9 @@ export const GenesisState = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseGenesisState } as GenesisState;
     message.feeder_delegations = [];
@@ -272,7 +276,10 @@ const baseFeederDelegation: object = {
 };
 
 export const FeederDelegation = {
-  encode(message: FeederDelegation, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: FeederDelegation,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.feeder_address !== "") {
       writer.uint32(10).string(message.feeder_address);
     }
@@ -282,8 +289,9 @@ export const FeederDelegation = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): FeederDelegation {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): FeederDelegation {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseFeederDelegation } as FeederDelegation;
     while (reader.pos < end) {
@@ -352,18 +360,22 @@ export const FeederDelegation = {
 const baseMissCounter: object = { validator_address: "", miss_counter: 0 };
 
 export const MissCounter = {
-  encode(message: MissCounter, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: MissCounter,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator_address !== "") {
       writer.uint32(10).string(message.validator_address);
     }
-    if (message.miss_counter !== 0) {
+    if (message.miss_counter !== BigInt(0)) {
       writer.uint32(16).uint64(message.miss_counter);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MissCounter {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MissCounter {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMissCounter } as MissCounter;
     while (reader.pos < end) {
@@ -373,7 +385,7 @@ export const MissCounter = {
           message.validator_address = reader.string();
           break;
         case 2:
-          message.miss_counter = (reader.uint64() as Long).toNumber();
+          message.miss_counter = reader.uint64();
           break;
         default:
           reader.skipType(tag & 7);
@@ -394,9 +406,9 @@ export const MissCounter = {
       message.validator_address = "";
     }
     if (object.miss_counter !== undefined && object.miss_counter !== null) {
-      message.miss_counter = Number(object.miss_counter);
+      message.miss_counter = BigInt(object.miss_counter);
     } else {
-      message.miss_counter = 0;
+      message.miss_counter = BigInt(0);
     }
     return message;
   },
@@ -423,7 +435,7 @@ export const MissCounter = {
     if (object.miss_counter !== undefined && object.miss_counter !== null) {
       message.miss_counter = object.miss_counter;
     } else {
-      message.miss_counter = 0;
+      message.miss_counter = BigInt(0);
     }
     return message;
   },

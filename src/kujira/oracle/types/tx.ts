@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 
 export const protobufPackage = "kujira.oracle";
 
@@ -52,8 +52,8 @@ const baseMsgAggregateExchangeRatePrevote: object = {
 export const MsgAggregateExchangeRatePrevote = {
   encode(
     message: MsgAggregateExchangeRatePrevote,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.hash !== "") {
       writer.uint32(10).string(message.hash);
     }
@@ -67,10 +67,11 @@ export const MsgAggregateExchangeRatePrevote = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgAggregateExchangeRatePrevote {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseMsgAggregateExchangeRatePrevote,
@@ -155,16 +156,17 @@ const baseMsgAggregateExchangeRatePrevoteResponse: object = {};
 export const MsgAggregateExchangeRatePrevoteResponse = {
   encode(
     _: MsgAggregateExchangeRatePrevoteResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgAggregateExchangeRatePrevoteResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseMsgAggregateExchangeRatePrevoteResponse,
@@ -212,8 +214,8 @@ const baseMsgAggregateExchangeRateVote: object = {
 export const MsgAggregateExchangeRateVote = {
   encode(
     message: MsgAggregateExchangeRateVote,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.salt !== "") {
       writer.uint32(10).string(message.salt);
     }
@@ -230,10 +232,11 @@ export const MsgAggregateExchangeRateVote = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgAggregateExchangeRateVote {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseMsgAggregateExchangeRateVote,
@@ -333,16 +336,17 @@ const baseMsgAggregateExchangeRateVoteResponse: object = {};
 export const MsgAggregateExchangeRateVoteResponse = {
   encode(
     _: MsgAggregateExchangeRateVoteResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgAggregateExchangeRateVoteResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseMsgAggregateExchangeRateVoteResponse,
@@ -385,8 +389,8 @@ const baseMsgDelegateFeedConsent: object = { operator: "", delegate: "" };
 export const MsgDelegateFeedConsent = {
   encode(
     message: MsgDelegateFeedConsent,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.operator !== "") {
       writer.uint32(10).string(message.operator);
     }
@@ -396,8 +400,12 @@ export const MsgDelegateFeedConsent = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgDelegateFeedConsent {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgDelegateFeedConsent {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgDelegateFeedConsent } as MsgDelegateFeedConsent;
     while (reader.pos < end) {
@@ -462,16 +470,17 @@ const baseMsgDelegateFeedConsentResponse: object = {};
 export const MsgDelegateFeedConsentResponse = {
   encode(
     _: MsgDelegateFeedConsentResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgDelegateFeedConsentResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseMsgDelegateFeedConsentResponse,

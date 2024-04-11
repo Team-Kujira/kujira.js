@@ -1,21 +1,21 @@
 /* eslint-disable */
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { ERC20Token } from "./attestation";
-import { base64FromBytes, bytesFromBase64, isSet, Long } from "./helpers";
+import { base64FromBytes, bytesFromBase64, isSet } from "./helpers";
 export const protobufPackage = "gravity.v1";
 /** OutgoingTxBatch represents a batch of transactions going from gravity to ETH */
 
 export interface OutgoingTxBatch {
-  batchNonce: Long;
-  batchTimeout: Long;
+  batchNonce: bigint;
+  batchTimeout: bigint;
   transactions: OutgoingTransferTx[];
   tokenContract: string;
-  cosmosBlockCreated: Long;
+  cosmosBlockCreated: bigint;
 }
 /** OutgoingTransferTx represents an individual send from gravity to ETH */
 
 export interface OutgoingTransferTx {
-  id: Long;
+  id: bigint;
   sender: string;
   destAddress: string;
   erc20Token?: ERC20Token;
@@ -28,10 +28,10 @@ export interface OutgoingLogicCall {
   fees: ERC20Token[];
   logicContractAddress: string;
   payload: Uint8Array;
-  timeout: Long;
+  timeout: bigint;
   invalidationId: Uint8Array;
-  invalidationNonce: Long;
-  cosmosBlockCreated: Long;
+  invalidationNonce: bigint;
+  cosmosBlockCreated: bigint;
 }
 export interface EventOutgoingBatchCanceled {
   bridgeContract: string;
@@ -48,24 +48,24 @@ export interface EventOutgoingBatch {
 
 function createBaseOutgoingTxBatch(): OutgoingTxBatch {
   return {
-    batchNonce: Long.UZERO,
-    batchTimeout: Long.UZERO,
+    batchNonce: BigInt(0),
+    batchTimeout: BigInt(0),
     transactions: [],
     tokenContract: "",
-    cosmosBlockCreated: Long.UZERO,
+    cosmosBlockCreated: BigInt(0),
   };
 }
 
 export const OutgoingTxBatch = {
   encode(
     message: OutgoingTxBatch,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.batchNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.batchNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.batchNonce);
     }
 
-    if (!message.batchTimeout.isZero()) {
+    if (message.batchTimeout !== BigInt(0)) {
       writer.uint32(16).uint64(message.batchTimeout);
     }
 
@@ -77,15 +77,16 @@ export const OutgoingTxBatch = {
       writer.uint32(34).string(message.tokenContract);
     }
 
-    if (!message.cosmosBlockCreated.isZero()) {
+    if (message.cosmosBlockCreated !== BigInt(0)) {
       writer.uint32(40).uint64(message.cosmosBlockCreated);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): OutgoingTxBatch {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): OutgoingTxBatch {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseOutgoingTxBatch();
 
@@ -94,11 +95,11 @@ export const OutgoingTxBatch = {
 
       switch (tag >>> 3) {
         case 1:
-          message.batchNonce = reader.uint64() as Long;
+          message.batchNonce = reader.uint64();
           break;
 
         case 2:
-          message.batchTimeout = reader.uint64() as Long;
+          message.batchTimeout = reader.uint64();
           break;
 
         case 3:
@@ -112,7 +113,7 @@ export const OutgoingTxBatch = {
           break;
 
         case 5:
-          message.cosmosBlockCreated = reader.uint64() as Long;
+          message.cosmosBlockCreated = reader.uint64();
           break;
 
         default:
@@ -127,11 +128,11 @@ export const OutgoingTxBatch = {
   fromJSON(object: any): OutgoingTxBatch {
     return {
       batchNonce: isSet(object.batchNonce)
-        ? Long.fromValue(object.batchNonce)
-        : Long.UZERO,
+        ? BigInt(object.batchNonce)
+        : BigInt(0),
       batchTimeout: isSet(object.batchTimeout)
-        ? Long.fromValue(object.batchTimeout)
-        : Long.UZERO,
+        ? BigInt(object.batchTimeout)
+        : BigInt(0),
       transactions: Array.isArray(object?.transactions)
         ? object.transactions.map((e: any) => OutgoingTransferTx.fromJSON(e))
         : [],
@@ -139,17 +140,17 @@ export const OutgoingTxBatch = {
         ? String(object.tokenContract)
         : "",
       cosmosBlockCreated: isSet(object.cosmosBlockCreated)
-        ? Long.fromValue(object.cosmosBlockCreated)
-        : Long.UZERO,
+        ? BigInt(object.cosmosBlockCreated)
+        : BigInt(0),
     };
   },
 
   toJSON(message: OutgoingTxBatch): unknown {
     const obj: any = {};
     message.batchNonce !== undefined &&
-      (obj.batchNonce = (message.batchNonce || Long.UZERO).toString());
+      (obj.batchNonce = (message.batchNonce || BigInt(0)).toString());
     message.batchTimeout !== undefined &&
-      (obj.batchTimeout = (message.batchTimeout || Long.UZERO).toString());
+      (obj.batchTimeout = (message.batchTimeout || BigInt(0)).toString());
 
     if (message.transactions) {
       obj.transactions = message.transactions.map((e) =>
@@ -163,7 +164,7 @@ export const OutgoingTxBatch = {
       (obj.tokenContract = message.tokenContract);
     message.cosmosBlockCreated !== undefined &&
       (obj.cosmosBlockCreated = (
-        message.cosmosBlockCreated || Long.UZERO
+        message.cosmosBlockCreated || BigInt(0)
       ).toString());
     return obj;
   },
@@ -172,27 +173,27 @@ export const OutgoingTxBatch = {
     const message = createBaseOutgoingTxBatch();
     message.batchNonce =
       object.batchNonce !== undefined && object.batchNonce !== null
-        ? Long.fromValue(object.batchNonce)
-        : Long.UZERO;
+        ? BigInt(object.batchNonce)
+        : BigInt(0);
     message.batchTimeout =
       object.batchTimeout !== undefined && object.batchTimeout !== null
-        ? Long.fromValue(object.batchTimeout)
-        : Long.UZERO;
+        ? BigInt(object.batchTimeout)
+        : BigInt(0);
     message.transactions =
       object.transactions?.map((e) => OutgoingTransferTx.fromPartial(e)) || [];
     message.tokenContract = object.tokenContract ?? "";
     message.cosmosBlockCreated =
       object.cosmosBlockCreated !== undefined &&
       object.cosmosBlockCreated !== null
-        ? Long.fromValue(object.cosmosBlockCreated)
-        : Long.UZERO;
+        ? BigInt(object.cosmosBlockCreated)
+        : BigInt(0);
     return message;
   },
 };
 
 function createBaseOutgoingTransferTx(): OutgoingTransferTx {
   return {
-    id: Long.UZERO,
+    id: BigInt(0),
     sender: "",
     destAddress: "",
     erc20Token: undefined,
@@ -203,9 +204,9 @@ function createBaseOutgoingTransferTx(): OutgoingTransferTx {
 export const OutgoingTransferTx = {
   encode(
     message: OutgoingTransferTx,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.id.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.id !== BigInt(0)) {
       writer.uint32(8).uint64(message.id);
     }
 
@@ -228,8 +229,12 @@ export const OutgoingTransferTx = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): OutgoingTransferTx {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): OutgoingTransferTx {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseOutgoingTransferTx();
 
@@ -238,7 +243,7 @@ export const OutgoingTransferTx = {
 
       switch (tag >>> 3) {
         case 1:
-          message.id = reader.uint64() as Long;
+          message.id = reader.uint64();
           break;
 
         case 2:
@@ -268,7 +273,7 @@ export const OutgoingTransferTx = {
 
   fromJSON(object: any): OutgoingTransferTx {
     return {
-      id: isSet(object.id) ? Long.fromValue(object.id) : Long.UZERO,
+      id: isSet(object.id) ? BigInt(object.id) : BigInt(0),
       sender: isSet(object.sender) ? String(object.sender) : "",
       destAddress: isSet(object.destAddress) ? String(object.destAddress) : "",
       erc20Token: isSet(object.erc20Token)
@@ -282,8 +287,7 @@ export const OutgoingTransferTx = {
 
   toJSON(message: OutgoingTransferTx): unknown {
     const obj: any = {};
-    message.id !== undefined &&
-      (obj.id = (message.id || Long.UZERO).toString());
+    message.id !== undefined && (obj.id = (message.id || BigInt(0)).toString());
     message.sender !== undefined && (obj.sender = message.sender);
     message.destAddress !== undefined &&
       (obj.destAddress = message.destAddress);
@@ -302,8 +306,8 @@ export const OutgoingTransferTx = {
     const message = createBaseOutgoingTransferTx();
     message.id =
       object.id !== undefined && object.id !== null
-        ? Long.fromValue(object.id)
-        : Long.UZERO;
+        ? BigInt(object.id)
+        : BigInt(0);
     message.sender = object.sender ?? "";
     message.destAddress = object.destAddress ?? "";
     message.erc20Token =
@@ -324,18 +328,18 @@ function createBaseOutgoingLogicCall(): OutgoingLogicCall {
     fees: [],
     logicContractAddress: "",
     payload: new Uint8Array(),
-    timeout: Long.UZERO,
+    timeout: BigInt(0),
     invalidationId: new Uint8Array(),
-    invalidationNonce: Long.UZERO,
-    cosmosBlockCreated: Long.UZERO,
+    invalidationNonce: BigInt(0),
+    cosmosBlockCreated: BigInt(0),
   };
 }
 
 export const OutgoingLogicCall = {
   encode(
     message: OutgoingLogicCall,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.transfers) {
       ERC20Token.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -352,7 +356,7 @@ export const OutgoingLogicCall = {
       writer.uint32(34).bytes(message.payload);
     }
 
-    if (!message.timeout.isZero()) {
+    if (message.timeout !== BigInt(0)) {
       writer.uint32(40).uint64(message.timeout);
     }
 
@@ -360,19 +364,20 @@ export const OutgoingLogicCall = {
       writer.uint32(50).bytes(message.invalidationId);
     }
 
-    if (!message.invalidationNonce.isZero()) {
+    if (message.invalidationNonce !== BigInt(0)) {
       writer.uint32(56).uint64(message.invalidationNonce);
     }
 
-    if (!message.cosmosBlockCreated.isZero()) {
+    if (message.cosmosBlockCreated !== BigInt(0)) {
       writer.uint32(64).uint64(message.cosmosBlockCreated);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): OutgoingLogicCall {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): OutgoingLogicCall {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseOutgoingLogicCall();
 
@@ -397,7 +402,7 @@ export const OutgoingLogicCall = {
           break;
 
         case 5:
-          message.timeout = reader.uint64() as Long;
+          message.timeout = reader.uint64();
           break;
 
         case 6:
@@ -405,11 +410,11 @@ export const OutgoingLogicCall = {
           break;
 
         case 7:
-          message.invalidationNonce = reader.uint64() as Long;
+          message.invalidationNonce = reader.uint64();
           break;
 
         case 8:
-          message.cosmosBlockCreated = reader.uint64() as Long;
+          message.cosmosBlockCreated = reader.uint64();
           break;
 
         default:
@@ -435,18 +440,16 @@ export const OutgoingLogicCall = {
       payload: isSet(object.payload)
         ? bytesFromBase64(object.payload)
         : new Uint8Array(),
-      timeout: isSet(object.timeout)
-        ? Long.fromValue(object.timeout)
-        : Long.UZERO,
+      timeout: isSet(object.timeout) ? BigInt(object.timeout) : BigInt(0),
       invalidationId: isSet(object.invalidationId)
         ? bytesFromBase64(object.invalidationId)
         : new Uint8Array(),
       invalidationNonce: isSet(object.invalidationNonce)
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO,
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0),
       cosmosBlockCreated: isSet(object.cosmosBlockCreated)
-        ? Long.fromValue(object.cosmosBlockCreated)
-        : Long.UZERO,
+        ? BigInt(object.cosmosBlockCreated)
+        : BigInt(0),
     };
   },
 
@@ -476,7 +479,7 @@ export const OutgoingLogicCall = {
         message.payload !== undefined ? message.payload : new Uint8Array()
       ));
     message.timeout !== undefined &&
-      (obj.timeout = (message.timeout || Long.UZERO).toString());
+      (obj.timeout = (message.timeout || BigInt(0)).toString());
     message.invalidationId !== undefined &&
       (obj.invalidationId = base64FromBytes(
         message.invalidationId !== undefined
@@ -485,11 +488,11 @@ export const OutgoingLogicCall = {
       ));
     message.invalidationNonce !== undefined &&
       (obj.invalidationNonce = (
-        message.invalidationNonce || Long.UZERO
+        message.invalidationNonce || BigInt(0)
       ).toString());
     message.cosmosBlockCreated !== undefined &&
       (obj.cosmosBlockCreated = (
-        message.cosmosBlockCreated || Long.UZERO
+        message.cosmosBlockCreated || BigInt(0)
       ).toString());
     return obj;
   },
@@ -503,19 +506,19 @@ export const OutgoingLogicCall = {
     message.payload = object.payload ?? new Uint8Array();
     message.timeout =
       object.timeout !== undefined && object.timeout !== null
-        ? Long.fromValue(object.timeout)
-        : Long.UZERO;
+        ? BigInt(object.timeout)
+        : BigInt(0);
     message.invalidationId = object.invalidationId ?? new Uint8Array();
     message.invalidationNonce =
       object.invalidationNonce !== undefined &&
       object.invalidationNonce !== null
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO;
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0);
     message.cosmosBlockCreated =
       object.cosmosBlockCreated !== undefined &&
       object.cosmosBlockCreated !== null
-        ? Long.fromValue(object.cosmosBlockCreated)
-        : Long.UZERO;
+        ? BigInt(object.cosmosBlockCreated)
+        : BigInt(0);
     return message;
   },
 };
@@ -532,8 +535,8 @@ function createBaseEventOutgoingBatchCanceled(): EventOutgoingBatchCanceled {
 export const EventOutgoingBatchCanceled = {
   encode(
     message: EventOutgoingBatchCanceled,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.bridgeContract !== "") {
       writer.uint32(10).string(message.bridgeContract);
     }
@@ -554,10 +557,11 @@ export const EventOutgoingBatchCanceled = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventOutgoingBatchCanceled {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventOutgoingBatchCanceled();
 
@@ -638,8 +642,8 @@ function createBaseEventOutgoingBatch(): EventOutgoingBatch {
 export const EventOutgoingBatch = {
   encode(
     message: EventOutgoingBatch,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.bridgeContract !== "") {
       writer.uint32(10).string(message.bridgeContract);
     }
@@ -659,8 +663,12 @@ export const EventOutgoingBatch = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventOutgoingBatch {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): EventOutgoingBatch {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventOutgoingBatch();
 

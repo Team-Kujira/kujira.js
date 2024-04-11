@@ -1,4 +1,4 @@
-import { AccountData } from "@cosmjs/launchpad";
+import { AccountData } from "@cosmjs/proto-signing";
 import { BigNumber } from "@ethersproject/bignumber";
 import { Denom } from "../denom";
 import { KujiraQueryClient } from "../queryClient";
@@ -10,7 +10,7 @@ import {
 import { castOrder } from "./client";
 import { Order, OrderResponse } from "./types";
 
-export { PositionMarket, fetchPositionMarket, defaultPositionMarket };
+export { defaultPositionMarket, fetchPositionMarket, PositionMarket };
 
 type PositionLimitResponse = {
   idx: string;
@@ -69,4 +69,4 @@ export const fetchPositionsLimit = (
     .queryContractSmart(address, {
       positions: { owner: account.address },
     })
-    .then((xs) => xs.positions.map(castPositionLimit(denoms)));
+    .then((xs: any) => xs.positions.map(castPositionLimit(denoms)));

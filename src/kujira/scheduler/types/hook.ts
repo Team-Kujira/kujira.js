@@ -1,26 +1,28 @@
 /* eslint-disable */
-import Long from "long";
 
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import { Reader, Writer } from "protobufjs/minimal";
 
 export const protobufPackage = "kujira.scheduler";
 
 export interface Hook {
-  id: number;
+  id: bigint;
   executor: string;
   contract: string;
   msg: Uint8Array;
-  frequency: number;
+  frequency: bigint;
   funds: Coin[];
 }
 
 const baseHook: object = { id: 0, executor: "", contract: "", frequency: 0 };
 
 export const Hook = {
-  encode(message: Hook, writer: Writer = Writer.create()): Writer {
-    if (message.id !== 0) {
+  encode(
+    message: Hook,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.id !== BigInt(0)) {
       writer.uint32(8).uint64(message.id);
     }
     if (message.executor !== "") {
@@ -32,7 +34,7 @@ export const Hook = {
     if (message.msg.length !== 0) {
       writer.uint32(34).bytes(message.msg);
     }
-    if (message.frequency !== 0) {
+    if (message.frequency !== BigInt(0)) {
       writer.uint32(40).int64(message.frequency);
     }
     for (const v of message.funds) {
@@ -41,8 +43,9 @@ export const Hook = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): Hook {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): Hook {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseHook } as Hook;
     message.funds = [];
@@ -50,7 +53,7 @@ export const Hook = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long).toNumber();
+          message.id = reader.uint64();
           break;
         case 2:
           message.executor = reader.string();
@@ -62,7 +65,7 @@ export const Hook = {
           message.msg = reader.bytes();
           break;
         case 5:
-          message.frequency = (reader.int64() as Long).toNumber();
+          message.frequency = reader.int64();
           break;
         case 6:
           message.funds.push(Coin.decode(reader, reader.uint32()));
@@ -79,9 +82,9 @@ export const Hook = {
     const message = { ...baseHook } as Hook;
     message.funds = [];
     if (object.id !== undefined && object.id !== null) {
-      message.id = Number(object.id);
+      message.id = BigInt(object.id);
     } else {
-      message.id = 0;
+      message.id = BigInt(0);
     }
     if (object.executor !== undefined && object.executor !== null) {
       message.executor = String(object.executor);
@@ -97,9 +100,9 @@ export const Hook = {
       message.msg = bytesFromBase64(object.msg);
     }
     if (object.frequency !== undefined && object.frequency !== null) {
-      message.frequency = Number(object.frequency);
+      message.frequency = BigInt(object.frequency);
     } else {
-      message.frequency = 0;
+      message.frequency = BigInt(0);
     }
     if (object.funds !== undefined && object.funds !== null) {
       for (const e of object.funds) {
@@ -133,7 +136,7 @@ export const Hook = {
     if (object.id !== undefined && object.id !== null) {
       message.id = object.id;
     } else {
-      message.id = 0;
+      message.id = BigInt(0);
     }
     if (object.executor !== undefined && object.executor !== null) {
       message.executor = object.executor;
@@ -153,7 +156,7 @@ export const Hook = {
     if (object.frequency !== undefined && object.frequency !== null) {
       message.frequency = object.frequency;
     } else {
-      message.frequency = 0;
+      message.frequency = BigInt(0);
     }
     if (object.funds !== undefined && object.funds !== null) {
       for (const e of object.funds) {

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { DenomAuthorityMetadata } from "./authorityMetadata";
 import { Params } from "./params";
 export const protobufPackage = "kujira.denom";
@@ -20,7 +20,10 @@ export interface GenesisDenom {
 const baseGenesisState: object = {};
 
 export const GenesisState = {
-  encode(message: GenesisState, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: GenesisState,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -30,8 +33,9 @@ export const GenesisState = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): GenesisState {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): GenesisState {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseGenesisState } as GenesisState;
     message.factory_denoms = [];
@@ -104,7 +108,10 @@ export const GenesisState = {
 const baseGenesisDenom: object = { denom: "" };
 
 export const GenesisDenom = {
-  encode(message: GenesisDenom, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: GenesisDenom,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -117,8 +124,9 @@ export const GenesisDenom = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): GenesisDenom {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): GenesisDenom {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseGenesisDenom } as GenesisDenom;
     while (reader.pos < end) {

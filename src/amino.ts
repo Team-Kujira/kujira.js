@@ -3,7 +3,6 @@ import { createWasmAminoConverters } from "@cosmjs/cosmwasm-stargate";
 import * as s from "@cosmjs/stargate";
 import { assertDefinedAndNotNull } from "@cosmjs/utils";
 import { MsgCancelUnbondingDelegation } from "cosmjs-types/cosmos/staking/v1beta1/tx";
-import Long from "long";
 import { createAuthzAminoConverters } from "./amino/authz";
 import { MsgWithdrawAllDelegatorRewards } from "./batch/types/tx";
 
@@ -53,7 +52,7 @@ const extra = {
       delegatorAddress: delegator_address,
       validatorAddress: validator_address,
       amount: amount,
-      creationHeight: Long.fromString(creation_height),
+      creationHeight: BigInt(creation_height),
     }),
   },
 

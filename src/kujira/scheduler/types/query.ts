@@ -1,11 +1,10 @@
 /* eslint-disable */
-import Long from "long";
-import { Reader, Writer } from "protobufjs/minimal";
 
 import { Hook } from "./hook";
 import { Params } from "./params";
 
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import {
   PageRequest,
   PageResponse,
@@ -42,12 +41,19 @@ export interface QueryAllHookResponse {
 const baseQueryParamsRequest: object = {};
 
 export const QueryParamsRequest = {
-  encode(_: QueryParamsRequest, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: QueryParamsRequest,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsRequest } as QueryParamsRequest;
     while (reader.pos < end) {
@@ -82,16 +88,20 @@ const baseQueryParamsResponse: object = {};
 export const QueryParamsResponse = {
   encode(
     message: QueryParamsResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryParamsResponse } as QueryParamsResponse;
     while (reader.pos < end) {
@@ -141,23 +151,27 @@ const baseQueryGetHookRequest: object = { id: 0 };
 export const QueryGetHookRequest = {
   encode(
     message: QueryGetHookRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.id !== 0) {
       writer.uint32(8).uint64(message.id);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryGetHookRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryGetHookRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryGetHookRequest } as QueryGetHookRequest;
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.id = (reader.uint64() as Long).toNumber();
+          message.id = reader.uint32();
           break;
         default:
           reader.skipType(tag & 7);
@@ -199,16 +213,20 @@ const baseQueryGetHookResponse: object = {};
 export const QueryGetHookResponse = {
   encode(
     message: QueryGetHookResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.Hook !== undefined) {
       Hook.encode(message.Hook, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryGetHookResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryGetHookResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryGetHookResponse } as QueryGetHookResponse;
     while (reader.pos < end) {
@@ -258,16 +276,20 @@ const baseQueryAllHookRequest: object = {};
 export const QueryAllHookRequest = {
   encode(
     message: QueryAllHookRequest,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.pagination !== undefined) {
       PageRequest.encode(message.pagination, writer.uint32(10).fork()).ldelim();
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryAllHookRequest {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryAllHookRequest {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryAllHookRequest } as QueryAllHookRequest;
     while (reader.pos < end) {
@@ -319,8 +341,8 @@ const baseQueryAllHookResponse: object = {};
 export const QueryAllHookResponse = {
   encode(
     message: QueryAllHookResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.Hook) {
       Hook.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -333,8 +355,12 @@ export const QueryAllHookResponse = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): QueryAllHookResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryAllHookResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseQueryAllHookResponse } as QueryAllHookResponse;
     message.Hook = [];
@@ -420,14 +446,16 @@ export class QueryClientImpl implements Query {
   Params(request: QueryParamsRequest): Promise<QueryParamsResponse> {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.scheduler.Query", "Params", data);
-    return promise.then((data) => QueryParamsResponse.decode(new Reader(data)));
+    return promise.then((data) =>
+      QueryParamsResponse.decode(new BinaryReader(data))
+    );
   }
 
   Hook(request: QueryGetHookRequest): Promise<QueryGetHookResponse> {
     const data = QueryGetHookRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.scheduler.Query", "Hook", data);
     return promise.then((data) =>
-      QueryGetHookResponse.decode(new Reader(data))
+      QueryGetHookResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -435,7 +463,7 @@ export class QueryClientImpl implements Query {
     const data = QueryAllHookRequest.encode(request).finish();
     const promise = this.rpc.request("kujira.scheduler.Query", "HookAll", data);
     return promise.then((data) =>
-      QueryAllHookResponse.decode(new Reader(data))
+      QueryAllHookResponse.decode(new BinaryReader(data))
     );
   }
 }

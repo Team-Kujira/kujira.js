@@ -134,7 +134,7 @@ export const getMarkets = async (
   if (!contract) return {};
   return query.wasm
     .queryContractSmart(contract.address, { sales: {} })
-    .then((x) =>
+    .then((x: any) =>
       x.sales.reduce(
         (a: Record<string, Market>, v: SaleResponse) => ({
           ...a,

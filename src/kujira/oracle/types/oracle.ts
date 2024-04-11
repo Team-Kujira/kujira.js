@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 
 export const protobufPackage = "kujira.oracle";
 
 /** Params defines the parameters for the oracle module. */
 export interface Params {
-  vote_period: number;
+  vote_period: bigint;
   vote_threshold: string;
   reward_band: string;
-  reward_distribution_window: number;
+  reward_distribution_window: bigint;
   whitelist: Denom[];
   slash_fraction: string;
-  slash_window: number;
+  slash_window: bigint;
   min_valid_per_window: string;
 }
 
@@ -29,7 +29,7 @@ export interface Denom {
 export interface AggregateExchangeRatePrevote {
   hash: string;
   voter: string;
-  submit_block: number;
+  submit_block: bigint;
 }
 
 /** MsgAggregateExchangeRateVote - struct for voting on exchange rates. */
@@ -55,8 +55,11 @@ const baseParams: object = {
 };
 
 export const Params = {
-  encode(message: Params, writer: Writer = Writer.create()): Writer {
-    if (message.vote_period !== 0) {
+  encode(
+    message: Params,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.vote_period !== BigInt(0)) {
       writer.uint32(8).uint64(message.vote_period);
     }
     if (message.vote_threshold !== "") {
@@ -65,7 +68,7 @@ export const Params = {
     if (message.reward_band !== "") {
       writer.uint32(26).string(message.reward_band);
     }
-    if (message.reward_distribution_window !== 0) {
+    if (message.reward_distribution_window !== BigInt(0)) {
       writer.uint32(32).uint64(message.reward_distribution_window);
     }
     for (const v of message.whitelist) {
@@ -74,7 +77,7 @@ export const Params = {
     if (message.slash_fraction !== "") {
       writer.uint32(50).string(message.slash_fraction);
     }
-    if (message.slash_window !== 0) {
+    if (message.slash_window !== BigInt(0)) {
       writer.uint32(56).uint64(message.slash_window);
     }
     if (message.min_valid_per_window !== "") {
@@ -83,8 +86,9 @@ export const Params = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): Params {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseParams } as Params;
     message.whitelist = [];
@@ -92,7 +96,7 @@ export const Params = {
       const tag = reader.uint32();
       switch (tag >>> 3) {
         case 1:
-          message.vote_period = (reader.uint64() as Long).toNumber();
+          message.vote_period = reader.uint64();
           break;
         case 2:
           message.vote_threshold = reader.string();
@@ -101,9 +105,7 @@ export const Params = {
           message.reward_band = reader.string();
           break;
         case 4:
-          message.reward_distribution_window = (
-            reader.uint64() as Long
-          ).toNumber();
+          message.reward_distribution_window = reader.uint64();
           break;
         case 5:
           message.whitelist.push(Denom.decode(reader, reader.uint32()));
@@ -112,7 +114,7 @@ export const Params = {
           message.slash_fraction = reader.string();
           break;
         case 7:
-          message.slash_window = (reader.uint64() as Long).toNumber();
+          message.slash_window = reader.uint64();
           break;
         case 8:
           message.min_valid_per_window = reader.string();
@@ -129,9 +131,9 @@ export const Params = {
     const message = { ...baseParams } as Params;
     message.whitelist = [];
     if (object.vote_period !== undefined && object.vote_period !== null) {
-      message.vote_period = Number(object.vote_period);
+      message.vote_period = BigInt(object.vote_period);
     } else {
-      message.vote_period = 0;
+      message.vote_period = BigInt(0);
     }
     if (object.vote_threshold !== undefined && object.vote_threshold !== null) {
       message.vote_threshold = String(object.vote_threshold);
@@ -147,11 +149,11 @@ export const Params = {
       object.reward_distribution_window !== undefined &&
       object.reward_distribution_window !== null
     ) {
-      message.reward_distribution_window = Number(
+      message.reward_distribution_window = BigInt(
         object.reward_distribution_window
       );
     } else {
-      message.reward_distribution_window = 0;
+      message.reward_distribution_window = BigInt(0);
     }
     if (object.whitelist !== undefined && object.whitelist !== null) {
       for (const e of object.whitelist) {
@@ -164,9 +166,9 @@ export const Params = {
       message.slash_fraction = "";
     }
     if (object.slash_window !== undefined && object.slash_window !== null) {
-      message.slash_window = Number(object.slash_window);
+      message.slash_window = BigInt(object.slash_window);
     } else {
-      message.slash_window = 0;
+      message.slash_window = BigInt(0);
     }
     if (
       object.min_valid_per_window !== undefined &&
@@ -211,7 +213,7 @@ export const Params = {
     if (object.vote_period !== undefined && object.vote_period !== null) {
       message.vote_period = object.vote_period;
     } else {
-      message.vote_period = 0;
+      message.vote_period = BigInt(0);
     }
     if (object.vote_threshold !== undefined && object.vote_threshold !== null) {
       message.vote_threshold = object.vote_threshold;
@@ -229,7 +231,7 @@ export const Params = {
     ) {
       message.reward_distribution_window = object.reward_distribution_window;
     } else {
-      message.reward_distribution_window = 0;
+      message.reward_distribution_window = BigInt(0);
     }
     if (object.whitelist !== undefined && object.whitelist !== null) {
       for (const e of object.whitelist) {
@@ -244,7 +246,7 @@ export const Params = {
     if (object.slash_window !== undefined && object.slash_window !== null) {
       message.slash_window = object.slash_window;
     } else {
-      message.slash_window = 0;
+      message.slash_window = BigInt(0);
     }
     if (
       object.min_valid_per_window !== undefined &&
@@ -261,15 +263,19 @@ export const Params = {
 const baseDenom: object = { name: "" };
 
 export const Denom = {
-  encode(message: Denom, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: Denom,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.name !== "") {
       writer.uint32(10).string(message.name);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): Denom {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): Denom {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseDenom } as Denom;
     while (reader.pos < end) {
@@ -322,25 +328,26 @@ const baseAggregateExchangeRatePrevote: object = {
 export const AggregateExchangeRatePrevote = {
   encode(
     message: AggregateExchangeRatePrevote,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.hash !== "") {
       writer.uint32(10).string(message.hash);
     }
     if (message.voter !== "") {
       writer.uint32(18).string(message.voter);
     }
-    if (message.submit_block !== 0) {
+    if (message.submit_block !== BigInt(0)) {
       writer.uint32(24).uint64(message.submit_block);
     }
     return writer;
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): AggregateExchangeRatePrevote {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseAggregateExchangeRatePrevote,
@@ -355,7 +362,7 @@ export const AggregateExchangeRatePrevote = {
           message.voter = reader.string();
           break;
         case 3:
-          message.submit_block = (reader.uint64() as Long).toNumber();
+          message.submit_block = reader.uint64();
           break;
         default:
           reader.skipType(tag & 7);
@@ -380,9 +387,9 @@ export const AggregateExchangeRatePrevote = {
       message.voter = "";
     }
     if (object.submit_block !== undefined && object.submit_block !== null) {
-      message.submit_block = Number(object.submit_block);
+      message.submit_block = BigInt(object.submit_block);
     } else {
-      message.submit_block = 0;
+      message.submit_block = BigInt(0);
     }
     return message;
   },
@@ -415,7 +422,7 @@ export const AggregateExchangeRatePrevote = {
     if (object.submit_block !== undefined && object.submit_block !== null) {
       message.submit_block = object.submit_block;
     } else {
-      message.submit_block = 0;
+      message.submit_block = BigInt(0);
     }
     return message;
   },
@@ -426,8 +433,8 @@ const baseAggregateExchangeRateVote: object = { voter: "" };
 export const AggregateExchangeRateVote = {
   encode(
     message: AggregateExchangeRateVote,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.exchange_rate_tuples) {
       ExchangeRateTuple.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -438,10 +445,11 @@ export const AggregateExchangeRateVote = {
   },
 
   decode(
-    input: Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): AggregateExchangeRateVote {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = {
       ...baseAggregateExchangeRateVote,
@@ -527,7 +535,10 @@ export const AggregateExchangeRateVote = {
 const baseExchangeRateTuple: object = { denom: "", exchange_rate: "" };
 
 export const ExchangeRateTuple = {
-  encode(message: ExchangeRateTuple, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: ExchangeRateTuple,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -537,8 +548,9 @@ export const ExchangeRateTuple = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): ExchangeRateTuple {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): ExchangeRateTuple {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseExchangeRateTuple } as ExchangeRateTuple;
     while (reader.pos < end) {

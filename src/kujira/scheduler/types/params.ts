@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { DeepPartial } from "cosmjs-types";
-import { Reader, Writer } from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 export const protobufPackage = "kujira.scheduler";
 
 /** Params defines the parameters for the module. */
@@ -9,12 +9,16 @@ export interface Params {}
 const baseParams: object = {};
 
 export const Params = {
-  encode(_: Params, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: Params,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): Params {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): Params {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseParams } as Params;
     while (reader.pos < end) {

@@ -1,3 +1,4 @@
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { BaseAccount } from "cosmjs-types/cosmos/auth/v1beta1/auth";
 import {
   DeepPartial,
@@ -6,7 +7,6 @@ import {
   bytesFromBase64,
   isSet,
 } from "cosmjs-types/helpers";
-import * as _m0 from "protobufjs/minimal";
 
 /* eslint-disable */
 export const protobufPackage = "ethermint.types.v1";
@@ -28,8 +28,8 @@ export const EthAccount = {
   typeUrl: "/ethermint.types.v1.EthAccount",
   encode(
     message: EthAccount,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.baseAccount !== undefined) {
       BaseAccount.encode(
         message.baseAccount,
@@ -41,8 +41,9 @@ export const EthAccount = {
     }
     return writer;
   },
-  decode(input: _m0.Reader | Uint8Array, length?: number): EthAccount {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EthAccount {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEthAccount();
     while (reader.pos < end) {

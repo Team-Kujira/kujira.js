@@ -5,7 +5,6 @@ import {
   MsgGrantAllowance,
   MsgRevokeAllowance,
 } from "cosmjs-types/cosmos/feegrant/v1beta1/tx";
-import Long from "long";
 
 type AminoAllowance = {
   type: string;
@@ -15,7 +14,7 @@ type AminoAllowance = {
 type AminoBasicAllowance = {
   spend_limit?: Coin[];
   expiration?: {
-    seconds?: string | number | Long.Long;
+    seconds?: bigint;
     nanos?: number;
   };
 };

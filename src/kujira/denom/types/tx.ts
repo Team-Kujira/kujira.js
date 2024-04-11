@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import { DeepPartial } from "cosmjs-types";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
-import { Reader, Writer } from "protobufjs/minimal";
 
 export const protobufPackage = "kujira.denom";
 
@@ -62,7 +62,10 @@ export interface MsgChangeAdminResponse {}
 const baseMsgCreateDenom: object = { sender: "", nonce: "" };
 
 export const MsgCreateDenom = {
-  encode(message: MsgCreateDenom, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: MsgCreateDenom,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -72,8 +75,9 @@ export const MsgCreateDenom = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgCreateDenom {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgCreateDenom {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgCreateDenom } as MsgCreateDenom;
     while (reader.pos < end) {
@@ -136,16 +140,20 @@ const baseMsgCreateDenomResponse: object = { new_token_denom: "" };
 export const MsgCreateDenomResponse = {
   encode(
     message: MsgCreateDenomResponse,
-    writer: Writer = Writer.create()
-  ): Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.new_token_denom !== "") {
       writer.uint32(10).string(message.new_token_denom);
     }
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgCreateDenomResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgCreateDenomResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgCreateDenomResponse } as MsgCreateDenomResponse;
     while (reader.pos < end) {
@@ -201,7 +209,10 @@ export const MsgCreateDenomResponse = {
 const baseMsgMint: object = { sender: "", recipient: "" };
 
 export const MsgMint = {
-  encode(message: MsgMint, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: MsgMint,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -214,8 +225,9 @@ export const MsgMint = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgMint {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgMint {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgMint } as MsgMint;
     while (reader.pos < end) {
@@ -291,12 +303,16 @@ export const MsgMint = {
 const baseMsgMintResponse: object = {};
 
 export const MsgMintResponse = {
-  encode(_: MsgMintResponse, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: MsgMintResponse,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgMintResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgMintResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgMintResponse } as MsgMintResponse;
     while (reader.pos < end) {
@@ -329,7 +345,10 @@ export const MsgMintResponse = {
 const baseMsgBurn: object = { sender: "" };
 
 export const MsgBurn = {
-  encode(message: MsgBurn, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: MsgBurn,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -339,8 +358,9 @@ export const MsgBurn = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgBurn {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgBurn {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgBurn } as MsgBurn;
     while (reader.pos < end) {
@@ -402,12 +422,16 @@ export const MsgBurn = {
 const baseMsgBurnResponse: object = {};
 
 export const MsgBurnResponse = {
-  encode(_: MsgBurnResponse, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: MsgBurnResponse,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgBurnResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgBurnResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgBurnResponse } as MsgBurnResponse;
     while (reader.pos < end) {
@@ -440,7 +464,10 @@ export const MsgBurnResponse = {
 const baseMsgChangeAdmin: object = { sender: "", denom: "", newAdmin: "" };
 
 export const MsgChangeAdmin = {
-  encode(message: MsgChangeAdmin, writer: Writer = Writer.create()): Writer {
+  encode(
+    message: MsgChangeAdmin,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -453,8 +480,9 @@ export const MsgChangeAdmin = {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgChangeAdmin {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgChangeAdmin {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgChangeAdmin } as MsgChangeAdmin;
     while (reader.pos < end) {
@@ -529,12 +557,19 @@ export const MsgChangeAdmin = {
 const baseMsgChangeAdminResponse: object = {};
 
 export const MsgChangeAdminResponse = {
-  encode(_: MsgChangeAdminResponse, writer: Writer = Writer.create()): Writer {
+  encode(
+    _: MsgChangeAdminResponse,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: Reader | Uint8Array, length?: number): MsgChangeAdminResponse {
-    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgChangeAdminResponse {
+    const reader =
+      input instanceof Uint8Array ? new BinaryReader(input) : input;
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = { ...baseMsgChangeAdminResponse } as MsgChangeAdminResponse;
     while (reader.pos < end) {

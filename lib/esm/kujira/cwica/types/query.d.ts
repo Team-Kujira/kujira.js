@@ -1,5 +1,5 @@
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Rpc } from "cosmjs-types/helpers";
-import { Reader, Writer } from "protobufjs/minimal";
 export declare const protobufPackage = "kujira.cwica";
 /** QueryInterchainAccountRequest is the request type for the Query/InterchainAccountAddress RPC */
 export interface QueryInterchainAccountRequest {
@@ -13,8 +13,8 @@ export interface QueryInterchainAccountResponse {
 }
 export declare const QueryInterchainAccountRequest: {
     typeUrl: string;
-    encode(message: QueryInterchainAccountRequest, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryInterchainAccountRequest;
+    encode(message: QueryInterchainAccountRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryInterchainAccountRequest;
     fromJSON(object: any): QueryInterchainAccountRequest;
     toJSON(message: QueryInterchainAccountRequest): unknown;
     fromPartial<I extends {
@@ -29,8 +29,8 @@ export declare const QueryInterchainAccountRequest: {
 };
 export declare const QueryInterchainAccountResponse: {
     typeUrl: string;
-    encode(message: QueryInterchainAccountResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): QueryInterchainAccountResponse;
+    encode(message: QueryInterchainAccountResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryInterchainAccountResponse;
     fromJSON(object: any): QueryInterchainAccountResponse;
     toJSON(message: QueryInterchainAccountResponse): unknown;
     fromPartial<I extends {

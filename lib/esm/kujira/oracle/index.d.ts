@@ -4,8 +4,8 @@ import { MsgAggregateExchangeRatePrevote } from "./types/tx";
 import { MsgDelegateFeedConsent } from "./types/tx";
 import { OracleExtension, setupOracleExtension } from "./queries";
 export declare const types: ((string | {
-    encode(message: MsgAggregateExchangeRateVote, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgAggregateExchangeRateVote;
+    encode(message: MsgAggregateExchangeRateVote, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgAggregateExchangeRateVote;
     fromJSON(object: any): MsgAggregateExchangeRateVote;
     toJSON(message: MsgAggregateExchangeRateVote): unknown;
     fromPartial(object: {
@@ -15,8 +15,8 @@ export declare const types: ((string | {
         validator?: string | undefined;
     }): MsgAggregateExchangeRateVote;
 })[] | (string | {
-    encode(message: MsgAggregateExchangeRatePrevote, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgAggregateExchangeRatePrevote;
+    encode(message: MsgAggregateExchangeRatePrevote, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgAggregateExchangeRatePrevote;
     fromJSON(object: any): MsgAggregateExchangeRatePrevote;
     toJSON(message: MsgAggregateExchangeRatePrevote): unknown;
     fromPartial(object: {
@@ -25,8 +25,8 @@ export declare const types: ((string | {
         validator?: string | undefined;
     }): MsgAggregateExchangeRatePrevote;
 })[] | (string | {
-    encode(message: MsgDelegateFeedConsent, writer?: import("protobufjs").Writer): import("protobufjs").Writer;
-    decode(input: import("protobufjs").Reader | Uint8Array, length?: number | undefined): MsgDelegateFeedConsent;
+    encode(message: MsgDelegateFeedConsent, writer?: import("cosmjs-types/binary").BinaryWriter): import("cosmjs-types/binary").BinaryWriter;
+    decode(input: import("cosmjs-types/binary").BinaryReader | Uint8Array, length?: number | undefined): MsgDelegateFeedConsent;
     fromJSON(object: any): MsgDelegateFeedConsent;
     toJSON(message: MsgDelegateFeedConsent): unknown;
     fromPartial(object: {

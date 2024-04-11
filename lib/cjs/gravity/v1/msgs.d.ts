@@ -1,7 +1,6 @@
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { Any } from "cosmjs-types/google/protobuf/any";
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
 import { Rpc } from "./helpers";
 import { BridgeValidator } from "./types";
 export declare const protobufPackage = "gravity.v1";
@@ -45,7 +44,7 @@ export interface MsgSetOrchestratorAddressResponse {
  * -------------
  */
 export interface MsgValsetConfirm {
-    nonce: Long;
+    nonce: bigint;
     orchestrator: string;
     ethAddress: string;
     signature: string;
@@ -107,7 +106,7 @@ export interface MsgRequestBatchResponse {
  * -------------
  */
 export interface MsgConfirmBatch {
-    nonce: Long;
+    nonce: bigint;
     tokenContract: string;
     ethSigner: string;
     orchestrator: string;
@@ -127,7 +126,7 @@ export interface MsgConfirmBatchResponse {
  */
 export interface MsgConfirmLogicCall {
     invalidationId: string;
-    invalidationNonce: Long;
+    invalidationNonce: bigint;
     ethSigner: string;
     orchestrator: string;
     signature: string;
@@ -142,8 +141,8 @@ export interface MsgConfirmLogicCallResponse {
  * -------------
  */
 export interface MsgSendToCosmosClaim {
-    eventNonce: Long;
-    ethBlockHeight: Long;
+    eventNonce: bigint;
+    ethBlockHeight: bigint;
     tokenContract: string;
     amount: string;
     ethereumSender: string;
@@ -160,7 +159,7 @@ export interface MsgSendToCosmosClaimResponse {
  */
 export interface MsgExecuteIbcAutoForwards {
     /** How many queued forwards to clear, be careful about gas limits */
-    forwardsToClear: Long;
+    forwardsToClear: bigint;
     /** This message's sender */
     executor: string;
 }
@@ -171,9 +170,9 @@ export interface MsgExecuteIbcAutoForwardsResponse {
  * operations on the bridge contract was executed.
  */
 export interface MsgBatchSendToEthClaim {
-    eventNonce: Long;
-    ethBlockHeight: Long;
-    batchNonce: Long;
+    eventNonce: bigint;
+    ethBlockHeight: bigint;
+    batchNonce: bigint;
     tokenContract: string;
     orchestrator: string;
 }
@@ -185,13 +184,13 @@ export interface MsgBatchSendToEthClaimResponse {
  * to represent a Cosmos asset
  */
 export interface MsgERC20DeployedClaim {
-    eventNonce: Long;
-    ethBlockHeight: Long;
+    eventNonce: bigint;
+    ethBlockHeight: bigint;
     cosmosDenom: string;
     tokenContract: string;
     name: string;
     symbol: string;
-    decimals: Long;
+    decimals: bigint;
     orchestrator: string;
 }
 export interface MsgERC20DeployedClaimResponse {
@@ -201,10 +200,10 @@ export interface MsgERC20DeployedClaimResponse {
  * call has been executed
  */
 export interface MsgLogicCallExecutedClaim {
-    eventNonce: Long;
-    ethBlockHeight: Long;
+    eventNonce: bigint;
+    ethBlockHeight: bigint;
     invalidationId: Uint8Array;
-    invalidationNonce: Long;
+    invalidationNonce: bigint;
     orchestrator: string;
 }
 export interface MsgLogicCallExecutedClaimResponse {
@@ -214,9 +213,9 @@ export interface MsgLogicCallExecutedClaimResponse {
  * set has been updated.
  */
 export interface MsgValsetUpdatedClaim {
-    eventNonce: Long;
-    valsetNonce: Long;
-    ethBlockHeight: Long;
+    eventNonce: bigint;
+    valsetNonce: bigint;
+    ethBlockHeight: bigint;
     members: BridgeValidator[];
     rewardAmount: string;
     rewardToken: string;
@@ -230,7 +229,7 @@ export interface MsgValsetUpdatedClaimResponse {
  * of the tokens
  */
 export interface MsgCancelSendToEth {
-    transactionId: Long;
+    transactionId: bigint;
     sender: string;
 }
 export interface MsgCancelSendToEthResponse {
@@ -308,295 +307,295 @@ export interface EventSendToEthFeeCollected {
     feeAmount: string;
 }
 export declare const MsgSetOrchestratorAddress: {
-    encode(message: MsgSetOrchestratorAddress, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSetOrchestratorAddress;
+    encode(message: MsgSetOrchestratorAddress, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSetOrchestratorAddress;
     fromJSON(object: any): MsgSetOrchestratorAddress;
     toJSON(message: MsgSetOrchestratorAddress): unknown;
     fromPartial(object: Partial<MsgSetOrchestratorAddress>): MsgSetOrchestratorAddress;
 };
 export declare const MsgSetOrchestratorAddressResponse: {
-    encode(_: MsgSetOrchestratorAddressResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSetOrchestratorAddressResponse;
+    encode(_: MsgSetOrchestratorAddressResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSetOrchestratorAddressResponse;
     fromJSON(_: any): MsgSetOrchestratorAddressResponse;
     toJSON(_: MsgSetOrchestratorAddressResponse): unknown;
     fromPartial(_: Partial<MsgSetOrchestratorAddressResponse>): MsgSetOrchestratorAddressResponse;
 };
 export declare const MsgValsetConfirm: {
-    encode(message: MsgValsetConfirm, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgValsetConfirm;
+    encode(message: MsgValsetConfirm, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgValsetConfirm;
     fromJSON(object: any): MsgValsetConfirm;
     toJSON(message: MsgValsetConfirm): unknown;
     fromPartial(object: Partial<MsgValsetConfirm>): MsgValsetConfirm;
 };
 export declare const MsgValsetConfirmResponse: {
-    encode(_: MsgValsetConfirmResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgValsetConfirmResponse;
+    encode(_: MsgValsetConfirmResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgValsetConfirmResponse;
     fromJSON(_: any): MsgValsetConfirmResponse;
     toJSON(_: MsgValsetConfirmResponse): unknown;
     fromPartial(_: Partial<MsgValsetConfirmResponse>): MsgValsetConfirmResponse;
 };
 export declare const MsgSendToEth: {
-    encode(message: MsgSendToEth, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendToEth;
+    encode(message: MsgSendToEth, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSendToEth;
     fromJSON(object: any): MsgSendToEth;
     toJSON(message: MsgSendToEth): unknown;
     fromPartial(object: Partial<MsgSendToEth>): MsgSendToEth;
 };
 export declare const MsgSendToEthResponse: {
-    encode(_: MsgSendToEthResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendToEthResponse;
+    encode(_: MsgSendToEthResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSendToEthResponse;
     fromJSON(_: any): MsgSendToEthResponse;
     toJSON(_: MsgSendToEthResponse): unknown;
     fromPartial(_: Partial<MsgSendToEthResponse>): MsgSendToEthResponse;
 };
 export declare const MsgRequestBatch: {
-    encode(message: MsgRequestBatch, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRequestBatch;
+    encode(message: MsgRequestBatch, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgRequestBatch;
     fromJSON(object: any): MsgRequestBatch;
     toJSON(message: MsgRequestBatch): unknown;
     fromPartial(object: Partial<MsgRequestBatch>): MsgRequestBatch;
 };
 export declare const MsgRequestBatchResponse: {
-    encode(_: MsgRequestBatchResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRequestBatchResponse;
+    encode(_: MsgRequestBatchResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgRequestBatchResponse;
     fromJSON(_: any): MsgRequestBatchResponse;
     toJSON(_: MsgRequestBatchResponse): unknown;
     fromPartial(_: Partial<MsgRequestBatchResponse>): MsgRequestBatchResponse;
 };
 export declare const MsgConfirmBatch: {
-    encode(message: MsgConfirmBatch, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmBatch;
+    encode(message: MsgConfirmBatch, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgConfirmBatch;
     fromJSON(object: any): MsgConfirmBatch;
     toJSON(message: MsgConfirmBatch): unknown;
     fromPartial(object: Partial<MsgConfirmBatch>): MsgConfirmBatch;
 };
 export declare const MsgConfirmBatchResponse: {
-    encode(_: MsgConfirmBatchResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmBatchResponse;
+    encode(_: MsgConfirmBatchResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgConfirmBatchResponse;
     fromJSON(_: any): MsgConfirmBatchResponse;
     toJSON(_: MsgConfirmBatchResponse): unknown;
     fromPartial(_: Partial<MsgConfirmBatchResponse>): MsgConfirmBatchResponse;
 };
 export declare const MsgConfirmLogicCall: {
-    encode(message: MsgConfirmLogicCall, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmLogicCall;
+    encode(message: MsgConfirmLogicCall, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgConfirmLogicCall;
     fromJSON(object: any): MsgConfirmLogicCall;
     toJSON(message: MsgConfirmLogicCall): unknown;
     fromPartial(object: Partial<MsgConfirmLogicCall>): MsgConfirmLogicCall;
 };
 export declare const MsgConfirmLogicCallResponse: {
-    encode(_: MsgConfirmLogicCallResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmLogicCallResponse;
+    encode(_: MsgConfirmLogicCallResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgConfirmLogicCallResponse;
     fromJSON(_: any): MsgConfirmLogicCallResponse;
     toJSON(_: MsgConfirmLogicCallResponse): unknown;
     fromPartial(_: Partial<MsgConfirmLogicCallResponse>): MsgConfirmLogicCallResponse;
 };
 export declare const MsgSendToCosmosClaim: {
-    encode(message: MsgSendToCosmosClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendToCosmosClaim;
+    encode(message: MsgSendToCosmosClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSendToCosmosClaim;
     fromJSON(object: any): MsgSendToCosmosClaim;
     toJSON(message: MsgSendToCosmosClaim): unknown;
     fromPartial(object: Partial<MsgSendToCosmosClaim>): MsgSendToCosmosClaim;
 };
 export declare const MsgSendToCosmosClaimResponse: {
-    encode(_: MsgSendToCosmosClaimResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendToCosmosClaimResponse;
+    encode(_: MsgSendToCosmosClaimResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSendToCosmosClaimResponse;
     fromJSON(_: any): MsgSendToCosmosClaimResponse;
     toJSON(_: MsgSendToCosmosClaimResponse): unknown;
     fromPartial(_: Partial<MsgSendToCosmosClaimResponse>): MsgSendToCosmosClaimResponse;
 };
 export declare const MsgExecuteIbcAutoForwards: {
-    encode(message: MsgExecuteIbcAutoForwards, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExecuteIbcAutoForwards;
+    encode(message: MsgExecuteIbcAutoForwards, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgExecuteIbcAutoForwards;
     fromJSON(object: any): MsgExecuteIbcAutoForwards;
     toJSON(message: MsgExecuteIbcAutoForwards): unknown;
     fromPartial(object: Partial<MsgExecuteIbcAutoForwards>): MsgExecuteIbcAutoForwards;
 };
 export declare const MsgExecuteIbcAutoForwardsResponse: {
-    encode(_: MsgExecuteIbcAutoForwardsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExecuteIbcAutoForwardsResponse;
+    encode(_: MsgExecuteIbcAutoForwardsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgExecuteIbcAutoForwardsResponse;
     fromJSON(_: any): MsgExecuteIbcAutoForwardsResponse;
     toJSON(_: MsgExecuteIbcAutoForwardsResponse): unknown;
     fromPartial(_: Partial<MsgExecuteIbcAutoForwardsResponse>): MsgExecuteIbcAutoForwardsResponse;
 };
 export declare const MsgBatchSendToEthClaim: {
-    encode(message: MsgBatchSendToEthClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgBatchSendToEthClaim;
+    encode(message: MsgBatchSendToEthClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgBatchSendToEthClaim;
     fromJSON(object: any): MsgBatchSendToEthClaim;
     toJSON(message: MsgBatchSendToEthClaim): unknown;
     fromPartial(object: Partial<MsgBatchSendToEthClaim>): MsgBatchSendToEthClaim;
 };
 export declare const MsgBatchSendToEthClaimResponse: {
-    encode(_: MsgBatchSendToEthClaimResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgBatchSendToEthClaimResponse;
+    encode(_: MsgBatchSendToEthClaimResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgBatchSendToEthClaimResponse;
     fromJSON(_: any): MsgBatchSendToEthClaimResponse;
     toJSON(_: MsgBatchSendToEthClaimResponse): unknown;
     fromPartial(_: Partial<MsgBatchSendToEthClaimResponse>): MsgBatchSendToEthClaimResponse;
 };
 export declare const MsgERC20DeployedClaim: {
-    encode(message: MsgERC20DeployedClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgERC20DeployedClaim;
+    encode(message: MsgERC20DeployedClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgERC20DeployedClaim;
     fromJSON(object: any): MsgERC20DeployedClaim;
     toJSON(message: MsgERC20DeployedClaim): unknown;
     fromPartial(object: Partial<MsgERC20DeployedClaim>): MsgERC20DeployedClaim;
 };
 export declare const MsgERC20DeployedClaimResponse: {
-    encode(_: MsgERC20DeployedClaimResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgERC20DeployedClaimResponse;
+    encode(_: MsgERC20DeployedClaimResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgERC20DeployedClaimResponse;
     fromJSON(_: any): MsgERC20DeployedClaimResponse;
     toJSON(_: MsgERC20DeployedClaimResponse): unknown;
     fromPartial(_: Partial<MsgERC20DeployedClaimResponse>): MsgERC20DeployedClaimResponse;
 };
 export declare const MsgLogicCallExecutedClaim: {
-    encode(message: MsgLogicCallExecutedClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLogicCallExecutedClaim;
+    encode(message: MsgLogicCallExecutedClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgLogicCallExecutedClaim;
     fromJSON(object: any): MsgLogicCallExecutedClaim;
     toJSON(message: MsgLogicCallExecutedClaim): unknown;
     fromPartial(object: Partial<MsgLogicCallExecutedClaim>): MsgLogicCallExecutedClaim;
 };
 export declare const MsgLogicCallExecutedClaimResponse: {
-    encode(_: MsgLogicCallExecutedClaimResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgLogicCallExecutedClaimResponse;
+    encode(_: MsgLogicCallExecutedClaimResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgLogicCallExecutedClaimResponse;
     fromJSON(_: any): MsgLogicCallExecutedClaimResponse;
     toJSON(_: MsgLogicCallExecutedClaimResponse): unknown;
     fromPartial(_: Partial<MsgLogicCallExecutedClaimResponse>): MsgLogicCallExecutedClaimResponse;
 };
 export declare const MsgValsetUpdatedClaim: {
-    encode(message: MsgValsetUpdatedClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgValsetUpdatedClaim;
+    encode(message: MsgValsetUpdatedClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgValsetUpdatedClaim;
     fromJSON(object: any): MsgValsetUpdatedClaim;
     toJSON(message: MsgValsetUpdatedClaim): unknown;
     fromPartial(object: Partial<MsgValsetUpdatedClaim>): MsgValsetUpdatedClaim;
 };
 export declare const MsgValsetUpdatedClaimResponse: {
-    encode(_: MsgValsetUpdatedClaimResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgValsetUpdatedClaimResponse;
+    encode(_: MsgValsetUpdatedClaimResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgValsetUpdatedClaimResponse;
     fromJSON(_: any): MsgValsetUpdatedClaimResponse;
     toJSON(_: MsgValsetUpdatedClaimResponse): unknown;
     fromPartial(_: Partial<MsgValsetUpdatedClaimResponse>): MsgValsetUpdatedClaimResponse;
 };
 export declare const MsgCancelSendToEth: {
-    encode(message: MsgCancelSendToEth, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCancelSendToEth;
+    encode(message: MsgCancelSendToEth, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgCancelSendToEth;
     fromJSON(object: any): MsgCancelSendToEth;
     toJSON(message: MsgCancelSendToEth): unknown;
     fromPartial(object: Partial<MsgCancelSendToEth>): MsgCancelSendToEth;
 };
 export declare const MsgCancelSendToEthResponse: {
-    encode(_: MsgCancelSendToEthResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgCancelSendToEthResponse;
+    encode(_: MsgCancelSendToEthResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgCancelSendToEthResponse;
     fromJSON(_: any): MsgCancelSendToEthResponse;
     toJSON(_: MsgCancelSendToEthResponse): unknown;
     fromPartial(_: Partial<MsgCancelSendToEthResponse>): MsgCancelSendToEthResponse;
 };
 export declare const MsgSubmitBadSignatureEvidence: {
-    encode(message: MsgSubmitBadSignatureEvidence, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitBadSignatureEvidence;
+    encode(message: MsgSubmitBadSignatureEvidence, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSubmitBadSignatureEvidence;
     fromJSON(object: any): MsgSubmitBadSignatureEvidence;
     toJSON(message: MsgSubmitBadSignatureEvidence): unknown;
     fromPartial(object: Partial<MsgSubmitBadSignatureEvidence>): MsgSubmitBadSignatureEvidence;
 };
 export declare const MsgSubmitBadSignatureEvidenceResponse: {
-    encode(_: MsgSubmitBadSignatureEvidenceResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgSubmitBadSignatureEvidenceResponse;
+    encode(_: MsgSubmitBadSignatureEvidenceResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgSubmitBadSignatureEvidenceResponse;
     fromJSON(_: any): MsgSubmitBadSignatureEvidenceResponse;
     toJSON(_: MsgSubmitBadSignatureEvidenceResponse): unknown;
     fromPartial(_: Partial<MsgSubmitBadSignatureEvidenceResponse>): MsgSubmitBadSignatureEvidenceResponse;
 };
 export declare const EventSetOperatorAddress: {
-    encode(message: EventSetOperatorAddress, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSetOperatorAddress;
+    encode(message: EventSetOperatorAddress, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSetOperatorAddress;
     fromJSON(object: any): EventSetOperatorAddress;
     toJSON(message: EventSetOperatorAddress): unknown;
     fromPartial(object: Partial<EventSetOperatorAddress>): EventSetOperatorAddress;
 };
 export declare const EventValsetConfirmKey: {
-    encode(message: EventValsetConfirmKey, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventValsetConfirmKey;
+    encode(message: EventValsetConfirmKey, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventValsetConfirmKey;
     fromJSON(object: any): EventValsetConfirmKey;
     toJSON(message: EventValsetConfirmKey): unknown;
     fromPartial(object: Partial<EventValsetConfirmKey>): EventValsetConfirmKey;
 };
 export declare const EventBatchCreated: {
-    encode(message: EventBatchCreated, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventBatchCreated;
+    encode(message: EventBatchCreated, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventBatchCreated;
     fromJSON(object: any): EventBatchCreated;
     toJSON(message: EventBatchCreated): unknown;
     fromPartial(object: Partial<EventBatchCreated>): EventBatchCreated;
 };
 export declare const EventBatchConfirmKey: {
-    encode(message: EventBatchConfirmKey, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventBatchConfirmKey;
+    encode(message: EventBatchConfirmKey, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventBatchConfirmKey;
     fromJSON(object: any): EventBatchConfirmKey;
     toJSON(message: EventBatchConfirmKey): unknown;
     fromPartial(object: Partial<EventBatchConfirmKey>): EventBatchConfirmKey;
 };
 export declare const EventBatchSendToEthClaim: {
-    encode(message: EventBatchSendToEthClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventBatchSendToEthClaim;
+    encode(message: EventBatchSendToEthClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventBatchSendToEthClaim;
     fromJSON(object: any): EventBatchSendToEthClaim;
     toJSON(message: EventBatchSendToEthClaim): unknown;
     fromPartial(object: Partial<EventBatchSendToEthClaim>): EventBatchSendToEthClaim;
 };
 export declare const EventClaim: {
-    encode(message: EventClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventClaim;
+    encode(message: EventClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventClaim;
     fromJSON(object: any): EventClaim;
     toJSON(message: EventClaim): unknown;
     fromPartial(object: Partial<EventClaim>): EventClaim;
 };
 export declare const EventBadSignatureEvidence: {
-    encode(message: EventBadSignatureEvidence, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventBadSignatureEvidence;
+    encode(message: EventBadSignatureEvidence, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventBadSignatureEvidence;
     fromJSON(object: any): EventBadSignatureEvidence;
     toJSON(message: EventBadSignatureEvidence): unknown;
     fromPartial(object: Partial<EventBadSignatureEvidence>): EventBadSignatureEvidence;
 };
 export declare const EventERC20DeployedClaim: {
-    encode(message: EventERC20DeployedClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventERC20DeployedClaim;
+    encode(message: EventERC20DeployedClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventERC20DeployedClaim;
     fromJSON(object: any): EventERC20DeployedClaim;
     toJSON(message: EventERC20DeployedClaim): unknown;
     fromPartial(object: Partial<EventERC20DeployedClaim>): EventERC20DeployedClaim;
 };
 export declare const EventValsetUpdatedClaim: {
-    encode(message: EventValsetUpdatedClaim, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventValsetUpdatedClaim;
+    encode(message: EventValsetUpdatedClaim, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventValsetUpdatedClaim;
     fromJSON(object: any): EventValsetUpdatedClaim;
     toJSON(message: EventValsetUpdatedClaim): unknown;
     fromPartial(object: Partial<EventValsetUpdatedClaim>): EventValsetUpdatedClaim;
 };
 export declare const EventMultisigUpdateRequest: {
-    encode(message: EventMultisigUpdateRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventMultisigUpdateRequest;
+    encode(message: EventMultisigUpdateRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventMultisigUpdateRequest;
     fromJSON(object: any): EventMultisigUpdateRequest;
     toJSON(message: EventMultisigUpdateRequest): unknown;
     fromPartial(object: Partial<EventMultisigUpdateRequest>): EventMultisigUpdateRequest;
 };
 export declare const EventOutgoingLogicCallCanceled: {
-    encode(message: EventOutgoingLogicCallCanceled, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventOutgoingLogicCallCanceled;
+    encode(message: EventOutgoingLogicCallCanceled, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventOutgoingLogicCallCanceled;
     fromJSON(object: any): EventOutgoingLogicCallCanceled;
     toJSON(message: EventOutgoingLogicCallCanceled): unknown;
     fromPartial(object: Partial<EventOutgoingLogicCallCanceled>): EventOutgoingLogicCallCanceled;
 };
 export declare const EventSignatureSlashing: {
-    encode(message: EventSignatureSlashing, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSignatureSlashing;
+    encode(message: EventSignatureSlashing, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSignatureSlashing;
     fromJSON(object: any): EventSignatureSlashing;
     toJSON(message: EventSignatureSlashing): unknown;
     fromPartial(object: Partial<EventSignatureSlashing>): EventSignatureSlashing;
 };
 export declare const EventOutgoingTxId: {
-    encode(message: EventOutgoingTxId, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventOutgoingTxId;
+    encode(message: EventOutgoingTxId, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventOutgoingTxId;
     fromJSON(object: any): EventOutgoingTxId;
     toJSON(message: EventOutgoingTxId): unknown;
     fromPartial(object: Partial<EventOutgoingTxId>): EventOutgoingTxId;
 };
 export declare const EventSendToEthFeeCollected: {
-    encode(message: EventSendToEthFeeCollected, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventSendToEthFeeCollected;
+    encode(message: EventSendToEthFeeCollected, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventSendToEthFeeCollected;
     fromJSON(object: any): EventSendToEthFeeCollected;
     toJSON(message: EventSendToEthFeeCollected): unknown;
     fromPartial(object: Partial<EventSendToEthFeeCollected>): EventSendToEthFeeCollected;

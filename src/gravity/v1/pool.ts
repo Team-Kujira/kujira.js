@@ -1,17 +1,17 @@
 /* eslint-disable */
-import * as _m0 from "protobufjs/minimal";
-import { isSet, Long } from "./helpers";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
+import { Long, isSet } from "./helpers";
 export const protobufPackage = "gravity.v1";
 /** IDSet represents a set of IDs */
 
 export interface IDSet {
   /** IDSet represents a set of IDs */
-  ids: Long[];
+  ids: bigint[];
 }
 export interface BatchFees {
   token: string;
   totalFees: string;
-  txCount: Long;
+  txCount: bigint;
 }
 export interface EventWithdrawalReceived {
   bridgeContract: string;
@@ -33,7 +33,10 @@ function createBaseIDSet(): IDSet {
 }
 
 export const IDSet = {
-  encode(message: IDSet, writer: _m0.Writer = _m0.Writer.create()): _m0.Writer {
+  encode(
+    message: IDSet,
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     writer.uint32(10).fork();
 
     for (const v of message.ids) {
@@ -44,8 +47,9 @@ export const IDSet = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): IDSet {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): IDSet {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseIDSet();
 
@@ -58,10 +62,10 @@ export const IDSet = {
             const end2 = reader.uint32() + reader.pos;
 
             while (reader.pos < end2) {
-              message.ids.push(reader.uint64() as Long);
+              message.ids.push(reader.uint64());
             }
           } else {
-            message.ids.push(reader.uint64() as Long);
+            message.ids.push(reader.uint64());
           }
 
           break;
@@ -87,7 +91,7 @@ export const IDSet = {
     const obj: any = {};
 
     if (message.ids) {
-      obj.ids = message.ids.map((e) => (e || Long.UZERO).toString());
+      obj.ids = message.ids.map((e) => (e || BigInt(0)).toString());
     } else {
       obj.ids = [];
     }
@@ -97,7 +101,7 @@ export const IDSet = {
 
   fromPartial(object: Partial<IDSet>): IDSet {
     const message = createBaseIDSet();
-    message.ids = object.ids?.map((e) => Long.fromValue(e)) || [];
+    message.ids = object.ids?.map((e) => BigInt(e)) || [];
     return message;
   },
 };
@@ -106,15 +110,15 @@ function createBaseBatchFees(): BatchFees {
   return {
     token: "",
     totalFees: "",
-    txCount: Long.UZERO,
+    txCount: BigInt(0),
   };
 }
 
 export const BatchFees = {
   encode(
     message: BatchFees,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.token !== "") {
       writer.uint32(10).string(message.token);
     }
@@ -123,15 +127,16 @@ export const BatchFees = {
       writer.uint32(18).string(message.totalFees);
     }
 
-    if (!message.txCount.isZero()) {
+    if (message.txCount !== BigInt(0)) {
       writer.uint32(24).uint64(message.txCount);
     }
 
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): BatchFees {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): BatchFees {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseBatchFees();
 
@@ -148,7 +153,7 @@ export const BatchFees = {
           break;
 
         case 3:
-          message.txCount = reader.uint64() as Long;
+          message.txCount = reader.uint64();
           break;
 
         default:
@@ -164,9 +169,7 @@ export const BatchFees = {
     return {
       token: isSet(object.token) ? String(object.token) : "",
       totalFees: isSet(object.totalFees) ? String(object.totalFees) : "",
-      txCount: isSet(object.txCount)
-        ? Long.fromValue(object.txCount)
-        : Long.UZERO,
+      txCount: isSet(object.txCount) ? BigInt(object.txCount) : BigInt(0),
     };
   },
 
@@ -175,7 +178,7 @@ export const BatchFees = {
     message.token !== undefined && (obj.token = message.token);
     message.totalFees !== undefined && (obj.totalFees = message.totalFees);
     message.txCount !== undefined &&
-      (obj.txCount = (message.txCount || Long.UZERO).toString());
+      (obj.txCount = (message.txCount || BigInt(0)).toString());
     return obj;
   },
 
@@ -185,8 +188,8 @@ export const BatchFees = {
     message.totalFees = object.totalFees ?? "";
     message.txCount =
       object.txCount !== undefined && object.txCount !== null
-        ? Long.fromValue(object.txCount)
-        : Long.UZERO;
+        ? BigInt(object.txCount)
+        : BigInt(0);
     return message;
   },
 };
@@ -203,8 +206,8 @@ function createBaseEventWithdrawalReceived(): EventWithdrawalReceived {
 export const EventWithdrawalReceived = {
   encode(
     message: EventWithdrawalReceived,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.bridgeContract !== "") {
       writer.uint32(10).string(message.bridgeContract);
     }
@@ -225,10 +228,11 @@ export const EventWithdrawalReceived = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventWithdrawalReceived {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventWithdrawalReceived();
 
@@ -312,8 +316,8 @@ function createBaseEventWithdrawCanceled(): EventWithdrawCanceled {
 export const EventWithdrawCanceled = {
   encode(
     message: EventWithdrawCanceled,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -334,10 +338,11 @@ export const EventWithdrawCanceled = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventWithdrawCanceled {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventWithdrawCanceled();
 

@@ -1,6 +1,6 @@
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { Rpc } from "cosmjs-types/helpers";
-import { Reader, Writer } from "protobufjs/minimal";
 export declare const protobufPackage = "batch";
 /**
  * MsgWithdrawAllDelegatorRewards represents delegation withdrawal to a delegator
@@ -22,8 +22,8 @@ export interface MsgBatchResetDelegationResponse {
 }
 export declare const MsgWithdrawAllDelegatorRewards: {
     typeUrl: string;
-    encode(message: MsgWithdrawAllDelegatorRewards, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawAllDelegatorRewards;
+    encode(message: MsgWithdrawAllDelegatorRewards, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawAllDelegatorRewards;
     fromJSON(object: any): MsgWithdrawAllDelegatorRewards;
     toJSON(message: MsgWithdrawAllDelegatorRewards): unknown;
     fromPartial<I extends {
@@ -34,8 +34,8 @@ export declare const MsgWithdrawAllDelegatorRewards: {
 };
 export declare const MsgWithdrawAllDelegatorRewardsResponse: {
     typeUrl: string;
-    encode(message: MsgWithdrawAllDelegatorRewardsResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgWithdrawAllDelegatorRewardsResponse;
+    encode(message: MsgWithdrawAllDelegatorRewardsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgWithdrawAllDelegatorRewardsResponse;
     fromJSON(object: any): MsgWithdrawAllDelegatorRewardsResponse;
     toJSON(message: MsgWithdrawAllDelegatorRewardsResponse): unknown;
     fromPartial<I extends {
@@ -61,8 +61,8 @@ export declare const MsgWithdrawAllDelegatorRewardsResponse: {
 };
 export declare const MsgBatchResetDelegation: {
     typeUrl: string;
-    encode(message: MsgBatchResetDelegation, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgBatchResetDelegation;
+    encode(message: MsgBatchResetDelegation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgBatchResetDelegation;
     fromJSON(object: any): MsgBatchResetDelegation;
     toJSON(message: MsgBatchResetDelegation): unknown;
     fromPartial<I extends {
@@ -77,8 +77,8 @@ export declare const MsgBatchResetDelegation: {
 };
 export declare const MsgBatchResetDelegationResponse: {
     typeUrl: string;
-    encode(_: MsgBatchResetDelegationResponse, writer?: Writer): Writer;
-    decode(input: Reader | Uint8Array, length?: number): MsgBatchResetDelegationResponse;
+    encode(_: MsgBatchResetDelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgBatchResetDelegationResponse;
     fromJSON(_: any): MsgBatchResetDelegationResponse;
     toJSON(_: MsgBatchResetDelegationResponse): unknown;
     fromPartial<I extends {} & {} & Record<Exclude<keyof I, never>, never>>(_: I): MsgBatchResetDelegationResponse;

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Attestation } from "./attestation";
 import {
   OutgoingLogicCall,
@@ -7,7 +7,7 @@ import {
   OutgoingTxBatch,
 } from "./batch";
 import { Params } from "./genesis";
-import { base64FromBytes, bytesFromBase64, isSet, Long, Rpc } from "./helpers";
+import { Rpc, base64FromBytes, bytesFromBase64, isSet } from "./helpers";
 import { MsgConfirmBatch, MsgConfirmLogicCall, MsgValsetConfirm } from "./msgs";
 import { BatchFees } from "./pool";
 import { PendingIbcAutoForward, Valset } from "./types";
@@ -21,20 +21,20 @@ export interface QueryCurrentValsetResponse {
   valset?: Valset;
 }
 export interface QueryValsetRequestRequest {
-  nonce: Long;
+  nonce: bigint;
 }
 export interface QueryValsetRequestResponse {
   valset?: Valset;
 }
 export interface QueryValsetConfirmRequest {
-  nonce: Long;
+  nonce: bigint;
   address: string;
 }
 export interface QueryValsetConfirmResponse {
   confirm?: MsgValsetConfirm;
 }
 export interface QueryValsetConfirmsByNonceRequest {
-  nonce: Long;
+  nonce: bigint;
 }
 export interface QueryValsetConfirmsByNonceResponse {
   confirms: MsgValsetConfirm[];
@@ -74,14 +74,14 @@ export interface QueryOutgoingLogicCallsResponse {
   calls: OutgoingLogicCall[];
 }
 export interface QueryBatchRequestByNonceRequest {
-  nonce: Long;
+  nonce: bigint;
   contractAddress: string;
 }
 export interface QueryBatchRequestByNonceResponse {
   batch?: OutgoingTxBatch;
 }
 export interface QueryBatchConfirmsRequest {
-  nonce: Long;
+  nonce: bigint;
   contractAddress: string;
 }
 export interface QueryBatchConfirmsResponse {
@@ -89,7 +89,7 @@ export interface QueryBatchConfirmsResponse {
 }
 export interface QueryLogicConfirmsRequest {
   invalidationId: Uint8Array;
-  invalidationNonce: Long;
+  invalidationNonce: bigint;
 }
 export interface QueryLogicConfirmsResponse {
   confirms: MsgConfirmLogicCall[];
@@ -98,7 +98,7 @@ export interface QueryLastEventNonceByAddrRequest {
   address: string;
 }
 export interface QueryLastEventNonceByAddrResponse {
-  eventNonce: Long;
+  eventNonce: bigint;
 }
 export interface QueryERC20ToDenomRequest {
   erc20: string;
@@ -133,7 +133,7 @@ export interface QueryLastObservedEthBlockResponse {
    * a response of 0 indicates that no Ethereum events have been observed, and thus
    * the bridge is inactive
    */
-  block: Long;
+  block: bigint;
 }
 /**
  * QueryLastObservedEthNonceRequest defines the request for getting the event nonce
@@ -154,7 +154,7 @@ export interface QueryLastObservedEthNonceResponse {
    * a response of 0 indicates that no Ethereum events have been observed, and thus
    * the bridge is inactive
    */
-  nonce: Long;
+  nonce: bigint;
 }
 /**
  * QueryAttestationsRequest defines the request structure for getting recent
@@ -168,7 +168,7 @@ export interface QueryLastObservedEthNonceResponse {
 
 export interface QueryAttestationsRequest {
   /** limit defines how many attestations to limit in the response. */
-  limit: Long;
+  limit: bigint;
   /**
    * order_by provides ordering of atteststions by nonce in the response. Either
    * 'asc' or 'desc' can be provided. If no value is provided, it defaults to
@@ -181,10 +181,10 @@ export interface QueryAttestationsRequest {
   claimType: string;
   /** nonce allows filtering attestations by Ethereum claim nonce. */
 
-  nonce: Long;
+  nonce: bigint;
   /** height allows filtering attestations by Ethereum claim height. */
 
-  height: Long;
+  height: bigint;
   /**
    * indicates whether to search for store data using the old Gravity v1 key "OracleAttestationKey"
    * Note that queries before the Mercury upgrade at height 1282013 must set this to true
@@ -225,7 +225,7 @@ export interface QueryPendingSendToEthResponse {
 }
 export interface QueryPendingIbcAutoForwards {
   /** limit defines the number of pending forwards to return, in order of their SendToCosmos.EventNonce */
-  limit: Long;
+  limit: bigint;
 }
 export interface QueryPendingIbcAutoForwardsResponse {
   pendingIbcAutoForwards: PendingIbcAutoForward[];
@@ -238,13 +238,17 @@ function createBaseQueryParamsRequest(): QueryParamsRequest {
 export const QueryParamsRequest = {
   encode(
     _: QueryParamsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsRequest {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsRequest();
 
@@ -285,8 +289,8 @@ function createBaseQueryParamsResponse(): QueryParamsResponse {
 export const QueryParamsResponse = {
   encode(
     message: QueryParamsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.params !== undefined) {
       Params.encode(message.params, writer.uint32(10).fork()).ldelim();
     }
@@ -294,8 +298,12 @@ export const QueryParamsResponse = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): QueryParamsResponse {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryParamsResponse();
 
@@ -346,16 +354,17 @@ function createBaseQueryCurrentValsetRequest(): QueryCurrentValsetRequest {
 export const QueryCurrentValsetRequest = {
   encode(
     _: QueryCurrentValsetRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryCurrentValsetRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCurrentValsetRequest();
 
@@ -398,8 +407,8 @@ function createBaseQueryCurrentValsetResponse(): QueryCurrentValsetResponse {
 export const QueryCurrentValsetResponse = {
   encode(
     message: QueryCurrentValsetResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.valset !== undefined) {
       Valset.encode(message.valset, writer.uint32(10).fork()).ldelim();
     }
@@ -408,10 +417,11 @@ export const QueryCurrentValsetResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryCurrentValsetResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryCurrentValsetResponse();
 
@@ -459,16 +469,16 @@ export const QueryCurrentValsetResponse = {
 
 function createBaseQueryValsetRequestRequest(): QueryValsetRequestRequest {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
   };
 }
 
 export const QueryValsetRequestRequest = {
   encode(
     message: QueryValsetRequestRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -476,10 +486,11 @@ export const QueryValsetRequestRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetRequestRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetRequestRequest();
 
@@ -488,7 +499,7 @@ export const QueryValsetRequestRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         default:
@@ -502,14 +513,14 @@ export const QueryValsetRequestRequest = {
 
   fromJSON(object: any): QueryValsetRequestRequest {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
     };
   },
 
   toJSON(message: QueryValsetRequestRequest): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -519,8 +530,8 @@ export const QueryValsetRequestRequest = {
     const message = createBaseQueryValsetRequestRequest();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     return message;
   },
 };
@@ -534,8 +545,8 @@ function createBaseQueryValsetRequestResponse(): QueryValsetRequestResponse {
 export const QueryValsetRequestResponse = {
   encode(
     message: QueryValsetRequestResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.valset !== undefined) {
       Valset.encode(message.valset, writer.uint32(10).fork()).ldelim();
     }
@@ -544,10 +555,11 @@ export const QueryValsetRequestResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetRequestResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetRequestResponse();
 
@@ -595,7 +607,7 @@ export const QueryValsetRequestResponse = {
 
 function createBaseQueryValsetConfirmRequest(): QueryValsetConfirmRequest {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     address: "",
   };
 }
@@ -603,9 +615,9 @@ function createBaseQueryValsetConfirmRequest(): QueryValsetConfirmRequest {
 export const QueryValsetConfirmRequest = {
   encode(
     message: QueryValsetConfirmRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -617,10 +629,11 @@ export const QueryValsetConfirmRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetConfirmRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetConfirmRequest();
 
@@ -629,7 +642,7 @@ export const QueryValsetConfirmRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -647,7 +660,7 @@ export const QueryValsetConfirmRequest = {
 
   fromJSON(object: any): QueryValsetConfirmRequest {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       address: isSet(object.address) ? String(object.address) : "",
     };
   },
@@ -655,7 +668,7 @@ export const QueryValsetConfirmRequest = {
   toJSON(message: QueryValsetConfirmRequest): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.address !== undefined && (obj.address = message.address);
     return obj;
   },
@@ -666,8 +679,8 @@ export const QueryValsetConfirmRequest = {
     const message = createBaseQueryValsetConfirmRequest();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.address = object.address ?? "";
     return message;
   },
@@ -682,8 +695,8 @@ function createBaseQueryValsetConfirmResponse(): QueryValsetConfirmResponse {
 export const QueryValsetConfirmResponse = {
   encode(
     message: QueryValsetConfirmResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.confirm !== undefined) {
       MsgValsetConfirm.encode(
         message.confirm,
@@ -695,10 +708,11 @@ export const QueryValsetConfirmResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetConfirmResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetConfirmResponse();
 
@@ -750,16 +764,16 @@ export const QueryValsetConfirmResponse = {
 
 function createBaseQueryValsetConfirmsByNonceRequest(): QueryValsetConfirmsByNonceRequest {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
   };
 }
 
 export const QueryValsetConfirmsByNonceRequest = {
   encode(
     message: QueryValsetConfirmsByNonceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -767,10 +781,11 @@ export const QueryValsetConfirmsByNonceRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetConfirmsByNonceRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetConfirmsByNonceRequest();
 
@@ -779,7 +794,7 @@ export const QueryValsetConfirmsByNonceRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         default:
@@ -793,14 +808,14 @@ export const QueryValsetConfirmsByNonceRequest = {
 
   fromJSON(object: any): QueryValsetConfirmsByNonceRequest {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
     };
   },
 
   toJSON(message: QueryValsetConfirmsByNonceRequest): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -810,8 +825,8 @@ export const QueryValsetConfirmsByNonceRequest = {
     const message = createBaseQueryValsetConfirmsByNonceRequest();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     return message;
   },
 };
@@ -825,8 +840,8 @@ function createBaseQueryValsetConfirmsByNonceResponse(): QueryValsetConfirmsByNo
 export const QueryValsetConfirmsByNonceResponse = {
   encode(
     message: QueryValsetConfirmsByNonceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.confirms) {
       MsgValsetConfirm.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -835,10 +850,11 @@ export const QueryValsetConfirmsByNonceResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryValsetConfirmsByNonceResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryValsetConfirmsByNonceResponse();
 
@@ -900,16 +916,17 @@ function createBaseQueryLastValsetRequestsRequest(): QueryLastValsetRequestsRequ
 export const QueryLastValsetRequestsRequest = {
   encode(
     _: QueryLastValsetRequestsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastValsetRequestsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastValsetRequestsRequest();
 
@@ -952,8 +969,8 @@ function createBaseQueryLastValsetRequestsResponse(): QueryLastValsetRequestsRes
 export const QueryLastValsetRequestsResponse = {
   encode(
     message: QueryLastValsetRequestsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.valsets) {
       Valset.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -962,10 +979,11 @@ export const QueryLastValsetRequestsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastValsetRequestsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastValsetRequestsResponse();
 
@@ -1026,8 +1044,8 @@ function createBaseQueryLastPendingValsetRequestByAddrRequest(): QueryLastPendin
 export const QueryLastPendingValsetRequestByAddrRequest = {
   encode(
     message: QueryLastPendingValsetRequestByAddrRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.address !== "") {
       writer.uint32(10).string(message.address);
     }
@@ -1036,10 +1054,11 @@ export const QueryLastPendingValsetRequestByAddrRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingValsetRequestByAddrRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingValsetRequestByAddrRequest();
 
@@ -1090,8 +1109,8 @@ function createBaseQueryLastPendingValsetRequestByAddrResponse(): QueryLastPendi
 export const QueryLastPendingValsetRequestByAddrResponse = {
   encode(
     message: QueryLastPendingValsetRequestByAddrResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.valsets) {
       Valset.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1100,10 +1119,11 @@ export const QueryLastPendingValsetRequestByAddrResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingValsetRequestByAddrResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingValsetRequestByAddrResponse();
 
@@ -1162,16 +1182,17 @@ function createBaseQueryBatchFeeRequest(): QueryBatchFeeRequest {
 export const QueryBatchFeeRequest = {
   encode(
     _: QueryBatchFeeRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchFeeRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchFeeRequest();
 
@@ -1212,8 +1233,8 @@ function createBaseQueryBatchFeeResponse(): QueryBatchFeeResponse {
 export const QueryBatchFeeResponse = {
   encode(
     message: QueryBatchFeeResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.batchFees) {
       BatchFees.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1222,10 +1243,11 @@ export const QueryBatchFeeResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchFeeResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchFeeResponse();
 
@@ -1285,8 +1307,8 @@ function createBaseQueryLastPendingBatchRequestByAddrRequest(): QueryLastPending
 export const QueryLastPendingBatchRequestByAddrRequest = {
   encode(
     message: QueryLastPendingBatchRequestByAddrRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.address !== "") {
       writer.uint32(10).string(message.address);
     }
@@ -1295,10 +1317,11 @@ export const QueryLastPendingBatchRequestByAddrRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingBatchRequestByAddrRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingBatchRequestByAddrRequest();
 
@@ -1349,8 +1372,8 @@ function createBaseQueryLastPendingBatchRequestByAddrResponse(): QueryLastPendin
 export const QueryLastPendingBatchRequestByAddrResponse = {
   encode(
     message: QueryLastPendingBatchRequestByAddrResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.batch) {
       OutgoingTxBatch.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1359,10 +1382,11 @@ export const QueryLastPendingBatchRequestByAddrResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingBatchRequestByAddrResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingBatchRequestByAddrResponse();
 
@@ -1424,8 +1448,8 @@ function createBaseQueryLastPendingLogicCallByAddrRequest(): QueryLastPendingLog
 export const QueryLastPendingLogicCallByAddrRequest = {
   encode(
     message: QueryLastPendingLogicCallByAddrRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.address !== "") {
       writer.uint32(10).string(message.address);
     }
@@ -1434,10 +1458,11 @@ export const QueryLastPendingLogicCallByAddrRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingLogicCallByAddrRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingLogicCallByAddrRequest();
 
@@ -1488,8 +1513,8 @@ function createBaseQueryLastPendingLogicCallByAddrResponse(): QueryLastPendingLo
 export const QueryLastPendingLogicCallByAddrResponse = {
   encode(
     message: QueryLastPendingLogicCallByAddrResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.call) {
       OutgoingLogicCall.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1498,10 +1523,11 @@ export const QueryLastPendingLogicCallByAddrResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastPendingLogicCallByAddrResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastPendingLogicCallByAddrResponse();
 
@@ -1561,16 +1587,17 @@ function createBaseQueryOutgoingTxBatchesRequest(): QueryOutgoingTxBatchesReques
 export const QueryOutgoingTxBatchesRequest = {
   encode(
     _: QueryOutgoingTxBatchesRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryOutgoingTxBatchesRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryOutgoingTxBatchesRequest();
 
@@ -1613,8 +1640,8 @@ function createBaseQueryOutgoingTxBatchesResponse(): QueryOutgoingTxBatchesRespo
 export const QueryOutgoingTxBatchesResponse = {
   encode(
     message: QueryOutgoingTxBatchesResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.batches) {
       OutgoingTxBatch.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1623,10 +1650,11 @@ export const QueryOutgoingTxBatchesResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryOutgoingTxBatchesResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryOutgoingTxBatchesResponse();
 
@@ -1686,16 +1714,17 @@ function createBaseQueryOutgoingLogicCallsRequest(): QueryOutgoingLogicCallsRequ
 export const QueryOutgoingLogicCallsRequest = {
   encode(
     _: QueryOutgoingLogicCallsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryOutgoingLogicCallsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryOutgoingLogicCallsRequest();
 
@@ -1738,8 +1767,8 @@ function createBaseQueryOutgoingLogicCallsResponse(): QueryOutgoingLogicCallsRes
 export const QueryOutgoingLogicCallsResponse = {
   encode(
     message: QueryOutgoingLogicCallsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.calls) {
       OutgoingLogicCall.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -1748,10 +1777,11 @@ export const QueryOutgoingLogicCallsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryOutgoingLogicCallsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryOutgoingLogicCallsResponse();
 
@@ -1806,7 +1836,7 @@ export const QueryOutgoingLogicCallsResponse = {
 
 function createBaseQueryBatchRequestByNonceRequest(): QueryBatchRequestByNonceRequest {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     contractAddress: "",
   };
 }
@@ -1814,9 +1844,9 @@ function createBaseQueryBatchRequestByNonceRequest(): QueryBatchRequestByNonceRe
 export const QueryBatchRequestByNonceRequest = {
   encode(
     message: QueryBatchRequestByNonceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -1828,10 +1858,11 @@ export const QueryBatchRequestByNonceRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchRequestByNonceRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchRequestByNonceRequest();
 
@@ -1840,7 +1871,7 @@ export const QueryBatchRequestByNonceRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -1858,7 +1889,7 @@ export const QueryBatchRequestByNonceRequest = {
 
   fromJSON(object: any): QueryBatchRequestByNonceRequest {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       contractAddress: isSet(object.contractAddress)
         ? String(object.contractAddress)
         : "",
@@ -1868,7 +1899,7 @@ export const QueryBatchRequestByNonceRequest = {
   toJSON(message: QueryBatchRequestByNonceRequest): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.contractAddress !== undefined &&
       (obj.contractAddress = message.contractAddress);
     return obj;
@@ -1880,8 +1911,8 @@ export const QueryBatchRequestByNonceRequest = {
     const message = createBaseQueryBatchRequestByNonceRequest();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.contractAddress = object.contractAddress ?? "";
     return message;
   },
@@ -1896,8 +1927,8 @@ function createBaseQueryBatchRequestByNonceResponse(): QueryBatchRequestByNonceR
 export const QueryBatchRequestByNonceResponse = {
   encode(
     message: QueryBatchRequestByNonceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.batch !== undefined) {
       OutgoingTxBatch.encode(message.batch, writer.uint32(10).fork()).ldelim();
     }
@@ -1906,10 +1937,11 @@ export const QueryBatchRequestByNonceResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchRequestByNonceResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchRequestByNonceResponse();
 
@@ -1961,7 +1993,7 @@ export const QueryBatchRequestByNonceResponse = {
 
 function createBaseQueryBatchConfirmsRequest(): QueryBatchConfirmsRequest {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     contractAddress: "",
   };
 }
@@ -1969,9 +2001,9 @@ function createBaseQueryBatchConfirmsRequest(): QueryBatchConfirmsRequest {
 export const QueryBatchConfirmsRequest = {
   encode(
     message: QueryBatchConfirmsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -1983,10 +2015,11 @@ export const QueryBatchConfirmsRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchConfirmsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchConfirmsRequest();
 
@@ -1995,7 +2028,7 @@ export const QueryBatchConfirmsRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -2013,7 +2046,7 @@ export const QueryBatchConfirmsRequest = {
 
   fromJSON(object: any): QueryBatchConfirmsRequest {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       contractAddress: isSet(object.contractAddress)
         ? String(object.contractAddress)
         : "",
@@ -2023,7 +2056,7 @@ export const QueryBatchConfirmsRequest = {
   toJSON(message: QueryBatchConfirmsRequest): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.contractAddress !== undefined &&
       (obj.contractAddress = message.contractAddress);
     return obj;
@@ -2035,8 +2068,8 @@ export const QueryBatchConfirmsRequest = {
     const message = createBaseQueryBatchConfirmsRequest();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.contractAddress = object.contractAddress ?? "";
     return message;
   },
@@ -2051,8 +2084,8 @@ function createBaseQueryBatchConfirmsResponse(): QueryBatchConfirmsResponse {
 export const QueryBatchConfirmsResponse = {
   encode(
     message: QueryBatchConfirmsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.confirms) {
       MsgConfirmBatch.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -2061,10 +2094,11 @@ export const QueryBatchConfirmsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryBatchConfirmsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryBatchConfirmsResponse();
 
@@ -2122,20 +2156,20 @@ export const QueryBatchConfirmsResponse = {
 function createBaseQueryLogicConfirmsRequest(): QueryLogicConfirmsRequest {
   return {
     invalidationId: new Uint8Array(),
-    invalidationNonce: Long.UZERO,
+    invalidationNonce: BigInt(0),
   };
 }
 
 export const QueryLogicConfirmsRequest = {
   encode(
     message: QueryLogicConfirmsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.invalidationId.length !== 0) {
       writer.uint32(10).bytes(message.invalidationId);
     }
 
-    if (!message.invalidationNonce.isZero()) {
+    if (message.invalidationNonce !== BigInt(0)) {
       writer.uint32(16).uint64(message.invalidationNonce);
     }
 
@@ -2143,10 +2177,11 @@ export const QueryLogicConfirmsRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLogicConfirmsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLogicConfirmsRequest();
 
@@ -2159,7 +2194,7 @@ export const QueryLogicConfirmsRequest = {
           break;
 
         case 2:
-          message.invalidationNonce = reader.uint64() as Long;
+          message.invalidationNonce = reader.uint64();
           break;
 
         default:
@@ -2177,8 +2212,8 @@ export const QueryLogicConfirmsRequest = {
         ? bytesFromBase64(object.invalidationId)
         : new Uint8Array(),
       invalidationNonce: isSet(object.invalidationNonce)
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO,
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0),
     };
   },
 
@@ -2192,7 +2227,7 @@ export const QueryLogicConfirmsRequest = {
       ));
     message.invalidationNonce !== undefined &&
       (obj.invalidationNonce = (
-        message.invalidationNonce || Long.UZERO
+        message.invalidationNonce || BigInt(0)
       ).toString());
     return obj;
   },
@@ -2205,8 +2240,8 @@ export const QueryLogicConfirmsRequest = {
     message.invalidationNonce =
       object.invalidationNonce !== undefined &&
       object.invalidationNonce !== null
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO;
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0);
     return message;
   },
 };
@@ -2220,8 +2255,8 @@ function createBaseQueryLogicConfirmsResponse(): QueryLogicConfirmsResponse {
 export const QueryLogicConfirmsResponse = {
   encode(
     message: QueryLogicConfirmsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.confirms) {
       MsgConfirmLogicCall.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -2230,10 +2265,11 @@ export const QueryLogicConfirmsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLogicConfirmsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLogicConfirmsResponse();
 
@@ -2297,8 +2333,8 @@ function createBaseQueryLastEventNonceByAddrRequest(): QueryLastEventNonceByAddr
 export const QueryLastEventNonceByAddrRequest = {
   encode(
     message: QueryLastEventNonceByAddrRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.address !== "") {
       writer.uint32(10).string(message.address);
     }
@@ -2307,10 +2343,11 @@ export const QueryLastEventNonceByAddrRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastEventNonceByAddrRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastEventNonceByAddrRequest();
 
@@ -2354,16 +2391,16 @@ export const QueryLastEventNonceByAddrRequest = {
 
 function createBaseQueryLastEventNonceByAddrResponse(): QueryLastEventNonceByAddrResponse {
   return {
-    eventNonce: Long.UZERO,
+    eventNonce: BigInt(0),
   };
 }
 
 export const QueryLastEventNonceByAddrResponse = {
   encode(
     message: QueryLastEventNonceByAddrResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
@@ -2371,10 +2408,11 @@ export const QueryLastEventNonceByAddrResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastEventNonceByAddrResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastEventNonceByAddrResponse();
 
@@ -2383,7 +2421,7 @@ export const QueryLastEventNonceByAddrResponse = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         default:
@@ -2398,15 +2436,15 @@ export const QueryLastEventNonceByAddrResponse = {
   fromJSON(object: any): QueryLastEventNonceByAddrResponse {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
     };
   },
 
   toJSON(message: QueryLastEventNonceByAddrResponse): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -2416,8 +2454,8 @@ export const QueryLastEventNonceByAddrResponse = {
     const message = createBaseQueryLastEventNonceByAddrResponse();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     return message;
   },
 };
@@ -2431,8 +2469,8 @@ function createBaseQueryERC20ToDenomRequest(): QueryERC20ToDenomRequest {
 export const QueryERC20ToDenomRequest = {
   encode(
     message: QueryERC20ToDenomRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.erc20 !== "") {
       writer.uint32(10).string(message.erc20);
     }
@@ -2441,10 +2479,11 @@ export const QueryERC20ToDenomRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryERC20ToDenomRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryERC20ToDenomRequest();
 
@@ -2496,8 +2535,8 @@ function createBaseQueryERC20ToDenomResponse(): QueryERC20ToDenomResponse {
 export const QueryERC20ToDenomResponse = {
   encode(
     message: QueryERC20ToDenomResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -2510,10 +2549,11 @@ export const QueryERC20ToDenomResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryERC20ToDenomResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryERC20ToDenomResponse();
 
@@ -2574,8 +2614,8 @@ function createBaseQueryDenomToERC20Request(): QueryDenomToERC20Request {
 export const QueryDenomToERC20Request = {
   encode(
     message: QueryDenomToERC20Request,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.denom !== "") {
       writer.uint32(10).string(message.denom);
     }
@@ -2584,10 +2624,11 @@ export const QueryDenomToERC20Request = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomToERC20Request {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomToERC20Request();
 
@@ -2639,8 +2680,8 @@ function createBaseQueryDenomToERC20Response(): QueryDenomToERC20Response {
 export const QueryDenomToERC20Response = {
   encode(
     message: QueryDenomToERC20Response,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.erc20 !== "") {
       writer.uint32(10).string(message.erc20);
     }
@@ -2653,10 +2694,11 @@ export const QueryDenomToERC20Response = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDenomToERC20Response {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDenomToERC20Response();
 
@@ -2717,8 +2759,8 @@ function createBaseQueryLastObservedEthBlockRequest(): QueryLastObservedEthBlock
 export const QueryLastObservedEthBlockRequest = {
   encode(
     message: QueryLastObservedEthBlockRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.useV1Key === true) {
       writer.uint32(8).bool(message.useV1Key);
     }
@@ -2727,10 +2769,11 @@ export const QueryLastObservedEthBlockRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastObservedEthBlockRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastObservedEthBlockRequest();
 
@@ -2774,16 +2817,16 @@ export const QueryLastObservedEthBlockRequest = {
 
 function createBaseQueryLastObservedEthBlockResponse(): QueryLastObservedEthBlockResponse {
   return {
-    block: Long.UZERO,
+    block: BigInt(0),
   };
 }
 
 export const QueryLastObservedEthBlockResponse = {
   encode(
     message: QueryLastObservedEthBlockResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.block.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.block !== BigInt(0)) {
       writer.uint32(8).uint64(message.block);
     }
 
@@ -2791,10 +2834,11 @@ export const QueryLastObservedEthBlockResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastObservedEthBlockResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastObservedEthBlockResponse();
 
@@ -2803,7 +2847,7 @@ export const QueryLastObservedEthBlockResponse = {
 
       switch (tag >>> 3) {
         case 1:
-          message.block = reader.uint64() as Long;
+          message.block = reader.uint64();
           break;
 
         default:
@@ -2817,14 +2861,14 @@ export const QueryLastObservedEthBlockResponse = {
 
   fromJSON(object: any): QueryLastObservedEthBlockResponse {
     return {
-      block: isSet(object.block) ? Long.fromValue(object.block) : Long.UZERO,
+      block: isSet(object.block) ? BigInt(object.block) : BigInt(0),
     };
   },
 
   toJSON(message: QueryLastObservedEthBlockResponse): unknown {
     const obj: any = {};
     message.block !== undefined &&
-      (obj.block = (message.block || Long.UZERO).toString());
+      (obj.block = (message.block || BigInt(0)).toString());
     return obj;
   },
 
@@ -2834,8 +2878,8 @@ export const QueryLastObservedEthBlockResponse = {
     const message = createBaseQueryLastObservedEthBlockResponse();
     message.block =
       object.block !== undefined && object.block !== null
-        ? Long.fromValue(object.block)
-        : Long.UZERO;
+        ? BigInt(object.block)
+        : BigInt(0);
     return message;
   },
 };
@@ -2849,8 +2893,8 @@ function createBaseQueryLastObservedEthNonceRequest(): QueryLastObservedEthNonce
 export const QueryLastObservedEthNonceRequest = {
   encode(
     message: QueryLastObservedEthNonceRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.useV1Key === true) {
       writer.uint32(8).bool(message.useV1Key);
     }
@@ -2859,10 +2903,11 @@ export const QueryLastObservedEthNonceRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastObservedEthNonceRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastObservedEthNonceRequest();
 
@@ -2906,16 +2951,16 @@ export const QueryLastObservedEthNonceRequest = {
 
 function createBaseQueryLastObservedEthNonceResponse(): QueryLastObservedEthNonceResponse {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
   };
 }
 
 export const QueryLastObservedEthNonceResponse = {
   encode(
     message: QueryLastObservedEthNonceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -2923,10 +2968,11 @@ export const QueryLastObservedEthNonceResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryLastObservedEthNonceResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryLastObservedEthNonceResponse();
 
@@ -2935,7 +2981,7 @@ export const QueryLastObservedEthNonceResponse = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         default:
@@ -2949,14 +2995,14 @@ export const QueryLastObservedEthNonceResponse = {
 
   fromJSON(object: any): QueryLastObservedEthNonceResponse {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
     };
   },
 
   toJSON(message: QueryLastObservedEthNonceResponse): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     return obj;
   },
 
@@ -2966,19 +3012,19 @@ export const QueryLastObservedEthNonceResponse = {
     const message = createBaseQueryLastObservedEthNonceResponse();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     return message;
   },
 };
 
 function createBaseQueryAttestationsRequest(): QueryAttestationsRequest {
   return {
-    limit: Long.UZERO,
+    limit: BigInt(0),
     orderBy: "",
     claimType: "",
-    nonce: Long.UZERO,
-    height: Long.UZERO,
+    nonce: BigInt(0),
+    height: BigInt(0),
     useV1Key: false,
   };
 }
@@ -2986,9 +3032,9 @@ function createBaseQueryAttestationsRequest(): QueryAttestationsRequest {
 export const QueryAttestationsRequest = {
   encode(
     message: QueryAttestationsRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.limit.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.limit !== BigInt(0)) {
       writer.uint32(8).uint64(message.limit);
     }
 
@@ -3000,11 +3046,11 @@ export const QueryAttestationsRequest = {
       writer.uint32(26).string(message.claimType);
     }
 
-    if (!message.nonce.isZero()) {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(32).uint64(message.nonce);
     }
 
-    if (!message.height.isZero()) {
+    if (message.height !== BigInt(0)) {
       writer.uint32(40).uint64(message.height);
     }
 
@@ -3016,10 +3062,11 @@ export const QueryAttestationsRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAttestationsRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAttestationsRequest();
 
@@ -3028,7 +3075,7 @@ export const QueryAttestationsRequest = {
 
       switch (tag >>> 3) {
         case 1:
-          message.limit = reader.uint64() as Long;
+          message.limit = reader.uint64();
           break;
 
         case 2:
@@ -3040,11 +3087,11 @@ export const QueryAttestationsRequest = {
           break;
 
         case 4:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 5:
-          message.height = reader.uint64() as Long;
+          message.height = reader.uint64();
           break;
 
         case 6:
@@ -3062,11 +3109,11 @@ export const QueryAttestationsRequest = {
 
   fromJSON(object: any): QueryAttestationsRequest {
     return {
-      limit: isSet(object.limit) ? Long.fromValue(object.limit) : Long.UZERO,
+      limit: isSet(object.limit) ? BigInt(object.limit) : BigInt(0),
       orderBy: isSet(object.orderBy) ? String(object.orderBy) : "",
       claimType: isSet(object.claimType) ? String(object.claimType) : "",
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
-      height: isSet(object.height) ? Long.fromValue(object.height) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
+      height: isSet(object.height) ? BigInt(object.height) : BigInt(0),
       useV1Key: isSet(object.useV1Key) ? Boolean(object.useV1Key) : false,
     };
   },
@@ -3074,13 +3121,13 @@ export const QueryAttestationsRequest = {
   toJSON(message: QueryAttestationsRequest): unknown {
     const obj: any = {};
     message.limit !== undefined &&
-      (obj.limit = (message.limit || Long.UZERO).toString());
+      (obj.limit = (message.limit || BigInt(0)).toString());
     message.orderBy !== undefined && (obj.orderBy = message.orderBy);
     message.claimType !== undefined && (obj.claimType = message.claimType);
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.height !== undefined &&
-      (obj.height = (message.height || Long.UZERO).toString());
+      (obj.height = (message.height || BigInt(0)).toString());
     message.useV1Key !== undefined && (obj.useV1Key = message.useV1Key);
     return obj;
   },
@@ -3091,18 +3138,18 @@ export const QueryAttestationsRequest = {
     const message = createBaseQueryAttestationsRequest();
     message.limit =
       object.limit !== undefined && object.limit !== null
-        ? Long.fromValue(object.limit)
-        : Long.UZERO;
+        ? BigInt(object.limit)
+        : BigInt(0);
     message.orderBy = object.orderBy ?? "";
     message.claimType = object.claimType ?? "";
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.height =
       object.height !== undefined && object.height !== null
-        ? Long.fromValue(object.height)
-        : Long.UZERO;
+        ? BigInt(object.height)
+        : BigInt(0);
     message.useV1Key = object.useV1Key ?? false;
     return message;
   },
@@ -3117,8 +3164,8 @@ function createBaseQueryAttestationsResponse(): QueryAttestationsResponse {
 export const QueryAttestationsResponse = {
   encode(
     message: QueryAttestationsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.attestations) {
       Attestation.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -3127,10 +3174,11 @@ export const QueryAttestationsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryAttestationsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryAttestationsResponse();
 
@@ -3194,8 +3242,8 @@ function createBaseQueryDelegateKeysByValidatorAddress(): QueryDelegateKeysByVal
 export const QueryDelegateKeysByValidatorAddress = {
   encode(
     message: QueryDelegateKeysByValidatorAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validatorAddress !== "") {
       writer.uint32(10).string(message.validatorAddress);
     }
@@ -3204,10 +3252,11 @@ export const QueryDelegateKeysByValidatorAddress = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByValidatorAddress {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByValidatorAddress();
 
@@ -3262,8 +3311,8 @@ function createBaseQueryDelegateKeysByValidatorAddressResponse(): QueryDelegateK
 export const QueryDelegateKeysByValidatorAddressResponse = {
   encode(
     message: QueryDelegateKeysByValidatorAddressResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.ethAddress !== "") {
       writer.uint32(10).string(message.ethAddress);
     }
@@ -3276,10 +3325,11 @@ export const QueryDelegateKeysByValidatorAddressResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByValidatorAddressResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByValidatorAddressResponse();
 
@@ -3340,8 +3390,8 @@ function createBaseQueryDelegateKeysByEthAddress(): QueryDelegateKeysByEthAddres
 export const QueryDelegateKeysByEthAddress = {
   encode(
     message: QueryDelegateKeysByEthAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.ethAddress !== "") {
       writer.uint32(10).string(message.ethAddress);
     }
@@ -3350,10 +3400,11 @@ export const QueryDelegateKeysByEthAddress = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByEthAddress {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByEthAddress();
 
@@ -3405,8 +3456,8 @@ function createBaseQueryDelegateKeysByEthAddressResponse(): QueryDelegateKeysByE
 export const QueryDelegateKeysByEthAddressResponse = {
   encode(
     message: QueryDelegateKeysByEthAddressResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validatorAddress !== "") {
       writer.uint32(10).string(message.validatorAddress);
     }
@@ -3419,10 +3470,11 @@ export const QueryDelegateKeysByEthAddressResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByEthAddressResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByEthAddressResponse();
 
@@ -3486,8 +3538,8 @@ function createBaseQueryDelegateKeysByOrchestratorAddress(): QueryDelegateKeysBy
 export const QueryDelegateKeysByOrchestratorAddress = {
   encode(
     message: QueryDelegateKeysByOrchestratorAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.orchestratorAddress !== "") {
       writer.uint32(10).string(message.orchestratorAddress);
     }
@@ -3496,10 +3548,11 @@ export const QueryDelegateKeysByOrchestratorAddress = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByOrchestratorAddress {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByOrchestratorAddress();
 
@@ -3554,8 +3607,8 @@ function createBaseQueryDelegateKeysByOrchestratorAddressResponse(): QueryDelega
 export const QueryDelegateKeysByOrchestratorAddressResponse = {
   encode(
     message: QueryDelegateKeysByOrchestratorAddressResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validatorAddress !== "") {
       writer.uint32(10).string(message.validatorAddress);
     }
@@ -3568,10 +3621,11 @@ export const QueryDelegateKeysByOrchestratorAddressResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryDelegateKeysByOrchestratorAddressResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryDelegateKeysByOrchestratorAddressResponse();
 
@@ -3632,8 +3686,8 @@ function createBaseQueryPendingSendToEth(): QueryPendingSendToEth {
 export const QueryPendingSendToEth = {
   encode(
     message: QueryPendingSendToEth,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.senderAddress !== "") {
       writer.uint32(10).string(message.senderAddress);
     }
@@ -3642,10 +3696,11 @@ export const QueryPendingSendToEth = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryPendingSendToEth {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPendingSendToEth();
 
@@ -3698,8 +3753,8 @@ function createBaseQueryPendingSendToEthResponse(): QueryPendingSendToEthRespons
 export const QueryPendingSendToEthResponse = {
   encode(
     message: QueryPendingSendToEthResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.transfersInBatches) {
       OutgoingTransferTx.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -3712,10 +3767,11 @@ export const QueryPendingSendToEthResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryPendingSendToEthResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPendingSendToEthResponse();
 
@@ -3799,16 +3855,16 @@ export const QueryPendingSendToEthResponse = {
 
 function createBaseQueryPendingIbcAutoForwards(): QueryPendingIbcAutoForwards {
   return {
-    limit: Long.UZERO,
+    limit: BigInt(0),
   };
 }
 
 export const QueryPendingIbcAutoForwards = {
   encode(
     message: QueryPendingIbcAutoForwards,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.limit.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.limit !== BigInt(0)) {
       writer.uint32(8).uint64(message.limit);
     }
 
@@ -3816,10 +3872,11 @@ export const QueryPendingIbcAutoForwards = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryPendingIbcAutoForwards {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPendingIbcAutoForwards();
 
@@ -3828,7 +3885,7 @@ export const QueryPendingIbcAutoForwards = {
 
       switch (tag >>> 3) {
         case 1:
-          message.limit = reader.uint64() as Long;
+          message.limit = reader.uint64();
           break;
 
         default:
@@ -3842,14 +3899,14 @@ export const QueryPendingIbcAutoForwards = {
 
   fromJSON(object: any): QueryPendingIbcAutoForwards {
     return {
-      limit: isSet(object.limit) ? Long.fromValue(object.limit) : Long.UZERO,
+      limit: isSet(object.limit) ? BigInt(object.limit) : BigInt(0),
     };
   },
 
   toJSON(message: QueryPendingIbcAutoForwards): unknown {
     const obj: any = {};
     message.limit !== undefined &&
-      (obj.limit = (message.limit || Long.UZERO).toString());
+      (obj.limit = (message.limit || BigInt(0)).toString());
     return obj;
   },
 
@@ -3859,8 +3916,8 @@ export const QueryPendingIbcAutoForwards = {
     const message = createBaseQueryPendingIbcAutoForwards();
     message.limit =
       object.limit !== undefined && object.limit !== null
-        ? Long.fromValue(object.limit)
-        : Long.UZERO;
+        ? BigInt(object.limit)
+        : BigInt(0);
     return message;
   },
 };
@@ -3874,8 +3931,8 @@ function createBaseQueryPendingIbcAutoForwardsResponse(): QueryPendingIbcAutoFor
 export const QueryPendingIbcAutoForwardsResponse = {
   encode(
     message: QueryPendingIbcAutoForwardsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     for (const v of message.pendingIbcAutoForwards) {
       PendingIbcAutoForward.encode(v!, writer.uint32(10).fork()).ldelim();
     }
@@ -3884,10 +3941,11 @@ export const QueryPendingIbcAutoForwardsResponse = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): QueryPendingIbcAutoForwardsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseQueryPendingIbcAutoForwardsResponse();
 
@@ -4065,7 +4123,7 @@ export class QueryClientImpl implements Query {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "Params", data);
     return promise.then((data) =>
-      QueryParamsResponse.decode(new _m0.Reader(data))
+      QueryParamsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4075,7 +4133,7 @@ export class QueryClientImpl implements Query {
     const data = QueryCurrentValsetRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "CurrentValset", data);
     return promise.then((data) =>
-      QueryCurrentValsetResponse.decode(new _m0.Reader(data))
+      QueryCurrentValsetResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4085,7 +4143,7 @@ export class QueryClientImpl implements Query {
     const data = QueryValsetRequestRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "ValsetRequest", data);
     return promise.then((data) =>
-      QueryValsetRequestResponse.decode(new _m0.Reader(data))
+      QueryValsetRequestResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4095,7 +4153,7 @@ export class QueryClientImpl implements Query {
     const data = QueryValsetConfirmRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "ValsetConfirm", data);
     return promise.then((data) =>
-      QueryValsetConfirmResponse.decode(new _m0.Reader(data))
+      QueryValsetConfirmResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4109,7 +4167,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryValsetConfirmsByNonceResponse.decode(new _m0.Reader(data))
+      QueryValsetConfirmsByNonceResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4123,7 +4181,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastValsetRequestsResponse.decode(new _m0.Reader(data))
+      QueryLastValsetRequestsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4138,7 +4196,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastPendingValsetRequestByAddrResponse.decode(new _m0.Reader(data))
+      QueryLastPendingValsetRequestByAddrResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4153,7 +4211,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastPendingBatchRequestByAddrResponse.decode(new _m0.Reader(data))
+      QueryLastPendingBatchRequestByAddrResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4168,7 +4226,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastPendingLogicCallByAddrResponse.decode(new _m0.Reader(data))
+      QueryLastPendingLogicCallByAddrResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4182,7 +4240,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastEventNonceByAddrResponse.decode(new _m0.Reader(data))
+      QueryLastEventNonceByAddrResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4192,7 +4250,7 @@ export class QueryClientImpl implements Query {
     const data = QueryBatchFeeRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "BatchFees", data);
     return promise.then((data) =>
-      QueryBatchFeeResponse.decode(new _m0.Reader(data))
+      QueryBatchFeeResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4206,7 +4264,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryOutgoingTxBatchesResponse.decode(new _m0.Reader(data))
+      QueryOutgoingTxBatchesResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4220,7 +4278,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryOutgoingLogicCallsResponse.decode(new _m0.Reader(data))
+      QueryOutgoingLogicCallsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4234,7 +4292,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryBatchRequestByNonceResponse.decode(new _m0.Reader(data))
+      QueryBatchRequestByNonceResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4244,7 +4302,7 @@ export class QueryClientImpl implements Query {
     const data = QueryBatchConfirmsRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "BatchConfirms", data);
     return promise.then((data) =>
-      QueryBatchConfirmsResponse.decode(new _m0.Reader(data))
+      QueryBatchConfirmsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4254,7 +4312,7 @@ export class QueryClientImpl implements Query {
     const data = QueryLogicConfirmsRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "LogicConfirms", data);
     return promise.then((data) =>
-      QueryLogicConfirmsResponse.decode(new _m0.Reader(data))
+      QueryLogicConfirmsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4264,7 +4322,7 @@ export class QueryClientImpl implements Query {
     const data = QueryERC20ToDenomRequest.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "ERC20ToDenom", data);
     return promise.then((data) =>
-      QueryERC20ToDenomResponse.decode(new _m0.Reader(data))
+      QueryERC20ToDenomResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4274,7 +4332,7 @@ export class QueryClientImpl implements Query {
     const data = QueryDenomToERC20Request.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Query", "DenomToERC20", data);
     return promise.then((data) =>
-      QueryDenomToERC20Response.decode(new _m0.Reader(data))
+      QueryDenomToERC20Response.decode(new BinaryReader(data))
     );
   }
 
@@ -4288,7 +4346,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastObservedEthBlockResponse.decode(new _m0.Reader(data))
+      QueryLastObservedEthBlockResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4302,7 +4360,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryLastObservedEthNonceResponse.decode(new _m0.Reader(data))
+      QueryLastObservedEthNonceResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4316,7 +4374,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryAttestationsResponse.decode(new _m0.Reader(data))
+      QueryAttestationsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4330,7 +4388,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryDelegateKeysByValidatorAddressResponse.decode(new _m0.Reader(data))
+      QueryDelegateKeysByValidatorAddressResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4344,7 +4402,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryDelegateKeysByEthAddressResponse.decode(new _m0.Reader(data))
+      QueryDelegateKeysByEthAddressResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4360,7 +4418,7 @@ export class QueryClientImpl implements Query {
     );
     return promise.then((data) =>
       QueryDelegateKeysByOrchestratorAddressResponse.decode(
-        new _m0.Reader(data)
+        new BinaryReader(data)
       )
     );
   }
@@ -4375,7 +4433,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryPendingSendToEthResponse.decode(new _m0.Reader(data))
+      QueryPendingSendToEthResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -4389,7 +4447,7 @@ export class QueryClientImpl implements Query {
       data
     );
     return promise.then((data) =>
-      QueryPendingIbcAutoForwardsResponse.decode(new _m0.Reader(data))
+      QueryPendingIbcAutoForwardsResponse.decode(new BinaryReader(data))
     );
   }
 }

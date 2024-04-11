@@ -1,9 +1,8 @@
 /* eslint-disable */
+import { BinaryReader, BinaryWriter } from "cosmjs-types/binary";
 import { Coin } from "cosmjs-types/cosmos/base/v1beta1/coin";
 import { Any } from "cosmjs-types/google/protobuf/any";
-import Long from "long";
-import * as _m0 from "protobufjs/minimal";
-import { base64FromBytes, bytesFromBase64, isSet, Rpc } from "./helpers";
+import { Rpc, base64FromBytes, bytesFromBase64, isSet } from "./helpers";
 import { BridgeValidator } from "./types";
 export const protobufPackage = "gravity.v1";
 /**
@@ -47,7 +46,7 @@ export interface MsgSetOrchestratorAddressResponse {}
  */
 
 export interface MsgValsetConfirm {
-  nonce: Long;
+  nonce: bigint;
   orchestrator: string;
   ethAddress: string;
   signature: string;
@@ -109,7 +108,7 @@ export interface MsgRequestBatchResponse {}
  */
 
 export interface MsgConfirmBatch {
-  nonce: Long;
+  nonce: bigint;
   tokenContract: string;
   ethSigner: string;
   orchestrator: string;
@@ -129,7 +128,7 @@ export interface MsgConfirmBatchResponse {}
 
 export interface MsgConfirmLogicCall {
   invalidationId: string;
-  invalidationNonce: Long;
+  invalidationNonce: bigint;
   ethSigner: string;
   orchestrator: string;
   signature: string;
@@ -144,8 +143,8 @@ export interface MsgConfirmLogicCallResponse {}
  */
 
 export interface MsgSendToCosmosClaim {
-  eventNonce: Long;
-  ethBlockHeight: Long;
+  eventNonce: bigint;
+  ethBlockHeight: bigint;
   tokenContract: string;
   amount: string;
   ethereumSender: string;
@@ -162,7 +161,7 @@ export interface MsgSendToCosmosClaimResponse {}
 
 export interface MsgExecuteIbcAutoForwards {
   /** How many queued forwards to clear, be careful about gas limits */
-  forwardsToClear: Long;
+  forwardsToClear: bigint;
   /** This message's sender */
 
   executor: string;
@@ -174,9 +173,9 @@ export interface MsgExecuteIbcAutoForwardsResponse {}
  */
 
 export interface MsgBatchSendToEthClaim {
-  eventNonce: Long;
-  ethBlockHeight: Long;
-  batchNonce: Long;
+  eventNonce: bigint;
+  ethBlockHeight: bigint;
+  batchNonce: bigint;
   tokenContract: string;
   orchestrator: string;
 }
@@ -188,13 +187,13 @@ export interface MsgBatchSendToEthClaimResponse {}
  */
 
 export interface MsgERC20DeployedClaim {
-  eventNonce: Long;
-  ethBlockHeight: Long;
+  eventNonce: bigint;
+  ethBlockHeight: bigint;
   cosmosDenom: string;
   tokenContract: string;
   name: string;
   symbol: string;
-  decimals: Long;
+  decimals: bigint;
   orchestrator: string;
 }
 export interface MsgERC20DeployedClaimResponse {}
@@ -204,10 +203,10 @@ export interface MsgERC20DeployedClaimResponse {}
  */
 
 export interface MsgLogicCallExecutedClaim {
-  eventNonce: Long;
-  ethBlockHeight: Long;
+  eventNonce: bigint;
+  ethBlockHeight: bigint;
   invalidationId: Uint8Array;
-  invalidationNonce: Long;
+  invalidationNonce: bigint;
   orchestrator: string;
 }
 export interface MsgLogicCallExecutedClaimResponse {}
@@ -217,9 +216,9 @@ export interface MsgLogicCallExecutedClaimResponse {}
  */
 
 export interface MsgValsetUpdatedClaim {
-  eventNonce: Long;
-  valsetNonce: Long;
-  ethBlockHeight: Long;
+  eventNonce: bigint;
+  valsetNonce: bigint;
+  ethBlockHeight: bigint;
   members: BridgeValidator[];
   rewardAmount: string;
   rewardToken: string;
@@ -233,7 +232,7 @@ export interface MsgValsetUpdatedClaimResponse {}
  */
 
 export interface MsgCancelSendToEth {
-  transactionId: Long;
+  transactionId: bigint;
   sender: string;
 }
 export interface MsgCancelSendToEthResponse {}
@@ -321,8 +320,8 @@ function createBaseMsgSetOrchestratorAddress(): MsgSetOrchestratorAddress {
 export const MsgSetOrchestratorAddress = {
   encode(
     message: MsgSetOrchestratorAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.validator !== "") {
       writer.uint32(10).string(message.validator);
     }
@@ -339,10 +338,11 @@ export const MsgSetOrchestratorAddress = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSetOrchestratorAddress {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetOrchestratorAddress();
 
@@ -408,16 +408,17 @@ function createBaseMsgSetOrchestratorAddressResponse(): MsgSetOrchestratorAddres
 export const MsgSetOrchestratorAddressResponse = {
   encode(
     _: MsgSetOrchestratorAddressResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSetOrchestratorAddressResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSetOrchestratorAddressResponse();
 
@@ -453,7 +454,7 @@ export const MsgSetOrchestratorAddressResponse = {
 
 function createBaseMsgValsetConfirm(): MsgValsetConfirm {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     orchestrator: "",
     ethAddress: "",
     signature: "",
@@ -463,9 +464,9 @@ function createBaseMsgValsetConfirm(): MsgValsetConfirm {
 export const MsgValsetConfirm = {
   encode(
     message: MsgValsetConfirm,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -484,8 +485,9 @@ export const MsgValsetConfirm = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgValsetConfirm {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgValsetConfirm {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgValsetConfirm();
 
@@ -494,7 +496,7 @@ export const MsgValsetConfirm = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -520,7 +522,7 @@ export const MsgValsetConfirm = {
 
   fromJSON(object: any): MsgValsetConfirm {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       orchestrator: isSet(object.orchestrator)
         ? String(object.orchestrator)
         : "",
@@ -532,7 +534,7 @@ export const MsgValsetConfirm = {
   toJSON(message: MsgValsetConfirm): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.orchestrator !== undefined &&
       (obj.orchestrator = message.orchestrator);
     message.ethAddress !== undefined && (obj.ethAddress = message.ethAddress);
@@ -544,8 +546,8 @@ export const MsgValsetConfirm = {
     const message = createBaseMsgValsetConfirm();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.orchestrator = object.orchestrator ?? "";
     message.ethAddress = object.ethAddress ?? "";
     message.signature = object.signature ?? "";
@@ -560,16 +562,17 @@ function createBaseMsgValsetConfirmResponse(): MsgValsetConfirmResponse {
 export const MsgValsetConfirmResponse = {
   encode(
     _: MsgValsetConfirmResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgValsetConfirmResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgValsetConfirmResponse();
 
@@ -614,8 +617,8 @@ function createBaseMsgSendToEth(): MsgSendToEth {
 export const MsgSendToEth = {
   encode(
     message: MsgSendToEth,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -639,8 +642,9 @@ export const MsgSendToEth = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgSendToEth {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgSendToEth {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSendToEth();
 
@@ -735,16 +739,17 @@ function createBaseMsgSendToEthResponse(): MsgSendToEthResponse {
 export const MsgSendToEthResponse = {
   encode(
     _: MsgSendToEthResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSendToEthResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSendToEthResponse();
 
@@ -786,8 +791,8 @@ function createBaseMsgRequestBatch(): MsgRequestBatch {
 export const MsgRequestBatch = {
   encode(
     message: MsgRequestBatch,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -799,8 +804,9 @@ export const MsgRequestBatch = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgRequestBatch {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgRequestBatch {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRequestBatch();
 
@@ -854,16 +860,17 @@ function createBaseMsgRequestBatchResponse(): MsgRequestBatchResponse {
 export const MsgRequestBatchResponse = {
   encode(
     _: MsgRequestBatchResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgRequestBatchResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgRequestBatchResponse();
 
@@ -897,7 +904,7 @@ export const MsgRequestBatchResponse = {
 
 function createBaseMsgConfirmBatch(): MsgConfirmBatch {
   return {
-    nonce: Long.UZERO,
+    nonce: BigInt(0),
     tokenContract: "",
     ethSigner: "",
     orchestrator: "",
@@ -908,9 +915,9 @@ function createBaseMsgConfirmBatch(): MsgConfirmBatch {
 export const MsgConfirmBatch = {
   encode(
     message: MsgConfirmBatch,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.nonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.nonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.nonce);
     }
 
@@ -933,8 +940,9 @@ export const MsgConfirmBatch = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmBatch {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): MsgConfirmBatch {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgConfirmBatch();
 
@@ -943,7 +951,7 @@ export const MsgConfirmBatch = {
 
       switch (tag >>> 3) {
         case 1:
-          message.nonce = reader.uint64() as Long;
+          message.nonce = reader.uint64();
           break;
 
         case 2:
@@ -973,7 +981,7 @@ export const MsgConfirmBatch = {
 
   fromJSON(object: any): MsgConfirmBatch {
     return {
-      nonce: isSet(object.nonce) ? Long.fromValue(object.nonce) : Long.UZERO,
+      nonce: isSet(object.nonce) ? BigInt(object.nonce) : BigInt(0),
       tokenContract: isSet(object.tokenContract)
         ? String(object.tokenContract)
         : "",
@@ -988,7 +996,7 @@ export const MsgConfirmBatch = {
   toJSON(message: MsgConfirmBatch): unknown {
     const obj: any = {};
     message.nonce !== undefined &&
-      (obj.nonce = (message.nonce || Long.UZERO).toString());
+      (obj.nonce = (message.nonce || BigInt(0)).toString());
     message.tokenContract !== undefined &&
       (obj.tokenContract = message.tokenContract);
     message.ethSigner !== undefined && (obj.ethSigner = message.ethSigner);
@@ -1002,8 +1010,8 @@ export const MsgConfirmBatch = {
     const message = createBaseMsgConfirmBatch();
     message.nonce =
       object.nonce !== undefined && object.nonce !== null
-        ? Long.fromValue(object.nonce)
-        : Long.UZERO;
+        ? BigInt(object.nonce)
+        : BigInt(0);
     message.tokenContract = object.tokenContract ?? "";
     message.ethSigner = object.ethSigner ?? "";
     message.orchestrator = object.orchestrator ?? "";
@@ -1019,16 +1027,17 @@ function createBaseMsgConfirmBatchResponse(): MsgConfirmBatchResponse {
 export const MsgConfirmBatchResponse = {
   encode(
     _: MsgConfirmBatchResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgConfirmBatchResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgConfirmBatchResponse();
 
@@ -1063,7 +1072,7 @@ export const MsgConfirmBatchResponse = {
 function createBaseMsgConfirmLogicCall(): MsgConfirmLogicCall {
   return {
     invalidationId: "",
-    invalidationNonce: Long.UZERO,
+    invalidationNonce: BigInt(0),
     ethSigner: "",
     orchestrator: "",
     signature: "",
@@ -1073,13 +1082,13 @@ function createBaseMsgConfirmLogicCall(): MsgConfirmLogicCall {
 export const MsgConfirmLogicCall = {
   encode(
     message: MsgConfirmLogicCall,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.invalidationId !== "") {
       writer.uint32(10).string(message.invalidationId);
     }
 
-    if (!message.invalidationNonce.isZero()) {
+    if (message.invalidationNonce !== BigInt(0)) {
       writer.uint32(16).uint64(message.invalidationNonce);
     }
 
@@ -1098,8 +1107,12 @@ export const MsgConfirmLogicCall = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgConfirmLogicCall {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgConfirmLogicCall {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgConfirmLogicCall();
 
@@ -1112,7 +1125,7 @@ export const MsgConfirmLogicCall = {
           break;
 
         case 2:
-          message.invalidationNonce = reader.uint64() as Long;
+          message.invalidationNonce = reader.uint64();
           break;
 
         case 3:
@@ -1142,8 +1155,8 @@ export const MsgConfirmLogicCall = {
         ? String(object.invalidationId)
         : "",
       invalidationNonce: isSet(object.invalidationNonce)
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO,
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0),
       ethSigner: isSet(object.ethSigner) ? String(object.ethSigner) : "",
       orchestrator: isSet(object.orchestrator)
         ? String(object.orchestrator)
@@ -1158,7 +1171,7 @@ export const MsgConfirmLogicCall = {
       (obj.invalidationId = message.invalidationId);
     message.invalidationNonce !== undefined &&
       (obj.invalidationNonce = (
-        message.invalidationNonce || Long.UZERO
+        message.invalidationNonce || BigInt(0)
       ).toString());
     message.ethSigner !== undefined && (obj.ethSigner = message.ethSigner);
     message.orchestrator !== undefined &&
@@ -1173,8 +1186,8 @@ export const MsgConfirmLogicCall = {
     message.invalidationNonce =
       object.invalidationNonce !== undefined &&
       object.invalidationNonce !== null
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO;
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0);
     message.ethSigner = object.ethSigner ?? "";
     message.orchestrator = object.orchestrator ?? "";
     message.signature = object.signature ?? "";
@@ -1189,16 +1202,17 @@ function createBaseMsgConfirmLogicCallResponse(): MsgConfirmLogicCallResponse {
 export const MsgConfirmLogicCallResponse = {
   encode(
     _: MsgConfirmLogicCallResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgConfirmLogicCallResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgConfirmLogicCallResponse();
 
@@ -1234,8 +1248,8 @@ export const MsgConfirmLogicCallResponse = {
 
 function createBaseMsgSendToCosmosClaim(): MsgSendToCosmosClaim {
   return {
-    eventNonce: Long.UZERO,
-    ethBlockHeight: Long.UZERO,
+    eventNonce: BigInt(0),
+    ethBlockHeight: BigInt(0),
     tokenContract: "",
     amount: "",
     ethereumSender: "",
@@ -1247,13 +1261,13 @@ function createBaseMsgSendToCosmosClaim(): MsgSendToCosmosClaim {
 export const MsgSendToCosmosClaim = {
   encode(
     message: MsgSendToCosmosClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
-    if (!message.ethBlockHeight.isZero()) {
+    if (message.ethBlockHeight !== BigInt(0)) {
       writer.uint32(16).uint64(message.ethBlockHeight);
     }
 
@@ -1281,10 +1295,11 @@ export const MsgSendToCosmosClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSendToCosmosClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSendToCosmosClaim();
 
@@ -1293,11 +1308,11 @@ export const MsgSendToCosmosClaim = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         case 2:
-          message.ethBlockHeight = reader.uint64() as Long;
+          message.ethBlockHeight = reader.uint64();
           break;
 
         case 3:
@@ -1332,11 +1347,11 @@ export const MsgSendToCosmosClaim = {
   fromJSON(object: any): MsgSendToCosmosClaim {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
       ethBlockHeight: isSet(object.ethBlockHeight)
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0),
       tokenContract: isSet(object.tokenContract)
         ? String(object.tokenContract)
         : "",
@@ -1356,9 +1371,9 @@ export const MsgSendToCosmosClaim = {
   toJSON(message: MsgSendToCosmosClaim): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     message.ethBlockHeight !== undefined &&
-      (obj.ethBlockHeight = (message.ethBlockHeight || Long.UZERO).toString());
+      (obj.ethBlockHeight = (message.ethBlockHeight || BigInt(0)).toString());
     message.tokenContract !== undefined &&
       (obj.tokenContract = message.tokenContract);
     message.amount !== undefined && (obj.amount = message.amount);
@@ -1375,12 +1390,12 @@ export const MsgSendToCosmosClaim = {
     const message = createBaseMsgSendToCosmosClaim();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     message.ethBlockHeight =
       object.ethBlockHeight !== undefined && object.ethBlockHeight !== null
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0);
     message.tokenContract = object.tokenContract ?? "";
     message.amount = object.amount ?? "";
     message.ethereumSender = object.ethereumSender ?? "";
@@ -1397,16 +1412,17 @@ function createBaseMsgSendToCosmosClaimResponse(): MsgSendToCosmosClaimResponse 
 export const MsgSendToCosmosClaimResponse = {
   encode(
     _: MsgSendToCosmosClaimResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSendToCosmosClaimResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSendToCosmosClaimResponse();
 
@@ -1442,7 +1458,7 @@ export const MsgSendToCosmosClaimResponse = {
 
 function createBaseMsgExecuteIbcAutoForwards(): MsgExecuteIbcAutoForwards {
   return {
-    forwardsToClear: Long.UZERO,
+    forwardsToClear: BigInt(0),
     executor: "",
   };
 }
@@ -1450,9 +1466,9 @@ function createBaseMsgExecuteIbcAutoForwards(): MsgExecuteIbcAutoForwards {
 export const MsgExecuteIbcAutoForwards = {
   encode(
     message: MsgExecuteIbcAutoForwards,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.forwardsToClear.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.forwardsToClear !== BigInt(0)) {
       writer.uint32(8).uint64(message.forwardsToClear);
     }
 
@@ -1464,10 +1480,11 @@ export const MsgExecuteIbcAutoForwards = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgExecuteIbcAutoForwards {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgExecuteIbcAutoForwards();
 
@@ -1476,7 +1493,7 @@ export const MsgExecuteIbcAutoForwards = {
 
       switch (tag >>> 3) {
         case 1:
-          message.forwardsToClear = reader.uint64() as Long;
+          message.forwardsToClear = reader.uint64();
           break;
 
         case 2:
@@ -1495,8 +1512,8 @@ export const MsgExecuteIbcAutoForwards = {
   fromJSON(object: any): MsgExecuteIbcAutoForwards {
     return {
       forwardsToClear: isSet(object.forwardsToClear)
-        ? Long.fromValue(object.forwardsToClear)
-        : Long.UZERO,
+        ? BigInt(object.forwardsToClear)
+        : BigInt(0),
       executor: isSet(object.executor) ? String(object.executor) : "",
     };
   },
@@ -1504,9 +1521,7 @@ export const MsgExecuteIbcAutoForwards = {
   toJSON(message: MsgExecuteIbcAutoForwards): unknown {
     const obj: any = {};
     message.forwardsToClear !== undefined &&
-      (obj.forwardsToClear = (
-        message.forwardsToClear || Long.UZERO
-      ).toString());
+      (obj.forwardsToClear = (message.forwardsToClear || BigInt(0)).toString());
     message.executor !== undefined && (obj.executor = message.executor);
     return obj;
   },
@@ -1517,8 +1532,8 @@ export const MsgExecuteIbcAutoForwards = {
     const message = createBaseMsgExecuteIbcAutoForwards();
     message.forwardsToClear =
       object.forwardsToClear !== undefined && object.forwardsToClear !== null
-        ? Long.fromValue(object.forwardsToClear)
-        : Long.UZERO;
+        ? BigInt(object.forwardsToClear)
+        : BigInt(0);
     message.executor = object.executor ?? "";
     return message;
   },
@@ -1531,16 +1546,17 @@ function createBaseMsgExecuteIbcAutoForwardsResponse(): MsgExecuteIbcAutoForward
 export const MsgExecuteIbcAutoForwardsResponse = {
   encode(
     _: MsgExecuteIbcAutoForwardsResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgExecuteIbcAutoForwardsResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgExecuteIbcAutoForwardsResponse();
 
@@ -1576,9 +1592,9 @@ export const MsgExecuteIbcAutoForwardsResponse = {
 
 function createBaseMsgBatchSendToEthClaim(): MsgBatchSendToEthClaim {
   return {
-    eventNonce: Long.UZERO,
-    ethBlockHeight: Long.UZERO,
-    batchNonce: Long.UZERO,
+    eventNonce: BigInt(0),
+    ethBlockHeight: BigInt(0),
+    batchNonce: BigInt(0),
     tokenContract: "",
     orchestrator: "",
   };
@@ -1587,17 +1603,17 @@ function createBaseMsgBatchSendToEthClaim(): MsgBatchSendToEthClaim {
 export const MsgBatchSendToEthClaim = {
   encode(
     message: MsgBatchSendToEthClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
-    if (!message.ethBlockHeight.isZero()) {
+    if (message.ethBlockHeight !== BigInt(0)) {
       writer.uint32(16).uint64(message.ethBlockHeight);
     }
 
-    if (!message.batchNonce.isZero()) {
+    if (message.batchNonce !== BigInt(0)) {
       writer.uint32(24).uint64(message.batchNonce);
     }
 
@@ -1613,10 +1629,11 @@ export const MsgBatchSendToEthClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgBatchSendToEthClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBatchSendToEthClaim();
 
@@ -1625,15 +1642,15 @@ export const MsgBatchSendToEthClaim = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         case 2:
-          message.ethBlockHeight = reader.uint64() as Long;
+          message.ethBlockHeight = reader.uint64();
           break;
 
         case 3:
-          message.batchNonce = reader.uint64() as Long;
+          message.batchNonce = reader.uint64();
           break;
 
         case 4:
@@ -1656,14 +1673,14 @@ export const MsgBatchSendToEthClaim = {
   fromJSON(object: any): MsgBatchSendToEthClaim {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
       ethBlockHeight: isSet(object.ethBlockHeight)
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0),
       batchNonce: isSet(object.batchNonce)
-        ? Long.fromValue(object.batchNonce)
-        : Long.UZERO,
+        ? BigInt(object.batchNonce)
+        : BigInt(0),
       tokenContract: isSet(object.tokenContract)
         ? String(object.tokenContract)
         : "",
@@ -1676,11 +1693,11 @@ export const MsgBatchSendToEthClaim = {
   toJSON(message: MsgBatchSendToEthClaim): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     message.ethBlockHeight !== undefined &&
-      (obj.ethBlockHeight = (message.ethBlockHeight || Long.UZERO).toString());
+      (obj.ethBlockHeight = (message.ethBlockHeight || BigInt(0)).toString());
     message.batchNonce !== undefined &&
-      (obj.batchNonce = (message.batchNonce || Long.UZERO).toString());
+      (obj.batchNonce = (message.batchNonce || BigInt(0)).toString());
     message.tokenContract !== undefined &&
       (obj.tokenContract = message.tokenContract);
     message.orchestrator !== undefined &&
@@ -1692,16 +1709,16 @@ export const MsgBatchSendToEthClaim = {
     const message = createBaseMsgBatchSendToEthClaim();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     message.ethBlockHeight =
       object.ethBlockHeight !== undefined && object.ethBlockHeight !== null
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0);
     message.batchNonce =
       object.batchNonce !== undefined && object.batchNonce !== null
-        ? Long.fromValue(object.batchNonce)
-        : Long.UZERO;
+        ? BigInt(object.batchNonce)
+        : BigInt(0);
     message.tokenContract = object.tokenContract ?? "";
     message.orchestrator = object.orchestrator ?? "";
     return message;
@@ -1715,16 +1732,17 @@ function createBaseMsgBatchSendToEthClaimResponse(): MsgBatchSendToEthClaimRespo
 export const MsgBatchSendToEthClaimResponse = {
   encode(
     _: MsgBatchSendToEthClaimResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgBatchSendToEthClaimResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgBatchSendToEthClaimResponse();
 
@@ -1760,13 +1778,13 @@ export const MsgBatchSendToEthClaimResponse = {
 
 function createBaseMsgERC20DeployedClaim(): MsgERC20DeployedClaim {
   return {
-    eventNonce: Long.UZERO,
-    ethBlockHeight: Long.UZERO,
+    eventNonce: BigInt(0),
+    ethBlockHeight: BigInt(0),
     cosmosDenom: "",
     tokenContract: "",
     name: "",
     symbol: "",
-    decimals: Long.UZERO,
+    decimals: BigInt(0),
     orchestrator: "",
   };
 }
@@ -1774,13 +1792,13 @@ function createBaseMsgERC20DeployedClaim(): MsgERC20DeployedClaim {
 export const MsgERC20DeployedClaim = {
   encode(
     message: MsgERC20DeployedClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
-    if (!message.ethBlockHeight.isZero()) {
+    if (message.ethBlockHeight !== BigInt(0)) {
       writer.uint32(16).uint64(message.ethBlockHeight);
     }
 
@@ -1800,7 +1818,7 @@ export const MsgERC20DeployedClaim = {
       writer.uint32(50).string(message.symbol);
     }
 
-    if (!message.decimals.isZero()) {
+    if (message.decimals !== BigInt(0)) {
       writer.uint32(56).uint64(message.decimals);
     }
 
@@ -1812,10 +1830,11 @@ export const MsgERC20DeployedClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgERC20DeployedClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgERC20DeployedClaim();
 
@@ -1824,11 +1843,11 @@ export const MsgERC20DeployedClaim = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         case 2:
-          message.ethBlockHeight = reader.uint64() as Long;
+          message.ethBlockHeight = reader.uint64();
           break;
 
         case 3:
@@ -1848,7 +1867,7 @@ export const MsgERC20DeployedClaim = {
           break;
 
         case 7:
-          message.decimals = reader.uint64() as Long;
+          message.decimals = reader.uint64();
           break;
 
         case 8:
@@ -1867,20 +1886,18 @@ export const MsgERC20DeployedClaim = {
   fromJSON(object: any): MsgERC20DeployedClaim {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
       ethBlockHeight: isSet(object.ethBlockHeight)
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0),
       cosmosDenom: isSet(object.cosmosDenom) ? String(object.cosmosDenom) : "",
       tokenContract: isSet(object.tokenContract)
         ? String(object.tokenContract)
         : "",
       name: isSet(object.name) ? String(object.name) : "",
       symbol: isSet(object.symbol) ? String(object.symbol) : "",
-      decimals: isSet(object.decimals)
-        ? Long.fromValue(object.decimals)
-        : Long.UZERO,
+      decimals: isSet(object.decimals) ? BigInt(object.decimals) : BigInt(0),
       orchestrator: isSet(object.orchestrator)
         ? String(object.orchestrator)
         : "",
@@ -1890,9 +1907,9 @@ export const MsgERC20DeployedClaim = {
   toJSON(message: MsgERC20DeployedClaim): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     message.ethBlockHeight !== undefined &&
-      (obj.ethBlockHeight = (message.ethBlockHeight || Long.UZERO).toString());
+      (obj.ethBlockHeight = (message.ethBlockHeight || BigInt(0)).toString());
     message.cosmosDenom !== undefined &&
       (obj.cosmosDenom = message.cosmosDenom);
     message.tokenContract !== undefined &&
@@ -1900,7 +1917,7 @@ export const MsgERC20DeployedClaim = {
     message.name !== undefined && (obj.name = message.name);
     message.symbol !== undefined && (obj.symbol = message.symbol);
     message.decimals !== undefined &&
-      (obj.decimals = (message.decimals || Long.UZERO).toString());
+      (obj.decimals = (message.decimals || BigInt(0)).toString());
     message.orchestrator !== undefined &&
       (obj.orchestrator = message.orchestrator);
     return obj;
@@ -1910,20 +1927,20 @@ export const MsgERC20DeployedClaim = {
     const message = createBaseMsgERC20DeployedClaim();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     message.ethBlockHeight =
       object.ethBlockHeight !== undefined && object.ethBlockHeight !== null
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0);
     message.cosmosDenom = object.cosmosDenom ?? "";
     message.tokenContract = object.tokenContract ?? "";
     message.name = object.name ?? "";
     message.symbol = object.symbol ?? "";
     message.decimals =
       object.decimals !== undefined && object.decimals !== null
-        ? Long.fromValue(object.decimals)
-        : Long.UZERO;
+        ? BigInt(object.decimals)
+        : BigInt(0);
     message.orchestrator = object.orchestrator ?? "";
     return message;
   },
@@ -1936,16 +1953,17 @@ function createBaseMsgERC20DeployedClaimResponse(): MsgERC20DeployedClaimRespons
 export const MsgERC20DeployedClaimResponse = {
   encode(
     _: MsgERC20DeployedClaimResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgERC20DeployedClaimResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgERC20DeployedClaimResponse();
 
@@ -1981,10 +1999,10 @@ export const MsgERC20DeployedClaimResponse = {
 
 function createBaseMsgLogicCallExecutedClaim(): MsgLogicCallExecutedClaim {
   return {
-    eventNonce: Long.UZERO,
-    ethBlockHeight: Long.UZERO,
+    eventNonce: BigInt(0),
+    ethBlockHeight: BigInt(0),
     invalidationId: new Uint8Array(),
-    invalidationNonce: Long.UZERO,
+    invalidationNonce: BigInt(0),
     orchestrator: "",
   };
 }
@@ -1992,13 +2010,13 @@ function createBaseMsgLogicCallExecutedClaim(): MsgLogicCallExecutedClaim {
 export const MsgLogicCallExecutedClaim = {
   encode(
     message: MsgLogicCallExecutedClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
-    if (!message.ethBlockHeight.isZero()) {
+    if (message.ethBlockHeight !== BigInt(0)) {
       writer.uint32(16).uint64(message.ethBlockHeight);
     }
 
@@ -2006,7 +2024,7 @@ export const MsgLogicCallExecutedClaim = {
       writer.uint32(26).bytes(message.invalidationId);
     }
 
-    if (!message.invalidationNonce.isZero()) {
+    if (message.invalidationNonce !== BigInt(0)) {
       writer.uint32(32).uint64(message.invalidationNonce);
     }
 
@@ -2018,10 +2036,11 @@ export const MsgLogicCallExecutedClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgLogicCallExecutedClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgLogicCallExecutedClaim();
 
@@ -2030,11 +2049,11 @@ export const MsgLogicCallExecutedClaim = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         case 2:
-          message.ethBlockHeight = reader.uint64() as Long;
+          message.ethBlockHeight = reader.uint64();
           break;
 
         case 3:
@@ -2042,7 +2061,7 @@ export const MsgLogicCallExecutedClaim = {
           break;
 
         case 4:
-          message.invalidationNonce = reader.uint64() as Long;
+          message.invalidationNonce = reader.uint64();
           break;
 
         case 5:
@@ -2061,17 +2080,17 @@ export const MsgLogicCallExecutedClaim = {
   fromJSON(object: any): MsgLogicCallExecutedClaim {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
       ethBlockHeight: isSet(object.ethBlockHeight)
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0),
       invalidationId: isSet(object.invalidationId)
         ? bytesFromBase64(object.invalidationId)
         : new Uint8Array(),
       invalidationNonce: isSet(object.invalidationNonce)
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO,
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0),
       orchestrator: isSet(object.orchestrator)
         ? String(object.orchestrator)
         : "",
@@ -2081,9 +2100,9 @@ export const MsgLogicCallExecutedClaim = {
   toJSON(message: MsgLogicCallExecutedClaim): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     message.ethBlockHeight !== undefined &&
-      (obj.ethBlockHeight = (message.ethBlockHeight || Long.UZERO).toString());
+      (obj.ethBlockHeight = (message.ethBlockHeight || BigInt(0)).toString());
     message.invalidationId !== undefined &&
       (obj.invalidationId = base64FromBytes(
         message.invalidationId !== undefined
@@ -2092,7 +2111,7 @@ export const MsgLogicCallExecutedClaim = {
       ));
     message.invalidationNonce !== undefined &&
       (obj.invalidationNonce = (
-        message.invalidationNonce || Long.UZERO
+        message.invalidationNonce || BigInt(0)
       ).toString());
     message.orchestrator !== undefined &&
       (obj.orchestrator = message.orchestrator);
@@ -2105,18 +2124,18 @@ export const MsgLogicCallExecutedClaim = {
     const message = createBaseMsgLogicCallExecutedClaim();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     message.ethBlockHeight =
       object.ethBlockHeight !== undefined && object.ethBlockHeight !== null
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0);
     message.invalidationId = object.invalidationId ?? new Uint8Array();
     message.invalidationNonce =
       object.invalidationNonce !== undefined &&
       object.invalidationNonce !== null
-        ? Long.fromValue(object.invalidationNonce)
-        : Long.UZERO;
+        ? BigInt(object.invalidationNonce)
+        : BigInt(0);
     message.orchestrator = object.orchestrator ?? "";
     return message;
   },
@@ -2129,16 +2148,17 @@ function createBaseMsgLogicCallExecutedClaimResponse(): MsgLogicCallExecutedClai
 export const MsgLogicCallExecutedClaimResponse = {
   encode(
     _: MsgLogicCallExecutedClaimResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgLogicCallExecutedClaimResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgLogicCallExecutedClaimResponse();
 
@@ -2174,9 +2194,9 @@ export const MsgLogicCallExecutedClaimResponse = {
 
 function createBaseMsgValsetUpdatedClaim(): MsgValsetUpdatedClaim {
   return {
-    eventNonce: Long.UZERO,
-    valsetNonce: Long.UZERO,
-    ethBlockHeight: Long.UZERO,
+    eventNonce: BigInt(0),
+    valsetNonce: BigInt(0),
+    ethBlockHeight: BigInt(0),
     members: [],
     rewardAmount: "",
     rewardToken: "",
@@ -2187,17 +2207,17 @@ function createBaseMsgValsetUpdatedClaim(): MsgValsetUpdatedClaim {
 export const MsgValsetUpdatedClaim = {
   encode(
     message: MsgValsetUpdatedClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.eventNonce.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.eventNonce !== BigInt(0)) {
       writer.uint32(8).uint64(message.eventNonce);
     }
 
-    if (!message.valsetNonce.isZero()) {
+    if (message.valsetNonce !== BigInt(0)) {
       writer.uint32(16).uint64(message.valsetNonce);
     }
 
-    if (!message.ethBlockHeight.isZero()) {
+    if (message.ethBlockHeight !== BigInt(0)) {
       writer.uint32(24).uint64(message.ethBlockHeight);
     }
 
@@ -2221,10 +2241,11 @@ export const MsgValsetUpdatedClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgValsetUpdatedClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgValsetUpdatedClaim();
 
@@ -2233,15 +2254,15 @@ export const MsgValsetUpdatedClaim = {
 
       switch (tag >>> 3) {
         case 1:
-          message.eventNonce = reader.uint64() as Long;
+          message.eventNonce = reader.uint64();
           break;
 
         case 2:
-          message.valsetNonce = reader.uint64() as Long;
+          message.valsetNonce = reader.uint64();
           break;
 
         case 3:
-          message.ethBlockHeight = reader.uint64() as Long;
+          message.ethBlockHeight = reader.uint64();
           break;
 
         case 4:
@@ -2272,14 +2293,14 @@ export const MsgValsetUpdatedClaim = {
   fromJSON(object: any): MsgValsetUpdatedClaim {
     return {
       eventNonce: isSet(object.eventNonce)
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO,
+        ? BigInt(object.eventNonce)
+        : BigInt(0),
       valsetNonce: isSet(object.valsetNonce)
-        ? Long.fromValue(object.valsetNonce)
-        : Long.UZERO,
+        ? BigInt(object.valsetNonce)
+        : BigInt(0),
       ethBlockHeight: isSet(object.ethBlockHeight)
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO,
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0),
       members: Array.isArray(object?.members)
         ? object.members.map((e: any) => BridgeValidator.fromJSON(e))
         : [],
@@ -2296,11 +2317,11 @@ export const MsgValsetUpdatedClaim = {
   toJSON(message: MsgValsetUpdatedClaim): unknown {
     const obj: any = {};
     message.eventNonce !== undefined &&
-      (obj.eventNonce = (message.eventNonce || Long.UZERO).toString());
+      (obj.eventNonce = (message.eventNonce || BigInt(0)).toString());
     message.valsetNonce !== undefined &&
-      (obj.valsetNonce = (message.valsetNonce || Long.UZERO).toString());
+      (obj.valsetNonce = (message.valsetNonce || BigInt(0)).toString());
     message.ethBlockHeight !== undefined &&
-      (obj.ethBlockHeight = (message.ethBlockHeight || Long.UZERO).toString());
+      (obj.ethBlockHeight = (message.ethBlockHeight || BigInt(0)).toString());
 
     if (message.members) {
       obj.members = message.members.map((e) =>
@@ -2323,16 +2344,16 @@ export const MsgValsetUpdatedClaim = {
     const message = createBaseMsgValsetUpdatedClaim();
     message.eventNonce =
       object.eventNonce !== undefined && object.eventNonce !== null
-        ? Long.fromValue(object.eventNonce)
-        : Long.UZERO;
+        ? BigInt(object.eventNonce)
+        : BigInt(0);
     message.valsetNonce =
       object.valsetNonce !== undefined && object.valsetNonce !== null
-        ? Long.fromValue(object.valsetNonce)
-        : Long.UZERO;
+        ? BigInt(object.valsetNonce)
+        : BigInt(0);
     message.ethBlockHeight =
       object.ethBlockHeight !== undefined && object.ethBlockHeight !== null
-        ? Long.fromValue(object.ethBlockHeight)
-        : Long.UZERO;
+        ? BigInt(object.ethBlockHeight)
+        : BigInt(0);
     message.members =
       object.members?.map((e) => BridgeValidator.fromPartial(e)) || [];
     message.rewardAmount = object.rewardAmount ?? "";
@@ -2349,16 +2370,17 @@ function createBaseMsgValsetUpdatedClaimResponse(): MsgValsetUpdatedClaimRespons
 export const MsgValsetUpdatedClaimResponse = {
   encode(
     _: MsgValsetUpdatedClaimResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgValsetUpdatedClaimResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgValsetUpdatedClaimResponse();
 
@@ -2394,7 +2416,7 @@ export const MsgValsetUpdatedClaimResponse = {
 
 function createBaseMsgCancelSendToEth(): MsgCancelSendToEth {
   return {
-    transactionId: Long.UZERO,
+    transactionId: BigInt(0),
     sender: "",
   };
 }
@@ -2402,9 +2424,9 @@ function createBaseMsgCancelSendToEth(): MsgCancelSendToEth {
 export const MsgCancelSendToEth = {
   encode(
     message: MsgCancelSendToEth,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
-    if (!message.transactionId.isZero()) {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
+    if (message.transactionId !== BigInt(0)) {
       writer.uint32(8).uint64(message.transactionId);
     }
 
@@ -2415,8 +2437,12 @@ export const MsgCancelSendToEth = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): MsgCancelSendToEth {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(
+    input: BinaryReader | Uint8Array,
+    length?: number
+  ): MsgCancelSendToEth {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCancelSendToEth();
 
@@ -2425,7 +2451,7 @@ export const MsgCancelSendToEth = {
 
       switch (tag >>> 3) {
         case 1:
-          message.transactionId = reader.uint64() as Long;
+          message.transactionId = reader.uint64();
           break;
 
         case 2:
@@ -2444,8 +2470,8 @@ export const MsgCancelSendToEth = {
   fromJSON(object: any): MsgCancelSendToEth {
     return {
       transactionId: isSet(object.transactionId)
-        ? Long.fromValue(object.transactionId)
-        : Long.UZERO,
+        ? BigInt(object.transactionId)
+        : BigInt(0),
       sender: isSet(object.sender) ? String(object.sender) : "",
     };
   },
@@ -2453,7 +2479,7 @@ export const MsgCancelSendToEth = {
   toJSON(message: MsgCancelSendToEth): unknown {
     const obj: any = {};
     message.transactionId !== undefined &&
-      (obj.transactionId = (message.transactionId || Long.UZERO).toString());
+      (obj.transactionId = (message.transactionId || BigInt(0)).toString());
     message.sender !== undefined && (obj.sender = message.sender);
     return obj;
   },
@@ -2462,8 +2488,8 @@ export const MsgCancelSendToEth = {
     const message = createBaseMsgCancelSendToEth();
     message.transactionId =
       object.transactionId !== undefined && object.transactionId !== null
-        ? Long.fromValue(object.transactionId)
-        : Long.UZERO;
+        ? BigInt(object.transactionId)
+        : BigInt(0);
     message.sender = object.sender ?? "";
     return message;
   },
@@ -2476,16 +2502,17 @@ function createBaseMsgCancelSendToEthResponse(): MsgCancelSendToEthResponse {
 export const MsgCancelSendToEthResponse = {
   encode(
     _: MsgCancelSendToEthResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgCancelSendToEthResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgCancelSendToEthResponse();
 
@@ -2530,8 +2557,8 @@ function createBaseMsgSubmitBadSignatureEvidence(): MsgSubmitBadSignatureEvidenc
 export const MsgSubmitBadSignatureEvidence = {
   encode(
     message: MsgSubmitBadSignatureEvidence,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.subject !== undefined) {
       Any.encode(message.subject, writer.uint32(10).fork()).ldelim();
     }
@@ -2548,10 +2575,11 @@ export const MsgSubmitBadSignatureEvidence = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSubmitBadSignatureEvidence {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSubmitBadSignatureEvidence();
 
@@ -2618,16 +2646,17 @@ function createBaseMsgSubmitBadSignatureEvidenceResponse(): MsgSubmitBadSignatur
 export const MsgSubmitBadSignatureEvidenceResponse = {
   encode(
     _: MsgSubmitBadSignatureEvidenceResponse,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     return writer;
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): MsgSubmitBadSignatureEvidenceResponse {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseMsgSubmitBadSignatureEvidenceResponse();
 
@@ -2671,8 +2700,8 @@ function createBaseEventSetOperatorAddress(): EventSetOperatorAddress {
 export const EventSetOperatorAddress = {
   encode(
     message: EventSetOperatorAddress,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -2685,10 +2714,11 @@ export const EventSetOperatorAddress = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSetOperatorAddress {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSetOperatorAddress();
 
@@ -2747,8 +2777,8 @@ function createBaseEventValsetConfirmKey(): EventValsetConfirmKey {
 export const EventValsetConfirmKey = {
   encode(
     message: EventValsetConfirmKey,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -2761,10 +2791,11 @@ export const EventValsetConfirmKey = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventValsetConfirmKey {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventValsetConfirmKey();
 
@@ -2821,8 +2852,8 @@ function createBaseEventBatchCreated(): EventBatchCreated {
 export const EventBatchCreated = {
   encode(
     message: EventBatchCreated,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -2834,8 +2865,9 @@ export const EventBatchCreated = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventBatchCreated {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EventBatchCreated {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventBatchCreated();
 
@@ -2892,8 +2924,8 @@ function createBaseEventBatchConfirmKey(): EventBatchConfirmKey {
 export const EventBatchConfirmKey = {
   encode(
     message: EventBatchConfirmKey,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -2906,10 +2938,11 @@ export const EventBatchConfirmKey = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventBatchConfirmKey {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventBatchConfirmKey();
 
@@ -2968,8 +3001,8 @@ function createBaseEventBatchSendToEthClaim(): EventBatchSendToEthClaim {
 export const EventBatchSendToEthClaim = {
   encode(
     message: EventBatchSendToEthClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.nonce !== "") {
       writer.uint32(10).string(message.nonce);
     }
@@ -2978,10 +3011,11 @@ export const EventBatchSendToEthClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventBatchSendToEthClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventBatchSendToEthClaim();
 
@@ -3034,8 +3068,8 @@ function createBaseEventClaim(): EventClaim {
 export const EventClaim = {
   encode(
     message: EventClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -3051,8 +3085,9 @@ export const EventClaim = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EventClaim {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventClaim();
 
@@ -3120,8 +3155,8 @@ function createBaseEventBadSignatureEvidence(): EventBadSignatureEvidence {
 export const EventBadSignatureEvidence = {
   encode(
     message: EventBadSignatureEvidence,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -3138,10 +3173,11 @@ export const EventBadSignatureEvidence = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventBadSignatureEvidence {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventBadSignatureEvidence();
 
@@ -3213,8 +3249,8 @@ function createBaseEventERC20DeployedClaim(): EventERC20DeployedClaim {
 export const EventERC20DeployedClaim = {
   encode(
     message: EventERC20DeployedClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.token !== "") {
       writer.uint32(10).string(message.token);
     }
@@ -3227,10 +3263,11 @@ export const EventERC20DeployedClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventERC20DeployedClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventERC20DeployedClaim();
 
@@ -3288,8 +3325,8 @@ function createBaseEventValsetUpdatedClaim(): EventValsetUpdatedClaim {
 export const EventValsetUpdatedClaim = {
   encode(
     message: EventValsetUpdatedClaim,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.nonce !== "") {
       writer.uint32(10).string(message.nonce);
     }
@@ -3298,10 +3335,11 @@ export const EventValsetUpdatedClaim = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventValsetUpdatedClaim {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventValsetUpdatedClaim();
 
@@ -3355,8 +3393,8 @@ function createBaseEventMultisigUpdateRequest(): EventMultisigUpdateRequest {
 export const EventMultisigUpdateRequest = {
   encode(
     message: EventMultisigUpdateRequest,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.bridgeContract !== "") {
       writer.uint32(10).string(message.bridgeContract);
     }
@@ -3377,10 +3415,11 @@ export const EventMultisigUpdateRequest = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventMultisigUpdateRequest {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventMultisigUpdateRequest();
 
@@ -3459,8 +3498,8 @@ function createBaseEventOutgoingLogicCallCanceled(): EventOutgoingLogicCallCance
 export const EventOutgoingLogicCallCanceled = {
   encode(
     message: EventOutgoingLogicCallCanceled,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.logicCallInvalidationId !== "") {
       writer.uint32(10).string(message.logicCallInvalidationId);
     }
@@ -3473,10 +3512,11 @@ export const EventOutgoingLogicCallCanceled = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventOutgoingLogicCallCanceled {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventOutgoingLogicCallCanceled();
 
@@ -3542,8 +3582,8 @@ function createBaseEventSignatureSlashing(): EventSignatureSlashing {
 export const EventSignatureSlashing = {
   encode(
     message: EventSignatureSlashing,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.type !== "") {
       writer.uint32(10).string(message.type);
     }
@@ -3556,10 +3596,11 @@ export const EventSignatureSlashing = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSignatureSlashing {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSignatureSlashing();
 
@@ -3616,8 +3657,8 @@ function createBaseEventOutgoingTxId(): EventOutgoingTxId {
 export const EventOutgoingTxId = {
   encode(
     message: EventOutgoingTxId,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.message !== "") {
       writer.uint32(10).string(message.message);
     }
@@ -3629,8 +3670,9 @@ export const EventOutgoingTxId = {
     return writer;
   },
 
-  decode(input: _m0.Reader | Uint8Array, length?: number): EventOutgoingTxId {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+  decode(input: BinaryReader | Uint8Array, length?: number): EventOutgoingTxId {
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventOutgoingTxId();
 
@@ -3688,8 +3730,8 @@ function createBaseEventSendToEthFeeCollected(): EventSendToEthFeeCollected {
 export const EventSendToEthFeeCollected = {
   encode(
     message: EventSendToEthFeeCollected,
-    writer: _m0.Writer = _m0.Writer.create()
-  ): _m0.Writer {
+    writer: BinaryWriter = BinaryWriter.create()
+  ): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
     }
@@ -3706,10 +3748,11 @@ export const EventSendToEthFeeCollected = {
   },
 
   decode(
-    input: _m0.Reader | Uint8Array,
+    input: BinaryReader | Uint8Array,
     length?: number
   ): EventSendToEthFeeCollected {
-    const reader = input instanceof _m0.Reader ? input : new _m0.Reader(input);
+    const reader =
+      input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
     const message = createBaseEventSendToEthFeeCollected();
 
@@ -3828,7 +3871,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgValsetConfirm.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Msg", "ValsetConfirm", data);
     return promise.then((data) =>
-      MsgValsetConfirmResponse.decode(new _m0.Reader(data))
+      MsgValsetConfirmResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3836,7 +3879,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgSendToEth.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Msg", "SendToEth", data);
     return promise.then((data) =>
-      MsgSendToEthResponse.decode(new _m0.Reader(data))
+      MsgSendToEthResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3844,7 +3887,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgRequestBatch.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Msg", "RequestBatch", data);
     return promise.then((data) =>
-      MsgRequestBatchResponse.decode(new _m0.Reader(data))
+      MsgRequestBatchResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3852,7 +3895,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgConfirmBatch.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Msg", "ConfirmBatch", data);
     return promise.then((data) =>
-      MsgConfirmBatchResponse.decode(new _m0.Reader(data))
+      MsgConfirmBatchResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3866,7 +3909,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgConfirmLogicCallResponse.decode(new _m0.Reader(data))
+      MsgConfirmLogicCallResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3880,7 +3923,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgSendToCosmosClaimResponse.decode(new _m0.Reader(data))
+      MsgSendToCosmosClaimResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3894,7 +3937,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgExecuteIbcAutoForwardsResponse.decode(new _m0.Reader(data))
+      MsgExecuteIbcAutoForwardsResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3908,7 +3951,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgBatchSendToEthClaimResponse.decode(new _m0.Reader(data))
+      MsgBatchSendToEthClaimResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3922,7 +3965,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgValsetUpdatedClaimResponse.decode(new _m0.Reader(data))
+      MsgValsetUpdatedClaimResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3936,7 +3979,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgERC20DeployedClaimResponse.decode(new _m0.Reader(data))
+      MsgERC20DeployedClaimResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3950,7 +3993,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgLogicCallExecutedClaimResponse.decode(new _m0.Reader(data))
+      MsgLogicCallExecutedClaimResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3964,7 +4007,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgSetOrchestratorAddressResponse.decode(new _m0.Reader(data))
+      MsgSetOrchestratorAddressResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3974,7 +4017,7 @@ export class MsgClientImpl implements Msg {
     const data = MsgCancelSendToEth.encode(request).finish();
     const promise = this.rpc.request("gravity.v1.Msg", "CancelSendToEth", data);
     return promise.then((data) =>
-      MsgCancelSendToEthResponse.decode(new _m0.Reader(data))
+      MsgCancelSendToEthResponse.decode(new BinaryReader(data))
     );
   }
 
@@ -3988,7 +4031,7 @@ export class MsgClientImpl implements Msg {
       data
     );
     return promise.then((data) =>
-      MsgSubmitBadSignatureEvidenceResponse.decode(new _m0.Reader(data))
+      MsgSubmitBadSignatureEvidenceResponse.decode(new BinaryReader(data))
     );
   }
 }
