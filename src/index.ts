@@ -20,6 +20,7 @@ export * from "./queryClient";
 export * from "./registry";
 export * as usk from "./usk";
 export * from "./utils";
+export * as wallets from "./wallets";
 
 if (util.Long !== Long) {
   util.Long = Long as any;
