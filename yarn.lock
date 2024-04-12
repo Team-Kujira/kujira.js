@@ -289,13 +289,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@keplr-wallet/types@npm:^0.11.12":
-  version: 0.11.63
-  resolution: "@keplr-wallet/types@npm:0.11.63"
+"@keplr-wallet/types@npm:^0.12.79":
+  version: 0.12.79
+  resolution: "@keplr-wallet/types@npm:0.12.79"
   dependencies:
-    axios: ^0.27.2
     long: ^4.0.0
-  checksum: 62a11509c6674f4312cfcc343e9b041f7274a4471414acb41dc72bcc031684c2a1742a255e12af8a81ceb7f9ffb5907b3b8082aee016597a2836ac1cb61eeaa1
+  checksum: a29a987f51fdc4fa1bfa133bac517cc42ecfed6c7c714667a39d6c45c6858726ac27bd5c5b71701d8d89ede268048fe7b0fde312abec15a6c12ed46cf1c8e832
   languageName: node
   linkType: hard
 
@@ -1098,16 +1097,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.27.2":
-  version: 0.27.2
-  resolution: "axios@npm:0.27.2"
-  dependencies:
-    follow-redirects: ^1.14.9
-    form-data: ^4.0.0
-  checksum: 38cb7540465fe8c4102850c4368053c21683af85c5fdf0ea619f9628abbcb59415d1e22ebc8a6390d2bbc9b58a9806c874f139767389c862ec9b772235f06854
-  languageName: node
-  linkType: hard
-
 "axios@npm:^1.6.0":
   version: 1.6.8
   resolution: "axios@npm:1.6.8"
@@ -1572,16 +1561,6 @@ __metadata:
   version: 1.1.0
   resolution: "filter-obj@npm:1.1.0"
   checksum: cf2104a7c45ff48e7f505b78a3991c8f7f30f28bd8106ef582721f321f1c6277f7751aacd5d83026cb079d9d5091082f588d14a72e7c5d720ece79118fa61e10
-  languageName: node
-  linkType: hard
-
-"follow-redirects@npm:^1.14.9":
-  version: 1.15.2
-  resolution: "follow-redirects@npm:1.15.2"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
   languageName: node
   linkType: hard
 
@@ -2075,7 +2054,7 @@ __metadata:
     "@cosmjs/stargate": ^0.32.3
     "@cosmos-kit/core": ^2.8.9
     "@ethersproject/bignumber": ^5.7.0
-    "@keplr-wallet/types": ^0.11.12
+    "@keplr-wallet/types": ^0.12.79
     "@leapwallet/cosmos-snap-provider": ^0.1.26
     "@types/google-protobuf": ^3.15.6
     "@walletconnect/sign-client": ^2.12.2
