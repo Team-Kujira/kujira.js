@@ -7,5 +7,5 @@ export declare class ReadOnly implements WalletI {
     static connect: (address: string) => Promise<ReadOnly>;
     onChange: (fn: (k: ReadOnly | null) => void) => void;
     disconnect: () => void;
-    signAndBroadcast: (rpc: string, msgs: EncodeObject[], gas: string, memo?: string) => Promise<DeliverTxResponse>;
+    signAndBroadcast: (rpc: string, msgs: EncodeObject[], gas?: string, memo?: string) => Promise<DeliverTxResponse>;
 }

@@ -1,4 +1,3 @@
-export * from "./cw3";
 export * from "./daoDao";
 export * from "./keplr";
 export * from "./leap";

@@ -13,5 +13,5 @@ export declare class Sonar implements WalletI {
     }) => Promise<Sonar>;
     onChange: (fn: (k: Sonar | null) => void) => void;
     disconnect: () => void;
-    signAndBroadcast: (rpc: string, msgs: EncodeObject[], feeDenom: string, memo?: string) => Promise<DeliverTxResponse>;
+    signAndBroadcast: (rpc: string, msgs: EncodeObject[], feeDenom?: string, memo?: string) => Promise<DeliverTxResponse>;
 }

@@ -20,7 +20,7 @@ export class ReadOnly implements WalletI {
   signAndBroadcast = async (
     rpc: string,
     msgs: EncodeObject[],
-    gas: string,
+    gas?: string,
     memo?: string
   ): Promise<DeliverTxResponse> => {
     throw new Error("Transaction signing not available in read-only mode");

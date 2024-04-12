@@ -106,7 +106,7 @@ export class Sonar implements WalletI {
   signAndBroadcast = async (
     rpc: string,
     msgs: EncodeObject[],
-    feeDenom: string,
+    feeDenom?: string,
     memo?: string
   ): Promise<DeliverTxResponse> => {
     const bytes = await this.connector.request<string>({

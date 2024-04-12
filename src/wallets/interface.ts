@@ -8,7 +8,7 @@ export interface WalletI {
   signAndBroadcast: (
     rpc: string,
     msgs: EncodeObject[],
-    feeDenom: string,
+    feeDenom?: string,
     memo?: string
   ) => Promise<DeliverTxResponse>;
 }
