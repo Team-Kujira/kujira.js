@@ -1,6 +1,7 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { ChainInfo, Keplr } from "@keplr-wallet/types";
+import { WalletI } from "./interface";
 declare global {
     interface Window {
         station: {
@@ -8,7 +9,7 @@ declare global {
         };
     }
 }
-export declare class Station {
+export declare class Station implements WalletI {
     account: AccountData;
     config: ChainInfo;
     private options?;

@@ -14,10 +14,11 @@ import {
 } from "@leapwallet/cosmos-snap-provider";
 import { aminoTypes } from "../amino";
 import { accountParser, registry } from "../registry";
+import { WalletI } from "./interface";
 
 type Options = { feeDenom: string };
 
-export class LeapSnap {
+export class LeapSnap implements WalletI {
   private constructor(
     public account: AccountData,
     private config: ChainInfo,

@@ -1,12 +1,13 @@
 import { AccountData, Coin, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
+import { WalletI } from "./interface";
 import { Keplr } from "./keplr";
 import { Leap } from "./leap";
 import { LeapSnap } from "./leapSnap";
 import { Sonar } from "./sonar";
 import { Station } from "./station";
 import { Xfi } from "./xfi";
-export declare class CW3Wallet {
+export declare class CW3Wallet implements WalletI {
     contract: string;
     wallet: Sonar | Keplr | Station | Leap | LeapSnap | Xfi;
     account: AccountData;

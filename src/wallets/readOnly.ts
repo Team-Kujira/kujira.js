@@ -1,8 +1,8 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
-import { Denom } from "../denom";
+import { WalletI } from "./interface";
 
-export class ReadOnly {
+export class ReadOnly implements WalletI {
   private constructor(public account: AccountData) {}
 
   static connect = async (address: string): Promise<ReadOnly> => {
@@ -20,7 +20,7 @@ export class ReadOnly {
   signAndBroadcast = async (
     rpc: string,
     msgs: EncodeObject[],
-    gas: Denom,
+    gas: string,
     memo?: string
   ): Promise<DeliverTxResponse> => {
     throw new Error("Transaction signing not available in read-only mode");

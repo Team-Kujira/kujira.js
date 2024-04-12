@@ -9,12 +9,13 @@ import { IframeClient, iframeWallet } from "@cosmos-kit/core/esm/iframe";
 import { ChainInfo } from "@keplr-wallet/types";
 import { aminoTypes } from "../amino";
 import { accountParser, registry } from "../registry";
+import { WalletI } from "./interface";
 
 const iframeClient = new IframeClient(iframeWallet);
 
 type Options = { feeDenom: string };
 
-export class DaoDao {
+export class DaoDao implements WalletI {
   private constructor(
     public account: AccountData & { label?: string },
     public config: ChainInfo,

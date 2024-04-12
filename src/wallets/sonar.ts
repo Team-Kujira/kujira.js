@@ -8,6 +8,7 @@ import Client, { SignClient } from "@walletconnect/sign-client";
 import { SessionTypes } from "@walletconnect/types";
 import { MAINNET } from "../network";
 import { registry } from "../registry";
+import { WalletI } from "./interface";
 
 const requiredNamespaces = {
   cosmos: {
@@ -39,7 +40,7 @@ const getAccounts = async (
 };
 
 // https://docs.walletconnect.com/2.0/javascript/sign/dapp-usage
-export class Sonar {
+export class Sonar implements WalletI {
   public account: AccountData;
 
   private constructor(

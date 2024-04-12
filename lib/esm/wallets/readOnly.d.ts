@@ -1,11 +1,11 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
-import { Denom } from "../denom";
-export declare class ReadOnly {
+import { WalletI } from "./interface";
+export declare class ReadOnly implements WalletI {
     account: AccountData;
     private constructor();
     static connect: (address: string) => Promise<ReadOnly>;
     onChange: (fn: (k: ReadOnly | null) => void) => void;
     disconnect: () => void;
-    signAndBroadcast: (rpc: string, msgs: EncodeObject[], gas: Denom, memo?: string) => Promise<DeliverTxResponse>;
+    signAndBroadcast: (rpc: string, msgs: EncodeObject[], gas: string, memo?: string) => Promise<DeliverTxResponse>;
 }

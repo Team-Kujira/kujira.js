@@ -1,6 +1,7 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { ChainInfo, Keplr, Window as KeplrWindow } from "@keplr-wallet/types";
+import { WalletI } from "./interface";
 declare global {
     interface Window extends KeplrWindow {
         xfi: {
@@ -8,7 +9,7 @@ declare global {
         };
     }
 }
-export declare class Xfi {
+export declare class Xfi implements WalletI {
     account: AccountData;
     config: ChainInfo;
     private options?;

@@ -2,6 +2,7 @@ import { AccountData, Coin, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { msg } from "../msg";
 import { registry } from "../registry";
+import { WalletI } from "./interface";
 import { Keplr } from "./keplr";
 import { Leap } from "./leap";
 import { LeapSnap } from "./leapSnap";
@@ -19,7 +20,7 @@ const toCosmosMsg = (encodeObject: EncodeObject): object => {
   };
 };
 
-export class CW3Wallet {
+export class CW3Wallet implements WalletI {
   public account: AccountData;
   constructor(
     public contract: string,

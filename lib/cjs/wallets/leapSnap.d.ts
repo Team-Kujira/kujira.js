@@ -1,7 +1,8 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { ChainInfo } from "@keplr-wallet/types";
-export declare class LeapSnap {
+import { WalletI } from "./interface";
+export declare class LeapSnap implements WalletI {
     account: AccountData;
     private config;
     private options?;

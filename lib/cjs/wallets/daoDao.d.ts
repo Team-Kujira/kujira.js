@@ -1,7 +1,8 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { ChainInfo } from "@keplr-wallet/types";
-export declare class DaoDao {
+import { WalletI } from "./interface";
+export declare class DaoDao implements WalletI {
     account: AccountData & {
         label?: string;
     };

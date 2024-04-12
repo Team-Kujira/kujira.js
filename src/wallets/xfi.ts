@@ -9,6 +9,7 @@ import { ChainInfo, Keplr, Window as KeplrWindow } from "@keplr-wallet/types";
 import { aminoTypes } from "../amino";
 import { accountParser, registry } from "../registry";
 import * as evmos from "./evmos";
+import { WalletI } from "./interface";
 import { castSigner } from "./utils";
 
 declare global {
@@ -19,7 +20,7 @@ declare global {
 
 type Options = { feeDenom: string };
 
-export class Xfi {
+export class Xfi implements WalletI {
   private constructor(
     public account: AccountData,
     public config: ChainInfo,

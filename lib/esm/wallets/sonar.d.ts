@@ -1,7 +1,8 @@
 import { AccountData, EncodeObject } from "@cosmjs/proto-signing";
 import { DeliverTxResponse } from "@cosmjs/stargate";
 import { SessionTypes } from "@walletconnect/types";
-export declare class Sonar {
+import { WalletI } from "./interface";
+export declare class Sonar implements WalletI {
     private connector;
     session: SessionTypes.Struct;
     account: AccountData;
