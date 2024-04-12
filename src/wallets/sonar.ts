@@ -10,9 +10,11 @@ import { MAINNET } from "../network";
 import { registry } from "../registry";
 import { WalletI } from "./interface";
 
+const chainId = "cosmos:kaiyo-1";
+
 const requiredNamespaces = {
   cosmos: {
-    chains: ["cosmos:kaiyo-1"],
+    chains: [chainId],
     methods: [],
     events: [],
   },
@@ -24,7 +26,7 @@ const getAccounts = async (
 ): Promise<AccountData[]> => {
   const res = await client.request<string>({
     topic: session.topic,
-    chainId: "cosmos:kaiyo-1",
+    chainId: chainId,
     request: {
       method: "cosmos_getAccounts",
       params: {},
@@ -75,8 +77,7 @@ export class Sonar implements WalletI {
     const { uri, approval } = await signClient.connect({
       requiredNamespaces,
       optionalNamespaces: {
-        cosmos: {
-          chains: [],
+        [chainId]: {
           methods: ["cosmos_signDirect", "cosmos_signAmino"],
           events: [],
         },
