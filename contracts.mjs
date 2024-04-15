@@ -5,7 +5,12 @@ import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
 
 const IDS = {
   [MAINNET]: {
-    fin: [63, 134, 162, 243],
+    fin: [
+      // legacy KUJI-USDC.axl
+      286,
+      // Current
+      283,
+    ],
     bow: [
       54, 126,
       // LSD Strategy
