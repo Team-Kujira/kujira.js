@@ -23,7 +23,7 @@ export const NOTICES = {
   kujira1kmw6fk5p7an27u8f3er08xrwvzlehczymgshkqxzfrxyrfleu2eqxykaln:
     "The RAC token from the Juno network has been replaced with a native token on Migaloo. See [their medium post](https://medium.com/@racoon-supply/rac-is-now-an-ibc-asset-1dccad0df7bb) for instructions on how to migrate",
   kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867:
-    "This pair uses legacy FIN code from the start of the Kujira Blockchain. In the interests of security, trading on this pair will be disabled after 15th May 2024, Please use the [Noble USDC](https://fin.kujira.network/trade/kujira1pw96huy6z02uk8hdpruk6g8u700dp8yxjhp46c24rwkzay2lfd3quqdum5) pair instead",
+    "This pair uses legacy FIN code from the start of the Kujira Blockchain. In the interests of security, trading on this pair has been disabled. Please use the [Noble USDC](https://fin.kujira.network/trade/kujira1pw96huy6z02uk8hdpruk6g8u700dp8yxjhp46c24rwkzay2lfd3quqdum5) pair instead. Existing orders may be withdrawn.",
 };
 
 import contracts from "../resources/contracts.json";
