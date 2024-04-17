@@ -55,18 +55,6 @@ export type Sale = {
     title: string;
     description: string;
     status: Status;
-} | {
-    idx: string;
-    amount: BigNumber;
-    owner: string;
-    beneficiary: string;
-    opens: Date;
-    closes: Date;
-    price: number;
-    title: string;
-    executed: Date | null;
-    retracted: Date | null;
-    description: string;
 };
 type Status = {
     live: {

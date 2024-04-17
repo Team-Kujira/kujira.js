@@ -88,31 +88,16 @@ export const castSale = (network: NETWORK, res: SaleResponse): Market => ({
   withdrawalFee: parseFloat(res.orca_config.withdrawal_fee),
 });
 
-export type Sale =
-  | {
-      idx: string;
-      amount: BigNumber;
-      owner: string;
-      beneficiary: string;
-      price: number;
-      title: string;
-      description: string;
-      status: Status;
-    }
-  // Legacy, mainnet
-  | {
-      idx: string;
-      amount: BigNumber;
-      owner: string;
-      beneficiary: string;
-      opens: Date;
-      closes: Date;
-      price: number;
-      title: string;
-      executed: Date | null;
-      retracted: Date | null;
-      description: string;
-    };
+export type Sale = {
+  idx: string;
+  amount: BigNumber;
+  owner: string;
+  beneficiary: string;
+  price: number;
+  title: string;
+  description: string;
+  status: Status;
+};
 
 type Status =
   | { live: { closesAt: Date } }
