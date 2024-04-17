@@ -7,7 +7,7 @@ const IDS = {
   [MAINNET]: {
     fin: [
       // legacy KUJI-USDC.axl
-      286,
+      287,
       // Current
       283,
     ],
@@ -42,7 +42,7 @@ const IDS = {
     ghostVault: [2348],
     ghostMarket: [2172],
     ghostMargin: [1950],
-    pilot: [1476],
+    pilot: [3297],
     bowMargin: [2666],
   },
 };
