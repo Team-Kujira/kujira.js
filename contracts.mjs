@@ -25,10 +25,10 @@ const IDS = {
     uskMarginLimit: [],
     calc: [157],
     ghostVault: [140],
-    ghostMarket: [136, 186, 280],
+    ghostMarket: [291],
     ghostMargin: [],
     pilot: [95],
-    bowMargin: [188],
+    bowMargin: [188, 290],
   },
   [TESTNET]: {
     fin: [31, 2229],

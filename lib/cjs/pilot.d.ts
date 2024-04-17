@@ -30,35 +30,6 @@ type SaleResponse = {
         withdrawal_fee: string;
         fee_address: string;
     };
-} | {
-    idx: string;
-    title: string;
-    description: string;
-    price: string;
-    owner: string;
-    beneficiary: string;
-    amount: {
-        denom: string;
-        amount: string;
-    };
-    opens: string;
-    closes: string;
-    executed: null | string;
-    retracted: null | string;
-    orca_address: string;
-    orca_config: {
-        owner: string;
-        markets: [];
-        bid_denom: string;
-        collateral_denom: string;
-        bid_threshold: string;
-        max_slot: number;
-        premium_rate_per_slot: string;
-        waiting_period: 600;
-        liquidation_fee: string;
-        withdrawal_fee: string;
-        fee_address: string;
-    };
 };
 type StatusResponse = {
     live: {
