@@ -1,5 +1,6 @@
 import { fromBech32 } from "@cosmjs/encoding";
 import { ProvenQuery } from "@cosmjs/stargate/build/queryclient/queryclient";
+import { Buffer } from "buffer";
 import { CommitmentProof } from "cosmjs-types/cosmos/ics23/v1/proofs";
 import { MerkleProof } from "cosmjs-types/ibc/core/commitment/v1/commitment";
 

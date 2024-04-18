@@ -6,6 +6,7 @@ import {
 } from "@cosmjs/stargate";
 import Client, { SignClient } from "@walletconnect/sign-client";
 import { SessionTypes } from "@walletconnect/types";
+import { Buffer } from "buffer";
 import { MAINNET } from "../network";
 import { registry } from "../registry";
 import { WalletI } from "./interface";

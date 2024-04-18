@@ -1,4 +1,5 @@
 import { sha256 } from "@cosmjs/crypto";
+import { Buffer } from "buffer";
 import { assets } from "chain-registry";
 import { MAINNET, TESTNET } from "./network";
 import contracts from "./resources/contracts.json";
