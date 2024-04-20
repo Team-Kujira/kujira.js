@@ -100,6 +100,7 @@ export type Sale = {
 };
 
 type Status =
+  | { pending: { opensAt: Date } }
   | { live: { closesAt: Date } }
   | { retracted: Date }
   | {

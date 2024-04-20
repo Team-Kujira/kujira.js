@@ -12,7 +12,7 @@ const IDS = {
       283,
     ],
     bow: [
-      54, 126,
+      54, 126, 294,
       // LSD Strategy
       158, 167,
       // Stable Strategy

@@ -57,6 +57,10 @@ export type Sale = {
     status: Status;
 };
 type Status = {
+    pending: {
+        opensAt: Date;
+    };
+} | {
     live: {
         closesAt: Date;
     };
