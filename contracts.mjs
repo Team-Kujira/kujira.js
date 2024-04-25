@@ -1,13 +1,14 @@
 import { HttpBatchClient, Tendermint34Client } from "@cosmjs/tendermint-rpc";
 import { PageRequest } from "cosmjs-types/cosmos/base/query/v1beta1/pagination.js";
 import fs from "fs";
-import { MAINNET, RPCS, TESTNET, kujiraQueryClient } from "./lib/cjs/index.js";
+import { MAINNET, RPCS, TESTNET } from "./lib/cjs/network.js";
+import { kujiraQueryClient } from "./lib/cjs/queryClient.js";
 
 const IDS = {
   [MAINNET]: {
     fin: [
       // legacy KUJI-USDC.axl
-      287,
+      295,
       // Current
       283,
     ],
@@ -27,12 +28,12 @@ const IDS = {
     ghostVault: [140],
     ghostMarket: [291],
     ghostMargin: [],
-    pilot: [95],
+    pilot: [296, 301],
     bowMargin: [188, 290],
   },
   [TESTNET]: {
-    fin: [31, 2229],
-    bow: [1925, 2362],
+    fin: [31, 2229, 3328],
+    bow: [1925, 2362, 3330],
     bowStaking: [439, 855],
     orca: [1952, 2923],
     uskMarket: [66, 136],
@@ -42,7 +43,7 @@ const IDS = {
     ghostVault: [2348],
     ghostMarket: [2172],
     ghostMargin: [1950],
-    pilot: [3297],
+    pilot: [3327],
     bowMargin: [2666],
   },
 };
