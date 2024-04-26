@@ -34,6 +34,7 @@ export const castConfig = (response: ConfigResponse): Config => ({
   denoms: [parseDenom(response.denoms[0]), parseDenom(response.denoms[1])],
   isBootstrapping: response.is_bootstrapping,
   decimalDelta: response.decimal_delta || 0,
+  precision: response.price_precision,
 });
 
 export type History = {

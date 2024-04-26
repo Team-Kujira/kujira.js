@@ -5,6 +5,7 @@ export type Config = {
     owner: string;
     denoms: [Denom, Denom];
     isBootstrapping: boolean;
+    precision: Precision;
     decimalDelta: number;
 };
 export type Order = {
