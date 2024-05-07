@@ -8,7 +8,7 @@ const IDS = {
   [MAINNET]: {
     fin: [
       // legacy KUJI-USDC.axl
-      295,
+      // 295,
       // Current
       283,
     ],
