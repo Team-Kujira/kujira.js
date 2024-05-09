@@ -18,7 +18,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.32.3",
     "@cosmjs/proto-signing": "^0.32.3",
     "@cosmjs/stargate": "^0.32.3",
-    "@cosmos-kit/core": "^2.8.9",
+    "@dao-dao/cosmiframe": "^0.1.0",
     "@ethersproject/bignumber": "^5.7.0",
     "@keplr-wallet/types": "^0.12.79",
     "@leapwallet/cosmos-snap-provider": "^0.1.26",

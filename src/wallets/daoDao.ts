@@ -5,13 +5,16 @@ import {
   GasPrice,
   SigningStargateClient,
 } from "@cosmjs/stargate";
-import { IframeClient, iframeWallet } from "@cosmos-kit/core/esm/iframe";
+import { Cosmiframe } from "@dao-dao/cosmiframe";
 import { ChainInfo } from "@keplr-wallet/types";
 import { aminoTypes } from "../amino";
 import { accountParser, registry } from "../registry";
 import { WalletI } from "./interface";
 
-const iframeClient = new IframeClient(iframeWallet);
+const cosmiframe = new Cosmiframe([
+  "https://daodao.zone",
+  "https://dao.daodao.zone",
+]);
 
 type Options = { feeDenom: string };
 
@@ -22,20 +25,25 @@ export class DaoDao implements WalletI {
     private options?: Options
   ) {}
 
-  static connect = (
+  static connect = async (
     config: ChainInfo,
     opts?: { feeDenom: string }
-  ): Promise<DaoDao> =>
-    iframeClient
+  ): Promise<DaoDao> => {
+    if (!(await cosmiframe.isReady())) {
+      throw new Error("DAO DAO Cosmiframe not ready");
+    }
+
+    return cosmiframe.p
       .connect(config.chainId)
       .then(() =>
-        iframeClient
+        cosmiframe.p
           .getAccount(config.chainId)
           .then(
             (account) =>
               new DaoDao({ ...account, label: account.username }, config, opts)
           )
       );
+  };
 
   public onChange = (fn: (k: DaoDao) => void) => {};
 
@@ -45,7 +53,7 @@ export class DaoDao implements WalletI {
     rpc: string,
     msgs: EncodeObject[]
   ): Promise<DeliverTxResponse> => {
-    const signer = iframeClient.getOfflineSigner("kaiyo-1");
+    const signer = cosmiframe.getOfflineSigner("kaiyo-1");
     const gasPrice = new GasPrice(
       Decimal.fromUserInput("0.00125", 18),
       this.options

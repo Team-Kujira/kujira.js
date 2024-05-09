@@ -56,55 +56,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chain-registry/client@npm:^1.18.0":
-  version: 1.24.1
-  resolution: "@chain-registry/client@npm:1.24.1"
-  dependencies:
-    "@babel/runtime": ^7.21.0
-    "@chain-registry/types": ^0.21.1
-    "@chain-registry/utils": ^1.22.1
-    bfs-path: ^1.0.2
-    cross-fetch: ^3.1.5
-  checksum: f48547a5a0963448da9d5a601ebffd5fe5a41de4f446ef466b5443c12934881264adb9bdb1171dda00d102e515f387a7bb4b590b8bcae2b73f673afc708955d4
-  languageName: node
-  linkType: hard
-
-"@chain-registry/types@npm:0.17.0":
-  version: 0.17.0
-  resolution: "@chain-registry/types@npm:0.17.0"
-  dependencies:
-    "@babel/runtime": ^7.21.0
-  checksum: 4a36ecb2b50da88af79bdb825fcfef9f6acebb4dd02cc4d09caacd10741006f9aebbf0672284caa5519261221b2736ab52e4ed16a126a68f4f64cbb931872661
-  languageName: node
-  linkType: hard
-
 "@chain-registry/types@npm:^0.18.0":
   version: 0.18.0
   resolution: "@chain-registry/types@npm:0.18.0"
   dependencies:
     "@babel/runtime": ^7.21.0
   checksum: 420bc6fc93389cd52f7f744349f0d453322b4f83fcd18a3c379f9bc7731822abf8f1442ae20298518f1a15bd1c442a4942d1bb16becc874215acea86204d715e
-  languageName: node
-  linkType: hard
-
-"@chain-registry/types@npm:^0.21.1":
-  version: 0.21.1
-  resolution: "@chain-registry/types@npm:0.21.1"
-  dependencies:
-    "@babel/runtime": ^7.21.0
-  checksum: b0dea5bbc0d066a5db000eacb047051c75c59b66448a252a7a204d7ec6f81d4eb5bc67dcf19f4cc1df3f6bf744f23caee58f603bb4de680af5a50f91306e1845
-  languageName: node
-  linkType: hard
-
-"@chain-registry/utils@npm:^1.22.1":
-  version: 1.22.1
-  resolution: "@chain-registry/utils@npm:1.22.1"
-  dependencies:
-    "@babel/runtime": ^7.21.0
-    "@chain-registry/types": ^0.21.1
-    bignumber.js: 9.1.1
-    sha.js: ^2.4.11
-  checksum: 76c28fdea04ce46accbe92b16749c2a4bf807a5961bca2b3c9b52f2cc84511e41ecf34372601f56d185d2438b405ff43f80383f5f142573b6e6c233ad9f56b8b
   languageName: node
   linkType: hard
 
@@ -118,7 +75,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmjs/amino@npm:^0.32.0, @cosmjs/amino@npm:^0.32.2, @cosmjs/amino@npm:^0.32.3":
+"@cosmjs/amino@npm:^0.32.0, @cosmjs/amino@npm:^0.32.3":
   version: 0.32.3
   resolution: "@cosmjs/amino@npm:0.32.3"
   dependencies:
@@ -130,7 +87,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmjs/cosmwasm-stargate@npm:^0.32.2, @cosmjs/cosmwasm-stargate@npm:^0.32.3":
+"@cosmjs/cosmwasm-stargate@npm:^0.32.3":
   version: 0.32.3
   resolution: "@cosmjs/cosmwasm-stargate@npm:0.32.3"
   dependencies:
@@ -193,7 +150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmjs/proto-signing@npm:^0.32.0, @cosmjs/proto-signing@npm:^0.32.2, @cosmjs/proto-signing@npm:^0.32.3":
+"@cosmjs/proto-signing@npm:^0.32.0, @cosmjs/proto-signing@npm:^0.32.3":
   version: 0.32.3
   resolution: "@cosmjs/proto-signing@npm:0.32.3"
   dependencies:
@@ -219,7 +176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmjs/stargate@npm:^0.32.2, @cosmjs/stargate@npm:^0.32.3":
+"@cosmjs/stargate@npm:^0.32.3":
   version: 0.32.3
   resolution: "@cosmjs/stargate@npm:0.32.3"
   dependencies:
@@ -271,22 +228,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cosmos-kit/core@npm:^2.8.9":
-  version: 2.8.9
-  resolution: "@cosmos-kit/core@npm:2.8.9"
+"@dao-dao/cosmiframe@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@dao-dao/cosmiframe@npm:0.1.0"
   dependencies:
-    "@chain-registry/client": ^1.18.0
-    "@chain-registry/types": 0.17.0
-    "@cosmjs/amino": ^0.32.2
-    "@cosmjs/cosmwasm-stargate": ^0.32.2
-    "@cosmjs/proto-signing": ^0.32.2
-    "@cosmjs/stargate": ^0.32.2
-    "@walletconnect/types": 2.11.0
-    bowser: 2.11.0
-    cosmjs-types: ^0.9.0
-    events: 3.3.0
     uuid: ^9.0.1
-  checksum: f1deab7601dde32b6f3608b18a722d954f5829f8bf55333c73120e8b2606b70580a29b194cc635e343c66b9594b9214d99c09e16a9bb0016ac47649f2bec72b7
+  peerDependencies:
+    "@cosmjs/amino": "*"
+    "@cosmjs/proto-signing": "*"
+  checksum: 77e46f193d70c6b028783be7a702c62aa5a233dab7c92535bd6eaea1c573f49ea6baf0c2ddc489ddf6a26ae86ef4fab1fde2bcbf8be72388a5597bc024782552
   languageName: node
   linkType: hard
 
@@ -1015,20 +965,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@walletconnect/types@npm:2.11.0":
-  version: 2.11.0
-  resolution: "@walletconnect/types@npm:2.11.0"
-  dependencies:
-    "@walletconnect/events": ^1.0.1
-    "@walletconnect/heartbeat": 1.2.1
-    "@walletconnect/jsonrpc-types": 1.0.3
-    "@walletconnect/keyvaluestorage": ^1.1.1
-    "@walletconnect/logger": ^2.0.1
-    events: ^3.3.0
-  checksum: 32d0d7972b90683467e47eabf92005c7c5d1ae76400eb221576ac0d32501b9f0a414d5921f0c881efe86f07485db807e3e9d370c6b9cc264771822916dc4cca5
-  languageName: node
-  linkType: hard
-
 "@walletconnect/types@npm:2.12.2":
   version: 2.12.2
   resolution: "@walletconnect/types@npm:2.12.2"
@@ -1205,20 +1141,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bfs-path@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "bfs-path@npm:1.0.2"
-  checksum: 790564d257090547f68730f40395a575c7c0b425bca67cfa7492e537d339e188c1a6033f634ce4f5b9823a646f4919cff53b73fcf5e048196a0a3cb238bfeb3a
-  languageName: node
-  linkType: hard
-
-"bignumber.js@npm:9.1.1":
-  version: 9.1.1
-  resolution: "bignumber.js@npm:9.1.1"
-  checksum: ad243b7e2f9120b112d670bb3d674128f0bd2ca1745b0a6c9df0433bd2c0252c43e6315d944c2ac07b4c639e7496b425e46842773cf89c6a2dcd4f31e5c4b11e
-  languageName: node
-  linkType: hard
-
 "bignumber.js@npm:^9.1.2":
   version: 9.1.2
   resolution: "bignumber.js@npm:9.1.2"
@@ -1244,13 +1166,6 @@ __metadata:
   version: 5.2.1
   resolution: "bn.js@npm:5.2.1"
   checksum: 3dd8c8d38055fedfa95c1d5fc3c99f8dd547b36287b37768db0abab3c239711f88ff58d18d155dd8ad902b0b0cee973747b7ae20ea12a09473272b0201c9edd3
-  languageName: node
-  linkType: hard
-
-"bowser@npm:2.11.0":
-  version: 2.11.0
-  resolution: "bowser@npm:2.11.0"
-  checksum: 29c3f01f22e703fa6644fc3b684307442df4240b6e10f6cfe1b61c6ca5721073189ca97cdeedb376081148c8518e33b1d818a57f781d70b0b70e1f31fb48814f
   languageName: node
   linkType: hard
 
@@ -1451,15 +1366,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:^3.1.5":
-  version: 3.1.8
-  resolution: "cross-fetch@npm:3.1.8"
-  dependencies:
-    node-fetch: ^2.6.12
-  checksum: 78f993fa099eaaa041122ab037fe9503ecbbcb9daef234d1d2e0b9230a983f64d645d088c464e21a247b825a08dc444a6e7064adfa93536d3a9454b4745b3632
-  languageName: node
-  linkType: hard
-
 "cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -1651,7 +1557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:3.3.0, events@npm:^3.3.0":
+"events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780
@@ -1988,7 +1894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:^2.0.1, inherits@npm:^2.0.3, inherits@npm:^2.0.4":
+"inherits@npm:^2.0.3, inherits@npm:^2.0.4":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -2193,7 +2099,7 @@ __metadata:
     "@cosmjs/cosmwasm-stargate": ^0.32.3
     "@cosmjs/proto-signing": ^0.32.3
     "@cosmjs/stargate": ^0.32.3
-    "@cosmos-kit/core": ^2.8.9
+    "@dao-dao/cosmiframe": ^0.1.0
     "@ethersproject/bignumber": ^5.7.0
     "@keplr-wallet/types": ^0.12.79
     "@leapwallet/cosmos-snap-provider": ^0.1.26
@@ -2554,7 +2460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1, node-fetch@npm:^2.6.12":
+"node-fetch@npm:^2.6.1":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -2926,7 +2832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:^5.0.1, safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
@@ -2955,18 +2861,6 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 7427f05b70786c696640edc29fdd4bc33b2acf3bbe1740b955029044f80575fc664e1a512e4113c3af21e767154a94b4aa214bf6cd6e42a1f6dba5914e0b208c
-  languageName: node
-  linkType: hard
-
-"sha.js@npm:^2.4.11":
-  version: 2.4.11
-  resolution: "sha.js@npm:2.4.11"
-  dependencies:
-    inherits: ^2.0.1
-    safe-buffer: ^5.0.1
-  bin:
-    sha.js: ./bin.js
-  checksum: ebd3f59d4b799000699097dadb831c8e3da3eb579144fd7eb7a19484cbcbb7aca3c68ba2bb362242eb09e33217de3b4ea56e4678184c334323eca24a58e3ad07
   languageName: node
   linkType: hard
 
