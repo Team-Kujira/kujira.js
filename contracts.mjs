@@ -13,23 +13,23 @@ const IDS = {
       283,
     ],
     bow: [
-      54, 126, 294,
+      294,
       // LSD Strategy
       158, 167,
       // Stable Strategy
       161, 166,
     ],
     bowStaking: [244],
-    orca: [108, 220, 234],
+    orca: [234],
     uskMarket: [73],
     uskMarginSwap: [87],
     uskMarginLimit: [],
     calc: [157],
-    ghostVault: [140],
+    ghostVault: [316],
     ghostMarket: [291],
     ghostMargin: [],
     pilot: [296, 301],
-    bowMargin: [188, 290],
+    bowMargin: [317],
   },
   [TESTNET]: {
     fin: [31, 2229, 3328],
