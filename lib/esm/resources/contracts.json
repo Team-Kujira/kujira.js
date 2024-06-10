@@ -16903,7 +16903,7 @@
                     {
                         "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
                         "borrow_limit": "2500000000000",
-                        "current_borrows": "635680242714"
+                        "current_borrows": "635671315752"
                     },
                     {
                         "addr": "kujira1avffxgkhn27kwwes38x5me40mrna5z98zwync5kwt68ua6hughtq0tyh33",
@@ -20874,8 +20874,8 @@
                     ],
                     "oracles": {
                         "some": [
-                            "WETH",
-                            "USK"
+                            "ETH",
+                            "USDT"
                         ]
                     },
                     "price_precision": {
