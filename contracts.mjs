@@ -15,7 +15,7 @@ const IDS = {
     bow: [
       294,
       // LSD Strategy
-      158, 167,
+      167, 322,
       // Stable Strategy
       161, 166,
     ],
@@ -28,11 +28,11 @@ const IDS = {
     ghostVault: [316],
     ghostMarket: [291],
     ghostMargin: [],
-    pilot: [296, 301],
+    pilot: [296, 301, 333],
     bowMargin: [317],
   },
   [TESTNET]: {
-    fin: [31, 2229, 3328],
+    fin: [31, 2229, 3328, 3550],
     bow: [1925, 2362, 3330],
     bowStaking: [439, 855],
     orca: [1952, 2923],
@@ -43,7 +43,7 @@ const IDS = {
     ghostVault: [2348],
     ghostMarket: [2172],
     ghostMargin: [1950],
-    pilot: [3327],
+    pilot: [3549],
     bowMargin: [2666],
   },
 };

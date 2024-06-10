@@ -44,7 +44,8 @@ type Config = {
   price_precision: {
     decimal_places: number;
   };
-  is_bootstrapping: boolean;
+  oracles?: { some: string[] } | "none";
+  is_bootstrapping?: boolean;
   decimal_delta?: number;
 };
 
@@ -61,6 +62,10 @@ const castConfig = (json: Config): Omit<Pair, "address" | "pool" | "calc"> => ({
         : json.denoms[1].native
     ),
   ],
+  oracles:
+    "oracles" in json && typeof json.oracles === "object"
+      ? [json.oracles.some[0], json.oracles.some[1]]
+      : null,
   precision: { decimal_places: json.price_precision.decimal_places },
   decimalDelta: json.decimal_delta || 0,
   multiswap: true,

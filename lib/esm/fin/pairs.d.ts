@@ -21,7 +21,10 @@ type Config = {
     price_precision: {
         decimal_places: number;
     };
-    is_bootstrapping: boolean;
+    oracles?: {
+        some: string[];
+    } | "none";
+    is_bootstrapping?: boolean;
     decimal_delta?: number;
 };
 export declare const compile: (network: keyof typeof contracts) => (a: Record<string, Pair>, v: {
@@ -46,6 +49,7 @@ export declare const compile: (network: keyof typeof contracts) => (a: Record<st
             liquidationRatio: number;
             address: string;
         } | undefined;
+        oracles: [string, string] | null;
         denoms: [Denom, Denom];
         precision: import("./types").Precision;
         decimalDelta: number;

@@ -27,6 +27,7 @@ export type Margin = usk.Market;
 export type Pair = {
     address: string;
     denoms: [Denom, Denom];
+    oracles: [string, string] | null;
     precision: Precision;
     decimalDelta: number;
     margin?: Margin;
