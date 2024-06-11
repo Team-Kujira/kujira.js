@@ -63,6 +63,9 @@ export const castOrder =
     owner: response.owner,
     quotePrice: parseFloat(response.quote_price) * factor(denoms),
     quotePriceInt: parseFixed(response.quote_price, 18),
+    oraclePrice: response.oracle_price
+      ? Number(response.oracle_price)
+      : undefined,
     offerDenom: parseDenom(response.offer_denom),
     offerAmount: BigNumber.from(response.offer_amount),
     filledAmount: BigNumber.from(response.filled_amount),

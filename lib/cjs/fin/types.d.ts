@@ -13,6 +13,7 @@ export type Order = {
     owner: string;
     quotePrice: number;
     quotePriceInt: BigNumber;
+    oraclePrice?: number;
     offerDenom: Denom;
     offerAmount: BigNumber;
     filledAmount: BigNumber;
@@ -138,6 +139,7 @@ export interface OrderResponse {
     original_offer_amount: Uint128;
     owner: Addr;
     quote_price: Decimal;
+    oracle_price?: string;
 }
 export interface OrdersResponse {
     orders: OrderResponse[];
