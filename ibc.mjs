@@ -64,26 +64,26 @@ const runTokens = async (rpc) => {
     });
 };
 
-await runTokens("https://kujira-testnet-rpc.polkachu.com");
-await runTokens("https://rpc-kujira.mintthemoon.xyz");
+// await runTokens("https://kujira-testnet-rpc.polkachu.com");
+// await runTokens("https://rpc-kujira.mintthemoon.xyz");
 
 const testnet = await runConnections("https://kujira-testnet-rpc.polkachu.com");
 const mainnet = await runConnections("https://rpc-kujira.mintthemoon.xyz");
 
-fs.writeFileSync(
-  "./src/resources/channels.json",
-  JSON.stringify(
-    { testnet: testnet.channels, mainnet: mainnet.channels },
-    null,
-    2
-  )
-);
+// fs.writeFileSync(
+//   "./src/resources/channels.json",
+//   JSON.stringify(
+//     { testnet: testnet.channels, mainnet: mainnet.channels },
+//     null,
+//     2
+//   )
+// );
 
 fs.writeFileSync(
   "./src/resources/connections.json",
   JSON.stringify(
     { testnet: testnet.connections, mainnet: mainnet.connections },
-    (x) => (typeof x === "bigint" ? x.toString() : x),
+    (a, x) => (typeof x === "bigint" ? x.toString() : x),
     2
   )
 );
