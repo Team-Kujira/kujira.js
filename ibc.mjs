@@ -83,7 +83,7 @@ fs.writeFileSync(
   "./src/resources/connections.json",
   JSON.stringify(
     { testnet: testnet.connections, mainnet: mainnet.connections },
-    null,
+    (x) => (typeof x === "bigint" ? x.toString() : x),
     2
   )
 );

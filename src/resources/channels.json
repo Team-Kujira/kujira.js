@@ -1,6 +1,34 @@
 {
   "testnet": [
     {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-554"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1sm0c96f87k03ajlv35xr7vg7pfrsv6hx06hkxfgv3rrrmp08evnq2eu2qm\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira10guhqwn0sdtmqsm4y2w5qtpzsp3zp7ky3wdx2s3pumf4kfxfdkuqr7ctnd-rewards",
+      "channelId": "channel-105"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-555"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra13084dt984mz4y4lqal59x02g7sqvsr5d3v7p8792rmqcq065p6asgtak2f\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira10guhqwn0sdtmqsm4y2w5qtpzsp3zp7ky3wdx2s3pumf4kfxfdkuqr7ctnd-staking",
+      "channelId": "channel-104"
+    },
+    {
       "state": 1,
       "ordering": 2,
       "counterparty": {
@@ -41,6 +69,118 @@
       "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
       "portId": "icacontroller-kujira123uuzjz3sw0m383qxgy6wvzdyyzuz5g5sukwht7e0uw890k7g7kqk79sfr-ica_reward_collector",
       "channelId": "channel-62"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4078"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos16qy79k0szulv003emttm889zlvvzj5e77q9c0nzpwwj4h6y3jc8s9vyucx\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira14vgxywl4vtg8q9rp0je2e9c6uges9pahvwspf3067t8mqse8sg5qjqn9en-ica_hub",
+      "channelId": "channel-98"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4079"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1m0l094dmukajz5avetff8qxlu22kddlhf2pdsynvyam8rzqkzjdquwz60g\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira14vgxywl4vtg8q9rp0je2e9c6uges9pahvwspf3067t8mqse8sg5qjqn9en-ica_reward_collector",
+      "channelId": "channel-99"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4069"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos15xwhs32tw62elf5w265eqc4m4v4cn6yvrr7su23h84zam53vgrtqex5vnh\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira15t3m5dvxxmnh277l23h0vy2ddfykcr7798ccpukpgk3j2394x7tq88c64g-ica_hub",
+      "channelId": "channel-89"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-543"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1rm30q42w5v3pepl4nc2zfk9p08ekmclmyx0ultaj0wrx2qtjjuts0h28lg\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira182pxawre0yl9ruw300nfvgzx4vsdfleaqpp0kylqsk8x76p5yx7qaz0y22-rewards",
+      "channelId": "channel-75"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-542"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1hnl920jvp7kepelj7myanwn4u0s63nwmz5ch643un6rjp4fhwlcqwerv8e\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira182pxawre0yl9ruw300nfvgzx4vsdfleaqpp0kylqsk8x76p5yx7qaz0y22-staking",
+      "channelId": "channel-74"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4073"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1hxtyfv9zs9mdjl8ea6htpv6yzkncwnkyw2wqj3hqfx7wat9smk6q4ux7n8\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira18sak4fygsxkvwrhnn0dckw70audk6ggsah7wmtya45mhkttwdu8q8h5w6w-ica_fee_collector",
+      "channelId": "channel-95"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4074"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1l3tppj3c5ru2pnlcnrgw0t7lgjwp5c5c4e8kpa0d6xnjwcuxmdlqcweday\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira18sak4fygsxkvwrhnn0dckw70audk6ggsah7wmtya45mhkttwdu8q8h5w6w-ica_hub",
+      "channelId": "channel-93"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4075"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1jxdrdqvqahnsczfyuk8axe2pxknl489l5cdnj4xqh0mjveyeg5jq6kuqnj\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira18sak4fygsxkvwrhnn0dckw70audk6ggsah7wmtya45mhkttwdu8q8h5w6w-ica_reward_collector",
+      "channelId": "channel-94"
     },
     {
       "state": 1,
@@ -141,6 +281,118 @@
       "channelId": "channel-58"
     },
     {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-557"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1x3srzp8zl97z7jxqhwutlcek5xg3xute4nxx6axzrkf3vrtw9euqa547mv\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira19fpx73d9at73tgwn4pk4lxs6z0drfypzkvdlyetss7sac34ksjtqzdqag6-rewards",
+      "channelId": "channel-107"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-556"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1dnpqhxlms2hefus4uqjagtuf8a6snfd96cquj5jz06xsqjw5ferq3ramsf\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira19fpx73d9at73tgwn4pk4lxs6z0drfypzkvdlyetss7sac34ksjtqzdqag6-staking",
+      "channelId": "channel-106"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-549"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1uvgzz2dy7qhmsj9myw48k44wrv4cr9n7lwuhg8x3qdh39fg8ejgqwek2zf\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira19l224f7lxn5yr4uq7tpmfqrcsj63a9sls5n44tpyy7nepjp2dh3s2n6663-rewards",
+      "channelId": "channel-81"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-548"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra13fvawqj4zud6dc4ypcqcmxty4ks7uxmzj8kq4wq0kvqxztdwgt2q2575rh\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira19l224f7lxn5yr4uq7tpmfqrcsj63a9sls5n44tpyy7nepjp2dh3s2n6663-staking",
+      "channelId": "channel-80"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-547"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1g6amv2wmpyt6fntrf9cg7hdj00ekp49ahzf9mjnzd2t29py32jxsfmyzgc\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1e6gzm6cfc5ztjc7km74fecxv6kkw3dr03hhjzhzhygcz3v7a47sqnkv3d3-rewards",
+      "channelId": "channel-79"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-546"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1t24xc0x0afn03z8kwua3s0ajrgffskgddny07y22eu8hjx5gdk3qlcec8z\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1e6gzm6cfc5ztjc7km74fecxv6kkw3dr03hhjzhzhygcz3v7a47sqnkv3d3-staking",
+      "channelId": "channel-78"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4084"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1up8eca3na87zzznqqwxcsra20cghwl9cfyv4qk277fm8pg4m48kq2felvn\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1et0u6rspeuptzchfuekk25a88z755rk5vyh3unuxl2qmx794c06q2sr0mg-rewards",
+      "channelId": "channel-109"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4083"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1hv3rrqk0vmqaq7chxwxqdqere77q6e5r542znyszchw8ezd32gcs0fzs3m\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1et0u6rspeuptzchfuekk25a88z755rk5vyh3unuxl2qmx794c06q2sr0mg-staking",
+      "channelId": "channel-108"
+    },
+    {
       "state": 1,
       "ordering": 2,
       "counterparty": {
@@ -223,6 +475,48 @@
       "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-15\",\"host_connection_id\":\"connection-1\",\"address\":\"\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
       "portId": "icacontroller-kujira1hhzf9u376mg8zcuvx3jsls7t805kzcrssrvvk5",
       "channelId": "channel-24"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4061"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1p0rv4t7xzqvqsdv05ftyh4v9hqfjaumjpfxhrgtk0z72e8rtdtzqqtcm9j\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1k9vy9z4dssncsnhtfwz5wk5mtv7ukstjxyqla35yre55c5frqjnswdu5fp-ica_fee_collector",
+      "channelId": "channel-87"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4062"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos18wpaxjpv324zwshnulf9rjzxh8xvwkd2sf8w3ga2s4ydtcag5rjs0afcmd\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1k9vy9z4dssncsnhtfwz5wk5mtv7ukstjxyqla35yre55c5frqjnswdu5fp-ica_hub",
+      "channelId": "channel-85"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4063"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1f2nq4vu2008qap4l9fvzpzuhzk5ttxywql3uwjakf0hdes2m2kaq5kwjsj\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1k9vy9z4dssncsnhtfwz5wk5mtv7ukstjxyqla35yre55c5frqjnswdu5fp-ica_reward_collector",
+      "channelId": "channel-86"
     },
     {
       "state": 1,
@@ -309,6 +603,118 @@
       "channelId": "channel-52"
     },
     {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4205"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1ulelmzkcaaj9twk9g29lpezaewgs3kw5gf3a7anasmt0hn7k4c9s802t5z\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1neqcl6dpatzvtaphmm7dc83r8xsuad9crrjfpumacz4dyg9rzpxqwvywrg-rewards",
+      "channelId": "channel-113"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4204"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos19cfgzljx6mnyc3sjtec26erj2v6pw6v6gj45xlrvr5lxazdaxuxqzf6fjy\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1neqcl6dpatzvtaphmm7dc83r8xsuad9crrjfpumacz4dyg9rzpxqwvywrg-staking",
+      "channelId": "channel-112"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-552"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1undeh03y3pavt5kkkc05xwfgy3ttqn82yv52yh226nek6s43c28sq2fdze\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1pc2yj3dl8xztqnn8k2sjlrks6tmtdgkr3jev0h464zsesgl24q5slceq0h-rewards",
+      "channelId": "channel-103"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-553"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra15dmm032xuzyagk547mzvx028cz8kf2k2xru7usy7ykj2sgc3f5eqesr7km\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1pc2yj3dl8xztqnn8k2sjlrks6tmtdgkr3jev0h464zsesgl24q5slceq0h-staking",
+      "channelId": "channel-102"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-544"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra16wt8we4tzf7fcu2h4udqyp6zpeu3nzx6w4f96cftvua96u8mkuestl4ntr\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1pcqd0xle8f26hjh82w7elgc437zv7pgw8fp46wy09qrqgtrlrqfszzudfc-rewards",
+      "channelId": "channel-77"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-545"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra1fhkjfvvyf8sfmpnrzeu4c8wgr5x234kkp0j942jrxn0pnwn73s5snru68u\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1pcqd0xle8f26hjh82w7elgc437zv7pgw8fp46wy09qrqgtrlrqfszzudfc-staking",
+      "channelId": "channel-76"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-550"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra12rj3f9n3grvsc000snkz4a39k0h7g0ltwnmv9w9lnrw48ppxcuxq0xkx2y\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1q00ndg7pnrqfee3yq9w8v6ntyr026khrvdjt4qlv94fndllp7gtszlzsgd-rewards",
+      "channelId": "channel-101"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-551"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-48\\\",\\\"host_connection_id\\\":\\\"connection-508\\\",\\\"address\\\":\\\"terra120fdgg3zdrnzygt59a853jg87vejs40m74s7lz2tu0rpql7fy8eqryrztk\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
+      "portId": "icacontroller-kujira1q00ndg7pnrqfee3yq9w8v6ntyr026khrvdjt4qlv94fndllp7gtszlzsgd-staking",
+      "channelId": "channel-100"
+    },
+    {
       "state": 1,
       "ordering": 2,
       "counterparty": {
@@ -335,6 +741,118 @@
       "version": "{\"fee_version\":\"ics29-1\",\"app_version\":\"{\\\"version\\\":\\\"ics27-1\\\",\\\"controller_connection_id\\\":\\\"connection-47\\\",\\\"host_connection_id\\\":\\\"connection-3519\\\",\\\"address\\\":\\\"\\\",\\\"encoding\\\":\\\"proto3\\\",\\\"tx_type\\\":\\\"sdk_multi_msg\\\"}\"}",
       "portId": "icacontroller-kujira1ry74k4wu2v9xz7ggy998ercpsxhv4md64yncruzrn8awy360zw3qxrle9t-staking",
       "channelId": "channel-53"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4077"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1c3vdcqek6r2pwmj4eq6gtx8qnkfxwgsr0mr845jn97fwsaeqaarq9lw557\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1sktvm8lnu55shwgtfqk9asrezjsazrrxw0f2vxfh9h9evjfswhysgwv69v-ica_hub",
+      "channelId": "channel-96"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4076"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos10htgkfx698w0uggdu0qhs9r7dze7jkze2s3yljtjgcf3slfz5fpsdmjqy7\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1sktvm8lnu55shwgtfqk9asrezjsazrrxw0f2vxfh9h9evjfswhysgwv69v-ica_reward_collector",
+      "channelId": "channel-97"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4056"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1vglmky2ygy3hmz4tuwlu6464el3ta3l5uj6js2h4we0vfr30mfjqkdrvek\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1t7hyy3feaynwamacc3cx0q896ek0x4y73kkc074lf7pzak5ujfvs6j3mc3-ica_fee_collector",
+      "channelId": "channel-84"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4057"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos14rs0e7lukt7t2wsag4w6qurfqn8p0ej4c46cpcrexdpg5fkrwhsslnejqj\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1t7hyy3feaynwamacc3cx0q896ek0x4y73kkc074lf7pzak5ujfvs6j3mc3-ica_hub",
+      "channelId": "channel-82"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4055"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1kzx9xtz7gdxmstugr74na5qdgcsejvts5t32kslm29cuz9zf4d5qh6zu96\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1t7hyy3feaynwamacc3cx0q896ek0x4y73kkc074lf7pzak5ujfvs6j3mc3-ica_reward_collector",
+      "channelId": "channel-83"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4203"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1s27x9wzc7m7p7457qun23nufhy2d573fh7f6grmfwuaucdlgf6asal20pe\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1u98n5rqrqtfcsqnfmfgeuseclx9uz8ql4pxtcxtddvpwu5vtgv3qeqk370-ica_hub",
+      "channelId": "channel-110"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4202"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1r39xrt89jduwkjwm6ehzt5x8qf5p5njn6eydecwwnthwrfm77m8s0ays36\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1u98n5rqrqtfcsqnfmfgeuseclx9uz8ql4pxtcxtddvpwu5vtgv3qeqk370-ica_reward_collector",
+      "channelId": "channel-111"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4067"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos128spg3v39h0lcp6j6ha7qhs9ns4wcf7uypx84dy9ggetuulfhfgsqz7zyy\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1vu34q28y4mz06cmvw6kcmahdsm32h4jvkc8uzypfv7upcy44wdyq55e4ad-ica_hub",
+      "channelId": "channel-88"
     },
     {
       "state": 1,
@@ -410,6 +928,48 @@
       "state": 3,
       "ordering": 2,
       "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4071"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos14my3rh0d3xkuedq06x3jy0gvdqhdktq2gq9l9auezyf6yk97dezsfpsxv9\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1ylxjqcvt42lp7kk2ajkxwc93zmlrq4jrgcq0md64f707vn4tjyhq7rga78-ica_fee_collector",
+      "channelId": "channel-92"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4072"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1lszfgf3uuhlplncm4wasgz689yj3avhllc547guq493xs86sd8rsmkff59\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1ylxjqcvt42lp7kk2ajkxwc93zmlrq4jrgcq0md64f707vn4tjyhq7rga78-ica_hub",
+      "channelId": "channel-90"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icahost",
+        "channelId": "channel-4070"
+      },
+      "connectionHops": [
+        "connection-47"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-47\",\"host_connection_id\":\"connection-3519\",\"address\":\"cosmos1czahcw9ws0a3kxpkzak88xm4ns2uvz5h600aenm8g79a7xzsm9aqw4tl5s\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icacontroller-kujira1ylxjqcvt42lp7kk2ajkxwc93zmlrq4jrgcq0md64f707vn4tjyhq7rga78-ica_reward_collector",
+      "channelId": "channel-91"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
         "portId": "icacontroller-neutron14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9s5c2epq.george_ica_0",
         "channelId": "channel-2"
       },
@@ -475,6 +1035,20 @@
       "version": "ics20-1",
       "portId": "transfer",
       "channelId": "channel-11"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-16"
+      },
+      "connectionHops": [
+        "connection-49"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-114"
     },
     {
       "state": 3,
@@ -971,6 +1545,20 @@
       "ordering": 1,
       "counterparty": {
         "portId": "transfer",
+        "channelId": "channel-541"
+      },
+      "connectionHops": [
+        "connection-48"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-73"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
         "channelId": "channel-19"
       },
       "connectionHops": [
@@ -998,6 +1586,62 @@
       "state": 3,
       "ordering": 1,
       "counterparty": {
+        "portId": "wasm.neutron1fntd67qq2nhv4jx2kyjy9mcprhr3sdg3hkakevk8xud3mex3c3sqlklj0k",
+        "channelId": "channel-966"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira122s3djxauh7d9hjmsauur8f5mhd5ej0wmd4f72jnqfs48gnxu6sq85vkzj",
+      "channelId": "channel-127"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1fntd67qq2nhv4jx2kyjy9mcprhr3sdg3hkakevk8xud3mex3c3sqlklj0k",
+        "channelId": "channel-967"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira122s3djxauh7d9hjmsauur8f5mhd5ej0wmd4f72jnqfs48gnxu6sq85vkzj",
+      "channelId": "channel-128"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1sxa66kw0dnxxca2ew9q94n62as7g7vlddy2kh56t8dmywe384clqtxcf6u",
+        "channelId": "channel-961"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira13xfvvlua2zsa3xx6wdgudu2twvqd8c8xp4fcu54xl4d4wnjjvq7slc298r",
+      "channelId": "channel-124"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1zg5drt2cceevtpcn53l4z95s3lzt2msd40w520ek07rnp05j5vsqrqezdn",
+        "channelId": "channel-978"
+      },
+      "connectionHops": [
+        "connection-52"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira14xwfwmw7tl9ph9uxfm40eyjdj8fagfeaw832vdgmd83ffk52t8lqz75uuw",
+      "channelId": "channel-129"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
         "portId": "wasm.secret1ghted77eynn75f6wrpdayp0c5fau6p25xxs2l6",
         "channelId": "channel-51"
       },
@@ -1012,6 +1656,132 @@
       "state": 3,
       "ordering": 1,
       "counterparty": {
+        "portId": "wasm.neutron1hmepngul9vc8ssxwrh7whcwzgdyhdwt70llnkfmwzkzg4kddpvzqa959mp",
+        "channelId": "channel-947"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira18qaync23mnrlecymyv3wyepvc98e6cl3tqw3ja25v848dkr0prqqzxdmnu",
+      "channelId": "channel-118"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1p5ekwqvl7ezz7jczwf8vl8tf3mahgxumwfkf9u6fjn2euyt937zs6qujqn",
+        "channelId": "channel-946"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "demo-version-001",
+      "portId": "wasm.kujira1a7td8j3wfd7swrsmfrxky0zdcps8l23ldqeae467z80057gwg60svwfsx2",
+      "channelId": "channel-117"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1fet7xl9nclfvucqp3a94vewp8pchnffnvjv7kj29hgsw2qfj37jq0pwh5t",
+        "channelId": "channel-959"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1agnmutw73qxrc9m4phar8w2zd0a7aw70t6v49q9cvkly7q3p2dnqzllz3l",
+      "channelId": "channel-123"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1ktyrnqw7uf7v4d3c3x7vrsrrgw449ncecrue2ptaqn0l2yjpm5mqt0dv7x",
+        "channelId": "channel-904"
+      },
+      "connectionHops": [
+        "connection-50"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1f0yr5mtg38w0p760924f5qsdzvd4584hjm2xvnzx3k6885qttgns37pfhk",
+      "channelId": "channel-116"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1mugxuc9ayu5an4lar3tt3hpjhw8g7wzttvx0aa7eeyuahv3fa22su20qj8",
+        "channelId": "channel-955"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1g5j0td5y9t5uqypt0xh2xxnqfapdp7knrd30p5ajtqvwycerfdqsancdxa",
+      "channelId": "channel-121"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron19yemrqc0aj4ykqehu3e92mgzyl4xser70uysf2f5c2v83ty43g2s7emx0e",
+        "channelId": "channel-949"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1jmw0nkkk2j62678ghwfeu96kwpwanmn7c7u2gm8phrzanljvyffs64fjsa",
+      "channelId": "channel-119"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron185cwe9x7q0npsk6hczdurm6aqmtqcckuqw7n9j9g03de4gf9w6gqgume2y",
+        "channelId": "channel-951"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1jmw0nkkk2j62678ghwfeu96kwpwanmn7c7u2gm8phrzanljvyffs64fjsa",
+      "channelId": "channel-120"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron136k8kgtydz69vuxh28ncaz4y5ycha4xvfwmw39eseh5kt3e86cvs2w7mww",
+        "channelId": "channel-903"
+      },
+      "connectionHops": [
+        "connection-50"
+      ],
+      "version": "WyJKU09OLUNvc21vc01zZyJd",
+      "portId": "wasm.kujira1t6j8xqqmytp2ye5lg3wa09sa7fp5zvgtf8cen6ru77a8wfqpuf9q5lw6wf",
+      "channelId": "channel-115"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron1f2nlegw29wc2vfzd73sjdz07wvl6d5wzs5d3la7y6l2958y9uw7slvnaul",
+        "channelId": "channel-957"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1u6vu797229mq4hj0ymdyw3p8wj94cfgclw72f0p5ugpg8fcrkhqswa4zex",
+      "channelId": "channel-122"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
         "portId": "wasm.secret1nch89tk69s4stnmjn288pg2qg0v86r6mvywrvz",
         "channelId": "channel-45"
       },
@@ -1021,6 +1791,34 @@
       "version": "ibc-v1",
       "portId": "wasm.kujira1vnn584sx5ve33ya5qktkedv5xtx8fg5w35rt7y3j6dvpjcm7d4rqv55nce",
       "channelId": "channel-49"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron17frp9a0my7y9t5urhk4auw9y7s5htuqvwr33tj2ptfyu5tewappqt66xrp",
+        "channelId": "channel-963"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1wadnj77gk7t86kltmgtteufs7n27k6mc7y4xf4s0fsp98pzrqsxqhdzh0x",
+      "channelId": "channel-125"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "wasm.neutron17frp9a0my7y9t5urhk4auw9y7s5htuqvwr33tj2ptfyu5tewappqt66xrp",
+        "channelId": "channel-965"
+      },
+      "connectionHops": [
+        "connection-51"
+      ],
+      "version": "warehouse-payment-001",
+      "portId": "wasm.kujira1wadnj77gk7t86kltmgtteufs7n27k6mc7y4xf4s0fsp98pzrqsxqhdzh0x",
+      "channelId": "channel-126"
     }
   ],
   "mainnet": [
@@ -1163,6 +1961,20 @@
       "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-5\",\"host_connection_id\":\"connection-111\",\"address\":\"stars10vvraf9qpfts20z3djz8zr0m0sfp292jmnlpm7dz8gtnvkhqmw7s04l0dh\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
       "portId": "icacontroller-kujira16s4etqsg456m5txn8ec39n4f2u9r0f642vdlxu",
       "channelId": "channel-93"
+    },
+    {
+      "state": 3,
+      "ordering": 2,
+      "counterparty": {
+        "portId": "icacontroller-pstake_ratesync_2",
+        "channelId": "channel-219"
+      },
+      "connectionHops": [
+        "connection-130"
+      ],
+      "version": "{\"version\":\"ics27-1\",\"controller_connection_id\":\"connection-200\",\"host_connection_id\":\"connection-130\",\"address\":\"kujira1captkdvdsat7y8uq9ly09gqx67yst74cjvl3t6zs9kv2wrvua8ysw2s0xg\",\"encoding\":\"proto3\",\"tx_type\":\"sdk_multi_msg\"}",
+      "portId": "icahost",
+      "channelId": "channel-164"
     },
     {
       "state": 3,
@@ -1737,6 +2549,20 @@
       "version": "ics20-1",
       "portId": "transfer",
       "channelId": "channel-163"
+    },
+    {
+      "state": 3,
+      "ordering": 1,
+      "counterparty": {
+        "portId": "transfer",
+        "channelId": "channel-48"
+      },
+      "connectionHops": [
+        "connection-137"
+      ],
+      "version": "ics20-1",
+      "portId": "transfer",
+      "channelId": "channel-165"
     },
     {
       "state": 3,
