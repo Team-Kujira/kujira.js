@@ -4975,6 +4975,36 @@
         },
         "pairs": false,
         "markets": false
+      },
+      {
+        "id": 341,
+        "address": "kujira1u7c99cany6rsacvt4d3apaps36xt88pcxjxxjkyc8tphszs7qeyqfxqxwz",
+        "config": {
+          "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+          "denoms": [
+            {
+              "native": "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
+            },
+            {
+              "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+            }
+          ],
+          "oracles": {
+            "some": [
+              "WETH",
+              "USK"
+            ]
+          },
+          "price_precision": {
+            "decimal_places": 2
+          },
+          "decimal_delta": 12,
+          "fee_taker": "0.0015",
+          "fee_maker": "0.00075",
+          "fee_address": "kujira1xajlwpfpjnvwehurrj2w7d8ru6sm4579vzfp44c6fd5sj86u6tvqdk6mjn"
+        },
+        "pairs": false,
+        "markets": false
       }
     ],
     "bow": [
@@ -16963,7 +16993,7 @@
           {
             "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
             "borrow_limit": "2500000000000",
-            "current_borrows": "598319201788"
+            "current_borrows": "597662559009"
           },
           {
             "addr": "kujira1avffxgkhn27kwwes38x5me40mrna5z98zwync5kwt68ua6hughtq0tyh33",
@@ -17201,7 +17231,7 @@
           {
             "addr": "kujira1dwyyglafmme9hm8mek6j5et8z25m5uhy7edkrwltwumav56e8y5q3gpx8d",
             "borrow_limit": null,
-            "current_borrows": "1533010951560"
+            "current_borrows": "1531781700417"
           },
           {
             "addr": "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2",
@@ -17746,7 +17776,7 @@
           {
             "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
             "borrow_limit": "1500000000000",
-            "current_borrows": "618396904766"
+            "current_borrows": "616530231487"
           }
         ]
       },

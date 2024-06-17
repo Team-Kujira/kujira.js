@@ -7,10 +7,10 @@ import { kujiraQueryClient } from "./lib/cjs/queryClient.js";
 const IDS = {
   [MAINNET]: {
     fin: [
-      // legacy KUJI-USDC.axl
-      // 295,
       // Current
       283,
+      // Oracle
+      341,
     ],
     bow: [
       294,
