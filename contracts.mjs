@@ -15,7 +15,7 @@ const IDS = {
     bow: [
       294,
       // LSD Strategy
-      167, 322,
+      322,
       // Stable Strategy
       161, 166,
     ],
@@ -32,7 +32,7 @@ const IDS = {
     bowMargin: [317, 337],
   },
   [TESTNET]: {
-    fin: [31, 2229, 3328, 3550],
+    fin: [31, 2229, 3328, 3566],
     bow: [1925, 2362, 3330],
     bowStaking: [439, 855],
     orca: [1952, 2923],

@@ -49,8 +49,8 @@ export declare const compile: (network: keyof typeof contracts) => (a: Record<st
             liquidationRatio: number;
             address: string;
         } | undefined;
-        denoms: [Denom, Denom];
         oracles: [string, string] | null;
+        denoms: [Denom, Denom];
         precision: import("./types").Precision;
         decimalDelta: number;
         multiswap: boolean;
