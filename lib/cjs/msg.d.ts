@@ -8,6 +8,7 @@ import * as staking from "cosmjs-types/cosmos/staking/v1beta1/tx";
 import { MsgCreateVestingAccount } from "cosmjs-types/cosmos/vesting/v1beta1/tx";
 import { MsgClearAdmin, MsgExecuteContract, MsgInstantiateContract, MsgInstantiateContract2, MsgMigrateContract, MsgStoreCode, MsgUpdateAdmin, MsgUpdateInstantiateConfig } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
+import { MsgUpdateClient } from "cosmjs-types/ibc/core/client/v1/tx";
 export declare const msg: {
     authz: {
         msgExec: (i: MsgExec) => {
@@ -184,6 +185,10 @@ export declare const msg: {
         msgTransfer: (i: MsgTransfer) => {
             typeUrl: string;
             value: MsgTransfer;
+        };
+        msgUpdateClient: (i: MsgUpdateClient) => {
+            typeUrl: string;
+            value: MsgUpdateClient;
         };
     };
     gravity: {

@@ -24,6 +24,7 @@ import {
   MsgUpdateInstantiateConfig,
 } from "cosmjs-types/cosmwasm/wasm/v1/tx";
 import { MsgTransfer } from "cosmjs-types/ibc/applications/transfer/v1/tx";
+import { MsgUpdateClient } from "cosmjs-types/ibc/core/client/v1/tx";
 import * as batch from "./batch";
 import * as gravity from "./gravity/v1";
 import * as denom from "./kujira/denom";
@@ -202,6 +203,10 @@ export const msg = {
     msgTransfer: (i: MsgTransfer) => ({
       typeUrl: "/ibc.applications.transfer.v1.MsgTransfer",
       value: MsgTransfer.fromPartial(i),
+    }),
+    msgUpdateClient: (i: MsgUpdateClient) => ({
+      typeUrl: "/ibc.core.client.v1.MsgUpdateClient",
+      value: MsgUpdateClient.fromPartial(i),
     }),
   },
   gravity: gravity.msg,
