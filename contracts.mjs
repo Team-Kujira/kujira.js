@@ -20,7 +20,7 @@ const IDS = {
       161, 166,
     ],
     bowStaking: [244],
-    orca: [234],
+    orca: [234, 344],
     uskMarket: [73],
     uskMarginSwap: [87],
     uskMarginLimit: [],
