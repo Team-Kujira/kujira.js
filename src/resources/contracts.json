@@ -16086,7 +16086,7 @@
           {
             "addr": "kujira1qakxyvv76nynvqcemvsawkwkq4sadnwlt9p50zjg7stgka2awdts9dm7vm",
             "borrow_limit": null,
-            "current_borrows": "245940472279085973"
+            "current_borrows": "245172614791091576"
           }
         ]
       },
@@ -16786,7 +16786,7 @@
           {
             "addr": "kujira1t2nmpazlpacazde340k5rmmx6dpa49067fdqu3pzskgh9x3lj78qelrvv4",
             "borrow_limit": null,
-            "current_borrows": "457624540942"
+            "current_borrows": "461929079463"
           }
         ]
       },
@@ -17536,7 +17536,7 @@
           {
             "addr": "kujira1hmk8wy7vk0v0vpqasv6zv7hm3n2vce4m3yzkns6869j8h4u5qk2q0xndku",
             "borrow_limit": "100000000000",
-            "current_borrows": "3009697186"
+            "current_borrows": "4783023731"
           },
           {
             "addr": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
@@ -18167,9 +18167,9 @@
           "collateral_denom": "ukuji",
           "collateral_oracle_denom": "KUJI",
           "collateral_decimals": 6,
-          "max_ltv": "0.6",
+          "max_ltv": "0.5",
           "full_liquidation_threshold": "1000000000",
-          "partial_liquidation_target": "0.5",
+          "partial_liquidation_target": "0.4",
           "borrow_fee": "0.002",
           "fee_address": "kujira1x97ay4eq7uv7hh59ytdxm3lsz567yz9wrwn74gq7dsspuapqvjtq03tajj"
         },
@@ -18376,9 +18376,9 @@
           "collateral_denom": "ukuji",
           "collateral_oracle_denom": "KUJI",
           "collateral_decimals": 6,
-          "max_ltv": "0.5",
+          "max_ltv": "0.6",
           "full_liquidation_threshold": "1000000",
-          "partial_liquidation_target": "0.4",
+          "partial_liquidation_target": "0.5",
           "borrow_fee": "0.002",
           "fee_address": "kujira1x97ay4eq7uv7hh59ytdxm3lsz567yz9wrwn74gq7dsspuapqvjtq03tajj"
         },
