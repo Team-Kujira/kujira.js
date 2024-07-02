@@ -10,7 +10,7 @@ const IDS = {
       // Current
       283,
       // Oracle
-      341,
+      341, 346,
     ],
     bow: [
       294,
