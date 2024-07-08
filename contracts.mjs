@@ -10,7 +10,7 @@ const IDS = {
       // Current
       283,
       // Oracle
-      341, 346,
+      352,
     ],
     bow: [
       294,
@@ -20,7 +20,7 @@ const IDS = {
       161, 166,
     ],
     bowStaking: [244],
-    orca: [234, 344],
+    orca: [234, 344, 349],
     uskMarket: [73],
     uskMarginSwap: [87],
     uskMarginLimit: [],
