@@ -17,7 +17,7 @@ const IDS = {
       // LSD Strategy
       322,
       // Stable Strategy
-      161, 166,
+      161, 166, 355,
     ],
     bowStaking: [244],
     orca: [234, 344, 349],
