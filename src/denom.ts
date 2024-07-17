@@ -91,6 +91,12 @@ const labels: Record<string, string> = {
   "factory/kujira14el9xd5e688s7g8yra2rjjv26dmjatfrkgrpkyly5hh9hswn2ngs3p9vag/urcpt":
     "qcMNTA",
 
+  "factory/kujira1d9fmsgvu3yvvppvqech2s3dhrqdm5ukngcf82ghcl70edfpwcrlsu6yr0u/urcpt":
+    "qcAQLA",
+
+  "factory/kujira1uvrvr6w92e8cg2qljv2lhad822qz369xexmjgh4548xd0lsmjhas02cauh/urcpt":
+    "qcATOM",
+
   // Old testnet qcKUJI
   "factory/kujira1jaf8tsgvchqfmycv8wmncv52t4fcv3ehuh57gsd9ycce5ewn87ksnwhlkr/urcpt":
     "qcKUJI",
