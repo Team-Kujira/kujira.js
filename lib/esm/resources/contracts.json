@@ -155,7 +155,7 @@
                 "id": 283,
                 "address": "kujira1ljcd9uy9az9ayhlrws268gkx5ezwtjh6a36p525myqpedfgdalgqmv4ttd",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
@@ -230,7 +230,7 @@
                 "id": 283,
                 "address": "kujira1u2gj9a6p07hse07p66jqnq7xchneecxrq032vl4z2z97ft2r0zeqx4hadf",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/239BFF83852F67DF5243DB89F339FF7FDBF858437F961CAB6DA5B5ADEFB2BC07"
@@ -255,7 +255,7 @@
                 "id": 283,
                 "address": "kujira1fn0rr8dmda3wky2qg72cxlhfwavwxga0jxks6ugvl2qpgvjz3n5q7xx5mt",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/9012F7E79EACC34CE81A4404ECBEED5A5DFFD61CCEE23F2B8600BAC948C483E6"
@@ -280,7 +280,7 @@
                 "id": 283,
                 "address": "kujira16mnw6am32ecqacsgz2kf9gfy8sh4uqyv0246f3rxnjz4up9k462q34jck5",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -530,7 +530,7 @@
                 "id": 283,
                 "address": "kujira1qxk6c4g6svxa4hrhgcpzypguqh3dlrpf4kt5wl0c6e3u5hjk4x9qwdfphs",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/A64467480BBE4CCFC3CF7E25AD1446AA9BDBD4F5BCB9EF6038B83D6964C784E6"
@@ -605,7 +605,7 @@
                 "id": 283,
                 "address": "kujira1qj5jvay6f29dcgtm6v94sswe9mv5ktqm4gzc8fs248y3c4lme4lqvr05r0",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833"
@@ -630,7 +630,7 @@
                 "id": 283,
                 "address": "kujira1qmy9hrwxdlzejgg62wsc8kr2yauqzsdztn7zspd546rzwcfrhefqkf40y7",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2"
@@ -730,7 +730,7 @@
                 "id": 283,
                 "address": "kujira1pwldj8n88f99wl5sykff9q7sl2settejutlr84mjysny9wfqgluqcp6fu4",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "factory/kujira175yatpvkpgw07w0chhzuks3zrrae9z9g2y6r7u5pzqesyau4x9eqqyv0rr/ampMNTA"
@@ -1155,7 +1155,7 @@
                 "id": 283,
                 "address": "kujira1y5k75yuygkr9wmpl3huy5spqktgq9w2ex3zndu0zw6l2n0mzf4asz7hdat",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5"
@@ -1305,7 +1305,7 @@
                 "id": 283,
                 "address": "kujira19rmgf792tgl446fnyc4wjdj2t20jlt5t3wudxyuhfy2ccy67g0hsrt73d8",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "factory/kujira12cjjeytrqcj25uv349thltcygnp9k0kukpct0e/uwink"
@@ -1655,7 +1655,7 @@
                 "id": 283,
                 "address": "kujira180qesrskvljsvvkhvlkrwvyvu5hx03jhx76lvwxveq86at4ttqxq259wz8",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/B5FDAFDE1235BBF5F03ACCB4C592A08607BCA0A317F38D4223869AB2C3961960"
@@ -1705,7 +1705,7 @@
                 "id": 283,
                 "address": "kujira1865zmuchjd0g0xr2q5n6hm747s8xju5k8h6mympk4vmqefkuy3hqc66tcw",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/21F041CFE99994E0D027D0C5F72A9EB6224CBCAF5A6AD5DDB75F67A781D46C68"
@@ -1830,7 +1830,7 @@
                 "id": 283,
                 "address": "kujira1ff9pnz3ekflj6vkyk2taf4tvvjh4a8fp8hetw3dc59xu8ywl8tmstcf9de",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "factory/kujira1aaudpfr9y23lt9d45hrmskphpdfaq9ajxd3ukh/unstk"
@@ -1980,7 +1980,7 @@
                 "id": 283,
                 "address": "kujira1tgd479qm2cu30yr4568l23aaz0p2wcr979wx3z7wlsgcc5fj6rxshc2uwx",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/A2146858B5E3CFE759E32F47CA54591F8E27FAEDFF731D30B448E5AB25CA8EC5"
@@ -2005,7 +2005,7 @@
                 "id": 283,
                 "address": "kujira1tdad4e3c6qz6htdha4wg4ta6l86chnpyy22rfm60e6luj4wv2casjsrtj0",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3"
@@ -2205,7 +2205,7 @@
                 "id": 283,
                 "address": "kujira1vwr998s2mmvqa0t2tlfayvv5uzsl7t4syxd7a94qdgstfy4720rsa3n9yp",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/EB5ADB11D03C6FE1D02BC7F44ED543A8DCFD950A420C5DED1E2B23EE931A0248"
@@ -2230,7 +2230,7 @@
                 "id": 283,
                 "address": "kujira1vs6ew8y2tlugfe5a26mqk3fr0tspnljgkvdt3rfrquggsksc860qnucqvp",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/0A88A08F3E9573DB9D8CB74AA3746F6D23C41C3EE7B6CC5AA4695A1DD74FF86B"
@@ -2280,7 +2280,7 @@
                 "id": 283,
                 "address": "kujira1dftyn07g8nwjw6s58y8kng8exwn6rdw3kray207mkejg4aqhpjrsvk4vvw",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/FC59D6840A41252352263CEA2B832BB86D68D03CBA194263CB9F3C15946796FB"
@@ -2380,7 +2380,7 @@
                 "id": 283,
                 "address": "kujira1dsmm4q4kgs0nfsryrmlv7wq2dxp6uzruzqalc5xp30ztlmplgm7qms2qsa",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2"
@@ -2405,7 +2405,7 @@
                 "id": 283,
                 "address": "kujira1d6ft0x389cx8daaq6a5vcy2qr7x7gf5strp6vy4vusjwewep89lskyu6mc",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/DBF6ABDB5F3D4267C039967515594453F4A31007FD838A566F563A01D2C2FB80"
@@ -2630,7 +2630,7 @@
                 "id": 283,
                 "address": "kujira10297dc57a26q48gzdt6rkhuppg403l9c008qt6yuud986wertscsm0c0q6",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/782817D588181841C9EB508E14B9A8A984E21590B83FEAC86BB44B0BA58C37F5"
@@ -2680,7 +2680,7 @@
                 "id": 283,
                 "address": "kujira10jc7amjc82lp462pgn84fw0vaah0g8p7l2vxsedh8e7ergsrjmgsakny9e",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539"
@@ -2755,7 +2755,7 @@
                 "id": 283,
                 "address": "kujira1sr2hf68nc8a8f2e42tsjf3zmsgjkl4jmctszdzxes0whyk2tzn5sd3avg7",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/B4B3B08FE5FEA65CB25E467C9D95D180A6CDB0EBE730E7BB20CA1BF6C9A80D9B"
@@ -2780,7 +2780,7 @@
                 "id": 283,
                 "address": "kujira1sgahmu7ld4vyllf69y94xa2fsfpcr3u5qshdxuhps62p8579843s9hqfm0",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5"
@@ -2830,7 +2830,7 @@
                 "id": 283,
                 "address": "kujira1sk09vwsdayqmvl8pmzju0jmrx4rvdlrsv9jqf47tf8ajpj870svs0z4gyd",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/ufuzn"
@@ -2855,7 +2855,7 @@
                 "id": 283,
                 "address": "kujira1smam2ygq2s8u7v2l5u8jdugqx9dd324xe4gnecc6duh5lks8g33q7mjpvl",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/B4B3B08FE5FEA65CB25E467C9D95D180A6CDB0EBE730E7BB20CA1BF6C9A80D9B"
@@ -2905,7 +2905,7 @@
                 "id": 283,
                 "address": "kujira13xyuyw93pv6t7c4h248tc8t6kgu874v5qasmjfzqjfjhfp6hawlse5u5tz",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7"
@@ -2930,7 +2930,7 @@
                 "id": 283,
                 "address": "kujira1j0ux6qjs7z3alcfrmhz6erzkz4y68n0qpr38qv6f3ju2h0sh474qdmq397",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3"
@@ -2980,7 +2980,7 @@
                 "id": 283,
                 "address": "kujira1jk3fnks9ha3hwzl63qzz30c26nckpcqnawdxw4lj9x70wflra69q9ndawk",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/6A4CEDCEA40B587A4BCF7FDFB1D5A13D13F8A807A22A4E759EA702640CE086B0"
@@ -3055,7 +3055,7 @@
                 "id": 283,
                 "address": "kujira1npa6umexukr68g6gd0mx6crlxahgc6fpz6g0xr6gfq06zk50dj7qtvcfyg",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10"
@@ -3380,7 +3380,7 @@
                 "id": 283,
                 "address": "kujira14rrh06m6rm699psw4dly88n7whqjsustqzcj23rwvmy5egu4vd8qm99rcx",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/F97BDCE220CCB52139C73066E36C45EC7EDCEEF1DAFF891A34F4FBA195A2E6E8"
@@ -3530,7 +3530,7 @@
                 "id": 283,
                 "address": "kujira1krepsjxnpesa5u2amklew60r6zgtrmt9h2ljx8dnzljp0wxcstnqxfy0tk",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/7023F9629A70F8112764D959D04F52EA3115A0AED3CEE59694799FD8C91A97FA"
@@ -3830,7 +3830,7 @@
                 "id": 283,
                 "address": "kujira1hcvm4thkc0mq55cjzttp0fmh6gu5hzrfm4trgwpkm38nmd63tu0qha647q",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/173E561B8E97AB49FBA540663C1D02DC1B2D2871B5C8434935982CB15B0C7765"
@@ -4155,7 +4155,7 @@
                 "id": 283,
                 "address": "kujira16ggpql9mflavar4hxuprfpgld4p5e47wd4mevvj40tll6caqkkdsc8knug",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/640E1C3E28FD45F611971DF891AE3DC90C825DF759DF8FAA8F33F7F72B35AD56"
@@ -4255,7 +4255,7 @@
                 "id": 283,
                 "address": "kujira1mdmynnjlyq9dptwcfad48pcg0wcnenm78lsq9zu0yfczrz4s9xmqjpsvx0",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/A6826D67800ED864F3BF51D56B0165DAF2491B00D93433564158D87BAA0C82BE"
@@ -4530,7 +4530,7 @@
                 "id": 283,
                 "address": "kujira1auhjl9lcwtke3h3qqkxmtmumx7gsrxl7f80d9cdljg9w8ud23shqjzzqez",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986"
@@ -4605,7 +4605,7 @@
                 "id": 283,
                 "address": "kujira17r5u5r9gl3p9lql7p4dhdcffnv2z0f4xxafvgl8wnhw8qeez4x6q9zflp7",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/C01154C2547F4CB10A985EA78E7CD4BA891C1504360703A37E1D7043F06B5E1F"
@@ -4755,7 +4755,7 @@
                 "id": 283,
                 "address": "kujira17356flrg56cjs7ardg0c6jpufwyeafegss6l4asza4chrr0ne7aqfesynu",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/5A3DCF59BC9EC5C0BB7AA0CA0279FC2BB126640CB8B8F704F7BC2DC42495041B"
@@ -4780,7 +4780,7 @@
                 "id": 283,
                 "address": "kujira17mw2jvfygdlymat3pek2auxhcdx05uqldh7ue9ehgmf4g946feasmymw20",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/96179F5B44CCC15E03AB43D7118E714B4D5CE8F187F7D8A60F2A514299761EA9"
@@ -4830,7 +4830,7 @@
                 "id": 283,
                 "address": "kujira1lwfn688a2zxvq939qrspv4jm48rrzjscl4kvtqx99vmzkv2xceqs7qds9y",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         {
                             "native": "ibc/BBC45F1B65B6D3C11C3C56A9428D38C3A8D03944473791C52DFB7CD3F8342CBC"
@@ -4980,7 +4980,7 @@
                 "id": 283,
                 "address": "kujira15ujk7ecrzw73zkvf203fy0e5hf38tzxrgzymnhr99zh5rjqeel9s3m23ay",
                 "config": {
-                    "owner": "kujira13x2l25mpkhwnwcwdzzd34cr8fyht9jlj7xu9g4uffe36g3fmln8qkvm3qn",
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
                     "denoms": [
                         {
                             "native": "factory/kujira13x2l25mpkhwnwcwdzzd34cr8fyht9jlj7xu9g4uffe36g3fmln8qkvm3qn/uauto"
@@ -4993,10 +4993,35 @@
                         "decimal_places": 7
                     },
                     "decimal_delta": 0,
-                    "is_bootstrapping": true,
+                    "is_bootstrapping": false,
                     "fee_taker": "0.0015",
                     "fee_maker": "0.00075",
                     "fee_address": "kujira1xajlwpfpjnvwehurrj2w7d8ru6sm4579vzfp44c6fd5sj86u6tvqdk6mjn"
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 356,
+                "address": "kujira12wzlqqly5wcchty6ajptlk85mga4gjpv3afvxtg0n085lc3as2fqxq6kwz",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "denoms": [
+                        {
+                            "native": "ibc/20014F963CC9E6488B299622F87B60C6DE71632864859EC08B4753478DAB2BB8"
+                        },
+                        {
+                            "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 4
+                    },
+                    "decimal_delta": 12,
+                    "fee_taker": "0.0015",
+                    "fee_maker": "0.00075",
+                    "fee_address": "kujira1xajlwpfpjnvwehurrj2w7d8ru6sm4579vzfp44c6fd5sj86u6tvqdk6mjn",
+                    "is_bootstrapping": false
                 },
                 "pairs": false,
                 "markets": false
@@ -5047,6 +5072,31 @@
                     },
                     "price_precision": {
                         "decimal_places": 2
+                    },
+                    "decimal_delta": 12,
+                    "fee_taker": "0.0015",
+                    "fee_maker": "0.00075",
+                    "fee_address": "kujira1xajlwpfpjnvwehurrj2w7d8ru6sm4579vzfp44c6fd5sj86u6tvqdk6mjn",
+                    "is_bootstrapping": false
+                },
+                "pairs": false,
+                "markets": false
+            },
+            {
+                "id": 356,
+                "address": "kujira12wzlqqly5wcchty6ajptlk85mga4gjpv3afvxtg0n085lc3as2fqxq6kwz",
+                "config": {
+                    "owner": "kujira1tsekaqv9vmem0zwskmf90gpf0twl6k57e8vdnq",
+                    "denoms": [
+                        {
+                            "native": "ibc/20014F963CC9E6488B299622F87B60C6DE71632864859EC08B4753478DAB2BB8"
+                        },
+                        {
+                            "native": "factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk"
+                        }
+                    ],
+                    "price_precision": {
+                        "decimal_places": 4
                     },
                     "decimal_delta": 12,
                     "fee_taker": "0.0015",
@@ -5358,7 +5408,7 @@
                 "id": 294,
                 "address": "kujira1q8zj9rjyk8md9slvtwxvhduyq5ma7c6ksfvgxnklg6tfpj4vaf0qw4ve3w",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/A6826D67800ED864F3BF51D56B0165DAF2491B00D93433564158D87BAA0C82BE",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -5395,7 +5445,7 @@
                 "id": 294,
                 "address": "kujira1qvvnu5z275s38tzlh8uq6gl3688nqjr7z7hlkmx3r7g5chrl3eksma0vnf",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -5491,7 +5541,7 @@
                 "id": 294,
                 "address": "kujira1p7w9ncnnme9yzzhrvzv0hnsa5u5ga06v0ckt7lq9yfap04hc5k9sn2vf6w",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -5587,7 +5637,7 @@
                 "id": 294,
                 "address": "kujira1znx048dcc6arqfw6kpckl0k4ts2h7cdx20nk22wz2cxh5vle3wxqknk238",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/5A3DCF59BC9EC5C0BB7AA0CA0279FC2BB126640CB8B8F704F7BC2DC42495041B",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -5816,7 +5866,7 @@
                 "id": 294,
                 "address": "kujira1y24jwsv84lnuv5j78qeqz5ujjpd058qsft7wfc0nk9jvycugm32sqnq53d",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/DADB399E742FCEE71853E98225D13E44E90292852CD0033DF5CABAB96F80B833",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6002,7 +6052,7 @@
                 "id": 294,
                 "address": "kujira19kdkwa5y4lm3tq62cmxf46pmrqvke5ns66qjw9wfw0sjwvydhdzswakr08",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "factory/kujira12cjjeytrqcj25uv349thltcygnp9k0kukpct0e/uwink",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6226,7 +6276,7 @@
                 "id": 294,
                 "address": "kujira1xdqpkc7lcydhm095qxefqwprcynjfzzd2vsvt45ytfcj43djhmuqtgafll",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/B64A07C006C0F5E260A8AD50BD53568F1FD4A0D75B7A9F8765C81BEAFDA62053",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6468,7 +6518,7 @@
                 "id": 294,
                 "address": "kujira18mveas6xseaqu3fmukwv2ac6mp4hszk08lvyamedytjs0kxm42yqs9v89x",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/E67ADA2204A941CD4743E70771BA08E24885E1ADD6FD140CE1F9E0FEBB68C6B2",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6505,7 +6555,7 @@
                 "id": 294,
                 "address": "kujira18lhugzap20ndlqr5j2p86yk4pxpe9jjuac05z0ypxuwn3mm5vjhsjh4etr",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/173E561B8E97AB49FBA540663C1D02DC1B2D2871B5C8434935982CB15B0C7765",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6571,7 +6621,7 @@
                 "id": 294,
                 "address": "kujira1gz2kvfw7hpds9fvygwkj64znl3a9pw697g77cspcq5y4vj3ru45s7qc0rd",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/A2146858B5E3CFE759E32F47CA54591F8E27FAEDFF731D30B448E5AB25CA8EC5",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6638,7 +6688,7 @@
                 "id": 294,
                 "address": "kujira1gnftck9586x0nhsqsj99k9zednl6tx4kezu9hpph0u6jtqnafpyqxha3me",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/7023F9629A70F8112764D959D04F52EA3115A0AED3CEE59694799FD8C91A97FA",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6675,7 +6725,7 @@
                 "id": 294,
                 "address": "kujira1gnvja05kkmpeh9dnxl0c2p4sde7fpsy2r44njzyqgpsf72nqs78q3gzpzc",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/FC59D6840A41252352263CEA2B832BB86D68D03CBA194263CB9F3C15946796FB",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6745,7 +6795,7 @@
                 "id": 294,
                 "address": "kujira1ghc448g8c2prjqwg9gwekx3z9gp84nypkd2zah5pnexwejkj7peqqr37eu",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/239BFF83852F67DF5243DB89F339FF7FDBF858437F961CAB6DA5B5ADEFB2BC07",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6871,7 +6921,7 @@
                 "id": 294,
                 "address": "kujira1fg7wmsde7ygw3pm6hqmd29cdvp947anajmunsvk0guvjta3md25qdqk4fw",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/9012F7E79EACC34CE81A4404ECBEED5A5DFFD61CCEE23F2B8600BAC948C483E6",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -6994,7 +7044,7 @@
                 "id": 294,
                 "address": "kujira1fk2tk2z59r7dhh36ydu0vzfmzqasy63tm2an42faxkfpnw563snsj9pk7h",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/B5FDAFDE1235BBF5F03ACCB4C592A08607BCA0A317F38D4223869AB2C3961960",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -7098,7 +7148,7 @@
                 "id": 294,
                 "address": "kujira12nlfhll9xgf5jt8wz4uuzjzf2sxxkem6n2tkx24049wqtngrkumqptxh6n",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "factory/kujira1aaudpfr9y23lt9d45hrmskphpdfaq9ajxd3ukh/unstk",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -7253,7 +7303,7 @@
                 "id": 294,
                 "address": "kujira1t4mr2xt4ky4mfwcy752chzlquam3hzs44mt8vwyec8mvypmzxu5s90vamt",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/0A88A08F3E9573DB9D8CB74AA3746F6D23C41C3EE7B6CC5AA4695A1DD74FF86B",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -7348,7 +7398,7 @@
                 "id": 294,
                 "address": "kujira1vqdyup9zxxl9gqy5hwh593vvuc84lstldj7qzt7fylf3q3e3uemqlwpg9y",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/B4DCACF7753C05040AF0A7BF2B583402C4B8C9B0A86FCECE32EF63CB7F0A46B3",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -7694,7 +7744,7 @@
                 "id": 294,
                 "address": "kujira1de20zsr74vvr9r6twj9fhz54w6rvq0269yyt4crtmx44pstf3rrq2cl3re",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/640E1C3E28FD45F611971DF891AE3DC90C825DF759DF8FAA8F33F7F72B35AD56",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -7983,7 +8033,7 @@
                 "id": 294,
                 "address": "kujira10qyzrqaza0f593cmnl4sc3p3nhqqakn9j56d899u723pznxpn8us6cypuw",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/B37E4D9FB5B30F3E1E20A4B2DE2A005E584C5C822C44527546556AE2470B4539",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8231,7 +8281,7 @@
                 "id": 294,
                 "address": "kujira1s982qcjyes4753xfxvkvscmcqsd3qnpys926gxly0tvs6en45p4qj0g5eg",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8356,7 +8406,7 @@
                 "id": 294,
                 "address": "kujira1smfdnww47xav4nn849xphku3gk3xp7a24fk533dce8masnsz4v8quklajx",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/A64467480BBE4CCFC3CF7E25AD1446AA9BDBD4F5BCB9EF6038B83D6964C784E6",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8452,7 +8502,7 @@
                 "id": 294,
                 "address": "kujira13g2eelkf9q4md4xx52ylqvlgpccn50f2vyu05eazufd2g4jatmhq2425pq",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/6A4CEDCEA40B587A4BCF7FDFB1D5A13D13F8A807A22A4E759EA702640CE086B0",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8726,7 +8776,7 @@
                 "id": 294,
                 "address": "kujira1jsjygyj8hwa4f0p9wwgct4yzmzzexe5x5u6l40l7ty2qzwwwsemqavhk3x",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/21F041CFE99994E0D027D0C5F72A9EB6224CBCAF5A6AD5DDB75F67A781D46C68",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8800,7 +8850,7 @@
                 "id": 294,
                 "address": "kujira1n92swvw9ppykdc33r979a9yuf0efc0du7awj8wufc06wu5j5m2qq64zx6u",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/DBF6ABDB5F3D4267C039967515594453F4A31007FD838A566F563A01D2C2FB80",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -8988,7 +9038,7 @@
                 "id": 294,
                 "address": "kujira15pk8c09vcsgsdq4xlh2qfqxtu2r8pgdy7nggkqj8p3h2phke80pqwnvtzk",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9055,7 +9105,7 @@
                 "id": 294,
                 "address": "kujira1526yxrcq2ntgrk8rqcs5hz3hpzxwkz7lgaq3fjyd3s9uj25k4sgqvceym9",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9122,7 +9172,7 @@
                 "id": 294,
                 "address": "kujira15w6jhxsv924mn9cfr0qg9z36hltmw4rzd68x40d9re6hzyhslumqjw9zqd",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/782817D588181841C9EB508E14B9A8A984E21590B83FEAC86BB44B0BA58C37F5",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9583,7 +9633,7 @@
                 "id": 294,
                 "address": "kujira1kc90tgn4ucvdv4c9xycktanwz2lna0nfel6244ylqjvhaetfntusnmyu3d",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/96179F5B44CCC15E03AB43D7118E714B4D5CE8F187F7D8A60F2A514299761EA9",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9701,7 +9751,7 @@
                 "id": 294,
                 "address": "kujira1h9f3k54j060pzlnea8ep8qfymsmwl5yhwc5hqept5p2esqzve7tq2ghnm4",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9738,7 +9788,7 @@
                 "id": 294,
                 "address": "kujira1h929g9e9vxhc5y8v7uexdrncacxdatjupr67velewafwepfyfaaq6s7l3v",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/C01154C2547F4CB10A985EA78E7CD4BA891C1504360703A37E1D7043F06B5E1F",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -9996,7 +10046,7 @@
                 "id": 294,
                 "address": "kujira1cpdyhrkwdnz38u45el3zq7007at9dm6h05tc36zpxvs6vrdwzrrskt0tgg",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/EB5ADB11D03C6FE1D02BC7F44ED543A8DCFD950A420C5DED1E2B23EE931A0248",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -10148,7 +10198,7 @@
                 "id": 294,
                 "address": "kujira1eqd96322ec258w7k9n9cfqkusrlvzwv38jkph3qs720egdv0epmq70j2zl",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -10242,7 +10292,7 @@
                 "id": 294,
                 "address": "kujira1622xuv8unv22xzazljvqh8uukcdz3yzmrp6axgerh7vxg4kum5tqcwcqmv",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/ufuzn",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -10540,7 +10590,7 @@
                 "id": 294,
                 "address": "kujira1u8dluwa4a83q7anz0cgpmma605r07a06f0789ajcl8l0xjrplqss005cgn",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/B4B3B08FE5FEA65CB25E467C9D95D180A6CDB0EBE730E7BB20CA1BF6C9A80D9B",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -10941,7 +10991,7 @@
                 "id": 294,
                 "address": "kujira17x2v39aut0paj5d6wc5jxvqqxrdhy9kvca4y5xn6vsfpsxkgc6gq7n4tg0",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -11015,7 +11065,7 @@
                 "id": 294,
                 "address": "kujira1742pe93mxm0cwqjxgxh6th9sspdrluqvw9pha9q69eeatue4x5xs0wdq2d",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta",
                         "ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9"
@@ -11141,7 +11191,7 @@
                 "id": 294,
                 "address": "kujira1lz62nqn40ram7wt6xuuf4x535g8y62s03cy4h9wp66dcw97lyq9q20j0r8",
                 "config": {
-                    "owner": "kujira15e682nq9jees29rm9j3h030af86lq2qtlejgphlspzqcvs9whf2q00nua5",
+                    "owner": "kujira1qkh4dhzuyzjx0s8f9avwrns5jusjprva60g2epytpdvdvnmuv4ssngmklk",
                     "denoms": [
                         "ibc/BBC45F1B65B6D3C11C3C56A9428D38C3A8D03944473791C52DFB7CD3F8342CBC",
                         "factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta"
@@ -16227,7 +16277,7 @@
                     {
                         "addr": "kujira1qakxyvv76nynvqcemvsawkwkq4sadnwlt9p50zjg7stgka2awdts9dm7vm",
                         "borrow_limit": null,
-                        "current_borrows": "59456209197654590"
+                        "current_borrows": "112739510584198484"
                     }
                 ]
             },
@@ -16283,7 +16333,7 @@
                     {
                         "addr": "kujira14xp448azcnv74efse60pf2mxej0evwty5rvy5shukv77vrkh6w2q9al4qt",
                         "borrow_limit": null,
-                        "current_borrows": "254983383462989642394"
+                        "current_borrows": "325661747593891953619"
                     },
                     {
                         "addr": "kujira1jph3wj22lkl5kh63gxrqv3rz2lx3ka6du6pjqxvqn7tfh4rq550qy8k647",
@@ -16374,7 +16424,7 @@
                     {
                         "addr": "kujira1ql30ep2a4f3cswhrr8sjp54t56l7qz7n7jzcnux2m286k6ev7s8q6m8jnp",
                         "borrow_limit": null,
-                        "current_borrows": "9438"
+                        "current_borrows": "0"
                     },
                     {
                         "addr": "kujira1rasm5alqat2p2ztp49p7r53mchear6lzadvnm3cqsuajsx3srs9sdftgey",
@@ -16506,7 +16556,7 @@
                     {
                         "addr": "kujira1l9l87c7j68ws9nkzm25elaedq7x8gg2f4dn8zqm6k539n56hptes58x6m6",
                         "borrow_limit": null,
-                        "current_borrows": "3215364465"
+                        "current_borrows": "2988410389"
                     }
                 ]
             },
@@ -16618,7 +16668,7 @@
                     {
                         "addr": "kujira13thxz4a4gsk8mn6scvsgmfgcdu4axjqhpwrpw3474trsztly9tmqywwx6x",
                         "borrow_limit": null,
-                        "current_borrows": "14986968"
+                        "current_borrows": "13142439"
                     },
                     {
                         "addr": "kujira1asl5cn4f0sghl7j5zmaj0zmepqmlzkcff7f7qxh9vh9rsrk7y22q9jcdue",
@@ -16689,7 +16739,7 @@
                     {
                         "addr": "kujira16vzv7anfmtg78w66arw4w5cwg2kvgw6d7htcuncyyys8wf53j2wqls0arx",
                         "borrow_limit": null,
-                        "current_borrows": "4869491108"
+                        "current_borrows": "4842821832"
                     },
                     {
                         "addr": "kujira1u6h2x7fvavfvrkz8g90xgj6f3nu9z6way69sun0w37j2gp8gk7ssac6n75",
@@ -16927,7 +16977,7 @@
                     {
                         "addr": "kujira1t2nmpazlpacazde340k5rmmx6dpa49067fdqu3pzskgh9x3lj78qelrvv4",
                         "borrow_limit": null,
-                        "current_borrows": "66474241677"
+                        "current_borrows": "54186849990"
                     }
                 ]
             },
@@ -17095,7 +17145,7 @@
                     {
                         "addr": "kujira1sh0465gw8g275c9c2k0gxkfky6vwhccwfpq7wqhzzry3y87cdyksxwjwk6",
                         "borrow_limit": null,
-                        "current_borrows": "943177645"
+                        "current_borrows": "927220375"
                     }
                 ]
             },
@@ -17166,7 +17216,7 @@
                     {
                         "addr": "kujira1aakur92cpmlygdcecruk5t8zjqtjnkf8fs8qlhhzuy5hkcrjddfs585grm",
                         "borrow_limit": "2500000000000",
-                        "current_borrows": "678398410364"
+                        "current_borrows": "710764424675"
                     },
                     {
                         "addr": "kujira1avffxgkhn27kwwes38x5me40mrna5z98zwync5kwt68ua6hughtq0tyh33",
@@ -17186,7 +17236,7 @@
                     {
                         "addr": "kujira1fhx20htag2saw9g3w8uwdv203ucvpmcxlvdwtljm5rmrxn4pu7dsqkl73k",
                         "borrow_limit": "100000000000",
-                        "current_borrows": "1196831385"
+                        "current_borrows": "95566728"
                     },
                     {
                         "addr": "kujira1g6tj4m8r9u4l5eruwlnl3j4hltk2h4mzdz37y87n4pmghsz2hpeqagzazr",
@@ -17404,7 +17454,7 @@
                     {
                         "addr": "kujira1dwyyglafmme9hm8mek6j5et8z25m5uhy7edkrwltwumav56e8y5q3gpx8d",
                         "borrow_limit": null,
-                        "current_borrows": "2100399701636"
+                        "current_borrows": "2108738102750"
                     },
                     {
                         "addr": "kujira1f320zru64hftad7smdw65zdnz734llw33zcsy9emcfgva64kq5tsdp2rf2",
@@ -17677,12 +17727,12 @@
                     {
                         "addr": "kujira1hmk8wy7vk0v0vpqasv6zv7hm3n2vce4m3yzkns6869j8h4u5qk2q0xndku",
                         "borrow_limit": "100000000000",
-                        "current_borrows": "6226961456"
+                        "current_borrows": "4222570655"
                     },
                     {
                         "addr": "kujira1jwftqtpva4e4scy4f8ayce56fmeyrzds0xzaelszm9k5lcyrctlqhc65mm",
                         "borrow_limit": "25000000000",
-                        "current_borrows": "8870814881"
+                        "current_borrows": "8860063572"
                     },
                     {
                         "addr": "kujira1lrk6z5yxjaractukayphr5h45v8sh3j39u25qgrqxyz0hw9wzwtssggsuk",
@@ -17707,7 +17757,7 @@
                     {
                         "addr": "kujira1x0rx0543jpjfpuskusaca54d2t8f6v6m3eaqwpgahxtmq7kc7vls2j3hth",
                         "borrow_limit": "100000000000",
-                        "current_borrows": "9967434600"
+                        "current_borrows": "11165009470"
                     },
                     {
                         "addr": "kujira1zgd5papvax22hc3p85qf2zyydg73ln7rlmd8asdj6ccrtmal6dhqkpfzn6",
@@ -17934,7 +17984,7 @@
                     {
                         "addr": "kujira1vskf87xj8ulvazm23t534rsargv77snmphk8u73cj4pq3dupf4gs6c9l47",
                         "borrow_limit": "15000000000",
-                        "current_borrows": "9647127467"
+                        "current_borrows": "11437709954"
                     },
                     {
                         "addr": "kujira1y2ut2tcm4m60z78l24p7p6djv22vjwc06pzkuy55qykjn8zxyarqfh09uw",
@@ -17944,12 +17994,12 @@
                     {
                         "addr": "kujira1y5606y0q6hq2mgs2d5ceg9r965dk6uw5rusr4zcsylvflxp4w7es4yrgpd",
                         "borrow_limit": "450000000000",
-                        "current_borrows": "364680815060"
+                        "current_borrows": "361108290202"
                     },
                     {
                         "addr": "kujira1z99vsels30qxd0t2zh9uemveyg6s0luxdmjcj3z8w06dzw3xg7mse3u665",
                         "borrow_limit": "1500000000000",
-                        "current_borrows": "617658731822"
+                        "current_borrows": "620421928904"
                     }
                 ]
             },
@@ -18066,7 +18116,7 @@
                     {
                         "addr": "kujira1fswgxnl7e0ta7u08nr3yg9nvupt0urdq4f7trhzwtcav7jkldqsqv605kr",
                         "borrow_limit": null,
-                        "current_borrows": "3749412879"
+                        "current_borrows": "3590775019"
                     },
                     {
                         "addr": "kujira1qcqxs8twh505ey0w87mu0f9gjc4dpqlm64t734yftuz7t2kee09smdzy76",
@@ -18198,7 +18248,7 @@
                     {
                         "addr": "kujira1jrs4glwl9cuwhjxtn6yhrrf329u22j6cwdrfq3cd694p0hk5fy0qutssvy",
                         "borrow_limit": null,
-                        "current_borrows": "1235283340422286617"
+                        "current_borrows": "1367559548768069461"
                     }
                 ]
             },

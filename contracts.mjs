@@ -8,9 +8,9 @@ const IDS = {
   [MAINNET]: {
     fin: [
       // Current
-      283,
+      283, 356,
       // Oracle
-      352,
+      352, 356,
     ],
     bow: [
       294,
