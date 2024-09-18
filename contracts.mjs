@@ -22,7 +22,7 @@ const IDS = {
     bowStaking: [244],
     orca: [234, 344, 349],
     uskMarket: [73],
-    uskMarginSwap: [87],
+    uskMarginSwap: [87, 387, 389],
     uskMarginLimit: [],
     calc: [157],
     ghostVault: [316, 384],
