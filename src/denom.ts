@@ -35,7 +35,7 @@ const labels: Record<string, string> = {
   uusdc: "USDC",
   uausdt: "USDT",
   uusdt: "USDT",
-  uerue: "EURe",
+  ueure: "EURe",
   atevmos: "EVMOS",
   staevmos: "stEVMOS",
   "wavax-wei": "wAVAX",
