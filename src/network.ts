@@ -23,7 +23,7 @@ export const RPCS: Record<string, string[]> = {
   [MAINNET]: [
     "https://kujira-mainnet-rpc.autostake.com",
     "https://kujira-rpc.ibs.team",
-    "https://kujira-rpc.nodes.defiantlabs.net",
+    "https://kujira-rpc.defiantlabs.net",
     "https://kujira-rpc.openbitlab.com",
     "https://kujira-rpc.theamsolutions.info",
     "https://kujira.rpc.ghostinnet.com",
