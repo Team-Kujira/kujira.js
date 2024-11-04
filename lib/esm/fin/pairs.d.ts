@@ -7,6 +7,7 @@ export declare const NOTICES: {
     kujira1cduudfszcm9slm8qxlaqvnpzg2u0hkus94fe3pwt9x446dtw6eeql8ualz: string;
     kujira1kmw6fk5p7an27u8f3er08xrwvzlehczymgshkqxzfrxyrfleu2eqxykaln: string;
     kujira14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sl4e867: string;
+    kujira1nswv58h3acql85587rkusqx3zn7k9qx3a3je8wqd3xnw39erpwnsddsm8z: string;
 };
 import contracts from "../resources/contracts.json";
 export declare const STAKING: {
